@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/gpt-4/test/run2/test_data_eval_test_gpt-4_0bbe9edd43b1.json"
+        ],
+        "group_id": "bike-wheel-ride",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "prompt_tokens": 56,
+            "completion_tokens": 184,
+            "total_tokens": 240
+        },
+        "cost": {
+            "input": 0.00168,
+            "output": 0.01104,
+            "total": 0.012719999999999999
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "bike-wheel-ride",
+            "items": [
+                "bike",
+                "wheel",
+                "ride"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "riding on a bike with wheels",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: bike, wheel, ride. However, the story should not be about riding on a bike with wheels.",
+            "template": "test",
+            "model_output": "In the heart of the forgotten town, the rusted frame of a bike lay entwined with ivy, its wheels long since repurposed to turn the great clock that now governed the pace of life. Every evening, as the sun dipped below the horizon, the townsfolk would gather to watch the wheel's slow ride around its 24-hour journey, a ritual that marked the passing of days. One night, a curious traveler, enamored by the spectacle, asked an old man what had become of the bike's original journey. The elder, with a glint of nostalgia in his eyes, whispered of a time when the bike had been a noble steed for a dreamer's wild ride through realms of imagination, its wheels spinning tales of wonder. Now, its legacy was to remind them all that even when our original paths fade, our stories can still turn the gears of time in unexpected ways.",
+            "usage": {
+                "completion_tokens": 184,
+                "prompt_tokens": 56,
+                "total_tokens": 240
+            },
+            "result_id": "09e53b373936",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/test/run2/test_data_eval_test_gpt-4_0bbe9edd43b1.json",
+                "template": "test",
+                "model": "gpt-4",
+                "model_path": null,
+                "tokenizer_path": null,
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.19308510231609577,
+                "surprise": 0.00545440695271196,
+                "n_gram_diversity": [
+                    0.6011560693641619,
+                    0.9476744186046512,
+                    0.9941520467836257,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}

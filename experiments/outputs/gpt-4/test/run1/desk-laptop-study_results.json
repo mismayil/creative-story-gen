@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/gpt-4/test/test_data_eval_test_gpt-4_4772f2b09ed7.json"
+        ],
+        "group_id": "desk-laptop-study",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "prompt_tokens": 57,
+            "completion_tokens": 199,
+            "total_tokens": 256
+        },
+        "cost": {
+            "input": 0.0017100000000000001,
+            "output": 0.011940000000000001,
+            "total": 0.01365
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "desk-laptop-study",
+            "items": [
+                "desk",
+                "laptop",
+                "study"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "studying on a desk with a laptop",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: desk, laptop, study. However, the story should not be about studying on a desk with a laptop.",
+            "template": "test",
+            "model_output": "In the heart of a bustling city, a peculiar antique desk sat inconspicuously in the corner of an old bookshop, its drawers filled with forgotten tales and whispered secrets. Each night, as the clock struck midnight, the desk would spring to life, its surface aglow with an ethereal light, while a spectral laptop materialized upon it, keys clacking away as if possessed by an invisible author. This was the study of the ghostwriter, a spirit bound to the desk, eternally crafting stories that breathed life into the dreams of those who slumbered nearby. One evening, a curious cat, drawn by the glow, leapt onto the desk, pawing at the laptop, and inadvertently sent a story to a publisher, who, upon reading the enchanting words, set out on a quest to uncover the mysterious author. Little did they know, the true writer was the desk itself, channeling the whispers of the ages into tales that would echo through time.",
+            "usage": {
+                "completion_tokens": 199,
+                "prompt_tokens": 57,
+                "total_tokens": 256
+            },
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/test/test_data_eval_test_gpt-4_4772f2b09ed7.json",
+                "template": "test",
+                "model": "gpt-4",
+                "model_path": null,
+                "tokenizer_path": null,
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": null,
+                    "top_p": 1,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.19331431702601728,
+                "surprise": 0.007719304203169949,
+                "n_gram_diversity": [
+                    0.5934065934065934,
+                    0.9337016574585635,
+                    0.9944444444444445,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}

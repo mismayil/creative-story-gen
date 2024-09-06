@@ -335,16 +335,16 @@ async def main():
 
             if args.model in API_MODELS:
                 results = await evaluate_api_model(client, args.model, filtered_batch, model_args)
-                for sample, result in zip(filtered_batch, results):
-                    sample["model_output"] = result.text
-                    sample["usage"] = result.usage
-                    if result.exception is not None:
-                        sample["exception"] = str(result.exception)
-                        _write_error(error_path, sample, result.exception)
             else:
                 results = evaluate_model(args.model, model, tokenizer, filtered_batch, model_args=model_args, device=device)
-                for sample, result in zip(filtered_batch, results):
-                    sample["model_output"] = result.text
+
+            for sample, result in zip(filtered_batch, results):
+                sample["model_output"] = result.text
+                sample["usage"] = result.usage
+                sample["result_id"] = generate_unique_id()
+                if result.exception is not None:
+                    sample["exception"] = str(result.exception)
+                    _write_error(error_path, sample, result.exception)
             
             write_json(outputs, output_path, ensure_ascii=False)
         except Exception as e:

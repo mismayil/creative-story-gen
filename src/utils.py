@@ -112,3 +112,21 @@ def compute_usage(sample, model):
 
 def get_template_keys(template):
     return [i[1] for i in Formatter().parse(template) if i[1] is not None]
+
+def is_immutable(obj):
+    return isinstance(obj, (str, int, float, bool, tuple, type(None)))
+
+def cache(cache_dict):
+    def decorator_cache(func):
+        def wrapper(*args, **kwargs):
+            if all(is_immutable(arg) for arg in args) and all(is_immutable(val) for val in kwargs.values()):
+                key = (args, frozenset(kwargs.items()))
+                if key in cache_dict:
+                    return cache_dict[key]
+                result = func(*args, **kwargs)
+                cache_dict[key] = result
+            else:
+                result = func(*args, **kwargs)
+            return result
+        return wrapper
+    return decorator_cache

@@ -2,14 +2,14 @@ import argparse
 from tqdm import tqdm
 import pathlib
 import spacy
-from collections import Counter
+from collections import Counter, defaultdict
 from statistics import mean
 
 from sentence_transformers import SentenceTransformer
 from sentence_transformers.util import cos_sim, dot_score, euclidean_sim, manhattan_sim
 from sklearn.cluster import AgglomerativeClustering
 
-from utils import read_json, write_json, find_files, compute_usage
+from utils import read_json, write_json, find_files, compute_usage, cache
 
 DEF_EMB_MODEL = "thenlper/gte-large"
 DEF_EMB_TYPE = "sentence_embedding"
@@ -24,40 +24,21 @@ DEF_PREPROCESSING_ARGS = {
     "unique": True
 }
 
-SPACY_ENGINE = None
-EMB_MODEL = None
+SPACY_ENGINE_CACHE = {}
+EMB_MODEL_CACHE = {}
 EMBEDDING_CACHE = {}
 SPACY_CACHE = {}
 
-# def cache(func, cache_dict):
-#     def wrapper(*args, **kwargs):
-#         if args in cache_dict:
-#             return cache_dict[args]
-#         result = func(*args, **kwargs)
-#         cache_dict[args] = result
-#         return result
-#     return wrapper
-
+@cache(cache_dict=SPACY_ENGINE_CACHE)
 def load_spacy_engine(language=DEF_SPACY_LANG):
-    global SPACY_ENGINE
-    if SPACY_ENGINE:
-        return SPACY_ENGINE
-    SPACY_ENGINE = spacy.load(language)
-    return SPACY_ENGINE
+    return spacy.load(language)
 
+@cache(cache_dict=EMB_MODEL_CACHE)
 def load_emb_model(model=DEF_EMB_MODEL):
-    global EMB_MODEL
-    if EMB_MODEL:
-        return EMB_MODEL
+    return SentenceTransformer(model)
 
-    EMB_MODEL = SentenceTransformer(model)
-    
-    return EMB_MODEL
-
+@cache(cache_dict=EMBEDDING_CACHE)
 def get_embedding(text, model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE):
-    # if text in EMBEDDING_CACHE:
-    #     return EMBEDDING_CACHE[text]
-
     emb_model = load_emb_model(model)
     
     output_value = "sentence_embedding"
@@ -70,8 +51,12 @@ def get_embedding(text, model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE):
     if embeddings.ndim == 2:
         embeddings = embeddings.mean(axis=0)
 
-    # EMBEDDING_CACHE[text] = embeddings
     return embeddings
+
+@cache(cache_dict=SPACY_CACHE)
+def get_spacy_doc(text):
+    spacy_engine = load_spacy_engine()
+    return spacy_engine(text)
 
 def compute_sem_dis(emb1, emb2, distance_fn=DEF_DIST_FN):
     if distance_fn == "cosine":
@@ -84,15 +69,6 @@ def compute_sem_dis(emb1, emb2, distance_fn=DEF_DIST_FN):
         return (-manhattan_sim(emb1, emb2)).item()
     else:
         raise ValueError(f"Invalid distance function: {distance_fn}")
-
-def get_spacy_doc(text):
-    global SPACY_CACHE
-    if text in SPACY_CACHE:
-        return SPACY_CACHE[text]
-    spacy_engine = load_spacy_engine()
-    doc = spacy_engine(text)
-    SPACY_CACHE[text] = doc
-    return doc
 
 def get_sentences(text):
     doc = get_spacy_doc(text)
@@ -203,7 +179,7 @@ def compute_n_gram_diversity(story, max_n_gram=5):
 
     return n_gram_diversity
 
-def compute_metrics(results, report_usage=True):
+def compute_metrics(results, args):
     metrics = {}
 
     usage = {
@@ -218,17 +194,43 @@ def compute_metrics(results, report_usage=True):
         "total": 0
     }
 
-    template = results["data"][0]["template"]
-    result_map = {}
-    ref_response_attr = "reference"
     model_response_attr = "model_output"
 
-    for result in results["data"]:
-        result_map[result["id"]] = result
+    preprocessing_args = {
+        "lower": args.lower,
+        "remove_punct": args.remove_punct,
+        "remove_stopwords": args.remove_stopwords,
+        "lemmatize": args.lemmatize,
+        "dominant_k": args.dominant_k,
+        "unique": args.unique
+    }
+
+    stories = [result.get(model_response_attr, "") for result in results]
+
+    if len(stories) > 1:
+        inv_homogen = compute_inverse_homogenization(stories, args.emb_model, args.emb_type, args.emb_strategy, args.distance_fn, preprocessing_args)
+        novelty = compute_novelty(stories, args.emb_model, args.emb_type, args.distance_fn, preprocessing_args)
+        theme_uniqueness = compute_theme_uniqueness(stories, args.emb_model, args.emb_type, args.emb_strategy, args.cluster_linkage, args.cluster_dist_threshold, preprocessing_args)
+        
+        metrics["inv_homogen"] = mean(inv_homogen)
+        metrics["novelty"] = mean(novelty)
+        metrics["theme_uniqueness"] = mean(theme_uniqueness)
+
+    for result_idx, result in enumerate(results):
+        result["metrics"] = {}
 
         if model_response_attr in result:
-            if report_usage:
-                sample_usage, sample_cost = compute_usage(result, results["metadata"]["model"])
+            result["metrics"]["dsi"] = compute_dsi(result[model_response_attr], args.emb_model, args.emb_type, args.distance_fn, preprocessing_args)
+            result["metrics"]["surprise"] = compute_surprise(result[model_response_attr], args.emb_model, args.emb_type, args.distance_fn, preprocessing_args)
+            result["metrics"]["n_gram_diversity"] = compute_n_gram_diversity(result[model_response_attr], args.max_n_gram)
+            
+            if len(stories) > 1:
+                result["metrics"]["inv_homogen"] = inv_homogen[result_idx]
+                result["metrics"]["novelty"] = novelty[result_idx]
+                result["metrics"]["theme_uniqueness"] = theme_uniqueness[result_idx]
+
+            if args.report_usage:
+                sample_usage, sample_cost = compute_usage(result, result["metadata"]["model"])
 
                 if sample_usage:
                     usage["prompt_tokens"] += sample_usage["prompt_tokens"]
@@ -240,32 +242,89 @@ def compute_metrics(results, report_usage=True):
                     cost["output"] += sample_cost["output"]
                     cost["total"] += sample_cost["total"]
 
-    if report_usage:
+    if args.report_usage:
         metrics["usage"] = usage
         metrics["cost"] = cost
 
-    metrics["num_samples"] = len(results["data"])
+    metrics["num_samples"] = len(results)
 
     return metrics
 
-def report_metrics(results_files, report_usage=True):
-    for results_file in tqdm(results_files, total=len(results_files), desc="Reporting metrics"):
+def report_metrics(results_files, args):
+    result_groups = defaultdict(list)
+
+    for results_file in results_files:
         results = read_json(results_file)
         
         try:
             if "data" in results:
-                metrics = compute_metrics(results, report_usage=report_usage)
-                results["metrics"] = metrics
-                write_json(results, results_file)
+                for sample in results["data"]:
+                    sample["metadata"] = {
+                        "source": results_file,
+                        "model": results["metadata"]["model"],
+                        "model_args": results["metadata"]["model_args"]
+                    }
+
+                    model_path = results["metadata"]["model_path"]
+                    tokenizer_path = results["metadata"]["tokenizer_path"]
+
+                    if model_path:
+                        sample["metadata"]["model_path"] = model_path
+                    if tokenizer_path:
+                        sample["metadata"]["tokenizer_path"] = tokenizer_path
+    
+                    result_groups[sample["id"]].append(sample)
         except Exception as e:
             print(results_file)
             raise e
+    
+    output_dir = pathlib.Path(args.output_dir) if args.output_dir else pathlib.Path(results_files[0]).parent
+
+    for group_id, group_results in tqdm(result_groups.items(), total=len(result_groups.items()), desc="Reporting metrics"):
+        metrics = compute_metrics(group_results, args)
+        results = {
+            "metadata": {
+                "source": results_files,
+                "group_id": group_id,
+                "size": len(group_results)
+            },
+            "metrics": metrics,
+            "data": group_results
+        }
+        results_file = output_dir / f"{group_id}_results.json"
+        write_json(results, results_file)
+
+def none_or_int(value):
+    if value.lower() == "none":
+        return None
+    return int(value)
 
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(prog="report_metrics.py", description="Report evaluation metrics")
     parser.add_argument("-r", "--results-path", type=str, help="Path to evaluation results file in json or directory", required=True)
     parser.add_argument("-u", "--report-usage", action="store_true", help="Report usage metrics", default=True)
+    parser.add_argument("-sl", "--spacy-lang", type=str, help="Spacy language model", default=DEF_SPACY_LANG)
+    parser.add_argument("-ng", "--max-n-gram", type=int, help="Maximum n-gram to consider", default=5)
+    parser.add_argument("-o", "--output-dir", type=str, help="Output dir to save the output files", default=None)
 
+    emb_group = parser.add_argument_group("Embedding arguments")
+    emb_group.add_argument("-em", "--emb-model", type=str, help="Sentence embedding model", default=DEF_EMB_MODEL)
+    emb_group.add_argument("-et", "--emb-type", type=str, help="Embedding type", default=DEF_EMB_TYPE)
+    emb_group.add_argument("-es", "--emb-strategy", type=str, help="Embedding strategy", default="direct")
+    emb_group.add_argument("-d", "--distance-fn", type=str, help="Distance function", default=DEF_DIST_FN)
+
+    pp_group = parser.add_argument_group("Preprocessing arguments")
+    pp_group.add_argument("-l", "--lower", action="store_true", help="Lowercase text")
+    pp_group.add_argument("-rp", "--remove-punct", action="store_true", help="Remove punctuation")
+    pp_group.add_argument("-rs", "--remove-stopwords", action="store_true", help="Remove stopwords")
+    pp_group.add_argument("-lm", "--lemmatize", action="store_true", help="Lemmatize text")
+    pp_group.add_argument("-dk", "--dominant-k", type=none_or_int, help="Number of dominant words to consider", default=None)
+    pp_group.add_argument("-q", "--unique", action="store_true", help="Unique words")
+
+    cl_group = parser.add_argument_group("Clustering arguments")
+    cl_group.add_argument("-cl", "--cluster-linkage", type=str, help="Cluster linkage", default="ward")
+    cl_group.add_argument("-cdt", "--cluster-dist-threshold", type=float, help="Cluster distance threshold", default=0.5)
+    
     args = parser.parse_args()
 
     files_to_process = []
@@ -277,7 +336,7 @@ def main():
     else:
         files_to_process.extend(find_files(args.results_path))
 
-    report_metrics(files_to_process, args.report_usage)
+    report_metrics(files_to_process, args)
 
 if __name__ == "__main__":
     main()

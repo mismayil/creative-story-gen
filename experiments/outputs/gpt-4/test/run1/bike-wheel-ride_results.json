@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/gpt-4/test/test_data_eval_test_gpt-4_4772f2b09ed7.json"
+        ],
+        "group_id": "bike-wheel-ride",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "prompt_tokens": 56,
+            "completion_tokens": 187,
+            "total_tokens": 243
+        },
+        "cost": {
+            "input": 0.00168,
+            "output": 0.01122,
+            "total": 0.012900000000000002
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "bike-wheel-ride",
+            "items": [
+                "bike",
+                "wheel",
+                "ride"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "riding on a bike with wheels",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: bike, wheel, ride. However, the story should not be about riding on a bike with wheels.",
+            "template": "test",
+            "model_output": "In the heart of the enchanted forest, a young inventor named Elara crafted a magical bike whose wheel could weave dreams into reality. Each night, under the silver glow of the moon, she would embark on a ride through the tapestry of slumbering minds, spinning the wheel to mend the frayed edges of nightmares. One evening, as the wheel hummed with the power of a thousand wishes, it caught the attention of a mischievous pixie, who, in a fit of curiosity, gave the wheel an impetuous spin. The bike shuddered, and the world around Elara transformed into a kaleidoscope of waking dreams, where dragons dozed in rose gardens and castles floated like dandelion seeds in the sky. With a gentle laugh, Elara realized that her invention had not only mended dreams but had unlocked the door to a realm where the impossible joyfully danced with the possible.",
+            "usage": {
+                "completion_tokens": 187,
+                "prompt_tokens": 56,
+                "total_tokens": 243
+            },
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/test/test_data_eval_test_gpt-4_4772f2b09ed7.json",
+                "template": "test",
+                "model": "gpt-4",
+                "model_path": null,
+                "tokenizer_path": null,
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": null,
+                    "top_p": 1,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.1967912071990553,
+                "surprise": 0.017684836246294675,
+                "n_gram_diversity": [
+                    0.6097560975609756,
+                    0.9631901840490797,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}

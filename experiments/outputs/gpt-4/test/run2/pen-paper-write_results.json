@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/gpt-4/test/run2/test_data_eval_test_gpt-4_0bbe9edd43b1.json"
+        ],
+        "group_id": "pen-paper-write",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "prompt_tokens": 57,
+            "completion_tokens": 173,
+            "total_tokens": 230
+        },
+        "cost": {
+            "input": 0.0017100000000000001,
+            "output": 0.01038,
+            "total": 0.01209
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "pen-paper-write",
+            "items": [
+                "pen",
+                "paper",
+                "write"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "writing on a paper with a pen",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: pen, paper, write. However, the story should not be about writing on a paper with a pen.",
+            "template": "test",
+            "model_output": "In the heart of a bustling city, a curious pen lay in the gutter, its golden surface tarnished by the rain. By chance, a weary scrap of paper, escaped from the clutches of the wind, settled beside it. That night, beneath the glow of a flickering streetlight, they whispered tales of their past - the pen spoke of grand declarations of love it had inked, while the paper reminisced about the secrets it once held. As dawn approached, with a last shiver of magic, the pen began to move, not to write, but to trace delicate patterns along the paper, intertwining their stories into a tapestry of forgotten memories. And there, in the silent communion of pen and paper, a new story was born, not of words, but of resilience and the unexpected beauty found in the convergence of two lost souls.",
+            "usage": {
+                "completion_tokens": 173,
+                "prompt_tokens": 57,
+                "total_tokens": 230
+            },
+            "result_id": "a81f8453c658",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/test/run2/test_data_eval_test_gpt-4_0bbe9edd43b1.json",
+                "template": "test",
+                "model": "gpt-4",
+                "model_path": null,
+                "tokenizer_path": null,
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.19076412179040889,
+                "surprise": 0.00418444165824744,
+                "n_gram_diversity": [
+                    0.573170731707317,
+                    0.9263803680981595,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}

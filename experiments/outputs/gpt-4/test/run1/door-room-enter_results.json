@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/gpt-4/test/test_data_eval_test_gpt-4_4772f2b09ed7.json"
+        ],
+        "group_id": "door-room-enter",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "prompt_tokens": 56,
+            "completion_tokens": 170,
+            "total_tokens": 226
+        },
+        "cost": {
+            "input": 0.00168,
+            "output": 0.0102,
+            "total": 0.011880000000000002
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "door-room-enter",
+            "items": [
+                "door",
+                "room",
+                "enter"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "entering a room through a door",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: door, room, enter. However, the story should not be about entering a room through a door.",
+            "template": "test",
+            "model_output": "In the heart of an ancient library, there existed a peculiar room where the walls themselves whispered tales of yore. The room, known only to the most curious of souls, held a single, ornate book with pages that shimmered like the surface of a tranquil lake. Upon the book's cover was an intricate carving of a door, rumored to be a gateway to the stories within. Those who dared to trace the carving with a finger found themselves not entering through a physical door, but rather, embarking on a journey through the boundless realms of imagination, each page a new adventure, each word a step further from reality. And as the final sentence of the book was read, the reader would emerge, the door on the cover gently closing behind them, sealing away the room until another story-seeker came to enter the fables anew.",
+            "usage": {
+                "completion_tokens": 170,
+                "prompt_tokens": 56,
+                "total_tokens": 226
+            },
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/test/test_data_eval_test_gpt-4_4772f2b09ed7.json",
+                "template": "test",
+                "model": "gpt-4",
+                "model_path": null,
+                "tokenizer_path": null,
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": null,
+                    "top_p": 1,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.1904877158413921,
+                "surprise": 0.0018114401287448734,
+                "n_gram_diversity": [
+                    0.6097560975609756,
+                    0.9570552147239264,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/gpt-4/test/test_data_eval_test_gpt-4_4772f2b09ed7.json"
+        ],
+        "group_id": "pen-paper-write",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "prompt_tokens": 57,
+            "completion_tokens": 189,
+            "total_tokens": 246
+        },
+        "cost": {
+            "input": 0.0017100000000000001,
+            "output": 0.011340000000000001,
+            "total": 0.01305
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "pen-paper-write",
+            "items": [
+                "pen",
+                "paper",
+                "write"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "writing on a paper with a pen",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: pen, paper, write. However, the story should not be about writing on a paper with a pen.",
+            "template": "test",
+            "model_output": "In the heart of a bustling city, there stood an ancient statue of a scribe, his hand forever poised above an empty pedestal, as if ready to inscribe the secrets of the universe. Legend whispered that at the stroke of midnight, the statue would come to life, seeking a worthy vessel to impart its wisdom. On a moonless night, a curious young artist, armed with nothing but a pen dangling from a chain around her neck, approached the silent figure, her heart pounding with the thrill of the unknown. As the clock tower solemnly announced the arrival of the witching hour, the scribe's stone fingers reached out, brushing the pen, which ignited with an ethereal glow. The artist, now the chosen conduit, watched in awe as the pen danced in the air, sketching not words, but a tapestry of stars and dreams upon the canvas of the night sky, writing a story only the heavens could paper.",
+            "usage": {
+                "completion_tokens": 189,
+                "prompt_tokens": 57,
+                "total_tokens": 246
+            },
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/test/test_data_eval_test_gpt-4_4772f2b09ed7.json",
+                "template": "test",
+                "model": "gpt-4",
+                "model_path": null,
+                "tokenizer_path": null,
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": null,
+                    "top_p": 1,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.1925472322418999,
+                "surprise": 0.010645758461011401,
+                "n_gram_diversity": [
+                    0.5944444444444444,
+                    0.9441340782122905,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}

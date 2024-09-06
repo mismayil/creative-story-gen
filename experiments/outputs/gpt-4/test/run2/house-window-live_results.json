@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/gpt-4/test/run2/test_data_eval_test_gpt-4_0bbe9edd43b1.json"
+        ],
+        "group_id": "house-window-live",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "prompt_tokens": 56,
+            "completion_tokens": 163,
+            "total_tokens": 219
+        },
+        "cost": {
+            "input": 0.00168,
+            "output": 0.00978,
+            "total": 0.011460000000000001
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "house-window-live",
+            "items": [
+                "house",
+                "window",
+                "live"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "living in a house with windows",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: house, window, live. However, the story should not be about living in a house with windows.",
+            "template": "test",
+            "model_output": "In the heart of a bustling forest stood an ancient tree, its trunk wide enough to be a house, with a peculiar knot that resembled a window. Curious creatures from near and far would visit, whispering their deepest desires into the wooden crevice, hoping the spirit of the tree would grant them life. One evening, under the watchful gaze of the silver moon, a lone wolf approached, its amber eyes glinting with an untold story. As the wolf breathed its wish into the bark, the tree shuddered, and from the window-like knot, a cascade of luminescent butterflies emerged, each carrying the essence of live dreams. In that magical glade where reality danced with fantasy, the tree stood as a guardian of hope, never a home but always a sanctuary for the living.",
+            "usage": {
+                "completion_tokens": 163,
+                "prompt_tokens": 56,
+                "total_tokens": 219
+            },
+            "result_id": "4b0cc1b8ef1c",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/test/run2/test_data_eval_test_gpt-4_0bbe9edd43b1.json",
+                "template": "test",
+                "model": "gpt-4",
+                "model_path": null,
+                "tokenizer_path": null,
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.19424199499644315,
+                "surprise": 0.0038891324797816346,
+                "n_gram_diversity": [
+                    0.6052631578947368,
+                    0.9536423841059603,
+                    0.9933333333333333,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}

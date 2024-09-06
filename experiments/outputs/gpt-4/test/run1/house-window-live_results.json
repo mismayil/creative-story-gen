@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/gpt-4/test/test_data_eval_test_gpt-4_4772f2b09ed7.json"
+        ],
+        "group_id": "house-window-live",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "prompt_tokens": 56,
+            "completion_tokens": 179,
+            "total_tokens": 235
+        },
+        "cost": {
+            "input": 0.00168,
+            "output": 0.01074,
+            "total": 0.01242
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "house-window-live",
+            "items": [
+                "house",
+                "window",
+                "live"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "living in a house with windows",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: house, window, live. However, the story should not be about living in a house with windows.",
+            "template": "test",
+            "model_output": "In the heart of an ancient forest, there stood a solitary house, its windows long blinded by the relentless embrace of ivy and time. Within its walls, a peculiar rumor had taken root, whispering of a window that could show not the world outside, but the myriad lives one could have led. Many a traveler, lured by the promise of seeing their unchosen paths, braved the forest's gnarled grasp to find the house. One such seeker, a young woman with eyes like the stormy sea, peered through the fabled pane and saw not different lives, but the same life reflected in countless mirrors, each one a testament to the choices that had led her to this very moment. With a knowing smile, she turned away from the window, understanding that to truly live, one must embrace the life they have, not the shadows of what might have been.",
+            "usage": {
+                "completion_tokens": 179,
+                "prompt_tokens": 56,
+                "total_tokens": 235
+            },
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/test/test_data_eval_test_gpt-4_4772f2b09ed7.json",
+                "template": "test",
+                "model": "gpt-4",
+                "model_path": null,
+                "tokenizer_path": null,
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": null,
+                    "top_p": 1,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.19144309060813408,
+                "surprise": 0.006564919257593019,
+                "n_gram_diversity": [
+                    0.5976331360946746,
+                    0.9702380952380952,
+                    0.9940119760479041,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}

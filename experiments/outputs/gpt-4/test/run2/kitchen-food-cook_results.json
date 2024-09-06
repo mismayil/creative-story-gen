@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/gpt-4/test/run2/test_data_eval_test_gpt-4_0bbe9edd43b1.json"
+        ],
+        "group_id": "kitchen-food-cook",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "prompt_tokens": 55,
+            "completion_tokens": 195,
+            "total_tokens": 250
+        },
+        "cost": {
+            "input": 0.00165,
+            "output": 0.0117,
+            "total": 0.01335
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "kitchen-food-cook",
+            "items": [
+                "kitchen",
+                "food",
+                "cook"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "cooking food in a kitchen",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: kitchen, food, cook. However, the story should not be about cooking food in a kitchen.",
+            "template": "test",
+            "model_output": "In the belly of the ancient shipwreck, nestled among the skeletal remains of long-gone sailors, there lay a peculiar kitchen\u2014an underwater enigma where no cook had ever set foot. The merfolk spoke of a mystical force that conjured food from the briny abyss, nourishing the sea's denizens with feasts that appeared upon the coral-encrusted counters each twilight. One curious young mermaid, entranced by the legend, ventured inside and found an array of dishes more vibrant than any coral garden, each plate brimming with flavors of the ocean's bounty. As she tasted the ethereal cuisine, she discovered she could hear the whispered secrets of the sea, tales of sunken cities and hidden treasures, carried to her on the savory currents. Little did she know, with each bite, she was becoming the sea's own storyteller, a keeper of its deepest mysteries and a cook of tales that would ripple through the waves for eons.",
+            "usage": {
+                "completion_tokens": 195,
+                "prompt_tokens": 55,
+                "total_tokens": 250
+            },
+            "result_id": "3c3a1fcfa0fb",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/test/run2/test_data_eval_test_gpt-4_0bbe9edd43b1.json",
+                "template": "test",
+                "model": "gpt-4",
+                "model_path": null,
+                "tokenizer_path": null,
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.19499145597380274,
+                "surprise": 0.003751952903086178,
+                "n_gram_diversity": [
+                    0.6573033707865169,
+                    0.9661016949152542,
+                    0.9943181818181818,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}
