@@ -13,6 +13,10 @@ MODEL_COSTS = {
     "text-davinci-003": {'input': 0.00002, 'output': 0.00002},
     "gemini-1.5-flash": {'input': 3.5e-7, 'output': 1.05e-6},
     "gemini-1.5-pro": {'input': 3.5e-6, 'output': 10.5e-6},
+    "claude-3-5-sonnet-20240620": {'input': 3e-6, 'output': 15e-6},
+    "claude-3-opus-20240229": {'input': 15e-6, 'output': 75e-6},
+    "claude-3-sonnet-20240229": {'input': 3e-6, 'output': 15e-6},
+    "claude-3-haiku-20240307": {'input': 0.25e-6, 'output': 1.25e-6}
 }
 
 MODEL_ENCODINGS = {
@@ -85,24 +89,24 @@ def compute_usage(sample, model):
         return None, None
 
     usage = {
-        "prompt_tokens": 0,
-        "completion_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
         "total_tokens": 0
     }
 
     usage = sample.get("usage")
 
     if not usage and "prompt" in sample and "model_output" in sample:
-        prompt_tokens = num_tokens_from_string(sample["prompt"], model)
-        completion_tokens = num_tokens_from_string(sample["model_output"], model)
+        input_tokens = num_tokens_from_string(sample["prompt"], model)
+        output_tokens = num_tokens_from_string(sample["model_output"], model)
         usage = {
-            "prompt_tokens": prompt_tokens,
-            "completion_tokens": completion_tokens,
-            "total_tokens": prompt_tokens + completion_tokens
+            "input_tokens": input_tokens,
+            "output_tokens": output_tokens,
+            "total_tokens": input_tokens + output_tokens
         }
     
-    input_cost = usage["prompt_tokens"] * MODEL_COSTS[model]["input"]
-    output_cost = usage["completion_tokens"] * MODEL_COSTS[model]["output"]
+    input_cost = usage["input_tokens"] * MODEL_COSTS[model]["input"]
+    output_cost = usage["output_tokens"] * MODEL_COSTS[model]["output"]
 
     return usage, {
         "input": input_cost,

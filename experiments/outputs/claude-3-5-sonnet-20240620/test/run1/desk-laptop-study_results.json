@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/claude-3-5-sonnet-20240620/test/run1/test_data_eval_test_claude-3-5-sonnet-20240620_70ef56c42d0a.json"
+        ],
+        "group_id": "desk-laptop-study",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "input_tokens": 57,
+            "output_tokens": 132,
+            "total_tokens": 189
+        },
+        "cost": {
+            "input": 0.000171,
+            "output": 0.00198,
+            "total": 0.002151
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "desk-laptop-study",
+            "items": [
+                "desk",
+                "laptop",
+                "study"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "studying on a desk with a laptop",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: desk, laptop, study. However, the story should not be about studying on a desk with a laptop.",
+            "template": "test",
+            "model_output": "As the old wooden desk creaked under the weight of his laptop, Detective Johnson knew this was no ordinary case. The study, once a sanctuary of knowledge, now stood as a silent witness to a heinous crime. His fingers flew across the keyboard, piecing together fragments of evidence that seemed to defy logic. Suddenly, a flicker of movement caught his eye - a ghostly figure reflected in the laptop screen, hovering just behind him. With his heart pounding, Johnson spun around, only to find an empty room and the lingering sensation that this case would lead him down a path he may never return from.",
+            "usage": {
+                "input_tokens": 57,
+                "output_tokens": 132
+            },
+            "result_id": "efc0ce137c8d",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/test/run1/test_data_eval_test_claude-3-5-sonnet-20240620_70ef56c42d0a.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.19603566591176333,
+                "surprise": 0.013103360370378625,
+                "n_gram_diversity": [
+                    0.6949152542372882,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}

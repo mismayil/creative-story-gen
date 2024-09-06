@@ -183,8 +183,8 @@ def compute_metrics(results, args):
     metrics = {}
 
     usage = {
-        "prompt_tokens": 0,
-        "completion_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
         "total_tokens": 0
     }
 
@@ -233,9 +233,9 @@ def compute_metrics(results, args):
                 sample_usage, sample_cost = compute_usage(result, result["metadata"]["model"])
 
                 if sample_usage:
-                    usage["prompt_tokens"] += sample_usage["prompt_tokens"]
-                    usage["completion_tokens"] += sample_usage["completion_tokens"]
-                    usage["total_tokens"] += sample_usage["total_tokens"]
+                    usage["input_tokens"] += sample_usage["input_tokens"]
+                    usage["output_tokens"] += sample_usage["output_tokens"]
+                    usage["total_tokens"] += sample_usage["input_tokens"] + sample_usage["output_tokens"]
 
                 if sample_cost:
                     cost["input"] += sample_cost["input"]

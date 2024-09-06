@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/claude-3-5-sonnet-20240620/test/run1/test_data_eval_test_claude-3-5-sonnet-20240620_70ef56c42d0a.json"
+        ],
+        "group_id": "house-window-live",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "input_tokens": 56,
+            "output_tokens": 157,
+            "total_tokens": 213
+        },
+        "cost": {
+            "input": 0.00016800000000000002,
+            "output": 0.002355,
+            "total": 0.002523
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "house-window-live",
+            "items": [
+                "house",
+                "window",
+                "live"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "living in a house with windows",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: house, window, live. However, the story should not be about living in a house with windows.",
+            "template": "test",
+            "model_output": "As the astronaut gazed through the viewport of her lunar habitat, she couldn't help but reminisce about the house she left behind on Earth. The stark contrast between the barren lunar landscape and her memories of lush green gardens visible from her old bedroom window made her heart ache with nostalgia. She had always dreamed of being among the first to live on the Moon, but now she questioned whether the sacrifice was worth it. Determined to make the best of her situation, she decided to create a small hydroponics bay, bringing a touch of Earthly life to her sterile surroundings. As she carefully planted the first seeds, she smiled, knowing that soon she'd have her own little window to the world she left behind.",
+            "usage": {
+                "input_tokens": 56,
+                "output_tokens": 157
+            },
+            "result_id": "6ff9aefb1e6f",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/test/run1/test_data_eval_test_claude-3-5-sonnet-20240620_70ef56c42d0a.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.19384635821430946,
+                "surprise": 0.013975359176101418,
+                "n_gram_diversity": [
+                    0.6376811594202898,
+                    0.9562043795620438,
+                    0.9926470588235294,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}

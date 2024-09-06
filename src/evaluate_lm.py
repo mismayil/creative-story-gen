@@ -19,18 +19,18 @@ from dotenv import load_dotenv
 import logging, sys
 import google.generativeai as genai
 from google.api_core.exceptions import ResourceExhausted, ServiceUnavailable, DeadlineExceeded
+from anthropic import (AsyncAnthropic, RateLimitError as AnthropicRateLimitError, APIConnectionError as AnthropicAPIConnectionError, 
+                       APITimeoutError as AnthropicAPITimeoutError, InternalServerError as AnthropicInternalServerError)
 
 logging.basicConfig(stream=sys.stderr, level=logging.WARN)
 logger = logging.getLogger(__name__)
 
 from utils import read_json, write_json, generate_unique_id, batched
 
-OPENAI_CHAT_COMPLETION_MODELS = ["gpt-3.5-turbo", "gpt-4", "gpt-4-0125-preview", "gpt-4o-2024-08-06"]
-OPENAI_MODELS = OPENAI_CHAT_COMPLETION_MODELS
-GOOGLE_CHAT_COMPLETION_MODELS = ["gemini-1.5-flash", "gemini-1.5-pro"]
-GOOGLE_MODELS = GOOGLE_CHAT_COMPLETION_MODELS
-CHAT_COMPLETION_MODELS = OPENAI_CHAT_COMPLETION_MODELS + GOOGLE_CHAT_COMPLETION_MODELS
-API_MODELS = OPENAI_MODELS + GOOGLE_MODELS
+OPENAI_MODELS = ["gpt-3.5-turbo", "gpt-4", "gpt-4-0125-preview", "gpt-4o-2024-08-06"]
+GOOGLE_MODELS = ["gemini-1.5-flash", "gemini-1.5-pro"]
+ANTHROPIC_MODELS = ["claude-3-5-sonnet-20240620", "claude-3-opus-20240229", "claude-3-sonnet-20240229", "claude-3-haiku-20240307"]
+API_MODELS = OPENAI_MODELS + GOOGLE_MODELS + ANTHROPIC_MODELS
 HF_MODELS = ["llama-3.1-8b-instruct", "llama-3.1-70b-instruct"]
 
 @dataclasses.dataclass
@@ -64,26 +64,58 @@ async def openai_chat_completion(client, messages, model="gpt-3.5-turbo", model_
     try:
         response = await client.chat.completions.create(model=model, messages=messages, **openai_model_args)
         text = response.choices[0].message.content.strip()
-        usage = response.usage
+        usage = {"input_tokens": response.usage.prompt_tokens, "output_tokens": response.usage.completion_tokens}
     except (AttributeError, ValueError) as e:
         text = ""
         usage = {}
         exception = e
     
-    return ModelResponse(text, dict(usage), exception)
+    return ModelResponse(text, usage, exception)
 
 async def evaluate_openai_model(client, model, user_prompt, system_prompt=None, model_args=None):
-    if model in OPENAI_CHAT_COMPLETION_MODELS:
-        messages = []
+    messages = []
 
-        if system_prompt:
-            messages.append({"role": "system", "content": system_prompt.strip()})
-        
-        messages.append({"role": "user", "content": user_prompt.strip()})
-
-        return await openai_chat_completion(client, messages, model=model, model_args=model_args)
+    if system_prompt:
+        messages.append({"role": "system", "content": system_prompt.strip()})
     
-    raise ValueError(f"Model {model} not supported")
+    messages.append({"role": "user", "content": user_prompt.strip()})
+
+    return await openai_chat_completion(client, messages, model=model, model_args=model_args)
+
+def get_anthropic_model_args(model_args):
+    anthropic_model_args = {}
+
+    if model_args is not None:
+        if "temperature" in model_args:
+            anthropic_model_args["temperature"] = model_args["temperature"]
+        if "max_tokens" in model_args:
+            anthropic_model_args["max_tokens"] = model_args["max_tokens"]
+        if "top_p" in model_args:
+            anthropic_model_args["top_p"] = model_args["top_p"]
+        if "top_k" in model_args and model_args["top_k"] is not None:
+            anthropic_model_args["top_k"] = model_args["top_k"]
+
+    return anthropic_model_args
+
+@retry(retry=retry_if_exception_type((AnthropicAPITimeoutError, AnthropicAPIConnectionError, AnthropicRateLimitError, AnthropicInternalServerError)), wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(10), before_sleep=before_sleep_log(logger, logging.DEBUG))
+async def anthropic_chat_completion(client, messages, system_prompt=None, model="claude-3-5-sonnet-20240620", model_args=None):
+    anthropic_model_args = get_anthropic_model_args(model_args)
+    exception = None
+
+    try:
+        response = await client.messages.create(model=model, messages=messages, system=system_prompt, **anthropic_model_args)
+        text = response.content[0].text.strip()
+        usage = {"input_tokens": response.usage.input_tokens, "output_tokens": response.usage.output_tokens}
+    except (AttributeError, ValueError) as e:
+        text = ""
+        usage = {}
+        exception = e
+    
+    return ModelResponse(text, usage, exception)
+
+async def evaluate_anthropic_model(client, model, user_prompt, system_prompt=None, model_args=None):
+    messages = [{"role": "user", "content": user_prompt.strip()}]
+    return await anthropic_chat_completion(client, messages, system_prompt=system_prompt, model=model, model_args=model_args)
 
 def get_google_model_args(model_args):
     google_model_args = {}
@@ -186,6 +218,8 @@ async def evaluate_api_model(client, model, batch, model_args=None):
             tasks.append(asyncio.create_task(evaluate_openai_model(client, model, sample["user_prompt"], sample["system_prompt"], model_args=model_args)))
         elif model in GOOGLE_MODELS:
             tasks.append(asyncio.create_task(evaluate_google_model(client, model, sample["user_prompt"], sample["system_prompt"], model_args=model_args)))
+        elif model in ANTHROPIC_MODELS:
+            tasks.append(asyncio.create_task(evaluate_anthropic_model(client, model, sample["user_prompt"], sample["system_prompt"], model_args=model_args)))
         else:
             raise ValueError(f"Model {model} not supported")
     
@@ -209,6 +243,9 @@ def configure_openai_client(api_key, is_openai_azure=False):
 def configure_google_client(api_key):
     genai.configure(api_key=api_key if api_key is not None else os.getenv("GOOGLE_API_KEY"))
     return None
+
+def configure_anthropic_client(api_key):
+    return AsyncAnthropic(api_key=api_key if api_key is not None else os.getenv("ANTHROPIC_API_KEY"))
 
 def none_or_int(value):
     if value.lower() == "none":
@@ -252,6 +289,8 @@ async def main():
             client = configure_openai_client(args.api_key, args.openai_azure)
         elif args.model in GOOGLE_MODELS:
             client = configure_google_client(args.api_key)
+        elif args.model in ANTHROPIC_MODELS:
+            client = configure_anthropic_client(args.api_key)
         
     input_data = read_json(args.datapath)
     data = input_data["data"]

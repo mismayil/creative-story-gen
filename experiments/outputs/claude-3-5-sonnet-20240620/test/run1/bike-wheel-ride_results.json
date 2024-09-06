@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/claude-3-5-sonnet-20240620/test/run1/test_data_eval_test_claude-3-5-sonnet-20240620_70ef56c42d0a.json"
+        ],
+        "group_id": "bike-wheel-ride",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "input_tokens": 56,
+            "output_tokens": 126,
+            "total_tokens": 182
+        },
+        "cost": {
+            "input": 0.00016800000000000002,
+            "output": 0.00189,
+            "total": 0.002058
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "bike-wheel-ride",
+            "items": [
+                "bike",
+                "wheel",
+                "ride"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "riding on a bike with wheels",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: bike, wheel, ride. However, the story should not be about riding on a bike with wheels.",
+            "template": "test",
+            "model_output": "As the carnival wheel spun, Sarah's heart raced with anticipation, her fingers crossed for the grand prize: a shiny new bike. The clown's painted smile stretched wider as the wheel slowed, the pointer inching closer to Sarah's lucky number. With a final tick, it landed, and Sarah's eyes lit up brighter than the fairground lights. \"Congratulations, little lady!\" the clown bellowed, handing her a golden ticket for her prize. Sarah clutched the ticket tightly, knowing this ride of excitement was just the beginning of many adventures to come.",
+            "usage": {
+                "input_tokens": 56,
+                "output_tokens": 126
+            },
+            "result_id": "8c3d058f3ad6",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/test/run1/test_data_eval_test_claude-3-5-sonnet-20240620_70ef56c42d0a.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.19631410760009446,
+                "surprise": 0.010539317917037806,
+                "n_gram_diversity": [
+                    0.6422018348623854,
+                    0.9629629629629629,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}

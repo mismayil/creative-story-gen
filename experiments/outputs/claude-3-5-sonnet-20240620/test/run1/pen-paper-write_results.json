@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/claude-3-5-sonnet-20240620/test/run1/test_data_eval_test_claude-3-5-sonnet-20240620_70ef56c42d0a.json"
+        ],
+        "group_id": "pen-paper-write",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "input_tokens": 57,
+            "output_tokens": 153,
+            "total_tokens": 210
+        },
+        "cost": {
+            "input": 0.000171,
+            "output": 0.002295,
+            "total": 0.0024660000000000003
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "pen-paper-write",
+            "items": [
+                "pen",
+                "paper",
+                "write"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "writing on a paper with a pen",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: pen, paper, write. However, the story should not be about writing on a paper with a pen.",
+            "template": "test",
+            "model_output": "As the ancient artifact crumbled in her hands, Dr. Amelia Pen realized the gravity of her discovery. The fragile paper, once thought to be a mere scrap, revealed a map to a long-lost civilization. With trembling fingers, she carefully unfolded the delicate document, her eyes widening as she deciphered the intricate symbols that seemed to write themselves across the page. Suddenly, a blinding light engulfed her, and Amelia found herself transported to a bustling marketplace in a city that shouldn't exist. Overwhelmed by the sights and sounds of this impossible place, she clutched the map to her chest, knowing that her adventure had only just begun.",
+            "usage": {
+                "input_tokens": 57,
+                "output_tokens": 153
+            },
+            "result_id": "b9a9468855aa",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/test/run1/test_data_eval_test_claude-3-5-sonnet-20240620_70ef56c42d0a.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.19498897578324476,
+                "surprise": 0.006441241944443718,
+                "n_gram_diversity": [
+                    0.6504065040650406,
+                    0.9754098360655737,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "source": [
+            "../experiments/outputs/claude-3-5-sonnet-20240620/test/run1/test_data_eval_test_claude-3-5-sonnet-20240620_70ef56c42d0a.json"
+        ],
+        "group_id": "kitchen-food-cook",
+        "size": 1
+    },
+    "metrics": {
+        "usage": {
+            "input_tokens": 55,
+            "output_tokens": 176,
+            "total_tokens": 231
+        },
+        "cost": {
+            "input": 0.000165,
+            "output": 0.00264,
+            "total": 0.002805
+        },
+        "num_samples": 1
+    },
+    "data": [
+        {
+            "id": "kitchen-food-cook",
+            "items": [
+                "kitchen",
+                "food",
+                "cook"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "cooking food in a kitchen",
+            "system_prompt": "",
+            "user_prompt": "You are an expert story writer. Write a creative short story using a maximum of five sentences. The story must include the following three words: kitchen, food, cook. However, the story should not be about cooking food in a kitchen.",
+            "template": "test",
+            "model_output": "As the alien spacecraft hovered above the city, its occupants peered curiously at the strange structures below, particularly fascinated by the small rooms humans called \"kitchens.\" Unbeknownst to Earth's inhabitants, these extraterrestrial beings sustained themselves on pure energy and had never encountered the concept of solid food or the need to cook. In their attempt to understand human culture, they beamed down a team to investigate, materializing inside a bustling restaurant kitchen during the dinner rush. Chaos ensued as chefs and servers alike screamed in terror, flinging pots, pans, and food in all directions while fleeing the bewildered aliens. The visitors, covered in various sauces and ingredients, decided that perhaps studying humans from afar might be a safer approach to satisfying their curiosity.",
+            "usage": {
+                "input_tokens": 55,
+                "output_tokens": 176
+            },
+            "result_id": "886f4589b22e",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/test/run1/test_data_eval_test_claude-3-5-sonnet-20240620_70ef56c42d0a.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "dsi": 0.19676390287844728,
+                "surprise": 0.006137596543643126,
+                "n_gram_diversity": [
+                    0.7304964539007093,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}
