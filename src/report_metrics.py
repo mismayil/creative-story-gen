@@ -4,7 +4,6 @@ import pathlib
 import spacy
 from collections import Counter
 from statistics import mean
-import math
 
 from sentence_transformers import SentenceTransformer
 from sentence_transformers.util import cos_sim, dot_score, euclidean_sim, manhattan_sim
@@ -21,7 +20,8 @@ DEF_PREPROCESSING_ARGS = {
     "remove_punct": True,
     "remove_stopwords": True,
     "lemmatize": True,
-    "dominant_k": None
+    "dominant_k": None,
+    "unique": True
 }
 
 SPACY_ENGINE = None
@@ -39,21 +39,18 @@ SPACY_CACHE = {}
 #     return wrapper
 
 def load_spacy_engine(language=DEF_SPACY_LANG):
+    global SPACY_ENGINE
     if SPACY_ENGINE:
         return SPACY_ENGINE
     SPACY_ENGINE = spacy.load(language)
     return SPACY_ENGINE
 
-def load_emb_model(model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE):
+def load_emb_model(model=DEF_EMB_MODEL):
+    global EMB_MODEL
     if EMB_MODEL:
         return EMB_MODEL
 
-    output_value = "sentence_embedding"
-
-    if "token" in emb_type:
-        output_value = "token_embeddings"
-
-    EMB_MODEL = SentenceTransformer(model, output_value=output_value)
+    EMB_MODEL = SentenceTransformer(model)
     
     return EMB_MODEL
 
@@ -61,9 +58,14 @@ def get_embedding(text, model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE):
     # if text in EMBEDDING_CACHE:
     #     return EMBEDDING_CACHE[text]
 
-    emb_model = load_emb_model(model, emb_type)
+    emb_model = load_emb_model(model)
+    
+    output_value = "sentence_embedding"
 
-    embeddings = emb_model.encode(text)
+    if "token" in emb_type:
+        output_value = "token_embeddings"
+
+    embeddings = emb_model.encode(text, output_value=output_value)
     
     if embeddings.ndim == 2:
         embeddings = embeddings.mean(axis=0)
@@ -73,28 +75,30 @@ def get_embedding(text, model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE):
 
 def compute_sem_dis(emb1, emb2, distance_fn=DEF_DIST_FN):
     if distance_fn == "cosine":
-        return 1 - cos_sim(emb1, emb2)
+        return (1 - cos_sim(emb1, emb2)).item()
     elif distance_fn == "dot":
-        return 1 - dot_score(emb1, emb2)
+        return (1 - dot_score(emb1, emb2)).item()
     elif distance_fn == "euclidean":
-        return -euclidean_sim(emb1, emb2)
+        return (-euclidean_sim(emb1, emb2)).item()
     elif distance_fn == "manhattan":
-        return -manhattan_sim(emb1, emb2)
+        return (-manhattan_sim(emb1, emb2)).item()
     else:
         raise ValueError(f"Invalid distance function: {distance_fn}")
 
 def get_spacy_doc(text):
+    global SPACY_CACHE
     if text in SPACY_CACHE:
         return SPACY_CACHE[text]
     spacy_engine = load_spacy_engine()
-    SPACY_CACHE[text] = spacy_engine(text)
-    return SPACY_CACHE[text]
+    doc = spacy_engine(text)
+    SPACY_CACHE[text] = doc
+    return doc
 
 def get_sentences(text):
     doc = get_spacy_doc(text)
     return [sent.text for sent in doc.sents]
 
-def get_words(text, lower=True, remove_punct=True, remove_stopwords=True, lemmatize=True, dominant_k=None):
+def get_words(text, lower=True, remove_punct=True, remove_stopwords=True, lemmatize=True, unique=True, dominant_k=None):
     doc = get_spacy_doc(text)
     tokens = [token for token in doc]
 
@@ -112,10 +116,12 @@ def get_words(text, lower=True, remove_punct=True, remove_stopwords=True, lemmat
     if lower:
         words = [word.lower() for word in words]
     
-    word_freq = Counter(words)
-
     if dominant_k is None or dominant_k == 0 or dominant_k >= len(words):
-        return [w[0] for w in word_freq.most_common()]
+        if unique:
+            return list(set(words))
+        return words
+
+    word_freq = Counter(words)
 
     return [w[0] for w in word_freq.most_common(dominant_k)]
 
@@ -162,12 +168,12 @@ def compute_novelty(stories, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE,
 
     for story in stories:
         story_avg_sem_dis = compute_avg_sem_dis(story, emb_model, emb_type, distance_fn, preprocessing_args)
-        novelty_scores.append(2 * math.abs(story_avg_sem_dis - corpus_avg_sem_dis))
+        novelty_scores.append(2 * abs(story_avg_sem_dis - corpus_avg_sem_dis))
     
     return novelty_scores
 
 def compute_theme_uniqueness(stories, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, emb_strategy="direct",
-                             cluster_linkage="ward", cluster_distance_threshold=0.7, preprocessing_args=DEF_PREPROCESSING_ARGS):
+                             cluster_linkage="ward", cluster_distance_threshold=0.5, preprocessing_args=DEF_PREPROCESSING_ARGS):
     story_embeddings = [compute_story_embedding(story, emb_model, emb_type, emb_strategy, preprocessing_args) for story in stories]
     clustering = AgglomerativeClustering(n_clusters=None, linkage=cluster_linkage, distance_threshold=cluster_distance_threshold)
     cluster_labels = clustering.fit_predict(story_embeddings)
@@ -181,9 +187,21 @@ def compute_surprise(story, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, dist
     sentences = get_sentences(story)
 
     sentence_avg_sem_distances = [compute_avg_sem_dis(sentence, emb_model, emb_type, distance_fn, preprocessing_args) for sentence in sentences]
-    raw_surprises = [sentence_avg_sem_distances[i] - sentence_avg_sem_distances[i - 1] for i in range(1, len(sentence_avg_sem_distances))]
+    raw_surprises = [abs(sentence_avg_sem_distances[i] - sentence_avg_sem_distances[i - 1]) for i in range(1, len(sentence_avg_sem_distances))]
 
     return (2 / len(raw_surprises)) * sum(raw_surprises)
+
+def compute_n_gram_diversity(story, max_n_gram=5):
+    words = get_words(story, remove_punct=False, remove_stopwords=False, lemmatize=False, unique=False)
+    all_n_grams = []
+
+    for n in range(1, max_n_gram + 1):
+        all_n_grams.append([tuple(words[i:i + n]) for i in range(len(words) - n + 1)])
+    
+    all_n_gram_freqs = [Counter(n_grams) for n_grams in all_n_grams]
+    n_gram_diversity = [len(n_gram_freqs) / len(n_grams) for n_grams, n_gram_freqs in zip(all_n_grams, all_n_gram_freqs)]
+
+    return n_gram_diversity
 
 def compute_metrics(results, report_usage=True):
     metrics = {}

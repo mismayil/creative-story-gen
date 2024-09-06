@@ -6,11 +6,13 @@ from utils import read_json, write_json, get_template_keys
 from prompts import *
 
 SYSTEM_INSTRUCTION_TEMPLATES = {
-    "pilot": PILOT_SYSTEM_INSTRUCTION_TEMPLATE,
+    "default": DEFAULT_SYSTEM_INSTRUCTION_TEMPLATE,
+    "test": TEST_SYSTEM_INSTRUCTION_TEMPLATE,
 }
 
 USER_INSTRUCTION_TEMPLATES = {
-    "pilot": PILOT_USER_INSTRUCTION_TEMPLATE,
+    "default": DEFAULT_USER_INSTRUCTION_TEMPLATE,
+    "test": TEST_USER_INSTRUCTION_TEMPLATE,
 }
 
 def prepare_template_value(value):
@@ -66,7 +68,7 @@ def prepare_sample_for_eval(sample, template):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--datapath", type=str, help="Path to task data in json", required=True)
-    parser.add_argument("-t", "--template", type=str, default="pilot", help="Template name")
+    parser.add_argument("-t", "--template", type=str, default="default", help="Template name")
     parser.add_argument(
         "-s",
         "--suffix",

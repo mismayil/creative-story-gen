@@ -26,15 +26,12 @@ logger = logging.getLogger(__name__)
 from utils import read_json, write_json, generate_unique_id, batched
 
 OPENAI_CHAT_COMPLETION_MODELS = ["gpt-3.5-turbo", "gpt-4", "gpt-4-0125-preview", "gpt-4o-2024-08-06"]
-OPENAI_TEXT_COMPLETION_MODELS = ["text-davinci-003"]
-OPENAI_MODELS = OPENAI_CHAT_COMPLETION_MODELS + OPENAI_TEXT_COMPLETION_MODELS
+OPENAI_MODELS = OPENAI_CHAT_COMPLETION_MODELS
 GOOGLE_CHAT_COMPLETION_MODELS = ["gemini-1.5-flash", "gemini-1.5-pro"]
 GOOGLE_MODELS = GOOGLE_CHAT_COMPLETION_MODELS
 CHAT_COMPLETION_MODELS = OPENAI_CHAT_COMPLETION_MODELS + GOOGLE_CHAT_COMPLETION_MODELS
-TEXT_COMPLETION_MODELS = OPENAI_TEXT_COMPLETION_MODELS
 API_MODELS = OPENAI_MODELS + GOOGLE_MODELS
-LLAMA_MODELS = ["tr-llama-8b"]
-AYA_MODELS = ["aya-23-8b", "aya-23-35b"]
+HF_MODELS = ["llama-3.1-8b-instruct", "llama-3.1-70b-instruct"]
 
 @dataclasses.dataclass
 class ModelResponse:
@@ -75,27 +72,16 @@ async def openai_chat_completion(client, messages, model="gpt-3.5-turbo", model_
     
     return ModelResponse(text, dict(usage), exception)
 
-@retry(retry=retry_if_exception_type((APITimeoutError, APIConnectionError, RateLimitError, InternalServerError)), wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(10), before_sleep=before_sleep_log(logger, logging.DEBUG))
-async def openai_text_completion(client, prompt, model="text-davinci-003", model_args=None):
-    openai_model_args = get_openai_model_args(model_args)
-    exception = None
-
-    try:
-        response = client.completions.create(model=model, prompt=prompt, **openai_model_args)
-        text = response.choices[0].text.strip()
-        usage = response.usage
-    except (AttributeError, ValueError) as e:
-        text = ""
-        usage = {}
-        exception = e
-
-    return ModelResponse(text, dict(usage), exception)
-
-async def openai_completion(client, prompt, model, model_args=None):
+async def evaluate_openai_model(client, model, user_prompt, system_prompt=None, model_args=None):
     if model in OPENAI_CHAT_COMPLETION_MODELS:
-        return await openai_chat_completion(client, [{"role": "user", "content": prompt.strip()}], model=model, model_args=model_args)
-    elif model in OPENAI_TEXT_COMPLETION_MODELS:
-        return await openai_text_completion(client, prompt.strip(), model=model, model_args=model_args)
+        messages = []
+
+        if system_prompt:
+            messages.append({"role": "system", "content": system_prompt.strip()})
+        
+        messages.append({"role": "user", "content": user_prompt.strip()})
+
+        return await openai_chat_completion(client, messages, model=model, model_args=model_args)
     
     raise ValueError(f"Model {model} not supported")
 
@@ -115,14 +101,14 @@ def get_google_model_args(model_args):
     return google_model_args
 
 @retry(retry=retry_if_exception_type((ResourceExhausted, ServiceUnavailable, DeadlineExceeded)), wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(10), before_sleep=before_sleep_log(logger, logging.DEBUG))
-async def google_completion(client, prompt, model, model_args=None):
+async def evaluate_google_model(client, model, user_prompt, system_prompt=None, model_args=None):
     exception = None
 
     try:
-        model = genai.GenerativeModel(model)
+        model = genai.GenerativeModel(model, system_instruction=system_prompt.strip())
         google_model_args = get_google_model_args(model_args)
         config = genai.GenerationConfig(**google_model_args)
-        response = model.generate_content(prompt.strip(), generation_config=config)
+        response = model.generate_content(user_prompt.strip(), generation_config=config)
         text = response.text.strip()
     except (AttributeError, ValueError) as e:
         text = ""
@@ -157,42 +143,18 @@ def get_hf_model_args(model_args):
             hf_model_args["do_sample"] = True
     return hf_model_args
 
-def evaluate_llama_model(prompts, model, tokenizer, model_args=None, device="cuda"):
-    terminators = [
-        tokenizer.eos_token_id,
-        tokenizer.convert_tokens_to_ids("<|eot_id|>")
-    ]
-    llama_model_args = get_hf_model_args(model_args)
+def evaluate_hf_model(model, tokenizer, batch, model_args=None, device="cuda"):
+    hf_model_args = get_hf_model_args(model_args)
 
     responses = []
 
-    for prompt in prompts:
-        messages = [{"role": "user", "content": prompt}]
+    for sample in batch:
+        messages = []
 
-        input_ids = tokenizer.apply_chat_template(
-            messages,
-            add_generation_prompt=True,
-            return_tensors="pt",
-        ).to(device)
-
-        outputs = model.generate(
-            input_ids,
-            eos_token_id=terminators,
-            pad_token_id=tokenizer.eos_token_id,
-            **llama_model_args
-        )
-        response = outputs[0][input_ids.shape[-1]:]
-        responses.append(ModelResponse(text=tokenizer.decode(response, skip_special_tokens=True)))
-    
-    return responses
-
-def evaluate_aya_model(prompts, model, tokenizer, model_args=None, device="cuda"):
-    aya_model_args = get_hf_model_args(model_args)
-
-    responses = []
-
-    for prompt in prompts:
-        messages = [{"role": "user", "content": prompt}]
+        if sample["system_prompt"]:
+            messages.append({"role": "system", "content": sample["system_prompt"].strip()})
+        
+        messages.append({"role": "user", "content": sample["user_prompt"].strip()})
 
         input_ids = tokenizer.apply_chat_template(
             messages,
@@ -203,29 +165,27 @@ def evaluate_aya_model(prompts, model, tokenizer, model_args=None, device="cuda"
         outputs = model.generate(
             input_ids,
             pad_token_id=tokenizer.eos_token_id,
-            **aya_model_args
+            **hf_model_args
         )
         response = outputs[0][input_ids.shape[-1]:]
         responses.append(ModelResponse(text=tokenizer.decode(response, skip_special_tokens=True)))
     
     return responses
 
-def evaluate_model(prompts, model_name, model, tokenizer, model_args=None, device="cuda"):
-    if model_name in LLAMA_MODELS:
-        return evaluate_llama_model(prompts, model, tokenizer, model_args=model_args, device=device)
-    elif model_name in AYA_MODELS:
-        return evaluate_aya_model(prompts, model, tokenizer, model_args=model_args, device=device)
+def evaluate_model(batch, model_name, model, tokenizer, model_args=None, device="cuda"):
+    if model_name in HF_MODELS:
+        return evaluate_hf_model(batch, model, tokenizer, model_args=model_args, device=device)
     else:
         raise ValueError(f"Model {model_name} not supported")
 
-async def batch_completion(client, batch, model, model_args):
+async def evaluate_api_model(client, model, batch, model_args=None):
     tasks = []
     
     for sample in batch:
         if model in OPENAI_MODELS:
-            tasks.append(asyncio.create_task(openai_completion(client, sample["prompt"], model=model, model_args=model_args)))
+            tasks.append(asyncio.create_task(evaluate_openai_model(client, model, sample["user_prompt"], sample["system_prompt"], model_args=model_args)))
         elif model in GOOGLE_MODELS:
-            tasks.append(asyncio.create_task(google_completion(client, sample["prompt"], model=model, model_args=model_args)))
+            tasks.append(asyncio.create_task(evaluate_google_model(client, model, sample["user_prompt"], sample["system_prompt"], model_args=model_args)))
         else:
             raise ValueError(f"Model {model} not supported")
     
@@ -271,7 +231,7 @@ async def main():
     parser.add_argument("-oa", "--openai-azure", action="store_true", help="If OpenAI on Azure")
     parser.add_argument("-m", "--model", type=str, help="Model to use for evaluation", default="gpt-4")
     parser.add_argument("-t", "--temperature", type=float, help="Temperature for generation", default=0.0)
-    parser.add_argument("-g", "--max-tokens", type=none_or_int, help="Max tokens for generation", default=40)
+    parser.add_argument("-g", "--max-tokens", type=none_or_int, help="Max tokens for generation", default=None)
     parser.add_argument("-p", "--top-p", type=float, help="Top-p for generation", default=1)
     parser.add_argument("-k", "--top-k", type=float, help="Top-k for generation", default=None)
     parser.add_argument("-fp", "--frequency-penalty", type=float, help="Frequency penalty for generation", default=0)
@@ -374,7 +334,7 @@ async def main():
             results = []
 
             if args.model in API_MODELS:
-                results = await batch_completion(client, filtered_batch, args.model, model_args)
+                results = await evaluate_api_model(client, args.model, filtered_batch, model_args)
                 for sample, result in zip(filtered_batch, results):
                     sample["model_output"] = result.text
                     sample["usage"] = result.usage
@@ -382,7 +342,7 @@ async def main():
                         sample["exception"] = str(result.exception)
                         _write_error(error_path, sample, result.exception)
             else:
-                results = evaluate_model([sample["prompt"] for sample in filtered_batch], args.model, model, tokenizer, model_args=model_args, device=device)
+                results = evaluate_model(args.model, model, tokenizer, filtered_batch, model_args=model_args, device=device)
                 for sample, result in zip(filtered_batch, results):
                     sample["model_output"] = result.text
             
