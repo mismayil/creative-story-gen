@@ -1,7 +1,7 @@
 #!/bin/bash
 
 experiment=${1:-"run1"}
-model=${2:-"claude-3-5-sonnet-20240620"}
+model=${2:-"gemini-1.5-flash"}
 data_dir="../experiments/data"
 outputs_dir="../experiments/outputs"
 
@@ -9,7 +9,7 @@ outputs_dir="../experiments/outputs"
 # for jsonfile in ${data_dir}/test/eval/*.json
 # do
 #     echo "Evaluating ${jsonfile}"
-#     python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/test/${experiment} -m ${model} -b 2 -oa -t 0.7 -p 0.95 -g 256
+#     python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/test/${experiment} -m ${model} -b 2 -oa -t 0.7 -p 0.95
 # done
 
 temperatures=(0 0.3 0.7 1)
@@ -24,7 +24,7 @@ do
         for p in ${top_ps[@]}
         do
             echo "Temperature: ${t}, Top-p: ${p}"
-            python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/pilot/temp{t}_p{p}/${experiment} -m ${model} -b 2 -t ${t} -p ${p} -g 256
+            python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/pilot/temp{t}_p{p}/${experiment} -m ${model} -b 2 -t ${t} -p ${p}
         done
     done
 done
