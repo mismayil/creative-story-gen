@@ -96,9 +96,9 @@ def compute_usage(sample, model):
 
     usage = sample.get("usage")
 
-    if not usage and "prompt" in sample and "model_output" in sample:
+    if not usage and "prompt" in sample and "output" in sample:
         input_tokens = num_tokens_from_string(sample["prompt"], model)
-        output_tokens = num_tokens_from_string(sample["model_output"], model)
+        output_tokens = num_tokens_from_string(sample["output"], model)
         usage = {
             "input_tokens": input_tokens,
             "output_tokens": output_tokens,

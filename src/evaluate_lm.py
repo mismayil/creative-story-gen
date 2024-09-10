@@ -363,11 +363,11 @@ async def main():
             for sample in batch:
                 if "id" in sample and sample["id"] in ignore_map:
                     ignore_instance = ignore_map[sample["id"]]
-                    if "model_output" in ignore_instance:
+                    if "output" in ignore_instance:
                         sample.update(ignore_instance)
                         continue
                 
-                if "model_output" in sample:
+                if "output" in sample:
                     continue
                 
                 filtered_batch.append(sample)
@@ -380,7 +380,7 @@ async def main():
                 results = evaluate_model(args.model, model, tokenizer, filtered_batch, model_args=model_args, device=device)
 
             for sample, result in zip(filtered_batch, results):
-                sample["model_output"] = result.text
+                sample["output"] = result.text
                 sample["usage"] = result.usage
                 sample["result_id"] = generate_unique_id()
                 if result.exception is not None:

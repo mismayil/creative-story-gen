@@ -194,7 +194,7 @@ def compute_metrics(results, args):
         "total": 0
     }
 
-    model_response_attr = "model_output"
+    response_attr = "output"
 
     preprocessing_args = {
         "lower": args.lower,
@@ -205,7 +205,7 @@ def compute_metrics(results, args):
         "unique": args.unique
     }
 
-    stories = [result.get(model_response_attr, "") for result in results]
+    stories = [result.get(response_attr, "") for result in results]
 
     if len(stories) > 1:
         inv_homogen = compute_inverse_homogenization(stories, args.emb_model, args.emb_type, args.emb_strategy, args.distance_fn, preprocessing_args)
@@ -219,10 +219,10 @@ def compute_metrics(results, args):
     for result_idx, result in enumerate(results):
         result["metrics"] = {}
 
-        if model_response_attr in result:
-            result["metrics"]["dsi"] = compute_dsi(result[model_response_attr], args.emb_model, args.emb_type, args.distance_fn, preprocessing_args)
-            result["metrics"]["surprise"] = compute_surprise(result[model_response_attr], args.emb_model, args.emb_type, args.distance_fn, preprocessing_args)
-            result["metrics"]["n_gram_diversity"] = compute_n_gram_diversity(result[model_response_attr], args.max_n_gram)
+        if response_attr in result:
+            result["metrics"]["dsi"] = compute_dsi(result[response_attr], args.emb_model, args.emb_type, args.distance_fn, preprocessing_args)
+            result["metrics"]["surprise"] = compute_surprise(result[response_attr], args.emb_model, args.emb_type, args.distance_fn, preprocessing_args)
+            result["metrics"]["n_gram_diversity"] = compute_n_gram_diversity(result[response_attr], args.max_n_gram)
             
             if len(stories) > 1:
                 result["metrics"]["inv_homogen"] = inv_homogen[result_idx]
