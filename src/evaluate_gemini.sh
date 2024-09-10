@@ -24,7 +24,7 @@ do
         for p in ${top_ps[@]}
         do
             echo "Temperature: ${t}, Top-p: ${p}"
-            python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/pilot/temp{t}_p{p}/${experiment} -m ${model} -b 2 -t ${t} -p ${p}
+            python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/pilot/temp${t}_p${p}/${experiment} -m ${model} -b 2 -t ${t} -p ${p}
         done
     done
 done
