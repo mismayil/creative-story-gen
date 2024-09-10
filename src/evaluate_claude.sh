@@ -12,8 +12,8 @@ outputs_dir="../experiments/outputs"
 #     python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/test/${experiment} -m ${model} -b 2 -oa -t 0.7 -p 0.95 -g 256
 # done
 
-temperatures=(0 0.3 0.7 1)
-top_ps=(0.9 0.95 1)
+temperatures=(0 0.3 0.5 0.7 0.9 1)
+top_ps=(0.3 0.5 0.7 0.9 0.95 1)
 
 # # Pilot experiments
 for jsonfile in ${data_dir}/pilot/eval/*.json
