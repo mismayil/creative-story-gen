@@ -59,18 +59,19 @@ def get_openai_model_args(model_args):
 @retry(retry=retry_if_exception_type((APITimeoutError, APIConnectionError, RateLimitError, InternalServerError)), wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(10), before_sleep=before_sleep_log(logger, logging.DEBUG))
 async def openai_chat_completion(client, messages, model="gpt-3.5-turbo", model_args=None):
     openai_model_args = get_openai_model_args(model_args)
+    text = ""
     exception = None
-
-    try:
-        response = await client.chat.completions.create(model=model, messages=messages, **openai_model_args)
-        text = response.choices[0].message.content.strip()
-        usage = {"input_tokens": response.usage.prompt_tokens, "output_tokens": response.usage.completion_tokens}
-    except (AttributeError, ValueError) as e:
-        text = ""
-        usage = {}
-        exception = e
+    response = await client.chat.completions.create(model=model, messages=messages, **openai_model_args)
+    content = response.choices[0].message.content
     
-    return ModelResponse(text, usage, exception)
+    if content is None:
+        exception = f"Finish reason: {response.choices[0].finish_reason}"
+    else:
+        text = content.strip()
+    
+    usage = response.usage
+    
+    return ModelResponse(text, dict(usage), exception)
 
 async def evaluate_openai_model(client, model, user_prompt, system_prompt=None, model_args=None):
     messages = []
@@ -134,17 +135,18 @@ def get_google_model_args(model_args):
 
 @retry(retry=retry_if_exception_type((ResourceExhausted, ServiceUnavailable, DeadlineExceeded)), wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(10), before_sleep=before_sleep_log(logger, logging.DEBUG))
 async def evaluate_google_model(client, model, user_prompt, system_prompt=None, model_args=None):
+    text = ""
     exception = None
 
+    model = genai.GenerativeModel(model, system_instruction=system_prompt.strip())
+    google_model_args = get_google_model_args(model_args)
+    config = genai.GenerationConfig(**google_model_args)
+    response = model.generate_content(user_prompt.strip(), generation_config=config)
+    
     try:
-        model = genai.GenerativeModel(model, system_instruction=system_prompt.strip())
-        google_model_args = get_google_model_args(model_args)
-        config = genai.GenerationConfig(**google_model_args)
-        response = model.generate_content(user_prompt.strip(), generation_config=config)
         text = response.text.strip()
-    except (AttributeError, ValueError) as e:
-        text = ""
-        exception = e
+    except ValueError as e:
+        exception = f"Finish reason: {str(response.candidates[0].finish_reason)}"
 
     return ModelResponse(text, None, exception)
 
@@ -383,7 +385,6 @@ async def main():
                 sample["result_id"] = generate_unique_id()
                 if result.exception is not None:
                     sample["exception"] = str(result.exception)
-                    _write_error(error_path, sample, result.exception)
             
             write_json(outputs, output_path, ensure_ascii=False)
         except Exception as e:

@@ -6,15 +6,25 @@ data_dir="../experiments/data"
 outputs_dir="../experiments/outputs"
 
 # Test experiments
-for jsonfile in ${data_dir}/test/eval/*.json
-do
-    echo "Evaluating ${jsonfile}"
-    python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/test/${experiment} -m ${model} -b 2 -oa -t 0.7 -p 0.95
-done
-
-# # Pilot experiments
-# for jsonfile in ${data_dir}/pilot/eval/*.json
+# for jsonfile in ${data_dir}/test/eval/*.json
 # do
 #     echo "Evaluating ${jsonfile}"
-#     python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/${experiment} -m ${model} -b 2 -oa
+#     python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/test/${experiment} -m ${model} -b 2 -oa -t 0.7 -p 0.95
 # done
+
+temperatures=(0 0.3 0.7 1)
+top_ps=(0.9 0.95 1)
+
+# # Pilot experiments
+for jsonfile in ${data_dir}/pilot/eval/*.json
+do
+    echo "Evaluating ${jsonfile}"
+    for t in ${temperatures[@]}
+    do
+        for p in ${top_ps[@]}
+        do
+            echo "Temperature: ${t}, Top-p: ${p}"
+            python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/pilot/temp{t}_p{p}/${experiment} -m ${model} -b 2 -oa -t ${t} -p ${p}
+        done
+    done
+done
