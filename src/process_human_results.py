@@ -37,7 +37,8 @@ def main():
         metadata = {
             "source": args.results_path,
             "num_questions": 4,
-            "participant_id": human_id
+            "participant_id": human_id,
+            "model": "human"
         }
 
         output_path = results_path.parent / args.experiment / f"{human_id}.json"

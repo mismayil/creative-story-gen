@@ -66,12 +66,12 @@ async def openai_chat_completion(client, messages, model="gpt-3.5-turbo", model_
     
     if content is None:
         exception = f"Finish reason: {response.choices[0].finish_reason}"
+        usage = None
     else:
         text = content.strip()
+        usage = {"input_tokens": response.usage.prompt_tokens, "output_tokens": response.usage.completion_tokens}
     
-    usage = response.usage
-    
-    return ModelResponse(text, dict(usage), exception)
+    return ModelResponse(text, usage, exception)
 
 async def evaluate_openai_model(client, model, user_prompt, system_prompt=None, model_args=None):
     messages = []

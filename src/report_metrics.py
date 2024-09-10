@@ -4,6 +4,7 @@ import pathlib
 import spacy
 from collections import Counter, defaultdict
 from statistics import mean
+import random
 
 from sentence_transformers import SentenceTransformer
 from sentence_transformers.util import cos_sim, dot_score, euclidean_sim, manhattan_sim
@@ -31,10 +32,12 @@ SPACY_CACHE = {}
 
 @cache(cache_dict=SPACY_ENGINE_CACHE)
 def load_spacy_engine(language=DEF_SPACY_LANG):
+    print(f"Loading spacy engine: {language}")
     return spacy.load(language)
 
 @cache(cache_dict=EMB_MODEL_CACHE)
 def load_emb_model(model=DEF_EMB_MODEL):
+    print(f"Loading embedding model: {model}")
     return SentenceTransformer(model)
 
 @cache(cache_dict=EMBEDDING_CACHE)
@@ -115,6 +118,9 @@ def compute_story_embedding(story, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYP
         raise ValueError(f"Invalid embedding strategy: {emb_strategy}")
 
 def compute_avg_pairwise_distances(embeddings, distance_fn=DEF_DIST_FN):
+    if len(embeddings) <= 1:
+        return [0]
+
     avg_pairwise_distances = []
     for i in range(len(embeddings)):
         pairwise_distances = []
@@ -162,6 +168,9 @@ def compute_dsi(story, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, distance_
 def compute_surprise(story, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, distance_fn=DEF_DIST_FN, preprocessing_args=DEF_PREPROCESSING_ARGS):
     sentences = get_sentences(story)
 
+    if len(sentences) <= 1:
+        return 0
+
     sentence_avg_sem_distances = [compute_avg_sem_dis(sentence, emb_model, emb_type, distance_fn, preprocessing_args) for sentence in sentences]
     raw_surprises = [abs(sentence_avg_sem_distances[i] - sentence_avg_sem_distances[i - 1]) for i in range(1, len(sentence_avg_sem_distances))]
 
@@ -179,7 +188,7 @@ def compute_n_gram_diversity(story, max_n_gram=5):
 
     return n_gram_diversity
 
-def compute_metrics(results, args):
+def compute_metrics(results, config):
     metrics = {}
 
     usage = {
@@ -197,39 +206,58 @@ def compute_metrics(results, args):
     response_attr = "output"
 
     preprocessing_args = {
-        "lower": args.lower,
-        "remove_punct": args.remove_punct,
-        "remove_stopwords": args.remove_stopwords,
-        "lemmatize": args.lemmatize,
-        "dominant_k": args.dominant_k,
-        "unique": args.unique
+        "lower": config["lower"],
+        "remove_punct": config["remove_punct"],
+        "remove_stopwords": config["remove_stopwords"],
+        "lemmatize": config["lemmatize"],
+        "dominant_k": config["dominant_k"],
+        "unique": config["unique"]
     }
 
-    stories = [result.get(response_attr, "") for result in results]
+    results = [result for result in results if response_attr in result and result[response_attr]]
+
+    stories = [result[response_attr] for result in results]
 
     if len(stories) > 1:
-        inv_homogen = compute_inverse_homogenization(stories, args.emb_model, args.emb_type, args.emb_strategy, args.distance_fn, preprocessing_args)
-        novelty = compute_novelty(stories, args.emb_model, args.emb_type, args.distance_fn, preprocessing_args)
-        theme_uniqueness = compute_theme_uniqueness(stories, args.emb_model, args.emb_type, args.emb_strategy, args.cluster_linkage, args.cluster_dist_threshold, preprocessing_args)
-        
-        metrics["inv_homogen"] = mean(inv_homogen)
-        metrics["novelty"] = mean(novelty)
-        metrics["theme_uniqueness"] = mean(theme_uniqueness)
+        print("Computing global metrics")
+        inv_homogen = compute_inverse_homogenization(stories, config["emb_model"], config["emb_type"], config["emb_strategy"], config["distance_fn"], preprocessing_args)
+        novelty = compute_novelty(stories, config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
+        theme_uniqueness = compute_theme_uniqueness(stories, config["emb_model"], config["emb_type"], config["emb_strategy"], config["cluster_linkage"], config["cluster_dist_threshold"], preprocessing_args)
+        corpus_dsi = compute_dsi("".join(stories), config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
 
-    for result_idx, result in enumerate(results):
+    for result_idx, result in tqdm(enumerate(results), total=len(results), desc="Computing local metrics"):
         result["metrics"] = {}
 
         if response_attr in result:
-            result["metrics"]["dsi"] = compute_dsi(result[response_attr], args.emb_model, args.emb_type, args.distance_fn, preprocessing_args)
-            result["metrics"]["surprise"] = compute_surprise(result[response_attr], args.emb_model, args.emb_type, args.distance_fn, preprocessing_args)
-            result["metrics"]["n_gram_diversity"] = compute_n_gram_diversity(result[response_attr], args.max_n_gram)
+            all_words = get_words(result[response_attr], lower=False, remove_punct=True, remove_stopwords=False, lemmatize=False, unique=False, dominant_k=None)
+            unique_words = list(set([word.lower() for word in all_words if all_words]))
+            concepts = get_words(result[response_attr], lower=True, remove_punct=True, remove_stopwords=True, lemmatize=True, unique=True, dominant_k=None)
+            sentences = get_sentences(result[response_attr])
+            sentence_words = [get_words(sentence, lower=False, remove_punct=True, remove_stopwords=False, lemmatize=False, unique=False, dominant_k=None) for sentence in sentences]
+            sentence_unique_words = [list(set([word.lower() for word in words])) for words in sentence_words]
+
+            # basic metrics
+            result["metrics"]["length_in_chars"] = len(result[response_attr])
+            result["metrics"]["length_in_words"] = len(all_words)
+            result["metrics"]["length_in_unique_words"] = len(unique_words)
+            result["metrics"]["length_in_concepts"] = len(concepts)
+            result["metrics"]["length_in_sentences"] = len(sentences)
+            result["metrics"]["avg_word_length_in_chars"] = mean([len(word) for word in all_words])
+            result["metrics"]["avg_sentence_length_in_chars"] = mean([len(sentence) for sentence in sentences])
+            result["metrics"]["avg_sentence_length_in_words"] = mean([len(words) for words in sentence_words])
+            result["metrics"]["avg_sentence_length_in_unique_words"] = mean([len(words) for words in sentence_unique_words])
+            
+            # semantic metrics
+            result["metrics"]["dsi"] = compute_dsi(result[response_attr], config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
+            result["metrics"]["surprise"] = compute_surprise(result[response_attr], config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
+            result["metrics"]["n_gram_diversity"] = compute_n_gram_diversity(result[response_attr], config["max_n_gram"])
             
             if len(stories) > 1:
                 result["metrics"]["inv_homogen"] = inv_homogen[result_idx]
                 result["metrics"]["novelty"] = novelty[result_idx]
                 result["metrics"]["theme_uniqueness"] = theme_uniqueness[result_idx]
 
-            if args.report_usage:
+            if config["report_usage"]:
                 sample_usage, sample_cost = compute_usage(result, result["metadata"]["model"])
 
                 if sample_usage:
@@ -242,15 +270,37 @@ def compute_metrics(results, args):
                     cost["output"] += sample_cost["output"]
                     cost["total"] += sample_cost["total"]
 
-    if args.report_usage:
+    metrics["num_samples"] = len(results)
+
+    # basic metrics
+    metrics["avg_length_in_chars"] = mean([result["metrics"]["length_in_chars"] for result in results])
+    metrics["avg_length_in_words"] = mean([result["metrics"]["length_in_words"] for result in results])
+    metrics["avg_length_in_unique_words"] = mean([result["metrics"]["length_in_unique_words"] for result in results])
+    metrics["avg_length_in_concepts"] = mean([result["metrics"]["length_in_concepts"] for result in results])
+    metrics["avg_length_in_sentences"] = mean([result["metrics"]["length_in_sentences"] for result in results])
+    metrics["avg_word_length_in_chars"] = mean([result["metrics"]["avg_word_length_in_chars"] for result in results])
+    metrics["avg_sentence_length_in_chars"] = mean([result["metrics"]["avg_sentence_length_in_chars"] for result in results])
+    metrics["avg_sentence_length_in_words"] = mean([result["metrics"]["avg_sentence_length_in_words"] for result in results])
+    metrics["avg_sentence_length_in_unique_words"] = mean([result["metrics"]["avg_sentence_length_in_unique_words"] for result in results])
+
+    # semantic metrics
+    metrics["corpus_dsi"] = corpus_dsi
+    metrics["avg_dsi"] = mean([result["metrics"]["dsi"] for result in results])
+    metrics["avg_surprise"] = mean([result["metrics"]["surprise"] for result in results])
+    metrics["avg_n_gram_diversity"] = [mean([result["metrics"]["n_gram_diversity"][n_gram_len-1] for result in results]) for n_gram_len in range(1, config["max_n_gram"]+1)]
+    
+    if len(stories) > 1:
+        metrics["avg_inv_homogen"] = mean([result["metrics"]["inv_homogen"] for result in results])
+        metrics["avg_novelty"] = mean([result["metrics"]["novelty"] for result in results])
+        metrics["avg_theme_uniqueness"] = mean([result["metrics"]["theme_uniqueness"] for result in results])
+
+    if config["report_usage"]:
         metrics["usage"] = usage
         metrics["cost"] = cost
 
-    metrics["num_samples"] = len(results)
-
     return metrics
 
-def report_metrics(results_files, args):
+def report_metrics(results_files, config):
     result_groups = defaultdict(list)
 
     for results_file in results_files:
@@ -262,11 +312,11 @@ def report_metrics(results_files, args):
                     sample["metadata"] = {
                         "source": results_file,
                         "model": results["metadata"]["model"],
-                        "model_args": results["metadata"]["model_args"]
+                        "model_args": results["metadata"].get("model_args")
                     }
 
-                    model_path = results["metadata"]["model_path"]
-                    tokenizer_path = results["metadata"]["tokenizer_path"]
+                    model_path = results["metadata"].get("model_path")
+                    tokenizer_path = results["metadata"].get("tokenizer_path")
 
                     if model_path:
                         sample["metadata"]["model_path"] = model_path
@@ -278,10 +328,17 @@ def report_metrics(results_files, args):
             print(results_file)
             raise e
     
-    output_dir = pathlib.Path(args.output_dir) if args.output_dir else pathlib.Path(results_files[0]).parent
+    output_dir = pathlib.Path(config["output_dir"]) if config["output_dir"] else pathlib.Path(results_files[0]).parent
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    for group_id, group_results in tqdm(result_groups.items(), total=len(result_groups.items()), desc="Reporting metrics"):
-        metrics = compute_metrics(group_results, args)
+    for group_id, group_results in result_groups.items():
+        num_samples = config["num_samples"]
+
+        if num_samples:
+            group_results = random.sample(group_results, min(num_samples, len(group_results)))
+        
+        metrics = compute_metrics(group_results, config)
+        
         results = {
             "metadata": {
                 "source": results_files,
@@ -306,6 +363,8 @@ def main():
     parser.add_argument("-sl", "--spacy-lang", type=str, help="Spacy language model", default=DEF_SPACY_LANG)
     parser.add_argument("-ng", "--max-n-gram", type=int, help="Maximum n-gram to consider", default=5)
     parser.add_argument("-o", "--output-dir", type=str, help="Output dir to save the output files", default=None)
+    parser.add_argument("-c", "--config", type=str, help="Path to config file", default=None)
+    parser.add_argument("-n", "--num-samples", type=int, help="Number of samples to consider", default=None)
 
     emb_group = parser.add_argument_group("Embedding arguments")
     emb_group.add_argument("-em", "--emb-model", type=str, help="Sentence embedding model", default=DEF_EMB_MODEL)
@@ -327,6 +386,8 @@ def main():
     
     args = parser.parse_args()
 
+    print(f"Reporting metrics for: {args.results_path}")
+
     files_to_process = []
 
     results_path = pathlib.Path(args.results_path)
@@ -336,7 +397,12 @@ def main():
     else:
         files_to_process.extend(find_files(args.results_path))
 
-    report_metrics(files_to_process, args)
+    config = vars(args)
+
+    if args.config:
+        config.update(read_json(args.config))
+
+    report_metrics(files_to_process, config)
 
 if __name__ == "__main__":
     main()
