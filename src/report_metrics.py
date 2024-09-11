@@ -315,6 +315,9 @@ def report_metrics(results_files, config):
                         "model_args": results["metadata"].get("model_args")
                     }
 
+                    if sample["metadata"]["model"] == "human":
+                        sample["metadata"]["participant_id"] = results["metadata"]["participant_id"]
+
                     model_path = results["metadata"].get("model_path")
                     tokenizer_path = results["metadata"].get("tokenizer_path")
 
