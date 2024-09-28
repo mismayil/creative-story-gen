@@ -8,7 +8,7 @@ from utils import read_json, find_files
 def get_participant_id(sample):
     return sample["metadata"].get("participant_id", sample["result_id"].rsplit("_", 1)[0])
 
-def export_metrics_to_csv(results):
+def export_metrics(results):
     export_data = []
 
     for sample in tqdm(results["data"], total=len(results["data"]), desc="Exporting metrics"):
@@ -49,10 +49,11 @@ def main():
     for file in files:
         results = read_json(file)
         
-        if args.output_format == "csv":
-            export_data.extend(export_metrics_to_csv(results))
-        else:
-            raise ValueError(f"Unknown output format: {args.output_format}")
+        if "data" in results:
+            if args.output_format == "csv":
+                export_data.extend(export_metrics(results))
+            else:
+                raise ValueError(f"Unknown output format: {args.output_format}")
 
     if args.output_format == "csv":
         export_df = pandas.DataFrame(export_data)
