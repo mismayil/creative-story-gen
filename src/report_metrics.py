@@ -57,7 +57,7 @@ def compute_metrics(results, config):
         novelty = compute_novelty(stories, config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
         theme_uniqueness = compute_theme_uniqueness(stories, config["emb_model"], config["emb_type"], config["emb_strategy"], config["cluster_linkage"], config["cluster_dist_threshold"], preprocessing_args)
         corpus_dsi = compute_dsi("".join(stories), config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
-        corpus_n_gram_diversity, _ = compute_n_gram_diversity("".join(stories), config["max_n_gram"])
+        corpus_n_gram_diversity, corpus_n_gram_frequency = compute_n_gram_diversity("".join(stories), config["max_n_gram"])
 
     for result_idx, result in tqdm(enumerate(results), total=len(results), desc="Computing local metrics"):
         result["metrics"] = {}
@@ -129,6 +129,10 @@ def compute_metrics(results, config):
         metrics["corpus_dsi"] = corpus_dsi
         metrics["corpus_n_gram_diversity"] = corpus_n_gram_diversity
         metrics["num_unique_stories"] = len(set(stories))
+        metrics[f"top_{config['max_frequency']}_n_grams"] = {}
+
+        for i, freq_counter in enumerate(corpus_n_gram_frequency):
+            metrics[f"top_{config['max_frequency']}_n_grams"][f"{i+1}-gram"] = {" ".join(freq[0]): freq[1] for freq in freq_counter.most_common(config["max_frequency"])}
 
     if config["report_usage"]:
         metrics["usage"] = usage
@@ -244,6 +248,7 @@ def main():
     parser.add_argument("-n", "--num-samples", type=int, help="Number of samples to consider", default=None)
     parser.add_argument("-de", "--deduplicate", action="store_true", help="Remove duplicate samples")
     parser.add_argument("-deby", "--deduplicate-by", type=str, help="Remove duplicate samples by attribute", default="output")
+    parser.add_argument("-mf", "--max-frequency", type=int, help="Maximum n-gram frequency to consider", default=10)
 
     emb_group = parser.add_argument_group("Embedding arguments")
     emb_group.add_argument("-em", "--emb-model", type=str, help="Sentence embedding model", default=DEF_EMB_MODEL)

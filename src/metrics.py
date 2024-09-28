@@ -100,15 +100,15 @@ def get_words(text, lower=True, remove_punct=True, remove_stopwords=True, lemmat
 
     return [w[0] for w in word_freq.most_common(dominant_k)]
 
-def compute_story_embedding(story, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, emb_strategy="direct",
+def compute_text_embedding(text, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, emb_strategy="direct",
                             preprocessing_args=DEF_PREPROCESSING_ARGS):
     if emb_strategy == "direct":
-        return get_embedding(story, emb_model, emb_type)
+        return get_embedding(text, emb_model, emb_type)
     elif emb_strategy == "by_word":
-        words = get_words(story, **preprocessing_args)
+        words = get_words(text, **preprocessing_args)
         return get_embedding(words, emb_model, emb_type)
     elif emb_strategy == "by_sentence":
-        sentences = get_sentences(story)
+        sentences = get_sentences(text)
         return get_embedding(sentences, emb_model, emb_type)
     else:
         raise ValueError(f"Invalid embedding strategy: {emb_strategy}")
@@ -132,37 +132,37 @@ def compute_avg_sem_dis(text, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, di
     embeddings = [get_embedding(word, emb_model, emb_type) for word in words]
     return mean(compute_avg_pairwise_distances(embeddings, distance_fn))
 
-def compute_inverse_homogenization(stories, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, emb_strategy="direct", 
+def compute_inverse_homogenization(texts, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, emb_strategy="direct", 
                                    distance_fn=DEF_DIST_FN, preprocessing_args=DEF_PREPROCESSING_ARGS):
-    story_embeddings = [compute_story_embedding(story, emb_model, emb_type, emb_strategy, preprocessing_args) for story in stories]
-    return compute_avg_pairwise_distances(story_embeddings, distance_fn)
+    text_embeddings = [compute_text_embedding(text, emb_model, emb_type, emb_strategy, preprocessing_args) for text in texts]
+    return compute_avg_pairwise_distances(text_embeddings, distance_fn)
 
-def compute_novelty(stories, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, 
+def compute_novelty(texts, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, 
                     distance_fn=DEF_DIST_FN, preprocessing_args=DEF_PREPROCESSING_ARGS):
-    corpus = "".join(stories)
+    corpus = "".join(texts)
     corpus_avg_sem_dis = compute_avg_sem_dis(corpus, emb_model, emb_type, distance_fn, preprocessing_args)
 
     novelty_scores = []
 
-    for story in stories:
-        story_avg_sem_dis = compute_avg_sem_dis(story, emb_model, emb_type, distance_fn, preprocessing_args)
-        novelty_scores.append(2 * abs(story_avg_sem_dis - corpus_avg_sem_dis))
+    for text in texts:
+        text_avg_sem_dis = compute_avg_sem_dis(text, emb_model, emb_type, distance_fn, preprocessing_args)
+        novelty_scores.append(2 * abs(text_avg_sem_dis - corpus_avg_sem_dis))
     
     return novelty_scores
 
-def compute_theme_uniqueness(stories, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, emb_strategy="direct",
+def compute_theme_uniqueness(texts, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, emb_strategy="direct",
                              cluster_linkage="ward", cluster_distance_threshold=0.5, preprocessing_args=DEF_PREPROCESSING_ARGS):
-    story_embeddings = [compute_story_embedding(story, emb_model, emb_type, emb_strategy, preprocessing_args) for story in stories]
+    text_embeddings = [compute_text_embedding(text, emb_model, emb_type, emb_strategy, preprocessing_args) for text in texts]
     clustering = AgglomerativeClustering(n_clusters=None, linkage=cluster_linkage, distance_threshold=cluster_distance_threshold)
-    cluster_labels = clustering.fit_predict(story_embeddings)
+    cluster_labels = clustering.fit_predict(text_embeddings)
     cluster_freq = Counter(cluster_labels)
-    return [1 / cluster_freq[cluster_labels[i]] for i in range(len(stories))]
+    return [1 / cluster_freq[cluster_labels[i]] for i in range(len(texts))]
 
-def compute_dsi(story, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, distance_fn=DEF_DIST_FN, preprocessing_args=DEF_PREPROCESSING_ARGS):
-    return compute_avg_sem_dis(story, emb_model, emb_type, distance_fn, preprocessing_args)
+def compute_dsi(text, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, distance_fn=DEF_DIST_FN, preprocessing_args=DEF_PREPROCESSING_ARGS):
+    return compute_avg_sem_dis(text, emb_model, emb_type, distance_fn, preprocessing_args)
 
-def compute_surprise(story, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, distance_fn=DEF_DIST_FN, preprocessing_args=DEF_PREPROCESSING_ARGS):
-    sentences = get_sentences(story)
+def compute_surprise(text, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, distance_fn=DEF_DIST_FN, preprocessing_args=DEF_PREPROCESSING_ARGS):
+    sentences = get_sentences(text)
 
     if len(sentences) <= 1:
         return 0
@@ -172,8 +172,8 @@ def compute_surprise(story, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, dist
 
     return (2 / len(raw_surprises)) * sum(raw_surprises)
 
-def compute_n_gram_diversity(story, max_n_gram=5):
-    words = get_words(story, lower=True, remove_punct=False, remove_stopwords=False, lemmatize=False, unique=False)
+def compute_n_gram_diversity(text, max_n_gram=5, remove_punct=True):
+    words = get_words(text, lower=True, remove_punct=remove_punct, remove_stopwords=False, lemmatize=False, unique=False)
     all_n_grams = []
 
     for n in range(1, max_n_gram + 1):
