@@ -100,6 +100,10 @@ def get_words(text, lower=True, remove_punct=True, remove_stopwords=True, lemmat
 
     return [w[0] for w in word_freq.most_common(dominant_k)]
 
+def get_pos_tags(text, remove_punct=True):
+    doc = get_spacy_doc(text)
+    return [token.pos_ for token in doc if not (remove_punct and token.is_punct)]
+
 def compute_text_embedding(text, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, emb_strategy="direct",
                             preprocessing_args=DEF_PREPROCESSING_ARGS):
     if emb_strategy == "direct":
@@ -183,3 +187,47 @@ def compute_n_gram_diversity(text, max_n_gram=5, remove_punct=True):
     n_gram_diversity = [len(n_gram_freqs) / len(n_grams) for n_grams, n_gram_freqs in zip(all_n_grams, all_n_gram_freqs)]
 
     return n_gram_diversity, all_n_gram_freqs
+
+def compute_pos_diversity(text, max_n_gram=5, remove_punct=True):
+    pos_tags = get_pos_tags(text, remove_punct=remove_punct)
+    all_pos_tags = []
+
+    for n in range(1, max_n_gram + 1):
+        all_pos_tags.append([tuple(pos_tags[i:i + n]) for i in range(len(pos_tags) - n + 1)])
+    
+    all_pos_tag_freqs = [Counter(p_tags) for p_tags in all_pos_tags]
+    pos_tag_diversity = [len(pos_freqs) / len(p_tags) for p_tags, pos_freqs in zip(all_pos_tags, all_pos_tag_freqs)]
+
+    return pos_tag_diversity, all_pos_tag_freqs
+
+def _get_dep_paths(token):
+    if not list(token.children):
+        return [(token.dep_,)]
+    paths = []
+    for child in token.children:
+        child_paths = _get_dep_paths(child)
+        for path in child_paths:
+            paths.append((token.dep_,) + path)
+    return paths
+    
+def compute_dependency_complexity(text):
+    # see labels https://github.com/clir/clearnlp-guidelines/blob/master/md/specifications/dependency_labels.md
+    # see https://euroslajournal.org/articles/10.22599/jesla.63
+    clause_labels = ["conj", "cc", "preconj", "ccomp", "xcomp", "acl", "relcl", "advcl"]
+    dep_num_clauses = []
+    dep_paths = []
+    sentences = get_sentences(text)
+
+    for sentence in sentences:
+        doc = get_spacy_doc(sentence)
+        num_clauses = 0
+        sent_path_counter = Counter()
+        for token in doc:
+            paths = _get_dep_paths(token)
+            sent_path_counter.update(paths)
+            if token.dep_ in clause_labels:
+                num_clauses += 1
+        dep_num_clauses.append(num_clauses)
+        dep_paths.append(sent_path_counter)
+    
+    return dep_paths, dep_num_clauses

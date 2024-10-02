@@ -33,9 +33,10 @@ def export_global_metrics(results):
     export_data = []
     sample = results["data"][0]
     model_id = sample["metadata"]["model"]
-    
+    group_id = results["metadata"]["group_id"]
+
     export_data.append({
-        "group_id": results["metadata"]["group_id"],
+        "group_id": group_id[-1] if isinstance(group_id, list) else group_id,
         "model_id": model_id,
         **{f"metric_{metric_name}": metric_value for metric_name, metric_value in results["metrics"].items() if not isinstance(metric_value, dict)}
     })

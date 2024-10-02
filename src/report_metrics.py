@@ -6,7 +6,10 @@ from statistics import mean
 import random
 
 from utils import read_json, write_json, find_files, compute_usage
-from metrics import compute_inverse_homogenization, compute_novelty, compute_theme_uniqueness, compute_dsi, compute_surprise, compute_n_gram_diversity, get_words, get_sentences
+from metrics import (compute_inverse_homogenization, compute_novelty, 
+                     compute_theme_uniqueness, compute_dsi, compute_surprise, 
+                     compute_n_gram_diversity, get_words, get_sentences, 
+                     compute_pos_diversity, compute_dependency_complexity)
 
 DEF_EMB_MODEL = "thenlper/gte-large"
 DEF_EMB_TYPE = "sentence_embedding"
@@ -58,6 +61,7 @@ def compute_metrics(results, config):
         theme_uniqueness = compute_theme_uniqueness(stories, config["emb_model"], config["emb_type"], config["emb_strategy"], config["cluster_linkage"], config["cluster_dist_threshold"], preprocessing_args)
         corpus_dsi = compute_dsi("".join(stories), config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
         corpus_n_gram_diversity, corpus_n_gram_frequency = compute_n_gram_diversity("".join(stories), config["max_n_gram"])
+        corpus_pos_diversity, corpus_pos_frequency = compute_pos_diversity("".join(stories), config["max_n_gram"])
 
     for result_idx, result in tqdm(enumerate(results), total=len(results), desc="Computing local metrics"):
         result["metrics"] = {}
@@ -85,6 +89,13 @@ def compute_metrics(results, config):
             result["metrics"]["dsi"] = compute_dsi(result[response_attr], config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
             result["metrics"]["surprise"] = compute_surprise(result[response_attr], config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
             result["metrics"]["n_gram_diversity"], _ = compute_n_gram_diversity(result[response_attr], config["max_n_gram"])
+            result["metrics"]["pos_diversity"], _ = compute_pos_diversity(result[response_attr], config["max_n_gram"])
+            
+            dependency_paths, dependency_num_clauses = compute_dependency_complexity(result[response_attr])
+            result["metrics"]["avg_dependency_num_clauses"] = mean(dependency_num_clauses)
+            result["metrics"]["max_dependency_num_clauses"] = max(dependency_num_clauses)
+            result["metrics"]["avg_dependency_path_length"] = mean([mean([len(path) for path, freq in path_counter.items()]) for path_counter in dependency_paths])
+            result["metrics"]["max_dependency_path_length"] = max([max([len(path) for path, freq in path_counter.items()]) for path_counter in dependency_paths])
             
             if len(stories) > 1:
                 result["metrics"]["inv_homogen"] = inv_homogen[result_idx]
@@ -121,6 +132,11 @@ def compute_metrics(results, config):
     metrics["avg_dsi"] = mean([result["metrics"]["dsi"] for result in results])
     metrics["avg_surprise"] = mean([result["metrics"]["surprise"] for result in results])
     metrics["avg_n_gram_diversity"] = [mean([result["metrics"]["n_gram_diversity"][n_gram_len-1] for result in results]) for n_gram_len in range(1, config["max_n_gram"]+1)]
+    metrics["avg_pos_diversity"] = [mean([result["metrics"]["pos_diversity"][n_gram_len-1] for result in results]) for n_gram_len in range(1, config["max_n_gram"]+1)]
+    metrics["avg_dependency_num_clauses"] = mean([result["metrics"]["avg_dependency_num_clauses"] for result in results])
+    metrics["avg_max_dependency_num_clauses"] = mean([result["metrics"]["max_dependency_num_clauses"] for result in results])
+    metrics["avg_dependency_path_length"] = mean([result["metrics"]["avg_dependency_path_length"] for result in results])
+    metrics["avg_max_dependency_path_length"] = mean([result["metrics"]["max_dependency_path_length"] for result in results])
     
     if len(stories) > 1:
         metrics["avg_inv_homogen"] = mean([result["metrics"]["inv_homogen"] for result in results])
@@ -128,6 +144,7 @@ def compute_metrics(results, config):
         metrics["avg_theme_uniqueness"] = mean([result["metrics"]["theme_uniqueness"] for result in results])
         metrics["corpus_dsi"] = corpus_dsi
         metrics["corpus_n_gram_diversity"] = corpus_n_gram_diversity
+        metrics["corpus_pos_diversity"] = corpus_pos_diversity
         metrics["num_unique_stories"] = len(set(stories))
         metrics[f"top_{config['max_frequency']}_n_grams"] = {}
 
@@ -161,13 +178,47 @@ def set_metadata(results, results_file):
 
     return results
 
-def group_results_by_id(results):
+def group_results_by_id(results: list):
     result_groups = defaultdict(list)
 
     for result in results:
         result_groups[result["id"]].append(result)
 
     return result_groups
+
+def group_results_by_model(results: list):
+    result_groups = defaultdict(list)
+
+    for result in results:
+        result_groups[result["metadata"]["model"]].append(result)
+
+    return result_groups
+
+def group_results_by(results: list, by="id"):
+    if by == "id":
+        return group_results_by_id(results)
+    elif by == "model":
+        return group_results_by_model(results)
+    else:
+        raise ValueError(f"Grouping by {by} is not supported")
+
+def group_results(results, by=["id"]):
+    for b in by:
+        print(f"Grouping results by {b}")
+        if isinstance(results, list):
+            results = group_results_by(results, by=b)
+        else:
+            new_results = {}
+            for key, value in results.items():
+                subresults = group_results_by(value, by=b)
+                for subkey, subvalue in subresults.items():
+                    if isinstance(key, tuple):
+                        new_key = (key + (subkey,))
+                    else:
+                        new_key = (key, subkey)
+                    new_results[new_key] = subvalue
+            results = new_results
+    return results
 
 def deduplicate_results(results, by="output"):
     value_set = set()
@@ -196,7 +247,7 @@ def report_metrics(results_files, config):
             print(results_file)
             raise e
     
-    grouped_results = group_results_by_id(all_results)
+    grouped_results = group_results(all_results, by=config["group_by"])
 
     output_dir = pathlib.Path(config["output_dir"]) if config["output_dir"] else pathlib.Path(results_files[0]).parent
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -204,33 +255,45 @@ def report_metrics(results_files, config):
     num_samples = config["num_samples"]
 
     if config["deduplicate"]:
-        for group_id, group_results in grouped_results.items():
-            grouped_results[group_id] = deduplicate_results(group_results, by=config["deduplicate_by"])
+        for group_id, group_res in grouped_results.items():
+            grouped_results[group_id] = deduplicate_results(group_res, by=config["deduplicate_by"])
         
-        min_group_size = min([len(group_results) for group_results in grouped_results.values()])
+        min_group_size = min([len(group_res) for group_res in grouped_results.values()])
 
         if num_samples:
             num_samples = min(num_samples, min_group_size)
     
-    for group_id, group_results in grouped_results.items():    
+    for group_id, group_res in grouped_results.items():    
         if num_samples:
-            group_results = random.sample(group_results, min(num_samples, len(group_results)))
+            group_res = random.sample(group_res, min(num_samples, len(group_res)))
         
-        metrics = compute_metrics(group_results, config)
+        metrics = compute_metrics(group_res, config)
         
+        parent_group_ids = []
+        leaf_group_id = group_id
+
+        if isinstance(group_id, tuple):
+            parent_group_ids = group_id[:-1]
+            leaf_group_id = group_id[-1]
+
+        group_output_dir = output_dir
+
+        for parent_group_id in parent_group_ids:
+            group_output_dir = group_output_dir / parent_group_id
+            
+        group_output_dir.mkdir(parents=True, exist_ok=True)
+
         results = {
             "metadata": {
-                "source": results_files,
-                "group_id": group_id,
-                "size": len(group_results)
+                "group_id": list(group_id) if isinstance(group_id, tuple) else [group_id],
+                "config": config
             },
             "metrics": metrics,
-            "data": group_results
+            "data": group_res
         }
-        results_file = output_dir / f"{group_id}_results.json"
+        
+        results_file = group_output_dir / f"{leaf_group_id}_results.json"
         write_json(results, results_file)
-    
-    write_json(config, output_dir / "config.json")
 
 def none_or_int(value):
     if value.lower() == "none":
@@ -239,7 +302,7 @@ def none_or_int(value):
 
 def main():
     parser = argparse.ArgumentParser(prog="report_metrics.py", description="Report evaluation metrics")
-    parser.add_argument("-r", "--results-path", type=str, help="Path to evaluation results file in json or directory", required=True)
+    parser.add_argument("-r", "--results-paths", type=str, nargs="+", help="Path(s) to evaluation results file in json or directory", required=True)
     parser.add_argument("-u", "--report-usage", action="store_true", help="Report usage metrics", default=True)
     parser.add_argument("-sl", "--spacy-lang", type=str, help="Spacy language model", default=DEF_SPACY_LANG)
     parser.add_argument("-ng", "--max-n-gram", type=int, help="Maximum n-gram to consider", default=5)
@@ -249,6 +312,7 @@ def main():
     parser.add_argument("-de", "--deduplicate", action="store_true", help="Remove duplicate samples")
     parser.add_argument("-deby", "--deduplicate-by", type=str, help="Remove duplicate samples by attribute", default="output")
     parser.add_argument("-mf", "--max-frequency", type=int, help="Maximum n-gram frequency to consider", default=10)
+    parser.add_argument("-gb", "--group-by", type=str, nargs="+", help="Group results by attribute(s)", default=["model", "id"])
 
     emb_group = parser.add_argument_group("Embedding arguments")
     emb_group.add_argument("-em", "--emb-model", type=str, help="Sentence embedding model", default=DEF_EMB_MODEL)
@@ -270,16 +334,17 @@ def main():
     
     args = parser.parse_args()
 
-    print(f"Reporting metrics for: {args.results_path}")
+    print(f"Reporting metrics for: {args.results_paths}")
 
     files_to_process = []
 
-    results_path = pathlib.Path(args.results_path)
+    for results_path in args.results_paths:
+        results_path = pathlib.Path(results_path)
 
-    if results_path.is_file():
-        files_to_process.append(args.results_path)
-    else:
-        files_to_process.extend(find_files(args.results_path))
+        if results_path.is_file():
+            files_to_process.append(results_path)
+        else:
+            files_to_process.extend(find_files(results_path))
 
     config = vars(args)
 
