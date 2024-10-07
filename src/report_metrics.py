@@ -87,7 +87,9 @@ def compute_metrics(results, config):
             
             # complex metrics
             result["metrics"]["dsi"] = compute_dsi(result[response_attr], config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
-            result["metrics"]["surprise"] = compute_surprise(result[response_attr], config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
+            surprise, raw_surprises = compute_surprise(result[response_attr], config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
+            result["metrics"]["surprise"] = surprise
+            result["metrics"]["raw_surprises"] = raw_surprises
             result["metrics"]["n_gram_diversity"], _ = compute_n_gram_diversity(result[response_attr], config["max_n_gram"])
             result["metrics"]["pos_diversity"], _ = compute_pos_diversity(result[response_attr], config["max_n_gram"])
             
@@ -131,6 +133,7 @@ def compute_metrics(results, config):
     # complex metrics
     metrics["avg_dsi"] = mean([result["metrics"]["dsi"] for result in results])
     metrics["avg_surprise"] = mean([result["metrics"]["surprise"] for result in results])
+    metrics["avg_raw_surprises"] = [mean([result["metrics"]["raw_surprises"][surprise_idx] for result in results if "metrics" in result and surprise_idx < len(result["metrics"]["raw_surprises"])]) for surprise_idx in range(max([len(r["metrics"]["raw_surprises"]) for r in results if "metrics" in r]))]
     metrics["avg_n_gram_diversity"] = [mean([result["metrics"]["n_gram_diversity"][n_gram_len-1] for result in results]) for n_gram_len in range(1, config["max_n_gram"]+1)]
     metrics["avg_pos_diversity"] = [mean([result["metrics"]["pos_diversity"][n_gram_len-1] for result in results]) for n_gram_len in range(1, config["max_n_gram"]+1)]
     metrics["avg_dependency_num_clauses"] = mean([result["metrics"]["avg_dependency_num_clauses"] for result in results])
@@ -178,11 +181,11 @@ def set_metadata(results, results_file):
 
     return results
 
-def group_results_by_id(results: list):
+def group_results_by_attr(results: list, attr="id"):
     result_groups = defaultdict(list)
 
     for result in results:
-        result_groups[result["id"]].append(result)
+        result_groups[result[attr]].append(result)
 
     return result_groups
 
@@ -207,14 +210,12 @@ def group_results_by_sentience(results: list):
     return result_groups
 
 def group_results_by(results: list, by="id"):
-    if by == "id":
-        return group_results_by_id(results)
-    elif by == "model":
+    if by == "model":
         return group_results_by_model(results)
     elif by == "sentience":
         return group_results_by_sentience(results)
     else:
-        raise ValueError(f"Grouping by {by} is not supported")
+        return group_results_by_attr(results, attr=by)
 
 def group_results(results, by=["id"]):
     for b in by:

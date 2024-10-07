@@ -89,12 +89,48 @@ def plot_global_metrics_n_gram_diversity(metrics_lst, output_dir, output_format=
         print(f"Saving figure to {plot_path}")
         plt.savefig(plot_path)
 
+def plot_global_metrics_raw_surprises(metrics_lst, output_dir, output_format="png"):
+    output_dir = pathlib.Path(output_dir) / f"{output_format}_figs"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    merged_metrics = pd.concat(metrics_lst)
+    group_by = set_group_data(merged_metrics)
+
+    hue_attr = group_by[-2]
+    group_attr = group_by[-1]
+
+    group_ids = merged_metrics[group_attr].unique()
+
+    for group_id in group_ids:
+        group_metrics = merged_metrics[merged_metrics[group_attr] == group_id].copy()
+        group_metrics["metric_avg_raw_surprises"] = group_metrics["metric_avg_raw_surprises"].apply(lambda x: ast.literal_eval(x))
+        max_surprise_len = max([len(x) for x in group_metrics["metric_avg_raw_surprises"]])
+        group_metrics["metric_avg_raw_surprises"] = group_metrics["metric_avg_raw_surprises"].apply(lambda x: x + [x[-1]]*(max_surprise_len-len(x)))
+        group_metrics["fragment"] = [list(range(1, max_surprise_len+1)) for _ in range(len(group_metrics))]
+        group_metrics = group_metrics.explode(["metric_avg_raw_surprises", "fragment"])
+        group_metrics["fragment"] = group_metrics["fragment"].astype(str)
+
+        metric = "metric_avg_raw_surprises"
+        fig, ax = plt.subplots(figsize=(40, 20))
+        ax.set_title(metric)
+        ax.set_xlabel("Fragment", size=XLABEL_SIZE)
+        ax.set_ylabel(metric, size=YLABEL_SIZE)
+        ax.tick_params(axis='x', labelsize=TICK_SIZE)
+        ax.tick_params(axis='y', labelsize=TICK_SIZE)
+        ax.title.set_size(TITLE_SIZE)
+        sns.lineplot(data=group_metrics, x="fragment", y=metric, hue=hue_attr, style=hue_attr, markers=True, lw=5, ax=ax)
+        ax.legend(title=LABEL_MAP.get(hue_attr, hue_attr), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
+        plt.tight_layout()
+
+        plot_path = f"{output_dir}/fig_{metric}_{group_id}.{output_format}"
+        print(f"Saving figure to {plot_path}")
+        plt.savefig(plot_path)
+    
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input-files", type=str, nargs="+", help="Path to csv metrics file(s)", required=True)
     parser.add_argument("-o", "--output-dir", type=str, help="Output directory to save plots", default=None)
     parser.add_argument("-f", "--output-format", type=str, choices=["png", "pdf", "svg"], default="png", help="Format to save the plots in.")
-    parser.add_argument("-p", "--plot-types", type=str, nargs="+", choices=["local", "n_gram_diversity"], default=["local"], help="Type of plots to generate")
+    parser.add_argument("-p", "--plot-types", type=str, nargs="+", choices=["local", "n_gram_diversity", "raw_surprises"], default=["local"], help="Type of plots to generate")
 
     args = parser.parse_args()
 
@@ -127,6 +163,10 @@ def main():
                     plot_local_metrics(metrics_lst, col, output_dir, output_format=args.output_format)
         elif plot_type == "n_gram_diversity":
             plot_global_metrics_n_gram_diversity(metrics_lst, output_dir, output_format=args.output_format)
+        elif plot_type == "raw_surprises":
+            plot_global_metrics_raw_surprises(metrics_lst, output_dir, output_format=args.output_format)
+        else:
+            print(f"Plot type {plot_type} not supported. Skipping...")
 
 if __name__ == "__main__":
     main()

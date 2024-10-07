@@ -169,12 +169,12 @@ def compute_surprise(text, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, dista
     sentences = get_sentences(text)
 
     if len(sentences) <= 1:
-        return 0
+        return 0, []
 
     sentence_avg_sem_distances = [compute_avg_sem_dis(sentence, emb_model, emb_type, distance_fn, preprocessing_args) for sentence in sentences]
     raw_surprises = [abs(sentence_avg_sem_distances[i] - sentence_avg_sem_distances[i - 1]) for i in range(1, len(sentence_avg_sem_distances))]
 
-    return (2 / len(raw_surprises)) * sum(raw_surprises)
+    return (2 / len(raw_surprises)) * sum(raw_surprises), raw_surprises
 
 def compute_n_gram_diversity(text, max_n_gram=5, remove_punct=True):
     words = get_words(text, lower=True, remove_punct=remove_punct, remove_stopwords=False, lemmatize=False, unique=False)

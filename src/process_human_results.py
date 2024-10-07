@@ -30,6 +30,7 @@ def main():
         for q_index in range(1, 5):
             results.append({
                 "id": config["questions"][f"Q{q_index}"],
+                "semantic_distance": config["semantic_distance"][f"Q{q_index}"],
                 "output": row[f"Q{q_index}"],
                 "result_id": f"{human_id}_Q{q_index}"
             })

@@ -1,0 +1,2615 @@
+{
+    "metadata": {
+        "group_id": [
+            "human",
+            "high"
+        ],
+        "config": {
+            "results_paths": [
+                "../experiments/outputs/gpt-4/pilot/**/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/**/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/**/run1",
+                "../experiments/outputs/human/pilot/run1"
+            ],
+            "report_usage": true,
+            "spacy_lang": "en_core_web_sm",
+            "max_n_gram": 5,
+            "output_dir": "../experiments/reports/pilot/run1_report4",
+            "config": "../experiments/reports/pilot/run1_report4/config.json",
+            "num_samples": 48,
+            "deduplicate": true,
+            "deduplicate_by": "output",
+            "max_frequency": 10,
+            "group_by": [
+                "model",
+                "semantic_distance"
+            ],
+            "emb_model": "thenlper/gte-large",
+            "emb_type": "sentence_embedding",
+            "emb_strategy": "direct",
+            "distance_fn": "cosine",
+            "lower": true,
+            "remove_punct": true,
+            "remove_stopwords": true,
+            "lemmatize": true,
+            "dominant_k": null,
+            "unique": true,
+            "cluster_linkage": "ward",
+            "cluster_dist_threshold": 0.5,
+            "description": "Grouping by semantic distance and deduplication"
+        }
+    },
+    "metrics": {
+        "num_samples": 48,
+        "avg_length_in_chars": 341.25,
+        "avg_length_in_words": 64.66666666666667,
+        "avg_length_in_unique_words": 47.8125,
+        "avg_length_in_concepts": 24.770833333333332,
+        "avg_length_in_sentences": 3.875,
+        "avg_word_length_in_chars": 4.17244962065181,
+        "avg_sentence_length_in_chars": 92.7968501984127,
+        "avg_sentence_length_in_words": 17.862723214285715,
+        "avg_sentence_length_in_unique_words": 15.907862103174603,
+        "avg_dsi": 0.21028318364439327,
+        "avg_surprise": 0.02937388259656119,
+        "avg_raw_surprises": [
+            0.012574647631516821,
+            0.01550710178462065,
+            0.027817128005481705,
+            0.023437103854839866,
+            0.06800529783842159,
+            0.03418501147202084,
+            0.001784980297088623
+        ],
+        "avg_n_gram_diversity": [
+            0.7540328992201064,
+            0.9710280250057114,
+            0.9939349687460767,
+            0.9986742424242424,
+            0.999515503875969
+        ],
+        "avg_pos_diversity": [
+            0.20294033400339617,
+            0.5839708122804446,
+            0.8453360989659703,
+            0.9447684614973048,
+            0.9778087457222382
+        ],
+        "avg_dependency_num_clauses": 2.784424603174603,
+        "avg_max_dependency_num_clauses": 4.8125,
+        "avg_dependency_path_length": 2.8205414672365756,
+        "avg_max_dependency_path_length": 8.020833333333334,
+        "avg_inv_homogen": 0.2088817648642452,
+        "avg_novelty": 0.010689780347015402,
+        "avg_theme_uniqueness": 0.8125,
+        "corpus_dsi": 0.2148463113205228,
+        "corpus_n_gram_diversity": [
+            0.3197805743788319,
+            0.8237572627501614,
+            0.9712625121084921,
+            0.9948320413436692,
+            0.9990306946688207
+        ],
+        "corpus_pos_diversity": [
+            0.005162955792191029,
+            0.05035506778566817,
+            0.21536971262512108,
+            0.4886950904392765,
+            0.7360258481421648
+        ],
+        "num_unique_stories": 48,
+        "top_10_n_grams": {
+            "1-gram": {
+                "the": 210,
+                "to": 125,
+                "a": 79,
+                "of": 79,
+                "and": 76,
+                "i": 61,
+                "was": 58,
+                "in": 52,
+                "it": 40,
+                "organ": 35
+            },
+            "2-gram": {
+                "of the": 26,
+                "comply with": 17,
+                "to comply": 15,
+                "in the": 15,
+                "it was": 13,
+                "the organ": 12,
+                "the empire": 10,
+                "for the": 10,
+                "was a": 9,
+                "with the": 9
+            },
+            "3-gram": {
+                "to comply with": 10,
+                "comply with the": 7,
+                "doom and gloom": 6,
+                "i wanted to": 4,
+                "in order to": 3,
+                "to exist in": 3,
+                "the british empire": 3,
+                "out of the": 3,
+                "in this world": 3,
+                "the laws of": 3
+            },
+            "4-gram": {
+                "to comply with the": 5,
+                "need to comply with": 2,
+                "to the post office": 2,
+                "to exist in this": 2,
+                "the doom and gloom": 2,
+                "to play the organ": 2,
+                "in this world you": 2,
+                "this world you must": 2,
+                "comply with the laws": 2,
+                "with the laws of": 2
+            },
+            "5-gram": {
+                "in this world you must": 2,
+                "to comply with the laws": 2,
+                "comply with the laws of": 2,
+                "my uncle decided to donate": 1,
+                "uncle decided to donate his": 1,
+                "decided to donate his organs": 1,
+                "to donate his organs when": 1,
+                "donate his organs when he": 1,
+                "his organs when he died": 1,
+                "organs when he died which": 1
+            }
+        },
+        "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+        },
+        "cost": {
+            "input": 0,
+            "output": 0,
+            "total": 0
+        }
+    },
+    "data": [
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "My uncle decided to donate his organs when he died, which was a very noble thing to do. Sadly on Janurary 7th he fell off his bike and passed away. However many of his organs were able to be donated and his lovely young apprentice who worked in his shop, the Empire of Sweets needed a lung transplant and was able to benefit from my uncles donation. We were a little worried that in order to comply for my uncles lung the shop assistant would not match certain criteria but fortunately he did and all was well. ",
+            "result_id": "R_8XAZuGtUxE4LglP_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8XAZuGtUxE4LglP.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8XAZuGtUxE4LglP"
+            },
+            "metrics": {
+                "length_in_chars": 511,
+                "length_in_words": 97,
+                "length_in_unique_words": 69,
+                "length_in_concepts": 36,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.206185567010309,
+                "avg_sentence_length_in_chars": 126.75,
+                "avg_sentence_length_in_words": 24.25,
+                "avg_sentence_length_in_unique_words": 22.5,
+                "dsi": 0.21242835001339988,
+                "surprise": 0.014660780529611173,
+                "raw_surprises": [
+                    0.004820338317326117,
+                    0.009941556340172159,
+                    0.007229276136918483
+                ],
+                "n_gram_diversity": [
+                    0.711340206185567,
+                    0.96875,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.12371134020618557,
+                    0.5104166666666666,
+                    0.8105263157894737,
+                    0.9042553191489362,
+                    0.946236559139785
+                ],
+                "avg_dependency_num_clauses": 4.75,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 2.8077422494011426,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.20510624951504647,
+                "novelty": 0.004835922614245813,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "Daisy wondered what it would be like to receive someone else's organ. She wondered if she would gain any special powers from the other person. \"Imagine if the donor had ruled an empire!\" she exclaimed. \"Will I be more powerful?!\" But Daisy also knew that to receive the organ she would need to comply with the doctors.",
+            "result_id": "R_8mJxG00fCL8kz05_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8mJxG00fCL8kz05.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8mJxG00fCL8kz05"
+            },
+            "metrics": {
+                "length_in_chars": 318,
+                "length_in_words": 58,
+                "length_in_unique_words": 42,
+                "length_in_concepts": 19,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 4.327586206896552,
+                "avg_sentence_length_in_chars": 52.166666666666664,
+                "avg_sentence_length_in_words": 9.666666666666666,
+                "avg_sentence_length_in_unique_words": 9.166666666666666,
+                "dsi": 0.20597797492791337,
+                "surprise": 0.18641804445357552,
+                "raw_surprises": [
+                    0.007032215595245361,
+                    0.02241064508756002,
+                    0.22644447286923727,
+                    0,
+                    0.2101577775818961
+                ],
+                "n_gram_diversity": [
+                    0.7241379310344828,
+                    0.9473684210526315,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.20689655172413793,
+                    0.631578947368421,
+                    0.8928571428571429,
+                    0.9818181818181818,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.3333333333333333,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.3494708994708993,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.19740763496845326,
+                "novelty": 0.017736672785218843,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "Emma had to make a payment for her electricity so she put her coat on and headed to the post office. It was so foggy she could barely see through the gloom. On the way to the post office she saw some pigeons sitting together looking cold and miserable and she wondered what it was like to exist ",
+            "result_id": "R_8XS6nyWsLXkXKFz_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8XS6nyWsLXkXKFz.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8XS6nyWsLXkXKFz"
+            },
+            "metrics": {
+                "length_in_chars": 295,
+                "length_in_words": 58,
+                "length_in_unique_words": 40,
+                "length_in_concepts": 20,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.051724137931035,
+                "avg_sentence_length_in_chars": 97.33333333333333,
+                "avg_sentence_length_in_words": 19.333333333333332,
+                "avg_sentence_length_in_unique_words": 17.333333333333332,
+                "dsi": 0.21079803422877663,
+                "surprise": 0.04102267150755051,
+                "raw_surprises": [
+                    0.030499052433740514,
+                    0.010523619073809998
+                ],
+                "n_gram_diversity": [
+                    0.6896551724137931,
+                    0.9298245614035088,
+                    0.9642857142857143,
+                    0.9818181818181818,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.20689655172413793,
+                    0.5614035087719298,
+                    0.7857142857142857,
+                    0.8909090909090909,
+                    0.9444444444444444
+                ],
+                "avg_dependency_num_clauses": 4.333333333333333,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 2.8387064970915903,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.2056035297982236,
+                "novelty": 0.00809655418349231,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "In the British empire, Christianity was an important way in which colonialism spread. The symbol of huge cathedrals and churches with a large organ inside pumping out hymns was very powerful. Many people faced a choice, comply or die. ",
+            "result_id": "R_8IgyrHkEhSlOgd5_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8IgyrHkEhSlOgd5.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8IgyrHkEhSlOgd5"
+            },
+            "metrics": {
+                "length_in_chars": 235,
+                "length_in_words": 39,
+                "length_in_unique_words": 35,
+                "length_in_concepts": 22,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.897435897435898,
+                "avg_sentence_length_in_chars": 77.33333333333333,
+                "avg_sentence_length_in_words": 13,
+                "avg_sentence_length_in_unique_words": 12.666666666666666,
+                "dsi": 0.2146263024507663,
+                "surprise": 0.01809777428233436,
+                "raw_surprises": [
+                    0.016427168013557564,
+                    0.0016706062687767975
+                ],
+                "n_gram_diversity": [
+                    0.8974358974358975,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2564102564102564,
+                    0.631578947368421,
+                    0.8378378378378378,
+                    0.9166666666666666,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.6666666666666667,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.5569105691056913,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.21246099852501077,
+                "novelty": 0.00044001773951296563,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "The prince swept his fingers dramatically across the keyboard, enjoying the sounds of the organ reverberating around the empty church. He turned around to face the empty pews and barely contained his urge to start throwing the bouquets around the empty space. He didn't feel the need to comply with social norms right now, but still had to maintain a public face if he were to inherit his father's empire. So much for the princess though, she had decided it was all too quick a romance and she 'needed time to think', whatever that meant. And what was he to do in the meantime, just sit and wait?",
+            "result_id": "R_87z2b4sr7in6R21_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_87z2b4sr7in6R21.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_87z2b4sr7in6R21"
+            },
+            "metrics": {
+                "length_in_chars": 596,
+                "length_in_words": 110,
+                "length_in_unique_words": 77,
+                "length_in_concepts": 41,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.336363636363636,
+                "avg_sentence_length_in_chars": 118.4,
+                "avg_sentence_length_in_words": 22,
+                "avg_sentence_length_in_unique_words": 19.2,
+                "dsi": 0.21152373145266276,
+                "surprise": 0.03888414267337685,
+                "raw_surprises": [
+                    0.003951418399810808,
+                    0.0009042398496107718,
+                    0.0052193233590105415,
+                    0.06769330373832158
+                ],
+                "n_gram_diversity": [
+                    0.7,
+                    0.9724770642201835,
+                    0.9907407407407407,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1,
+                    0.3853211009174312,
+                    0.7129629629629629,
+                    0.897196261682243,
+                    0.9716981132075472
+                ],
+                "avg_dependency_num_clauses": 4.8,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.189242141300965,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.20797736213562337,
+                "novelty": 0.006645159735720052,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "Rose shouldn't be forced to exist in this gloom. The UK weather was so depressing. \"Get me on a plane to hotter climes immediately!\" she demanded.  Waving her credit card around she screamed \"Come on people! Allow me to make that payment\".",
+            "result_id": "R_8mJxG00fCL8kz05_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8mJxG00fCL8kz05.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8mJxG00fCL8kz05"
+            },
+            "metrics": {
+                "length_in_chars": 239,
+                "length_in_words": 44,
+                "length_in_unique_words": 39,
+                "length_in_concepts": 21,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 4.2727272727272725,
+                "avg_sentence_length_in_chars": 39.166666666666664,
+                "avg_sentence_length_in_words": 7.333333333333333,
+                "avg_sentence_length_in_unique_words": 7.333333333333333,
+                "dsi": 0.20996220878192356,
+                "surprise": 0.04145953257878622,
+                "raw_surprises": [
+                    0.0012055734793345319,
+                    0.005122443040212005,
+                    0.045886596043904604,
+                    0.04747630357742311,
+                    0.0039579153060912975
+                ],
+                "n_gram_diversity": [
+                    0.8863636363636364,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.25,
+                    0.7906976744186046,
+                    0.9761904761904762,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 0.8333333333333334,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.0253071683218744,
+                "max_dependency_path_length": 5,
+                "inv_homogen": 0.20593001741044065,
+                "novelty": 0.009768205077198444,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "In an empire someone heard music. They followed the sound and it lead them to someone else playing music on an organ instrument. The person playing the organ was having lessons from a music teacher and did comply with what they were told to play on the instrument. The music was beautiful. The musician was very talented.",
+            "result_id": "R_27dw4UbFh02oLUB_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_27dw4UbFh02oLUB.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_27dw4UbFh02oLUB"
+            },
+            "metrics": {
+                "length_in_chars": 321,
+                "length_in_words": 57,
+                "length_in_unique_words": 38,
+                "length_in_concepts": 18,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.56140350877193,
+                "avg_sentence_length_in_chars": 63.4,
+                "avg_sentence_length_in_words": 11.4,
+                "avg_sentence_length_in_unique_words": 11,
+                "dsi": 0.20223656433080536,
+                "surprise": 0.05656290480068753,
+                "raw_surprises": [
+                    0.022404963061923078,
+                    0.004161990634978768,
+                    0.010172761811150455,
+                    0.07638609409332275
+                ],
+                "n_gram_diversity": [
+                    0.6666666666666666,
+                    0.9821428571428571,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.17543859649122806,
+                    0.5178571428571429,
+                    0.8,
+                    0.9444444444444444,
+                    0.9622641509433962
+                ],
+                "avg_dependency_num_clauses": 1.4,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.409591836734694,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.19451936381928464,
+                "novelty": 0.02521949397943485,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "We exist to pay, that is modern day gloom for each and everyone of us. Without access to money interactions and payments humans wouldn't be able to have created the society as we have it now where each of us make such transactions on a daily basis. Only the lucky ones are able to go a day without paying for something.",
+            "result_id": "R_2eaDBbNJB41Q6MF_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2eaDBbNJB41Q6MF.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2eaDBbNJB41Q6MF"
+            },
+            "metrics": {
+                "length_in_chars": 319,
+                "length_in_words": 62,
+                "length_in_unique_words": 47,
+                "length_in_concepts": 18,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.112903225806452,
+                "avg_sentence_length_in_chars": 105.66666666666667,
+                "avg_sentence_length_in_words": 20.666666666666668,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.20553427389244627,
+                "surprise": 0.009822750091552757,
+                "raw_surprises": [
+                    0.006357890367507946,
+                    0.003464859724044811
+                ],
+                "n_gram_diversity": [
+                    0.7580645161290323,
+                    0.9672131147540983,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1774193548387097,
+                    0.5573770491803278,
+                    0.9333333333333333,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.175744179192455,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.22138973119411062,
+                "novelty": 0.018624074856153028,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "'Good morning Emma! Are you here to donate your kidney today? You're so very kind! Organ donation is such a generous thing to do.' 'Yes, Rhi promised me some new books on the Empire of Glass if I went for it! So here I am ready to comply. I'll do anything for a good book!' Emma beamed in excitement.",
+            "result_id": "R_2So8IZ3DwEtmV0v_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2So8IZ3DwEtmV0v.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2So8IZ3DwEtmV0v"
+            },
+            "metrics": {
+                "length_in_chars": 300,
+                "length_in_words": 61,
+                "length_in_unique_words": 49,
+                "length_in_concepts": 23,
+                "length_in_sentences": 8,
+                "avg_word_length_in_chars": 3.7540983606557377,
+                "avg_sentence_length_in_chars": 36.625,
+                "avg_sentence_length_in_words": 7.625,
+                "avg_sentence_length_in_unique_words": 7.625,
+                "dsi": 0.21432337482927344,
+                "surprise": 0.16719258277594637,
+                "raw_surprises": [
+                    0.02941499153772989,
+                    0.2360509435335795,
+                    0.2130205531915029,
+                    4.031118892466878e-06,
+                    0.047477213399750834,
+                    0.057421326637268066,
+                    0.001784980297088623
+                ],
+                "n_gram_diversity": [
+                    0.8032786885245902,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.19672131147540983,
+                    0.6666666666666666,
+                    0.9322033898305084,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 0.5,
+                "max_dependency_num_clauses": 1,
+                "avg_dependency_path_length": 1.950687243983615,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.20581748130473684,
+                "novelty": 0.0010458729824986968,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "Donation is mandatory for the empire to survive. Some will not comply, but forcible removal of an organ is traumatic and often leads to severe mental illness. We learn this in our early years, so most are ready for the procedure, but some do question. We have to keep our best and most talented alive for as long as possible if we are to find a solution to ",
+            "result_id": "R_2zUqf0C1wjV8ASQ_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2zUqf0C1wjV8ASQ.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2zUqf0C1wjV8ASQ"
+            },
+            "metrics": {
+                "length_in_chars": 357,
+                "length_in_words": 68,
+                "length_in_unique_words": 51,
+                "length_in_concepts": 26,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.161764705882353,
+                "avg_sentence_length_in_chars": 88.25,
+                "avg_sentence_length_in_words": 17,
+                "avg_sentence_length_in_unique_words": 16,
+                "dsi": 0.21312437681051402,
+                "surprise": 0.01899816592534383,
+                "raw_surprises": [
+                    0.018413619862662434,
+                    0.00593660010231864,
+                    0.0041470289230346735
+                ],
+                "n_gram_diversity": [
+                    0.75,
+                    0.9850746268656716,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16176470588235295,
+                    0.582089552238806,
+                    0.8939393939393939,
+                    0.9846153846153847,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.25,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.6004934904069152,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.19631335329502186,
+                "novelty": 0.0034438690200175315,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "With despair, I ask my husband how can we exist on so little money, The payment to the tax office has taken so much of our money already.  Not only this, but there is a chill in the air.  Winter is approaching with it bringing the doom and gloom of high energy bills.  ",
+            "result_id": "R_21jCVrcLzykPU4h_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_21jCVrcLzykPU4h.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_21jCVrcLzykPU4h"
+            },
+            "metrics": {
+                "length_in_chars": 269,
+                "length_in_words": 56,
+                "length_in_unique_words": 46,
+                "length_in_concepts": 21,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.75,
+                "avg_sentence_length_in_chars": 89.66666666666667,
+                "avg_sentence_length_in_words": 18.666666666666668,
+                "avg_sentence_length_in_unique_words": 17.666666666666668,
+                "dsi": 0.2106010465394883,
+                "surprise": 0.03852825893296136,
+                "raw_surprises": [
+                    0.019544434547424328,
+                    0.01898382438553703
+                ],
+                "n_gram_diversity": [
+                    0.8214285714285714,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.23214285714285715,
+                    0.6545454545454545,
+                    0.9074074074074074,
+                    0.9433962264150944,
+                    0.9807692307692307
+                ],
+                "avg_dependency_num_clauses": 2.3333333333333335,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.8166480862133034,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.20891176005627246,
+                "novelty": 0.008490529562068971,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "it was one of the days you woke up to a complete gloom even though the day had started hours ago. well, if you had not skipped your payment for the artificial wake-up light subscription, you would have been woken up quite easily and that explains the itch and the pain in your eyes and your back. of course none of them could exist without the rule of the machines that obscured the sky and the beauty of the world we live in.",
+            "result_id": "R_2sdMlOguKbuAvfg_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2sdMlOguKbuAvfg.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2sdMlOguKbuAvfg"
+            },
+            "metrics": {
+                "length_in_chars": 426,
+                "length_in_words": 84,
+                "length_in_unique_words": 59,
+                "length_in_concepts": 26,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.023809523809524,
+                "avg_sentence_length_in_chars": 141.33333333333334,
+                "avg_sentence_length_in_words": 28,
+                "avg_sentence_length_in_unique_words": 22.666666666666668,
+                "dsi": 0.2133024652187641,
+                "surprise": 0.016454553419205348,
+                "raw_surprises": [
+                    0.012875733798716482,
+                    0.0035788196204888656
+                ],
+                "n_gram_diversity": [
+                    0.7023809523809523,
+                    0.963855421686747,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.15476190476190477,
+                    0.4578313253012048,
+                    0.7560975609756098,
+                    0.8518518518518519,
+                    0.8875
+                ],
+                "avg_dependency_num_clauses": 4.333333333333333,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.9008897508292493,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.206711914945156,
+                "novelty": 0.0030876922035174004,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "Alex smiled in satisfaction. Another payment he could tick off his spreadsheet. His bathroom was coming along nicely and he could finally exist in his house in comfort. The neighbours were getting pretty upset with him using the garden as a toilet, and they were right, it is a bit gloom and doom when it's pouring rain and thundering. Still it was a tiny bit satisfying getting back to nature and all that.",
+            "result_id": "R_2So8IZ3DwEtmV0v_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2So8IZ3DwEtmV0v.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2So8IZ3DwEtmV0v"
+            },
+            "metrics": {
+                "length_in_chars": 407,
+                "length_in_words": 74,
+                "length_in_unique_words": 55,
+                "length_in_concepts": 29,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.4324324324324325,
+                "avg_sentence_length_in_chars": 80.6,
+                "avg_sentence_length_in_words": 14.8,
+                "avg_sentence_length_in_unique_words": 13.2,
+                "dsi": 0.2099558482029168,
+                "surprise": 0.029257624620919673,
+                "raw_surprises": [
+                    0.020012219746907534,
+                    0.02472366037822904,
+                    0.007498865599160659,
+                    0.006280503517542113
+                ],
+                "n_gram_diversity": [
+                    0.7432432432432432,
+                    0.9863013698630136,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.14864864864864866,
+                    0.5616438356164384,
+                    0.8611111111111112,
+                    0.971830985915493,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 9,
+                "avg_dependency_path_length": 2.382758620689655,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.21446481410493243,
+                "novelty": 0.009780926235211984,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "I went to the Empire comedy club. They still have the old performing organ from when it was a dance hall. i wanted to play the organ, but they said no and I wanted to comply with their rules.",
+            "result_id": "R_8VKNz0tY7nY6fDq_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8VKNz0tY7nY6fDq.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8VKNz0tY7nY6fDq"
+            },
+            "metrics": {
+                "length_in_chars": 191,
+                "length_in_words": 39,
+                "length_in_unique_words": 30,
+                "length_in_concepts": 14,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 3.8205128205128207,
+                "avg_sentence_length_in_chars": 47,
+                "avg_sentence_length_in_words": 9.75,
+                "avg_sentence_length_in_unique_words": 9.75,
+                "dsi": 0.20729691445172488,
+                "surprise": 0.030640562375386537,
+                "raw_surprises": [
+                    0.014592691262563046,
+                    0.006054695447285957,
+                    0.025313456853230804
+                ],
+                "n_gram_diversity": [
+                    0.7692307692307693,
+                    0.9473684210526315,
+                    0.972972972972973,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.3333333333333333,
+                    0.6842105263157895,
+                    0.8918918918918919,
+                    0.9722222222222222,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.25,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.2066912972085384,
+                "max_dependency_path_length": 5,
+                "inv_homogen": 0.20148326107796202,
+                "novelty": 0.015098793737595817,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "She looked out of the window at the gloom. The man entered through the heavy oak door. \"Here is your payment\", he mumbled. The woman spoke quietly. \"Excellent, you may continue to exist.\"",
+            "result_id": "R_8B3zak55aPwmX5t_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8B3zak55aPwmX5t.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8B3zak55aPwmX5t"
+            },
+            "metrics": {
+                "length_in_chars": 187,
+                "length_in_words": 33,
+                "length_in_unique_words": 29,
+                "length_in_concepts": 16,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.363636363636363,
+                "avg_sentence_length_in_chars": 36.6,
+                "avg_sentence_length_in_words": 6.6,
+                "avg_sentence_length_in_unique_words": 6.2,
+                "dsi": 0.2058853715658188,
+                "surprise": 0.0630510151386261,
+                "raw_surprises": [
+                    0.002883785963058466,
+                    0.05279011130332947,
+                    0.04007983207702637,
+                    0.03034830093383789
+                ],
+                "n_gram_diversity": [
+                    0.8787878787878788,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2727272727272727,
+                    0.75,
+                    0.9354838709677419,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 0.6,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.0905494505494504,
+                "max_dependency_path_length": 5,
+                "inv_homogen": 0.2078979192896092,
+                "novelty": 0.01792187950940799,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "As the organ played its first notes, Becky stood in front of the grand doors, her empire-waist wedding dress shimmering in the sunlight. The dress had been passed down for generations and here she was about to comply with her long standing family traditions. On the other side of the door stood all her family and friends, waiting for her to marry the love of her life. ",
+            "result_id": "R_8dVYGXDIccl6jkg_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8dVYGXDIccl6jkg.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8dVYGXDIccl6jkg"
+            },
+            "metrics": {
+                "length_in_chars": 370,
+                "length_in_words": 68,
+                "length_in_unique_words": 49,
+                "length_in_concepts": 24,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.352941176470588,
+                "avg_sentence_length_in_chars": 122.33333333333333,
+                "avg_sentence_length_in_words": 22.666666666666668,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.2123226929402006,
+                "surprise": 0.018430694118960866,
+                "raw_surprises": [
+                    0.012365080661826067,
+                    0.0060656134571348
+                ],
+                "n_gram_diversity": [
+                    0.7205882352941176,
+                    0.9850746268656716,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.17647058823529413,
+                    0.5522388059701493,
+                    0.8939393939393939,
+                    0.9692307692307692,
+                    0.984375
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.964095744680851,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.21421484363839982,
+                "novelty": 0.005047236760644391,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "Walking through the park on a lovely summers day , I was feeling really happy now that the debt that i had gotten into did not exist any longer. After winning the lottery on saturday i was able to make the final payment on it. This action immedietely lifted me out of the doom and gloom mood I had been living in .",
+            "result_id": "R_8U0c5Ms0PJ9VYTm_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8U0c5Ms0PJ9VYTm.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8U0c5Ms0PJ9VYTm"
+            },
+            "metrics": {
+                "length_in_chars": 314,
+                "length_in_words": 61,
+                "length_in_unique_words": 49,
+                "length_in_concepts": 24,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.065573770491803,
+                "avg_sentence_length_in_chars": 104,
+                "avg_sentence_length_in_words": 20.333333333333332,
+                "avg_sentence_length_in_unique_words": 18.666666666666668,
+                "dsi": 0.2088075290987457,
+                "surprise": 1.2623644494363928e-05,
+                "raw_surprises": [
+                    4.733692515968002e-06,
+                    7.889951978395926e-06
+                ],
+                "n_gram_diversity": [
+                    0.8032786885245902,
+                    0.9666666666666667,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.19672131147540983,
+                    0.6166666666666667,
+                    0.8813559322033898,
+                    0.9827586206896551,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.3333333333333335,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.945295637634899,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.21383478032781722,
+                "novelty": 0.012077564443554178,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "I went for a walk into the forbidden forest today, it was always described with gloom. I knew that there was a reason we took the long path home every evening from work. As I approached half way, my retreat closed in on me, branches covered my exit. I venture forward into the dark, I see a dark coin goblin shaking his bag menacingly, I thought these didn't exist, I managed to make it home but not without payment, the goblin took all my coffers for the day and now I am left with nothing.",
+            "result_id": "R_2joIDdCu9ghOfCw_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2joIDdCu9ghOfCw.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2joIDdCu9ghOfCw"
+            },
+            "metrics": {
+                "length_in_chars": 491,
+                "length_in_words": 96,
+                "length_in_unique_words": 72,
+                "length_in_concepts": 38,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.020833333333333,
+                "avg_sentence_length_in_chars": 122,
+                "avg_sentence_length_in_words": 24,
+                "avg_sentence_length_in_unique_words": 21.75,
+                "dsi": 0.20697156582584084,
+                "surprise": 0.017788328084291184,
+                "raw_surprises": [
+                    0.013258931892258768,
+                    0.001449316740035983,
+                    0.011974243494142028
+                ],
+                "n_gram_diversity": [
+                    0.75,
+                    0.9894736842105263,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11458333333333333,
+                    0.42105263157894735,
+                    0.7978723404255319,
+                    0.9354838709677419,
+                    0.967391304347826
+                ],
+                "avg_dependency_num_clauses": 4.25,
+                "max_dependency_num_clauses": 12,
+                "avg_dependency_path_length": 2.9707315086347346,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.21450682142947583,
+                "novelty": 0.0157494909893639,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "Sarah was suffering with a case of the blues lately, it was all doom and gloom in her mind and feeling like she was simply existing rather than living.  Sarah felt like her adult days were poor, one payment after the other coming out of her hard earned money.  She told everyone around her she was all work and no play in order to simply exist in the world, and it was not the life she wanted.",
+            "result_id": "R_8v92A9H3hnaw1QI_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8v92A9H3hnaw1QI.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8v92A9H3hnaw1QI"
+            },
+            "metrics": {
+                "length_in_chars": 393,
+                "length_in_words": 79,
+                "length_in_unique_words": 54,
+                "length_in_concepts": 29,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.9367088607594938,
+                "avg_sentence_length_in_chars": 131,
+                "avg_sentence_length_in_words": 26.333333333333332,
+                "avg_sentence_length_in_unique_words": 23,
+                "dsi": 0.20023562667405076,
+                "surprise": 0.005891339486004399,
+                "raw_surprises": [
+                    0.0021476555855084456,
+                    0.0037436839004959532
+                ],
+                "n_gram_diversity": [
+                    0.6835443037974683,
+                    0.9615384615384616,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.17721518987341772,
+                    0.6282051282051282,
+                    0.8701298701298701,
+                    0.9605263157894737,
+                    0.9866666666666667
+                ],
+                "avg_dependency_num_clauses": 5.333333333333333,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.3043197936814956,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.20321328208801595,
+                "novelty": 0.029221369292944055,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "The British empire was at its peak, the general had reigning power on the poor locals. All they had was to comply to this force that had entered their country. The churches were erected and instilled their unjust values. Inside one church, was a vast organ that rung out and around the land. A reminder to the occupied. ",
+            "result_id": "R_27PrrUR0LzzSU4k_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_27PrrUR0LzzSU4k.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_27PrrUR0LzzSU4k"
+            },
+            "metrics": {
+                "length_in_chars": 320,
+                "length_in_words": 58,
+                "length_in_unique_words": 43,
+                "length_in_concepts": 24,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.396551724137931,
+                "avg_sentence_length_in_chars": 63,
+                "avg_sentence_length_in_words": 11.6,
+                "avg_sentence_length_in_unique_words": 10.8,
+                "dsi": 0.2157510441282521,
+                "surprise": 0.042290911575158435,
+                "raw_surprises": [
+                    0.029162084062894195,
+                    0.03347413738568625,
+                    0.012090283632278431,
+                    0.009855318069457997
+                ],
+                "n_gram_diversity": [
+                    0.7413793103448276,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1724137931034483,
+                    0.5614035087719298,
+                    0.8571428571428571,
+                    0.9636363636363636,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.8,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.629097309421853,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.1976926973525514,
+                "novelty": 0.0018094656154586386,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "The towering empire of Mrs Smith's authority was overwhelming! She was raising funds for the school again but you would think she was donating an organ they way she seeked gratification and praise from us all. If we didn't all comply with her request to sign up you know you were never going to hear the end of it. Just for an easier life, I was destined to man the teddy tombola stall. ",
+            "result_id": "R_8fKaPcuSHw79GVj_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8fKaPcuSHw79GVj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8fKaPcuSHw79GVj"
+            },
+            "metrics": {
+                "length_in_chars": 387,
+                "length_in_words": 75,
+                "length_in_unique_words": 59,
+                "length_in_concepts": 30,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.12,
+                "avg_sentence_length_in_chars": 95.75,
+                "avg_sentence_length_in_words": 18.75,
+                "avg_sentence_length_in_unique_words": 17.5,
+                "dsi": 0.21355106186592715,
+                "surprise": 0.04361278178199888,
+                "raw_surprises": [
+                    0.005102300643920893,
+                    0.02640504496438162,
+                    0.03391182706469581
+                ],
+                "n_gram_diversity": [
+                    0.7866666666666666,
+                    0.9864864864864865,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16,
+                    0.5540540540540541,
+                    0.863013698630137,
+                    0.9861111111111112,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.5,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.7339723768295197,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.19816661388316054,
+                "novelty": 0.0025904989091912745,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "The empire was growing stronger, their fierce leader implementing new rules to his citizens daily and ensuring he had eyes all over the place to ensure they comply with the new rules.  He wanted to run a nation that was disciplined and listened to orders.  He was an incredibly extravagant leader, his bedroom almost laughable with how over the top it is.  A large organ in what is now his living area, an organ that he insisted on keeping from the old converted church. ",
+            "result_id": "R_8v92A9H3hnaw1QI_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8v92A9H3hnaw1QI.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8v92A9H3hnaw1QI"
+            },
+            "metrics": {
+                "length_in_chars": 471,
+                "length_in_words": 87,
+                "length_in_unique_words": 60,
+                "length_in_concepts": 34,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.367816091954023,
+                "avg_sentence_length_in_chars": 117.5,
+                "avg_sentence_length_in_words": 21.75,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.20810409015087733,
+                "surprise": 0.012385692577513447,
+                "raw_surprises": [
+                    0.006481617972964343,
+                    0.008186628704979326,
+                    0.003910292188326503
+                ],
+                "n_gram_diversity": [
+                    0.6896551724137931,
+                    0.9651162790697675,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13793103448275862,
+                    0.5348837209302325,
+                    0.8470588235294118,
+                    0.9642857142857143,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.75,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.6338252402734095,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.19652971942374048,
+                "novelty": 0.013484442339290914,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "I am the nerdy girl in school, the one who loves music not fashion or sports. My version of fun is learning a new instrument like the organ, not going shopping and spending loads of money! I guess I don't comply to the rest of the school social norms, I feel that in this world their empire is a complete different class compared to mine, I am boring and dull in comparison.",
+            "result_id": "R_8o6ejl1aVHjSI9z_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8o6ejl1aVHjSI9z.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8o6ejl1aVHjSI9z"
+            },
+            "metrics": {
+                "length_in_chars": 374,
+                "length_in_words": 73,
+                "length_in_unique_words": 54,
+                "length_in_concepts": 34,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.054794520547945,
+                "avg_sentence_length_in_chars": 124,
+                "avg_sentence_length_in_words": 24.333333333333332,
+                "avg_sentence_length_in_unique_words": 21.666666666666668,
+                "dsi": 0.20712557514721058,
+                "surprise": 0.008194302583669683,
+                "raw_surprises": [
+                    0.001470946517341587,
+                    0.006723356066328096
+                ],
+                "n_gram_diversity": [
+                    0.7397260273972602,
+                    0.9861111111111112,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.136986301369863,
+                    0.5277777777777778,
+                    0.8169014084507042,
+                    0.9714285714285714,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4.333333333333333,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.1113653699466055,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.2276885395354413,
+                "novelty": 0.015441472346624407,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "I told my friend that I was working with different survey platforms. I told her about what should I do to a survey asking about to write a story  containing three words: organ, empire and comply. I literally had no idea, what to write about but I figured out a nice idea that I used to do it.",
+            "result_id": "R_8sBNWJpZHPgPqua_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8sBNWJpZHPgPqua.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8sBNWJpZHPgPqua"
+            },
+            "metrics": {
+                "length_in_chars": 292,
+                "length_in_words": 59,
+                "length_in_unique_words": 39,
+                "length_in_concepts": 19,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.8813559322033897,
+                "avg_sentence_length_in_chars": 96.66666666666667,
+                "avg_sentence_length_in_words": 19.666666666666668,
+                "avg_sentence_length_in_unique_words": 16.666666666666668,
+                "dsi": 0.20414220519930298,
+                "surprise": 0.01868530060305737,
+                "raw_surprises": [
+                    0.005129008220903786,
+                    0.013556292382153584
+                ],
+                "n_gram_diversity": [
+                    0.6610169491525424,
+                    0.9482758620689655,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.22033898305084745,
+                    0.6206896551724138,
+                    0.9473684210526315,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.6666666666666665,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.691657754010695,
+                "max_dependency_path_length": 14,
+                "inv_homogen": 0.2163777896698485,
+                "novelty": 0.021408212242439606,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "The notes hung in the air, almost alive as they echoed around the cathedral. The beauty of an organ when played by a master is an unparalleled delight. I did not know the name of the piece, it was grand and almost military, perhaps a tribute to an empire long since lost to time. It certainly didn't comply with the playlist set for Michaelmas term this year, as I knew all those compositions by heart. ",
+            "result_id": "R_2mqjhNO26XNoi6R_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2mqjhNO26XNoi6R.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2mqjhNO26XNoi6R"
+            },
+            "metrics": {
+                "length_in_chars": 403,
+                "length_in_words": 76,
+                "length_in_unique_words": 59,
+                "length_in_concepts": 30,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.2105263157894735,
+                "avg_sentence_length_in_chars": 99.75,
+                "avg_sentence_length_in_words": 19,
+                "avg_sentence_length_in_unique_words": 17.75,
+                "dsi": 0.21203298459107847,
+                "surprise": 0.007006472128408936,
+                "raw_surprises": [
+                    0.002072409788767493,
+                    0.004229597912894373,
+                    0.004207700490951538
+                ],
+                "n_gram_diversity": [
+                    0.7763157894736842,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.15789473684210525,
+                    0.4533333333333333,
+                    0.6891891891891891,
+                    0.8767123287671232,
+                    0.9722222222222222
+                ],
+                "avg_dependency_num_clauses": 2.25,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.7240899898887765,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.2056640272444867,
+                "novelty": 0.005626653458888631,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "As the wicked dictator entered the room, his underlings explained the bleak situation to him regarding the war effort. Swiftly and desperately, the dictator gave them his instructions: 'tell all of our soldiers to defend from the west - we cannot lose the city, it is the most crucial organ of our empire!' Sensing he had gone insane however, the underlings decided not to comply with the instructions, instead telling the soldiers to retreat from the battlefield. It seemed as though a crisis of leadership had truly begun.",
+            "result_id": "R_2XcT1LBVLYHa6hX_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2XcT1LBVLYHa6hX.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2XcT1LBVLYHa6hX"
+            },
+            "metrics": {
+                "length_in_chars": 524,
+                "length_in_words": 88,
+                "length_in_unique_words": 61,
+                "length_in_concepts": 35,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.818181818181818,
+                "avg_sentence_length_in_chars": 130.25,
+                "avg_sentence_length_in_words": 22,
+                "avg_sentence_length_in_unique_words": 19,
+                "dsi": 0.21047121907482627,
+                "surprise": 0.02180720688734178,
+                "raw_surprises": [
+                    0.01088987089629867,
+                    0.009445209881086741,
+                    0.012375729553627257
+                ],
+                "n_gram_diversity": [
+                    0.6931818181818182,
+                    0.9655172413793104,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.125,
+                    0.4482758620689655,
+                    0.7093023255813954,
+                    0.8705882352941177,
+                    0.9523809523809523
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.609375,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.2240810457696306,
+                "novelty": 0.008750184491393032,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "Under the gloom of this overgrown rainforest there was a world one would never imagine to exist. Banks carved from caverns filled with fairies queuing to take out loans. A doctor's office in the hollow of an elm tree, specifically for the health problems of orphaned munchkins. Atop this same tree, way up in the canopy, was the factory run by the local snarks -- who controlled the printing of all currency used to make any payment you could think of -- only from youngest elm leaves.",
+            "result_id": "R_2rra18JsIdbb7pI_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2rra18JsIdbb7pI.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2rra18JsIdbb7pI"
+            },
+            "metrics": {
+                "length_in_chars": 485,
+                "length_in_words": 86,
+                "length_in_unique_words": 67,
+                "length_in_concepts": 37,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.511627906976744,
+                "avg_sentence_length_in_chars": 120.5,
+                "avg_sentence_length_in_words": 21.5,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.2238698481797456,
+                "surprise": 0.012951285640398658,
+                "raw_surprises": [
+                    0.012062669368017281,
+                    0.0067544626811194,
+                    0.0006097964114613053
+                ],
+                "n_gram_diversity": [
+                    0.7790697674418605,
+                    0.9882352941176471,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10465116279069768,
+                    0.35294117647058826,
+                    0.6071428571428571,
+                    0.7710843373493976,
+                    0.8902439024390244
+                ],
+                "avg_dependency_num_clauses": 2.25,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.6940615835777124,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.20437946344943755,
+                "novelty": 0.018047073718445605,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "you could hear the crisp and beefy sound of the organ from miles away even though there was no sign of a church at all. all you could see was the pale grim appearance of the large concrete buildings the empire built for their newly established capital. they wanted it to be free of soul, emotion, heart and everything any man can hold dear. That was the essence of the master plan, in which they could finally see all the people comply, like constantly anxious androids killing time to breathe and live for another day. this was no different than surviving rather than living merely. ",
+            "result_id": "R_2sdMlOguKbuAvfg_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2sdMlOguKbuAvfg.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2sdMlOguKbuAvfg"
+            },
+            "metrics": {
+                "length_in_chars": 584,
+                "length_in_words": 105,
+                "length_in_unique_words": 78,
+                "length_in_concepts": 46,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.476190476190476,
+                "avg_sentence_length_in_chars": 115.8,
+                "avg_sentence_length_in_words": 21,
+                "avg_sentence_length_in_unique_words": 19.6,
+                "dsi": 0.20830511827975656,
+                "surprise": 0.010641356522128678,
+                "raw_surprises": [
+                    0.007137914588957128,
+                    0.0036610498830869365,
+                    0.007917550915763488,
+                    0.0025661976564498035
+                ],
+                "n_gram_diversity": [
+                    0.7428571428571429,
+                    0.9519230769230769,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10476190476190476,
+                    0.5,
+                    0.8252427184466019,
+                    0.9411764705882353,
+                    0.9900990099009901
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.3941905864406525,
+                "max_dependency_path_length": 12,
+                "inv_homogen": 0.19088138164357937,
+                "novelty": 0.013082386081532449,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "To exist in this world you must make a payment, the second you are born that payment is your life. To exist and feel in this world you must experience extremes. How can you know happiness without knowing sadness. How can you feel excitement without knowing gloom. ",
+            "result_id": "R_8kQG02fwq7ubaOB_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8kQG02fwq7ubaOB.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8kQG02fwq7ubaOB"
+            },
+            "metrics": {
+                "length_in_chars": 264,
+                "length_in_words": 47,
+                "length_in_unique_words": 31,
+                "length_in_concepts": 14,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.51063829787234,
+                "avg_sentence_length_in_chars": 65,
+                "avg_sentence_length_in_words": 11.75,
+                "avg_sentence_length_in_unique_words": 11.25,
+                "dsi": 0.20304590398138697,
+                "surprise": 0.028196852737002915,
+                "raw_surprises": [
+                    0.019357458750406897,
+                    0.018365200360616063,
+                    0.004572619994481414
+                ],
+                "n_gram_diversity": [
+                    0.6595744680851063,
+                    0.8260869565217391,
+                    0.9111111111111111,
+                    0.9545454545454546,
+                    0.9767441860465116
+                ],
+                "pos_diversity": [
+                    0.2127659574468085,
+                    0.5434782608695652,
+                    0.6888888888888889,
+                    0.75,
+                    0.7906976744186046
+                ],
+                "avg_dependency_num_clauses": 1.5,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.1459636854373696,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.20968037970522616,
+                "novelty": 0.02360081467827163,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "To comply with the laws of the alien race, humans must sacrifice an organ of their choice or feel the full wrath of the alien empire. ",
+            "result_id": "R_8kG4d41raqDZBax_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8kG4d41raqDZBax.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8kG4d41raqDZBax"
+            },
+            "metrics": {
+                "length_in_chars": 134,
+                "length_in_words": 26,
+                "length_in_unique_words": 20,
+                "length_in_concepts": 11,
+                "length_in_sentences": 1,
+                "avg_word_length_in_chars": 4.076923076923077,
+                "avg_sentence_length_in_chars": 133,
+                "avg_sentence_length_in_words": 26,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.21180049072612417,
+                "surprise": 0,
+                "raw_surprises": [],
+                "n_gram_diversity": [
+                    0.7692307692307693,
+                    0.92,
+                    0.9583333333333334,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.34615384615384615,
+                    0.6,
+                    0.7916666666666666,
+                    0.9130434782608695,
+                    0.9545454545454546
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.276595744680851,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.2064974954787721,
+                "novelty": 0.006091641188797237,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "There once was a very strange land called Augmentia. It was an empire that had been created by dictators and was an island based off of the coast of Argentina. Word travelled fast that the dictators - namely Putinito - had begun an organ trafficking trade. The people of Augmentia, unbeknownst to them, had been born on the island and brainwashed into the ways of the land. When a citizen of Augmentia reached the age of 20, they were enlisted into a type of military boot camp where they had to comply with strict instructions and a gruelling regime of work, exercise, and weapons training. Those who did not comply with instructions, or tried to rebel against the bootcamps leaders, were never seen again by their families. It has been an enduring mystery where the rebels ended up, and Putinito had a mysterious ob",
+            "result_id": "R_2sKl3oqSfQrqNI5_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2sKl3oqSfQrqNI5.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2sKl3oqSfQrqNI5"
+            },
+            "metrics": {
+                "length_in_chars": 817,
+                "length_in_words": 142,
+                "length_in_unique_words": 90,
+                "length_in_concepts": 53,
+                "length_in_sentences": 7,
+                "avg_word_length_in_chars": 4.633802816901408,
+                "avg_sentence_length_in_chars": 115.85714285714286,
+                "avg_sentence_length_in_words": 20.285714285714285,
+                "avg_sentence_length_in_unique_words": 18.285714285714285,
+                "dsi": 0.21624009763208288,
+                "surprise": 0.01946069702269539,
+                "raw_surprises": [
+                    0.011477986971537263,
+                    0.006306701236301004,
+                    0.006912246583000048,
+                    0.012308174904526126,
+                    0.010428285065948117,
+                    0.010948696306773614
+                ],
+                "n_gram_diversity": [
+                    0.6338028169014085,
+                    0.9574468085106383,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09154929577464789,
+                    0.41843971631205673,
+                    0.7285714285714285,
+                    0.8920863309352518,
+                    0.9782608695652174
+                ],
+                "avg_dependency_num_clauses": 3.2857142857142856,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.2447697041830343,
+                "max_dependency_path_length": 15,
+                "inv_homogen": 0.21295749507051834,
+                "novelty": 0.0027875726231201825,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "The golden organ of a mammal was a precious assets in the mongol empire and in order to achieve this one has to kill a lot of mammal to get the golden organ which lead to a complying factor that stopped the act of the mass killing. ",
+            "result_id": "R_2fDGzWQwo9sISmC_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2fDGzWQwo9sISmC.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2fDGzWQwo9sISmC"
+            },
+            "metrics": {
+                "length_in_chars": 232,
+                "length_in_words": 47,
+                "length_in_unique_words": 31,
+                "length_in_concepts": 18,
+                "length_in_sentences": 1,
+                "avg_word_length_in_chars": 3.9148936170212765,
+                "avg_sentence_length_in_chars": 231,
+                "avg_sentence_length_in_words": 47,
+                "avg_sentence_length_in_unique_words": 31,
+                "dsi": 0.21310732177659578,
+                "surprise": 0,
+                "raw_surprises": [],
+                "n_gram_diversity": [
+                    0.6595744680851063,
+                    0.9565217391304348,
+                    0.9777777777777777,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.19148936170212766,
+                    0.5,
+                    0.7111111111111111,
+                    0.8636363636363636,
+                    0.9534883720930233
+                ],
+                "avg_dependency_num_clauses": 7,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 5.016528925619835,
+                "max_dependency_path_length": 13,
+                "inv_homogen": 0.22266611013006657,
+                "novelty": 0.0034779790878540218,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "The three best friends Erin, Geri and Holly were on their way to their first ever spiritual retreat. \"Just going to go do the parking payment\" Holly called as the girls got out of the car. \"I can't wait to just exist for the next few days at the retreat! No more doom and gloom at work!\"  Geri said to Erin.",
+            "result_id": "R_25FmW7vrOnS60wE_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_25FmW7vrOnS60wE.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_25FmW7vrOnS60wE"
+            },
+            "metrics": {
+                "length_in_chars": 307,
+                "length_in_words": 63,
+                "length_in_unique_words": 47,
+                "length_in_concepts": 23,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 3.761904761904762,
+                "avg_sentence_length_in_chars": 60.8,
+                "avg_sentence_length_in_words": 12.6,
+                "avg_sentence_length_in_unique_words": 11.8,
+                "dsi": 0.20876172502992651,
+                "surprise": 0.0237132204430444,
+                "raw_surprises": [
+                    0.006816783121653958,
+                    0.0036722918351491385,
+                    0.012805134057998657,
+                    0.024132231871287046
+                ],
+                "n_gram_diversity": [
+                    0.746031746031746,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2222222222222222,
+                    0.7258064516129032,
+                    0.9836065573770492,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.40047152194211,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.2297566368224773,
+                "novelty": 0.012169172581192544,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "What a fantastic day to exist. The sun is shining in the bright blue sky which is such a lovely change to the gloom-laden skies of late. Grey, rainy days have now been usurped with the payment of such glorious weather for once this awful summer.",
+            "result_id": "R_8dFIkEkt84RkgQj_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8dFIkEkt84RkgQj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8dFIkEkt84RkgQj"
+            },
+            "metrics": {
+                "length_in_chars": 245,
+                "length_in_words": 47,
+                "length_in_unique_words": 39,
+                "length_in_concepts": 21,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.148936170212766,
+                "avg_sentence_length_in_chars": 81,
+                "avg_sentence_length_in_words": 15.666666666666666,
+                "avg_sentence_length_in_unique_words": 14.666666666666666,
+                "dsi": 0.20617700502986,
+                "surprise": 0.01972389850351547,
+                "raw_surprises": [
+                    0.008532203568352603,
+                    0.011191694935162866
+                ],
+                "n_gram_diversity": [
+                    0.8297872340425532,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2127659574468085,
+                    0.5869565217391305,
+                    0.8666666666666667,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 0.3333333333333333,
+                "max_dependency_num_clauses": 1,
+                "avg_dependency_path_length": 2.956782106782107,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.21949324582485444,
+                "novelty": 0.017338612581325574,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "Lisa was learning to be an organist. She already played the piano but was working hard to comply with the requirements to pass her exams. She enjoyed playing the organ, especially in a very large venue where she could play a very well known piece from Star Wars \"The Empire Strikes Back\"",
+            "result_id": "R_8XS6nyWsLXkXKFz_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8XS6nyWsLXkXKFz.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8XS6nyWsLXkXKFz"
+            },
+            "metrics": {
+                "length_in_chars": 287,
+                "length_in_words": 52,
+                "length_in_unique_words": 42,
+                "length_in_concepts": 22,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.4423076923076925,
+                "avg_sentence_length_in_chars": 95,
+                "avg_sentence_length_in_words": 17.333333333333332,
+                "avg_sentence_length_in_unique_words": 15.333333333333334,
+                "dsi": 0.21570864926168928,
+                "surprise": 0.04257417692766563,
+                "raw_surprises": [
+                    0.03314779911722457,
+                    0.009426377810441061
+                ],
+                "n_gram_diversity": [
+                    0.8076923076923077,
+                    0.9803921568627451,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.23076923076923078,
+                    0.7450980392156863,
+                    0.98,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.3333333333333335,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.048603683897802,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.20359446647319387,
+                "novelty": 0.0017246758823329933,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "Jason played his organ loudly, entertaining the higher-ups of the empire. He had been asked to play at the society wedding, and had strict instructions to play only romantic and beautiful songs. However, he was a member of the secret society and had a plan. He started to play a stirring, uplifting song which did not comply with his orders, and the society rushed in through the open doors, ready to attack.",
+            "result_id": "R_8B3zak55aPwmX5t_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8B3zak55aPwmX5t.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8B3zak55aPwmX5t"
+            },
+            "metrics": {
+                "length_in_chars": 408,
+                "length_in_words": 73,
+                "length_in_unique_words": 50,
+                "length_in_concepts": 29,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.465753424657534,
+                "avg_sentence_length_in_chars": 101.25,
+                "avg_sentence_length_in_words": 18.25,
+                "avg_sentence_length_in_unique_words": 16.25,
+                "dsi": 0.2097276518203942,
+                "surprise": 0.004983208530745834,
+                "raw_surprises": [
+                    0.0021875420260050737,
+                    0.003715379370583416,
+                    0.001571891399530262
+                ],
+                "n_gram_diversity": [
+                    0.684931506849315,
+                    0.9305555555555556,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1506849315068493,
+                    0.5138888888888888,
+                    0.8309859154929577,
+                    0.9714285714285714,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.75,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.7555271983517065,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.19652011546682804,
+                "novelty": 0.01023731900025715,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "Some days I feel I only exist to sleep, work, eat, repeat. An endless cycle of doom and gloom, how I long for the Christmas break coming up. My final payment on the cottage in the countryside is just in reach and I can spend my days lounging around and taking in all the fresh air, freedom! ",
+            "result_id": "R_8fKaPcuSHw79GVj_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8fKaPcuSHw79GVj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8fKaPcuSHw79GVj"
+            },
+            "metrics": {
+                "length_in_chars": 291,
+                "length_in_words": 57,
+                "length_in_unique_words": 45,
+                "length_in_concepts": 26,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.9649122807017543,
+                "avg_sentence_length_in_chars": 96,
+                "avg_sentence_length_in_words": 19,
+                "avg_sentence_length_in_unique_words": 16.666666666666668,
+                "dsi": 0.20912666815977832,
+                "surprise": 0.01710207495854532,
+                "raw_surprises": [
+                    0.0070520596844809436,
+                    0.010050015274064378
+                ],
+                "n_gram_diversity": [
+                    0.7894736842105263,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.21052631578947367,
+                    0.6964285714285714,
+                    0.9090909090909091,
+                    0.9814814814814815,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4.666666666666667,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.8023702407264053,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.2122142860229979,
+                "novelty": 0.01143928632148894,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "My favourire bodily organ is my right eye. With it, I can see the whole vista of the empire when I stand at the highest point of the island. The laws of optics suggest it shouldn't be so, but in magic worlds eyes don't have to comply with the laws of terrestial physics ",
+            "result_id": "R_2BoHBhJy5N6y8ZX_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2BoHBhJy5N6y8ZX.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2BoHBhJy5N6y8ZX"
+            },
+            "metrics": {
+                "length_in_chars": 270,
+                "length_in_words": 55,
+                "length_in_unique_words": 41,
+                "length_in_concepts": 19,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.8727272727272726,
+                "avg_sentence_length_in_chars": 89,
+                "avg_sentence_length_in_words": 18.333333333333332,
+                "avg_sentence_length_in_unique_words": 15,
+                "dsi": 0.21819650638870328,
+                "surprise": 0.0020843499236636587,
+                "raw_surprises": [
+                    0.0010688165823618534,
+                    0.0010155333413018053
+                ],
+                "n_gram_diversity": [
+                    0.7454545454545455,
+                    0.9444444444444444,
+                    0.9811320754716981,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2,
+                    0.6111111111111112,
+                    0.8301886792452831,
+                    0.9423076923076923,
+                    0.9607843137254902
+                ],
+                "avg_dependency_num_clauses": 1.6666666666666667,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.6520169442572445,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.22419663439405726,
+                "novelty": 0.006700390136360979,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "A plush of the pokemon gloom, which is one of my favourites, is so hard to come by nowadays that i would make a substatial payment to purchase one that exists. I would even travel the globe to aquire one. But alas, i believe that they stopped making them a while ago, so i will need to find an alternative source.",
+            "result_id": "R_2LTbPAQf8NZ0wRb_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2LTbPAQf8NZ0wRb.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2LTbPAQf8NZ0wRb"
+            },
+            "metrics": {
+                "length_in_chars": 313,
+                "length_in_words": 61,
+                "length_in_unique_words": 44,
+                "length_in_concepts": 23,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.032786885245901,
+                "avg_sentence_length_in_chars": 103.66666666666667,
+                "avg_sentence_length_in_words": 20.333333333333332,
+                "avg_sentence_length_in_unique_words": 18,
+                "dsi": 0.2057403856115379,
+                "surprise": 0.013515091965896925,
+                "raw_surprises": [
+                    0.0037051840261979607,
+                    0.009809907939698964
+                ],
+                "n_gram_diversity": [
+                    0.7213114754098361,
+                    0.9833333333333333,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.21311475409836064,
+                    0.6166666666666667,
+                    0.8983050847457628,
+                    0.9482758620689655,
+                    0.9824561403508771
+                ],
+                "avg_dependency_num_clauses": 3.6666666666666665,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.5365740740740743,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.24037454610175274,
+                "novelty": 0.01821185141796977,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "The weather was dull and gave a sense of gloom. Someone was buying products in a shop, gave their payment for the products to a cashier then left the shop. As they were walking outside it started to rain. Raindrops appeared to exist",
+            "result_id": "R_27dw4UbFh02oLUB_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_27dw4UbFh02oLUB.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_27dw4UbFh02oLUB"
+            },
+            "metrics": {
+                "length_in_chars": 232,
+                "length_in_words": 43,
+                "length_in_unique_words": 33,
+                "length_in_concepts": 18,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.325581395348837,
+                "avg_sentence_length_in_chars": 57.25,
+                "avg_sentence_length_in_words": 10.75,
+                "avg_sentence_length_in_unique_words": 9.75,
+                "dsi": 0.20915183327556436,
+                "surprise": 0.0315507550088186,
+                "raw_surprises": [
+                    0.023127688396544693,
+                    0.006811848708561469,
+                    0.017386595408121736
+                ],
+                "n_gram_diversity": [
+                    0.7674418604651163,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2558139534883721,
+                    0.5952380952380952,
+                    0.8048780487804879,
+                    0.95,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.5,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.1842436974789914,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.2127182293445506,
+                "novelty": 0.011388956089916857,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "The dark room made everything feel like it was doom and gloom. How could one exist in a house so dreary? He struggled to understand how the landlord expected payment for a house so run-down and derelict, but unfortunately he had no choice but to deal with it.",
+            "result_id": "R_82McyGIYTts4bOU_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_82McyGIYTts4bOU.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_82McyGIYTts4bOU"
+            },
+            "metrics": {
+                "length_in_chars": 259,
+                "length_in_words": 49,
+                "length_in_unique_words": 39,
+                "length_in_concepts": 19,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.224489795918367,
+                "avg_sentence_length_in_chars": 85.66666666666667,
+                "avg_sentence_length_in_words": 16.333333333333332,
+                "avg_sentence_length_in_unique_words": 15.333333333333334,
+                "dsi": 0.2063374428721199,
+                "surprise": 0.039314283024180996,
+                "raw_surprises": [
+                    0.030788334210713697,
+                    0.008525948813467299
+                ],
+                "n_gram_diversity": [
+                    0.7959183673469388,
+                    0.9583333333333334,
+                    0.9787234042553191,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.24489795918367346,
+                    0.7291666666666666,
+                    0.9574468085106383,
+                    0.9782608695652174,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.3333333333333335,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.525941719971571,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.20078124137634926,
+                "novelty": 0.017017736896805746,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "In 2142, the British empire has a problem. With the lack of jobs many have turned to organ sharks. If you take a loan from them and don't pay them back they give you a warning. After some time has passed, and you still don't comply, they come and gut you for what you have usually taking a liver or kidney. Gutted people are called husks which are marked by the organ sharks. ",
+            "result_id": "R_8kQG02fwq7ubaOB_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8kQG02fwq7ubaOB.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8kQG02fwq7ubaOB"
+            },
+            "metrics": {
+                "length_in_chars": 376,
+                "length_in_words": 75,
+                "length_in_unique_words": 55,
+                "length_in_concepts": 26,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 3.933333333333333,
+                "avg_sentence_length_in_chars": 74.2,
+                "avg_sentence_length_in_words": 15,
+                "avg_sentence_length_in_unique_words": 13.6,
+                "dsi": 0.21605459635074323,
+                "surprise": 0.021552151867321553,
+                "raw_surprises": [
+                    0.0029066920280456654,
+                    0.0048138181368509725,
+                    0.012972995638847351,
+                    0.022410797930899118
+                ],
+                "n_gram_diversity": [
+                    0.7333333333333333,
+                    0.972972972972973,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16,
+                    0.581081081081081,
+                    0.8904109589041096,
+                    0.9722222222222222,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.4,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 2.4534559643255296,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.20372257207302338,
+                "novelty": 0.0024165700604408813,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "The mighty Roman empire we learned about in school. I knew that I needed to write an essay on it to comply with my qualification requirements, but I didn't really want to. Surely somewhere in my brain I could find a way of wriggling out of it. After all they keep telling us what a wonderful organ our brain is.",
+            "result_id": "R_8FjH6e5PsshRtjr_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8FjH6e5PsshRtjr.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8FjH6e5PsshRtjr"
+            },
+            "metrics": {
+                "length_in_chars": 311,
+                "length_in_words": 61,
+                "length_in_unique_words": 50,
+                "length_in_concepts": 21,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.049180327868853,
+                "avg_sentence_length_in_chars": 77,
+                "avg_sentence_length_in_words": 15.25,
+                "avg_sentence_length_in_unique_words": 14,
+                "dsi": 0.20732518292608715,
+                "surprise": 0.034236380978236114,
+                "raw_surprises": [
+                    0.02653295014585766,
+                    0.02028848741735728,
+                    0.0045331339041392305
+                ],
+                "n_gram_diversity": [
+                    0.819672131147541,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.18032786885245902,
+                    0.5833333333333334,
+                    0.8983050847457628,
+                    0.9827586206896551,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.5,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.571708463949843,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.20295976197465937,
+                "novelty": 0.015042256788871278,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "In the distant British Empire it used to be law that whenever someone stole a sack of salt they would be arrested and had to choose an organ they had to sacrifice. No one ever chose a hand, they'd ask for an ear or a kidney but never a hand. There was no choice, they had to comply because resisting would mean sure death. This is the story of how salt become one of the most common seasonings in the world.",
+            "result_id": "R_2eaDBbNJB41Q6MF_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2eaDBbNJB41Q6MF.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2eaDBbNJB41Q6MF"
+            },
+            "metrics": {
+                "length_in_chars": 407,
+                "length_in_words": 82,
+                "length_in_unique_words": 58,
+                "length_in_concepts": 25,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 3.9146341463414633,
+                "avg_sentence_length_in_chars": 101,
+                "avg_sentence_length_in_words": 20.5,
+                "avg_sentence_length_in_unique_words": 17.75,
+                "dsi": 0.21686573723951974,
+                "surprise": 0.01559822318529841,
+                "raw_surprises": [
+                    0.007884476943449542,
+                    0.003888632853825874,
+                    0.011624224980672199
+                ],
+                "n_gram_diversity": [
+                    0.7073170731707317,
+                    0.9382716049382716,
+                    0.9875,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.15853658536585366,
+                    0.5308641975308642,
+                    0.75,
+                    0.8860759493670886,
+                    0.9487179487179487
+                ],
+                "avg_dependency_num_clauses": 4,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.125922987616099,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.22264665492037508,
+                "novelty": 0.0040388518379939065,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "I tried very hard to play the organ, I wanted to so badly. I hated the man who stood on top of his empire of tunes. I wanted to have my own library of hymns to move the masses. I needed to have 5 years experience in the church before I could make this a reality. I must comply with these rules, and then I could be the organ master I always wanted to become.",
+            "result_id": "R_2joIDdCu9ghOfCw_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2joIDdCu9ghOfCw.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2joIDdCu9ghOfCw"
+            },
+            "metrics": {
+                "length_in_chars": 358,
+                "length_in_words": 75,
+                "length_in_unique_words": 51,
+                "length_in_concepts": 23,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 3.6933333333333334,
+                "avg_sentence_length_in_chars": 70.8,
+                "avg_sentence_length_in_words": 15,
+                "avg_sentence_length_in_unique_words": 13.6,
+                "dsi": 0.21219382337901904,
+                "surprise": 0.027922443548838285,
+                "raw_surprises": [
+                    0.021996770302454643,
+                    0.010432316859563168,
+                    0.018194707234700513,
+                    0.005221092700958246
+                ],
+                "n_gram_diversity": [
+                    0.68,
+                    0.918918918918919,
+                    0.9863013698630136,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16,
+                    0.47297297297297297,
+                    0.7808219178082192,
+                    0.8888888888888888,
+                    0.9295774647887324
+                ],
+                "avg_dependency_num_clauses": 2.6,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.832011051279344,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.1993313621967397,
+                "novelty": 0.00530497588300749,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "It is Gloom when you try exist without payment ",
+            "result_id": "R_2w7dPn1UdhDtQFs_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2w7dPn1UdhDtQFs.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2w7dPn1UdhDtQFs"
+            },
+            "metrics": {
+                "length_in_chars": 47,
+                "length_in_words": 9,
+                "length_in_unique_words": 9,
+                "length_in_concepts": 4,
+                "length_in_sentences": 1,
+                "avg_word_length_in_chars": 4.222222222222222,
+                "avg_sentence_length_in_chars": 46,
+                "avg_sentence_length_in_words": 9,
+                "avg_sentence_length_in_unique_words": 9,
+                "dsi": 0.21220139662424725,
+                "surprise": 0,
+                "raw_surprises": [],
+                "n_gram_diversity": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.7777777777777778,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.2857142857142856,
+                "max_dependency_path_length": 5,
+                "inv_homogen": 0.20257107881789513,
+                "novelty": 0.005289829392551071,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "Sadness fills the air, as we walk around the 911 memorial site.  We enter the church, complying with their rules.  The organ is being played and the mood is sombre.   The Empire state building will be a welcome treat later today.",
+            "result_id": "R_21jCVrcLzykPU4h_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_21jCVrcLzykPU4h.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_21jCVrcLzykPU4h"
+            },
+            "metrics": {
+                "length_in_chars": 229,
+                "length_in_words": 44,
+                "length_in_unique_words": 36,
+                "length_in_concepts": 24,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.159090909090909,
+                "avg_sentence_length_in_chars": 57.25,
+                "avg_sentence_length_in_words": 11,
+                "avg_sentence_length_in_unique_words": 10.25,
+                "dsi": 0.207085146204285,
+                "surprise": 0.03933430408674574,
+                "raw_surprises": [
+                    0.025729316898754684,
+                    0.01697569489479067,
+                    0.016296444336573263
+                ],
+                "n_gram_diversity": [
+                    0.8181818181818182,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.29545454545454547,
+                    0.6744186046511628,
+                    0.9047619047619048,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.1917372454123814,
+                "max_dependency_path_length": 5,
+                "inv_homogen": 0.21450298897763517,
+                "novelty": 0.015522330232475567,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "semantic_distance": "high",
+            "output": "Of course, I had to comply and enter the church as he had suggested. In it was an enourmous organ, the biggest in the whole empire i was told. I looked at it for a long time, but struggles to find any beauty in it.",
+            "result_id": "R_8DSuE0JfUBgPxHX_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8DSuE0JfUBgPxHX.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8DSuE0JfUBgPxHX"
+            },
+            "metrics": {
+                "length_in_chars": 214,
+                "length_in_words": 45,
+                "length_in_unique_words": 34,
+                "length_in_concepts": 16,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.6444444444444444,
+                "avg_sentence_length_in_chars": 70.66666666666667,
+                "avg_sentence_length_in_words": 15,
+                "avg_sentence_length_in_unique_words": 13.333333333333334,
+                "dsi": 0.20947785178820294,
+                "surprise": 0.03833459218343099,
+                "raw_surprises": [
+                    0.015825760364532482,
+                    0.02250883181889851
+                ],
+                "n_gram_diversity": [
+                    0.7555555555555555,
+                    0.9772727272727273,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.24444444444444444,
+                    0.5909090909090909,
+                    0.8372093023255814,
+                    0.9761904761904762,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.6666666666666665,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.6715398061337994,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.18991301541632793,
+                "novelty": 0.010736919064639694,
+                "theme_uniqueness": 0.5
+            }
+        }
+    ]
+}
