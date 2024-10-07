@@ -5,25 +5,15 @@ from tqdm import tqdm
 
 from utils import read_json, find_files
 
-def get_participant_id(sample):
-    return sample["metadata"].get("participant_id", sample["result_id"].rsplit("_", 1)[0])
-
 def export_metrics(results):
     export_data = []
 
     for sample in tqdm(results["data"], total=len(results["data"]), desc="Exporting metrics"):
         if "metrics" in sample:
-            id_value = None
-
-            if sample["metadata"]["model"] == "human":
-                id_value = f"human_{get_participant_id(sample)}"
-            else:
-                id_value = f"{sample['metadata']['model']}_t{sample['metadata']['model_args']['temperature']}_p{sample['metadata']['model_args']['top_p']}"
-            
             export_data.append({
                 "result_id": sample["result_id"],
-                "model_id": id_value,
-                "item_id": sample["id"],
+                "group_id": results["metadata"]["group_id"],
+                "group_by": results["metadata"]["config"]["group_by"],
                 **{f"metric_{metric_name}": metric_value for metric_name, metric_value in sample["metrics"].items() if not isinstance(metric_value, dict)}
             })
     
@@ -31,13 +21,10 @@ def export_metrics(results):
 
 def export_global_metrics(results):
     export_data = []
-    sample = results["data"][0]
-    model_id = sample["metadata"]["model"]
-    group_id = results["metadata"]["group_id"]
 
     export_data.append({
-        "group_id": group_id[-1] if isinstance(group_id, list) else group_id,
-        "model_id": model_id,
+        "group_id": results["metadata"]["group_id"],
+        "group_by": results["metadata"]["config"]["group_by"],
         **{f"metric_{metric_name}": metric_value for metric_name, metric_value in results["metrics"].items() if not isinstance(metric_value, dict)}
     })
 
