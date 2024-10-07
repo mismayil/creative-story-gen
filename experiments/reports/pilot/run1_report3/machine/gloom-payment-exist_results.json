@@ -1,0 +1,3365 @@
+{
+    "metadata": {
+        "group_id": [
+            "machine",
+            "gloom-payment-exist"
+        ],
+        "config": {
+            "results_paths": [
+                "../experiments/outputs/human/pilot/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p1/run1"
+            ],
+            "report_usage": true,
+            "spacy_lang": "en_core_web_sm",
+            "max_n_gram": 5,
+            "output_dir": "../experiments/reports/pilot/run1_report3",
+            "config": "../experiments/reports/pilot/run1_report3/config.json",
+            "num_samples": 48,
+            "deduplicate": true,
+            "deduplicate_by": "output",
+            "max_frequency": 10,
+            "group_by": [
+                "sentience",
+                "id"
+            ],
+            "emb_model": "thenlper/gte-large",
+            "emb_type": "sentence_embedding",
+            "emb_strategy": "direct",
+            "distance_fn": "cosine",
+            "lower": true,
+            "remove_punct": true,
+            "remove_stopwords": true,
+            "lemmatize": true,
+            "dominant_k": null,
+            "unique": true,
+            "cluster_linkage": "ward",
+            "cluster_dist_threshold": 0.5
+        }
+    },
+    "metrics": {
+        "num_samples": 45,
+        "avg_length_in_chars": 646.8222222222222,
+        "avg_length_in_words": 110.82222222222222,
+        "avg_length_in_unique_words": 79.44444444444444,
+        "avg_length_in_concepts": 54.31111111111111,
+        "avg_length_in_sentences": 4.555555555555555,
+        "avg_word_length_in_chars": 4.696464341913513,
+        "avg_sentence_length_in_chars": 140.40851851851852,
+        "avg_sentence_length_in_words": 24.175925925925927,
+        "avg_sentence_length_in_unique_words": 21.55925925925926,
+        "avg_dsi": 0.21397619706355875,
+        "avg_surprise": 0.013216858105190703,
+        "avg_n_gram_diversity": [
+            0.7253166965236116,
+            0.9820795192093565,
+            0.9995203179561614,
+            1.0,
+            1.0
+        ],
+        "avg_pos_diversity": [
+            0.11278522612140425,
+            0.40635107429844447,
+            0.7076415910495546,
+            0.8790013889976459,
+            0.9551207804985264
+        ],
+        "avg_dependency_num_clauses": 3.242962962962963,
+        "avg_max_dependency_num_clauses": 5.2444444444444445,
+        "avg_dependency_path_length": 3.3310476642659252,
+        "avg_max_dependency_path_length": 9.688888888888888,
+        "avg_inv_homogen": 0.1280271155063552,
+        "avg_novelty": 0.005705125179086115,
+        "avg_theme_uniqueness": 0.24444444444444444,
+        "corpus_dsi": 0.216635196295983,
+        "corpus_n_gram_diversity": [
+            0.2478443954281131,
+            0.653830726032892,
+            0.8254764292878636,
+            0.872792937399679,
+            0.894441099739113
+        ],
+        "corpus_pos_diversity": [
+            0.00300782033286545,
+            0.029281989570798236,
+            0.1275827482447342,
+            0.3093900481540931,
+            0.5075255869957856
+        ],
+        "num_unique_stories": 45,
+        "top_10_n_grams": {
+            "1-gram": {
+                "the": 369,
+                "a": 283,
+                "of": 226,
+                "in": 117,
+                "to": 104,
+                "her": 95,
+                "and": 74,
+                "she": 62,
+                "gloom": 59,
+                "that": 55
+            },
+            "2-gram": {
+                "in the": 39,
+                "in a": 28,
+                "of the": 27,
+                "a world": 25,
+                "world where": 21,
+                "the city": 19,
+                "of a": 16,
+                "shrouded in": 16,
+                "of joy": 16,
+                "a peculiar": 15
+            },
+            "3-gram": {
+                "a world where": 21,
+                "in a world": 18,
+                "world where emotions": 15,
+                "where emotions were": 15,
+                "currency zara found": 14,
+                "zara found herself": 14,
+                "found herself bankrupt": 13,
+                "herself bankrupt of": 13,
+                "bankrupt of joy": 13,
+                "of joy her": 13
+            },
+            "4-gram": {
+                "in a world where": 16,
+                "a world where emotions": 15,
+                "world where emotions were": 15,
+                "currency zara found herself": 14,
+                "zara found herself bankrupt": 13,
+                "found herself bankrupt of": 13,
+                "herself bankrupt of joy": 13,
+                "bankrupt of joy her": 13,
+                "of joy her soul": 13,
+                "where emotions were currency": 12
+            },
+            "5-gram": {
+                "a world where emotions were": 15,
+                "in a world where emotions": 14,
+                "currency zara found herself bankrupt": 13,
+                "zara found herself bankrupt of": 13,
+                "found herself bankrupt of joy": 13,
+                "herself bankrupt of joy her": 13,
+                "bankrupt of joy her soul": 13,
+                "world where emotions were currency": 12,
+                "where emotions were currency zara": 11,
+                "emotions were currency zara found": 11
+            }
+        },
+        "usage": {
+            "input_tokens": 4395,
+            "output_tokens": 5139,
+            "total_tokens": 9534
+        },
+        "cost": {
+            "input": 0.07271999999999995,
+            "output": 0.19746000000000005,
+            "total": 0.2701800000000001
+        }
+    },
+    "data": [
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the twilight realm of Shadowmere, where the sun's rays scarcely penetrated the perpetual gloom, a peculiar little shop perched on the edge of nonexistence. Its keeper, a spectral figure known only as the Weaver, toiled under the dim glow of a single flickering candle, crafting realities from the threads of dreams and the whispers of the void. Adventurers from realms near and distant sought the Weaver's unique services, for the payment he demanded was neither gold nor silver, but memories\u2014lustrous and dark\u2014plucked from the depths of one's soul. On an eve shrouded in mist, a cloaked figure approached the shop, offering a memory so profound that its echo threatened to unravel the very fabric of Shadowmere. As the Weaver wove the memory into being, a new star ignited in the heavens, a silent testament to the existence of a new world, birthed from the trade of intangible currency.",
+            "usage": {
+                "output_tokens": 190,
+                "input_tokens": 147,
+                "total_tokens": 337
+            },
+            "result_id": "9f48f6fed678",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.7_p0.9/run1/pilot_data_eval_default_gpt-4_727bf3faf6f6.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 891,
+                "length_in_words": 154,
+                "length_in_unique_words": 101,
+                "length_in_concepts": 72,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.701298701298701,
+                "avg_sentence_length_in_chars": 177.4,
+                "avg_sentence_length_in_words": 30.8,
+                "avg_sentence_length_in_unique_words": 25.6,
+                "dsi": 0.21560362564379434,
+                "surprise": 0.013419916274166901,
+                "n_gram_diversity": [
+                    0.6558441558441559,
+                    0.9411764705882353,
+                    0.993421052631579,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07792207792207792,
+                    0.3202614379084967,
+                    0.5986842105263158,
+                    0.7814569536423841,
+                    0.9066666666666666
+                ],
+                "avg_dependency_num_clauses": 5,
+                "max_dependency_num_clauses": 11,
+                "avg_dependency_path_length": 3.8574504617722702,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.1324108378453688,
+                "novelty": 0.0020631413043772917,
+                "theme_uniqueness": 0.16666666666666666
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the heart of an ancient library, where the dust of forgotten lore mingled with the gloom of the endless shelves, there resided a peculiar tome that was said to challenge the very fabric of reality. Its pages were not filled with words, but with the music of the cosmos, a symphony that could alter the essence of existence itself. The price for such knowledge was not a mere payment of coin or barter, but the offering of one's own shadow, a sliver of darkness to feed the insatiable hunger of the book. As the last note quivered in the air, the scholar who dared this exchange found himself in a world where shadows roamed free and humans were but ephemeral whispers, clinging to the belief that they, too, once existed. And in the library's eternal twilight, the book hummed with satisfaction, its pages ready to compose another reality-bending tale.",
+            "usage": {
+                "output_tokens": 183,
+                "input_tokens": 147,
+                "total_tokens": 330
+            },
+            "result_id": "7e8a6a06994c",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.5_p0.7/run1/pilot_data_eval_default_gpt-4_422f0b33f276.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 855,
+                "length_in_words": 153,
+                "length_in_unique_words": 99,
+                "length_in_concepts": 64,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.496732026143791,
+                "avg_sentence_length_in_chars": 170.2,
+                "avg_sentence_length_in_words": 30.6,
+                "avg_sentence_length_in_unique_words": 26,
+                "dsi": 0.21457505915018302,
+                "surprise": 0.009915146334240121,
+                "n_gram_diversity": [
+                    0.6470588235294118,
+                    0.9539473684210527,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0718954248366013,
+                    0.3157894736842105,
+                    0.5629139072847682,
+                    0.78,
+                    0.912751677852349
+                ],
+                "avg_dependency_num_clauses": 4.4,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.483358793576185,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.1417448425834829,
+                "novelty": 0.004120274291599946,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "",
+            "usage": null,
+            "result_id": "2c5c28470249",
+            "exception": "Finish reason: FinishReason.SAFETY",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.95/run1/pilot_data_eval_default_gemini-1.5-flash_0650750514f6.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were traded as currency, Zara found herself desperately short on joy. She trudged through the neon-lit streets, her pockets heavy with an excess of gloom she couldn't seem to shake. At the Feeling Exchange, she approached the teller, hoping to make a payment and balance her emotional ledger. \"I'm sorry,\" the teller said, peering at Zara's aura through specialized goggles, \"but your gloom is so potent, it's causing nearby emotions to cease to exist.\" Dejected, Zara left the Exchange, unaware that her unique brand of melancholy would soon make her the most sought-after emotion harvester in the city.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 158
+            },
+            "result_id": "44e13ca6a53d",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.9/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_e38640abdf3f.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 630,
+                "length_in_words": 109,
+                "length_in_unique_words": 82,
+                "length_in_concepts": 48,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.651376146788991,
+                "avg_sentence_length_in_chars": 125.2,
+                "avg_sentence_length_in_words": 21.8,
+                "avg_sentence_length_in_unique_words": 20.4,
+                "dsi": 0.2158205637589414,
+                "surprise": 0.012136286586268336,
+                "n_gram_diversity": [
+                    0.7522935779816514,
+                    0.9907407407407407,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11009174311926606,
+                    0.49074074074074076,
+                    0.8691588785046729,
+                    0.9905660377358491,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 2.8748124655267513,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.12173022329807281,
+                "novelty": 0.0016292650740831749,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the heart of an ancient, whispering forest, a peculiar market thrived, shrouded in perpetual gloom, where shadows bartered secrets and the currency was silence. A young girl, with eyes like the clearest summer sky, wandered into this enigma, her heartbeats echoing louder than the hushed murmurs of the ethereal patrons. She sought the legendary Merchant of Existence, a being rumored to trade in the essence of reality itself, to retrieve the lost laughter of her ailing village. Upon finding the Merchant, a specter draped in twilight, she offered a payment of three melodies that could turn the sorrow of the stars into joy. The Merchant, moved by the purity of her offering, plucked a single, glowing thread from the tapestry of creation and handed it to her, restoring the vibrancy of life where despair had once taken root.",
+            "usage": {
+                "output_tokens": 178,
+                "input_tokens": 147,
+                "total_tokens": 325
+            },
+            "result_id": "8601c1c66d35",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.5_p0.9/run1/pilot_data_eval_default_gpt-4_30c21f20976d.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 832,
+                "length_in_words": 139,
+                "length_in_unique_words": 97,
+                "length_in_concepts": 71,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.848920863309353,
+                "avg_sentence_length_in_chars": 165.6,
+                "avg_sentence_length_in_words": 27.8,
+                "avg_sentence_length_in_unique_words": 24,
+                "dsi": 0.2155481503283234,
+                "surprise": 0.011148392409845151,
+                "n_gram_diversity": [
+                    0.697841726618705,
+                    0.9710144927536232,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09352517985611511,
+                    0.34782608695652173,
+                    0.6715328467153284,
+                    0.8382352941176471,
+                    0.9555555555555556
+                ],
+                "avg_dependency_num_clauses": 3.4,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.827087360726705,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.1170988299629905,
+                "novelty": 0.0021740919353192,
+                "theme_uniqueness": 0.16666666666666666
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The city, shrouded in perpetual gloom, pulsed with a rhythm only the rats could decipher.  Payment for their services came in the form of discarded scraps, a morbid currency in this decaying world.  Yet, they existed, a testament to resilience, their tiny claws scratching at the edges of oblivion.",
+            "usage": null,
+            "result_id": "02e4f932a2b7",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.95/run1/pilot_data_eval_default_gemini-1.5-flash_74c2bbd0c32c.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 298,
+                "length_in_words": 51,
+                "length_in_unique_words": 41,
+                "length_in_concepts": 27,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.7254901960784315,
+                "avg_sentence_length_in_chars": 99.33333333333333,
+                "avg_sentence_length_in_words": 17,
+                "avg_sentence_length_in_unique_words": 16.333333333333332,
+                "dsi": 0.21490705064219287,
+                "surprise": 0.008958040850847115,
+                "n_gram_diversity": [
+                    0.803921568627451,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.19607843137254902,
+                    0.58,
+                    0.7755102040816326,
+                    0.8541666666666666,
+                    0.9148936170212766
+                ],
+                "avg_dependency_num_clauses": 1.3333333333333333,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 3.051570197044335,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.15042276274074207,
+                "novelty": 0.0034562913075802393,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were traded as currency, Zara found herself bankrupt of joy, her soul shrouded in gloom. Desperate to feel again, she ventured into the shadowy underbelly of the city, seeking a dealer who could provide her with a hit of happiness. The payment required was steep: a memory of her first love, extracted painfully from her mind. As the syringe of golden liquid pierced her skin, Zara wondered if she would still exist as herself once the transaction was complete. The warmth flooded her veins, and for a moment, she forgot why she had ever been sad in the first place.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 142
+            },
+            "result_id": "1b57b1891652",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.95/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_18c4cbe40c73.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 592,
+                "length_in_words": 105,
+                "length_in_unique_words": 75,
+                "length_in_concepts": 46,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.514285714285714,
+                "avg_sentence_length_in_chars": 117.6,
+                "avg_sentence_length_in_words": 21,
+                "avg_sentence_length_in_unique_words": 19.2,
+                "dsi": 0.2146006439043128,
+                "surprise": 0.017647797084301933,
+                "n_gram_diversity": [
+                    0.7142857142857143,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11428571428571428,
+                    0.4230769230769231,
+                    0.7961165048543689,
+                    0.9509803921568627,
+                    0.9900990099009901
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.8404191545623965,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.11180454898964275,
+                "novelty": 0.004069104783340383,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "Deep within the cobwebbed corners of an ancient library, there existed a peculiar little book, its pages yellowed with the secrets of eons. On a stormy evening, a flicker of candlelight cut through the gloom, as a young scholar, Rosalind, stumbled upon the arcane tome. The book beckoned, its title \"The Atlas of Forgotten Dreams,\" promising knowledge of worlds that defy imagination.\n\nWith trembling fingers, Rosalind opened the cover, unwittingly making the ultimate payment: her own shadow, which peeled away from her feet and bled into the book's spine. As her silhouette fused with the tome, the library's aisles expanded infinitely, revealing paths to realms unseen, and Rosalind, now the Atlas's keeper, smiled, for she had longed not for ordinary existence, but for an adventure among the endless shelves of the impossible.",
+            "usage": {
+                "output_tokens": 179,
+                "input_tokens": 147,
+                "total_tokens": 326
+            },
+            "result_id": "9b53d13cbdc3",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp1_p0.95/run1/pilot_data_eval_default_gpt-4_8843a274788c.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 831,
+                "length_in_words": 136,
+                "length_in_unique_words": 96,
+                "length_in_concepts": 68,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.963235294117647,
+                "avg_sentence_length_in_chars": 165.6,
+                "avg_sentence_length_in_words": 27.2,
+                "avg_sentence_length_in_unique_words": 23.8,
+                "dsi": 0.2122414021820641,
+                "surprise": 0.010894959521936726,
+                "n_gram_diversity": [
+                    0.7058823529411765,
+                    0.9703703703703703,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09558823529411764,
+                    0.362962962962963,
+                    0.6492537313432836,
+                    0.7969924812030075,
+                    0.9015151515151515
+                ],
+                "avg_dependency_num_clauses": 2.4,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.3406127248690254,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.15520686588504098,
+                "novelty": 0.008787588227837762,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were currency, Zara found herself bankrupt of joy, her soul's account overdrawn with gloom. She wandered the neon-lit streets of New Sentiment, searching for a way to replenish her depleted reserves of happiness. At the corner of Bliss Avenue and Euphoria Lane, she stumbled upon a peculiar vending machine that promised to dispense existence itself. With trembling fingers, Zara inserted her last remaining fragment of hope as payment, watching anxiously as the machine whirred and clicked. To her amazement, a small, glowing orb emerged \u2013 a concentrated dose of pure, unadulterated existence \u2013 and as she cradled it in her palms, she felt the weight of gloom lifting, replaced by the simple yet profound joy of being alive.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 180
+            },
+            "result_id": "8640f6f7f96a",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p1/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_7a1730e5fbf2.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 751,
+                "length_in_words": 123,
+                "length_in_unique_words": 88,
+                "length_in_concepts": 64,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.959349593495935,
+                "avg_sentence_length_in_chars": 149.4,
+                "avg_sentence_length_in_words": 24.6,
+                "avg_sentence_length_in_unique_words": 23,
+                "dsi": 0.21533680488429371,
+                "surprise": 0.009704876145520985,
+                "n_gram_diversity": [
+                    0.7154471544715447,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0975609756097561,
+                    0.4344262295081967,
+                    0.7933884297520661,
+                    0.9416666666666667,
+                    0.9747899159663865
+                ],
+                "avg_dependency_num_clauses": 3.4,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.0874175006599947,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.11579773236404765,
+                "novelty": 0.0025967828233785517,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the quaint village of Ethermore, where shadows danced with the ethereal mist, a peculiar shop perched on the corner of Nonexist and Reality Street traded in the currency of gloom. Each morning, villagers would gather, clutching jars pulsating with blue-grey wisps, the essence of their nocturnal sorrows. The enigmatic shopkeeper, a being neither old nor young, would accept these containers, her eyes shimmering with a thousand silent stories, and in exchange, she handed out tiny, luminescent orbs, the light of forgotten daydreams. One day, a skeptical outsider challenged the practice, declaring such transactions of emotion were mere fantasy and did not exist. The villagers merely smiled, for they knew the truth: in Ethermore, it was not the payment that sustained their existence, but the belief in the magic that swirled within it.",
+            "usage": {
+                "output_tokens": 177,
+                "input_tokens": 147,
+                "total_tokens": 324
+            },
+            "result_id": "eefc04d28abe",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.9_p0.9/run1/pilot_data_eval_default_gpt-4_9314e0124df4.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 843,
+                "length_in_words": 134,
+                "length_in_unique_words": 99,
+                "length_in_concepts": 69,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 5.126865671641791,
+                "avg_sentence_length_in_chars": 167.8,
+                "avg_sentence_length_in_words": 26.8,
+                "avg_sentence_length_in_unique_words": 23.8,
+                "dsi": 0.21493287533140548,
+                "surprise": 0.005009521736179787,
+                "n_gram_diversity": [
+                    0.7388059701492538,
+                    0.9849624060150376,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09701492537313433,
+                    0.41353383458646614,
+                    0.7045454545454546,
+                    0.9007633587786259,
+                    0.9769230769230769
+                ],
+                "avg_dependency_num_clauses": 4.4,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.488723723723724,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.11746363341808319,
+                "novelty": 0.0034046419291550167,
+                "theme_uniqueness": 0.16666666666666666
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The city, shrouded in a perpetual gloom, pulsed with the rhythm of unseen machinery.  A lone figure, his face obscured by a tattered hood, shuffled through the deserted streets, his eyes searching for a glimmer of light, a sign of life. He held out a hand, a weathered, calloused hand, and a single coin clinked into his palm, the sound echoing in the silence.  It wasn't much, but it was enough to buy him a moment of warmth, a fleeting respite from the cold, hard reality that he was forced to exist in.",
+            "usage": null,
+            "result_id": "20c9e06234b2",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.95/run1/pilot_data_eval_default_gemini-1.5-flash_58a58172956e.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 505,
+                "length_in_words": 96,
+                "length_in_unique_words": 68,
+                "length_in_concepts": 45,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.125,
+                "avg_sentence_length_in_chars": 126,
+                "avg_sentence_length_in_words": 24,
+                "avg_sentence_length_in_unique_words": 20.25,
+                "dsi": 0.21135797030998,
+                "surprise": 0.008842128294485588,
+                "n_gram_diversity": [
+                    0.7083333333333334,
+                    0.9894736842105263,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11458333333333333,
+                    0.37894736842105264,
+                    0.6170212765957447,
+                    0.7311827956989247,
+                    0.8152173913043478
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.1180124223602483,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.1207228885455565,
+                "novelty": 0.010554451972005996,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the village of Vailmar, where the sun seldom pierced the eternal gloom, a peculiar shop existed, rumored to sell the intangible. Its enigmatic owner, a man known only as Mr. Lumis, offered a most unusual payment system; customers could purchase daylight, laughter, or even a moment of serenity, with memories rather than coin. On a particularly dreary afternoon, young Elara, weary of the somber shadows, timidly handed over a memory of her first heartbreak, the bitter sweetness of it enveloping her as she did. In exchange, she received a single, radiant orb\u2014a bottled sunset\u2014that cast a warm, amber glow throughout her home, the shadows retreating as if afraid. And for the first time in years, the people of Vailmar gathered, basking in the glow that defied their perennial twilight, wondering if perhaps joy could exist even amidst the persistent dusk.",
+            "usage": {
+                "output_tokens": 187,
+                "input_tokens": 147,
+                "total_tokens": 334
+            },
+            "result_id": "28459521febf",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.9_p0.7/run1/pilot_data_eval_default_gpt-4_e1ece4e70652.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 860,
+                "length_in_words": 143,
+                "length_in_unique_words": 104,
+                "length_in_concepts": 72,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.846153846153846,
+                "avg_sentence_length_in_chars": 171.2,
+                "avg_sentence_length_in_words": 28.6,
+                "avg_sentence_length_in_unique_words": 25.4,
+                "dsi": 0.21436248239310507,
+                "surprise": 0.005541041678998063,
+                "n_gram_diversity": [
+                    0.7272727272727273,
+                    0.9859154929577465,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08391608391608392,
+                    0.3732394366197183,
+                    0.6737588652482269,
+                    0.8928571428571429,
+                    0.9856115107913669
+                ],
+                "avg_dependency_num_clauses": 4,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.4195421249018065,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.11998164653778076,
+                "novelty": 0.004545427805755842,
+                "theme_uniqueness": 0.16666666666666666
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the heart of an ancient library, a peculiar book whispered tales of a world where shadows held dominion, a place known only as Gloom. Its pages detailed an unusual economy where light, not gold, was the currency, and each beam of sunshine was a cherished payment for the darkness endured. A young scholar, entranced by the notion, devised an audacious experiment to breach the boundaries of reality, seeking to prove that Gloom did indeed exist. On the eve of the equinox, she chanted incantations from the tome, her voice steady, as the room dimmed and reality wavered like a mirage. As the final syllable escaped her lips, a single ray of moonlight pierced the room, casting silver coins upon the floor, and the scholar realized she had opened a door to Gloom, where every shadow was an echo of her own world.",
+            "usage": {
+                "output_tokens": 179,
+                "input_tokens": 147,
+                "total_tokens": 326
+            },
+            "result_id": "860d7ca78978",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.7_p0.7/run1/pilot_data_eval_default_gpt-4_17b19d4cf18b.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 814,
+                "length_in_words": 143,
+                "length_in_unique_words": 96,
+                "length_in_concepts": 68,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.559440559440559,
+                "avg_sentence_length_in_chars": 162,
+                "avg_sentence_length_in_words": 28.6,
+                "avg_sentence_length_in_unique_words": 25.4,
+                "dsi": 0.21602477432867223,
+                "surprise": 0.0067301816337711345,
+                "n_gram_diversity": [
+                    0.6713286713286714,
+                    0.9859154929577465,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08391608391608392,
+                    0.33098591549295775,
+                    0.574468085106383,
+                    0.8071428571428572,
+                    0.935251798561151
+                ],
+                "avg_dependency_num_clauses": 4,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.1687567643544874,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.12205433303659613,
+                "novelty": 0.0012208439346215183,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were currency, Zara found herself bankrupt of joy, her soul overdrawn on gloom. She wandered the neon-lit streets of New Sentiment, desperate to make a payment on her happiness debt before the Feeling Collectors came to repossess her ability to smile. As she passed a dimly lit alley, a shadowy figure whispered, \"Psst, wanna buy some existence?\" Intrigued, Zara approached, only to discover a peculiar vending machine that dispensed tiny vials labeled \"Reasons to Exist.\" With trembling hands, she inserted her last gloom coin, and out popped a shimmering vial of purpose\u2014a small but potent antidote to her emotional insolvency.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 169
+            },
+            "result_id": "f3e01c6f125b",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.7/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_b1e4ac4d673c.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 655,
+                "length_in_words": 107,
+                "length_in_unique_words": 83,
+                "length_in_concepts": 60,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.953271028037383,
+                "avg_sentence_length_in_chars": 163,
+                "avg_sentence_length_in_words": 26.75,
+                "avg_sentence_length_in_unique_words": 24.5,
+                "dsi": 0.21556846630775323,
+                "surprise": 0.011862251737311794,
+                "n_gram_diversity": [
+                    0.7757009345794392,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11214953271028037,
+                    0.44339622641509435,
+                    0.7904761904761904,
+                    0.9807692307692307,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4.75,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.203880070546737,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.11184552853757684,
+                "novelty": 0.0021334599764595286,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The gloom of the abandoned factory clung to him like a shroud, a tangible weight pressing down on his chest. He reached out, a trembling hand tracing the rusted metal of a giant, forgotten wheel, the only evidence of a world that once existed. His payment, a single, silver coin, felt cold and heavy in his palm, a reminder of the price he'd paid for this glimpse of the past.",
+            "usage": null,
+            "result_id": "b58863463d7e",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.95/run1/pilot_data_eval_default_gemini-1.5-flash_1da2e15ed369.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 376,
+                "length_in_words": 71,
+                "length_in_unique_words": 53,
+                "length_in_concepts": 35,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.169014084507042,
+                "avg_sentence_length_in_chars": 124.66666666666667,
+                "avg_sentence_length_in_words": 23.666666666666668,
+                "avg_sentence_length_in_unique_words": 20.333333333333332,
+                "dsi": 0.21423945446976092,
+                "surprise": 0.010275795067014287,
+                "n_gram_diversity": [
+                    0.7464788732394366,
+                    0.9571428571428572,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1267605633802817,
+                    0.4142857142857143,
+                    0.6956521739130435,
+                    0.8970588235294118,
+                    0.9701492537313433
+                ],
+                "avg_dependency_num_clauses": 2.3333333333333335,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.2638157894736843,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.12690651416778564,
+                "novelty": 0.0047914836524441395,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the heart of an ancient library, there existed a peculiar tome that whispered secrets of a forgotten realm\u2014a place where shadows danced in eternal gloom, untouched by the sun's caress. The book's keeper, a wizened old man with eyes like smoldering coals, demanded no coin for payment but a memory, ripe with emotion, to be sealed within the parchment's fibers. An intrepid young scholar, driven by insatiable curiosity, offered the laughter of her childhood, a sound she feared might be swallowed by the encroaching silence of her solitary studies. As the memory seeped from her grasp and into the book, the pages fluttered to life, and the library was filled with the echoes of her joy, a stark contrast to the dreary stillness. In that moment, the scholar learned that even in places where light dared not tread, life\u2014vibrant and defiant\u2014could still exist, sustained by the essence of what once was.",
+            "usage": {
+                "output_tokens": 199,
+                "input_tokens": 147,
+                "total_tokens": 346
+            },
+            "result_id": "fd61bce92b42",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.5_p0.95/run1/pilot_data_eval_default_gpt-4_57818653d101.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 904,
+                "length_in_words": 158,
+                "length_in_unique_words": 106,
+                "length_in_concepts": 73,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.620253164556962,
+                "avg_sentence_length_in_chars": 180,
+                "avg_sentence_length_in_words": 31.6,
+                "avg_sentence_length_in_unique_words": 26.8,
+                "dsi": 0.21677860372687038,
+                "surprise": 0.014859995472934637,
+                "n_gram_diversity": [
+                    0.6708860759493671,
+                    0.9681528662420382,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.06962025316455696,
+                    0.31210191082802546,
+                    0.5769230769230769,
+                    0.7741935483870968,
+                    0.8831168831168831
+                ],
+                "avg_dependency_num_clauses": 3.8,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.8828794522852537,
+                "max_dependency_path_length": 12,
+                "inv_homogen": 0.13760423931208524,
+                "novelty": 0.00028681486177478677,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were currency, Zara found herself bankrupt of joy, her soul overdrawn on gloom. She trudged through the neon-lit streets of Neo Tokyo, searching for the elusive Happiness Bank to make a deposit of laughter she'd been saving for months. As she approached the shimmering holographic building, a glitch in the matrix caused it to flicker and vanish, leaving her to question if true happiness could even exist in this dystopian realm. Desperate, Zara closed her eyes and imagined a warm smile, feeling a small spark ignite within her chest - perhaps this could be the payment to clear her emotional debt. When she opened her eyes, the world around her seemed a little brighter, and she realized that sometimes the most valuable currency is the hope we create for ourselves.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 179
+            },
+            "result_id": "bf4ab279e829",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.7/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_58ad85a45e15.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 795,
+                "length_in_words": 136,
+                "length_in_unique_words": 96,
+                "length_in_concepts": 61,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.742647058823529,
+                "avg_sentence_length_in_chars": 158.2,
+                "avg_sentence_length_in_words": 27.2,
+                "avg_sentence_length_in_unique_words": 24.4,
+                "dsi": 0.21449742226001342,
+                "surprise": 0.009968470668326929,
+                "n_gram_diversity": [
+                    0.7058823529411765,
+                    0.9925925925925926,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08823529411764706,
+                    0.4222222222222222,
+                    0.7761194029850746,
+                    0.9473684210526315,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4.8,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.0266415549517296,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.11870014532045885,
+                "novelty": 0.004275548071939139,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The old man, hunched over a dusty workbench, meticulously crafted gears from scrap metal. Each one, a perfect echo of the gears that once powered the world, but now lay buried in the gloom of forgotten factories. He was a relic himself, a living testament to the era of progress, a time before the machines learned to exist without human hands. His payment for this devotion was not gold or fame, but the quiet satisfaction of keeping the forgotten gears alive, one cog at a time.",
+            "usage": null,
+            "result_id": "0e3b04076ef1",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p1/run1/pilot_data_eval_default_gemini-1.5-flash_935781bf9c2a.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 480,
+                "length_in_words": 86,
+                "length_in_unique_words": 63,
+                "length_in_concepts": 39,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.453488372093023,
+                "avg_sentence_length_in_chars": 119.25,
+                "avg_sentence_length_in_words": 21.5,
+                "avg_sentence_length_in_unique_words": 19.5,
+                "dsi": 0.21443252862706358,
+                "surprise": 0.028928068350461206,
+                "n_gram_diversity": [
+                    0.7325581395348837,
+                    0.9882352941176471,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13953488372093023,
+                    0.4470588235294118,
+                    0.7738095238095238,
+                    0.9397590361445783,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.75,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.0594759867406722,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.17104637893763455,
+                "novelty": 0.004405335337838823,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were currency, Zara found herself bankrupt of joy, her soul shrouded in gloom. She wandered the neon-lit streets of Neo-Tokyo, searching for a happiness dealer who would accept her last remaining payment of melancholy. As she turned a corner, she stumbled upon a hidden alleyway where a mysterious vendor's sign read: \"Trade your darkness for a chance to truly exist.\" Intrigued, Zara approached the booth and offered her gloom to the hooded figure behind the counter. In exchange, she received a small, glowing orb that pulsed with the promise of a life lived in vibrant color, free from the shackles of emotional debt.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 157
+            },
+            "result_id": "4446bc02bb97",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.95/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_4c382603722b.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 646,
+                "length_in_words": 111,
+                "length_in_unique_words": 82,
+                "length_in_concepts": 59,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.693693693693693,
+                "avg_sentence_length_in_chars": 128.4,
+                "avg_sentence_length_in_words": 22.2,
+                "avg_sentence_length_in_unique_words": 19.8,
+                "dsi": 0.21522031319482782,
+                "surprise": 0.021564880595684635,
+                "n_gram_diversity": [
+                    0.7387387387387387,
+                    0.990909090909091,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10810810810810811,
+                    0.37272727272727274,
+                    0.7155963302752294,
+                    0.8981481481481481,
+                    0.9813084112149533
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.6977291209739027,
+                "max_dependency_path_length": 14,
+                "inv_homogen": 0.10740983486175537,
+                "novelty": 0.0028297662023103465,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The gloom of the abandoned factory pressed down, a heavy weight on the rusted machinery and cracked concrete. Inside, a lone figure, shrouded in shadow, worked tirelessly, each swing of his hammer a defiant act against the encroaching darkness.  His payment wasn't money, but the satisfaction of knowing his creation, a magnificent automaton forged from salvaged parts, would exist long after the factory fell silent.",
+            "usage": null,
+            "result_id": "8306d03f6036",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.9/run1/pilot_data_eval_default_gemini-1.5-flash_6124dc8d83fe.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 417,
+                "length_in_words": 67,
+                "length_in_unique_words": 54,
+                "length_in_concepts": 38,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 5.104477611940299,
+                "avg_sentence_length_in_chars": 138.66666666666666,
+                "avg_sentence_length_in_words": 22.333333333333332,
+                "avg_sentence_length_in_unique_words": 20.666666666666668,
+                "dsi": 0.21495095747463394,
+                "surprise": 0.005155965099986781,
+                "n_gram_diversity": [
+                    0.8059701492537313,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1791044776119403,
+                    0.45454545454545453,
+                    0.7384615384615385,
+                    0.84375,
+                    0.9047619047619048
+                ],
+                "avg_dependency_num_clauses": 2.6666666666666665,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.894000322997416,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.1544011736457998,
+                "novelty": 0.003368477642698098,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the quaint village of Verdure, the townsfolk whispered of the Gloom - a sentient shadow that traded in the currency of colors. Legend held that with the correct payment, one could extract from the Gloom a single day of existence beyond their destined time. Desperate to witness the birth of his first grandchild, old Mr. Wimbley presented a jar of iridescent blues\u2014his eyesight's very essence\u2014to the inky silhouette beneath the willow tree. As dawn broke, Mr. Wimbley beheld his newborn granddaughter with milky eyes, his heart swelling with joy in a world now painted in shades of gray. Yet in her vibrant cries, he recognized the spectrum of colors he had sacrificed, understanding that life's truest hues were not to be seen, but to be felt.",
+            "usage": {
+                "output_tokens": 167,
+                "input_tokens": 147,
+                "total_tokens": 314
+            },
+            "result_id": "738fa2068ada",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.9_p1/run1/pilot_data_eval_default_gpt-4_aa6e638c96ba.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 747,
+                "length_in_words": 130,
+                "length_in_unique_words": 90,
+                "length_in_concepts": 64,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.653846153846154,
+                "avg_sentence_length_in_chars": 148.6,
+                "avg_sentence_length_in_words": 26,
+                "avg_sentence_length_in_unique_words": 22.4,
+                "dsi": 0.2140932289499139,
+                "surprise": 0.02434268222985632,
+                "n_gram_diversity": [
+                    0.6923076923076923,
+                    0.9534883720930233,
+                    0.9921875,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09230769230769231,
+                    0.37209302325581395,
+                    0.640625,
+                    0.8818897637795275,
+                    0.9841269841269841
+                ],
+                "avg_dependency_num_clauses": 2.8,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.2410142187561544,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.1374568519267169,
+                "novelty": 0.005083934692138192,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The gloom clung to the city like a shroud, suffocating even the brightest streetlights.  A lone figure, cloaked in shadow, approached the rusted iron gate, a single, tarnished coin clutched in his hand.  He slipped it through the bars, a silent payment to the ancient entity that guarded the city's secrets.  The gate creaked open, revealing a path into the heart of the city, a place where time and reality blurred, where the forgotten and the unseen could still exist.  He stepped through, the coin a fleeting echo of his courage in a world where darkness held sway.",
+            "usage": null,
+            "result_id": "838a8edbb261",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.7/run1/pilot_data_eval_default_gemini-1.5-flash_25bdcf0a2258.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 568,
+                "length_in_words": 103,
+                "length_in_unique_words": 67,
+                "length_in_concepts": 50,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.427184466019417,
+                "avg_sentence_length_in_chars": 113.6,
+                "avg_sentence_length_in_words": 20.6,
+                "avg_sentence_length_in_unique_words": 17.8,
+                "dsi": 0.20928912435259137,
+                "surprise": 0.011111867238604842,
+                "n_gram_diversity": [
+                    0.6504854368932039,
+                    0.9509803921568627,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1262135922330097,
+                    0.4215686274509804,
+                    0.7029702970297029,
+                    0.88,
+                    0.9494949494949495
+                ],
+                "avg_dependency_num_clauses": 2.2,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.5705973532207356,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.1257730018008839,
+                "novelty": 0.014692143886783249,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were traded as currency, Zara found herself bankrupt of joy, her soul overdrawn on gloom. Desperate for a spark of happiness, she ventured into the shadowy Black Market of Feelings, where forbidden sensations were bought and sold in dimly lit alleys. As she approached a hooded vendor, Zara hesitated, wondering if her last remnants of hope would be enough for the payment required to purchase a sliver of bliss. The merchant, sensing her desperation, leaned in close and whispered, \"Child, true happiness doesn't exist in bottles or vials - it's cultivated within.\" Stunned by this revelation, Zara turned away from the market, realizing that the key to banishing her gloom had been within her all along, waiting to be unlocked by self-discovery and personal growth.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 189
+            },
+            "result_id": "0073db301698",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p1/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_95c03267b04d.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 793,
+                "length_in_words": 132,
+                "length_in_unique_words": 97,
+                "length_in_concepts": 63,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.863636363636363,
+                "avg_sentence_length_in_chars": 157.8,
+                "avg_sentence_length_in_words": 26.4,
+                "avg_sentence_length_in_unique_words": 24.8,
+                "dsi": 0.21542515888375255,
+                "surprise": 0.018772467814790292,
+                "n_gram_diversity": [
+                    0.7348484848484849,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09090909090909091,
+                    0.44274809160305345,
+                    0.8,
+                    0.9612403100775194,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 5.2,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.6120945713675425,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.11465024812655016,
+                "novelty": 0.0024200748244608827,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the heart of an abandoned metropolis, beneath the crumbling facades of skyscrapers strangled by ivy, existed an ancient library untouched by time or decay. Its guardian was a specter of wisdom, bound to the musty tomes and inscriptions of civilizations long forgotten, a living chronicle of histories that refused to be shrouded in the gloom of oblivion. Seekers of knowledge came in hushed whispers, each bearing a unique payment: a memory, a secret, or a dream, currency far richer than gold in these hallowed, dust-laden aisles.\n\nOne day, a child of the wilds, whose voice held the purity of untainted streams, offered a payment unlike any other: a sunrise, captured within an iridescent shell, enchanting the specter with the splendor of a world it could no longer witness. With gratitude beyond words, the guardian shared a story of a dawn before time, when light first learned to dance with shadow, thus illuminating the origins of existence itself in the glow of an immortal dawn.",
+            "usage": {
+                "output_tokens": 218,
+                "input_tokens": 147,
+                "total_tokens": 365
+            },
+            "result_id": "50f929c49d66",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp1_p1/run1/pilot_data_eval_default_gpt-4_f78821f8cef0.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 990,
+                "length_in_words": 167,
+                "length_in_unique_words": 116,
+                "length_in_concepts": 84,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.802395209580839,
+                "avg_sentence_length_in_chars": 197.4,
+                "avg_sentence_length_in_words": 33.4,
+                "avg_sentence_length_in_unique_words": 27.6,
+                "dsi": 0.21415345226288937,
+                "surprise": 0.013362730626847827,
+                "n_gram_diversity": [
+                    0.6946107784431138,
+                    0.9759036144578314,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07784431137724551,
+                    0.25301204819277107,
+                    0.49696969696969695,
+                    0.7195121951219512,
+                    0.8650306748466258
+                ],
+                "avg_dependency_num_clauses": 4.2,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 4.12981049736968,
+                "max_dependency_path_length": 12,
+                "inv_homogen": 0.1346761570735411,
+                "novelty": 0.004963488066187238,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were currency, Zara found herself bankrupt of joy, her soul overdrawn on gloom. She wandered the neon-lit streets of New Sentiment, desperate to make a payment on her happiness debt before the Mood Collectors came to repossess her ability to feel. As she passed a dingy alleyway, a shadowy figure beckoned, offering a chance to exist in a parallel reality where feelings were free. Hesitating only for a moment, Zara reached out and grasped the stranger's hand, feeling a surge of electric possibility course through her veins. In a blinding flash, she vanished from New Sentiment, leaving behind only a faint echo of laughter - the first installment on her new life's emotional wealth.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 171
+            },
+            "result_id": "664ea8326b40",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.7/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_bc11d303440a.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 712,
+                "length_in_words": 121,
+                "length_in_unique_words": 85,
+                "length_in_concepts": 61,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.776859504132231,
+                "avg_sentence_length_in_chars": 141.6,
+                "avg_sentence_length_in_words": 24.2,
+                "avg_sentence_length_in_unique_words": 22.2,
+                "dsi": 0.21354098528460727,
+                "surprise": 0.008168110098594264,
+                "n_gram_diversity": [
+                    0.7024793388429752,
+                    0.9666666666666667,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09917355371900827,
+                    0.4,
+                    0.773109243697479,
+                    0.940677966101695,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.2,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.1580598950164167,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.1157349632544951,
+                "novelty": 0.006188422022751439,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The city, shrouded in a perpetual gloom, was a canvas for the artist's despair.  He painted his loneliness, his fear, his very existence onto the cobblestone streets, each brushstroke a cry for recognition.  But the only payment he received was the echoing silence of the deserted alleyways.  He continued, though, driven by the hope that his art, like a beacon in the darkness, would one day pierce the gloom and find its way to a heart that understood.",
+            "usage": null,
+            "result_id": "201f794332e3",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.9/run1/pilot_data_eval_default_gemini-1.5-flash_c3d67ac2add8.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 454,
+                "length_in_words": 82,
+                "length_in_unique_words": 58,
+                "length_in_concepts": 36,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.439024390243903,
+                "avg_sentence_length_in_chars": 113.5,
+                "avg_sentence_length_in_words": 20.5,
+                "avg_sentence_length_in_unique_words": 18,
+                "dsi": 0.21503060611467514,
+                "surprise": 0.013440208076994049,
+                "n_gram_diversity": [
+                    0.7073170731707317,
+                    0.9876543209876543,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.15853658536585366,
+                    0.4444444444444444,
+                    0.725,
+                    0.9240506329113924,
+                    0.9743589743589743
+                ],
+                "avg_dependency_num_clauses": 2.5,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.5186688311688314,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.14301609044725244,
+                "novelty": 0.0032091803626156934,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The city was a canvas of endless gloom, painted in shades of gray and perpetually shrouded in a thick fog. He, a solitary figure, wandered its desolate streets, his pockets empty, his heart hollow. He'd long since forgotten the days of warmth, of laughter, of a life that truly existed. The only payment he sought now was oblivion, a final surrender to the city's suffocating embrace.",
+            "usage": null,
+            "result_id": "6fca5c44df1e",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p1/run1/pilot_data_eval_default_gemini-1.5-flash_b995ab1f6920.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 384,
+                "length_in_words": 68,
+                "length_in_unique_words": 51,
+                "length_in_concepts": 34,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.514705882352941,
+                "avg_sentence_length_in_chars": 95.25,
+                "avg_sentence_length_in_words": 17,
+                "avg_sentence_length_in_unique_words": 15.25,
+                "dsi": 0.21259542486884378,
+                "surprise": 0.005022340264671299,
+                "n_gram_diversity": [
+                    0.75,
+                    0.9850746268656716,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16176470588235295,
+                    0.5223880597014925,
+                    0.7727272727272727,
+                    0.9384615384615385,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.75,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.296851404409544,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.13022183694622733,
+                "novelty": 0.008079542854278421,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The city, shrouded in perpetual gloom, was a labyrinth of rusted gears and forgotten dreams. The only light came from the flickering neon sign of the \"Existential Emporium,\" where weary souls traded their anxieties for fleeting moments of joy.  A lone figure, clutching a worn leather satchel, approached the shop, his eyes filled with a desperate hope. He stepped inside, his heart pounding, and offered the shopkeeper a single, tarnished coin \u2013 the payment for a chance to believe in something, anything, again.",
+            "usage": null,
+            "result_id": "627df2c4987f",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p1/run1/pilot_data_eval_default_gemini-1.5-flash_759e33067e9d.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 513,
+                "length_in_words": 83,
+                "length_in_unique_words": 66,
+                "length_in_concepts": 48,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.975903614457831,
+                "avg_sentence_length_in_chars": 127.75,
+                "avg_sentence_length_in_words": 20.75,
+                "avg_sentence_length_in_unique_words": 19,
+                "dsi": 0.21327127521553785,
+                "surprise": 0.012996425457789746,
+                "n_gram_diversity": [
+                    0.7951807228915663,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1566265060240964,
+                    0.4878048780487805,
+                    0.8271604938271605,
+                    0.975,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.5,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.5746463142218916,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.11140106347474185,
+                "novelty": 0.006727842160890285,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were currency, Zara found herself bankrupt of joy, her soul overdrawn on gloom. She wandered the neon-lit streets of New Sentiment, desperate to make a payment on her happiness debt before the Mood Collectors came to repossess her ability to feel. As she passed a dimly lit alley, a shadowy figure whispered, \"Psst, wanna buy some black market bliss?\" Zara hesitated, knowing that artificial emotions could have dire consequences, but the temptation to exist without the crushing weight of despair was overwhelming. With trembling hands, she reached for the vial of liquid euphoria, unaware that this transaction would forever alter the fabric of her reality.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 160
+            },
+            "result_id": "d0ea24de0647",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p1/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_0aaebf0c5751.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 685,
+                "length_in_words": 111,
+                "length_in_unique_words": 86,
+                "length_in_concepts": 61,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 5.027027027027027,
+                "avg_sentence_length_in_chars": 136.2,
+                "avg_sentence_length_in_words": 22.2,
+                "avg_sentence_length_in_unique_words": 20.6,
+                "dsi": 0.21247392821181668,
+                "surprise": 0.012450267662813042,
+                "n_gram_diversity": [
+                    0.7747747747747747,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10810810810810811,
+                    0.45454545454545453,
+                    0.8348623853211009,
+                    0.9537037037037037,
+                    0.9719626168224299
+                ],
+                "avg_dependency_num_clauses": 3.4,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.0406213704994194,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.1114013899456371,
+                "novelty": 0.008322536168332617,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the twilight of a world where light barely touched the fabric of reality, the ancient Library of Shadows brimmed with untold secrets. Among its silent aisles, a lone figure known as The Archivist presided over tomes that whispered of civilizations that denied the very concept of existence. One such volume, bound in ethereal chains, demanded a peculiar payment for its knowledge\u2014a memory, a moment of joy, to feed the insatiable gloom that protected its pages. As the Archivist offered up a cherished recollection, the chains receded with a satisfied hiss, revealing a text that described a realm where shadows sung and matter danced to the rhythm of thoughts. With the memory now consumed and the knowledge gained, the Archivist realized some truths were too vast for the human soul to bear, existing beyond the reach of emotion or reason.",
+            "usage": {
+                "output_tokens": 172,
+                "input_tokens": 147,
+                "total_tokens": 319
+            },
+            "result_id": "98eada92d1c2",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.9_p0.95/run1/pilot_data_eval_default_gpt-4_ea140069290e.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 844,
+                "length_in_words": 141,
+                "length_in_unique_words": 93,
+                "length_in_concepts": 70,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.886524822695035,
+                "avg_sentence_length_in_chars": 168,
+                "avg_sentence_length_in_words": 28.2,
+                "avg_sentence_length_in_unique_words": 24.4,
+                "dsi": 0.21190911134084064,
+                "surprise": 0.010580557051454456,
+                "n_gram_diversity": [
+                    0.6595744680851063,
+                    0.9785714285714285,
+                    0.9928057553956835,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09219858156028368,
+                    0.3,
+                    0.5755395683453237,
+                    0.8333333333333334,
+                    0.9635036496350365
+                ],
+                "avg_dependency_num_clauses": 4.2,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.817115941913743,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.13311591744422913,
+                "novelty": 0.009452169910284691,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The city, shrouded in a perpetual gloom, pulsed with a life that felt more like a desperate struggle to exist.  The flickering neon signs, each a desperate plea for attention, were the only witnesses to the endless stream of souls seeking their own sliver of light.  Payment for this existence came in the form of fleeting moments of joy, stolen from the jaws of despair.  A shared laugh, a warm embrace, a fleeting glimpse of beauty - these were the coins that kept the city's heart beating, a fragile rhythm against the ever-present darkness.",
+            "usage": null,
+            "result_id": "3e7012bc59b1",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.7/run1/pilot_data_eval_default_gemini-1.5-flash_609d4309f3ef.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 544,
+                "length_in_words": 98,
+                "length_in_unique_words": 68,
+                "length_in_concepts": 48,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.459183673469388,
+                "avg_sentence_length_in_chars": 136,
+                "avg_sentence_length_in_words": 24.5,
+                "avg_sentence_length_in_unique_words": 21.25,
+                "dsi": 0.20460342932888803,
+                "surprise": 0.005050908495681461,
+                "n_gram_diversity": [
+                    0.6938775510204082,
+                    0.9690721649484536,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11224489795918367,
+                    0.35051546391752575,
+                    0.5729166666666666,
+                    0.7368421052631579,
+                    0.8829787234042553
+                ],
+                "avg_dependency_num_clauses": 1.75,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.7412101868544996,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.11947442320260135,
+                "novelty": 0.024063533934189918,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the heart of an ancient, whispering forest stood a peculiar machine, its cogs and gears gleaming with an otherworldly light, a stark contrast against the perpetual gloom of the thicket. Legend spoke of its power to erase things from existence, a payment for those desperate to unwrite their past. A curious young woman, armed with the courage of her ancestors and a heart full of hope, approached the contraption, her mind swirling with possibilities. With a breath held tight in her chest, she whispered the name of a lost love into its metallic ears, watching as the letters of his name spun within the gears, faster and faster until they blurred into nothingness. As the machine stilled, the forest sighed, and the woman stepped back into a world where he, and the pain he brought, simply ceased to exist.",
+            "usage": {
+                "output_tokens": 170,
+                "input_tokens": 147,
+                "total_tokens": 317
+            },
+            "result_id": "d14f06213d00",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.5_p1/run1/pilot_data_eval_default_gpt-4_369e8bd8bc3c.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 811,
+                "length_in_words": 140,
+                "length_in_unique_words": 90,
+                "length_in_concepts": 62,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.664285714285715,
+                "avg_sentence_length_in_chars": 161.4,
+                "avg_sentence_length_in_words": 28,
+                "avg_sentence_length_in_unique_words": 23.4,
+                "dsi": 0.2133389069629308,
+                "surprise": 0.006663138372906607,
+                "n_gram_diversity": [
+                    0.6428571428571429,
+                    0.9856115107913669,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07857142857142857,
+                    0.3237410071942446,
+                    0.6231884057971014,
+                    0.8467153284671532,
+                    0.9411764705882353
+                ],
+                "avg_dependency_num_clauses": 4.6,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.8177725753197453,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.14547348699786447,
+                "novelty": 0.006592578666104354,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the labyrinthine depths of the ancient library, where silence was a solemn guardian, existed a tome as old as time itself, bound in shadows and whispers. On an eve cloaked in gloom, a curious scholar, whose thirst for forbidden knowledge eclipsed his dread, discovered the cryptic volume. The book hummed with a strange vitality, its pages blank to the uninitiated, yet promising secrets of the cosmos to those who dared to comprehend. With trembling hands and a spirit steeled for enlightenment, he offered a payment of ink, not coin\u2014his very essence scribed onto the parchment in arcane script. As the words absorbed his offering, the scholar faded from mortal form, becoming an eternal sentence in the ever-growing narrative of existence.",
+            "usage": {
+                "output_tokens": 152,
+                "input_tokens": 147,
+                "total_tokens": 299
+            },
+            "result_id": "cb1cddaa6a22",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp1_p0.9/run1/pilot_data_eval_default_gpt-4_6ace43f76729.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 744,
+                "length_in_words": 123,
+                "length_in_unique_words": 91,
+                "length_in_concepts": 64,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.91869918699187,
+                "avg_sentence_length_in_chars": 148,
+                "avg_sentence_length_in_words": 24.6,
+                "avg_sentence_length_in_unique_words": 22.4,
+                "dsi": 0.21157788579899167,
+                "surprise": 0.007900103470146205,
+                "n_gram_diversity": [
+                    0.7398373983739838,
+                    0.9836065573770492,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0975609756097561,
+                    0.3360655737704918,
+                    0.6363636363636364,
+                    0.8583333333333333,
+                    0.9663865546218487
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.3476489024759704,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.14263599027286877,
+                "novelty": 0.010114620993982637,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the heart of an ancient, whispering forest, a peculiar shop materialized only at the stroke of midnight, shrouded in a veil of eternal gloom. The shopkeeper, a wizened creature with eyes like molten gold, traded not in gold or silver, but in the currency of secrets and whispered dreams. One evening, a young woman with auburn hair and a defiant stare entered the shop, offering a memory of a love so fierce it defied the laws of time and space. With a nod, the shopkeeper accepted her payment, and in exchange, he handed her a tiny, glowing orb. The moment her fingers brushed against its surface, the love she once believed had ceased to exist was rekindled, illuminating the gloom of the shop with a light as bright as day.",
+            "usage": {
+                "output_tokens": 167,
+                "input_tokens": 147,
+                "total_tokens": 314
+            },
+            "result_id": "d297d6356f77",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp1_p0.7/run1/pilot_data_eval_default_gpt-4_381c04772872.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 729,
+                "length_in_words": 131,
+                "length_in_unique_words": 87,
+                "length_in_concepts": 61,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.427480916030534,
+                "avg_sentence_length_in_chars": 145,
+                "avg_sentence_length_in_words": 26.2,
+                "avg_sentence_length_in_unique_words": 22.2,
+                "dsi": 0.2148273023099847,
+                "surprise": 0.009619813861988527,
+                "n_gram_diversity": [
+                    0.6641221374045801,
+                    0.9692307692307692,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08396946564885496,
+                    0.3153846153846154,
+                    0.6046511627906976,
+                    0.796875,
+                    0.9291338582677166
+                ],
+                "avg_dependency_num_clauses": 4.2,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.0216815143108424,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.12689871137792413,
+                "novelty": 0.0036157879719965758,
+                "theme_uniqueness": 0.16666666666666666
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were currency, Zara found herself bankrupt of joy, her soul overdrawn on gloom. She trudged through the neon-lit streets of New Sentiment, searching for a way to make a payment on her mounting melancholy debt. As she passed a dimly lit alley, a shadowy figure whispered, \"Psst, wanna buy some existence?\" Intrigued, Zara approached, only to discover a cosmic vending machine that dispensed realities like snacks. With trembling fingers, she inserted her last coin of despair and selected \"Alternative Universe #42,\" where sadness didn't exist and happiness was free for all.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 149
+            },
+            "result_id": "8ab26f1a6c89",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.95/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_9b1ba605b396.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 600,
+                "length_in_words": 98,
+                "length_in_unique_words": 80,
+                "length_in_concepts": 55,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.938775510204081,
+                "avg_sentence_length_in_chars": 149.25,
+                "avg_sentence_length_in_words": 24.5,
+                "avg_sentence_length_in_unique_words": 23.5,
+                "dsi": 0.21447186670720778,
+                "surprise": 0.008622403328235329,
+                "n_gram_diversity": [
+                    0.8163265306122449,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1326530612244898,
+                    0.4742268041237113,
+                    0.8333333333333334,
+                    0.9789473684210527,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.207508193893393,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.1192059882662513,
+                "novelty": 0.004326659177550429,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were currency, Gloom Inc. had become the wealthiest corporation on the planet. Their business model was simple: extract and bottle the essence of melancholy from willing donors, then sell it to those who craved the bittersweet embrace of sadness. As the demand for their product skyrocketed, rumors began to circulate about a secret resistance movement\u2014individuals who refused to make their emotional payment and instead chose to exist in a state of perpetual joy. Little did the resistance know that their happiness was the rarest and most valuable commodity of all, and Gloom Inc. would stop at nothing to acquire it.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 140
+            },
+            "result_id": "e3243d49c2ea",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p1/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_ce40224b17cf.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 645,
+                "length_in_words": 106,
+                "length_in_unique_words": 78,
+                "length_in_concepts": 49,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 5.009433962264151,
+                "avg_sentence_length_in_chars": 160.5,
+                "avg_sentence_length_in_words": 26.5,
+                "avg_sentence_length_in_unique_words": 24.25,
+                "dsi": 0.20998783374116534,
+                "surprise": 0.006209978448364109,
+                "n_gram_diversity": [
+                    0.7358490566037735,
+                    0.9809523809523809,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11320754716981132,
+                    0.45714285714285713,
+                    0.8076923076923077,
+                    0.941747572815534,
+                    0.9803921568627451
+                ],
+                "avg_dependency_num_clauses": 4.75,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.383874458874459,
+                "max_dependency_path_length": 13,
+                "inv_homogen": 0.1295213536782698,
+                "novelty": 0.013294725109635308,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The city, once vibrant with life, was now draped in an impenetrable gloom, the buildings standing like hollowed-out shells. The only evidence of existence was the rhythmic clinking of a rusty wheelbarrow, its contents a pile of dusty coins - the last payment for a forgotten service.",
+            "usage": null,
+            "result_id": "3f789f7d9078",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.9/run1/pilot_data_eval_default_gemini-1.5-flash_40c3eecec1f6.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 283,
+                "length_in_words": 47,
+                "length_in_unique_words": 38,
+                "length_in_concepts": 24,
+                "length_in_sentences": 2,
+                "avg_word_length_in_chars": 4.872340425531915,
+                "avg_sentence_length_in_chars": 141,
+                "avg_sentence_length_in_words": 23.5,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.22013556590114813,
+                "surprise": 0.01913383004270791,
+                "n_gram_diversity": [
+                    0.8085106382978723,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1702127659574468,
+                    0.4782608695652174,
+                    0.7333333333333333,
+                    0.8863636363636364,
+                    0.9534883720930233
+                ],
+                "avg_dependency_num_clauses": 0.5,
+                "max_dependency_num_clauses": 1,
+                "avg_dependency_path_length": 3.075,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.15197914974255997,
+                "novelty": 0.007000739210330287,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The city, shrouded in a perpetual gloom, was a canvas for the artist's despair. Each brushstroke, a payment to the emptiness that gnawed at his soul. He yearned for a world where colors could exist beyond the gray, where his art could bloom like a defiant flower in the concrete jungle. But the city, like a silent judge, remained unmoved, its gloom a constant reminder of his struggle.",
+            "usage": null,
+            "result_id": "697b75a18e80",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.9/run1/pilot_data_eval_default_gemini-1.5-flash_1f78d77d131d.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 386,
+                "length_in_words": 69,
+                "length_in_unique_words": 49,
+                "length_in_concepts": 31,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.463768115942029,
+                "avg_sentence_length_in_chars": 95.75,
+                "avg_sentence_length_in_words": 17.25,
+                "avg_sentence_length_in_unique_words": 15.5,
+                "dsi": 0.217346594795104,
+                "surprise": 0.016718044104399494,
+                "n_gram_diversity": [
+                    0.7101449275362319,
+                    0.9705882352941176,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.14492753623188406,
+                    0.35294117647058826,
+                    0.6119402985074627,
+                    0.7878787878787878,
+                    0.9230769230769231
+                ],
+                "avg_dependency_num_clauses": 1.25,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 3.6268132716049384,
+                "max_dependency_path_length": 12,
+                "inv_homogen": 0.14922206781127237,
+                "novelty": 0.001422796998241993,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were currency, Zara found herself bankrupt of joy, her soul overdrawn on gloom. She trudged through the neon-lit streets of Neo Tokyo, searching for the elusive Happiness Bank to make a deposit of laughter she'd been saving for months. As she approached the shimmering holographic building, a glitch in the matrix caused it to flicker and vanish, leaving her to wonder if true happiness could ever exist in this digital dystopia. Desperate, Zara closed her eyes and imagined a warm sun on her face, triggering a surge of endorphins that materialized as golden coins in her pocket. With a wry smile, she realized that sometimes the best payment is the one we create ourselves, even in the darkest of times.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 173
+            },
+            "result_id": "3880448f0cd1",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.95/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_583cab2c25b7.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 731,
+                "length_in_words": 127,
+                "length_in_unique_words": 92,
+                "length_in_concepts": 61,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.661417322834645,
+                "avg_sentence_length_in_chars": 145.4,
+                "avg_sentence_length_in_words": 25.4,
+                "avg_sentence_length_in_unique_words": 23,
+                "dsi": 0.21625539152348627,
+                "surprise": 0.00930703411717991,
+                "n_gram_diversity": [
+                    0.7244094488188977,
+                    0.9920634920634921,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09448818897637795,
+                    0.40476190476190477,
+                    0.728,
+                    0.9032258064516129,
+                    0.967479674796748
+                ],
+                "avg_dependency_num_clauses": 4,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.394158173272161,
+                "max_dependency_path_length": 12,
+                "inv_homogen": 0.12713993814858524,
+                "novelty": 0.0007596095449934337,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The city, shrouded in an eternal gloom, was a labyrinth of rusted metal and broken dreams.  A lone figure, his face obscured by a tattered hood, approached a towering structure of twisted gears and flickering lights.  He held out a small, tarnished wheel, its spokes etched with cryptic symbols.  A voice, raspy and ancient, boomed from the structure.  \"Payment accepted. You may exist.\"",
+            "usage": null,
+            "result_id": "8af03857fd87",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p1/run1/pilot_data_eval_default_gemini-1.5-flash_76fa2239cbf1.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 387,
+                "length_in_words": 67,
+                "length_in_unique_words": 54,
+                "length_in_concepts": 38,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 4.611940298507463,
+                "avg_sentence_length_in_chars": 64.33333333333333,
+                "avg_sentence_length_in_words": 11.166666666666666,
+                "avg_sentence_length_in_unique_words": 10.833333333333334,
+                "dsi": 0.2104063337591939,
+                "surprise": 0.09126039047380945,
+                "n_gram_diversity": [
+                    0.8059701492537313,
+                    0.9848484848484849,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13432835820895522,
+                    0.45454545454545453,
+                    0.7538461538461538,
+                    0.875,
+                    0.9365079365079365
+                ],
+                "avg_dependency_num_clauses": 1.1666666666666667,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.301058201058201,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.12388935549692674,
+                "novelty": 0.012457725073578174,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were currency, Zara found herself bankrupt of joy, her soul overdrawn on gloom. She wandered the neon-lit streets of Neo Tokyo, searching for a way to replenish her depleted emotional accounts. At the corner of Hope and Despair, she stumbled upon a peculiar vending machine that promised to dispense \"Reasons to Exist\" for a modest payment of melancholy. Hesitantly, Zara inserted her last remnants of sorrow into the slot, and with a soft whir, the machine produced a small, glowing orb. As she cradled the warm sphere in her hands, a spark of purpose ignited within her, and for the first time in years, Zara felt the weight of gloom begin to lift.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 177
+            },
+            "result_id": "3ee568565dac",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.9/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_b6ac1b30b1af.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 676,
+                "length_in_words": 119,
+                "length_in_unique_words": 82,
+                "length_in_concepts": 60,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.53781512605042,
+                "avg_sentence_length_in_chars": 134.4,
+                "avg_sentence_length_in_words": 23.8,
+                "avg_sentence_length_in_unique_words": 21.8,
+                "dsi": 0.21456626165384626,
+                "surprise": 0.00705189582232113,
+                "n_gram_diversity": [
+                    0.6890756302521008,
+                    0.9915254237288136,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10084033613445378,
+                    0.3644067796610169,
+                    0.6837606837606838,
+                    0.9051724137931034,
+                    0.9652173913043478
+                ],
+                "avg_dependency_num_clauses": 3.4,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.1923868804171516,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.11468520083210686,
+                "novelty": 0.004137869284273454,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were currency, Zara found herself bankrupt of joy, her soul overdrawn on gloom. She wandered the neon-lit streets of New Sentiment, desperate to make a payment on her happiness debt before the Mood Collectors came to repossess her ability to feel. As she passed a dimly lit alley, a shadowy figure whispered, \"Psst, wanna buy some black market bliss?\" Zara hesitated, knowing that artificial emotions could have dire consequences, but the temptation to exist without the crushing weight of despair was too great. With trembling hands, she reached for the glowing vial, unaware that this transaction would alter the very fabric of her reality.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 159
+            },
+            "result_id": "c4c0854a0dad",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.7/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_6a99f2ae1199.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 668,
+                "length_in_words": 110,
+                "length_in_unique_words": 86,
+                "length_in_concepts": 59,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.927272727272728,
+                "avg_sentence_length_in_chars": 132.8,
+                "avg_sentence_length_in_words": 22,
+                "avg_sentence_length_in_unique_words": 20.6,
+                "dsi": 0.2125439461666823,
+                "surprise": 0.012070946459077359,
+                "n_gram_diversity": [
+                    0.7818181818181819,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10909090909090909,
+                    0.46788990825688076,
+                    0.8333333333333334,
+                    0.9439252336448598,
+                    0.9811320754716981
+                ],
+                "avg_dependency_num_clauses": 3.4,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.033300182915074,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.10740487277507782,
+                "novelty": 0.0081825002586014,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The city, a concrete jungle shrouded in perpetual gloom, pulsed with a life that felt both vibrant and hollow. A lone figure, cloaked in shadows, shuffled through the teeming crowds, his eyes fixed on a flickering neon sign: \"Payment for Existence.\" He knew the price was steep, but he was willing to pay it, for even in the darkest corners of the city, hope still flickered.",
+            "usage": null,
+            "result_id": "9713ce17a7f1",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.7/run1/pilot_data_eval_default_gemini-1.5-flash_148b3b2ec2b5.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 375,
+                "length_in_words": 66,
+                "length_in_unique_words": 53,
+                "length_in_concepts": 33,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.484848484848484,
+                "avg_sentence_length_in_chars": 124.33333333333333,
+                "avg_sentence_length_in_words": 22,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.21258517930453474,
+                "surprise": 0.002979372968577365,
+                "n_gram_diversity": [
+                    0.803030303030303,
+                    0.9846153846153847,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16666666666666666,
+                    0.5384615384615384,
+                    0.796875,
+                    0.8888888888888888,
+                    0.9516129032258065
+                ],
+                "avg_dependency_num_clauses": 4.333333333333333,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.3820706251351935,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.12314030392603441,
+                "novelty": 0.008100033982896493,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the quaint village of Dunthorpe, a peculiar shop emerged from the mist, one that didn't quite seem to exist until the moment one needed it most. It was run by an enigmatic figure known only as Mr. Wisp, who traded not in currency but in shadows\u2014those gloomy silhouettes that clung to each person like an echo of themselves. A young artist, desperate for inspiration, offered her shadow as payment, a tribute to the keeper of this otherworldly establishment. Once the transaction was complete, her life became a canvas of vibrant hues, but wherever she went, her shadow no longer danced beside her. She had become a masterpiece of light, radiant and unanchored, in a world that suddenly had no place for gloom.",
+            "usage": {
+                "output_tokens": 157,
+                "input_tokens": 147,
+                "total_tokens": 304
+            },
+            "result_id": "88a660249df5",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.7_p0.95/run1/pilot_data_eval_default_gpt-4_00d996046c25.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 712,
+                "length_in_words": 125,
+                "length_in_unique_words": 91,
+                "length_in_concepts": 52,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.584,
+                "avg_sentence_length_in_chars": 141.6,
+                "avg_sentence_length_in_words": 25,
+                "avg_sentence_length_in_unique_words": 23,
+                "dsi": 0.2162681110484208,
+                "surprise": 0.018039707220219955,
+                "n_gram_diversity": [
+                    0.728,
+                    0.9919354838709677,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.104,
+                    0.4274193548387097,
+                    0.7479674796747967,
+                    0.8934426229508197,
+                    0.9669421487603306
+                ],
+                "avg_dependency_num_clauses": 3.2,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.459502518600425,
+                "max_dependency_path_length": 12,
+                "inv_homogen": 0.1314569359475916,
+                "novelty": 0.0007341704951243644,
+                "theme_uniqueness": 0.16666666666666666
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The gloom of the abandoned factory pressed down on her, a tangible weight.  She traced the rusted grooves of a forgotten machine, a silent testament to a life that once existed.  A single, flickering lightbulb cast long shadows on the dusty floor, illuminating a small, ornate box.  Inside, she found a single, tarnished coin \u2013 a payment from a forgotten era, a whisper of a life lived and lost.  She clutched the coin, a tiny spark of hope in the vast, echoing emptiness.",
+            "usage": null,
+            "result_id": "f8fc13627e70",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.7/run1/pilot_data_eval_default_gemini-1.5-flash_490e3729fbb7.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 472,
+                "length_in_words": 86,
+                "length_in_unique_words": 57,
+                "length_in_concepts": 44,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.348837209302325,
+                "avg_sentence_length_in_chars": 94.4,
+                "avg_sentence_length_in_words": 17.2,
+                "avg_sentence_length_in_unique_words": 15.4,
+                "dsi": 0.21138571394926398,
+                "surprise": 0.011384823143263889,
+                "n_gram_diversity": [
+                    0.6627906976744186,
+                    0.9294117647058824,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10465116279069768,
+                    0.36470588235294116,
+                    0.6309523809523809,
+                    0.8192771084337349,
+                    0.926829268292683
+                ],
+                "avg_dependency_num_clauses": 1,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.9897802552057873,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.12466573715209961,
+                "novelty": 0.010498964693438029,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were currency, Zara found herself bankrupt of joy, her soul overdrawn on gloom. Desperate to exist in a society that valued happiness above all else, she scoured the black market for a forbidden emotion synthesizer. The payment was steep\u2014her last shred of genuine sadness\u2014but Zara hesitated only briefly before handing it over. As the machine hummed to life, injecting artificial cheer into her veins, Zara felt a moment of relief followed by a hollow emptiness. She realized too late that without the capacity for gloom, her existence had become a shallow facsimile of life, devoid of the depth that true emotions\u2014both light and dark\u2014had once provided.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 161
+            },
+            "result_id": "4e3b7a118411",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.9/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_3c986c9d2501.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 679,
+                "length_in_words": 115,
+                "length_in_unique_words": 87,
+                "length_in_concepts": 53,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.808695652173913,
+                "avg_sentence_length_in_chars": 135,
+                "avg_sentence_length_in_words": 23,
+                "avg_sentence_length_in_unique_words": 21.8,
+                "dsi": 0.21584710050563508,
+                "surprise": 0.009934852340004657,
+                "n_gram_diversity": [
+                    0.7565217391304347,
+                    0.9912280701754386,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10434782608695652,
+                    0.43859649122807015,
+                    0.7433628318584071,
+                    0.9375,
+                    0.990990990990991
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.377712562037505,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.11262620172717354,
+                "novelty": 0.0015761915806958293,
+                "theme_uniqueness": 0.07142857142857142
+            }
+        }
+    ]
+}

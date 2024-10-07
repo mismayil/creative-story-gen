@@ -1,0 +1,2281 @@
+{
+    "metadata": {
+        "group_id": [
+            "human",
+            "organ-empire-comply"
+        ],
+        "config": {
+            "results_paths": [
+                "../experiments/outputs/human/pilot/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p1/run1"
+            ],
+            "report_usage": true,
+            "spacy_lang": "en_core_web_sm",
+            "max_n_gram": 5,
+            "output_dir": "../experiments/reports/pilot/run1_report3",
+            "config": "../experiments/reports/pilot/run1_report3/config.json",
+            "num_samples": 48,
+            "deduplicate": true,
+            "deduplicate_by": "output",
+            "max_frequency": 10,
+            "group_by": [
+                "sentience",
+                "id"
+            ],
+            "emb_model": "thenlper/gte-large",
+            "emb_type": "sentence_embedding",
+            "emb_strategy": "direct",
+            "distance_fn": "cosine",
+            "lower": true,
+            "remove_punct": true,
+            "remove_stopwords": true,
+            "lemmatize": true,
+            "dominant_k": null,
+            "unique": true,
+            "cluster_linkage": "ward",
+            "cluster_dist_threshold": 0.5
+        }
+    },
+    "metrics": {
+        "num_samples": 46,
+        "avg_length_in_chars": 366.39130434782606,
+        "avg_length_in_words": 69.21739130434783,
+        "avg_length_in_unique_words": 51.21739130434783,
+        "avg_length_in_concepts": 26.47826086956522,
+        "avg_length_in_sentences": 4.108695652173913,
+        "avg_word_length_in_chars": 4.205323212309786,
+        "avg_sentence_length_in_chars": 93.10722049689441,
+        "avg_sentence_length_in_words": 17.738671654432522,
+        "avg_sentence_length_in_unique_words": 15.948651891586675,
+        "avg_dsi": 0.21187883432094906,
+        "avg_surprise": 0.034968341865647415,
+        "avg_n_gram_diversity": [
+            0.75426310471577,
+            0.9770136845604683,
+            0.9972780291685458,
+            1.0,
+            1.0
+        ],
+        "avg_pos_diversity": [
+            0.18563740903342033,
+            0.5734381471478824,
+            0.8443594637460868,
+            0.9497272130526228,
+            0.9832745778340485
+        ],
+        "avg_dependency_num_clauses": 2.787798795407491,
+        "avg_max_dependency_num_clauses": 4.956521739130435,
+        "avg_dependency_path_length": 2.842363005176135,
+        "avg_max_dependency_path_length": 8.608695652173912,
+        "avg_inv_homogen": 0.18831330341993321,
+        "avg_novelty": 0.00876686547467297,
+        "avg_theme_uniqueness": 0.7608695652173914,
+        "corpus_dsi": 0.2153742272418593,
+        "corpus_n_gram_diversity": [
+            0.3112791430371771,
+            0.8046013236684526,
+            0.9656368221941992,
+            0.9914853358561968,
+            0.998422712933754
+        ],
+        "corpus_pos_diversity": [
+            0.004725897920604915,
+            0.04664355499527261,
+            0.21027742749054223,
+            0.48880479344055505,
+            0.7406940063091483
+        ],
+        "num_unique_stories": 46,
+        "top_10_n_grams": {
+            "1-gram": {
+                "the": 208,
+                "to": 124,
+                "of": 85,
+                "and": 76,
+                "a": 70,
+                "i": 64,
+                "was": 60,
+                "empire": 51,
+                "organ": 51,
+                "with": 48
+            },
+            "2-gram": {
+                "comply with": 32,
+                "of the": 30,
+                "to comply": 26,
+                "the organ": 19,
+                "with the": 15,
+                "the empire": 13,
+                "in the": 13,
+                "an organ": 11,
+                "had to": 11,
+                "to play": 10
+            },
+            "3-gram": {
+                "to comply with": 20,
+                "comply with the": 12,
+                "had to comply": 5,
+                "did not comply": 4,
+                "not comply with": 4,
+                "they had to": 4,
+                "playing the organ": 4,
+                "the british empire": 4,
+                "the laws of": 3,
+                "i wanted to": 3
+            },
+            "4-gram": {
+                "to comply with the": 9,
+                "did not comply with": 4,
+                "comply with the laws": 2,
+                "with the laws of": 2,
+                "to play the organ": 2,
+                "they had to comply": 2,
+                "had to comply with": 2,
+                "the empire state building": 2,
+                "hard to comply with": 2,
+                "comply with the requirements": 2
+            },
+            "5-gram": {
+                "to comply with the laws": 2,
+                "comply with the laws of": 2,
+                "hard to comply with the": 2,
+                "to comply with the requirements": 2,
+                "to comply with the rules": 2,
+                "the empire was growing stronger": 1,
+                "empire was growing stronger their": 1,
+                "was growing stronger their fierce": 1,
+                "growing stronger their fierce leader": 1,
+                "stronger their fierce leader implementing": 1
+            }
+        },
+        "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+        },
+        "cost": {
+            "input": 0,
+            "output": 0,
+            "total": 0
+        }
+    },
+    "data": [
+        {
+            "id": "organ-empire-comply",
+            "output": "The empire was growing stronger, their fierce leader implementing new rules to his citizens daily and ensuring he had eyes all over the place to ensure they comply with the new rules.  He wanted to run a nation that was disciplined and listened to orders.  He was an incredibly extravagant leader, his bedroom almost laughable with how over the top it is.  A large organ in what is now his living area, an organ that he insisted on keeping from the old converted church. ",
+            "result_id": "R_8v92A9H3hnaw1QI_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8v92A9H3hnaw1QI.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8v92A9H3hnaw1QI"
+            },
+            "metrics": {
+                "length_in_chars": 471,
+                "length_in_words": 87,
+                "length_in_unique_words": 60,
+                "length_in_concepts": 34,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.367816091954023,
+                "avg_sentence_length_in_chars": 117.5,
+                "avg_sentence_length_in_words": 21.75,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.20810409015087733,
+                "surprise": 0.012385692577513447,
+                "n_gram_diversity": [
+                    0.6896551724137931,
+                    0.9651162790697675,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13793103448275862,
+                    0.5348837209302325,
+                    0.8470588235294118,
+                    0.9642857142857143,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.75,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.6338252402734095,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.1650256898668077,
+                "novelty": 0.014540274181963964,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "you could hear the crisp and beefy sound of the organ from miles away even though there was no sign of a church at all. all you could see was the pale grim appearance of the large concrete buildings the empire built for their newly established capital. they wanted it to be free of soul, emotion, heart and everything any man can hold dear. That was the essence of the master plan, in which they could finally see all the people comply, like constantly anxious androids killing time to breathe and live for another day. this was no different than surviving rather than living merely. ",
+            "result_id": "R_2sdMlOguKbuAvfg_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2sdMlOguKbuAvfg.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2sdMlOguKbuAvfg"
+            },
+            "metrics": {
+                "length_in_chars": 584,
+                "length_in_words": 105,
+                "length_in_unique_words": 78,
+                "length_in_concepts": 46,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.476190476190476,
+                "avg_sentence_length_in_chars": 115.8,
+                "avg_sentence_length_in_words": 21,
+                "avg_sentence_length_in_unique_words": 19.6,
+                "dsi": 0.20830511827975656,
+                "surprise": 0.010641356522128678,
+                "n_gram_diversity": [
+                    0.7428571428571429,
+                    0.9519230769230769,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10476190476190476,
+                    0.5,
+                    0.8252427184466019,
+                    0.9411764705882353,
+                    0.9900990099009901
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.3941905864406525,
+                "max_dependency_path_length": 12,
+                "inv_homogen": 0.17368993096881444,
+                "novelty": 0.014138217924205498,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "To comply with the laws of the alien race, humans must sacrifice an organ of their choice or feel the full wrath of the alien empire. ",
+            "result_id": "R_8kG4d41raqDZBax_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8kG4d41raqDZBax.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8kG4d41raqDZBax"
+            },
+            "metrics": {
+                "length_in_chars": 134,
+                "length_in_words": 26,
+                "length_in_unique_words": 20,
+                "length_in_concepts": 11,
+                "length_in_sentences": 1,
+                "avg_word_length_in_chars": 4.076923076923077,
+                "avg_sentence_length_in_chars": 133,
+                "avg_sentence_length_in_words": 26,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.21180049072612417,
+                "surprise": 0,
+                "n_gram_diversity": [
+                    0.7692307692307693,
+                    0.92,
+                    0.9583333333333334,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.34615384615384615,
+                    0.6,
+                    0.7916666666666666,
+                    0.9130434782608695,
+                    0.9545454545454546
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.276595744680851,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.1885056217511495,
+                "novelty": 0.007147473031470286,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "The sound of the mouth organ played by the beggar on the street was delightful.  He had a good position, just outside the Empire cinema which had been closed for years.   I had heard that the Fire Brigade had it closed down as it did not comply with fire regulations",
+            "result_id": "R_8zUaSPSsswsQ7fn_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8zUaSPSsswsQ7fn.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8zUaSPSsswsQ7fn"
+            },
+            "metrics": {
+                "length_in_chars": 266,
+                "length_in_words": 52,
+                "length_in_unique_words": 41,
+                "length_in_concepts": 21,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.115384615384615,
+                "avg_sentence_length_in_chars": 88.66666666666667,
+                "avg_sentence_length_in_words": 17.333333333333332,
+                "avg_sentence_length_in_unique_words": 15,
+                "dsi": 0.2087935371058328,
+                "surprise": 0.013720060955910468,
+                "n_gram_diversity": [
+                    0.7884615384615384,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.23076923076923078,
+                    0.6470588235294118,
+                    0.9,
+                    0.9591836734693877,
+                    0.9791666666666666
+                ],
+                "avg_dependency_num_clauses": 1.6666666666666667,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.1450216450216453,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.17824188868204752,
+                "novelty": 0.013161380272053047,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "The British empire was at its peak, the general had reigning power on the poor locals. All they had was to comply to this force that had entered their country. The churches were erected and instilled their unjust values. Inside one church, was a vast organ that rung out and around the land. A reminder to the occupied. ",
+            "result_id": "R_27PrrUR0LzzSU4k_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_27PrrUR0LzzSU4k.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_27PrrUR0LzzSU4k"
+            },
+            "metrics": {
+                "length_in_chars": 320,
+                "length_in_words": 58,
+                "length_in_unique_words": 43,
+                "length_in_concepts": 24,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.396551724137931,
+                "avg_sentence_length_in_chars": 63,
+                "avg_sentence_length_in_words": 11.6,
+                "avg_sentence_length_in_unique_words": 10.8,
+                "dsi": 0.2157510441282521,
+                "surprise": 0.042290911575158435,
+                "n_gram_diversity": [
+                    0.7413793103448276,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1724137931034483,
+                    0.5614035087719298,
+                    0.8571428571428571,
+                    0.9636363636363636,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.8,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.629097309421853,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.17203134695688885,
+                "novelty": 0.0007536337727855891,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "I tried very hard to play the organ, I wanted to so badly. I hated the man who stood on top of his empire of tunes. I wanted to have my own library of hymns to move the masses. I needed to have 5 years experience in the church before I could make this a reality. I must comply with these rules, and then I could be the organ master I always wanted to become.",
+            "result_id": "R_2joIDdCu9ghOfCw_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2joIDdCu9ghOfCw.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2joIDdCu9ghOfCw"
+            },
+            "metrics": {
+                "length_in_chars": 358,
+                "length_in_words": 75,
+                "length_in_unique_words": 51,
+                "length_in_concepts": 23,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 3.6933333333333334,
+                "avg_sentence_length_in_chars": 70.8,
+                "avg_sentence_length_in_words": 15,
+                "avg_sentence_length_in_unique_words": 13.6,
+                "dsi": 0.21219382337901904,
+                "surprise": 0.027922443548838285,
+                "n_gram_diversity": [
+                    0.68,
+                    0.918918918918919,
+                    0.9863013698630136,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16,
+                    0.47297297297297297,
+                    0.7808219178082192,
+                    0.8888888888888888,
+                    0.9295774647887324
+                ],
+                "avg_dependency_num_clauses": 2.6,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.832011051279344,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.1681880275408427,
+                "novelty": 0.0063608077256805395,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "Donation is mandatory for the empire to survive. Some will not comply, but forcible removal of an organ is traumatic and often leads to severe mental illness. We learn this in our early years, so most are ready for the procedure, but some do question. We have to keep our best and most talented alive for as long as possible if we are to find a solution to ",
+            "result_id": "R_2zUqf0C1wjV8ASQ_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2zUqf0C1wjV8ASQ.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2zUqf0C1wjV8ASQ"
+            },
+            "metrics": {
+                "length_in_chars": 357,
+                "length_in_words": 68,
+                "length_in_unique_words": 51,
+                "length_in_concepts": 26,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.161764705882353,
+                "avg_sentence_length_in_chars": 88.25,
+                "avg_sentence_length_in_words": 17,
+                "avg_sentence_length_in_unique_words": 16,
+                "dsi": 0.21312437681051402,
+                "surprise": 0.01899816592534383,
+                "n_gram_diversity": [
+                    0.75,
+                    0.9850746268656716,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16176470588235295,
+                    0.582089552238806,
+                    0.8939393939393939,
+                    0.9846153846153847,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.25,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.6004934904069152,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.18140272299448648,
+                "novelty": 0.004499700862690581,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "There once was a very strange land called Augmentia. It was an empire that had been created by dictators and was an island based off of the coast of Argentina. Word travelled fast that the dictators - namely Putinito - had begun an organ trafficking trade. The people of Augmentia, unbeknownst to them, had been born on the island and brainwashed into the ways of the land. When a citizen of Augmentia reached the age of 20, they were enlisted into a type of military boot camp where they had to comply with strict instructions and a gruelling regime of work, exercise, and weapons training. Those who did not comply with instructions, or tried to rebel against the bootcamps leaders, were never seen again by their families. It has been an enduring mystery where the rebels ended up, and Putinito had a mysterious ob",
+            "result_id": "R_2sKl3oqSfQrqNI5_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2sKl3oqSfQrqNI5.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2sKl3oqSfQrqNI5"
+            },
+            "metrics": {
+                "length_in_chars": 817,
+                "length_in_words": 142,
+                "length_in_unique_words": 90,
+                "length_in_concepts": 53,
+                "length_in_sentences": 7,
+                "avg_word_length_in_chars": 4.633802816901408,
+                "avg_sentence_length_in_chars": 115.85714285714286,
+                "avg_sentence_length_in_words": 20.285714285714285,
+                "avg_sentence_length_in_unique_words": 18.285714285714285,
+                "dsi": 0.21624009763208288,
+                "surprise": 0.01946069702269539,
+                "n_gram_diversity": [
+                    0.6338028169014085,
+                    0.9574468085106383,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09154929577464789,
+                    0.41843971631205673,
+                    0.7285714285714285,
+                    0.8920863309352518,
+                    0.9782608695652174
+                ],
+                "avg_dependency_num_clauses": 3.2857142857142856,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.2447697041830343,
+                "max_dependency_path_length": 15,
+                "inv_homogen": 0.20439167817433676,
+                "novelty": 0.001731740780447133,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "\"I dream of having my own cleaning empire someday\" Sohail smiled at the panel. He was attending an interview for an internship at Organ NIZE - a professional organising company who visit clients and organise and clean their home, office, or other space for them. \"My strengths involve complying with all policies and procedures, following safety regulations, and putting the clients needs first\". ",
+            "result_id": "R_25FmW7vrOnS60wE_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_25FmW7vrOnS60wE.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_25FmW7vrOnS60wE"
+            },
+            "metrics": {
+                "length_in_chars": 397,
+                "length_in_words": 62,
+                "length_in_unique_words": 53,
+                "length_in_concepts": 32,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 5.193548387096774,
+                "avg_sentence_length_in_chars": 131.33333333333334,
+                "avg_sentence_length_in_words": 20.666666666666668,
+                "avg_sentence_length_in_unique_words": 19.333333333333332,
+                "dsi": 0.21587373784953548,
+                "surprise": 0.01950559252268308,
+                "n_gram_diversity": [
+                    0.8548387096774194,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16129032258064516,
+                    0.5573770491803278,
+                    0.8833333333333333,
+                    0.9830508474576272,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4.333333333333333,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.8517528223410578,
+                "max_dependency_path_length": 15,
+                "inv_homogen": 0.2115765611330668,
+                "novelty": 0.000999021215352336,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "Sadness fills the air, as we walk around the 911 memorial site.  We enter the church, complying with their rules.  The organ is being played and the mood is sombre.   The Empire state building will be a welcome treat later today.",
+            "result_id": "R_21jCVrcLzykPU4h_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_21jCVrcLzykPU4h.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_21jCVrcLzykPU4h"
+            },
+            "metrics": {
+                "length_in_chars": 229,
+                "length_in_words": 44,
+                "length_in_unique_words": 36,
+                "length_in_concepts": 24,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.159090909090909,
+                "avg_sentence_length_in_chars": 57.25,
+                "avg_sentence_length_in_words": 11,
+                "avg_sentence_length_in_unique_words": 10.25,
+                "dsi": 0.207085146204285,
+                "surprise": 0.03933430408674574,
+                "n_gram_diversity": [
+                    0.8181818181818182,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.29545454545454547,
+                    0.6744186046511628,
+                    0.9047619047619048,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.1917372454123814,
+                "max_dependency_path_length": 5,
+                "inv_homogen": 0.20685331953896416,
+                "novelty": 0.016578162075148617,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "Lisa was learning to be an organist. She already played the piano but was working hard to comply with the requirements to pass her exams. She enjoyed playing the organ, especially in a very large venue where she could play a very well known piece from Star Wars \"The Empire Strikes Back\"",
+            "result_id": "R_8XS6nyWsLXkXKFz_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8XS6nyWsLXkXKFz.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8XS6nyWsLXkXKFz"
+            },
+            "metrics": {
+                "length_in_chars": 287,
+                "length_in_words": 52,
+                "length_in_unique_words": 42,
+                "length_in_concepts": 22,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.4423076923076925,
+                "avg_sentence_length_in_chars": 95,
+                "avg_sentence_length_in_words": 17.333333333333332,
+                "avg_sentence_length_in_unique_words": 15.333333333333334,
+                "dsi": 0.21570864926168928,
+                "surprise": 0.04257417692766563,
+                "n_gram_diversity": [
+                    0.8076923076923077,
+                    0.9803921568627451,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.23076923076923078,
+                    0.7450980392156863,
+                    0.98,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.3333333333333335,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.048603683897802,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.1774159206284417,
+                "novelty": 0.0006688440396599438,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "Whilst walking home i was kidnapped by 3 men who demanded i chose an organ to have them harvest. I was very reluctant to agree and tried not to comply with the demands. They began to explain to me the reaches of their empire and that i best agree. ",
+            "result_id": "R_2JzuWAk6bRQPato_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2JzuWAk6bRQPato.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2JzuWAk6bRQPato"
+            },
+            "metrics": {
+                "length_in_chars": 248,
+                "length_in_words": 49,
+                "length_in_unique_words": 38,
+                "length_in_concepts": 19,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4,
+                "avg_sentence_length_in_chars": 81.66666666666667,
+                "avg_sentence_length_in_words": 16.333333333333332,
+                "avg_sentence_length_in_unique_words": 15.333333333333334,
+                "dsi": 0.20757650736479732,
+                "surprise": 0.03313891490300497,
+                "n_gram_diversity": [
+                    0.7755102040816326,
+                    0.9791666666666666,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.24489795918367346,
+                    0.6666666666666666,
+                    0.9148936170212766,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.6666666666666665,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.784037145650049,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.18761885828442043,
+                "novelty": 0.015595439754123974,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "The towering empire of Mrs Smith's authority was overwhelming! She was raising funds for the school again but you would think she was donating an organ they way she seeked gratification and praise from us all. If we didn't all comply with her request to sign up you know you were never going to hear the end of it. Just for an easier life, I was destined to man the teddy tombola stall. ",
+            "result_id": "R_8fKaPcuSHw79GVj_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8fKaPcuSHw79GVj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8fKaPcuSHw79GVj"
+            },
+            "metrics": {
+                "length_in_chars": 387,
+                "length_in_words": 75,
+                "length_in_unique_words": 59,
+                "length_in_concepts": 30,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.12,
+                "avg_sentence_length_in_chars": 95.75,
+                "avg_sentence_length_in_words": 18.75,
+                "avg_sentence_length_in_unique_words": 17.5,
+                "dsi": 0.21355106186592715,
+                "surprise": 0.04361278178199888,
+                "n_gram_diversity": [
+                    0.7866666666666666,
+                    0.9864864864864865,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16,
+                    0.5540540540540541,
+                    0.863013698630137,
+                    0.9861111111111112,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.5,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.7339723768295197,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.18795606560177272,
+                "novelty": 0.003646330751864324,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "As the organ played its first notes, Becky stood in front of the grand doors, her empire-waist wedding dress shimmering in the sunlight. The dress had been passed down for generations and here she was about to comply with her long standing family traditions. On the other side of the door stood all her family and friends, waiting for her to marry the love of her life. ",
+            "result_id": "R_8dVYGXDIccl6jkg_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8dVYGXDIccl6jkg.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8dVYGXDIccl6jkg"
+            },
+            "metrics": {
+                "length_in_chars": 370,
+                "length_in_words": 68,
+                "length_in_unique_words": 49,
+                "length_in_concepts": 24,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.352941176470588,
+                "avg_sentence_length_in_chars": 122.33333333333333,
+                "avg_sentence_length_in_words": 22.666666666666668,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.2123226929402006,
+                "surprise": 0.018430694118960866,
+                "n_gram_diversity": [
+                    0.7205882352941176,
+                    0.9850746268656716,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.17647058823529413,
+                    0.5522388059701493,
+                    0.8939393939393939,
+                    0.9692307692307692,
+                    0.984375
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.964095744680851,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.19883033302095202,
+                "novelty": 0.006103068603317441,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "The brass band had never had an organ player before so it was something new to all of them. Some of them were a bit unsure but they couldn't turn down the upportunity to play with a member of the british empire!! They just hope the organ player would comply with the etiquettes they had as a band. ",
+            "result_id": "R_8WxkYgki5yinZhV_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8WxkYgki5yinZhV.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8WxkYgki5yinZhV"
+            },
+            "metrics": {
+                "length_in_chars": 298,
+                "length_in_words": 59,
+                "length_in_unique_words": 41,
+                "length_in_concepts": 16,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4,
+                "avg_sentence_length_in_chars": 98.33333333333333,
+                "avg_sentence_length_in_words": 19.666666666666668,
+                "avg_sentence_length_in_unique_words": 17.666666666666668,
+                "dsi": 0.218959674735864,
+                "surprise": 0.02796802123387654,
+                "n_gram_diversity": [
+                    0.6949152542372882,
+                    0.9655172413793104,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1864406779661017,
+                    0.5344827586206896,
+                    0.7719298245614035,
+                    0.875,
+                    0.9636363636363636
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.993654451027723,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.18433016406165229,
+                "novelty": 0.00717089498800938,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "Daisy wondered what it would be like to receive someone else's organ. She wondered if she would gain any special powers from the other person. \"Imagine if the donor had ruled an empire!\" she exclaimed. \"Will I be more powerful?!\" But Daisy also knew that to receive the organ she would need to comply with the doctors.",
+            "result_id": "R_8mJxG00fCL8kz05_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8mJxG00fCL8kz05.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8mJxG00fCL8kz05"
+            },
+            "metrics": {
+                "length_in_chars": 318,
+                "length_in_words": 58,
+                "length_in_unique_words": 42,
+                "length_in_concepts": 19,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 4.327586206896552,
+                "avg_sentence_length_in_chars": 52.166666666666664,
+                "avg_sentence_length_in_words": 9.666666666666666,
+                "avg_sentence_length_in_unique_words": 9.166666666666666,
+                "dsi": 0.20597797492791337,
+                "surprise": 0.18641804445357552,
+                "n_gram_diversity": [
+                    0.7241379310344828,
+                    0.9473684210526315,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.20689655172413793,
+                    0.631578947368421,
+                    0.8928571428571429,
+                    0.9818181818181818,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.3333333333333333,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.3494708994708993,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.18313972949981688,
+                "novelty": 0.018792504627891893,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "Did you hear the one about the unluckiest man in the world? He once fell off the Empire State Building but landed without breaking one single bone! A miracle - Some would even call it witchcraft! But that's where his luck ran out. You see, while he was lying on the ground, a stray dog ran up to him and bit him right in the eye! Now he is on the Organ donor list waiting for new corneas, however rumor is that he doesn't comply with their rules, so he may be known as one-eyed Pete forever!",
+            "result_id": "R_82McyGIYTts4bOU_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_82McyGIYTts4bOU.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_82McyGIYTts4bOU"
+            },
+            "metrics": {
+                "length_in_chars": 491,
+                "length_in_words": 99,
+                "length_in_unique_words": 78,
+                "length_in_concepts": 36,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 3.8686868686868685,
+                "avg_sentence_length_in_chars": 81,
+                "avg_sentence_length_in_words": 16.5,
+                "avg_sentence_length_in_unique_words": 15.333333333333334,
+                "dsi": 0.21327249464534578,
+                "surprise": 0.0198604302528577,
+                "n_gram_diversity": [
+                    0.7878787878787878,
+                    0.9795918367346939,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13131313131313133,
+                    0.5102040816326531,
+                    0.8556701030927835,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.8333333333333333,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.380919312169312,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.22418336470921835,
+                "novelty": 0.004203465193027056,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "The notes hung in the air, almost alive as they echoed around the cathedral. The beauty of an organ when played by a master is an unparalleled delight. I did not know the name of the piece, it was grand and almost military, perhaps a tribute to an empire long since lost to time. It certainly didn't comply with the playlist set for Michaelmas term this year, as I knew all those compositions by heart. ",
+            "result_id": "R_2mqjhNO26XNoi6R_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2mqjhNO26XNoi6R.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2mqjhNO26XNoi6R"
+            },
+            "metrics": {
+                "length_in_chars": 403,
+                "length_in_words": 76,
+                "length_in_unique_words": 59,
+                "length_in_concepts": 30,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.2105263157894735,
+                "avg_sentence_length_in_chars": 99.75,
+                "avg_sentence_length_in_words": 19,
+                "avg_sentence_length_in_unique_words": 17.75,
+                "dsi": 0.21203298459107847,
+                "surprise": 0.007006472128408936,
+                "n_gram_diversity": [
+                    0.7763157894736842,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.15789473684210525,
+                    0.4533333333333333,
+                    0.6891891891891891,
+                    0.8767123287671232,
+                    0.9722222222222222
+                ],
+                "avg_dependency_num_clauses": 2.25,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.7240899898887765,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.18297493590248956,
+                "novelty": 0.00668248530156168,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "The entire empire got the invite to come and watch Sarah play the flute. She was anxious, nervous, and suddenly she could not breathe and the lights were blurring her vision. next thing she woke up with doctors telling her to comply with their instructions and to calm down as the main organ of her body was ",
+            "result_id": "R_2pgeIFWQlDZignv_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2pgeIFWQlDZignv.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2pgeIFWQlDZignv"
+            },
+            "metrics": {
+                "length_in_chars": 308,
+                "length_in_words": 57,
+                "length_in_unique_words": 42,
+                "length_in_concepts": 26,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.333333333333333,
+                "avg_sentence_length_in_chars": 101.66666666666667,
+                "avg_sentence_length_in_words": 19,
+                "avg_sentence_length_in_unique_words": 16.666666666666668,
+                "dsi": 0.20948564584438617,
+                "surprise": 0.010775785361017476,
+                "n_gram_diversity": [
+                    0.7368421052631579,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.19298245614035087,
+                    0.625,
+                    0.8909090909090909,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4.666666666666667,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.5545362078937397,
+                "max_dependency_path_length": 13,
+                "inv_homogen": 0.17926558123694525,
+                "novelty": 0.011777162794946283,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "The church's organ did not comply with health and safety standards. the pipes were close to falling off and were not screwed or bolted down to anything, they were just hanging loose. For a church which is part of such a big empire, surely they could be able to afford the proper installation of their own organ?",
+            "result_id": "R_2LTbPAQf8NZ0wRb_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2LTbPAQf8NZ0wRb.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2LTbPAQf8NZ0wRb"
+            },
+            "metrics": {
+                "length_in_chars": 311,
+                "length_in_words": 58,
+                "length_in_unique_words": 45,
+                "length_in_concepts": 20,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.310344827586207,
+                "avg_sentence_length_in_chars": 103,
+                "avg_sentence_length_in_words": 19.333333333333332,
+                "avg_sentence_length_in_unique_words": 17.666666666666668,
+                "dsi": 0.21421534638655812,
+                "surprise": 0.027921444697985576,
+                "n_gram_diversity": [
+                    0.7758620689655172,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1724137931034483,
+                    0.6842105263157895,
+                    0.9642857142857143,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.9874562819478077,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.1860712342792087,
+                "novelty": 0.002317761710602384,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "The Empire Theatre was a classic. It was fitted with beautiful, original Art Deco features and an organ set by the stage. It wouldn't comply with any of today's building regulations but I don't think anyone would want to change it.",
+            "result_id": "R_8wT7Ix8TsW7XbEo_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8wT7Ix8TsW7XbEo.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8wT7Ix8TsW7XbEo"
+            },
+            "metrics": {
+                "length_in_chars": 231,
+                "length_in_words": 44,
+                "length_in_unique_words": 37,
+                "length_in_concepts": 19,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.25,
+                "avg_sentence_length_in_chars": 76.33333333333333,
+                "avg_sentence_length_in_words": 14.666666666666666,
+                "avg_sentence_length_in_unique_words": 13.666666666666666,
+                "dsi": 0.21134376525878906,
+                "surprise": 0.022949846964033793,
+                "n_gram_diversity": [
+                    0.8409090909090909,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.22727272727272727,
+                    0.6511627906976745,
+                    0.8571428571428571,
+                    0.9512195121951219,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.3333333333333335,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.6485380116959063,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.20268829398685032,
+                "novelty": 0.008060923966140499,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "In 2142, the British empire has a problem. With the lack of jobs many have turned to organ sharks. If you take a loan from them and don't pay them back they give you a warning. After some time has passed, and you still don't comply, they come and gut you for what you have usually taking a liver or kidney. Gutted people are called husks which are marked by the organ sharks. ",
+            "result_id": "R_8kQG02fwq7ubaOB_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8kQG02fwq7ubaOB.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8kQG02fwq7ubaOB"
+            },
+            "metrics": {
+                "length_in_chars": 376,
+                "length_in_words": 75,
+                "length_in_unique_words": 55,
+                "length_in_concepts": 26,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 3.933333333333333,
+                "avg_sentence_length_in_chars": 74.2,
+                "avg_sentence_length_in_words": 15,
+                "avg_sentence_length_in_unique_words": 13.6,
+                "dsi": 0.21605459635074323,
+                "surprise": 0.021552151867321553,
+                "n_gram_diversity": [
+                    0.7333333333333333,
+                    0.972972972972973,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16,
+                    0.581081081081081,
+                    0.8904109589041096,
+                    0.9722222222222222,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.4,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 2.4534559643255296,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.19110962682300145,
+                "novelty": 0.0013607382177678318,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "Jason played his organ loudly, entertaining the higher-ups of the empire. He had been asked to play at the society wedding, and had strict instructions to play only romantic and beautiful songs. However, he was a member of the secret society and had a plan. He started to play a stirring, uplifting song which did not comply with his orders, and the society rushed in through the open doors, ready to attack.",
+            "result_id": "R_8B3zak55aPwmX5t_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8B3zak55aPwmX5t.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8B3zak55aPwmX5t"
+            },
+            "metrics": {
+                "length_in_chars": 408,
+                "length_in_words": 73,
+                "length_in_unique_words": 50,
+                "length_in_concepts": 29,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.465753424657534,
+                "avg_sentence_length_in_chars": 101.25,
+                "avg_sentence_length_in_words": 18.25,
+                "avg_sentence_length_in_unique_words": 16.25,
+                "dsi": 0.2097276518203942,
+                "surprise": 0.004983208530745834,
+                "n_gram_diversity": [
+                    0.684931506849315,
+                    0.9305555555555556,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1506849315068493,
+                    0.5138888888888888,
+                    0.8309859154929577,
+                    0.9714285714285714,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.75,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.7555271983517065,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.16865624719195896,
+                "novelty": 0.0112931508429302,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "I walked into the musical hall, listening to an old woman playing the organ. I can't believe that I am now in charge of an empire, I don't know how I got into this position. Even though I am suppposedly in power I have been given so many rules I have to comply with. I feel like breaking all the rules and running away from here.",
+            "result_id": "R_2cHcLwZLH3kFnm9_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2cHcLwZLH3kFnm9.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2cHcLwZLH3kFnm9"
+            },
+            "metrics": {
+                "length_in_chars": 329,
+                "length_in_words": 68,
+                "length_in_unique_words": 50,
+                "length_in_concepts": 24,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 3.7941176470588234,
+                "avg_sentence_length_in_chars": 81.5,
+                "avg_sentence_length_in_words": 17,
+                "avg_sentence_length_in_unique_words": 15,
+                "dsi": 0.20719840561134228,
+                "surprise": 0.022570916773780904,
+                "n_gram_diversity": [
+                    0.7352941176470589,
+                    0.9701492537313433,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16176470588235295,
+                    0.4626865671641791,
+                    0.7121212121212122,
+                    0.8153846153846154,
+                    0.875
+                ],
+                "avg_dependency_num_clauses": 2.5,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.879556277056277,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.16795328590604994,
+                "novelty": 0.016351643261034055,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "My friend Archie is gravely ill and needs a new organ as hHis Kidney is failing rapidly and in need of a transplant. The NHS empire, our National Health Service says I am a matching donor, I have a problem in as much as I love my friend very much, but I am not 100% sure I want to comply and go ahead with giving up one of my kidneys, even for my dear friend. I am worried about my future health needs.",
+            "result_id": "R_8dFIkEkt84RkgQj_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8dFIkEkt84RkgQj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8dFIkEkt84RkgQj"
+            },
+            "metrics": {
+                "length_in_chars": 402,
+                "length_in_words": 83,
+                "length_in_unique_words": 57,
+                "length_in_concepts": 31,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.7590361445783134,
+                "avg_sentence_length_in_chars": 133.33333333333334,
+                "avg_sentence_length_in_words": 27.666666666666668,
+                "avg_sentence_length_in_unique_words": 23,
+                "dsi": 0.21173745727026333,
+                "surprise": 0.015093934830676226,
+                "n_gram_diversity": [
+                    0.6867469879518072,
+                    0.9634146341463414,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1566265060240964,
+                    0.6585365853658537,
+                    0.9382716049382716,
+                    0.9875,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4.666666666666667,
+                "max_dependency_num_clauses": 9,
+                "avg_dependency_path_length": 3.4122265540394197,
+                "max_dependency_path_length": 13,
+                "inv_homogen": 0.21402217149734498,
+                "novelty": 0.0072735399431919645,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "\"Enter now Phantom! Come on now, stage left!\" Mr Countgrieves bellowed like a desperate Caesar would demand the legionaries of his empire submit and comply to his authority. As he sat at the towering pipe organ he sighed. Elias, who was meant to be playing \"The Phantom\" was on a smoke break.",
+            "result_id": "R_2rra18JsIdbb7pI_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2rra18JsIdbb7pI.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2rra18JsIdbb7pI"
+            },
+            "metrics": {
+                "length_in_chars": 292,
+                "length_in_words": 52,
+                "length_in_unique_words": 42,
+                "length_in_concepts": 27,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.423076923076923,
+                "avg_sentence_length_in_chars": 57.6,
+                "avg_sentence_length_in_words": 10.4,
+                "avg_sentence_length_in_unique_words": 9.8,
+                "dsi": 0.2101134270684332,
+                "surprise": 0.03607818737174526,
+                "n_gram_diversity": [
+                    0.8076923076923077,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.23076923076923078,
+                    0.6666666666666666,
+                    0.94,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.6,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.2916017316017316,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.18202741543451945,
+                "novelty": 0.010521600346852233,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "In the distant British Empire it used to be law that whenever someone stole a sack of salt they would be arrested and had to choose an organ they had to sacrifice. No one ever chose a hand, they'd ask for an ear or a kidney but never a hand. There was no choice, they had to comply because resisting would mean sure death. This is the story of how salt become one of the most common seasonings in the world.",
+            "result_id": "R_2eaDBbNJB41Q6MF_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2eaDBbNJB41Q6MF.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2eaDBbNJB41Q6MF"
+            },
+            "metrics": {
+                "length_in_chars": 407,
+                "length_in_words": 82,
+                "length_in_unique_words": 58,
+                "length_in_concepts": 25,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 3.9146341463414633,
+                "avg_sentence_length_in_chars": 101,
+                "avg_sentence_length_in_words": 20.5,
+                "avg_sentence_length_in_unique_words": 17.75,
+                "dsi": 0.21686573723951974,
+                "surprise": 0.01559822318529841,
+                "n_gram_diversity": [
+                    0.7073170731707317,
+                    0.9382716049382716,
+                    0.9875,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.15853658536585366,
+                    0.5308641975308642,
+                    0.75,
+                    0.8860759493670886,
+                    0.9487179487179487
+                ],
+                "avg_dependency_num_clauses": 4,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.125922987616099,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.20840010113186305,
+                "novelty": 0.002983019995320857,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "The vast church organ in the nave of the church seem like the vestige of an long forgotten empire. Endless vertical pipes that seemed to have been built by a larger race, not looking like they would comply with any current laws of physics. The sound was otherworldly to match",
+            "result_id": "R_8VyQYwyI8iMwwKJ_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8VyQYwyI8iMwwKJ.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8VyQYwyI8iMwwKJ"
+            },
+            "metrics": {
+                "length_in_chars": 275,
+                "length_in_words": 50,
+                "length_in_unique_words": 41,
+                "length_in_concepts": 23,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.46,
+                "avg_sentence_length_in_chars": 91,
+                "avg_sentence_length_in_words": 16.666666666666668,
+                "avg_sentence_length_in_unique_words": 15,
+                "dsi": 0.2133182574637794,
+                "surprise": 0.020298147743398498,
+                "n_gram_diversity": [
+                    0.82,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2,
+                    0.5714285714285714,
+                    0.75,
+                    0.8723404255319149,
+                    0.9347826086956522
+                ],
+                "avg_dependency_num_clauses": 1.6666666666666667,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.8115079365079363,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.16998813019858466,
+                "novelty": 0.004111939556159849,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "Under the rule of the galactic empire, the population were forced to comply with their rules, this included having to supply an organ when requested for implant into one of the royal family. Some people try to hide from them, however, at birth, they are implanted with tracking chips, so they need to have these illegally removed to stop themselves being found.",
+            "result_id": "R_8d77LowRrq3xFfJ_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8d77LowRrq3xFfJ.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8d77LowRrq3xFfJ"
+            },
+            "metrics": {
+                "length_in_chars": 361,
+                "length_in_words": 62,
+                "length_in_unique_words": 52,
+                "length_in_concepts": 25,
+                "length_in_sentences": 2,
+                "avg_word_length_in_chars": 4.709677419354839,
+                "avg_sentence_length_in_chars": 180,
+                "avg_sentence_length_in_words": 31,
+                "avg_sentence_length_in_unique_words": 27,
+                "dsi": 0.20943646907806396,
+                "surprise": 0.01758809239317327,
+                "n_gram_diversity": [
+                    0.8387096774193549,
+                    0.9836065573770492,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1774193548387097,
+                    0.5245901639344263,
+                    0.8,
+                    0.8983050847457628,
+                    0.9482758620689655
+                ],
+                "avg_dependency_num_clauses": 6,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.4516129032258065,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.19126440286636354,
+                "novelty": 0.011875516327590707,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "My favourire bodily organ is my right eye. With it, I can see the whole vista of the empire when I stand at the highest point of the island. The laws of optics suggest it shouldn't be so, but in magic worlds eyes don't have to comply with the laws of terrestial physics ",
+            "result_id": "R_2BoHBhJy5N6y8ZX_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2BoHBhJy5N6y8ZX.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2BoHBhJy5N6y8ZX"
+            },
+            "metrics": {
+                "length_in_chars": 270,
+                "length_in_words": 55,
+                "length_in_unique_words": 41,
+                "length_in_concepts": 19,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.8727272727272726,
+                "avg_sentence_length_in_chars": 89,
+                "avg_sentence_length_in_words": 18.333333333333332,
+                "avg_sentence_length_in_unique_words": 15,
+                "dsi": 0.21819650638870328,
+                "surprise": 0.0020843499236636587,
+                "n_gram_diversity": [
+                    0.7454545454545455,
+                    0.9444444444444444,
+                    0.9811320754716981,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2,
+                    0.6111111111111112,
+                    0.8301886792452831,
+                    0.9423076923076923,
+                    0.9607843137254902
+                ],
+                "avg_dependency_num_clauses": 1.6666666666666667,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.6520169442572445,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.214788822333018,
+                "novelty": 0.005644558293687929,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "'Good morning Emma! Are you here to donate your kidney today? You're so very kind! Organ donation is such a generous thing to do.' 'Yes, Rhi promised me some new books on the Empire of Glass if I went for it! So here I am ready to comply. I'll do anything for a good book!' Emma beamed in excitement.",
+            "result_id": "R_2So8IZ3DwEtmV0v_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2So8IZ3DwEtmV0v.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2So8IZ3DwEtmV0v"
+            },
+            "metrics": {
+                "length_in_chars": 300,
+                "length_in_words": 61,
+                "length_in_unique_words": 49,
+                "length_in_concepts": 23,
+                "length_in_sentences": 8,
+                "avg_word_length_in_chars": 3.7540983606557377,
+                "avg_sentence_length_in_chars": 36.625,
+                "avg_sentence_length_in_words": 7.625,
+                "avg_sentence_length_in_unique_words": 7.625,
+                "dsi": 0.21432337482927344,
+                "surprise": 0.16719258277594637,
+                "n_gram_diversity": [
+                    0.8032786885245902,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.19672131147540983,
+                    0.6666666666666666,
+                    0.9322033898305084,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 0.5,
+                "max_dependency_num_clauses": 1,
+                "avg_dependency_path_length": 1.950687243983615,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.20009735425313313,
+                "novelty": 0.0021017048251717463,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "Of course, I had to comply and enter the church as he had suggested. In it was an enourmous organ, the biggest in the whole empire i was told. I looked at it for a long time, but struggles to find any beauty in it.",
+            "result_id": "R_8DSuE0JfUBgPxHX_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8DSuE0JfUBgPxHX.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8DSuE0JfUBgPxHX"
+            },
+            "metrics": {
+                "length_in_chars": 214,
+                "length_in_words": 45,
+                "length_in_unique_words": 34,
+                "length_in_concepts": 16,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.6444444444444444,
+                "avg_sentence_length_in_chars": 70.66666666666667,
+                "avg_sentence_length_in_words": 15,
+                "avg_sentence_length_in_unique_words": 13.333333333333334,
+                "dsi": 0.20947785178820294,
+                "surprise": 0.03833459218343099,
+                "n_gram_diversity": [
+                    0.7555555555555555,
+                    0.9772727272727273,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.24444444444444444,
+                    0.5909090909090909,
+                    0.8372093023255814,
+                    0.9761904761904762,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.6666666666666665,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.6715398061337994,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.16112804412841797,
+                "novelty": 0.011792750907312743,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "The Romans Empire was big, bold and powerful. Each of the small provinces were required to comply with its laws at all times. A central group, also known as the organ of the empire ensured that things ran smoothly and everyone complied. ",
+            "result_id": "R_2bxsVUkaSaFXjdD_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2bxsVUkaSaFXjdD.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2bxsVUkaSaFXjdD"
+            },
+            "metrics": {
+                "length_in_chars": 237,
+                "length_in_words": 42,
+                "length_in_unique_words": 36,
+                "length_in_concepts": 19,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.523809523809524,
+                "avg_sentence_length_in_chars": 78,
+                "avg_sentence_length_in_words": 14,
+                "avg_sentence_length_in_unique_words": 13.666666666666666,
+                "dsi": 0.21256054563131946,
+                "surprise": 0.016064058409796828,
+                "n_gram_diversity": [
+                    0.8571428571428571,
+                    0.975609756097561,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2857142857142857,
+                    0.7560975609756098,
+                    0.9,
+                    0.9743589743589743,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.6666666666666665,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.649074074074074,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.2009332776069641,
+                "novelty": 0.0056273632210797064,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "I am the nerdy girl in school, the one who loves music not fashion or sports. My version of fun is learning a new instrument like the organ, not going shopping and spending loads of money! I guess I don't comply to the rest of the school social norms, I feel that in this world their empire is a complete different class compared to mine, I am boring and dull in comparison.",
+            "result_id": "R_8o6ejl1aVHjSI9z_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8o6ejl1aVHjSI9z.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8o6ejl1aVHjSI9z"
+            },
+            "metrics": {
+                "length_in_chars": 374,
+                "length_in_words": 73,
+                "length_in_unique_words": 54,
+                "length_in_concepts": 34,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.054794520547945,
+                "avg_sentence_length_in_chars": 124,
+                "avg_sentence_length_in_words": 24.333333333333332,
+                "avg_sentence_length_in_unique_words": 21.666666666666668,
+                "dsi": 0.20712557514721058,
+                "surprise": 0.008194302583669683,
+                "n_gram_diversity": [
+                    0.7397260273972602,
+                    0.9861111111111112,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.136986301369863,
+                    0.5277777777777778,
+                    0.8169014084507042,
+                    0.9714285714285714,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4.333333333333333,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.1113653699466055,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.22325545814302233,
+                "novelty": 0.016497304189297457,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "The mighty Roman empire we learned about in school. I knew that I needed to write an essay on it to comply with my qualification requirements, but I didn't really want to. Surely somewhere in my brain I could find a way of wriggling out of it. After all they keep telling us what a wonderful organ our brain is.",
+            "result_id": "R_8FjH6e5PsshRtjr_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8FjH6e5PsshRtjr.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8FjH6e5PsshRtjr"
+            },
+            "metrics": {
+                "length_in_chars": 311,
+                "length_in_words": 61,
+                "length_in_unique_words": 50,
+                "length_in_concepts": 21,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.049180327868853,
+                "avg_sentence_length_in_chars": 77,
+                "avg_sentence_length_in_words": 15.25,
+                "avg_sentence_length_in_unique_words": 14,
+                "dsi": 0.20732518292608715,
+                "surprise": 0.034236380978236114,
+                "n_gram_diversity": [
+                    0.819672131147541,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.18032786885245902,
+                    0.5833333333333334,
+                    0.8983050847457628,
+                    0.9827586206896551,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.5,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.571708463949843,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.19071061611175538,
+                "novelty": 0.016098088631544327,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "It's so hard for me to comply with the rules at school. All I wanted to play that day was Empire Earth on my phone, and I wasn't even doing it in class. It was at lunchtime. But my biology teacher caught me and sent me to her classroom to wait for her. While I waited, I looked at the poster on her wall depicting the organ system of the body.",
+            "result_id": "R_2iUnWVtJB7cvKHj_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2iUnWVtJB7cvKHj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2iUnWVtJB7cvKHj"
+            },
+            "metrics": {
+                "length_in_chars": 343,
+                "length_in_words": 73,
+                "length_in_unique_words": 50,
+                "length_in_concepts": 25,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 3.643835616438356,
+                "avg_sentence_length_in_chars": 67.8,
+                "avg_sentence_length_in_words": 14.6,
+                "avg_sentence_length_in_unique_words": 13,
+                "dsi": 0.20493639906247457,
+                "surprise": 0.20976174977563677,
+                "n_gram_diversity": [
+                    0.684931506849315,
+                    0.9861111111111112,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1643835616438356,
+                    0.5138888888888888,
+                    0.8450704225352113,
+                    0.9714285714285714,
+                    0.9855072463768116
+                ],
+                "avg_dependency_num_clauses": 2.2,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.383189199051268,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.19390282498465644,
+                "novelty": 0.02087565635876948,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "The church organ had even survived the many years of the British Empire. But, now it was earmarked for destruction and the Father had to comply. ",
+            "result_id": "R_2PoZkpFOhTZwzbR_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2PoZkpFOhTZwzbR.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2PoZkpFOhTZwzbR"
+            },
+            "metrics": {
+                "length_in_chars": 145,
+                "length_in_words": 26,
+                "length_in_unique_words": 22,
+                "length_in_concepts": 10,
+                "length_in_sentences": 2,
+                "avg_word_length_in_chars": 4.461538461538462,
+                "avg_sentence_length_in_chars": 71.5,
+                "avg_sentence_length_in_words": 13,
+                "avg_sentence_length_in_unique_words": 12,
+                "dsi": 0.2251429173681471,
+                "surprise": 0.036784191926320375,
+                "n_gram_diversity": [
+                    0.8461538461538461,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.4230769230769231,
+                    0.96,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.2,
+                "max_dependency_path_length": 5,
+                "inv_homogen": 0.16492323213153415,
+                "novelty": 0.019537380252575565,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "Our local church had received a letter from the council to let them know that the organ that is played regularly at the church services needed to comply with regulation for health and safety reasons.  The minister asked me if I knew anyone who could possibly help with this as he didn't know the first thing about it!! I asked my friend who worked at the Empire theatre in the town if she knew anyone who perhaps would be able to do it.  Luckily we found someone!!!  Thank goodness!!!",
+            "result_id": "R_2G1cvocEgxet2xf_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2G1cvocEgxet2xf.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2G1cvocEgxet2xf"
+            },
+            "metrics": {
+                "length_in_chars": 484,
+                "length_in_words": 93,
+                "length_in_unique_words": 70,
+                "length_in_concepts": 33,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.150537634408602,
+                "avg_sentence_length_in_chars": 96.6,
+                "avg_sentence_length_in_words": 18.6,
+                "avg_sentence_length_in_unique_words": 17,
+                "dsi": 0.20912861157998894,
+                "surprise": 0.024135164361374042,
+                "n_gram_diversity": [
+                    0.7526881720430108,
+                    0.967391304347826,
+                    0.989010989010989,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13978494623655913,
+                    0.532608695652174,
+                    0.8791208791208791,
+                    0.9666666666666667,
+                    0.9887640449438202
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.013919214721362,
+                "max_dependency_path_length": 15,
+                "inv_homogen": 0.1801600972811381,
+                "novelty": 0.012491231323740748,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "I am very good at playing the organ such that I was invited to play at a ceremony for the giving of medals. When it came to the empire medal I had to play specific music to comply with the requirements of the ceremony",
+            "result_id": "R_8bVpeztZaqiDial_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8bVpeztZaqiDial.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8bVpeztZaqiDial"
+            },
+            "metrics": {
+                "length_in_chars": 217,
+                "length_in_words": 44,
+                "length_in_unique_words": 31,
+                "length_in_concepts": 13,
+                "length_in_sentences": 2,
+                "avg_word_length_in_chars": 3.9318181818181817,
+                "avg_sentence_length_in_chars": 108,
+                "avg_sentence_length_in_words": 22,
+                "avg_sentence_length_in_unique_words": 18.5,
+                "dsi": 0.213584663776251,
+                "surprise": 0.0023006626537868113,
+                "n_gram_diversity": [
+                    0.7045454545454546,
+                    0.9767441860465116,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.22727272727272727,
+                    0.5581395348837209,
+                    0.7380952380952381,
+                    0.8292682926829268,
+                    0.9
+                ],
+                "avg_dependency_num_clauses": 2.5,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.3051470588235294,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.1751189907391866,
+                "novelty": 0.0035791269312166474,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "I was privalidged to attend a big show last week. There was a man playing the organ. Apparently he started with one and then bought a store . He started his own company and now has grown to a milion pound empire. As it was so entertaining i found it hard to comply with the rules and not start singing and clapping.",
+            "result_id": "R_8U0c5Ms0PJ9VYTm_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8U0c5Ms0PJ9VYTm.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8U0c5Ms0PJ9VYTm"
+            },
+            "metrics": {
+                "length_in_chars": 315,
+                "length_in_words": 61,
+                "length_in_unique_words": 45,
+                "length_in_concepts": 23,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.081967213114754,
+                "avg_sentence_length_in_chars": 62.2,
+                "avg_sentence_length_in_words": 12.2,
+                "avg_sentence_length_in_unique_words": 11.8,
+                "dsi": 0.2150784643742407,
+                "surprise": 0.024408844964844842,
+                "n_gram_diversity": [
+                    0.7377049180327869,
+                    0.9833333333333333,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.19672131147540983,
+                    0.5833333333333334,
+                    0.8813559322033898,
+                    0.9655172413793104,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.8,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 2.3501579691437704,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.173907556798723,
+                "novelty": 0.0005915257352372416,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "He would not listen, Intransigent in his beliefs that the country is which he lived was justified in his imperial conquest of the world. An empire of beliefs. An empire where the sun never set. He did not understand the absurdity of his supremacism, and in his own limited mind believe that there was nothing wrong in bending the will of others he saw as beneath him - comply or be repressed. Comply or be subdued. Like a festering organ, he disgorged his retrograde beliefs and I wondered if I ever really knew him at all. Was this what others thought? Believed. That some men were meant to rule others by virtue of some unknown inherent sense of superiority?  The friendship would be forever broken. I was certain of this. ",
+            "result_id": "R_8kEPJucbd4CbnFO_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8kEPJucbd4CbnFO.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8kEPJucbd4CbnFO"
+            },
+            "metrics": {
+                "length_in_chars": 725,
+                "length_in_words": 130,
+                "length_in_unique_words": 85,
+                "length_in_concepts": 46,
+                "length_in_sentences": 11,
+                "avg_word_length_in_chars": 4.461538461538462,
+                "avg_sentence_length_in_chars": 65,
+                "avg_sentence_length_in_words": 11.818181818181818,
+                "avg_sentence_length_in_unique_words": 10.727272727272727,
+                "dsi": 0.20608372158474392,
+                "surprise": 0.15156537966122705,
+                "n_gram_diversity": [
+                    0.6538461538461539,
+                    0.9612403100775194,
+                    0.9921875,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09230769230769231,
+                    0.4108527131782946,
+                    0.75,
+                    0.9448818897637795,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.6363636363636365,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.2660971332876554,
+                "max_dependency_path_length": 12,
+                "inv_homogen": 0.20694099929597642,
+                "novelty": 0.01858101131423079,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "In the British empire, Christianity was an important way in which colonialism spread. The symbol of huge cathedrals and churches with a large organ inside pumping out hymns was very powerful. Many people faced a choice, comply or die. ",
+            "result_id": "R_8IgyrHkEhSlOgd5_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8IgyrHkEhSlOgd5.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8IgyrHkEhSlOgd5"
+            },
+            "metrics": {
+                "length_in_chars": 235,
+                "length_in_words": 39,
+                "length_in_unique_words": 35,
+                "length_in_concepts": 22,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.897435897435898,
+                "avg_sentence_length_in_chars": 77.33333333333333,
+                "avg_sentence_length_in_words": 13,
+                "avg_sentence_length_in_unique_words": 12.666666666666666,
+                "dsi": 0.2146263024507663,
+                "surprise": 0.01809777428233436,
+                "n_gram_diversity": [
+                    0.8974358974358975,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2564102564102564,
+                    0.631578947368421,
+                    0.8378378378378378,
+                    0.9166666666666666,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.6666666666666667,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.5569105691056913,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.18523893886142306,
+                "novelty": 0.0014958495821860152,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "The prince swept his fingers dramatically across the keyboard, enjoying the sounds of the organ reverberating around the empty church. He turned around to face the empty pews and barely contained his urge to start throwing the bouquets around the empty space. He didn't feel the need to comply with social norms right now, but still had to maintain a public face if he were to inherit his father's empire. So much for the princess though, she had decided it was all too quick a romance and she 'needed time to think', whatever that meant. And what was he to do in the meantime, just sit and wait?",
+            "result_id": "R_87z2b4sr7in6R21_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_87z2b4sr7in6R21.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_87z2b4sr7in6R21"
+            },
+            "metrics": {
+                "length_in_chars": 596,
+                "length_in_words": 110,
+                "length_in_unique_words": 77,
+                "length_in_concepts": 41,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.336363636363636,
+                "avg_sentence_length_in_chars": 118.4,
+                "avg_sentence_length_in_words": 22,
+                "avg_sentence_length_in_unique_words": 19.2,
+                "dsi": 0.21152373145266276,
+                "surprise": 0.03888414267337685,
+                "n_gram_diversity": [
+                    0.7,
+                    0.9724770642201835,
+                    0.9907407407407407,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1,
+                    0.3853211009174312,
+                    0.7129629629629629,
+                    0.897196261682243,
+                    0.9716981132075472
+                ],
+                "avg_dependency_num_clauses": 4.8,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.189242141300965,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.19556961059570313,
+                "novelty": 0.0077009915783931016,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "I used to play every morning for the grand empire, back when music was just an expected part of the halls, everyday waking up to a new song. One day new regulations came in, and they said every empire had to have a certified organ player to comply with some strange new rule. They called it \u201cmusical preservation,\u201d but no one really knew what it meant. Our empire couldn't find someone with the right papers, so they had to shut down the whole thing. Now, the halls are silent, I look back on the beautiful music filled days with a touch of sadness. Not knowing what could be done to return the song back to our dear empire.",
+            "result_id": "R_8PvUUEqSWnAZrWx_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8PvUUEqSWnAZrWx.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8PvUUEqSWnAZrWx"
+            },
+            "metrics": {
+                "length_in_chars": 624,
+                "length_in_words": 119,
+                "length_in_unique_words": 82,
+                "length_in_concepts": 39,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 4.1344537815126055,
+                "avg_sentence_length_in_chars": 103.16666666666667,
+                "avg_sentence_length_in_words": 19.833333333333332,
+                "avg_sentence_length_in_unique_words": 18.5,
+                "dsi": 0.20915572572494487,
+                "surprise": 0.008275775813093078,
+                "n_gram_diversity": [
+                    0.6890756302521008,
+                    0.9830508474576272,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10084033613445378,
+                    0.4152542372881356,
+                    0.7094017094017094,
+                    0.8793103448275862,
+                    0.9652173913043478
+                ],
+                "avg_dependency_num_clauses": 2.6666666666666665,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.9429244347779067,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.16595559914906818,
+                "novelty": 0.012437003033828886,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "Sean regularly visited his local music shop, as he loved to play the organ. He dreamed of owning his own one day, but he could not afford such a grand purchase, and did not have space in his apartment on the east side of town. He also chose not to comply with store rules, that musical instruments were not to be played, only to be purchased. Sean was frustrated with the music and retail empire, he wished for a day where music shops were open to all where people could gather and showcase their talents.",
+            "result_id": "R_8LtUJwc0nMwsLzG_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8LtUJwc0nMwsLzG.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8LtUJwc0nMwsLzG"
+            },
+            "metrics": {
+                "length_in_chars": 505,
+                "length_in_words": 95,
+                "length_in_unique_words": 67,
+                "length_in_concepts": 34,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.221052631578948,
+                "avg_sentence_length_in_chars": 125.5,
+                "avg_sentence_length_in_words": 23.75,
+                "avg_sentence_length_in_unique_words": 21,
+                "dsi": 0.21098991628211664,
+                "surprise": 0.019859696761543866,
+                "n_gram_diversity": [
+                    0.7052631578947368,
+                    0.9787234042553191,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1368421052631579,
+                    0.5106382978723404,
+                    0.8924731182795699,
+                    0.9782608695652174,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4.25,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.1196418887383532,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.1858257081773546,
+                "novelty": 0.008768621919485353,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "output": "the surgery was difficult and long. The patient's organ had failed at the last minute. It was a heart failure, and the surgeon is not positive she did her best, although every step in the operation was strictly followed and she had to comply with the patient's needs. In this day and age, we don't expect to fail during surgery, an entire empire of lawyers is waiting outside of the operating room to hear of your failure. still, there is hope she could explain all to the family and the other doctors support her decision. ",
+            "result_id": "R_8K7NzHgqM00gKVF_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8K7NzHgqM00gKVF.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8K7NzHgqM00gKVF"
+            },
+            "metrics": {
+                "length_in_chars": 524,
+                "length_in_words": 98,
+                "length_in_unique_words": 68,
+                "length_in_concepts": 35,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.275510204081633,
+                "avg_sentence_length_in_chars": 103.8,
+                "avg_sentence_length_in_words": 19.6,
+                "avg_sentence_length_in_unique_words": 17.6,
+                "dsi": 0.21099662640515496,
+                "surprise": 0.009685375834956308,
+                "n_gram_diversity": [
+                    0.6938775510204082,
+                    0.9690721649484536,
+                    0.9895833333333334,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11224489795918367,
+                    0.4742268041237113,
+                    0.78125,
+                    0.9578947368421052,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 2.6647962294684886,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.20615217685699463,
+                "novelty": 0.008755201673408708,
+                "theme_uniqueness": 1.0
+            }
+        }
+    ]
+}

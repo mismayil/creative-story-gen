@@ -194,11 +194,25 @@ def group_results_by_model(results: list):
 
     return result_groups
 
+def group_results_by_sentience(results: list):
+    result_groups = defaultdict(list)
+
+    for result in results:
+        model = result["metadata"]["model"]
+        if model == "human":
+            result_groups["human"].append(result)
+        else:
+            result_groups["machine"].append(result)
+
+    return result_groups
+
 def group_results_by(results: list, by="id"):
     if by == "id":
         return group_results_by_id(results)
     elif by == "model":
         return group_results_by_model(results)
+    elif by == "sentience":
+        return group_results_by_sentience(results)
     else:
         raise ValueError(f"Grouping by {by} is not supported")
 
@@ -248,6 +262,13 @@ def report_metrics(results_files, config):
             raise e
     
     grouped_results = group_results(all_results, by=config["group_by"])
+    
+    # print stats
+    print(f"Number of total samples: {len(all_results)}")
+    print(f"Number of groups: {len(grouped_results)}")
+    print("Groups:")
+    for group_id, group_res in grouped_results.items():
+        print(f"\tGroup {group_id}: {len(group_res)} samples")
 
     output_dir = pathlib.Path(config["output_dir"]) if config["output_dir"] else pathlib.Path(results_files[0]).parent
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -255,6 +276,7 @@ def report_metrics(results_files, config):
     num_samples = config["num_samples"]
 
     if config["deduplicate"]:
+        print("Deduplicating results")
         for group_id, group_res in grouped_results.items():
             grouped_results[group_id] = deduplicate_results(group_res, by=config["deduplicate_by"])
         
@@ -263,10 +285,13 @@ def report_metrics(results_files, config):
         if num_samples:
             num_samples = min(num_samples, min_group_size)
     
+    print(f"Final number of samples: {num_samples}")
+
     for group_id, group_res in grouped_results.items():    
         if num_samples:
             group_res = random.sample(group_res, min(num_samples, len(group_res)))
         
+        print(f"Computing metrics for group {group_id}")
         metrics = compute_metrics(group_res, config)
         
         parent_group_ids = []

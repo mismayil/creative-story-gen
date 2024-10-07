@@ -1,5 +1,5 @@
 {
-    "description": "Default report using all model results",
+    "description": "Grouping by model vs human and deduplication",
     "emb_model": "thenlper/gte-large",
     "emb_type": "sentence_embedding",
     "emb_strategy": "direct",
@@ -11,5 +11,7 @@
     "unique": true,
     "cluster_linkage": "ward",
     "cluster_dist_threshold": 0.5,
-    "num_samples": 36
+    "num_samples": 48,
+    "deduplicate": true,
+    "group_by": ["sentience", "id"]
 }

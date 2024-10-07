@@ -15,14 +15,22 @@ TICK_SIZE = 40
 LEGEND_TITLE_SIZE = 40
 LEGEND_SIZE = 30
 
-def get_model_id(metrics):
-    if "model_id" in metrics.columns:
-        return metrics["model_id"].iloc[0].split("_")[0]
-    return "human"
+def get_model_id(metrics, model_family="by_name"):
+    model_id = "human"
 
-def plot_metrics_by_item_id(metrics_lst, metric, output_dir, output_format="png"):
+    if "model_id" in metrics.columns:
+        model_id = metrics["model_id"].iloc[0].split("_")[0]
+    
+    if model_family == "by_type":
+        pass
+    elif model_family == "by_sentience":
+        return "human" if model_id == "human" else "machine"
+
+    return model_id
+
+def plot_metrics_by_item_id(metrics_lst, metric, output_dir, output_format="png", model_family="by_name"):
     for metrics in metrics_lst:
-        metrics["model"] = get_model_id(metrics)
+        metrics["model"] = get_model_id(metrics, model_family)
 
     output_dir = pathlib.Path(output_dir) / f"{output_format}_figs"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -44,7 +52,10 @@ def plot_metrics_by_item_id(metrics_lst, metric, output_dir, output_format="png"
     print(f"Saving figure to {plot_path}")
     plt.savefig(plot_path)
 
-def plot_metrics_n_gram_diversity(metrics_lst, output_dir, output_format="png"):
+def plot_metrics_n_gram_diversity(metrics_lst, output_dir, output_format="png", model_family="by_name"):
+    for metrics in metrics_lst:
+        metrics["model"] = get_model_id(metrics, model_family)
+
     output_dir = pathlib.Path(output_dir) / f"{output_format}_figs"
     output_dir.mkdir(parents=True, exist_ok=True)
     merged_metrics = pd.concat(metrics_lst)
@@ -79,6 +90,7 @@ def main():
     parser.add_argument("-o", "--output-dir", type=str, help="Output directory to save plots", default=None)
     parser.add_argument("-f", "--output-format", type=str, choices=["png", "pdf", "svg"], default="png", help="Format to save the plots in.")
     parser.add_argument("-p", "--plot-types", type=str, nargs="+", choices=["by_item_id", "n_gram_diversity"], default=["by_item_id"], help="Type of plots to generate")
+    parser.add_argument("-mf", "--model-family", type=str, choices=["by_name", "by_type", "by_sentience"], default="by_name", help="Model family to group by")
 
     args = parser.parse_args()
 
@@ -108,9 +120,9 @@ def main():
         if plot_type == "by_item_id":
             for col in metrics_lst[0].columns:
                 if col.startswith("metric_"):
-                    plot_metrics_by_item_id(metrics_lst, col, output_dir, output_format=args.output_format)
+                    plot_metrics_by_item_id(metrics_lst, col, output_dir, output_format=args.output_format, model_family=args.model_family)
         elif plot_type == "n_gram_diversity":
-            plot_metrics_n_gram_diversity(metrics_lst, output_dir, output_format=args.output_format)
+            plot_metrics_n_gram_diversity(metrics_lst, output_dir, output_format=args.output_format, model_family=args.model_family)
 
 if __name__ == "__main__":
     main()
