@@ -1,0 +1,1992 @@
+{
+    "metadata": {
+        "group_id": [
+            "gemini-1.5-flash",
+            "petrol-diesel-pump"
+        ],
+        "config": {
+            "results_paths": [
+                "../experiments/outputs/gpt-4/pilot/**/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/**/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/**/run1",
+                "../experiments/outputs/human/pilot/run1"
+            ],
+            "report_usage": true,
+            "spacy_lang": "en_core_web_sm",
+            "max_n_gram": 5,
+            "output_dir": "../experiments/reports/pilot/run1_report5",
+            "config": "../experiments/reports/pilot/run1_report5/config.json",
+            "num_samples": 25,
+            "deduplicate": true,
+            "deduplicate_by": "output",
+            "max_frequency": 10,
+            "group_by": [
+                "model",
+                "id"
+            ],
+            "output_attr": "output",
+            "emb_model": "thenlper/gte-large",
+            "emb_type": "sentence_embedding",
+            "emb_strategy": "direct",
+            "distance_fn": "cosine",
+            "lower": true,
+            "remove_punct": true,
+            "remove_stopwords": true,
+            "lemmatize": true,
+            "dominant_k": null,
+            "unique": true,
+            "cluster_linkage": "ward",
+            "cluster_dist_threshold": 0.5,
+            "description": "Report2 + filter by sentence length",
+            "filter_by": {
+                "sentence_length": [
+                    3,
+                    6
+                ]
+            }
+        }
+    },
+    "metrics": {
+        "num_samples": 25,
+        "avg_length_in_chars": 497.16,
+        "avg_length_in_words": 90.52,
+        "avg_length_in_unique_words": 64.8,
+        "avg_length_in_concepts": 46.28,
+        "avg_length_in_sentences": 4.48,
+        "avg_word_length_in_chars": 4.376508994089061,
+        "avg_sentence_length_in_chars": 111.67066666666666,
+        "avg_sentence_length_in_words": 20.39,
+        "avg_sentence_length_in_unique_words": 17.993333333333332,
+        "avg_dsi": 0.21017021240553221,
+        "avg_surprise": 0.012180717737095654,
+        "avg_raw_surprises": [
+            0.004746725164576316,
+            0.006224174688560407,
+            0.006791248121344382,
+            0.00812975457883925
+        ],
+        "avg_n_gram_diversity": [
+            0.7221574959514027,
+            0.9772457326589145,
+            0.9973906086729363,
+            0.9988687128394665,
+            0.9995876288659794
+        ],
+        "avg_pos_diversity": [
+            0.12182462441861217,
+            0.40139447950730567,
+            0.6898067917618746,
+            0.8637797296588552,
+            0.9510517210277833
+        ],
+        "avg_dependency_num_clauses": 2.0813333333333333,
+        "avg_max_dependency_num_clauses": 3.68,
+        "avg_dependency_path_length": 3.2684312416623484,
+        "avg_max_dependency_path_length": 8.88,
+        "avg_inv_homogen": 0.08096823434034983,
+        "avg_novelty": 0.00829211475517269,
+        "avg_theme_uniqueness": 0.24,
+        "corpus_dsi": 0.2139373638993007,
+        "corpus_n_gram_diversity": [
+            0.2346442775077331,
+            0.5645446507515473,
+            0.7403803626713843,
+            0.8079646017699115,
+            0.8463922089420097
+        ],
+        "corpus_pos_diversity": [
+            0.0061864781263809105,
+            0.04155614500442087,
+            0.1375497567448032,
+            0.29336283185840706,
+            0.4625940681717574
+        ],
+        "num_unique_stories": 25,
+        "top_10_n_grams": {
+            "1-gram": {
+                "the": 241,
+                "a": 135,
+                "of": 101,
+                " ": 69,
+                "with": 42,
+                "pump": 37,
+                "and": 33,
+                "to": 33,
+                "its": 32,
+                "it": 28
+            },
+            "2-gram": {
+                "  the": 27,
+                "the old": 22,
+                "old pump": 22,
+                "with the": 20,
+                "of a": 20,
+                "of the": 19,
+                "pump wheezed": 16,
+                "wheezed its": 15,
+                "  he": 15,
+                "the air": 14
+            },
+            "3-gram": {
+                "the old pump": 21,
+                "old pump wheezed": 15,
+                "pump wheezed its": 15,
+                "groaning under the": 13,
+                "  the air": 11,
+                "its rusted metal": 11,
+                "metal groaning under": 10,
+                "it was a": 10,
+                "wheezed its rusted": 10,
+                "with the scent": 9
+            },
+            "4-gram": {
+                "the old pump wheezed": 15,
+                "old pump wheezed its": 15,
+                "metal groaning under the": 10,
+                "pump wheezed its rusted": 10,
+                "with the scent of": 9,
+                "wheezed its rusted metal": 9,
+                "its rusted metal groaning": 9,
+                "rusted metal groaning under": 9,
+                "groaning under the strain": 9,
+                "under the strain of": 8
+            },
+            "5-gram": {
+                "the old pump wheezed its": 15,
+                "old pump wheezed its rusted": 10,
+                "pump wheezed its rusted metal": 9,
+                "wheezed its rusted metal groaning": 9,
+                "its rusted metal groaning under": 9,
+                "rusted metal groaning under the": 9,
+                "metal groaning under the strain": 9,
+                "groaning under the strain of": 8,
+                "under the strain of pushing": 8,
+                "the strain of pushing the": 8
+            }
+        },
+        "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+        },
+        "cost": {
+            "input": 0.0,
+            "output": 0.0,
+            "total": 0.0
+        }
+    },
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its rusty handle groaning with each pull.  A thick, black liquid, smelling of burnt rubber and ancient secrets, dripped into the rusty bucket. The engineer, grimy and gaunt, muttered a curse. \"Petrol,\" he sighed, \"useless in this contraption.  It needs the raw power of diesel, the heart of the earth itself, to bring this beast back to life.\"",
+            "usage": null,
+            "result_id": "1a56a5054149",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.95/run1/pilot_data_eval_default_gemini-1.5-flash_74c2bbd0c32c.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 365,
+                "length_in_words": 64,
+                "length_in_unique_words": 51,
+                "length_in_concepts": 36,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.453125,
+                "avg_sentence_length_in_chars": 72.6,
+                "avg_sentence_length_in_words": 12.8,
+                "avg_sentence_length_in_unique_words": 12,
+                "dsi": 0.20650130122426957,
+                "surprise": 0.014180763349646616,
+                "raw_surprises": [
+                    0.002536687641948837,
+                    0.014760049364783562,
+                    0.008918690681457536,
+                    0.0021460990111032974
+                ],
+                "n_gram_diversity": [
+                    0.796875,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.15625,
+                    0.5079365079365079,
+                    0.7903225806451613,
+                    0.9344262295081968,
+                    0.9833333333333333
+                ],
+                "avg_dependency_num_clauses": 1.8,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.664519140989729,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.07744769752025604,
+                "novelty": 0.01487212535006227,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old man, a walking testament to time, sat in his rusted armchair, his eyes fixed on the flickering gaslight. A shiver ran down his spine as he remembered the day the petrol pump in his heart had run dry, replaced by a diesel engine of despair. The world had changed, he lamented, the air filled with the noxious fumes of a new era, a far cry from the sweet, intoxicating scent of petrol that once fueled his dreams.",
+            "usage": null,
+            "result_id": "77fd1608e746",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p1/run1/pilot_data_eval_default_gemini-1.5-flash_b995ab1f6920.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 419,
+                "length_in_words": 79,
+                "length_in_unique_words": 58,
+                "length_in_concepts": 41,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.177215189873418,
+                "avg_sentence_length_in_chars": 139,
+                "avg_sentence_length_in_words": 26.333333333333332,
+                "avg_sentence_length_in_unique_words": 23,
+                "dsi": 0.2150388116516718,
+                "surprise": 0.006752035828442915,
+                "raw_surprises": [
+                    0.00249374989585166,
+                    0.004258285932591255
+                ],
+                "n_gram_diversity": [
+                    0.7341772151898734,
+                    0.9871794871794872,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11392405063291139,
+                    0.3333333333333333,
+                    0.6363636363636364,
+                    0.8289473684210527,
+                    0.96
+                ],
+                "avg_dependency_num_clauses": 2.3333333333333335,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.552407704654896,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.09142435590426128,
+                "novelty": 0.002202895504742175,
+                "theme_uniqueness": 0.1111111111111111
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its rusty metal groaning under the weight of the ancient petrol can.  A single, flickering light illuminated the dusty workshop, casting long shadows that danced with the wind whistling through the cracks in the walls.  The air was thick with the smell of diesel and forgotten dreams, a potent reminder of a time when this place had hummed with life.  He poured the petrol into the rusted engine, a silent prayer escaping his lips.  He knew it was a long shot, but he had to try.",
+            "usage": null,
+            "result_id": "f9daad4f7085",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.95/run1/pilot_data_eval_default_gemini-1.5-flash_1e20d3b72236.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 501,
+                "length_in_words": 94,
+                "length_in_unique_words": 67,
+                "length_in_concepts": 46,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.26595744680851,
+                "avg_sentence_length_in_chars": 100.2,
+                "avg_sentence_length_in_words": 18.8,
+                "avg_sentence_length_in_unique_words": 16.6,
+                "dsi": 0.21338046599125515,
+                "surprise": 0.02322538493608234,
+                "raw_surprises": [
+                    0.00777491482477341,
+                    0.013891861159286228,
+                    0.00837128539370674,
+                    0.016412708494398298
+                ],
+                "n_gram_diversity": [
+                    0.7127659574468085,
+                    0.978494623655914,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11702127659574468,
+                    0.3978494623655914,
+                    0.717391304347826,
+                    0.8571428571428571,
+                    0.9666666666666667
+                ],
+                "avg_dependency_num_clauses": 2.2,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.195988812452227,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.06751016775767009,
+                "novelty": 0.0011137958160911121,
+                "theme_uniqueness": 0.1111111111111111
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its metal body groaning under the weight of years, as it coughed out a thin stream of petrol.  The air, thick with the scent of diesel and decay, hung heavy in the abandoned factory.  A single, rusted wheel lay forgotten on the floor, a silent testament to the industry that had once thrived here.",
+            "usage": null,
+            "result_id": "26cf16ccae23",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.9/run1/pilot_data_eval_default_gemini-1.5-flash_c3d67ac2add8.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 319,
+                "length_in_words": 60,
+                "length_in_unique_words": 49,
+                "length_in_concepts": 32,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.216666666666667,
+                "avg_sentence_length_in_chars": 106.33333333333333,
+                "avg_sentence_length_in_words": 20,
+                "avg_sentence_length_in_unique_words": 18,
+                "dsi": 0.2099237943128232,
+                "surprise": 0.018020771660356455,
+                "raw_surprises": [
+                    0.0038507356093480105,
+                    0.014170036051008444
+                ],
+                "n_gram_diversity": [
+                    0.8166666666666667,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.18333333333333332,
+                    0.5254237288135594,
+                    0.7758620689655172,
+                    0.9298245614035088,
+                    0.9821428571428571
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 3.0392390242014304,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.08046608418226242,
+                "novelty": 0.008027139172955,
+                "theme_uniqueness": 0.16666666666666666
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its rusted metal groaning under the strain of pushing the viscous, black liquid. It was a symphony of mechanical despair, a dirge for the dying age of fossil fuels. The air hung heavy with the acrid scent of petrol, a reminder of the days when the world ran on the blood of the earth. But now, the only thing flowing through the pump was a thick, tarry substance, a forgotten relic of a bygone era.",
+            "usage": null,
+            "result_id": "a2ae3958eac6",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.7/run1/pilot_data_eval_default_gemini-1.5-flash_490e3729fbb7.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 420,
+                "length_in_words": 79,
+                "length_in_unique_words": 55,
+                "length_in_concepts": 40,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.189873417721519,
+                "avg_sentence_length_in_chars": 104.25,
+                "avg_sentence_length_in_words": 19.75,
+                "avg_sentence_length_in_unique_words": 16.25,
+                "dsi": 0.21160627962687076,
+                "surprise": 0.016939013029532452,
+                "raw_surprises": [
+                    0.014722616757665369,
+                    0.0034274614347523935,
+                    0.007258441351880918
+                ],
+                "n_gram_diversity": [
+                    0.6962025316455697,
+                    0.9743589743589743,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.12658227848101267,
+                    0.3717948717948718,
+                    0.6363636363636364,
+                    0.8157894736842105,
+                    0.9333333333333333
+                ],
+                "avg_dependency_num_clauses": 0.75,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 3.5865248226950355,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.07264259705940883,
+                "novelty": 0.0046621685448599015,
+                "theme_uniqueness": 0.16666666666666666
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump groaned, its rusty metal frame shuddering as it struggled to deliver the last drops of petrol. The flickering neon sign cast an eerie glow on the deserted street, illuminating the faded paint of the abandoned gas station.  The air hung heavy with the scent of diesel, a phantom reminder of a time when this place hummed with life.  A lone crow landed on the pump's rusted nozzle, its black eyes reflecting the emptiness of the forgotten world.",
+            "usage": null,
+            "result_id": "5f77d46c2e4d",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.7/run1/pilot_data_eval_default_gemini-1.5-flash_148b3b2ec2b5.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 456,
+                "length_in_words": 83,
+                "length_in_unique_words": 62,
+                "length_in_concepts": 48,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.445783132530121,
+                "avg_sentence_length_in_chars": 113.75,
+                "avg_sentence_length_in_words": 20.75,
+                "avg_sentence_length_in_unique_words": 18.25,
+                "dsi": 0.21001388354504363,
+                "surprise": 0.012033569227909472,
+                "raw_surprises": [
+                    0.004613175278618237,
+                    0.0001682950820757756,
+                    0.013268883481170196
+                ],
+                "n_gram_diversity": [
+                    0.7469879518072289,
+                    0.975609756097561,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10843373493975904,
+                    0.32926829268292684,
+                    0.6049382716049383,
+                    0.8625,
+                    0.9620253164556962
+                ],
+                "avg_dependency_num_clauses": 1.5,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.1556673934722714,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.08481213450431824,
+                "novelty": 0.00784696070851415,
+                "theme_uniqueness": 0.1111111111111111
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its rusted metal groaning under the strain of pushing the viscous, black liquid.  It was a relic of a forgotten age, a time when diesel fueled not engines, but dreams.  The air hung heavy with the scent of burnt oil and despair, a stark contrast to the vibrant, petrol-powered dreams that now filled the city.  He watched the black liquid flow, a symbol of a lost era, a reminder of the dreams that had been left behind.  He knew, deep down, that the future belonged to the bright, clean energy of petrol, but a part of him still yearned for the gritty, diesel-fueled past.",
+            "usage": null,
+            "result_id": "7db8a5efb1bc",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.3/run1/pilot_data_eval_default_gemini-1.5-flash_55eaa2ee60b4.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 595,
+                "length_in_words": 114,
+                "length_in_unique_words": 75,
+                "length_in_concepts": 51,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.105263157894737,
+                "avg_sentence_length_in_chars": 119,
+                "avg_sentence_length_in_words": 22.8,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.20647605311636832,
+                "surprise": 0.008267503181398614,
+                "raw_surprises": [
+                    0.0006744897726810584,
+                    0.005819682776927931,
+                    0.006185743438475055,
+                    0.0038550903747131826
+                ],
+                "n_gram_diversity": [
+                    0.6578947368421053,
+                    0.9469026548672567,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10526315789473684,
+                    0.37168141592920356,
+                    0.6785714285714286,
+                    0.8558558558558559,
+                    0.9272727272727272
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.7034283918115025,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.06296376138925552,
+                "novelty": 0.014922621565864769,
+                "theme_uniqueness": 0.1111111111111111
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its rusted metal groaning under the strain of pushing the viscous, black liquid.  It was a relic of a forgotten age, a time when diesel fueled not engines, but dreams.  The air hung heavy with the scent of burnt oil and the whispers of forgotten promises.  A single, flickering light cast long shadows on the cracked concrete floor, illuminating the rusted pump and the lone figure hunched over it, his face etched with the weariness of a thousand lost hopes.  He poured the diesel into a battered metal bucket, a silent prayer for a future that might never come.",
+            "usage": null,
+            "result_id": "3e5b74026010",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.3/run1/pilot_data_eval_default_gemini-1.5-flash_e4dbd2e33346.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 585,
+                "length_in_words": 107,
+                "length_in_unique_words": 75,
+                "length_in_concepts": 54,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.392523364485982,
+                "avg_sentence_length_in_chars": 117,
+                "avg_sentence_length_in_words": 21.4,
+                "avg_sentence_length_in_unique_words": 18.8,
+                "dsi": 0.208752475278016,
+                "surprise": 0.006177830638049497,
+                "raw_surprises": [
+                    0.0006744897726810584,
+                    0.0006748689545525433,
+                    0.010384621179809123,
+                    0.0006216813690562706
+                ],
+                "n_gram_diversity": [
+                    0.7009345794392523,
+                    0.9716981132075472,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.12149532710280374,
+                    0.36792452830188677,
+                    0.6761904761904762,
+                    0.8653846153846154,
+                    0.9611650485436893
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.469098934000981,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.05925476302703222,
+                "novelty": 0.010369777242569433,
+                "theme_uniqueness": 0.1111111111111111
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump groaned, its rusted metal frame creaking under the weight of the ancient, oil-stained contraption it held aloft.  A single, flickering light cast long, skeletal shadows across the dusty floor of the abandoned workshop.  The air hung heavy with the scent of petrol and diesel, a lingering reminder of a time when this place hummed with the life of industry.  Now, only the wind whispered through the broken windows, carrying with it the ghosts of forgotten dreams.  And the pump, silent and still, stood as a monument to a bygone era.",
+            "usage": null,
+            "result_id": "166b06b923fd",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.7/run1/pilot_data_eval_default_gemini-1.5-flash_609d4309f3ef.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 546,
+                "length_in_words": 98,
+                "length_in_unique_words": 69,
+                "length_in_concepts": 52,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.479591836734694,
+                "avg_sentence_length_in_chars": 109.2,
+                "avg_sentence_length_in_words": 19.6,
+                "avg_sentence_length_in_unique_words": 17,
+                "dsi": 0.21305211133367155,
+                "surprise": 0.009928415881262878,
+                "raw_surprises": [
+                    0.0006281018257141002,
+                    0.002586633076161249,
+                    0.0015913611221080592,
+                    0.015050735738542348
+                ],
+                "n_gram_diversity": [
+                    0.7040816326530612,
+                    0.979381443298969,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10204081632653061,
+                    0.3917525773195876,
+                    0.6458333333333334,
+                    0.8,
+                    0.8829787234042553
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.337216837049985,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.071197676161925,
+                "novelty": 0.0017705051312583153,
+                "theme_uniqueness": 0.16666666666666666
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its rusted metal groaning under the strain of pushing the viscous, black liquid.  It was a diesel of a different kind, a concoction of tar and dreams, the fuel that powered the city's darkest secrets.  The man, his face obscured by a tattered hood, poured the petrol into a dented metal bucket, his eyes gleaming with a sinister light.  He knew this fuel wouldn't power any engine, but it would ignite a fire in the hearts of the desperate, a fire that would consume the city in its flames.",
+            "usage": null,
+            "result_id": "fd554aab401f",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.3/run1/pilot_data_eval_default_gemini-1.5-flash_e9e3d66b6bc9.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": null,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 512,
+                "length_in_words": 98,
+                "length_in_unique_words": 66,
+                "length_in_concepts": 44,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.153061224489796,
+                "avg_sentence_length_in_chars": 128,
+                "avg_sentence_length_in_words": 24.5,
+                "avg_sentence_length_in_unique_words": 20.25,
+                "dsi": 0.20598939231283822,
+                "surprise": 0.014544543318590212,
+                "raw_surprises": [
+                    0.002705307620944425,
+                    0.005726515498512219,
+                    0.013384991858428674
+                ],
+                "n_gram_diversity": [
+                    0.673469387755102,
+                    0.979381443298969,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10204081632653061,
+                    0.36082474226804123,
+                    0.6145833333333334,
+                    0.8,
+                    0.9042553191489362
+                ],
+                "avg_dependency_num_clauses": 2.25,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.364401001636337,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.07836509744326274,
+                "novelty": 0.015895943172924976,
+                "theme_uniqueness": 0.1111111111111111
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump groaned, its rusted gears grinding as it struggled to push the thick, black liquid skyward. It was a diesel of a different kind \u2013 a viscous, tarry substance that reeked of forgotten dreams and unfulfilled promises.  The engineer, his face etched with the lines of countless failed experiments, watched with a flicker of hope as the petrol, a vibrant orange, flowed into the waiting tank. He knew it was a long shot, but perhaps this time, the alchemy would work, and the machine would finally sing.",
+            "usage": null,
+            "result_id": "1509074f61a0",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p1/run1/pilot_data_eval_default_gemini-1.5-flash_76fa2239cbf1.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 511,
+                "length_in_words": 89,
+                "length_in_unique_words": 67,
+                "length_in_concepts": 49,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.584269662921348,
+                "avg_sentence_length_in_chars": 127.25,
+                "avg_sentence_length_in_words": 22.25,
+                "avg_sentence_length_in_unique_words": 19.25,
+                "dsi": 0.20972370229610782,
+                "surprise": 0.006767345397962051,
+                "raw_surprises": [
+                    0.002214902278148745,
+                    0.007748132537711755,
+                    0.00018798328108257656
+                ],
+                "n_gram_diversity": [
+                    0.7528089887640449,
+                    0.9772727272727273,
+                    0.9885057471264368,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1348314606741573,
+                    0.45454545454545453,
+                    0.7241379310344828,
+                    0.8837209302325582,
+                    0.9411764705882353
+                ],
+                "avg_dependency_num_clauses": 3.25,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.714007727432385,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.07761537780364354,
+                "novelty": 0.008427323206385784,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its metal body groaning under the weight of years. It had once pumped lifeblood \u2013 petrol \u2013 into the veins of a bustling city, but now it only coughed out rust and dust. The diesel engine of the forgotten train, its wheels buried in the sand, lay silent, a monument to a forgotten era. The wind, a restless spirit, whispered through the rusted pipes, a mournful lament for a time when the city thrummed with life.",
+            "usage": null,
+            "result_id": "55aa666b64dd",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.5/run1/pilot_data_eval_default_gemini-1.5-flash_db70e86b9e52.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 434,
+                "length_in_words": 78,
+                "length_in_unique_words": 59,
+                "length_in_concepts": 37,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.371794871794871,
+                "avg_sentence_length_in_chars": 107.75,
+                "avg_sentence_length_in_words": 19.5,
+                "avg_sentence_length_in_unique_words": 17,
+                "dsi": 0.2175722396946526,
+                "surprise": 0.0022459907019120964,
+                "raw_surprises": [
+                    0.00210584321665383,
+                    0.0006199048625098458,
+                    0.0006432379737044691
+                ],
+                "n_gram_diversity": [
+                    0.7564102564102564,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1282051282051282,
+                    0.35064935064935066,
+                    0.631578947368421,
+                    0.8266666666666667,
+                    0.9594594594594594
+                ],
+                "avg_dependency_num_clauses": 1.75,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.0562507667770826,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.09006766974925995,
+                "novelty": 0.00726975159070381,
+                "theme_uniqueness": 0.16666666666666666
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its rusted metal groaning under the strain of pushing the viscous, black liquid.  The air hung heavy with the scent of diesel and burnt rubber, a familiar aroma to the grimy mechanic.  He knew this was no ordinary fuel; it was the lifeblood of the city's underground, a potent concoction that powered the clandestine network of tunnels beneath the bustling streets.  He carefully filled the tank of the rusty, battered car, a vehicle that looked more like a relic from a forgotten war than a modern machine.  With a final clunk, the pump fell silent, and the mechanic, a silent guardian of the city's hidden secrets, vanished into the labyrinthine network of tunnels, leaving the car to its clandestine purpose.",
+            "usage": null,
+            "result_id": "8c67e311b3a9",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.5/run1/pilot_data_eval_default_gemini-1.5-flash_eafbcfcf8c3e.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": null,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 733,
+                "length_in_words": 130,
+                "length_in_unique_words": 82,
+                "length_in_concepts": 63,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.561538461538461,
+                "avg_sentence_length_in_chars": 146.6,
+                "avg_sentence_length_in_words": 26,
+                "avg_sentence_length_in_unique_words": 22,
+                "dsi": 0.20972654108993835,
+                "surprise": 0.01221349174956013,
+                "raw_surprises": [
+                    0.0022307191834305407,
+                    0.005604175410487439,
+                    0.005636444049222145,
+                    0.010955644855980134
+                ],
+                "n_gram_diversity": [
+                    0.6307692307692307,
+                    0.9457364341085271,
+                    0.9765625,
+                    0.9921259842519685,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08461538461538462,
+                    0.31007751937984496,
+                    0.6015625,
+                    0.8031496062992126,
+                    0.9444444444444444
+                ],
+                "avg_dependency_num_clauses": 1.6,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 4.093451481332249,
+                "max_dependency_path_length": 13,
+                "inv_homogen": 0.08931328356266022,
+                "novelty": 0.008421645618724716,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its metal body rusted and pitted, as it struggled to deliver the last drops of petrol.  A lone figure, shrouded in a tattered cloak, watched with a desperate hunger in his eyes.  He knew this was the last of the fuel, the last spark of life in this dying world.  He needed it to power his dreams, to fuel the flickering hope that still burned within him.  With trembling hands, he reached for the rusty nozzle, a silent prayer escaping his lips.",
+            "usage": null,
+            "result_id": "3f8a03d0e321",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.5/run1/pilot_data_eval_default_gemini-1.5-flash_c97c57440322.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 467,
+                "length_in_words": 90,
+                "length_in_unique_words": 62,
+                "length_in_concepts": 42,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.1,
+                "avg_sentence_length_in_chars": 93.4,
+                "avg_sentence_length_in_words": 18,
+                "avg_sentence_length_in_unique_words": 16,
+                "dsi": 0.20897881425354678,
+                "surprise": 0.023613709004926473,
+                "raw_surprises": [
+                    0.005346665177682425,
+                    0.015879629150269525,
+                    0.0033387988805770874,
+                    0.022662324801323908
+                ],
+                "n_gram_diversity": [
+                    0.6888888888888889,
+                    0.9550561797752809,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13333333333333333,
+                    0.4157303370786517,
+                    0.7045454545454546,
+                    0.8045977011494253,
+                    0.8953488372093024
+                ],
+                "avg_dependency_num_clauses": 2.4,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.8402419510314245,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.07489865769942601,
+                "novelty": 0.009917099291507858,
+                "theme_uniqueness": 0.1111111111111111
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its rusted metal groaning under the strain of pushing the viscous, black liquid.  It was a relic of a forgotten age, a time when diesel fueled not engines, but dreams.  The air hung heavy with the scent of burnt oil and despair, a stark contrast to the vibrant, petrol-powered dreams that now filled the city.  The pump, however, remained, a silent testament to a past that refused to be forgotten.  And as the last drops of diesel dripped into the waiting tank, a flicker of hope ignited in the darkness.",
+            "usage": null,
+            "result_id": "ea495e64458e",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.3/run1/pilot_data_eval_default_gemini-1.5-flash_3a81ffc98a02.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 527,
+                "length_in_words": 99,
+                "length_in_unique_words": 68,
+                "length_in_concepts": 47,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.222222222222222,
+                "avg_sentence_length_in_chars": 105.4,
+                "avg_sentence_length_in_words": 19.8,
+                "avg_sentence_length_in_unique_words": 17.4,
+                "dsi": 0.2066794050500748,
+                "surprise": 0.012400694791372721,
+                "raw_surprises": [
+                    0.0006744897726810584,
+                    0.005819682776927931,
+                    0.009140788302535091,
+                    0.009166428730601361
+                ],
+                "n_gram_diversity": [
+                    0.6868686868686869,
+                    0.9897959183673469,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.12121212121212122,
+                    0.40816326530612246,
+                    0.711340206185567,
+                    0.875,
+                    0.9473684210526315
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.2723109063557816,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.06070249527692795,
+                "novelty": 0.014515917698451841,
+                "theme_uniqueness": 0.1111111111111111
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The rusty pump wheezed, spitting out a thick, black liquid that smelled like burnt dreams. She filled her old teacup, its chipped rim a familiar comfort, adding the potent fuel to the simmering pot. A bitter brew for a bitter day, she thought, watching the smoke coil upwards like a forgotten prayer. The kerosene lamp, fueled by the same dark liquid, flickered to life, casting long shadows that danced across her weathered face.",
+            "usage": null,
+            "result_id": "2d292ec989d5",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p1/run1/pilot_data_eval_default_gemini-1.5-flash_935781bf9c2a.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 430,
+                "length_in_words": 73,
+                "length_in_unique_words": 57,
+                "length_in_concepts": 44,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.726027397260274,
+                "avg_sentence_length_in_chars": 106.75,
+                "avg_sentence_length_in_words": 18.25,
+                "avg_sentence_length_in_unique_words": 17,
+                "dsi": 0.2110775367024081,
+                "surprise": 0.007272863545525235,
+                "raw_surprises": [
+                    0.005634028261358087,
+                    0.0013461167162114873,
+                    0.003929150340718279
+                ],
+                "n_gram_diversity": [
+                    0.7808219178082192,
+                    0.9861111111111112,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1095890410958904,
+                    0.375,
+                    0.6197183098591549,
+                    0.8,
+                    0.9130434782608695
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.9652198160262677,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.10879676540692647,
+                "novelty": 0.005719654393785245,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump groaned, its rusty metal frame shuddering with each labored stroke.  A thick, viscous liquid, smelling of burnt rubber and tar, oozed from its nozzle, filling the rusty bucket.  The mechanic, his face grimed with soot, muttered a curse as he poured the noxious concoction into the engine of the ancient steam-powered car.  The car sputtered, coughed, and finally roared to life, its wheels churning the thick, black petrol into a churning, smoky cloud.  The mechanic, his face alight with a strange, triumphant grin, knew he had breathed life back into a forgotten relic.",
+            "usage": null,
+            "result_id": "9fdc7b274e16",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.7/run1/pilot_data_eval_default_gemini-1.5-flash_2741b75ef589.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 584,
+                "length_in_words": 101,
+                "length_in_unique_words": 69,
+                "length_in_concepts": 55,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.633663366336633,
+                "avg_sentence_length_in_chars": 116.8,
+                "avg_sentence_length_in_words": 20.2,
+                "avg_sentence_length_in_unique_words": 19,
+                "dsi": 0.2103924839986294,
+                "surprise": 0.01063999988776304,
+                "raw_surprises": [
+                    0.006456237267225218,
+                    0.008953920519832292,
+                    0.004571687607538122,
+                    0.0012981543809304497
+                ],
+                "n_gram_diversity": [
+                    0.6831683168316832,
+                    0.94,
+                    0.9696969696969697,
+                    0.9795918367346939,
+                    0.9896907216494846
+                ],
+                "pos_diversity": [
+                    0.10891089108910891,
+                    0.35,
+                    0.5959595959595959,
+                    0.7857142857142857,
+                    0.8969072164948454
+                ],
+                "avg_dependency_num_clauses": 2.8,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.237526026604974,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.07947149872779846,
+                "novelty": 0.007089759801342632,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its rusted metal groaning under the strain of pushing the viscous, black liquid. It was a diesel of a different kind, a concoction of tar and dreams, the fuel that powered the city's darkest secrets.  Each drop, a whispered promise of oblivion, a potent elixir for the weary souls who sought solace in its oily embrace.  The petrol, once vibrant and full of life, had long since evaporated, leaving behind only the bitter taste of regret.",
+            "usage": null,
+            "result_id": "56f237d79519",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.5/run1/pilot_data_eval_default_gemini-1.5-flash_9af01e7b301e.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 460,
+                "length_in_words": 83,
+                "length_in_unique_words": 64,
+                "length_in_concepts": 44,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.433734939759036,
+                "avg_sentence_length_in_chars": 114.75,
+                "avg_sentence_length_in_words": 20.75,
+                "avg_sentence_length_in_unique_words": 18.5,
+                "dsi": 0.20546225513514707,
+                "surprise": 0.009725525202574543,
+                "raw_surprises": [
+                    0.0010280011278210044,
+                    0.003222274960893584,
+                    0.010338011715147227
+                ],
+                "n_gram_diversity": [
+                    0.7710843373493976,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13253012048192772,
+                    0.47560975609756095,
+                    0.7530864197530864,
+                    0.9375,
+                    0.9746835443037974
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.329865950445219,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.06847334901491801,
+                "novelty": 0.016950217528307276,
+                "theme_uniqueness": 0.1111111111111111
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its rusted gears grinding as it struggled to draw water from the well.  The farmer, his face etched with worry, watched the rusty metal arm inch upwards, each creak a testament to the drought's relentless grip.  He knew the well was running dry, the last vestiges of water a mere whisper in the depths.  His crops, once vibrant green, were now parched and brittle, their leaves curling inwards like desperate pleas.  He needed rain, a deluge to replenish the earth, to revive his farm, to save his lifeblood, his precious petrol.",
+            "usage": null,
+            "result_id": "667b2b4f3b54",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.9/run1/pilot_data_eval_default_gemini-1.5-flash_f5b4f5eb2384.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 551,
+                "length_in_words": 100,
+                "length_in_unique_words": 76,
+                "length_in_concepts": 54,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.4,
+                "avg_sentence_length_in_chars": 110.2,
+                "avg_sentence_length_in_words": 20,
+                "avg_sentence_length_in_unique_words": 18.2,
+                "dsi": 0.21296176366419495,
+                "surprise": 0.02281141845565854,
+                "raw_surprises": [
+                    0.016075722542073984,
+                    0.018919289277659512,
+                    0.007851504316233632,
+                    0.0027763207753499497
+                ],
+                "n_gram_diversity": [
+                    0.76,
+                    0.9797979797979798,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.12,
+                    0.3939393939393939,
+                    0.7448979591836735,
+                    0.8969072164948454,
+                    0.96875
+                ],
+                "avg_dependency_num_clauses": 2.4,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.785931407094198,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.1316357875863711,
+                "novelty": 0.0019512004702115227,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its rusted metal groaning under the strain.  A single, precious drop of petrol, thick and viscous, fell from its spout, landing with a soft plop into the waiting crucible.  The alchemist, his face etched with worry, watched the droplet intently, knowing this was the final ingredient in his potent elixir.  He whispered a prayer, hoping the ancient recipe would yield its promised miracle.  The elixir, a swirling vortex of green and gold, bubbled and hissed, promising a cure for the dying world.",
+            "usage": null,
+            "result_id": "dc17df39e205",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.7/run1/pilot_data_eval_default_gemini-1.5-flash_25bdcf0a2258.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 519,
+                "length_in_words": 90,
+                "length_in_unique_words": 67,
+                "length_in_concepts": 51,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.633333333333334,
+                "avg_sentence_length_in_chars": 103.8,
+                "avg_sentence_length_in_words": 18,
+                "avg_sentence_length_in_unique_words": 16.4,
+                "dsi": 0.21278903227226406,
+                "surprise": 0.016156726538016877,
+                "raw_surprises": [
+                    0.0065586976297608846,
+                    0.0007190621379531137,
+                    0.007171995109981982,
+                    0.017863698198337774
+                ],
+                "n_gram_diversity": [
+                    0.7444444444444445,
+                    0.9887640449438202,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.12222222222222222,
+                    0.43820224719101125,
+                    0.7727272727272727,
+                    0.9310344827586207,
+                    0.9883720930232558
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.9472135955831607,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.10683532307545344,
+                "novelty": 0.0022966632540732945,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump groaned, its rusted metal frame groaning under the weight of the ancient, forgotten machine. It had once pumped petrol, fueling the dreams of a bygone era, but now it only spat out a thick, black sludge \u2013 diesel fuel for the nightmares of the future.  The air hung heavy with the smell of decay, a potent reminder of a world that had moved on, leaving this relic behind.",
+            "usage": null,
+            "result_id": "cc9aa57814a3",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.9/run1/pilot_data_eval_default_gemini-1.5-flash_1f78d77d131d.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 383,
+                "length_in_words": 71,
+                "length_in_unique_words": 55,
+                "length_in_concepts": 35,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.253521126760563,
+                "avg_sentence_length_in_chars": 127.33333333333333,
+                "avg_sentence_length_in_words": 23.666666666666668,
+                "avg_sentence_length_in_unique_words": 20.333333333333332,
+                "dsi": 0.20937963984593624,
+                "surprise": 0.0038723804733970246,
+                "raw_surprises": [
+                    0.0031441890157305197,
+                    0.000728191457666505
+                ],
+                "n_gram_diversity": [
+                    0.7746478873239436,
+                    0.9714285714285714,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.14084507042253522,
+                    0.42857142857142855,
+                    0.7246376811594203,
+                    0.8970588235294118,
+                    0.9701492537313433
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.819411994713252,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.06561523924271266,
+                "novelty": 0.00911544810672893,
+                "theme_uniqueness": 0.16666666666666666
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump wheezed, its rusted metal groaning under the strain of pushing the viscous, black liquid.  It was a diesel of a different kind, a potent concoction brewed by the alchemist, a fuel for the mind, not the engine.  He poured it into the crucible, the air thick with the scent of burnt petrol and ancient secrets.  With a final, guttural hiss, the pump fell silent, leaving behind a swirling vortex of energy, ready to be unleashed.  The alchemist, his eyes gleaming with anticipation, whispered a single word: \"Transform.\"",
+            "usage": null,
+            "result_id": "07c821f4e6a1",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0_p0.7/run1/pilot_data_eval_default_gemini-1.5-flash_c49b8c4e5403.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 531,
+                "length_in_words": 94,
+                "length_in_unique_words": 67,
+                "length_in_concepts": 49,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.48936170212766,
+                "avg_sentence_length_in_chars": 106.2,
+                "avg_sentence_length_in_words": 18.8,
+                "avg_sentence_length_in_unique_words": 16.8,
+                "dsi": 0.20678686634415672,
+                "surprise": 0.006971433653539305,
+                "raw_surprises": [
+                    0.002524800734086452,
+                    0.007988873395052831,
+                    0.0029929122863671664,
+                    0.00043628089157216055
+                ],
+                "n_gram_diversity": [
+                    0.7127659574468085,
+                    0.989247311827957,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11702127659574468,
+                    0.43010752688172044,
+                    0.7282608695652174,
+                    0.9120879120879121,
+                    0.9777777777777777
+                ],
+                "avg_dependency_num_clauses": 1.4,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.1250983035613977,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.09028073400259018,
+                "novelty": 0.014300995110287984,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump groaned, its rusty gears grinding as it strained to lift the petrol from the well.  The villagers huddled around, their faces etched with worry.  The drought had withered their crops, and their only hope was the ancient pump, a relic of a forgotten time.  They prayed for a miracle, for the pump to deliver the life-giving petrol to their thirsty fields.  But the pump sputtered, coughed, and fell silent, leaving them with only the bitter taste of diesel in their mouths.",
+            "usage": null,
+            "result_id": "9b907e979f42",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.95/run1/pilot_data_eval_default_gemini-1.5-flash_58a58172956e.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 485,
+                "length_in_words": 89,
+                "length_in_unique_words": 60,
+                "length_in_concepts": 39,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.359550561797753,
+                "avg_sentence_length_in_chars": 97,
+                "avg_sentence_length_in_words": 17.8,
+                "avg_sentence_length_in_unique_words": 16,
+                "dsi": 0.2138224188615436,
+                "surprise": 0.01851606037881641,
+                "raw_surprises": [
+                    0.014622076352437341,
+                    0.005163477526770682,
+                    0.006051037046644447,
+                    0.011195529831780349
+                ],
+                "n_gram_diversity": [
+                    0.6741573033707865,
+                    0.9772727272727273,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1348314606741573,
+                    0.5227272727272727,
+                    0.8390804597701149,
+                    0.9651162790697675,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.2,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.922637085137085,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.09519422550996144,
+                "novelty": 0.00022989007551421636,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The rusty pump groaned, spewing forth a thick, oily liquid that reeked of burnt petrol and despair.  The old mechanic, his face etched with the grime of countless engines, watched the dark fluid stain the cracked concrete floor.  He knew this wasn't diesel, but a concoction of desperation, a last-ditch effort to breathe life back into the dying machine.  The air thrummed with the engine's final, choked gasp, a metallic cry that echoed the mechanic's own sorrow.  In that moment, the pump became a symbol of loss, a testament to the fleeting nature of power, both mechanical and human.",
+            "usage": null,
+            "result_id": "e581e7b8b85c",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.9/run1/pilot_data_eval_default_gemini-1.5-flash_6124dc8d83fe.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 588,
+                "length_in_words": 107,
+                "length_in_unique_words": 77,
+                "length_in_concepts": 55,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.420560747663552,
+                "avg_sentence_length_in_chars": 117.6,
+                "avg_sentence_length_in_words": 21.4,
+                "avg_sentence_length_in_unique_words": 19.4,
+                "dsi": 0.208122941099032,
+                "surprise": 0.010461574736294096,
+                "raw_surprises": [
+                    0.0012301713774055811,
+                    0.001438240313426764,
+                    0.010820960276054614,
+                    0.007433777505701233
+                ],
+                "n_gram_diversity": [
+                    0.719626168224299,
+                    0.9811320754716981,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.102803738317757,
+                    0.3867924528301887,
+                    0.7238095238095238,
+                    0.9038461538461539,
+                    0.9805825242718447
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.4264713309018417,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.06947400172551473,
+                "novelty": 0.011628845600537396,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old pump groaned, its rusty metal frame shuddering with each labored stroke.  A thick, viscous liquid, smelling of burnt rubber and sulfur, oozed from the nozzle, filling the metal tank with a dark, oily substance.  The air grew thick with the scent of petrol, a potent reminder of the machine's power.  The diesel, once a lifeblood, now fueled a different kind of engine, one that churned with the memories of a bygone era.  The pump, a silent sentinel, stood guard over the secrets of a forgotten past.",
+            "usage": null,
+            "result_id": "8ab595bf1857",
+            "metadata": {
+                "source": "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p1/run1/pilot_data_eval_default_gemini-1.5-flash_7d896c72505c.json",
+                "model": "gemini-1.5-flash",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 508,
+                "length_in_words": 93,
+                "length_in_unique_words": 63,
+                "length_in_concepts": 49,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.344086021505376,
+                "avg_sentence_length_in_chars": 101.6,
+                "avg_sentence_length_in_words": 18.6,
+                "avg_sentence_length_in_unique_words": 16.4,
+                "dsi": 0.21004510143784438,
+                "surprise": 0.010778897858801359,
+                "raw_surprises": [
+                    0.008147316177686076,
+                    0.005969706839985323,
+                    0.007368928976733274,
+                    7.18437231980451e-05
+                ],
+                "n_gram_diversity": [
+                    0.6774193548387096,
+                    0.9565217391304348,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11827956989247312,
+                    0.33695652173913043,
+                    0.5934065934065934,
+                    0.8222222222222222,
+                    0.9550561797752809
+                ],
+                "avg_dependency_num_clauses": 1.4,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.1066506355980037,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.0697471151749293,
+                "novelty": 0.00778452492291265,
+                "theme_uniqueness": 0.16666666666666666
+            }
+        }
+    ]
+}

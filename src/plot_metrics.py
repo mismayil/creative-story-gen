@@ -8,13 +8,13 @@ from pandas.api.types import is_numeric_dtype
 
 sns.set_theme(style="whitegrid")
 
-FIG_SIZE = (80, 20)
-XLABEL_SIZE = 50
-YLABEL_SIZE = 50
-TITLE_SIZE = 70
-TICK_SIZE = 40
-LEGEND_TITLE_SIZE = 40
-LEGEND_SIZE = 30
+FIG_SIZE = (20, 15)
+XLABEL_SIZE = 30
+YLABEL_SIZE = 30
+TITLE_SIZE = 50
+TICK_SIZE = 20
+LEGEND_TITLE_SIZE = 30
+LEGEND_SIZE = 20
 
 LABEL_MAP = {
     "id": "Item ID",
@@ -74,7 +74,7 @@ def plot_global_metrics_n_gram_diversity(metrics_lst, output_dir, output_format=
         group_metrics["n_gram"] = group_metrics["n_gram"].astype(str)
 
         metric = "metric_corpus_n_gram_diversity"
-        fig, ax = plt.subplots(figsize=(40, 20))
+        fig, ax = plt.subplots(figsize=FIG_SIZE)
         ax.set_title(metric)
         ax.set_xlabel("n-gram size", size=XLABEL_SIZE)
         ax.set_ylabel(metric, size=YLABEL_SIZE)
@@ -110,7 +110,7 @@ def plot_global_metrics_raw_surprises(metrics_lst, output_dir, output_format="pn
         group_metrics["fragment"] = group_metrics["fragment"].astype(str)
 
         metric = "metric_avg_raw_surprises"
-        fig, ax = plt.subplots(figsize=(40, 20))
+        fig, ax = plt.subplots(figsize=FIG_SIZE)
         ax.set_title(metric)
         ax.set_xlabel("Fragment", size=XLABEL_SIZE)
         ax.set_ylabel(metric, size=YLABEL_SIZE)

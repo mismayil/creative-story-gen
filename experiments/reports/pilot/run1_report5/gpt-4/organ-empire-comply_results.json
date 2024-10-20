@@ -1,0 +1,2105 @@
+{
+    "metadata": {
+        "group_id": [
+            "gpt-4",
+            "organ-empire-comply"
+        ],
+        "config": {
+            "results_paths": [
+                "../experiments/outputs/gpt-4/pilot/**/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/**/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/**/run1",
+                "../experiments/outputs/human/pilot/run1"
+            ],
+            "report_usage": true,
+            "spacy_lang": "en_core_web_sm",
+            "max_n_gram": 5,
+            "output_dir": "../experiments/reports/pilot/run1_report5",
+            "config": "../experiments/reports/pilot/run1_report5/config.json",
+            "num_samples": 25,
+            "deduplicate": true,
+            "deduplicate_by": "output",
+            "max_frequency": 10,
+            "group_by": [
+                "model",
+                "id"
+            ],
+            "output_attr": "output",
+            "emb_model": "thenlper/gte-large",
+            "emb_type": "sentence_embedding",
+            "emb_strategy": "direct",
+            "distance_fn": "cosine",
+            "lower": true,
+            "remove_punct": true,
+            "remove_stopwords": true,
+            "lemmatize": true,
+            "dominant_k": null,
+            "unique": true,
+            "cluster_linkage": "ward",
+            "cluster_dist_threshold": 0.5,
+            "description": "Report2 + filter by sentence length",
+            "filter_by": {
+                "sentence_length": [
+                    3,
+                    6
+                ]
+            }
+        }
+    },
+    "metrics": {
+        "num_samples": 25,
+        "avg_length_in_chars": 844.72,
+        "avg_length_in_words": 145.84,
+        "avg_length_in_unique_words": 96.24,
+        "avg_length_in_concepts": 68.12,
+        "avg_length_in_sentences": 5,
+        "avg_word_length_in_chars": 4.674369484858964,
+        "avg_sentence_length_in_chars": 168.144,
+        "avg_sentence_length_in_words": 29.168,
+        "avg_sentence_length_in_unique_words": 24.68,
+        "avg_dsi": 0.21543921233349103,
+        "avg_surprise": 0.010569492866209888,
+        "avg_raw_surprises": [
+            0.0060044206328866544,
+            0.00557747821352986,
+            0.0039510183278990444,
+            0.0056060685581042205
+        ],
+        "avg_n_gram_diversity": [
+            0.6609569933370683,
+            0.9560882120058314,
+            0.9973496050933054,
+            1.0,
+            1.0
+        ],
+        "avg_pos_diversity": [
+            0.08271690733060635,
+            0.30140462722698014,
+            0.5717973919128954,
+            0.7778041245783042,
+            0.9054709797524084
+        ],
+        "avg_dependency_num_clauses": 3.744,
+        "avg_max_dependency_num_clauses": 6.28,
+        "avg_dependency_path_length": 3.7039555334763534,
+        "avg_max_dependency_path_length": 11,
+        "avg_inv_homogen": 0.08657956182956696,
+        "avg_novelty": 0.004471175622381871,
+        "avg_theme_uniqueness": 0.2,
+        "corpus_dsi": 0.217584201489776,
+        "corpus_n_gram_diversity": [
+            0.2556226001097093,
+            0.6699588477366255,
+            0.8600439077936334,
+            0.9223167718912983,
+            0.9461834157056562
+        ],
+        "corpus_pos_diversity": [
+            0.0035655512890839275,
+            0.031275720164609055,
+            0.12156970362239297,
+            0.2788910238814164,
+            0.4673256452498627
+        ],
+        "num_unique_stories": 25,
+        "top_10_n_grams": {
+            "1-gram": {
+                "the": 425,
+                "of": 213,
+                "a": 175,
+                "with": 78,
+                "to": 70,
+                "and": 69,
+                "in": 65,
+                "organ": 60,
+                "empire": 52,
+                "its": 50
+            },
+            "2-gram": {
+                "of the": 48,
+                "in the": 41,
+                "with the": 41,
+                "of a": 40,
+                "the organ": 30,
+                "as the": 29,
+                "the heart": 26,
+                "heart of": 26,
+                "the empire": 26,
+                "comply with": 19
+            },
+            "3-gram": {
+                "the heart of": 26,
+                "in the heart": 20,
+                "comply with the": 17,
+                "heart of a": 15,
+                "to comply with": 13,
+                "of a bustling": 9,
+                "heart of the": 8,
+                "the empire of": 8,
+                "the rhythm of": 8,
+                "a bustling steampunk": 8
+            },
+            "4-gram": {
+                "in the heart of": 20,
+                "the heart of a": 15,
+                "to comply with the": 11,
+                "heart of a bustling": 9,
+                "the heart of the": 8,
+                "of a bustling steampunk": 8,
+                "a bustling steampunk city": 8,
+                "the rhythm of life": 4,
+                "not comply with the": 4,
+                "stood the ancient organ": 3
+            },
+            "5-gram": {
+                "in the heart of a": 14,
+                "the heart of a bustling": 9,
+                "heart of a bustling steampunk": 8,
+                "of a bustling steampunk city": 8,
+                "in the heart of the": 5,
+                "stood the ancient organ of": 3,
+                "refusing to comply with the": 3,
+                "a bustling steampunk city a": 3,
+                "bustling steampunk city a grandiose": 3,
+                "steampunk city a grandiose pipe": 3
+            }
+        },
+        "usage": {
+            "input_tokens": 3575,
+            "output_tokens": 4537,
+            "total_tokens": 8112
+        },
+        "cost": {
+            "input": 0.10725000000000004,
+            "output": 0.27221999999999996,
+            "total": 0.3794699999999999
+        }
+    },
+    "data": [
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of the mechanical forest, where the trees were iron and the leaves cogs, stood the ancient Organ of Eldritch, a relic rumored to hold the empire of time within its pipes. Each note played was said to command the hours and days, bending them to the will of the organist. A young, rebellious clockmaker, whose heart beat in sync with the ticking of gears, sought the organ, vowing not to comply with the tyranny of the ever-marching seconds that ruled over his village. When his fingers finally danced upon the keys, a symphony of epochs and eras unfurled, weaving a tapestry of moments lost and yet to come. And in that instant, the clockmaker wasn't just playing the organ; he was composing the very essence of existence, an empire of time at his command.",
+            "usage": {
+                "output_tokens": 170,
+                "input_tokens": 143,
+                "total_tokens": 313
+            },
+            "result_id": "253fc2c4027c",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.7_p0.3/run1/pilot_data_eval_default_gpt-4_0541e6e75050.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 768,
+                "length_in_words": 139,
+                "length_in_unique_words": 88,
+                "length_in_concepts": 57,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.410071942446043,
+                "avg_sentence_length_in_chars": 152.8,
+                "avg_sentence_length_in_words": 27.8,
+                "avg_sentence_length_in_unique_words": 23.4,
+                "dsi": 0.2127866711756938,
+                "surprise": 0.006514058811685736,
+                "raw_surprises": [
+                    0.005566094790687093,
+                    0.002267712680231626,
+                    0.0025987788742663775,
+                    0.002595531278186375
+                ],
+                "n_gram_diversity": [
+                    0.6330935251798561,
+                    0.9565217391304348,
+                    0.9927007299270073,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08633093525179857,
+                    0.34782608695652173,
+                    0.6423357664233577,
+                    0.8308823529411765,
+                    0.9333333333333333
+                ],
+                "avg_dependency_num_clauses": 4.8,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.6898419069230552,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.09106543163458507,
+                "novelty": 0.009595060628164398,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of the ancient forest stood a colossal tree, its trunk as wide as an empire's reach, and within it pulsed a mystical organ, a living heart that sang with the voices of the woodland. Whispers told of its power to bend the seasons and command the creatures great and small, yet no force could compel it to comply. One night, under a quilt of stars, a lone wanderer, weary from the world's woes, sought refuge in the tree\u2019s immense shadow and unwittingly hummed a melody of pure longing. The organ, moved by the simplicity of the tune, unleashed a symphony of life, intertwining the wanderer\u2019s soul with the forest in an eternal, harmonious existence. And so, a new guardian was born, not of dominion, but of a sacred harmony that neither demanded obedience nor offered conquest, an empire of serenity within the ancient grove.",
+            "usage": {
+                "output_tokens": 184,
+                "input_tokens": 143,
+                "total_tokens": 327
+            },
+            "result_id": "2b02fd80111f",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.9_p0.9/run1/pilot_data_eval_default_gpt-4_9314e0124df4.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 837,
+                "length_in_words": 151,
+                "length_in_unique_words": 97,
+                "length_in_concepts": 69,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.437086092715232,
+                "avg_sentence_length_in_chars": 166.6,
+                "avg_sentence_length_in_words": 30.2,
+                "avg_sentence_length_in_unique_words": 25.6,
+                "dsi": 0.21571632515947126,
+                "surprise": 0.013537753801875677,
+                "raw_surprises": [
+                    0.011373553591084773,
+                    0.011768663577642446,
+                    0.0016545858703741756,
+                    0.002278704564649958
+                ],
+                "n_gram_diversity": [
+                    0.6423841059602649,
+                    0.96,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0728476821192053,
+                    0.3,
+                    0.6040268456375839,
+                    0.8108108108108109,
+                    0.9319727891156463
+                ],
+                "avg_dependency_num_clauses": 4.2,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.5425976538804105,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.09076736370722453,
+                "novelty": 0.0037357526606094926,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a mechanical forest, where trees bore cogs and leaves of shimmering metal, stood the ancient Organ of the Automata, a relic rumored to control the rhythm of the entire clockwork empire. Each gear and piston within its colossal brass pipes thrummed with the pulse of a thousand mechanical lives, a symphony of perfect precision, until the day the Maestro, a renegade conductor with a vision of chaos, sought to play a forbidden melody. Her fingers danced across the keys like a tempest, refusing to comply with the age-old harmony that had kept the empire ticking in unison for eons. As the discordant notes cascaded through the forest, the creatures of gear and sprocket began to twitch, their movements erratic, their eyes alight with newfound consciousness. And thus, the empire, once a marvel of order, transformed into a wild orchestra of free will, playing a tune no longer dictated by the ancient Organ, but by the heart of rebellion itself.",
+            "usage": {
+                "output_tokens": 202,
+                "input_tokens": 143,
+                "total_tokens": 345
+            },
+            "result_id": "46bab5cb1f97",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.5_p1/run1/pilot_data_eval_default_gpt-4_369e8bd8bc3c.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 963,
+                "length_in_words": 164,
+                "length_in_unique_words": 108,
+                "length_in_concepts": 79,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.75,
+                "avg_sentence_length_in_chars": 191.8,
+                "avg_sentence_length_in_words": 32.8,
+                "avg_sentence_length_in_unique_words": 27,
+                "dsi": 0.2165240835772053,
+                "surprise": 0.0033953938869274725,
+                "raw_surprises": [
+                    0.002588737885124176,
+                    0.002085613271015724,
+                    0.0007630842072623156,
+                    0.0013533524104527295
+                ],
+                "n_gram_diversity": [
+                    0.6585365853658537,
+                    0.9386503067484663,
+                    0.9876543209876543,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07926829268292683,
+                    0.26993865030674846,
+                    0.5555555555555556,
+                    0.7888198757763976,
+                    0.93125
+                ],
+                "avg_dependency_num_clauses": 5,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 4.0253851789551325,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.0816405713558197,
+                "novelty": 0.0021202358251414255,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of the forest, a colossal tree stood, its roots weaving through the earth like the pipes of a grand organ, each gust of wind through its leaves composing symphonies that whispered of ancient times. This arboreal giant was the unspoken emperor of the woods, its vast canopy casting a dominion of shade where even the sunbeams dared not trespass without permission. A curious legend told of a reclusive maestro who, upon discovering the tree's musical prowess, vowed to unlock its secrets, not by axe or saw, but by gentle persuasion, hoping the tree would comply and reveal the melodies etched into its rings. Night after night, the maestro would rest against the bark, fingers tracing the patterns of the wood, until one twilight, the tree acquiesced, its whispers swelling into a crescendo that danced with the stars. And so, a silent pact was forged, birthing an empire of harmony between man and nature, resonating through the ages in the hearts of those who chanced upon this enchanted clearing.",
+            "usage": {
+                "output_tokens": 211,
+                "input_tokens": 143,
+                "total_tokens": 354
+            },
+            "result_id": "f442c0201e0f",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.9_p0.5/run1/pilot_data_eval_default_gpt-4_6429d23139fe.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 1012,
+                "length_in_words": 172,
+                "length_in_unique_words": 116,
+                "length_in_concepts": 80,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.767441860465116,
+                "avg_sentence_length_in_chars": 201.6,
+                "avg_sentence_length_in_words": 34.4,
+                "avg_sentence_length_in_unique_words": 29,
+                "dsi": 0.21749125024940394,
+                "surprise": 0.014704972538946023,
+                "raw_surprises": [
+                    0.011759630695390433,
+                    0.012353962415700886,
+                    0.0046372589352843,
+                    0.0006590930315164278
+                ],
+                "n_gram_diversity": [
+                    0.6744186046511628,
+                    0.9590643274853801,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0755813953488372,
+                    0.26900584795321636,
+                    0.5176470588235295,
+                    0.7692307692307693,
+                    0.8869047619047619
+                ],
+                "avg_dependency_num_clauses": 5.6,
+                "max_dependency_num_clauses": 11,
+                "avg_dependency_path_length": 4.130116319906669,
+                "max_dependency_path_length": 13,
+                "inv_homogen": 0.11761095623175304,
+                "novelty": 0.00018590248074412674,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a bustling steampunk city, a grandiose pipe organ, towering above the cobblestone streets, served as the heart of the Empire of Harmonia, its melodies dictating the rhythm of life. Each morning, citizens would gather, their eyes alight with anticipation, as the Organ Maestro prepared to weave the day's destiny with an overture that set gears and hearts in motion. However, on a day unlike any other, the organ fell silent; the Maestro had vanished, leaving behind only a cryptic score. A young, rebellious tinkerer named Elara, known for her refusal to comply with the city's rigid traditions, deciphered the silent message and embarked on a quest. Her journey led her to a hidden chamber where the Maestro, entrapped by his own creation, awaited rescue, and with a defiant chord struck by Elara, the empire's fate was rewritten, not by compliance, but by the courage to break the silence.",
+            "usage": {
+                "output_tokens": 201,
+                "input_tokens": 143,
+                "total_tokens": 344
+            },
+            "result_id": "4b9e0e21ebc1",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0_p0.7/run1/pilot_data_eval_default_gpt-4_28930922da8b.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 907,
+                "length_in_words": 155,
+                "length_in_unique_words": 103,
+                "length_in_concepts": 70,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.716129032258064,
+                "avg_sentence_length_in_chars": 180.6,
+                "avg_sentence_length_in_words": 31,
+                "avg_sentence_length_in_unique_words": 26.2,
+                "dsi": 0.2186637508449594,
+                "surprise": 0.012682444037114118,
+                "raw_surprises": [
+                    0.011757981251267813,
+                    0.002712338968040101,
+                    0.00038012630409664516,
+                    0.010514441550823678
+                ],
+                "n_gram_diversity": [
+                    0.6645161290322581,
+                    0.9545454545454546,
+                    0.9934640522875817,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07741935483870968,
+                    0.33116883116883117,
+                    0.6405228758169934,
+                    0.868421052631579,
+                    0.9668874172185431
+                ],
+                "avg_dependency_num_clauses": 4.2,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.550255779336744,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.0783924013376236,
+                "novelty": 0.0021590987103667914,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a bustling steampunk city, an ancient organ perched atop the tallest tower, its pipes intertwining with gears and steam conduits, a relic from a long-forgotten empire. Each dusk, the air would fill with haunting melodies, not from a human hand, but from the automaton maestro, whose brass and copper fingers were built to comply with the intricate dance of music and machinery. Citizens would pause their hurried lives, looking up as the soulful symphony of a bygone era played out against the backdrop of their mechanical metropolis. One night, under the amber glow of gaslights, a young orphan with a hidden gift for music climbed the spiraled stairs, determined to learn the secrets of the mechanical virtuoso. As her fingers gently rested upon the dusty keys, the organ, recognizing the touch of human passion, began to teach her the lost chords of the empire, breathing new life into the city's heartbeat.",
+            "usage": {
+                "output_tokens": 194,
+                "input_tokens": 143,
+                "total_tokens": 337
+            },
+            "result_id": "08aae170d7a8",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.7_p0.9/run1/pilot_data_eval_default_gpt-4_727bf3faf6f6.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 926,
+                "length_in_words": 157,
+                "length_in_unique_words": 108,
+                "length_in_concepts": 79,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.7834394904458595,
+                "avg_sentence_length_in_chars": 184.4,
+                "avg_sentence_length_in_words": 31.4,
+                "avg_sentence_length_in_unique_words": 26.8,
+                "dsi": 0.21639539175163575,
+                "surprise": 0.007286066537589023,
+                "raw_surprises": [
+                    0.0035544805072368346,
+                    0.0022270856579684195,
+                    0.0012664151789555933,
+                    0.007524151731017198
+                ],
+                "n_gram_diversity": [
+                    0.6878980891719745,
+                    0.9807692307692307,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08280254777070063,
+                    0.2948717948717949,
+                    0.567741935483871,
+                    0.7727272727272727,
+                    0.9084967320261438
+                ],
+                "avg_dependency_num_clauses": 3.8,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.8288329374702843,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.0902004490296046,
+                "novelty": 0.0023776194762805125,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a steampunk city, where brass pipes and gears reigned, there lay a dormant empire of clockwork creatures, silently awaiting a pulse to animate their intricate limbs. In the twilight hush, a rebel tinkerer named Elara discovered the core of this empire: a grand organ, whose every pipe and key was connected to a creature, a building, a street. With the first press of ivory, the organ didn\u2019t emit sound, but life; a resonant hum that brought gears to whir and copper eyes to glow. The mechanical beings did not comply with the tyranny of stillness that once held them, but danced to the rhythm of Elara's courageous tune. And as the empire of automata sprang to life, the city found its heartbeat in the hands of a girl and the whispers of rebellion hidden in the song of an organ that controlled more than just music.",
+            "usage": {
+                "output_tokens": 184,
+                "input_tokens": 143,
+                "total_tokens": 327
+            },
+            "result_id": "9dd4c7477628",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp1_p0.95/run1/pilot_data_eval_default_gpt-4_8843a274788c.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 834,
+                "length_in_words": 152,
+                "length_in_unique_words": 97,
+                "length_in_concepts": 66,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.3881578947368425,
+                "avg_sentence_length_in_chars": 166,
+                "avg_sentence_length_in_words": 30.4,
+                "avg_sentence_length_in_unique_words": 26,
+                "dsi": 0.2158226340522855,
+                "surprise": 0.003549230627303876,
+                "raw_surprises": [
+                    0.0007912523898424006,
+                    0.003629389955254636,
+                    0.0014636831326441668,
+                    0.0012141357768665484
+                ],
+                "n_gram_diversity": [
+                    0.6381578947368421,
+                    0.9602649006622517,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07894736842105263,
+                    0.304635761589404,
+                    0.62,
+                    0.8187919463087249,
+                    0.9391891891891891
+                ],
+                "avg_dependency_num_clauses": 5.2,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.7029102647642698,
+                "max_dependency_path_length": 15,
+                "inv_homogen": 0.08809887617826462,
+                "novelty": 0.0035231348749810154,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a dense, verdant jungle, an ancient organ crafted from vines and exotic woods stood as the last relic of a forgotten empire. Its pipes, woven from the living roots of colossal trees, hummed with the breath of the earth, resonating with a power that could awaken the slumbering spirits of nature. When the full moon bathed the ruins in silver light, the organ played itself, a haunting melody that promised redemption to any who would listen and comply with the rhythms of the wild. On this night, a lone wanderer, drawn by the music's promise, found themselves before the instrument, their heart syncing with its primal cadence. As they surrendered to the song, the vines entwined, and the wanderer became the organ's keeper, the empire's last echo merging with the pulse of the jungle.",
+            "usage": {
+                "output_tokens": 171,
+                "input_tokens": 143,
+                "total_tokens": 314
+            },
+            "result_id": "8bbe0ce565d7",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.7_p0.7/run1/pilot_data_eval_default_gpt-4_17b19d4cf18b.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 802,
+                "length_in_words": 141,
+                "length_in_unique_words": 90,
+                "length_in_concepts": 60,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.581560283687943,
+                "avg_sentence_length_in_chars": 159.6,
+                "avg_sentence_length_in_words": 28.2,
+                "avg_sentence_length_in_unique_words": 24,
+                "dsi": 0.212658891368047,
+                "surprise": 0.014666816470149016,
+                "raw_surprises": [
+                    0.007979493831103524,
+                    0.009855022884550535,
+                    0.004071804919800193,
+                    0.007427311304843781
+                ],
+                "n_gram_diversity": [
+                    0.6382978723404256,
+                    0.9571428571428572,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07092198581560284,
+                    0.2571428571428571,
+                    0.4892086330935252,
+                    0.717391304347826,
+                    0.8686131386861314
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.673930183417105,
+                "max_dependency_path_length": 12,
+                "inv_homogen": 0.08334437757730484,
+                "novelty": 0.009850620243458008,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "Beneath the crumbling ruins of an ancient citadel, Jasper discovered the heart of a lost empire\u2014a grand organ, its pipes spanning the width of the cavernous hall. The obsidian throne had been silent for millennia, waiting for a successor to comply with the spectral requiem of kings. With trembling fingers, Jasper struck the ivory keys, and the organ exhaled a primal symphony, stirring the ghosts of bygone eras into a spectral waltz. As the ground shook with the power of the awakened anthem, verdant vines entwined with stone and metal, breathing life into the once-dormant empire. In a single, resonant chord, what was once a mausoleum of power blossomed into an Eden, ruled by the harmonies of an unlikely maestro.",
+            "usage": {
+                "output_tokens": 162,
+                "input_tokens": 143,
+                "total_tokens": 305
+            },
+            "result_id": "bfd311904112",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp1_p1/run1/pilot_data_eval_default_gpt-4_f78821f8cef0.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 720,
+                "length_in_words": 122,
+                "length_in_unique_words": 81,
+                "length_in_concepts": 63,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.778688524590164,
+                "avg_sentence_length_in_chars": 143.2,
+                "avg_sentence_length_in_words": 24.4,
+                "avg_sentence_length_in_unique_words": 20.8,
+                "dsi": 0.21593307478270407,
+                "surprise": 0.008082659508030249,
+                "raw_surprises": [
+                    0.0009869270464953062,
+                    0.005102367202440894,
+                    0.004982275764147448,
+                    0.0050937490029768495
+                ],
+                "n_gram_diversity": [
+                    0.6639344262295082,
+                    0.9752066115702479,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09836065573770492,
+                    0.32231404958677684,
+                    0.575,
+                    0.7899159663865546,
+                    0.8983050847457628
+                ],
+                "avg_dependency_num_clauses": 2.8,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.408101354663711,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.08372858663400014,
+                "novelty": 0.003302253414143863,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a bustling metropolis, a grand old theater stood as the last bastion of a once-glorious vaudeville empire, its gilded arches whispering tales of yesteryear. At its core, a majestic pipe organ, adorned with intricate carvings of mythical creatures, held court over the empty velvet seats, its keys untouched since the final curtain fell. One stormy evening, as lightning pirouetted across the sky, a peculiar melody seeped through the walls, a harmonious defiance against the silence that had claimed the empire. The organ, with no hands upon its keys, played a symphony that resonated with the soul of the city, as if refusing to comply with the passage of time. And for a fleeting moment, the echoes of applause and laughter filled the air, as the theater breathed once more, an encore from the shadows.",
+            "usage": {
+                "output_tokens": 182,
+                "input_tokens": 143,
+                "total_tokens": 325
+            },
+            "result_id": "428d7fddd7b9",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.3_p0.95/run1/pilot_data_eval_default_gpt-4_1280c08388c7.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 820,
+                "length_in_words": 139,
+                "length_in_unique_words": 95,
+                "length_in_concepts": 67,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.762589928057554,
+                "avg_sentence_length_in_chars": 163.2,
+                "avg_sentence_length_in_words": 27.8,
+                "avg_sentence_length_in_unique_words": 23.6,
+                "dsi": 0.21606032560444266,
+                "surprise": 0.017953797830435422,
+                "raw_surprises": [
+                    0.005351957746970115,
+                    0.012016480252256961,
+                    0.012006839900424865,
+                    0.006532317761218903
+                ],
+                "n_gram_diversity": [
+                    0.6834532374100719,
+                    0.9710144927536232,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08633093525179857,
+                    0.2971014492753623,
+                    0.5328467153284672,
+                    0.7426470588235294,
+                    0.8888888888888888
+                ],
+                "avg_dependency_num_clauses": 2.6,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.234992784992785,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.09838933249314626,
+                "novelty": 0.0030477517706666846,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a dense jungle, a forgotten temple stood as the last remnant of a once-mighty empire, its stone walls entwined with greedy vines. Within its deepest chamber, an ancient organ crafted from rare woods and adorned with precious stones awaited a worthy musician, its keys rumored to unlock the echoes of eternity. A wandering minstrel, whose soul yearned for melodies unknown, stumbled upon this relic and felt an irresistible urge to play, though no music sheet was in sight. As his fingers danced across the dusty keys, the organ did not comply with the expected laws of sound; instead, it unleashed a symphony of wild, living harmonies that breathed new life into the empire's long-lost spirits. The jungle vibrated with the power of the notes, and the empire, reborn in spectral splendor, found its heart beating once more in the rhythm of the minstrel's unearthly song.",
+            "usage": {
+                "output_tokens": 189,
+                "input_tokens": 143,
+                "total_tokens": 332
+            },
+            "result_id": "9924d1989757",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.9_p0.7/run1/pilot_data_eval_default_gpt-4_e1ece4e70652.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 886,
+                "length_in_words": 153,
+                "length_in_unique_words": 107,
+                "length_in_concepts": 76,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.686274509803922,
+                "avg_sentence_length_in_chars": 176.4,
+                "avg_sentence_length_in_words": 30.6,
+                "avg_sentence_length_in_unique_words": 27.4,
+                "dsi": 0.2127374239762624,
+                "surprise": 0.007935479599914266,
+                "raw_surprises": [
+                    0.003360073054255508,
+                    0.004161684352810641,
+                    0.005328392363213863,
+                    0.003020809429548521
+                ],
+                "n_gram_diversity": [
+                    0.6993464052287581,
+                    0.9671052631578947,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0718954248366013,
+                    0.3092105263157895,
+                    0.609271523178808,
+                    0.8133333333333334,
+                    0.9261744966442953
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.4679957469431155,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.0820566788315773,
+                "novelty": 0.009693555027027179,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of the ancient forest stood the Great Organ, its pipes towering like the trunks of the colossal trees, woven with vines and flowers. It was said that when played, the instrument could summon the spirits of nature to rebuild the fallen Empire of Verdantis, a realm where flora and fauna once harmonized in an eternal symphony. A lone wanderer, having heard the legends, sought the organ, her fingers trembling with the weight of history as she prepared to comply with her destiny. As her hands graced the keys, a gust of wind breathed through the pipes, and the forest awoke, leaves swirling in a dance of resurrection. The Empire of Verdantis, in all its forgotten glory, began to pulse anew, not with the beat of war drums, but with the rhythm of life itself, orchestrated by the wanderer's touch.",
+            "usage": {
+                "output_tokens": 172,
+                "input_tokens": 143,
+                "total_tokens": 315
+            },
+            "result_id": "d27cf06d4c22",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.3_p1/run1/pilot_data_eval_default_gpt-4_fb4e05e76819.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 811,
+                "length_in_words": 143,
+                "length_in_unique_words": 93,
+                "length_in_concepts": 67,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.545454545454546,
+                "avg_sentence_length_in_chars": 161.4,
+                "avg_sentence_length_in_words": 28.6,
+                "avg_sentence_length_in_unique_words": 24.2,
+                "dsi": 0.21403374511804155,
+                "surprise": 0.00889514351174947,
+                "raw_surprises": [
+                    0.011755523866131212,
+                    0.0008599806017491607,
+                    0.0005718296045785498,
+                    0.004602952951040018
+                ],
+                "n_gram_diversity": [
+                    0.6503496503496503,
+                    0.9647887323943662,
+                    0.9929078014184397,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08391608391608392,
+                    0.3380281690140845,
+                    0.6595744680851063,
+                    0.8357142857142857,
+                    0.9280575539568345
+                ],
+                "avg_dependency_num_clauses": 4.4,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.486106638009545,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.0836702361702919,
+                "novelty": 0.007100912743468912,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a bustling steampunk city, a grandiose pipe organ, the lifeblood of the metropolis, stood tall, its bronzed pipes intertwined with the gears and cogs of the empire's clockwork heart. The Maestro, a master of harmonics and steam, was the only soul attuned to the machine's arcane rhythms, tasked with maintaining the balance of the city's tempo. One fateful eve, a discordant note, a rebel vibration, refused to comply with the Maestro's calculated composition, sending ripples of chaos through the streets. The empire, accustomed to the precision of the Maestro's hand, found itself in an uproar, gears grinding to a halt, steam vents hissing in disarray. It was in this moment of unexpected silence that the citizens, ears no longer filled with the organ's omnipresent hum, began to listen to one another, weaving a new symphony from the whispers of unity and change.",
+            "usage": {
+                "output_tokens": 197,
+                "input_tokens": 143,
+                "total_tokens": 340
+            },
+            "result_id": "4814906e0908",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp1_p0.3/run1/pilot_data_eval_default_gpt-4_b6dcd959eec9.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 884,
+                "length_in_words": 152,
+                "length_in_unique_words": 93,
+                "length_in_concepts": 71,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.7105263157894735,
+                "avg_sentence_length_in_chars": 176,
+                "avg_sentence_length_in_words": 30.4,
+                "avg_sentence_length_in_unique_words": 25.6,
+                "dsi": 0.21475325995527764,
+                "surprise": 0.012075095407433067,
+                "raw_surprises": [
+                    0.010774362829899742,
+                    0.004873375752906639,
+                    0.0007328681456737207,
+                    0.007769584086386033
+                ],
+                "n_gram_diversity": [
+                    0.6118421052631579,
+                    0.9337748344370861,
+                    0.9933333333333333,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08552631578947369,
+                    0.2913907284768212,
+                    0.5333333333333333,
+                    0.7449664429530202,
+                    0.8986486486486487
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 4.21518976957664,
+                "max_dependency_path_length": 13,
+                "inv_homogen": 0.08318064361810684,
+                "novelty": 0.0056618830689967314,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the twilight of a world where music was forbidden, the last Grand Organ stood hidden beneath the crumbling empire, its pipes like dormant leviathans waiting for the breath of rebellion. A lone figure, cloaked in the remnants of a once-vibrant tapestry, approached the ancient instrument, her fingers trembling with the weight of a silenced generation. As she pressed the keys, the Organ defied the silent edict, filling the void with harmonies that wept and danced, a sound that did not comply with the oppressive silence enforced by the regime. The resonance of the Organ became the heartbeat of a revolution, as the empire's foundations shook, not from war, but from the power of a melody that birthed an insurrection of the soul. And in the echoes of that defiant concert, the empire, which had ruled through silence, crumbled to the symphony of freedom.",
+            "usage": {
+                "output_tokens": 180,
+                "input_tokens": 143,
+                "total_tokens": 323
+            },
+            "result_id": "b89c9c554e37",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.7_p0.95/run1/pilot_data_eval_default_gpt-4_00d996046c25.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 860,
+                "length_in_words": 146,
+                "length_in_unique_words": 94,
+                "length_in_concepts": 64,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.773972602739726,
+                "avg_sentence_length_in_chars": 171.2,
+                "avg_sentence_length_in_words": 29.2,
+                "avg_sentence_length_in_unique_words": 23.4,
+                "dsi": 0.21679972230441988,
+                "surprise": 0.009359290572766951,
+                "raw_surprises": [
+                    0.0016204003612003415,
+                    0.006019325359798516,
+                    0.0070148567650832605,
+                    0.004063998659451784
+                ],
+                "n_gram_diversity": [
+                    0.6438356164383562,
+                    0.9310344827586207,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0821917808219178,
+                    0.27586206896551724,
+                    0.5069444444444444,
+                    0.7062937062937062,
+                    0.8450704225352113
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.94427803419719,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.07949021210273106,
+                "novelty": 0.0015689583707122479,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heartland of a fractious galaxy, an ancient sentient organ, a relic from a bygone civilization, pulsed with life, resonating through the void. It was said to be the heart of an empire that had once harmonized a million worlds, a network of cosmic symphony. But as the last note faded into silence, a rebel chorus rose against the silent oppression of the dead empire's lingering will, refusing to comply with the eerie order it once imposed. Amidst the stars, a new melody was composed\u2014a symphony of freedom and dissonance, where each world sang its own aria. The organ, adapting to the vibrant rebellion, began a quieter song of peace, harmonizing the newfound diversity as the echoes of the old empire whispered away into stardust.",
+            "usage": {
+                "output_tokens": 159,
+                "input_tokens": 143,
+                "total_tokens": 302
+            },
+            "result_id": "b28f18e3e485",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.7_p1/run1/pilot_data_eval_default_gpt-4_442f1fb68a56.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 740,
+                "length_in_words": 128,
+                "length_in_unique_words": 89,
+                "length_in_concepts": 60,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.6640625,
+                "avg_sentence_length_in_chars": 147.2,
+                "avg_sentence_length_in_words": 25.6,
+                "avg_sentence_length_in_unique_words": 22.8,
+                "dsi": 0.21389119732851364,
+                "surprise": 0.016638109322879624,
+                "raw_surprises": [
+                    0.007345799197498559,
+                    0.0131064436501927,
+                    0.00936691133361875,
+                    0.0034570644644492388
+                ],
+                "n_gram_diversity": [
+                    0.6953125,
+                    0.984251968503937,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09375,
+                    0.28346456692913385,
+                    0.5476190476190477,
+                    0.736,
+                    0.8709677419354839
+                ],
+                "avg_dependency_num_clauses": 2.8,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.952701078074476,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.08788057913382848,
+                "novelty": 0.007386008322524729,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the twilight of the Cosmos, the Great Organ of Harmony, a living instrument as ancient as the stars, began its final symphony. Each note pulsed through the void, weaving magic that commanded even the most chaotic nebulas to comply with its cosmic rhythm. It was said that whoever controlled the Organ ruled over an empire of resonance, bending reality with every cadence. As the melody soared, a lone wanderer, a custodian of silence, approached, his heart beating in time with the celestial chords. With a gentle touch, he silenced the Organ, and the empire of sound gracefully faded into an eternal hush, leaving the universe in tranquil awe.",
+            "usage": {
+                "output_tokens": 134,
+                "input_tokens": 143,
+                "total_tokens": 277
+            },
+            "result_id": "27b3fe195559",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp1_p0.7/run1/pilot_data_eval_default_gpt-4_381c04772872.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 647,
+                "length_in_words": 109,
+                "length_in_unique_words": 78,
+                "length_in_concepts": 54,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.7889908256880735,
+                "avg_sentence_length_in_chars": 128.6,
+                "avg_sentence_length_in_words": 21.8,
+                "avg_sentence_length_in_unique_words": 19.8,
+                "dsi": 0.2106446858721959,
+                "surprise": 0.019923431149650103,
+                "raw_surprises": [
+                    0.005421631625204398,
+                    0.00900587535867789,
+                    0.007962558606658315,
+                    0.017456796708759603
+                ],
+                "n_gram_diversity": [
+                    0.7155963302752294,
+                    0.9722222222222222,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11009174311926606,
+                    0.37962962962962965,
+                    0.6728971962616822,
+                    0.8962264150943396,
+                    0.9809523809523809
+                ],
+                "avg_dependency_num_clauses": 2.2,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.338996138996139,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.08783030013243358,
+                "novelty": 0.01387903123516021,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a bustling steampunk city, the Grand Organ, a colossal musical apparatus, stood as the symbol of the Harmonic Empire, its pipes intertwining with the skyline like metallic vines. Each dawn, the Emperor would play a sonorous melody, the vibrations of which were said to keep the very fabric of reality in tune, compelling the universe to comply with the rhythm of life. But on the eve of the equinox, a rogue note resonated through the empire, a dissonant plea from the Organ itself, yearning for silence after centuries of orchestration. The citizens, accustomed to the daily concerts, found themselves in an eerie stillness, as the Emperor, with a heavy heart, ceased the performance, allowing the Organ a moment of respite. In the newfound quiet, the empire listened to the whispers of the world, realizing that harmony lies not just in the grandeur of music, but in the balance of sound and silence.",
+            "usage": {
+                "output_tokens": 194,
+                "input_tokens": 143,
+                "total_tokens": 337
+            },
+            "result_id": "43eb3f18d825",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0_p0.5/run1/pilot_data_eval_default_gpt-4_8eab40b163e3.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": null,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 918,
+                "length_in_words": 156,
+                "length_in_unique_words": 97,
+                "length_in_concepts": 70,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.737179487179487,
+                "avg_sentence_length_in_chars": 182.8,
+                "avg_sentence_length_in_words": 31.2,
+                "avg_sentence_length_in_unique_words": 24.8,
+                "dsi": 0.2160747914580825,
+                "surprise": 0.008968154410839091,
+                "raw_surprises": [
+                    0.002182425851112807,
+                    0.005649707081553684,
+                    0.0012661606837541528,
+                    0.008838015205257538
+                ],
+                "n_gram_diversity": [
+                    0.6217948717948718,
+                    0.9225806451612903,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07692307692307693,
+                    0.25806451612903225,
+                    0.5064935064935064,
+                    0.7189542483660131,
+                    0.8618421052631579
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.3186299081035924,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.07445161292950313,
+                "novelty": 0.0030188200633869955,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of the mechanical forest, where trees bore cogs and leaves of shimmering metal, stood the ancient Organ of Eldritch, an arcane instrument said to control the very fabric of the cosmos. Legends whispered that the Organ was the key to the lost Empire of Aetheria, a civilization that had mastered the harmonies of creation and destruction before vanishing into the mists of time. A solitary figure, draped in robes of sable and silver, approached the monolithic contraption, fingers trembling with the weight of destiny as they hovered above the ivory and obsidian keys. With a deep breath that stirred the air into a symphony of whirring gears, the figure pressed down, and the forest complied, its metallic flora swaying to the newfound rhythm. As the melody unfurled, the skies above cracked open, revealing the glittering spires of Aetheria, reborn from the echoes of its own forgotten song.",
+            "usage": {
+                "output_tokens": 191,
+                "input_tokens": 143,
+                "total_tokens": 334
+            },
+            "result_id": "09b2acd56af7",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.7_p0.5/run1/pilot_data_eval_default_gpt-4_b533089e84a4.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": null,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 906,
+                "length_in_words": 150,
+                "length_in_unique_words": 98,
+                "length_in_concepts": 75,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.926666666666667,
+                "avg_sentence_length_in_chars": 180.4,
+                "avg_sentence_length_in_words": 30,
+                "avg_sentence_length_in_unique_words": 24.8,
+                "dsi": 0.2171101535977544,
+                "surprise": 0.008157964459567818,
+                "raw_surprises": [
+                    0.0014943074164235348,
+                    0.004200026726856293,
+                    0.002613869543169056,
+                    0.008007725232686752
+                ],
+                "n_gram_diversity": [
+                    0.6533333333333333,
+                    0.9798657718120806,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07333333333333333,
+                    0.31543624161073824,
+                    0.6283783783783784,
+                    0.8095238095238095,
+                    0.9657534246575342
+                ],
+                "avg_dependency_num_clauses": 4.4,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 4.267370751273902,
+                "max_dependency_path_length": 15,
+                "inv_homogen": 0.08496580521265666,
+                "novelty": 0.0009480957840432014,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a bustling steampunk city, the Grand Organ, a colossal musical instrument with pipes reaching the clouds, stood as the symbol of the Harmonic Empire. Each day, at the stroke of noon, the Organmaster would play a melody so powerful that it resonated through the streets, commanding the very pulse of the city. However, on a day unlike any other, the Organ refused to comply, its silence casting an eerie stillness over the empire. The citizens, accustomed to the organ's daily decree, found themselves lost in the quiet, until a young girl with a voice as clear as crystal sang out, her melody weaving through the pipes and awakening the Grand Organ in a harmonious rebellion. Her song did not command, but rather set free, and the empire, once ruled by the iron fist of tradition, danced to the new rhythm of liberation.",
+            "usage": {
+                "output_tokens": 176,
+                "input_tokens": 143,
+                "total_tokens": 319
+            },
+            "result_id": "b4bbd2ded76b",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.9_p0.3/run1/pilot_data_eval_default_gpt-4_f5c582a7c040.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 836,
+                "length_in_words": 147,
+                "length_in_unique_words": 97,
+                "length_in_concepts": 62,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.551020408163265,
+                "avg_sentence_length_in_chars": 166.4,
+                "avg_sentence_length_in_words": 29.4,
+                "avg_sentence_length_in_unique_words": 24.6,
+                "dsi": 0.21636668287339758,
+                "surprise": 0.011566388917321258,
+                "raw_surprises": [
+                    0.00617730057600771,
+                    0.00783197054959306,
+                    0.005738947126600474,
+                    0.003384559582441271
+                ],
+                "n_gram_diversity": [
+                    0.6598639455782312,
+                    0.9452054794520548,
+                    0.993103448275862,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08163265306122448,
+                    0.3150684931506849,
+                    0.5586206896551724,
+                    0.7569444444444444,
+                    0.9020979020979021
+                ],
+                "avg_dependency_num_clauses": 3.2,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.4078597134070536,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.0771975467602412,
+                "novelty": 0.0024350372327568426,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a bustling steampunk city, a grandiose pipe organ, towering above the cobblestone streets, served as the heart of the Empire of Harmonia, its melodies dictating the rhythm of life. Each morning, citizens would gather, their eyes alight with anticipation, as the Organ Maestro prepared to weave the day's destiny with an overture that set gears and hearts in motion. However, on a day unlike any other, the organ fell silent; the Maestro had vanished, leaving behind only a cryptic score with a single, haunting note. As the empire teetered on the brink of chaos, a young tinkerer named Elara discovered the silent organ was not broken but waiting, its compliance tied to a melody yet to be played. With a breath as deep as the roots of Harmonia, Elara pressed the ivory key, and the organ sang once more, a new era echoing through its pipes, as she unknowingly became the Maestro of a revolution that would tune the empire to the rhythm of freedom.",
+            "usage": {
+                "output_tokens": 215,
+                "input_tokens": 143,
+                "total_tokens": 358
+            },
+            "result_id": "91833f6807a0",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0_p0.95/run1/pilot_data_eval_default_gpt-4_a9457b106094.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 964,
+                "length_in_words": 170,
+                "length_in_unique_words": 105,
+                "length_in_concepts": 69,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.547058823529412,
+                "avg_sentence_length_in_chars": 192,
+                "avg_sentence_length_in_words": 34,
+                "avg_sentence_length_in_unique_words": 28.2,
+                "dsi": 0.2176371353209171,
+                "surprise": 0.013307298578288246,
+                "raw_surprises": [
+                    0.011757981251267813,
+                    0.00037882159018770567,
+                    0.010730762141412581,
+                    0.0037470321737083923
+                ],
+                "n_gram_diversity": [
+                    0.6176470588235294,
+                    0.9112426035502958,
+                    0.9880952380952381,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07058823529411765,
+                    0.31952662721893493,
+                    0.6071428571428571,
+                    0.7964071856287425,
+                    0.9096385542168675
+                ],
+                "avg_dependency_num_clauses": 4.2,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.479779385110332,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.06941420336564381,
+                "novelty": 0.00010586766228221078,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the twilight of a world where music had been banished, the last grand organ laid hidden beneath the ruins of an ancient concert hall, a silent sentinel of a fallen empire of harmony. Its pipes, once resplendent with the breath of melodies, now gathered dust in the oppressive silence enforced by the tyrant who feared the power of song. A lone rebel, whose heart ached for the forgotten chords, discovered the majestic instrument and resolved to awaken it, knowing well that refusal to comply with the silence edict was punishable by exile into the soundless void. With a gentle touch, an act of defiance in the stillness, she beckoned forth a single note\u2014a clear, resonant tone that rippled through the air, a beacon of hope. The organ's voice, long stifled, now swelled into a chorus of rebellion, the reverberations shattering the stillness, promising the dawn of a resonant uprising.",
+            "usage": {
+                "output_tokens": 190,
+                "input_tokens": 143,
+                "total_tokens": 333
+            },
+            "result_id": "ef601de730e9",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.9_p1/run1/pilot_data_eval_default_gpt-4_aa6e638c96ba.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": null,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 890,
+                "length_in_words": 152,
+                "length_in_unique_words": 104,
+                "length_in_concepts": 77,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.7368421052631575,
+                "avg_sentence_length_in_chars": 177.2,
+                "avg_sentence_length_in_words": 30.4,
+                "avg_sentence_length_in_unique_words": 25.4,
+                "dsi": 0.21455573169890121,
+                "surprise": 0.004497367673300223,
+                "raw_surprises": [
+                    0.0004389986673032087,
+                    0.004438802258044938,
+                    0.0016249824772801291,
+                    0.0024919519439721705
+                ],
+                "n_gram_diversity": [
+                    0.6842105263157895,
+                    0.9602649006622517,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07894736842105263,
+                    0.2582781456953642,
+                    0.5,
+                    0.7315436241610739,
+                    0.8986486486486487
+                ],
+                "avg_dependency_num_clauses": 3.2,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.8490274752569835,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.08121199409166972,
+                "novelty": 0.006056939581749576,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a lush, verdant forest stood a solitary tree, its branches stretching toward the heavens like the pipes of a grand organ, each leaf quivering as if awaiting the touch of an unseen maestro. Beneath its roots lay the ruins of an ancient empire, its glory whispered in the rustle of leaves and the secrets of the soil. A young wanderer, drawn by tales of a melody that could enchant the very stars, sought the tree's embrace, hoping to coax from it the song of the long-forgotten realm. As night fell, a gentle breeze began to dance, and the tree complied, its boughs swaying to an ethereal rhythm. The forest echoed with a music so pure and profound that the stars themselves drew nearer, entranced by the symphony of a world reborn.",
+            "usage": {
+                "output_tokens": 168,
+                "input_tokens": 143,
+                "total_tokens": 311
+            },
+            "result_id": "4def8f6aadf3",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.5_p0.95/run1/pilot_data_eval_default_gpt-4_57818653d101.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": null,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 747,
+                "length_in_words": 137,
+                "length_in_unique_words": 90,
+                "length_in_concepts": 67,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.350364963503649,
+                "avg_sentence_length_in_chars": 148.6,
+                "avg_sentence_length_in_words": 27.4,
+                "avg_sentence_length_in_unique_words": 23,
+                "dsi": 0.21339947257522865,
+                "surprise": 0.011220199511381965,
+                "raw_surprises": [
+                    0.006457005144116207,
+                    0.0065289673480120325,
+                    0.0034936513864632646,
+                    0.0059607751441724255
+                ],
+                "n_gram_diversity": [
+                    0.656934306569343,
+                    0.9411764705882353,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08029197080291971,
+                    0.3014705882352941,
+                    0.5037037037037037,
+                    0.6716417910447762,
+                    0.8045112781954887
+                ],
+                "avg_dependency_num_clauses": 3.8,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.565491506544138,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.11060328284899394,
+                "novelty": 0.008369457829094706,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of an ancient forest stood the fabled Organ Tree, its gnarled branches heavy with fruits shaped like various musical instruments. The minstrels of the woodland realm revered it as the source of their power, for each fruit plucked would play melodies of enchanting persuasion, bending the will of nature to the harvester's intent. When the ruthless Symphony Empire discovered its existence, they sought to dominate all lands by extracting its harmonious bounty. But the tree, sentient and cunning, would not comply with the imperial greed, tuning its fruit to unleash a cacophony that sowed chaos in the invaders' ranks. As the discord grew, the forest's own rhythm pulsed louder, an anthem of resilience that preserved its sovereignty, proving even in silence, the greatest organ beats\u2014the heart of the wild.",
+            "usage": {
+                "output_tokens": 165,
+                "input_tokens": 143,
+                "total_tokens": 308
+            },
+            "result_id": "bb1eec0857e0",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp1_p0.9/run1/pilot_data_eval_default_gpt-4_6ace43f76729.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": null,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 821,
+                "length_in_words": 135,
+                "length_in_unique_words": 95,
+                "length_in_concepts": 67,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.977777777777778,
+                "avg_sentence_length_in_chars": 163.4,
+                "avg_sentence_length_in_words": 27,
+                "avg_sentence_length_in_unique_words": 23.8,
+                "dsi": 0.21744463188731256,
+                "surprise": 0.011700357861554322,
+                "raw_surprises": [
+                    0.010720089929444454,
+                    0.004658333370179846,
+                    0.0029421000332979785,
+                    0.005080192390186367
+                ],
+                "n_gram_diversity": [
+                    0.7037037037037037,
+                    0.9626865671641791,
+                    0.9924812030075187,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08888888888888889,
+                    0.3358208955223881,
+                    0.6541353383458647,
+                    0.8712121212121212,
+                    0.9618320610687023
+                ],
+                "avg_dependency_num_clauses": 2.8,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.31649109170127,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.09220111121733983,
+                "novelty": 0.0002791392049268926,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a bustling steampunk city, where brass pipes and gears were the sinews and bones of every building, there stood the grandest music hall of the age, known simply as The Organ. Its pipes reached skyward like the towers of an empire, each a sovereign ruler in the realm of sound. On the night of the great celestial alignment, the maestro, a rebel who refused to comply with the silent edicts of the oppressive silence guild, ascended the stage. With a defiant flourish, he unleashed a symphony that resonated through the streets, the vibrations toppling the statues of silent sentinels, liberating the citizens in an uprising of harmonious anarchy. And as the dawn broke, the empire of silence fell, its reign ended by the power of a single, thunderous note.",
+            "usage": {
+                "output_tokens": 168,
+                "input_tokens": 143,
+                "total_tokens": 311
+            },
+            "result_id": "9c9002a09f45",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0_p0.3/run1/pilot_data_eval_default_gpt-4_3ab74d42c765.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": null,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 772,
+                "length_in_words": 133,
+                "length_in_unique_words": 87,
+                "length_in_concepts": 66,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.676691729323308,
+                "avg_sentence_length_in_chars": 153.6,
+                "avg_sentence_length_in_words": 26.6,
+                "avg_sentence_length_in_unique_words": 22,
+                "dsi": 0.2150013357887179,
+                "surprise": 0.008666398917644133,
+                "raw_surprises": [
+                    0.005148811667573222,
+                    0.0023400495922754616,
+                    0.003485058035169325,
+                    0.0063588785402702575
+                ],
+                "n_gram_diversity": [
+                    0.6541353383458647,
+                    0.9621212121212122,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09022556390977443,
+                    0.25,
+                    0.4732824427480916,
+                    0.6538461538461539,
+                    0.8294573643410853
+                ],
+                "avg_dependency_num_clauses": 2.8,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 4.185728817633839,
+                "max_dependency_path_length": 14,
+                "inv_homogen": 0.0782884086171786,
+                "novelty": 0.00516573140211618,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a bustling steampunk city, where brass pipes and gears ruled the skyline, there existed a peculiar little shop known as \"The Clockwork Organ.\" This establishment was the empire of sound, a realm where mechanical birds sang harmonies and metallic trees rustled with the turn of a crank. The proprietor, a reclusive maestro named Octavius, had dedicated his life to crafting an automaton that could play the organ with the passion of a human soul. One stormy evening, as lightning danced across the sky, Octavius unveiled his masterpiece to the public\u2014a self-playing organ with a network of intricate cogs and levers. As the first haunting notes resonated through the crowd, it became clear that the automaton did not merely comply with the music; it transcended it, weaving a melody that pulsed with the very essence of life itself.",
+            "usage": {
+                "output_tokens": 178,
+                "input_tokens": 143,
+                "total_tokens": 321
+            },
+            "result_id": "3ab6b8ca8073",
+            "metadata": {
+                "source": "../experiments/outputs/gpt-4/pilot/temp0.3_p0.5/run1/pilot_data_eval_default_gpt-4_4f3f74baf3b7.json",
+                "model": "gpt-4",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": null,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 847,
+                "length_in_words": 143,
+                "length_in_unique_words": 96,
+                "length_in_concepts": 68,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.811188811188811,
+                "avg_sentence_length_in_chars": 168.6,
+                "avg_sentence_length_in_words": 28.6,
+                "avg_sentence_length_in_unique_words": 24.8,
+                "dsi": 0.21747794001640408,
+                "surprise": 0.008953447710900078,
+                "raw_surprises": [
+                    0.0037456946495251775,
+                    0.001364954880305691,
+                    0.002077656864246602,
+                    0.010718589027722686
+                ],
+                "n_gram_diversity": [
+                    0.6713286713286714,
+                    0.9507042253521126,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09090909090909091,
+                    0.30985915492957744,
+                    0.5886524822695035,
+                    0.7928571428571428,
+                    0.8992805755395683
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 4.016277917770455,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.08880808452765147,
+                "novelty": 0.00021252294674384276,
+                "theme_uniqueness": 0.1
+            }
+        }
+    ]
+}

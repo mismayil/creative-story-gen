@@ -277,11 +277,11 @@ async def main():
     parser.add_argument("-pp", "--presence-penalty", type=float, help="Presence penalty for generation", default=0)
     parser.add_argument("-o", "--output-dir", type=str, help="Output directory for evaluation results", default="outputs")
     parser.add_argument("-n", "--num-samples", type=int, help="Number of samples to evaluate", default=0)
-    parser.add_argument("-i", "--ignore-path", type=str, help="Path to already evaluated data", default=None)
     parser.add_argument("-c", "--cache-dir", type=str, help="Cache directory for model", default="~/.cache")
     parser.add_argument("-mp", "--model-path", type=str, help="Model path to use for evaluation", default=None)
     parser.add_argument("-tp", "--tokenizer-path", type=str, help="Tokenizer path to use for evaluation", default=None)
     parser.add_argument("-b", "--batch-size", type=int, help="Batch size for evaluation", default=1)
+    parser.add_argument("-r", "--resume", action="store_true", help="Resume evaluation from the current file")
     
     args = parser.parse_args()
     client = None
@@ -296,14 +296,6 @@ async def main():
         
     input_data = read_json(args.datapath)
     data = input_data["data"]
-    
-    ignore_map = {}
-
-    if args.ignore_path is not None:
-        ignore_data = read_json(args.ignore_path)
-        
-        for sample in ignore_data["data"]:
-            ignore_map[sample["id"]] = sample
 
     if args.num_samples > 0:
         data = data[:int(args.num_samples)]
@@ -321,6 +313,7 @@ async def main():
             "batch_size": args.batch_size,
             "openai_azure": args.openai_azure,
             "num_samples": args.num_samples,
+            "resume": args.resume,
             "model_args": {
                 "temperature": args.temperature,
                 "max_tokens": args.max_tokens,
@@ -336,9 +329,14 @@ async def main():
 
     pathlib.Path(args.output_dir).mkdir(parents=True, exist_ok=True)
     datapath = pathlib.Path(args.datapath)
-    unique_id = generate_unique_id()
-    output_path = os.path.join(args.output_dir, f"{datapath.stem}_{args.model}_{unique_id}.json")
-    error_path = os.path.join(args.output_dir, f"{datapath.stem}_{args.model}_{unique_id}_errors.txt")
+
+    if args.resume:
+        output_path = args.datapath
+        error_path = args.datapath.replace(".json", "_errors.txt")
+    else:
+        unique_id = generate_unique_id()
+        output_path = os.path.join(args.output_dir, f"{datapath.stem}_{args.model}_{unique_id}.json")
+        error_path = os.path.join(args.output_dir, f"{datapath.stem}_{args.model}_{unique_id}_errors.txt")
 
     print(f"Writing to {output_path}")
     
@@ -361,12 +359,6 @@ async def main():
             filtered_batch = []
 
             for sample in batch:
-                if "id" in sample and sample["id"] in ignore_map:
-                    ignore_instance = ignore_map[sample["id"]]
-                    if "output" in ignore_instance:
-                        sample.update(ignore_instance)
-                        continue
-                
                 if "output" in sample:
                     continue
                 

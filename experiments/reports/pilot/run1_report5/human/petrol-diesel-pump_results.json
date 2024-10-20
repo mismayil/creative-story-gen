@@ -1,0 +1,1476 @@
+{
+    "metadata": {
+        "group_id": [
+            "human",
+            "petrol-diesel-pump"
+        ],
+        "config": {
+            "results_paths": [
+                "../experiments/outputs/gpt-4/pilot/**/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/**/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/**/run1",
+                "../experiments/outputs/human/pilot/run1"
+            ],
+            "report_usage": true,
+            "spacy_lang": "en_core_web_sm",
+            "max_n_gram": 5,
+            "output_dir": "../experiments/reports/pilot/run1_report5",
+            "config": "../experiments/reports/pilot/run1_report5/config.json",
+            "num_samples": 25,
+            "deduplicate": true,
+            "deduplicate_by": "output",
+            "max_frequency": 10,
+            "group_by": [
+                "model",
+                "id"
+            ],
+            "output_attr": "output",
+            "emb_model": "thenlper/gte-large",
+            "emb_type": "sentence_embedding",
+            "emb_strategy": "direct",
+            "distance_fn": "cosine",
+            "lower": true,
+            "remove_punct": true,
+            "remove_stopwords": true,
+            "lemmatize": true,
+            "dominant_k": null,
+            "unique": true,
+            "cluster_linkage": "ward",
+            "cluster_dist_threshold": 0.5,
+            "description": "Report2 + filter by sentence length",
+            "filter_by": {
+                "sentence_length": [
+                    3,
+                    6
+                ]
+            }
+        }
+    },
+    "metrics": {
+        "num_samples": 25,
+        "avg_length_in_chars": 439.52,
+        "avg_length_in_words": 84.8,
+        "avg_length_in_unique_words": 58.8,
+        "avg_length_in_concepts": 31.44,
+        "avg_length_in_sentences": 4.8,
+        "avg_word_length_in_chars": 4.096132467483089,
+        "avg_sentence_length_in_chars": 93.91133333333333,
+        "avg_sentence_length_in_words": 18.18,
+        "avg_sentence_length_in_unique_words": 16.378666666666668,
+        "avg_dsi": 0.2086904134548617,
+        "avg_surprise": 0.02689873436018064,
+        "avg_raw_surprises": [
+            0.01072252531597365,
+            0.011477285113551698,
+            0.010064622039146922,
+            0.02228907425254699,
+            0.039412219502021055
+        ],
+        "avg_n_gram_diversity": [
+            0.7040325381442804,
+            0.9578970763407822,
+            0.9946106975412676,
+            0.9996116504854369,
+            1.0
+        ],
+        "avg_pos_diversity": [
+            0.14503086284092484,
+            0.4967738624334216,
+            0.7999110720474389,
+            0.9369708555398729,
+            0.9812570403409016
+        ],
+        "avg_dependency_num_clauses": 2.9473333333333334,
+        "avg_max_dependency_num_clauses": 5.28,
+        "avg_dependency_path_length": 2.7444122896191394,
+        "avg_max_dependency_path_length": 7.8,
+        "avg_inv_homogen": 0.16130279858907065,
+        "avg_novelty": 0.010055057106566002,
+        "avg_theme_uniqueness": 0.68,
+        "corpus_dsi": 0.2134278389988639,
+        "corpus_n_gram_diversity": [
+            0.34341048653755313,
+            0.8341209829867675,
+            0.9735224586288416,
+            0.9962157048249763,
+            0.9995267392333176
+        ],
+        "corpus_pos_diversity": [
+            0.007085498346717053,
+            0.06427221172022685,
+            0.24066193853427895,
+            0.5160832544938505,
+            0.7695220066256507
+        ],
+        "num_unique_stories": 25,
+        "top_10_n_grams": {
+            "1-gram": {
+                "the": 146,
+                "to": 75,
+                "i": 74,
+                "was": 65,
+                "a": 63,
+                "and": 56,
+                "of": 39,
+                "petrol": 36,
+                "it": 34,
+                "my": 32
+            },
+            "2-gram": {
+                "of the": 14,
+                "to the": 13,
+                "it was": 12,
+                "the car": 9,
+                "in the": 9,
+                "i was": 8,
+                "petrol or": 8,
+                "or diesel": 8,
+                "was a": 7,
+                "and i": 7
+            },
+            "3-gram": {
+                "petrol or diesel": 8,
+                "i wanted to": 3,
+                "down the road": 3,
+                "to a stop": 3,
+                "i decided to": 3,
+                "a pump to": 3,
+                "to pump the": 3,
+                "to the next": 3,
+                "my first day": 2,
+                "first day of": 2
+            },
+            "4-gram": {
+                "put diesel in my": 2,
+                "and i decided to": 2,
+                "i decided to take": 2,
+                "decided to take a": 2,
+                "was running low on": 2,
+                "petrol or diesel i": 2,
+                "miles to the next": 2,
+                "to the next town": 2,
+                "it was my first": 1,
+                "was my first day": 1
+            },
+            "5-gram": {
+                "i decided to take a": 2,
+                "it was my first day": 1,
+                "was my first day of": 1,
+                "my first day of secondary": 1,
+                "first day of secondary school": 1,
+                "day of secondary school and": 1,
+                "of secondary school and after": 1,
+                "secondary school and after much": 1,
+                "school and after much deliberation": 1,
+                "and after much deliberation on": 1
+            }
+        },
+        "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+        },
+        "cost": {
+            "input": 0,
+            "output": 0,
+            "total": 0
+        }
+    },
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "It was my first day of secondary school and after much deliberation on my school outfit I decided on wearing my vintage Diesel jacket. I wanted to give off a cool and edgy look, and reinvent myself for the first day of big school. After checking over my rusty bicycle I realised a had a flat wheel so I used my dads old bike pump to give my wheels a boost! The last thing I wanted was a flat tyre on my first day. I wish my dad could have gave me a lift in, but his petrol car was so battered I would be so embarrassed to turn up in it, I opted for my bicycle.",
+            "result_id": "R_8o6ejl1aVHjSI9z_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8o6ejl1aVHjSI9z.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8o6ejl1aVHjSI9z"
+            },
+            "metrics": {
+                "length_in_chars": 560,
+                "length_in_words": 117,
+                "length_in_unique_words": 71,
+                "length_in_concepts": 38,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 3.7264957264957266,
+                "avg_sentence_length_in_chars": 92.5,
+                "avg_sentence_length_in_words": 19.5,
+                "avg_sentence_length_in_unique_words": 17.5,
+                "dsi": 0.20868231383699443,
+                "surprise": 0.011801723305453139,
+                "raw_surprises": [
+                    0.0035978636098286665,
+                    0.0039969458466484475,
+                    0.007881538073221839,
+                    0.0023214995861053356,
+                    0.011706461147828556
+                ],
+                "n_gram_diversity": [
+                    0.6068376068376068,
+                    0.9310344827586207,
+                    0.9826086956521739,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10256410256410256,
+                    0.39655172413793105,
+                    0.7130434782608696,
+                    0.8947368421052632,
+                    0.9646017699115044
+                ],
+                "avg_dependency_num_clauses": 2.5,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.9224400979575327,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.1678923765818278,
+                "novelty": 0.009491050323738925,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "I made it a few miles down the road before I heard that terrible noise. The car rolled to a stop by the side of the road and I realised my mistake. I'd put diesel in my petrol car! They were right beside each other at the pump. Now the long wait for the recovery man, how embarrassing!",
+            "result_id": "R_8wT7Ix8TsW7XbEo_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8wT7Ix8TsW7XbEo.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8wT7Ix8TsW7XbEo"
+            },
+            "metrics": {
+                "length_in_chars": 285,
+                "length_in_words": 59,
+                "length_in_unique_words": 46,
+                "length_in_concepts": 19,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 3.76271186440678,
+                "avg_sentence_length_in_chars": 56.2,
+                "avg_sentence_length_in_words": 11.8,
+                "avg_sentence_length_in_unique_words": 11,
+                "dsi": 0.2062102984963802,
+                "surprise": 0.059691091378529876,
+                "raw_surprises": [
+                    0.008553761243820207,
+                    0.04581696589787801,
+                    0.060509641965230315,
+                    0.00450181365013122
+                ],
+                "n_gram_diversity": [
+                    0.7796610169491526,
+                    0.9827586206896551,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1694915254237288,
+                    0.5,
+                    0.7543859649122807,
+                    0.875,
+                    0.9272727272727272
+                ],
+                "avg_dependency_num_clauses": 0.6,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.4242424242424243,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.13557570427656174,
+                "novelty": 0.014435081004967376,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "It was a rainy, dreary kind of day but just a normal one in England. I had a car full of petrol and I decided to take a drive out to the shopping centre; being outside today was not an option! As I was going round the bend just down the road, my car slipped on some spilt diesel. I went to pump my brakes but I ended up spinning out of control and crashed! Luckily I was not hurt so a day at home watching movies seemed the safer option.",
+            "result_id": "R_2cHcLwZLH3kFnm9_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2cHcLwZLH3kFnm9.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2cHcLwZLH3kFnm9"
+            },
+            "metrics": {
+                "length_in_chars": 437,
+                "length_in_words": 91,
+                "length_in_unique_words": 63,
+                "length_in_concepts": 34,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 3.7252747252747254,
+                "avg_sentence_length_in_chars": 72,
+                "avg_sentence_length_in_words": 15.166666666666666,
+                "avg_sentence_length_in_unique_words": 14.333333333333334,
+                "dsi": 0.20726680404999676,
+                "surprise": 0.009990453909313869,
+                "raw_surprises": [
+                    0.0068302369780010586,
+                    0.0063405060578906325,
+                    0.0012782805022739097,
+                    0.00010265906651815704,
+                    0.010424452168600912
+                ],
+                "n_gram_diversity": [
+                    0.6923076923076923,
+                    0.9777777777777777,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13186813186813187,
+                    0.4777777777777778,
+                    0.8202247191011236,
+                    0.9545454545454546,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.1666666666666665,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.3410044207741576,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.16407465438048044,
+                "novelty": 0.012322069897734267,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "I was at a climate change convention and the person speaking at the time was discussing the use of petrol and diesel and their negative effects on our climate. I found their points very interesting and decided to try and reduce my use of them in the future. Another speaker was also talking about using a heat pump instead of traditional gas boilers, this also sounded very interesting and could be used to reduce my carbon footprint further. Once I made it home, I called my energy provider to enquire about replacing my gas boiler with a heat pump and I also put my petrol car up for sale, then purchased an electric car instead.",
+            "result_id": "R_8d77LowRrq3xFfJ_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8d77LowRrq3xFfJ.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8d77LowRrq3xFfJ"
+            },
+            "metrics": {
+                "length_in_chars": 631,
+                "length_in_words": 115,
+                "length_in_unique_words": 74,
+                "length_in_concepts": 40,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.434782608695652,
+                "avg_sentence_length_in_chars": 157,
+                "avg_sentence_length_in_words": 28.75,
+                "avg_sentence_length_in_unique_words": 25.25,
+                "dsi": 0.21077182598603078,
+                "surprise": 0.03851475980579823,
+                "raw_surprises": [
+                    0.024588534842321902,
+                    0.028174460589230732,
+                    0.005009144277144717
+                ],
+                "n_gram_diversity": [
+                    0.6434782608695652,
+                    0.9473684210526315,
+                    0.9823008849557522,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08695652173913043,
+                    0.40350877192982454,
+                    0.7610619469026548,
+                    0.9375,
+                    0.990990990990991
+                ],
+                "avg_dependency_num_clauses": 5.5,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.0927161271440933,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.16922898342212042,
+                "novelty": 0.005312026025666217,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "As I walked along the ruined banks of the polluted river, the stench of diesel was almost overpowering. The devastation of this habitat since the pump had malfunctioned and spewed waste was almost complete. I could have wept in memory of the past beauty that was lost. The glorious verdant and lush vegetation, the dazzling colours of the flowers; even the flash of the petrol blue feathers of a rare kingfisher. ",
+            "result_id": "R_2mqjhNO26XNoi6R_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2mqjhNO26XNoi6R.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2mqjhNO26XNoi6R"
+            },
+            "metrics": {
+                "length_in_chars": 413,
+                "length_in_words": 71,
+                "length_in_unique_words": 50,
+                "length_in_concepts": 33,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.71830985915493,
+                "avg_sentence_length_in_chars": 102.25,
+                "avg_sentence_length_in_words": 17.75,
+                "avg_sentence_length_in_unique_words": 15.25,
+                "dsi": 0.21705412661487405,
+                "surprise": 0.012301054192986677,
+                "raw_surprises": [
+                    0.004490260566983928,
+                    0.008710431201117363,
+                    0.0052508895213787266
+                ],
+                "n_gram_diversity": [
+                    0.704225352112676,
+                    0.9428571428571428,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.14084507042253522,
+                    0.44285714285714284,
+                    0.7391304347826086,
+                    0.8676470588235294,
+                    0.9402985074626866
+                ],
+                "avg_dependency_num_clauses": 1.75,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.9973703771586835,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.1730941484371821,
+                "novelty": 0.007252575232020331,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "Sally rode her horse down the canal. She knew her horse was running low on energy so needed to stop soon. She saw a barge selling a variety of things so decided to stop to see if she could refuel. Her pump style shoes were worn out so she had to stay atop her horse whilst speaking to the barge owner. She joked about her horse being neither petrol or diesel but infact, ran on carrots! ",
+            "result_id": "R_8WxkYgki5yinZhV_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8WxkYgki5yinZhV.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8WxkYgki5yinZhV"
+            },
+            "metrics": {
+                "length_in_chars": 387,
+                "length_in_words": 76,
+                "length_in_unique_words": 54,
+                "length_in_concepts": 32,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.0131578947368425,
+                "avg_sentence_length_in_chars": 76.4,
+                "avg_sentence_length_in_words": 15.2,
+                "avg_sentence_length_in_unique_words": 14.2,
+                "dsi": 0.21023686734899397,
+                "surprise": 0.017152489650817143,
+                "raw_surprises": [
+                    0.016488453462010333,
+                    0.0018687461103711889,
+                    0.004228905307782166,
+                    0.011718874421470599
+                ],
+                "n_gram_diversity": [
+                    0.7105263157894737,
+                    0.9466666666666667,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.14473684210526316,
+                    0.4266666666666667,
+                    0.7567567567567568,
+                    0.9315068493150684,
+                    0.9722222222222222
+                ],
+                "avg_dependency_num_clauses": 3.4,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 2.714438461832207,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.1821418305238088,
+                "novelty": 0.006381943299739845,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "On a sunny Saturday afternoon, my husband decided we could try and work on getting the long- forgotten project of installing a pump to assist with the borehole that was set up a couple of years back but never used since. Searching through the box that had documents on the setup, I simply could not find the manual. my husband was convinced it was a diesel pump but I strongly remember complaining that petrol prices were too high and almost definite that it was a petrol pump. The battle to figure out which of the two was correct was made harder as we realised that our internet was down. This was going to be a test of the best engineer in the house! ",
+            "result_id": "R_2pgeIFWQlDZignv_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2pgeIFWQlDZignv.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2pgeIFWQlDZignv"
+            },
+            "metrics": {
+                "length_in_chars": 654,
+                "length_in_words": 123,
+                "length_in_unique_words": 81,
+                "length_in_concepts": 45,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 4.260162601626016,
+                "avg_sentence_length_in_chars": 108,
+                "avg_sentence_length_in_words": 20.5,
+                "avg_sentence_length_in_unique_words": 18.166666666666668,
+                "dsi": 0.20997079809506733,
+                "surprise": 0.012459900949070325,
+                "raw_surprises": [
+                    0.0006245684111708116,
+                    0.012212191309247694,
+                    0.009469597112564815,
+                    0.0023926768984113556,
+                    0.0064507186412811335
+                ],
+                "n_gram_diversity": [
+                    0.6585365853658537,
+                    0.9672131147540983,
+                    0.9917355371900827,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10569105691056911,
+                    0.45901639344262296,
+                    0.7603305785123967,
+                    0.925,
+                    0.9747899159663865
+                ],
+                "avg_dependency_num_clauses": 3.5,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.7646098811929463,
+                "max_dependency_path_length": 16,
+                "inv_homogen": 0.1536144564549128,
+                "novelty": 0.00691408180759312,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "What happens when you put diesel into a petrol car? My friend and I decided to find out. He has a petrol car, and I a deisel one, and so we swopped fuels and strated the engine. We had to use our feet to pump the accelerator before anything happened. All seemed to be well, so we wondered why. It turned out we'd forgotten which car was which, and so each vehicle had its correct fuel.",
+            "result_id": "R_2BoHBhJy5N6y8ZX_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2BoHBhJy5N6y8ZX.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2BoHBhJy5N6y8ZX"
+            },
+            "metrics": {
+                "length_in_chars": 385,
+                "length_in_words": 77,
+                "length_in_unique_words": 55,
+                "length_in_concepts": 21,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 3.896103896103896,
+                "avg_sentence_length_in_chars": 63.333333333333336,
+                "avg_sentence_length_in_words": 12.833333333333334,
+                "avg_sentence_length_in_unique_words": 12,
+                "dsi": 0.20302943672452653,
+                "surprise": 0.1639473589261373,
+                "raw_surprises": [
+                    0.01061299443244934,
+                    0.0003033308755783781,
+                    0.0024090758391789036,
+                    0.1995859920978546,
+                    0.196957004070282
+                ],
+                "n_gram_diversity": [
+                    0.7142857142857143,
+                    0.9342105263157895,
+                    0.9866666666666667,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.15584415584415584,
+                    0.5,
+                    0.8,
+                    0.9594594594594594,
+                    0.9863013698630136
+                ],
+                "avg_dependency_num_clauses": 3.1666666666666665,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.345654844429354,
+                "max_dependency_path_length": 5,
+                "inv_homogen": 0.14588692535956702,
+                "novelty": 0.02079680454867472,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "Blazing past the obeying traffic, the getaway vehicle reached a peak speed of 80 mph on this enthralling police chase. Contrary to belief, this getaway vehicle was running low on gas. In a swift drift, the driver was able to get to the nearest petrol station. As he quickly got out to get the diesel pump, his clumsy friend accidently dropped his cigarette butt causing a mass fire, effectively ending the lives of these criminals on the spot.",
+            "result_id": "R_8IgTefujpZYzrxD_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8IgTefujpZYzrxD.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8IgTefujpZYzrxD"
+            },
+            "metrics": {
+                "length_in_chars": 443,
+                "length_in_words": 78,
+                "length_in_unique_words": 58,
+                "length_in_concepts": 44,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.576923076923077,
+                "avg_sentence_length_in_chars": 110,
+                "avg_sentence_length_in_words": 19.5,
+                "avg_sentence_length_in_unique_words": 18,
+                "dsi": 0.21062671413633335,
+                "surprise": 0.01228425037801221,
+                "raw_surprises": [
+                    0.006862092367458689,
+                    0.010172948950812943,
+                    0.001391334248746684
+                ],
+                "n_gram_diversity": [
+                    0.7435897435897436,
+                    0.974025974025974,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.15384615384615385,
+                    0.4675324675324675,
+                    0.75,
+                    0.9066666666666666,
+                    0.972972972972973
+                ],
+                "avg_dependency_num_clauses": 1.75,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.716261419678228,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.17807488640149435,
+                "novelty": 0.00560224972506107,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "Marly stood staring at the petrol pump. \"What the bloody hell do I put in this thing? There's no way to tell if it's petrol or diesel! I'll just try diesel in this hole at the back.\". The horse's eyes grew huge and it neighed loudly. ",
+            "result_id": "R_2PoZkpFOhTZwzbR_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2PoZkpFOhTZwzbR.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2PoZkpFOhTZwzbR"
+            },
+            "metrics": {
+                "length_in_chars": 234,
+                "length_in_words": 50,
+                "length_in_unique_words": 38,
+                "length_in_concepts": 19,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 3.6,
+                "avg_sentence_length_in_chars": 45.8,
+                "avg_sentence_length_in_words": 10,
+                "avg_sentence_length_in_unique_words": 9.8,
+                "dsi": 0.21014005886880974,
+                "surprise": 0.05433510442574818,
+                "raw_surprises": [
+                    0.04479093750317892,
+                    0.024943729241689055,
+                    0.01788697640101114,
+                    0.02104856570561725
+                ],
+                "n_gram_diversity": [
+                    0.76,
+                    0.9591836734693877,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.24,
+                    0.673469387755102,
+                    0.875,
+                    0.9574468085106383,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.4,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.203030303030303,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.1631737823287646,
+                "novelty": 0.006575560260108304,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "The was an oil spill in the park. Petrol, diesel and other flammible liquids from the nearby fuel station had seeped into the ground and were bubbling up between the cracks. Some suggested using big sponges to remove it, but in the end a pump was brought which was able to suck away most of the liquid.",
+            "result_id": "R_8DSuE0JfUBgPxHX_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8DSuE0JfUBgPxHX.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8DSuE0JfUBgPxHX"
+            },
+            "metrics": {
+                "length_in_chars": 302,
+                "length_in_words": 57,
+                "length_in_unique_words": 46,
+                "length_in_concepts": 24,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.228070175438597,
+                "avg_sentence_length_in_chars": 100,
+                "avg_sentence_length_in_words": 19,
+                "avg_sentence_length_in_unique_words": 16.666666666666668,
+                "dsi": 0.20108915131161179,
+                "surprise": 0.001536089001279911,
+                "raw_surprises": [
+                    8.68757565816447e-05,
+                    0.0014492132446982664
+                ],
+                "n_gram_diversity": [
+                    0.8070175438596491,
+                    0.9821428571428571,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.17543859649122806,
+                    0.5535714285714286,
+                    0.8545454545454545,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.6666666666666665,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.8645688294811102,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.17527775466442108,
+                "novelty": 0.024677375374504207,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "As a vehicle owner and driver for over 40 years, I have been very fortunate to have owned a variety of different vehicles. I have not owned an electric vehicle, much to its early development and cost to purchase. I like the idea of helping the environment and utilising clean energy, but I'm afraid it is beyond my price point at this time. I therefore have only owned petrol or diesel cars which require the use of a pump to fill a tank rather than top up a battery.",
+            "result_id": "R_8dFIkEkt84RkgQj_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8dFIkEkt84RkgQj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8dFIkEkt84RkgQj"
+            },
+            "metrics": {
+                "length_in_chars": 467,
+                "length_in_words": 90,
+                "length_in_unique_words": 67,
+                "length_in_concepts": 34,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.133333333333334,
+                "avg_sentence_length_in_chars": 116,
+                "avg_sentence_length_in_words": 22.5,
+                "avg_sentence_length_in_unique_words": 20.75,
+                "dsi": 0.20846066553537435,
+                "surprise": 0.018876918314625974,
+                "raw_surprises": [
+                    0.011735392231789848,
+                    0.0036065565043197634,
+                    0.012973428735829351
+                ],
+                "n_gram_diversity": [
+                    0.7444444444444445,
+                    0.9887640449438202,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.12222222222222222,
+                    0.48314606741573035,
+                    0.7954545454545454,
+                    0.9540229885057471,
+                    0.9883720930232558
+                ],
+                "avg_dependency_num_clauses": 4.25,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.0062037105386183,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.1770461176832517,
+                "novelty": 0.009934346926979087,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "As the day grows darker and I find myself having to do the weekly shopping it is with glee that I look over my shoulder whilst driving past a petrol pump. What a relic of the recent past, having had to put diesel in my old car and feeling like a slave to the big oil corporations that are stuck in their ways. Nowadays, I go shopping whilst my electric car charges, giving me time and not worrying what my actions impact our environment. To all the naysayers I say just this, don't wack it before you try it.",
+            "result_id": "R_2eaDBbNJB41Q6MF_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2eaDBbNJB41Q6MF.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2eaDBbNJB41Q6MF"
+            },
+            "metrics": {
+                "length_in_chars": 508,
+                "length_in_words": 100,
+                "length_in_unique_words": 72,
+                "length_in_concepts": 42,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.02,
+                "avg_sentence_length_in_chars": 100.8,
+                "avg_sentence_length_in_words": 20,
+                "avg_sentence_length_in_unique_words": 18.6,
+                "dsi": 0.2116103199993138,
+                "surprise": 0.014184079774014341,
+                "raw_surprises": [
+                    0.0028762248429385073,
+                    0.006098142563006559,
+                    0.006120333552876583,
+                    0.013273458589207032
+                ],
+                "n_gram_diversity": [
+                    0.72,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11,
+                    0.43434343434343436,
+                    0.8061224489795918,
+                    0.9381443298969072,
+                    0.9791666666666666
+                ],
+                "avg_dependency_num_clauses": 3.2,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.1647873282548207,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.15630326171716055,
+                "novelty": 0.003635037999100199,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "It was still another 10 miles to the next petrol or diesel pump. I didn't even know what this old battered car took but whatever it was it was running on fumes. I'd soon know about it if it was diesel as i think i heard once that you cant let a diesel tank run drive or the engine would go kaput. Every extra mile the car got was one fewer to the safety and one more away them.",
+            "result_id": "R_8VyQYwyI8iMwwKJ_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8VyQYwyI8iMwwKJ.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8VyQYwyI8iMwwKJ"
+            },
+            "metrics": {
+                "length_in_chars": 377,
+                "length_in_words": 82,
+                "length_in_unique_words": 61,
+                "length_in_concepts": 26,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 3.597560975609756,
+                "avg_sentence_length_in_chars": 93.5,
+                "avg_sentence_length_in_words": 20.5,
+                "avg_sentence_length_in_unique_words": 18.5,
+                "dsi": 0.20185852160820594,
+                "surprise": 0.011296880640852842,
+                "raw_surprises": [
+                    0.0028781340235755626,
+                    0.003972770073713161,
+                    0.01009441686399054
+                ],
+                "n_gram_diversity": [
+                    0.7439024390243902,
+                    0.9506172839506173,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.14634146341463414,
+                    0.6296296296296297,
+                    0.925,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.75,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 2.75858206051713,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.14278042813142142,
+                "novelty": 0.023138634781315892,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "There was a beautiful car. It had a shiny exterior with beautiful and intricate paintwork. Its interior was luxurious. It was unknown at first whether petrol or diesel would fuel the car. It was discovered through research, rather than just to pump the car with either petrol or diesel, that the car runs on petrol.",
+            "result_id": "R_27dw4UbFh02oLUB_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_27dw4UbFh02oLUB.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_27dw4UbFh02oLUB"
+            },
+            "metrics": {
+                "length_in_chars": 315,
+                "length_in_words": 55,
+                "length_in_unique_words": 38,
+                "length_in_concepts": 16,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.618181818181818,
+                "avg_sentence_length_in_chars": 62.2,
+                "avg_sentence_length_in_words": 11,
+                "avg_sentence_length_in_unique_words": 10.4,
+                "dsi": 0.20675824532906215,
+                "surprise": 0.0490715367453439,
+                "raw_surprises": [
+                    0.020054668188095093,
+                    0.02777007222175598,
+                    0.005586814880371105,
+                    0.044731518200465614
+                ],
+                "n_gram_diversity": [
+                    0.6909090909090909,
+                    0.8888888888888888,
+                    0.9811320754716981,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2,
+                    0.5925925925925926,
+                    0.8679245283018868,
+                    0.9615384615384616,
+                    0.9803921568627451
+                ],
+                "avg_dependency_num_clauses": 2.2,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.165988455988456,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.1538374051451683,
+                "novelty": 0.013339187339603487,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "I went to buy a new car. When I reached there I forgot whether I should buy the car with petrol or diesel. I figured it out after asking my friend on phone. He also mentioned about the differnent pump types in different cars.",
+            "result_id": "R_8sBNWJpZHPgPqua_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8sBNWJpZHPgPqua.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8sBNWJpZHPgPqua"
+            },
+            "metrics": {
+                "length_in_chars": 225,
+                "length_in_words": 44,
+                "length_in_unique_words": 37,
+                "length_in_concepts": 17,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.045454545454546,
+                "avg_sentence_length_in_chars": 55.5,
+                "avg_sentence_length_in_words": 11,
+                "avg_sentence_length_in_unique_words": 10.5,
+                "dsi": 0.20098627402501948,
+                "surprise": 0.022265438238779706,
+                "raw_surprises": [
+                    0.016260848442713416,
+                    0.002465798457463586,
+                    0.01467151045799256
+                ],
+                "n_gram_diversity": [
+                    0.8409090909090909,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.25,
+                    0.6976744186046512,
+                    0.9761904761904762,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.25,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.416448379012046,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.14967902253071466,
+                "novelty": 0.02488312994768882,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "Unsure which vehicle to purchase from the sparkling showroom, I decided to take a seat in the waiting area, with a coffee to decide. There were both pros and cons to either a petrol or diesel powered vehicle. After careful consideration and finally purchasing my new vehicle, the day had arrived to collect from the showroom. Leaving the forecourt and driving down the road, the underinflated tyre pressure light 'pinged' on the dashboard. Before returning home I nipped into the local garage to inflate the tyre with an air pump to ensure the car was maintained.",
+            "result_id": "R_2bxsVUkaSaFXjdD_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2bxsVUkaSaFXjdD.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2bxsVUkaSaFXjdD"
+            },
+            "metrics": {
+                "length_in_chars": 563,
+                "length_in_words": 96,
+                "length_in_unique_words": 69,
+                "length_in_concepts": 43,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.760416666666667,
+                "avg_sentence_length_in_chars": 111.8,
+                "avg_sentence_length_in_words": 19.2,
+                "avg_sentence_length_in_unique_words": 17,
+                "dsi": 0.21204910081618383,
+                "surprise": 0.020563782495681707,
+                "raw_surprises": [
+                    0.016212797164916998,
+                    0.0089377654923333,
+                    0.013258147239685075,
+                    0.002718855094428041
+                ],
+                "n_gram_diversity": [
+                    0.71875,
+                    0.9894736842105263,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11458333333333333,
+                    0.3684210526315789,
+                    0.6702127659574468,
+                    0.8602150537634409,
+                    0.9891304347826086
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.7409219224768004,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.1475509280959765,
+                "novelty": 0.002757476365360112,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "She glanced at the red fuel warning on the dashboard and noticed the petrol was on the verge of running out. She swore under her breath - her boyfriend had promised to fill up with diesel the night before but, as usual he had forgotten. She remembered he came home, going on about how pumped he was for the concert tonight. His band hadn't been together that long and already they had several bookings. Trouble was, she was driving the van with their instruments and now she probably wasn't going to make it to the venue - he only had himself to blame.",
+            "result_id": "R_87z2b4sr7in6R21_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_87z2b4sr7in6R21.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_87z2b4sr7in6R21"
+            },
+            "metrics": {
+                "length_in_chars": 552,
+                "length_in_words": 103,
+                "length_in_unique_words": 70,
+                "length_in_concepts": 35,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.271844660194175,
+                "avg_sentence_length_in_chars": 109.6,
+                "avg_sentence_length_in_words": 20.6,
+                "avg_sentence_length_in_unique_words": 17.8,
+                "dsi": 0.21202621510048875,
+                "surprise": 0.017889146057386243,
+                "raw_surprises": [
+                    0.0011009822289148874,
+                    0.0041126611213835595,
+                    0.022024242650894893,
+                    0.008540406113579146
+                ],
+                "n_gram_diversity": [
+                    0.6796116504854369,
+                    0.9901960784313726,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10679611650485436,
+                    0.46078431372549017,
+                    0.8217821782178217,
+                    0.98,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.2,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.8955365371955235,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.16015916069348654,
+                "novelty": 0.0028032477967502856,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "For his next mission, special agent Frank Tomlinson would require a vehicle with a unique modification. In order to arrange this, he went to see his underground mechanic Diesel Dan, who told him that the modification would be difficult, but that he could do it for \u00a3100,000. 'When did you pump up the price?', Frank asked, 'last time it was only eighty-thousand!', but Dan pretended not to hear him as he carried on sorting his various barrels of petrol. After handing over the money, Diesel Dan completed the modification and Frank was ready for his mission.",
+            "result_id": "R_2XcT1LBVLYHa6hX_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2XcT1LBVLYHa6hX.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2XcT1LBVLYHa6hX"
+            },
+            "metrics": {
+                "length_in_chars": 559,
+                "length_in_words": 98,
+                "length_in_unique_words": 71,
+                "length_in_concepts": 36,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.540816326530612,
+                "avg_sentence_length_in_chars": 139,
+                "avg_sentence_length_in_words": 24.5,
+                "avg_sentence_length_in_unique_words": 23.25,
+                "dsi": 0.21196304654318188,
+                "surprise": 0.003024212740085741,
+                "raw_surprises": [
+                    0.0011064256682540297,
+                    0.0012911911452170022,
+                    0.0021387022966575797
+                ],
+                "n_gram_diversity": [
+                    0.7244897959183674,
+                    0.9690721649484536,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.14285714285714285,
+                    0.5154639175257731,
+                    0.8333333333333334,
+                    0.9473684210526315,
+                    0.9893617021276596
+                ],
+                "avg_dependency_num_clauses": 3.5,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.779546378457182,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.17566865930954614,
+                "novelty": 0.002929584911364025,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "The motor coughed, jerked and the warning light flashed, jeez outta gas! It's a good five miles to the next town and its blowing a blizzard out there. This weather is due to set in for weeks, so I can't stay here. I've got a tank of diesel in the trunk for the tractor, so I'll have to use that. It'll ruin the petrol engine, but at least it will get me to the next town, or at least most of the way there. Hopefully they will will be able to pump and flush the engine before it is completely ruined.",
+            "result_id": "R_2zUqf0C1wjV8ASQ_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2zUqf0C1wjV8ASQ.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2zUqf0C1wjV8ASQ"
+            },
+            "metrics": {
+                "length_in_chars": 500,
+                "length_in_words": 106,
+                "length_in_unique_words": 71,
+                "length_in_concepts": 33,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 3.660377358490566,
+                "avg_sentence_length_in_chars": 82.5,
+                "avg_sentence_length_in_words": 17.666666666666668,
+                "avg_sentence_length_in_unique_words": 16,
+                "dsi": 0.2105713700028983,
+                "surprise": 0.015502319317015368,
+                "raw_surprises": [
+                    0.0076292610830730745,
+                    0.008634690443674709,
+                    0.010339430967966717,
+                    0.009970863660176577,
+                    0.0021815521376473412
+                ],
+                "n_gram_diversity": [
+                    0.6698113207547169,
+                    0.9523809523809523,
+                    0.9807692307692307,
+                    0.9902912621359223,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11320754716981132,
+                    0.4666666666666667,
+                    0.7307692307692307,
+                    0.9029126213592233,
+                    0.9705882352941176
+                ],
+                "avg_dependency_num_clauses": 2.8333333333333335,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.62844306136173,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.1612123946348826,
+                "novelty": 0.005712937991931177,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "A car spluttered to a stop of the motorway, the driver pulled over to the hard shoulder and exited the vehicle scratching their head. They looked around in disbelief as they realised their petrol cap had fallen off the car and petrol was leaking out onto the road. Now the tank was clearly drained and this had caused the car to splutter to a stop. The driver called the AA for assistance but the guy that arrived was new and nervous, he started to put diesel into the cars tank instead of petrol! Now once the driver realised the error he told the AA member to pump the diesel out so he could put petrol in instead.",
+            "result_id": "R_8kG4d41raqDZBax_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8kG4d41raqDZBax.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8kG4d41raqDZBax"
+            },
+            "metrics": {
+                "length_in_chars": 616,
+                "length_in_words": 117,
+                "length_in_unique_words": 67,
+                "length_in_concepts": 38,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.213675213675214,
+                "avg_sentence_length_in_chars": 122.4,
+                "avg_sentence_length_in_words": 23.4,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.21051592525004661,
+                "surprise": 0.005698315821565728,
+                "raw_surprises": [
+                    0.0046097484200891825,
+                    0.002090350739539615,
+                    0.0038679235584133387,
+                    0.0008286089250893192
+                ],
+                "n_gram_diversity": [
+                    0.5726495726495726,
+                    0.9482758620689655,
+                    0.991304347826087,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10256410256410256,
+                    0.4224137931034483,
+                    0.7130434782608696,
+                    0.9035087719298246,
+                    0.9823008849557522
+                ],
+                "avg_dependency_num_clauses": 4.6,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 2.914650887014343,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.15252861380577087,
+                "novelty": 0.005823827497634548,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "I wondered about the puddle of petrol outside my house, near the front door. Had it have been diesel, I would have been less worried. The problem was that I had no idea whether the fuel pump in my vehicle was faulty ot not; the alternative was that someone was out to get me. Although I had few enemies, I knew the most likely culprit, but she was overseas on vacation. Knowing that, I scattered sand on the puddle and stopped worrying.",
+            "result_id": "R_2YKQTEPFuU2GBvV_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2YKQTEPFuU2GBvV.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2YKQTEPFuU2GBvV"
+            },
+            "metrics": {
+                "length_in_chars": 436,
+                "length_in_words": 82,
+                "length_in_unique_words": 58,
+                "length_in_concepts": 27,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.195121951219512,
+                "avg_sentence_length_in_chars": 86.4,
+                "avg_sentence_length_in_words": 16.4,
+                "avg_sentence_length_in_unique_words": 14.4,
+                "dsi": 0.20859733402219593,
+                "surprise": 0.035351859104065686,
+                "raw_surprises": [
+                    0.023628050372714093,
+                    0.033548108169010715,
+                    0.007732355026971727,
+                    0.005795204639434837
+                ],
+                "n_gram_diversity": [
+                    0.7073170731707317,
+                    0.9382716049382716,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13414634146341464,
+                    0.5308641975308642,
+                    0.8625,
+                    0.9620253164556962,
+                    0.9871794871794872
+                ],
+                "avg_dependency_num_clauses": 2.6,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.507229365263892,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.14482689648866653,
+                "novelty": 0.009661009953335908,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "the sun was shining, there was a gentle breeze and I was enjoying the drive through the countryside.   i was on my way to join other members of the Petrol Head Club for a fun day out.    I was wearing my favourite Diesel jeans and club T-shirt - i thought i looked great.    i switched radio channels to the Pump fm and sang alon",
+            "result_id": "R_8zUaSPSsswsQ7fn_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8zUaSPSsswsQ7fn.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8zUaSPSsswsQ7fn"
+            },
+            "metrics": {
+                "length_in_chars": 329,
+                "length_in_words": 67,
+                "length_in_unique_words": 47,
+                "length_in_concepts": 33,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 3.8805970149253732,
+                "avg_sentence_length_in_chars": 65.6,
+                "avg_sentence_length_in_words": 13.4,
+                "avg_sentence_length_in_unique_words": 12.6,
+                "dsi": 0.20719334528301703,
+                "surprise": 0.025924414396286025,
+                "raw_surprises": [
+                    0.018282930056254088,
+                    0.015388151009877532,
+                    0.00025274356206259063,
+                    0.01792500416437784
+                ],
+                "n_gram_diversity": [
+                    0.7014925373134329,
+                    0.9545454545454546,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1791044776119403,
+                    0.5454545454545454,
+                    0.8615384615384616,
+                    0.984375,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.8,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.339824609677551,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.15512603521347046,
+                "novelty": 0.012468987431693723,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "It was a sunny day and little Mia's favourite place to play was next to the old pink water pump hidden in the wildflowers at her grandma's house. At only 6 years old, she didn't quite know what it was but had painted, decorated and pretended it was magic for as long as she could remember. Her grandma would tell her of the days when the big petrol and diesel trucks would come rolling through the town but Mia wasn't interested in the history, only in the fantasy worlds she could create in her beautiful hideout. ",
+            "result_id": "R_8dVYGXDIccl6jkg_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8dVYGXDIccl6jkg.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8dVYGXDIccl6jkg"
+            },
+            "metrics": {
+                "length_in_chars": 515,
+                "length_in_words": 100,
+                "length_in_unique_words": 66,
+                "length_in_concepts": 39,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.13,
+                "avg_sentence_length_in_chars": 170.66666666666666,
+                "avg_sentence_length_in_words": 33.333333333333336,
+                "avg_sentence_length_in_unique_words": 27.666666666666668,
+                "dsi": 0.21290532023961406,
+                "surprise": 0.020528178054745466,
+                "raw_surprises": [
+                    0.008424660516163668,
+                    0.012103517538581798
+                ],
+                "n_gram_diversity": [
+                    0.66,
+                    0.9393939393939394,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13,
+                    0.5555555555555556,
+                    0.8775510204081632,
+                    0.979381443298969,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 6,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.6831257247596607,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.19176175693670908,
+                "novelty": 0.0010450375184996585,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "semantic_distance": "low",
+            "output": "I wanted to have some fun while I was off work. I wanted to make a rocket so I got some petrol. I was lucky as I nearly get diesel. Anyway, I put a few drops of petrol in a plastic bottle and used a pump to vapourise the petrol. I put a match to the nosel of the bottle and it shot into the air.",
+            "result_id": "R_8bVpeztZaqiDial_Q1",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8bVpeztZaqiDial.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8bVpeztZaqiDial"
+            },
+            "metrics": {
+                "length_in_chars": 295,
+                "length_in_words": 66,
+                "length_in_unique_words": 40,
+                "length_in_concepts": 18,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 3.393939393939394,
+                "avg_sentence_length_in_chars": 48.333333333333336,
+                "avg_sentence_length_in_words": 11,
+                "avg_sentence_length_in_unique_words": 9.833333333333334,
+                "dsi": 0.20668625714732153,
+                "surprise": 0.01827700138092041,
+                "raw_surprises": [
+                    0.0057364304860433035,
+                    0.012922883033752441,
+                    0.007110873858133943,
+                    0.01116918722788493,
+                    0.008753128846486408
+                ],
+                "n_gram_diversity": [
+                    0.6060606060606061,
+                    0.8923076923076924,
+                    0.96875,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16666666666666666,
+                    0.4153846153846154,
+                    0.671875,
+                    0.8412698412698413,
+                    0.9354838709677419
+                ],
+                "avg_dependency_num_clauses": 1.5,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.2226816330396892,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.15605378150939941,
+                "novelty": 0.013483163703084722,
+                "theme_uniqueness": 1.0
+            }
+        }
+    ]
+}

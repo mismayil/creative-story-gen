@@ -1,0 +1,2079 @@
+{
+    "metadata": {
+        "group_id": [
+            "claude-3-5-sonnet-20240620",
+            "petrol-diesel-pump"
+        ],
+        "config": {
+            "results_paths": [
+                "../experiments/outputs/gpt-4/pilot/**/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/**/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/**/run1",
+                "../experiments/outputs/human/pilot/run1"
+            ],
+            "report_usage": true,
+            "spacy_lang": "en_core_web_sm",
+            "max_n_gram": 5,
+            "output_dir": "../experiments/reports/pilot/run1_report5",
+            "config": "../experiments/reports/pilot/run1_report5/config.json",
+            "num_samples": 25,
+            "deduplicate": true,
+            "deduplicate_by": "output",
+            "max_frequency": 10,
+            "group_by": [
+                "model",
+                "id"
+            ],
+            "output_attr": "output",
+            "emb_model": "thenlper/gte-large",
+            "emb_type": "sentence_embedding",
+            "emb_strategy": "direct",
+            "distance_fn": "cosine",
+            "lower": true,
+            "remove_punct": true,
+            "remove_stopwords": true,
+            "lemmatize": true,
+            "dominant_k": null,
+            "unique": true,
+            "cluster_linkage": "ward",
+            "cluster_dist_threshold": 0.5,
+            "description": "Report2 + filter by sentence length",
+            "filter_by": {
+                "sentence_length": [
+                    3,
+                    6
+                ]
+            }
+        }
+    },
+    "metrics": {
+        "num_samples": 25,
+        "avg_length_in_chars": 659.6,
+        "avg_length_in_words": 112.32,
+        "avg_length_in_unique_words": 84.88,
+        "avg_length_in_concepts": 53.96,
+        "avg_length_in_sentences": 4.96,
+        "avg_word_length_in_chars": 4.754764716417825,
+        "avg_sentence_length_in_chars": 132.51,
+        "avg_sentence_length_in_words": 22.682,
+        "avg_sentence_length_in_unique_words": 21.402,
+        "avg_dsi": 0.21103571004249652,
+        "avg_surprise": 0.011152006787218343,
+        "avg_raw_surprises": [
+            0.004447714217939207,
+            0.006382105244907689,
+            0.0065580449860706954,
+            0.004917200371914895
+        ],
+        "avg_n_gram_diversity": [
+            0.75856963837437,
+            0.9890455465467708,
+            1.0,
+            1.0,
+            1.0
+        ],
+        "avg_pos_diversity": [
+            0.1119522483118514,
+            0.46948717909782733,
+            0.8049323367315396,
+            0.9391774756504541,
+            0.9795725386221315
+        ],
+        "avg_dependency_num_clauses": 3.5,
+        "avg_max_dependency_num_clauses": 5.44,
+        "avg_dependency_path_length": 3.0379341695716864,
+        "avg_max_dependency_path_length": 8.68,
+        "avg_inv_homogen": 0.06677364607652028,
+        "avg_novelty": 0.004752396243409225,
+        "avg_theme_uniqueness": 0.16,
+        "corpus_dsi": 0.21317560646482372,
+        "corpus_n_gram_diversity": [
+            0.2207977207977208,
+            0.5133594584966156,
+            0.6033499643620812,
+            0.6399286987522281,
+            0.6619115549215406
+        ],
+        "corpus_pos_diversity": [
+            0.004629629629629629,
+            0.04132525828286427,
+            0.16286528866714184,
+            0.3354723707664884,
+            0.4814550641940086
+        ],
+        "num_unique_stories": 25,
+        "top_10_n_grams": {
+            "1-gram": {
+                "a": 121,
+                "her": 104,
+                "to": 85,
+                "the": 79,
+                "of": 69,
+                "'s": 53,
+                "in": 48,
+                "and": 48,
+                "lila": 45,
+                "fuel": 42
+            },
+            "2-gram": {
+                "lila 's": 33,
+                "in a": 28,
+                "a world": 23,
+                "world where": 23,
+                "was a": 23,
+                "petrol pump": 23,
+                "where emotions": 22,
+                "emotions were": 22,
+                "were fuel": 22,
+                "'s heart": 22
+            },
+            "3-gram": {
+                "in a world": 23,
+                "a world where": 23,
+                "world where emotions": 22,
+                "where emotions were": 22,
+                "emotions were fuel": 22,
+                "'s heart was": 22,
+                "heart was a": 22,
+                "was a petrol": 22,
+                "a petrol pump": 22,
+                "petrol pump dispensing": 22
+            },
+            "4-gram": {
+                "in a world where": 23,
+                "a world where emotions": 22,
+                "world where emotions were": 22,
+                "where emotions were fuel": 22,
+                "'s heart was a": 22,
+                "heart was a petrol": 22,
+                "was a petrol pump": 22,
+                "a petrol pump dispensing": 22,
+                "petrol pump dispensing joy": 22,
+                "pump dispensing joy to": 22
+            },
+            "5-gram": {
+                "in a world where emotions": 22,
+                "a world where emotions were": 22,
+                "world where emotions were fuel": 22,
+                "'s heart was a petrol": 22,
+                "heart was a petrol pump": 22,
+                "was a petrol pump dispensing": 22,
+                "a petrol pump dispensing joy": 22,
+                "petrol pump dispensing joy to": 22,
+                "where emotions were fuel lila": 18,
+                "emotions were fuel lila 's": 18
+            }
+        },
+        "usage": {
+            "input_tokens": 3675,
+            "output_tokens": 3854,
+            "total_tokens": 7529
+        },
+        "cost": {
+            "input": 0.011025000000000007,
+            "output": 0.05781,
+            "total": 0.068835
+        }
+    },
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Amelia's heart was a petrol pump, dispensing joy to those around her. Her best friend, Jake, ran on diesel\u2014dark, brooding feelings that powered his artistic creations. One fateful day, their energies collided, creating an explosive mixture that threatened to consume them both. As they grappled with the aftermath, Amelia and Jake discovered that their contrasting essences could form a perfect blend, much like a well-tuned engine. Together, they learned to harness their unique emotional fuels, pumping inspiration and creativity into the world in ways they never thought possible.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 138
+            },
+            "result_id": "f87ff37cc4c1",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.9/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_e38640abdf3f.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 620,
+                "length_in_words": 98,
+                "length_in_unique_words": 80,
+                "length_in_concepts": 49,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 5.183673469387755,
+                "avg_sentence_length_in_chars": 123.2,
+                "avg_sentence_length_in_words": 19.6,
+                "avg_sentence_length_in_unique_words": 19,
+                "dsi": 0.21174649047811014,
+                "surprise": 0.014437161570106632,
+                "raw_surprises": [
+                    0.0045241166846920755,
+                    0.012307345837053618,
+                    0.0061665848534331325,
+                    0.005876275765034439
+                ],
+                "n_gram_diversity": [
+                    0.8163265306122449,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1326530612244898,
+                    0.5257731958762887,
+                    0.8645833333333334,
+                    0.968421052631579,
+                    0.9893617021276596
+                ],
+                "avg_dependency_num_clauses": 3.2,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.8900191638426933,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.07832804322242737,
+                "novelty": 0.002858231973427161,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to those around her. Her best friend, Max, ran on diesel - a slower burn, but with unwavering loyalty. One day, Lila's reservoir ran dry, leaving her unable to uplift others or even herself. Max, recognizing her plight, connected their emotional fuel lines and began to pump his steady diesel energy into her depleted system. As their energies mingled and balanced, they discovered a new, powerful blend that could power them both through life's toughest journeys.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 130
+            },
+            "result_id": "c5aa0bbc8da0",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.9/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_b6ac1b30b1af.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 548,
+                "length_in_words": 93,
+                "length_in_unique_words": 74,
+                "length_in_concepts": 44,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.741935483870968,
+                "avg_sentence_length_in_chars": 108.8,
+                "avg_sentence_length_in_words": 18.6,
+                "avg_sentence_length_in_unique_words": 18.2,
+                "dsi": 0.2101391184657623,
+                "surprise": 0.01048316821391447,
+                "raw_surprises": [
+                    0.001167272528012575,
+                    0.0036025437570753605,
+                    0.011448332241603298,
+                    0.004748187901137707
+                ],
+                "n_gram_diversity": [
+                    0.7956989247311828,
+                    0.9891304347826086,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13978494623655913,
+                    0.5869565217391305,
+                    0.9120879120879121,
+                    0.9777777777777777,
+                    0.9887640449438202
+                ],
+                "avg_dependency_num_clauses": 3.2,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.7769758259593926,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.04675470540920893,
+                "novelty": 0.006072975998122843,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the distant future, on a planet where humans had long since abandoned fossil fuels, a peculiar museum stood as a testament to Earth's bygone era. Little Zara, a curious child born in this advanced civilization, wandered through the exhibits, marveling at the strange contraptions from the past. Her eyes widened as she came across a rusty old machine labeled \"Petrol Pump,\" its nozzles dangling lifelessly like the tentacles of an alien creature. The placard beside it explained how ancient humans would use this device to transfer a liquid called \"diesel\" into their primitive vehicles, a concept that seemed utterly absurd to Zara. As she pressed her hand against the glass separating her from this relic, she couldn't help but feel grateful for the clean, silent energy that powered her world, free from the smoky ghosts of petrol and diesel that once haunted the Earth.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 198
+            },
+            "result_id": "a9f377450d9a",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p1/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_ce40224b17cf.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 876,
+                "length_in_words": 147,
+                "length_in_unique_words": 110,
+                "length_in_concepts": 75,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.850340136054422,
+                "avg_sentence_length_in_chars": 174.4,
+                "avg_sentence_length_in_words": 29.4,
+                "avg_sentence_length_in_unique_words": 26.6,
+                "dsi": 0.21438599436132758,
+                "surprise": 0.010031752842789954,
+                "raw_surprises": [
+                    0.008760811819698344,
+                    0.005404959695461453,
+                    0.004923470318317413,
+                    0.000974263852102697
+                ],
+                "n_gram_diversity": [
+                    0.7482993197278912,
+                    0.9863013698630136,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08163265306122448,
+                    0.3835616438356164,
+                    0.6482758620689655,
+                    0.8125,
+                    0.916083916083916
+                ],
+                "avg_dependency_num_clauses": 4,
+                "max_dependency_num_clauses": 9,
+                "avg_dependency_path_length": 3.846469558667139,
+                "max_dependency_path_length": 12,
+                "inv_homogen": 0.12154402832190196,
+                "novelty": 0.002420775793007701,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to those around her. Her laughter was like high-octane happiness, filling the empty tanks of weary souls. But when she met Zack, whose brooding nature ran on diesel-dark thoughts, she feared they'd be incompatible. To her surprise, their contrasting energies created a perfect blend, and together they powered through life's obstacles. As they grew old, hand in hand, Lila realized that love was the ultimate fuel - a renewable resource that could pump endlessly, powering their shared journey through time.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 138
+            },
+            "result_id": "ab9f68705e40",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.7/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_b1e4ac4d673c.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 591,
+                "length_in_words": 99,
+                "length_in_unique_words": 78,
+                "length_in_concepts": 49,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.838383838383838,
+                "avg_sentence_length_in_chars": 117.4,
+                "avg_sentence_length_in_words": 19.8,
+                "avg_sentence_length_in_unique_words": 19,
+                "dsi": 0.21148501544379864,
+                "surprise": 0.012379864686065264,
+                "raw_surprises": [
+                    0.0047199808888965245,
+                    0.008789119786686367,
+                    0.009009625514348363,
+                    0.002241003182199275
+                ],
+                "n_gram_diversity": [
+                    0.7878787878787878,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.12121212121212122,
+                    0.5,
+                    0.8041237113402062,
+                    0.9791666666666666,
+                    0.9894736842105263
+                ],
+                "avg_dependency_num_clauses": 2.6,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.8598770277341705,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.06381815920273463,
+                "novelty": 0.0033811820420501792,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to those around her. Her best friend, Max, ran on diesel - a slower burn, but with enduring power that kept him going through tough times. One day, Lila's reservoir of happiness ran dry, leaving her unable to uplift others or even herself. Max, recognizing her plight, connected their emotional fuel lines and began to pump his steady energy into her depleted spirit. As Lila's eyes sparkled once more, they realized that sometimes the best way to refuel is through the unwavering support of a friend.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 139
+            },
+            "result_id": "407d9fb2a80a",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.5/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_f91acd3abb28.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 585,
+                "length_in_words": 103,
+                "length_in_unique_words": 79,
+                "length_in_concepts": 46,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.553398058252427,
+                "avg_sentence_length_in_chars": 116.2,
+                "avg_sentence_length_in_words": 20.6,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.2099072636037633,
+                "surprise": 0.02158240171579215,
+                "raw_surprises": [
+                    0.008738497893015562,
+                    0.013969447877671987,
+                    0.012480371782922328,
+                    0.00797648587797442
+                ],
+                "n_gram_diversity": [
+                    0.7669902912621359,
+                    0.9803921568627451,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1262135922330097,
+                    0.5098039215686274,
+                    0.8811881188118812,
+                    0.98,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.2,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.8956274956274957,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.05533538262049357,
+                "novelty": 0.00653668572212085,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to those around her. Her best friend, Max, ran on diesel - a slower-burning, more melancholic energy that kept him grounded. One day, Lila's pump malfunctioned, leaving her unable to spread happiness, and she felt her own tank running dangerously low. Max, realizing the gravity of the situation, decided to convert his diesel-powered empathy into a form Lila could absorb. As he hugged her tightly, their energies merged, creating a new, hybrid fuel that powered them both, stronger than ever before.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 144
+            },
+            "result_id": "c33f37aeea2e",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.7/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_58ad85a45e15.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 585,
+                "length_in_words": 99,
+                "length_in_unique_words": 79,
+                "length_in_concepts": 46,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.7272727272727275,
+                "avg_sentence_length_in_chars": 116.2,
+                "avg_sentence_length_in_words": 19.8,
+                "avg_sentence_length_in_unique_words": 19.2,
+                "dsi": 0.21043466404440322,
+                "surprise": 0.014239088847086995,
+                "raw_surprises": [
+                    0.003114668528238912,
+                    0.006347938531484354,
+                    0.004141873274094043,
+                    0.01487369736035668
+                ],
+                "n_gram_diversity": [
+                    0.797979797979798,
+                    0.9897959183673469,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13131313131313133,
+                    0.5408163265306123,
+                    0.8144329896907216,
+                    0.9375,
+                    0.9789473684210527
+                ],
+                "avg_dependency_num_clauses": 2.8,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.93432356704718,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.04720550775527954,
+                "novelty": 0.005481884840841,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to those around her. Her best friend, Max, ran on diesel - a slower-burning, more melancholic energy that kept him grounded. One day, Lila's supply of happiness began to run low, and she found herself unable to lift the spirits of others as she once had. Max, recognizing her struggle, decided to share his diesel-like resilience, teaching Lila that sometimes, a steady, enduring flame was just as valuable as a bright, explosive one. Together, they created a new blend of emotional fuel, one that combined the best of both their energies, and set out to power the world with their unique mixture of joy and perseverance.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 167
+            },
+            "result_id": "d7016eec13cf",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.5/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_41ecb97ba0d9.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 705,
+                "length_in_words": 124,
+                "length_in_unique_words": 87,
+                "length_in_concepts": 52,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.524193548387097,
+                "avg_sentence_length_in_chars": 140.2,
+                "avg_sentence_length_in_words": 24.8,
+                "avg_sentence_length_in_unique_words": 22.6,
+                "dsi": 0.2083350772411755,
+                "surprise": 0.00751714961869375,
+                "raw_surprises": [
+                    0.003114668528238912,
+                    0.005709903890436324,
+                    0.0033169577970649233,
+                    0.00289276902164734
+                ],
+                "n_gram_diversity": [
+                    0.7016129032258065,
+                    0.991869918699187,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10483870967741936,
+                    0.5203252032520326,
+                    0.8688524590163934,
+                    0.9586776859504132,
+                    0.9916666666666667
+                ],
+                "avg_dependency_num_clauses": 4,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.4051119458468797,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.04675128310918808,
+                "novelty": 0.009681058447296442,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lily's heart was a petrol pump, dispensing joy to everyone she met. Her laughter was high-octane happiness, filling the tanks of those around her with pure, unbridled delight. But when she encountered Max, whose soul ran on the diesel of despair, she found herself faced with an incompatible energy source. Determined to help, Lily worked tirelessly to refine her emotional output, creating a hybrid fuel of empathy and optimism. In the end, her efforts paid off, and Max's gloomy engine sputtered to life with a new, brighter energy, proving that even the most disparate souls could find common ground with a little emotional alchemy.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 158
+            },
+            "result_id": "16bccea64b92",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.95/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_18c4cbe40c73.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 672,
+                "length_in_words": 114,
+                "length_in_unique_words": 85,
+                "length_in_concepts": 56,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.771929824561403,
+                "avg_sentence_length_in_chars": 133.6,
+                "avg_sentence_length_in_words": 22.8,
+                "avg_sentence_length_in_unique_words": 21.4,
+                "dsi": 0.21132110926237974,
+                "surprise": 0.008135346146623021,
+                "raw_surprises": [
+                    0.005438546670807731,
+                    0.005928234590424408,
+                    0.0010968734056521767,
+                    0.0038070376263617256
+                ],
+                "n_gram_diversity": [
+                    0.7456140350877193,
+                    0.9911504424778761,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10526315789473684,
+                    0.46017699115044247,
+                    0.7857142857142857,
+                    0.972972972972973,
+                    0.9818181818181818
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.0768440775814048,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.06111111988623937,
+                "novelty": 0.0037089944048879775,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to those around her. Her best friend, Max, ran on diesel - a slower burn, but with enduring power that kept him going through tough times. One day, Lila's reservoir of happiness ran dry, leaving her unable to uplift others or even herself. Max, recognizing her plight, connected their emotional fuel lines and began to pump his steady energy into her depleted spirit. As Lila's eyes brightened and her smile returned, they realized that sometimes the best way to refuel is through the unwavering support of a friend.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 140
+            },
+            "result_id": "c945059334a8",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.5/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_75b8390c1efb.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 600,
+                "length_in_words": 105,
+                "length_in_unique_words": 79,
+                "length_in_concepts": 48,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.59047619047619,
+                "avg_sentence_length_in_chars": 119.2,
+                "avg_sentence_length_in_words": 21,
+                "avg_sentence_length_in_unique_words": 20.4,
+                "dsi": 0.2098136635114115,
+                "surprise": 0.020466261243023615,
+                "raw_surprises": [
+                    0.008738497893015562,
+                    0.013969447877671987,
+                    0.012480371782922328,
+                    0.005744204932437352
+                ],
+                "n_gram_diversity": [
+                    0.7523809523809524,
+                    0.9807692307692307,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.12380952380952381,
+                    0.5,
+                    0.8543689320388349,
+                    0.9705882352941176,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.884960828960829,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.054397414127985634,
+                "novelty": 0.006723885906824434,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to those around her. Her best friend, Max, ran on diesel - a slower burn, but with enduring power that kept him going through tough times. One day, Lila's reservoir of happiness ran dry, leaving her unable to pump out her usual cheer. Max, recognizing her plight, connected their emotional fuel lines and shared his steady diesel energy with her. As they sat together, their combined essence created a new, hybrid fuel of friendship and resilience, powering them both through life's journey.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 132
+            },
+            "result_id": "66d26209f208",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0_p1/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_340d5c54fe52.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 575,
+                "length_in_words": 99,
+                "length_in_unique_words": 76,
+                "length_in_concepts": 48,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.656565656565657,
+                "avg_sentence_length_in_chars": 114.2,
+                "avg_sentence_length_in_words": 19.8,
+                "avg_sentence_length_in_unique_words": 19.2,
+                "dsi": 0.21011544098245336,
+                "surprise": 0.011513784166538352,
+                "raw_surprises": [
+                    0.008738497893015562,
+                    0.009937829682321264,
+                    0.004142076318914223,
+                    0.00020916443882565416
+                ],
+                "n_gram_diversity": [
+                    0.7676767676767676,
+                    0.9897959183673469,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13131313131313133,
+                    0.4897959183673469,
+                    0.865979381443299,
+                    0.9479166666666666,
+                    0.9789473684210527
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.6731326907922655,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.049299764136473335,
+                "novelty": 0.006120330964740739,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to everyone she met. Her best friend, Max, ran on diesel\u2014dark, brooding feelings that powered his artistic endeavors. One day, Lila's pump malfunctioned, leaving her unable to spread happiness, and she felt her inner light dimming. Max, realizing the gravity of the situation, decided to share some of his diesel-dark emotions with Lila, teaching her that a balance of light and shadow was necessary for a full life. As they embraced, their energies mingled, creating a new, iridescent fuel that would power them both through life's journey.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 151
+            },
+            "result_id": "bf3cdaf6438a",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.9/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_3c986c9d2501.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 625,
+                "length_in_words": 107,
+                "length_in_unique_words": 77,
+                "length_in_concepts": 48,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.700934579439252,
+                "avg_sentence_length_in_chars": 124.2,
+                "avg_sentence_length_in_words": 21.4,
+                "avg_sentence_length_in_unique_words": 20.2,
+                "dsi": 0.2112996909001195,
+                "surprise": 0.010753000219060935,
+                "raw_surprises": [
+                    0.004771970859681729,
+                    0.01139758753054071,
+                    0.0034697969302986686,
+                    0.0018666451176007626
+                ],
+                "n_gram_diversity": [
+                    0.719626168224299,
+                    0.9811320754716981,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11214953271028037,
+                    0.4811320754716981,
+                    0.8666666666666667,
+                    0.9519230769230769,
+                    0.9805825242718447
+                ],
+                "avg_dependency_num_clauses": 4,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.938010139728406,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.050070623556772866,
+                "novelty": 0.003751831129408467,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where humans had evolved to run on fuel instead of food, Zara was born with a rare condition - her body could only process diesel, while everyone else thrived on petrol. Feeling like an outcast, she spent years tinkering in her basement, determined to create a pump that could convert petrol into diesel within her body. On the day of the annual Fuel Festival, Zara unveiled her invention to a skeptical crowd, nervously attaching the sleek device to her arm. As the first drops of petrol entered her system, the pump whirred to life, and Zara felt a surge of energy course through her veins. The crowd erupted in cheers as Zara sprinted across the finish line, leaving a trail of exhaust in her wake, finally able to compete with her petrol-powered peers.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 185
+            },
+            "result_id": "9a21374fd185",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p1/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_7a1730e5fbf2.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 767,
+                "length_in_words": 136,
+                "length_in_unique_words": 89,
+                "length_in_concepts": 62,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.522058823529412,
+                "avg_sentence_length_in_chars": 152.6,
+                "avg_sentence_length_in_words": 27.2,
+                "avg_sentence_length_in_unique_words": 24.6,
+                "dsi": 0.2130490591260001,
+                "surprise": 0.013391584345131324,
+                "raw_surprises": [
+                    0.003660611469885361,
+                    0.013336949296050005,
+                    0.007424006641129438,
+                    0.002361601283197845
+                ],
+                "n_gram_diversity": [
+                    0.6544117647058824,
+                    0.9851851851851852,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08823529411764706,
+                    0.3037037037037037,
+                    0.6567164179104478,
+                    0.8646616541353384,
+                    0.946969696969697
+                ],
+                "avg_dependency_num_clauses": 3.4,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.175941187867184,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.11219992736975352,
+                "novelty": 0.0002530946776472254,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to everyone she met. Her infectious laughter acted like high-octane happiness, filling the empty tanks of those around her. But when she encountered Max, whose soul ran on the dark diesel of despair, Lila found herself struggling to ignite his spirit. Night after night, she worked tirelessly, using her warmth and kindness to slowly convert his gloom into glimmers of hope. As dawn broke on the hundredth day, Max's eyes sparkled with newfound light, and Lila realized she had finally succeeded in refining his diesel heart into a radiant beacon of positivity.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 153
+            },
+            "result_id": "a07b9c085fec",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.95/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_9b1ba605b396.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 645,
+                "length_in_words": 110,
+                "length_in_unique_words": 83,
+                "length_in_concepts": 55,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.763636363636364,
+                "avg_sentence_length_in_chars": 128.2,
+                "avg_sentence_length_in_words": 22,
+                "avg_sentence_length_in_unique_words": 21.4,
+                "dsi": 0.21233486013380365,
+                "surprise": 0.004305955819916288,
+                "raw_surprises": [
+                    0.003371757268905623,
+                    0.000520769092771739,
+                    0.002105273140801306,
+                    0.002614112137353908
+                ],
+                "n_gram_diversity": [
+                    0.7545454545454545,
+                    0.9908256880733946,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10909090909090909,
+                    0.42201834862385323,
+                    0.7314814814814815,
+                    0.8785046728971962,
+                    0.9433962264150944
+                ],
+                "avg_dependency_num_clauses": 3.4,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.0714403764944502,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.05806811650594076,
+                "novelty": 0.0016814926620401516,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to everyone she met. Her laughter was high-octane happiness, and her smile could power a city for days. But when she fell in love with Max, whose soul ran on the diesel of melancholy, their energies clashed in a spectacular fusion of light and shadow. As they embraced, their conflicting essences created a new form of emotional combustion, igniting a love so powerful it threatened to consume them both. In that moment, Lila realized that sometimes the most potent connections are forged when opposite forces collide, and she willingly surrendered to the intoxicating blend of their contrasting spirits.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 159
+            },
+            "result_id": "ce270770169b",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0_p0.3/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_c1bb84272610.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": 256,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 688,
+                "length_in_words": 115,
+                "length_in_unique_words": 88,
+                "length_in_concepts": 57,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.878260869565217,
+                "avg_sentence_length_in_chars": 136.8,
+                "avg_sentence_length_in_words": 23,
+                "avg_sentence_length_in_unique_words": 21.6,
+                "dsi": 0.20912902964685195,
+                "surprise": 0.011523466585465533,
+                "raw_surprises": [
+                    0.00036555609059713,
+                    0.0010789753425688997,
+                    0.01635758005655727,
+                    0.0052448216812077675
+                ],
+                "n_gram_diversity": [
+                    0.7652173913043478,
+                    0.9912280701754386,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10434782608695652,
+                    0.4473684210526316,
+                    0.8141592920353983,
+                    0.9553571428571429,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.924662330488891,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.06694137056668599,
+                "novelty": 0.00809315363594354,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to those around her. Her best friend, Max, ran on diesel - a slower-burning, more enduring form of happiness that kept him steady through life's challenges. One day, Lila's pump malfunctioned, leaving her unable to produce the vibrant petrol that had defined her existence. As Max watched his friend's light dim, he realized his diesel-powered contentment could be shared, and he began the delicate process of siphoning his own happiness into Lila's depleted tank. Together, they discovered a new blend of emotional fuel, more powerful and resilient than either had known before, propelling them forward on the highway of life with renewed vigor.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 168
+            },
+            "result_id": "940692ccb736",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.9/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_a127e6213da3.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 730,
+                "length_in_words": 124,
+                "length_in_unique_words": 90,
+                "length_in_concepts": 56,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.782258064516129,
+                "avg_sentence_length_in_chars": 145.2,
+                "avg_sentence_length_in_words": 24.8,
+                "avg_sentence_length_in_unique_words": 23.4,
+                "dsi": 0.20965679032461984,
+                "surprise": 0.012489308089841555,
+                "raw_surprises": [
+                    0.004049885622310984,
+                    0.006897217565244945,
+                    0.002662782717232748,
+                    0.011368730274894434
+                ],
+                "n_gram_diversity": [
+                    0.7258064516129032,
+                    0.983739837398374,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10483870967741936,
+                    0.4796747967479675,
+                    0.7950819672131147,
+                    0.9504132231404959,
+                    0.9833333333333333
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.160377512127512,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.043980548779169716,
+                "novelty": 0.0070376322804077684,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to those around her. Her best friend, Max, ran on diesel - a slower-burning, more enduring form of happiness that kept him steady through life's ups and downs. One day, Lila's pump malfunctioned, leaving her unable to spread cheer, and she felt her own tank rapidly depleting. Max, realizing the gravity of the situation, connected his diesel-powered spirit to Lila's, sharing his steady contentment to keep her going. Together, they discovered a new blend of emotional fuel, more potent than either had known before, and vowed to keep each other's tanks full for the rest of their days.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 162
+            },
+            "result_id": "e94380ec6865",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p1/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_95c03267b04d.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 671,
+                "length_in_words": 119,
+                "length_in_unique_words": 87,
+                "length_in_concepts": 51,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.512605042016807,
+                "avg_sentence_length_in_chars": 133.4,
+                "avg_sentence_length_in_words": 23.8,
+                "avg_sentence_length_in_unique_words": 22.6,
+                "dsi": 0.2077788077616224,
+                "surprise": 0.010044012439278716,
+                "raw_surprises": [
+                    0.007758736610412598,
+                    0.002421799031170929,
+                    0.0035521024729543993,
+                    0.006355386764019505
+                ],
+                "n_gram_diversity": [
+                    0.7310924369747899,
+                    0.9745762711864406,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1092436974789916,
+                    0.4745762711864407,
+                    0.8376068376068376,
+                    0.9655172413793104,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.0441543234810156,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.046145970622698464,
+                "novelty": 0.010793597406402622,
+                "theme_uniqueness": 0.1
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the distant future, where humanity had long abandoned fossil fuels, archaeologist Dr. Amelia Spark stumbled upon an ancient artifact buried deep beneath the ruins of a 21st-century city. As she carefully excavated the peculiar object, she realized it was a relic from a bygone era - a rusty, weathered pump once used to dispense petrol and diesel. Fascinated by her discovery, Amelia spent months studying the device, eventually unlocking its secrets and repurposing it to extract valuable minerals from the planet's core. Her ingenious invention revolutionized resource gathering, ushering in a new age of prosperity and earning her the nickname \"The Fossil Fuel Alchemist\" among her peers.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 162
+            },
+            "result_id": "88cb355897fa",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.95/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_4c382603722b.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 694,
+                "length_in_words": 109,
+                "length_in_unique_words": 86,
+                "length_in_concepts": 63,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 5.247706422018348,
+                "avg_sentence_length_in_chars": 172.75,
+                "avg_sentence_length_in_words": 27.25,
+                "avg_sentence_length_in_unique_words": 25.25,
+                "dsi": 0.2133872636879522,
+                "surprise": 0.009781838424039882,
+                "raw_surprises": [
+                    0.006274314306594531,
+                    0.004340302387436684,
+                    0.00405814094202861
+                ],
+                "n_gram_diversity": [
+                    0.7889908256880734,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11009174311926606,
+                    0.4537037037037037,
+                    0.794392523364486,
+                    0.9339622641509434,
+                    0.9809523809523809
+                ],
+                "avg_dependency_num_clauses": 4.5,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 3.4443749808914568,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.13157639900843301,
+                "novelty": 0.00042331444625692827,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to everyone she met. Her laughter was pure diesel, powerful and long-lasting, igniting smiles in even the gloomiest of souls. But as she gave and gave, Lila found her own reserves running dangerously low, her once-boundless spirit sputtering like an engine on fumes. It wasn't until she met Zane, whose kindness acted as a cosmic refinery, that she learned the art of replenishing her own emotional tank. Together, they created a perpetual energy loop, their combined compassion powering not just themselves, but radiating outward to fuel the happiness of an entire city.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 160
+            },
+            "result_id": "ec7784cae4e3",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p1/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_0aaebf0c5751.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 655,
+                "length_in_words": 111,
+                "length_in_unique_words": 85,
+                "length_in_concepts": 54,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.783783783783784,
+                "avg_sentence_length_in_chars": 130.2,
+                "avg_sentence_length_in_words": 22.2,
+                "avg_sentence_length_in_unique_words": 21.4,
+                "dsi": 0.21399866530813594,
+                "surprise": 0.008779746032353972,
+                "raw_surprises": [
+                    0.0023571173350016295,
+                    0.00494570406074199,
+                    0.0026567718087932013,
+                    0.007599898860171123
+                ],
+                "n_gram_diversity": [
+                    0.7657657657657657,
+                    0.9818181818181818,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10810810810810811,
+                    0.5181818181818182,
+                    0.8440366972477065,
+                    0.9629629629629629,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.9928778150315196,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.05775378396113714,
+                "novelty": 0.0016461176866244265,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to everyone she met. Her laughter was high-octane happiness, and her smile could power a city for days. But when she fell in love with Max, whose soul ran on the diesel of melancholy, their energies clashed in a spectacular fusion of light and shadow. As they embraced, their conflicting essences created a new type of emotional fuel, a perfect blend of elation and introspection. Their love became legendary, powering the dreams and aspirations of generations to come, proving that even the most unlikely combinations can create something beautiful and enduring.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 145
+            },
+            "result_id": "dcdeab7b7c9e",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.7/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_bc11d303440a.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 647,
+                "length_in_words": 108,
+                "length_in_unique_words": 83,
+                "length_in_concepts": 52,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.87962962962963,
+                "avg_sentence_length_in_chars": 128.6,
+                "avg_sentence_length_in_words": 21.6,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.21136455667144752,
+                "surprise": 0.008206085837076577,
+                "raw_surprises": [
+                    0.00036555609059713,
+                    0.0010789753425688997,
+                    0.01053882638613382,
+                    0.004428813854853303
+                ],
+                "n_gram_diversity": [
+                    0.7685185185185185,
+                    0.9906542056074766,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1111111111111111,
+                    0.4672897196261682,
+                    0.7830188679245284,
+                    0.9333333333333333,
+                    0.9711538461538461
+                ],
+                "avg_dependency_num_clauses": 4.2,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 2.917841655932056,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.061327919363975525,
+                "novelty": 0.003622099586752414,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to everyone she met. Her laughter was high-octane happiness, and her smile could power a city for days. But when she fell in love with Max, whose soul ran on the diesel of melancholy, their energies clashed in a spectacular fusion of light and shadow. As they embraced, their conflicting essences created a new form of emotional combustion, igniting a love so powerful it threatened to consume them both. In that moment, Lila realized that sometimes the most potent connections are forged when opposite forces collide, pumping life into the universe in ways never before imagined.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 152
+            },
+            "result_id": "960958b88d31",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.7/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_6a99f2ae1199.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 664,
+                "length_in_words": 113,
+                "length_in_unique_words": 90,
+                "length_in_concepts": 55,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.769911504424779,
+                "avg_sentence_length_in_chars": 132,
+                "avg_sentence_length_in_words": 22.6,
+                "avg_sentence_length_in_unique_words": 21,
+                "dsi": 0.20887418311051648,
+                "surprise": 0.011365462291953898,
+                "raw_surprises": [
+                    0.00036555609059713,
+                    0.0010789753425688997,
+                    0.01635758005655727,
+                    0.004928813094184498
+                ],
+                "n_gram_diversity": [
+                    0.7964601769911505,
+                    0.9910714285714286,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10619469026548672,
+                    0.44642857142857145,
+                    0.8018018018018018,
+                    0.9454545454545454,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.935968373373881,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.0649890551964442,
+                "novelty": 0.008602846708614498,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to everyone she met. Her laughter was like high-octane happiness, filling the empty tanks of those around her with a vibrant energy that kept them running through life's toughest roads. But Tom, her melancholic neighbor, was different; his somber mood was like thick, heavy diesel that threatened to clog the delicate machinery of her optimism. Determined to help, Lila spent months trying to ignite a spark in Tom's gloomy disposition, her relentless positivity slowly chipping away at his emotional armor. Finally, on a crisp autumn morning, Tom's first genuine smile in years burst forth like a geyser from a freshly tapped oil well, and Lila knew she had successfully converted his diesel despair into premium-grade hope.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 192
+            },
+            "result_id": "c508216282b9",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.95/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_583cab2c25b7.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 809,
+                "length_in_words": 137,
+                "length_in_unique_words": 103,
+                "length_in_concepts": 74,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.817518248175182,
+                "avg_sentence_length_in_chars": 161,
+                "avg_sentence_length_in_words": 27.4,
+                "avg_sentence_length_in_unique_words": 26,
+                "dsi": 0.21165934391526636,
+                "surprise": 0.004518045653305644,
+                "raw_surprises": [
+                    0.004729250615624125,
+                    0.0020689649459643134,
+                    0.0020896819904516195,
+                    0.00014819375457122974
+                ],
+                "n_gram_diversity": [
+                    0.7518248175182481,
+                    0.9852941176470589,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08759124087591241,
+                    0.38235294117647056,
+                    0.7333333333333333,
+                    0.9253731343283582,
+                    0.9849624060150376
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.2842256683375104,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.07149935762087505,
+                "novelty": 0.0030325250991147246,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lily's heart was a petrol pump, dispensing joy to everyone she met. Her laughter was high-octane happiness, while her tears were a potent diesel of sorrow that could power entire cities through their darkest nights. She never ran dry, for her capacity to feel was infinite, and people flocked to her like cars to a station, desperate to fill their empty emotional tanks. But as Lily lay dying, her last act was to squeeze her heart, pumping out every last drop of love she possessed. The world fell silent as the final dregs of her essence seeped into the earth, igniting a global bloom of flowers that would fuel generations to come.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 153
+            },
+            "result_id": "f8031ba6999b",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p0.95/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_3d10f6784a22.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 671,
+                "length_in_words": 121,
+                "length_in_unique_words": 86,
+                "length_in_concepts": 57,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.446280991735537,
+                "avg_sentence_length_in_chars": 133.4,
+                "avg_sentence_length_in_words": 24.2,
+                "avg_sentence_length_in_unique_words": 22,
+                "dsi": 0.20962440112330263,
+                "surprise": 0.007875275895709105,
+                "raw_surprises": [
+                    0.0014301352011851787,
+                    0.004952017204228776,
+                    0.002436124317811983,
+                    0.006932275068192273
+                ],
+                "n_gram_diversity": [
+                    0.7107438016528925,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09917355371900827,
+                    0.4166666666666667,
+                    0.7394957983193278,
+                    0.8983050847457628,
+                    0.9401709401709402
+                ],
+                "avg_dependency_num_clauses": 3.8,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.9404180394024797,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.09339555352926254,
+                "novelty": 0.007102410683042182,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lily's heart was a petrol pump, dispensing joy to everyone she met. Her laughter was high-octane happiness, and her smile could power a city for days. But when she fell in love with Max, whose soul ran on the diesel of melancholy, their energies clashed in a spectacular fusion of light and shadow. As they embraced, their conflicting essences created a new, iridescent fuel that flowed through the veins of the universe, transforming everything it touched. The cosmos hummed with the rhythm of their unlikely union, a testament to the power of love to bridge even the most fundamental of differences.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 146
+            },
+            "result_id": "f7d0dba9260e",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p0.9/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_b1994346f618.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 638,
+                "length_in_words": 110,
+                "length_in_unique_words": 80,
+                "length_in_concepts": 51,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.6909090909090905,
+                "avg_sentence_length_in_chars": 126.8,
+                "avg_sentence_length_in_words": 22,
+                "avg_sentence_length_in_unique_words": 19.8,
+                "dsi": 0.21388427374409694,
+                "surprise": 0.009209147547230553,
+                "raw_surprises": [
+                    0.0011783697775431812,
+                    0.0010789753425688997,
+                    0.007360324715123018,
+                    0.008800625259226008
+                ],
+                "n_gram_diversity": [
+                    0.7272727272727273,
+                    0.9908256880733946,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10909090909090909,
+                    0.42201834862385323,
+                    0.7314814814814815,
+                    0.8878504672897196,
+                    0.9528301886792453
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.030573848414139,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.07980125645796458,
+                "novelty": 0.0014173345585464237,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to those around her. Her laughter was like high-octane happiness, filling the empty tanks of weary souls. But when she met Zack, whose brooding nature ran on diesel-dark thoughts, she found herself drawn to his complexity. As they grew closer, Lila discovered that her sunny disposition could slowly transform Zack's gloomy outlook, their contrasting energies creating a perfect blend. Together, they became an unstoppable force, pumping hope and resilience into their community, proving that even the most different fuels could power a beautiful journey.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 145
+            },
+            "result_id": "1fbecebecc05",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p1/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_7216720e446d.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 639,
+                "length_in_words": 103,
+                "length_in_unique_words": 87,
+                "length_in_concepts": 53,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 5.087378640776699,
+                "avg_sentence_length_in_chars": 127,
+                "avg_sentence_length_in_words": 20.6,
+                "avg_sentence_length_in_unique_words": 20.2,
+                "dsi": 0.21283834649274241,
+                "surprise": 0.005822160539000948,
+                "raw_surprises": [
+                    0.0047199808888965245,
+                    0.004419199234307419,
+                    0.0011952234036994858,
+                    0.0013099175510984662
+                ],
+                "n_gram_diversity": [
+                    0.8446601941747572,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11650485436893204,
+                    0.5,
+                    0.8316831683168316,
+                    0.95,
+                    0.98989898989899
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.9715486130650213,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.05447982996702194,
+                "novelty": 0.0006745199441626215,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions were fuel, Lila's heart was a petrol pump, dispensing joy to those around her. Her best friend, Max, ran on diesel - a slower burn, but with enduring power that kept him going through tough times. One day, Lila's reservoir of happiness ran dry, leaving her unable to uplift others or even herself. Max, recognizing her plight, connected their emotional fuel lines and began to pump his steady energy into her depleted spirit. As Lila's eyes sparkled once more, they realized that sometimes the best way to refill oneself is to allow others to share their strength.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 137
+            },
+            "result_id": "709beb3b73b7",
+            "metadata": {
+                "source": "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p0.7/run1/pilot_data_eval_default_claude-3-5-sonnet-20240620_924e0c66c84e.json",
+                "model": "claude-3-5-sonnet-20240620",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 590,
+                "length_in_words": 104,
+                "length_in_unique_words": 81,
+                "length_in_concepts": 48,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.548076923076923,
+                "avg_sentence_length_in_chars": 117.2,
+                "avg_sentence_length_in_words": 20.8,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.20932964172135007,
+                "surprise": 0.01994910091045947,
+                "raw_surprises": [
+                    0.008738497893015562,
+                    0.013969447877671987,
+                    0.012480371782922328,
+                    0.004709884267309061
+                ],
+                "n_gram_diversity": [
+                    0.7788461538461539,
+                    0.9805825242718447,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.125,
+                    0.5048543689320388,
+                    0.8627450980392157,
+                    0.9702970297029703,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.6,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.8725971925971927,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.05256603161493937,
+                "novelty": 0.007691929486947302,
+                "theme_uniqueness": 0.1
+            }
+        }
+    ]
+}

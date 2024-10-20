@@ -1,0 +1,1457 @@
+{
+    "metadata": {
+        "group_id": [
+            "human",
+            "gloom-payment-exist"
+        ],
+        "config": {
+            "results_paths": [
+                "../experiments/outputs/gpt-4/pilot/**/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/**/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/**/run1",
+                "../experiments/outputs/human/pilot/run1"
+            ],
+            "report_usage": true,
+            "spacy_lang": "en_core_web_sm",
+            "max_n_gram": 5,
+            "output_dir": "../experiments/reports/pilot/run1_report5",
+            "config": "../experiments/reports/pilot/run1_report5/config.json",
+            "num_samples": 25,
+            "deduplicate": true,
+            "deduplicate_by": "output",
+            "max_frequency": 10,
+            "group_by": [
+                "model",
+                "id"
+            ],
+            "output_attr": "output",
+            "emb_model": "thenlper/gte-large",
+            "emb_type": "sentence_embedding",
+            "emb_strategy": "direct",
+            "distance_fn": "cosine",
+            "lower": true,
+            "remove_punct": true,
+            "remove_stopwords": true,
+            "lemmatize": true,
+            "dominant_k": null,
+            "unique": true,
+            "cluster_linkage": "ward",
+            "cluster_dist_threshold": 0.5,
+            "description": "Report2 + filter by sentence length",
+            "filter_by": {
+                "sentence_length": [
+                    3,
+                    6
+                ]
+            }
+        }
+    },
+    "metrics": {
+        "num_samples": 25,
+        "avg_length_in_chars": 342.96,
+        "avg_length_in_words": 65.52,
+        "avg_length_in_unique_words": 48.72,
+        "avg_length_in_concepts": 24.52,
+        "avg_length_in_sentences": 4.04,
+        "avg_word_length_in_chars": 4.141967482697493,
+        "avg_sentence_length_in_chars": 88.26466666666667,
+        "avg_sentence_length_in_words": 16.998666666666665,
+        "avg_sentence_length_in_unique_words": 15.400666666666666,
+        "avg_dsi": 0.20751006753741522,
+        "avg_surprise": 0.051409431578425244,
+        "avg_raw_surprises": [
+            0.025278676154386163,
+            0.013444683814879592,
+            0.04935091136077803,
+            0.03609209504155886,
+            0.10895100235939026
+        ],
+        "avg_n_gram_diversity": [
+            0.750968957907853,
+            0.9715674496236472,
+            0.9921412513485744,
+            0.9964019138755981,
+            0.9985364341085271
+        ],
+        "avg_pos_diversity": [
+            0.18631107272642952,
+            0.5594564227101297,
+            0.8262668867325043,
+            0.9357041156713367,
+            0.9732764382071306
+        ],
+        "avg_dependency_num_clauses": 2.778,
+        "avg_max_dependency_num_clauses": 5.32,
+        "avg_dependency_path_length": 2.6984662264839145,
+        "avg_max_dependency_path_length": 7.84,
+        "avg_inv_homogen": 0.17645992477734884,
+        "avg_novelty": 0.010326617513487988,
+        "avg_theme_uniqueness": 0.84,
+        "corpus_dsi": 0.21154713240747433,
+        "corpus_n_gram_diversity": [
+            0.3631353337415799,
+            0.8596813725490197,
+            0.9803801348865726,
+            0.9950920245398773,
+            0.9987722529158993
+        ],
+        "corpus_pos_diversity": [
+            0.009797917942437232,
+            0.08762254901960784,
+            0.28019619865113427,
+            0.5613496932515337,
+            0.7894413750767342
+        ],
+        "num_unique_stories": 25,
+        "top_10_n_grams": {
+            "1-gram": {
+                "the": 96,
+                "to": 54,
+                "and": 41,
+                "i": 40,
+                "of": 38,
+                "was": 35,
+                "a": 35,
+                "she": 33,
+                "it": 29,
+                "payment": 27
+            },
+            "2-gram": {
+                "it was": 12,
+                "to exist": 10,
+                "of the": 9,
+                "the gloom": 8,
+                "in the": 7,
+                "was a": 6,
+                "the payment": 6,
+                "payment for": 6,
+                "she had": 6,
+                "to make": 6
+            },
+            "3-gram": {
+                "there was a": 3,
+                "in the world": 3,
+                "through the gloom": 3,
+                "the payment of": 2,
+                "payment for the": 2,
+                "could exist without": 2,
+                "exist without the": 2,
+                "doom and gloom": 2,
+                "into the dark": 2,
+                "looked out of": 2
+            },
+            "4-gram": {
+                "could exist without the": 2,
+                "looked out of the": 2,
+                "to the post office": 2,
+                "it seemed as though": 2,
+                "seemed as though his": 2,
+                "a sense of gloom": 2,
+                "in this world you": 2,
+                "this world you must": 2,
+                "it was that time": 1,
+                "was that time of": 1
+            },
+            "5-gram": {
+                "it seemed as though his": 2,
+                "in this world you must": 2,
+                "it was that time of": 1,
+                "was that time of year": 1,
+                "that time of year when": 1,
+                "time of year when there": 1,
+                "of year when there was": 1,
+                "year when there was a": 1,
+                "when there was a lot": 1,
+                "there was a lot of": 1
+            }
+        },
+        "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+        },
+        "cost": {
+            "input": 0,
+            "output": 0,
+            "total": 0
+        }
+    },
+    "data": [
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "It was that time of year when there was a lot of gloom around. This was because it was time for the payment of council tax. A new rule meant that even if you did not have a house if you exist then you pay.",
+            "result_id": "R_8bVpeztZaqiDial_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8bVpeztZaqiDial.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8bVpeztZaqiDial"
+            },
+            "metrics": {
+                "length_in_chars": 205,
+                "length_in_words": 45,
+                "length_in_unique_words": 32,
+                "length_in_concepts": 13,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.511111111111111,
+                "avg_sentence_length_in_chars": 67.66666666666667,
+                "avg_sentence_length_in_words": 15,
+                "avg_sentence_length_in_unique_words": 12.666666666666666,
+                "dsi": 0.20935314358809054,
+                "surprise": 0.00959420800209046,
+                "raw_surprises": [
+                    0.0017397304375966482,
+                    0.007854477564493811
+                ],
+                "n_gram_diversity": [
+                    0.7111111111111111,
+                    0.9545454545454546,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2222222222222222,
+                    0.5681818181818182,
+                    0.813953488372093,
+                    0.9285714285714286,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.6666666666666667,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.7858476064997806,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.17029022673765817,
+                "novelty": 0.004387977638767582,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "My friend said three words when we were playing chinese whisper. I had no idea what did she say but I herd some of it. On my turn I said the words bloom, cavemen, exist. Finally I came to know that the words were gloom, payment and exist.",
+            "result_id": "R_8sBNWJpZHPgPqua_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8sBNWJpZHPgPqua.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8sBNWJpZHPgPqua"
+            },
+            "metrics": {
+                "length_in_chars": 238,
+                "length_in_words": 48,
+                "length_in_unique_words": 38,
+                "length_in_concepts": 17,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 3.8333333333333335,
+                "avg_sentence_length_in_chars": 46.8,
+                "avg_sentence_length_in_words": 9.6,
+                "avg_sentence_length_in_unique_words": 9.6,
+                "dsi": 0.2076216383891947,
+                "surprise": 0.20161082858131046,
+                "raw_surprises": [
+                    0.20234484672546388,
+                    0,
+                    0.2008596181869507,
+                    1.7192250206354842e-05
+                ],
+                "n_gram_diversity": [
+                    0.7916666666666666,
+                    0.9787234042553191,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.25,
+                    0.6595744680851063,
+                    0.9130434782608695,
+                    0.9555555555555556,
+                    0.9772727272727273
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.2942296918767506,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.1947667971253395,
+                "novelty": 0.007850988036559259,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "it was one of the days you woke up to a complete gloom even though the day had started hours ago. well, if you had not skipped your payment for the artificial wake-up light subscription, you would have been woken up quite easily and that explains the itch and the pain in your eyes and your back. of course none of them could exist without the rule of the machines that obscured the sky and the beauty of the world we live in.",
+            "result_id": "R_2sdMlOguKbuAvfg_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2sdMlOguKbuAvfg.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2sdMlOguKbuAvfg"
+            },
+            "metrics": {
+                "length_in_chars": 426,
+                "length_in_words": 84,
+                "length_in_unique_words": 59,
+                "length_in_concepts": 26,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.023809523809524,
+                "avg_sentence_length_in_chars": 141.33333333333334,
+                "avg_sentence_length_in_words": 28,
+                "avg_sentence_length_in_unique_words": 22.666666666666668,
+                "dsi": 0.2133024652187641,
+                "surprise": 0.016454553419205348,
+                "raw_surprises": [
+                    0.012875733798716482,
+                    0.0035788196204888656
+                ],
+                "n_gram_diversity": [
+                    0.7023809523809523,
+                    0.963855421686747,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.15476190476190477,
+                    0.4578313253012048,
+                    0.7560975609756098,
+                    0.8518518518518519,
+                    0.8875
+                ],
+                "avg_dependency_num_clauses": 4.333333333333333,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.9008897508292493,
+                "max_dependency_path_length": 11,
+                "inv_homogen": 0.18073502431313196,
+                "novelty": 0.003510665622579512,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "Wendy was extremely distressed. She had returned home from work to a pile of letters, and she looked with some dismay at the first letter with a red banding. Gloom descended across her face when she realised that she owed a payment to a holiday company; she had forgotten to pay her deposit. Wendy wondered why debt collection companies had to exist, so she decided to pack up her belongings and instead went backpacking. ",
+            "result_id": "R_2sKl3oqSfQrqNI5_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2sKl3oqSfQrqNI5.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2sKl3oqSfQrqNI5"
+            },
+            "metrics": {
+                "length_in_chars": 422,
+                "length_in_words": 74,
+                "length_in_unique_words": 55,
+                "length_in_concepts": 33,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.608108108108108,
+                "avg_sentence_length_in_chars": 104.5,
+                "avg_sentence_length_in_words": 18.5,
+                "avg_sentence_length_in_unique_words": 16.25,
+                "dsi": 0.21149049101002287,
+                "surprise": 0.01188213600454104,
+                "raw_surprises": [
+                    0.00361636943287319,
+                    0.008360096481111301,
+                    0.00584673809282707
+                ],
+                "n_gram_diversity": [
+                    0.7432432432432432,
+                    0.9726027397260274,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16216216216216217,
+                    0.5068493150684932,
+                    0.7777777777777778,
+                    0.9154929577464789,
+                    0.9857142857142858
+                ],
+                "avg_dependency_num_clauses": 3,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.6191033066033067,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.1764917622009913,
+                "novelty": 0.0001132827949029136,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "Sarah was suffering with a case of the blues lately, it was all doom and gloom in her mind and feeling like she was simply existing rather than living.  Sarah felt like her adult days were poor, one payment after the other coming out of her hard earned money.  She told everyone around her she was all work and no play in order to simply exist in the world, and it was not the life she wanted.",
+            "result_id": "R_8v92A9H3hnaw1QI_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8v92A9H3hnaw1QI.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8v92A9H3hnaw1QI"
+            },
+            "metrics": {
+                "length_in_chars": 393,
+                "length_in_words": 79,
+                "length_in_unique_words": 54,
+                "length_in_concepts": 29,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.9367088607594938,
+                "avg_sentence_length_in_chars": 131,
+                "avg_sentence_length_in_words": 26.333333333333332,
+                "avg_sentence_length_in_unique_words": 23,
+                "dsi": 0.20023562667405076,
+                "surprise": 0.005891339486004399,
+                "raw_surprises": [
+                    0.0021476555855084456,
+                    0.0037436839004959532
+                ],
+                "n_gram_diversity": [
+                    0.6835443037974683,
+                    0.9615384615384616,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.17721518987341772,
+                    0.6282051282051282,
+                    0.8701298701298701,
+                    0.9605263157894737,
+                    0.9866666666666667
+                ],
+                "avg_dependency_num_clauses": 5.333333333333333,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 3.3043197936814956,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.16451175759236017,
+                "novelty": 0.022623011466847143,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "I went for a walk into the forbidden forest today, it was always described with gloom. I knew that there was a reason we took the long path home every evening from work. As I approached half way, my retreat closed in on me, branches covered my exit. I venture forward into the dark, I see a dark coin goblin shaking his bag menacingly, I thought these didn't exist, I managed to make it home but not without payment, the goblin took all my coffers for the day and now I am left with nothing.",
+            "result_id": "R_2joIDdCu9ghOfCw_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2joIDdCu9ghOfCw.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2joIDdCu9ghOfCw"
+            },
+            "metrics": {
+                "length_in_chars": 491,
+                "length_in_words": 96,
+                "length_in_unique_words": 72,
+                "length_in_concepts": 38,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.020833333333333,
+                "avg_sentence_length_in_chars": 122,
+                "avg_sentence_length_in_words": 24,
+                "avg_sentence_length_in_unique_words": 21.75,
+                "dsi": 0.20697156582584084,
+                "surprise": 0.017788328084291184,
+                "raw_surprises": [
+                    0.013258931892258768,
+                    0.001449316740035983,
+                    0.011974243494142028
+                ],
+                "n_gram_diversity": [
+                    0.75,
+                    0.9894736842105263,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11458333333333333,
+                    0.42105263157894735,
+                    0.7978723404255319,
+                    0.9354838709677419,
+                    0.967391304347826
+                ],
+                "avg_dependency_num_clauses": 4.25,
+                "max_dependency_num_clauses": 12,
+                "avg_dependency_path_length": 2.9707315086347346,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.18059836079676947,
+                "novelty": 0.009151133163266989,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "As they looked out of the small wooden window in their apartment, Jess and Nat were lamenting their current situation. As students with no jobs, they had little money and the payment for this month's rent was nearly due. The rainy day outside seemed to exist only to exacerbate those negative feelings and make it increasingly hard to pull oneself out of perpetual gloom.  Jess stood up suddenly, turning to Nat she smiled. \"I have an idea!!\" she said. ",
+            "result_id": "R_27E8zaS1IXk1NPZ_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_27E8zaS1IXk1NPZ.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_27E8zaS1IXk1NPZ"
+            },
+            "metrics": {
+                "length_in_chars": 453,
+                "length_in_words": 81,
+                "length_in_unique_words": 66,
+                "length_in_concepts": 38,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 4.469135802469136,
+                "avg_sentence_length_in_chars": 74.66666666666667,
+                "avg_sentence_length_in_words": 13.5,
+                "avg_sentence_length_in_unique_words": 13,
+                "dsi": 0.2085250709338344,
+                "surprise": 0.10249922047313463,
+                "raw_surprises": [
+                    0.009050425508665666,
+                    0.00502741254947997,
+                    0.021526136459448397,
+                    0.22064407666524252,
+                    0
+                ],
+                "n_gram_diversity": [
+                    0.8148148148148148,
+                    0.9875,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16049382716049382,
+                    0.6,
+                    0.9113924050632911,
+                    0.9743589743589743,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.1666666666666665,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.478141927925556,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.15812123070160547,
+                "novelty": 0.006044122947279851,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "Emma had to make a payment for her electricity so she put her coat on and headed to the post office. It was so foggy she could barely see through the gloom. On the way to the post office she saw some pigeons sitting together looking cold and miserable and she wondered what it was like to exist ",
+            "result_id": "R_8XS6nyWsLXkXKFz_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8XS6nyWsLXkXKFz.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8XS6nyWsLXkXKFz"
+            },
+            "metrics": {
+                "length_in_chars": 295,
+                "length_in_words": 58,
+                "length_in_unique_words": 40,
+                "length_in_concepts": 20,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.051724137931035,
+                "avg_sentence_length_in_chars": 97.33333333333333,
+                "avg_sentence_length_in_words": 19.333333333333332,
+                "avg_sentence_length_in_unique_words": 17.333333333333332,
+                "dsi": 0.21079803422877663,
+                "surprise": 0.04102267150755051,
+                "raw_surprises": [
+                    0.030499052433740514,
+                    0.010523619073809998
+                ],
+                "n_gram_diversity": [
+                    0.6896551724137931,
+                    0.9298245614035088,
+                    0.9642857142857143,
+                    0.9818181818181818,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.20689655172413793,
+                    0.5614035087719298,
+                    0.7857142857142857,
+                    0.8909090909090909,
+                    0.9444444444444444
+                ],
+                "avg_dependency_num_clauses": 4.333333333333333,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 2.8387064970915903,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.16466972728570303,
+                "novelty": 0.0014981963573953982,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "Marcus peered through the gloom. \"Why were there no lights?\" he wondered, as he cupped his hands against the window to try and see inside the house. Perhaps the family had failed to make their payment, but without power in the midst of this winter, the family would suffer fatally. There was no sign of life inside, and Marcus prayed silently they had moved on before the freeze and weren't to be found inside. Once, there were charities to help and places to go, but in these no longer exist: too many require help, and no one has any left to give.   ",
+            "result_id": "R_2mqjhNO26XNoi6R_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2mqjhNO26XNoi6R.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2mqjhNO26XNoi6R"
+            },
+            "metrics": {
+                "length_in_chars": 552,
+                "length_in_words": 104,
+                "length_in_unique_words": 72,
+                "length_in_concepts": 34,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.173076923076923,
+                "avg_sentence_length_in_chars": 109.6,
+                "avg_sentence_length_in_words": 20.8,
+                "avg_sentence_length_in_unique_words": 18.4,
+                "dsi": 0.21001356638264104,
+                "surprise": 0.02740463188716341,
+                "raw_surprises": [
+                    0.014872895819800225,
+                    0.022823631763458224,
+                    0.013439936297280436,
+                    0.003672799893787937
+                ],
+                "n_gram_diversity": [
+                    0.6923076923076923,
+                    0.9805825242718447,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.125,
+                    0.4854368932038835,
+                    0.7745098039215687,
+                    0.9306930693069307,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4.6,
+                "max_dependency_num_clauses": 10,
+                "avg_dependency_path_length": 2.6834370920997324,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.17181793600320816,
+                "novelty": 0.0030671320496665766,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "The payment was overdue, i knew it but i didn't care.    I could exist without the internet for a few days if they cut me off.   Maybe, it would make me happier to live without it.     I wouldnt have these feelings of dread and gloom at what i might see when i open up my tablet",
+            "result_id": "R_8zUaSPSsswsQ7fn_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8zUaSPSsswsQ7fn.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8zUaSPSsswsQ7fn"
+            },
+            "metrics": {
+                "length_in_chars": 278,
+                "length_in_words": 61,
+                "length_in_unique_words": 50,
+                "length_in_concepts": 20,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 3.5737704918032787,
+                "avg_sentence_length_in_chars": 55.4,
+                "avg_sentence_length_in_words": 12.2,
+                "avg_sentence_length_in_unique_words": 11.6,
+                "dsi": 0.19521617324728716,
+                "surprise": 0.05940672556559244,
+                "raw_surprises": [
+                    0.041381696859995515,
+                    0.0320784032344818,
+                    0.018850304683049518,
+                    0.02650304635365805
+                ],
+                "n_gram_diversity": [
+                    0.819672131147541,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.19672131147540983,
+                    0.6,
+                    0.847457627118644,
+                    0.9827586206896551,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.6,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.1458493887065315,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.18987299501895905,
+                "novelty": 0.03266191832037435,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "Under the gloom of this overgrown rainforest there was a world one would never imagine to exist. Banks carved from caverns filled with fairies queuing to take out loans. A doctor's office in the hollow of an elm tree, specifically for the health problems of orphaned munchkins. Atop this same tree, way up in the canopy, was the factory run by the local snarks -- who controlled the printing of all currency used to make any payment you could think of -- only from youngest elm leaves.",
+            "result_id": "R_2rra18JsIdbb7pI_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2rra18JsIdbb7pI.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2rra18JsIdbb7pI"
+            },
+            "metrics": {
+                "length_in_chars": 485,
+                "length_in_words": 86,
+                "length_in_unique_words": 67,
+                "length_in_concepts": 37,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.511627906976744,
+                "avg_sentence_length_in_chars": 120.5,
+                "avg_sentence_length_in_words": 21.5,
+                "avg_sentence_length_in_unique_words": 20,
+                "dsi": 0.2238698481797456,
+                "surprise": 0.012951285640398658,
+                "raw_surprises": [
+                    0.012062669368017281,
+                    0.0067544626811194,
+                    0.0006097964114613053
+                ],
+                "n_gram_diversity": [
+                    0.7790697674418605,
+                    0.9882352941176471,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10465116279069768,
+                    0.35294117647058826,
+                    0.6071428571428571,
+                    0.7710843373493976,
+                    0.8902439024390244
+                ],
+                "avg_dependency_num_clauses": 2.25,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 3.6940615835777124,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.18343977878491083,
+                "novelty": 0.024645431544542518,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "'I no longer wish to exist' said the despondent boy sat underneath the tree - it seemed as though his gloom had finally overcome him entirely. As he sat, he reflected on the terrible events of his life - he had made payment after payment but never received anything in return and now it seemed as though his days were numbered. Eventually, he rose and, wiping the tear from his eye, began to walk solemnly into the dark evening's mist.",
+            "result_id": "R_2XcT1LBVLYHa6hX_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2XcT1LBVLYHa6hX.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2XcT1LBVLYHa6hX"
+            },
+            "metrics": {
+                "length_in_chars": 435,
+                "length_in_words": 79,
+                "length_in_unique_words": 59,
+                "length_in_concepts": 33,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.367088607594937,
+                "avg_sentence_length_in_chars": 144.33333333333334,
+                "avg_sentence_length_in_words": 26.333333333333332,
+                "avg_sentence_length_in_unique_words": 24,
+                "dsi": 0.20674891036116716,
+                "surprise": 0.009047365721196465,
+                "raw_surprises": [
+                    0.004084388465962846,
+                    0.004962977255233619
+                ],
+                "n_gram_diversity": [
+                    0.7468354430379747,
+                    0.9487179487179487,
+                    0.961038961038961,
+                    0.9736842105263158,
+                    0.9866666666666667
+                ],
+                "pos_diversity": [
+                    0.13924050632911392,
+                    0.5,
+                    0.7922077922077922,
+                    0.9078947368421053,
+                    0.96
+                ],
+                "avg_dependency_num_clauses": 5,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 2.9152765497593083,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.16440612574418387,
+                "novelty": 0.009596444092614342,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "The dark room made everything feel like it was doom and gloom. How could one exist in a house so dreary? He struggled to understand how the landlord expected payment for a house so run-down and derelict, but unfortunately he had no choice but to deal with it.",
+            "result_id": "R_82McyGIYTts4bOU_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_82McyGIYTts4bOU.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_82McyGIYTts4bOU"
+            },
+            "metrics": {
+                "length_in_chars": 259,
+                "length_in_words": 49,
+                "length_in_unique_words": 39,
+                "length_in_concepts": 19,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.224489795918367,
+                "avg_sentence_length_in_chars": 85.66666666666667,
+                "avg_sentence_length_in_words": 16.333333333333332,
+                "avg_sentence_length_in_unique_words": 15.333333333333334,
+                "dsi": 0.2063374428721199,
+                "surprise": 0.039314283024180996,
+                "raw_surprises": [
+                    0.030788334210713697,
+                    0.008525948813467299
+                ],
+                "n_gram_diversity": [
+                    0.7959183673469388,
+                    0.9583333333333334,
+                    0.9787234042553191,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.24489795918367346,
+                    0.7291666666666666,
+                    0.9574468085106383,
+                    0.9782608695652174,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.3333333333333335,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.525941719971571,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.16021684308846793,
+                "novelty": 0.010419379070708834,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "The gloom of the overhanging clouds passed over the house plunging it into darkness and blotting out the surrounding world. Did it even exist anymore. All that could been seen through the gloom was the rain sheeting down, acting as a long awaited payment to the earth after years of drought. ",
+            "result_id": "R_8VyQYwyI8iMwwKJ_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8VyQYwyI8iMwwKJ.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8VyQYwyI8iMwwKJ"
+            },
+            "metrics": {
+                "length_in_chars": 292,
+                "length_in_words": 51,
+                "length_in_unique_words": 42,
+                "length_in_concepts": 22,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.647058823529412,
+                "avg_sentence_length_in_chars": 96.33333333333333,
+                "avg_sentence_length_in_words": 17,
+                "avg_sentence_length_in_unique_words": 15.333333333333334,
+                "dsi": 0.2104312088582423,
+                "surprise": 0.13765858339540887,
+                "raw_surprises": [
+                    0.07277201016743978,
+                    0.06488657322796909
+                ],
+                "n_gram_diversity": [
+                    0.8235294117647058,
+                    0.98,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1568627450980392,
+                    0.48,
+                    0.7755102040816326,
+                    0.9583333333333334,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.5871822413175796,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.1589896430571874,
+                "novelty": 0.0022318470984640792,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "The gloom had reached the house. It was mid winter and cold outside. He thought how could anyone exist like this? And to make matters worse make payment to their landlord. It was a harsh environment that they wouldn't wish on anyone. ",
+            "result_id": "R_27PrrUR0LzzSU4k_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_27PrrUR0LzzSU4k.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_27PrrUR0LzzSU4k"
+            },
+            "metrics": {
+                "length_in_chars": 234,
+                "length_in_words": 43,
+                "length_in_unique_words": 36,
+                "length_in_concepts": 17,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.348837209302325,
+                "avg_sentence_length_in_chars": 45.8,
+                "avg_sentence_length_in_words": 8.6,
+                "avg_sentence_length_in_unique_words": 8,
+                "dsi": 0.20922463080462286,
+                "surprise": 0.06103497743606569,
+                "raw_surprises": [
+                    0.04923396309216818,
+                    0.006938904523849487,
+                    0.059017767508824676,
+                    0.006879319747289031
+                ],
+                "n_gram_diversity": [
+                    0.8372093023255814,
+                    0.9761904761904762,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2558139534883721,
+                    0.7380952380952381,
+                    0.9512195121951219,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.2,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.085662393162393,
+                "max_dependency_path_length": 5,
+                "inv_homogen": 0.15347586075464884,
+                "novelty": 0.004645003205702936,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "The weather was dull and gave a sense of gloom. Someone was buying products in a shop, gave their payment for the products to a cashier then left the shop. As they were walking outside it started to rain. Raindrops appeared to exist",
+            "result_id": "R_27dw4UbFh02oLUB_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_27dw4UbFh02oLUB.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_27dw4UbFh02oLUB"
+            },
+            "metrics": {
+                "length_in_chars": 232,
+                "length_in_words": 43,
+                "length_in_unique_words": 33,
+                "length_in_concepts": 18,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.325581395348837,
+                "avg_sentence_length_in_chars": 57.25,
+                "avg_sentence_length_in_words": 10.75,
+                "avg_sentence_length_in_unique_words": 9.75,
+                "dsi": 0.20915183327556436,
+                "surprise": 0.0315507550088186,
+                "raw_surprises": [
+                    0.023127688396544693,
+                    0.006811848708561469,
+                    0.017386595408121736
+                ],
+                "n_gram_diversity": [
+                    0.7674418604651163,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2558139534883721,
+                    0.5952380952380952,
+                    0.8048780487804879,
+                    0.95,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.5,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.1842436974789914,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.16983970751365027,
+                "novelty": 0.004790598263819945,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "She didn't want to exist anymore. She had made the final payment on her mortgage, and now owned the house she had been living in for forty years - but all she felt was gloom. In every ten year plan she made, she allowed herself some breathing space - she would finally achieve her dreams once she had paid that final sum. She couldn't bring herself to do anything now that she was there.",
+            "result_id": "R_8mxVCke66o4WOVl_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8mxVCke66o4WOVl.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8mxVCke66o4WOVl"
+            },
+            "metrics": {
+                "length_in_chars": 387,
+                "length_in_words": 74,
+                "length_in_unique_words": 52,
+                "length_in_concepts": 22,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.135135135135135,
+                "avg_sentence_length_in_chars": 96,
+                "avg_sentence_length_in_words": 18.5,
+                "avg_sentence_length_in_unique_words": 16.5,
+                "dsi": 0.2067050678389413,
+                "surprise": 0.17532133835333363,
+                "raw_surprises": [
+                    0.05010343425803715,
+                    0.0028937776582409758,
+                    0.20998479561372235
+                ],
+                "n_gram_diversity": [
+                    0.7027027027027027,
+                    0.9726027397260274,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16216216216216217,
+                    0.5342465753424658,
+                    0.8194444444444444,
+                    0.9436619718309859,
+                    0.9714285714285714
+                ],
+                "avg_dependency_num_clauses": 3.25,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.3496179746179746,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.1609025796254476,
+                "novelty": 0.009684129137066066,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "I am ready to make the payment for my coffee. I love how the smell of coffee helps me get over the feelings of gloom I had recently. The darkness tells me I should not exist, but coffee makes it all better. It's the rush I get through my brain and body that makes me feel myself. ",
+            "result_id": "R_8K7NzHgqM00gKVF_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8K7NzHgqM00gKVF.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8K7NzHgqM00gKVF"
+            },
+            "metrics": {
+                "length_in_chars": 280,
+                "length_in_words": 58,
+                "length_in_unique_words": 41,
+                "length_in_concepts": 18,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 3.7586206896551726,
+                "avg_sentence_length_in_chars": 69,
+                "avg_sentence_length_in_words": 14.5,
+                "avg_sentence_length_in_unique_words": 13.75,
+                "dsi": 0.20370557767892974,
+                "surprise": 0.01917991770638361,
+                "raw_surprises": [
+                    0.010871790704273049,
+                    0.0052585652896336155,
+                    0.01263952056566875
+                ],
+                "n_gram_diversity": [
+                    0.7068965517241379,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1896551724137931,
+                    0.5087719298245614,
+                    0.7857142857142857,
+                    0.9818181818181818,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.25,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.9208741406912138,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.1933449705441793,
+                "novelty": 0.015683109457089173,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "The older I get, the more anxiety and despair I feel about the fact that I exist. I try to fill my time with cheap dopamine but nothing helps. I love video games, and the only thing that encouraged me to reduce my time playing them was a huge payment notice I got for $2000 I had spend on virtual in-game currency. So now I don't play as much anymore, but that just brings me back to gloom of my existence. Why was I so broken inside?",
+            "result_id": "R_2iUnWVtJB7cvKHj_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2iUnWVtJB7cvKHj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2iUnWVtJB7cvKHj"
+            },
+            "metrics": {
+                "length_in_chars": 434,
+                "length_in_words": 90,
+                "length_in_unique_words": 67,
+                "length_in_concepts": 34,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 3.7666666666666666,
+                "avg_sentence_length_in_chars": 86,
+                "avg_sentence_length_in_words": 18,
+                "avg_sentence_length_in_unique_words": 16.8,
+                "dsi": 0.20581932384487567,
+                "surprise": 0.011257308955286066,
+                "raw_surprises": [
+                    0.012274912993113202,
+                    0.0003113073461195881,
+                    0.009256373082890235,
+                    0.0006720244884491078
+                ],
+                "n_gram_diversity": [
+                    0.7444444444444445,
+                    0.9887640449438202,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.14444444444444443,
+                    0.5393258426966292,
+                    0.8636363636363636,
+                    0.9655172413793104,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.2,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 2.753333657697984,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.19352807849645615,
+                "novelty": 0.011455617125197326,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "To exist in this world you must make a payment, the second you are born that payment is your life. To exist and feel in this world you must experience extremes. How can you know happiness without knowing sadness. How can you feel excitement without knowing gloom. ",
+            "result_id": "R_8kQG02fwq7ubaOB_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8kQG02fwq7ubaOB.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8kQG02fwq7ubaOB"
+            },
+            "metrics": {
+                "length_in_chars": 264,
+                "length_in_words": 47,
+                "length_in_unique_words": 31,
+                "length_in_concepts": 14,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.51063829787234,
+                "avg_sentence_length_in_chars": 65,
+                "avg_sentence_length_in_words": 11.75,
+                "avg_sentence_length_in_unique_words": 11.25,
+                "dsi": 0.20304590398138697,
+                "surprise": 0.028196852737002915,
+                "raw_surprises": [
+                    0.019357458750406897,
+                    0.018365200360616063,
+                    0.004572619994481414
+                ],
+                "n_gram_diversity": [
+                    0.6595744680851063,
+                    0.8260869565217391,
+                    0.9111111111111111,
+                    0.9545454545454546,
+                    0.9767441860465116
+                ],
+                "pos_diversity": [
+                    0.2127659574468085,
+                    0.5434782608695652,
+                    0.6888888888888889,
+                    0.75,
+                    0.7906976744186046
+                ],
+                "avg_dependency_num_clauses": 1.5,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.1459636854373696,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.18318843841552734,
+                "novelty": 0.01700245685217472,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "She looked out of the window at the gloom. The man entered through the heavy oak door. \"Here is your payment\", he mumbled. The woman spoke quietly. \"Excellent, you may continue to exist.\"",
+            "result_id": "R_8B3zak55aPwmX5t_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8B3zak55aPwmX5t.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8B3zak55aPwmX5t"
+            },
+            "metrics": {
+                "length_in_chars": 187,
+                "length_in_words": 33,
+                "length_in_unique_words": 29,
+                "length_in_concepts": 16,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.363636363636363,
+                "avg_sentence_length_in_chars": 36.6,
+                "avg_sentence_length_in_words": 6.6,
+                "avg_sentence_length_in_unique_words": 6.2,
+                "dsi": 0.2058853715658188,
+                "surprise": 0.0630510151386261,
+                "raw_surprises": [
+                    0.002883785963058466,
+                    0.05279011130332947,
+                    0.04007983207702637,
+                    0.03034830093383789
+                ],
+                "n_gram_diversity": [
+                    0.8787878787878788,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2727272727272727,
+                    0.75,
+                    0.9354838709677419,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 0.6,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.0905494505494504,
+                "max_dependency_path_length": 5,
+                "inv_homogen": 0.1754951924085617,
+                "novelty": 0.011323521683311077,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "A plush of the pokemon gloom, which is one of my favourites, is so hard to come by nowadays that i would make a substatial payment to purchase one that exists. I would even travel the globe to aquire one. But alas, i believe that they stopped making them a while ago, so i will need to find an alternative source.",
+            "result_id": "R_2LTbPAQf8NZ0wRb_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2LTbPAQf8NZ0wRb.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2LTbPAQf8NZ0wRb"
+            },
+            "metrics": {
+                "length_in_chars": 313,
+                "length_in_words": 61,
+                "length_in_unique_words": 44,
+                "length_in_concepts": 23,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.032786885245901,
+                "avg_sentence_length_in_chars": 103.66666666666667,
+                "avg_sentence_length_in_words": 20.333333333333332,
+                "avg_sentence_length_in_unique_words": 18,
+                "dsi": 0.2057403856115379,
+                "surprise": 0.013515091965896925,
+                "raw_surprises": [
+                    0.0037051840261979607,
+                    0.009809907939698964
+                ],
+                "n_gram_diversity": [
+                    0.7213114754098361,
+                    0.9833333333333333,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.21311475409836064,
+                    0.6166666666666667,
+                    0.8983050847457628,
+                    0.9482758620689655,
+                    0.9824561403508771
+                ],
+                "avg_dependency_num_clauses": 3.6666666666666665,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.5365740740740743,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.21019166459639868,
+                "novelty": 0.011613493591872859,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "It was a day full of despair and gloom, I felt so down thinking about the payment that was missing from my bank account.  It was causing so much bother at home and I just didn't know what to do about it.  Did I imagine it? Did it really exist? Did someone hack into my account?",
+            "result_id": "R_2G1cvocEgxet2xf_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2G1cvocEgxet2xf.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2G1cvocEgxet2xf"
+            },
+            "metrics": {
+                "length_in_chars": 277,
+                "length_in_words": 59,
+                "length_in_unique_words": 42,
+                "length_in_concepts": 17,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 3.6610169491525424,
+                "avg_sentence_length_in_chars": 45.666666666666664,
+                "avg_sentence_length_in_words": 9.833333333333334,
+                "avg_sentence_length_in_unique_words": 9.666666666666666,
+                "dsi": 0.20066318660974503,
+                "surprise": 0.16821269512176518,
+                "raw_surprises": [
+                    0.00035872856775920337,
+                    0.039751370747884124,
+                    0.162519633769989,
+                    0,
+                    0.21790200471878052
+                ],
+                "n_gram_diversity": [
+                    0.711864406779661,
+                    0.9827586206896551,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1864406779661017,
+                    0.5862068965517241,
+                    0.8947368421052632,
+                    0.9821428571428571,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1.3333333333333333,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.0873574454219614,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.16905813167492548,
+                "novelty": 0.02176789159545861,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "What a fantastic day to exist. The sun is shining in the bright blue sky which is such a lovely change to the gloom-laden skies of late. Grey, rainy days have now been usurped with the payment of such glorious weather for once this awful summer.",
+            "result_id": "R_8dFIkEkt84RkgQj_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8dFIkEkt84RkgQj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8dFIkEkt84RkgQj"
+            },
+            "metrics": {
+                "length_in_chars": 245,
+                "length_in_words": 47,
+                "length_in_unique_words": 39,
+                "length_in_concepts": 21,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.148936170212766,
+                "avg_sentence_length_in_chars": 81,
+                "avg_sentence_length_in_words": 15.666666666666666,
+                "avg_sentence_length_in_unique_words": 14.666666666666666,
+                "dsi": 0.20617700502986,
+                "surprise": 0.01972389850351547,
+                "raw_surprises": [
+                    0.008532203568352603,
+                    0.011191694935162866
+                ],
+                "n_gram_diversity": [
+                    0.8297872340425532,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2127659574468085,
+                    0.5869565217391305,
+                    0.8666666666666667,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 0.3333333333333333,
+                "max_dependency_num_clauses": 1,
+                "avg_dependency_path_length": 2.956782106782107,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.19448372970024744,
+                "novelty": 0.010740254755228662,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "gloom-payment-exist",
+            "semantic_distance": "high",
+            "output": "The current political climate left Rachel feeling a sense of gloom. She wondered what she had done to exist in a time where there was such divide in the world, a world filled with war, violence, and poverty. Rachel sought out a number of charities, where she learned that for a small payment she could contribute to efforts tackling the issues she cared about in the world. Rachel felt less gloomy, as she read the inspirational stories of the charities, and her outlook on the world was brighter.",
+            "result_id": "R_8LtUJwc0nMwsLzG_Q4",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8LtUJwc0nMwsLzG.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8LtUJwc0nMwsLzG"
+            },
+            "metrics": {
+                "length_in_chars": 497,
+                "length_in_words": 88,
+                "length_in_unique_words": 59,
+                "length_in_concepts": 34,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.545454545454546,
+                "avg_sentence_length_in_chars": 123.5,
+                "avg_sentence_length_in_words": 22,
+                "avg_sentence_length_in_unique_words": 19.5,
+                "dsi": 0.21071821642431984,
+                "surprise": 0.0016657777418680833,
+                "raw_surprises": [
+                    2.3012832989777188e-05,
+                    0.0014249836532478632,
+                    0.0010506701265644847
+                ],
+                "n_gram_diversity": [
+                    0.6704545454545454,
+                    0.9655172413793104,
+                    0.9883720930232558,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13636363636363635,
+                    0.4367816091954023,
+                    0.7674418604651163,
+                    0.9294117647058824,
+                    0.9880952380952381
+                ],
+                "avg_dependency_num_clauses": 3.75,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.6069783776094457,
+                "max_dependency_path_length": 14,
+                "inv_homogen": 0.1890615572532018,
+                "novelty": 0.0016578319663089758,
+                "theme_uniqueness": 1.0
+            }
+        }
+    ]
+}

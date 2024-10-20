@@ -39,7 +39,7 @@ def compute_metrics(results, config):
         "total": 0
     }
 
-    response_attr = "output"
+    output_attr = config["output_attr"]
 
     preprocessing_args = {
         "lower": config["lower"],
@@ -50,9 +50,9 @@ def compute_metrics(results, config):
         "unique": config["unique"]
     }
 
-    results = [result for result in results if response_attr in result and result[response_attr]]
+    results = [result for result in results if output_attr in result and result[output_attr]]
 
-    stories = [result[response_attr] for result in results]
+    stories = [result[output_attr] for result in results]
 
     if len(stories) > 1:
         print("Computing global metrics")
@@ -66,16 +66,16 @@ def compute_metrics(results, config):
     for result_idx, result in tqdm(enumerate(results), total=len(results), desc="Computing local metrics"):
         result["metrics"] = {}
 
-        if response_attr in result:
-            all_words = get_words(result[response_attr], lower=False, remove_punct=True, remove_stopwords=False, lemmatize=False, unique=False, dominant_k=None)
+        if output_attr in result:
+            all_words = get_words(result[output_attr], lower=False, remove_punct=True, remove_stopwords=False, lemmatize=False, unique=False, dominant_k=None)
             unique_words = list(set([word.lower() for word in all_words if all_words]))
-            concepts = get_words(result[response_attr], lower=True, remove_punct=True, remove_stopwords=True, lemmatize=True, unique=True, dominant_k=None)
-            sentences = get_sentences(result[response_attr])
+            concepts = get_words(result[output_attr], lower=True, remove_punct=True, remove_stopwords=True, lemmatize=True, unique=True, dominant_k=None)
+            sentences = get_sentences(result[output_attr])
             sentence_words = [get_words(sentence, lower=False, remove_punct=True, remove_stopwords=False, lemmatize=False, unique=False, dominant_k=None) for sentence in sentences]
             sentence_unique_words = [list(set([word.lower() for word in words])) for words in sentence_words]
 
             # basic metrics
-            result["metrics"]["length_in_chars"] = len(result[response_attr])
+            result["metrics"]["length_in_chars"] = len(result[output_attr])
             result["metrics"]["length_in_words"] = len(all_words)
             result["metrics"]["length_in_unique_words"] = len(unique_words)
             result["metrics"]["length_in_concepts"] = len(concepts)
@@ -86,14 +86,14 @@ def compute_metrics(results, config):
             result["metrics"]["avg_sentence_length_in_unique_words"] = mean([len(words) for words in sentence_unique_words])
             
             # complex metrics
-            result["metrics"]["dsi"] = compute_dsi(result[response_attr], config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
-            surprise, raw_surprises = compute_surprise(result[response_attr], config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
+            result["metrics"]["dsi"] = compute_dsi(result[output_attr], config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
+            surprise, raw_surprises = compute_surprise(result[output_attr], config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
             result["metrics"]["surprise"] = surprise
             result["metrics"]["raw_surprises"] = raw_surprises
-            result["metrics"]["n_gram_diversity"], _ = compute_n_gram_diversity(result[response_attr], config["max_n_gram"])
-            result["metrics"]["pos_diversity"], _ = compute_pos_diversity(result[response_attr], config["max_n_gram"])
+            result["metrics"]["n_gram_diversity"], _ = compute_n_gram_diversity(result[output_attr], config["max_n_gram"])
+            result["metrics"]["pos_diversity"], _ = compute_pos_diversity(result[output_attr], config["max_n_gram"])
             
-            dependency_paths, dependency_num_clauses = compute_dependency_complexity(result[response_attr])
+            dependency_paths, dependency_num_clauses = compute_dependency_complexity(result[output_attr])
             result["metrics"]["avg_dependency_num_clauses"] = mean(dependency_num_clauses)
             result["metrics"]["max_dependency_num_clauses"] = max(dependency_num_clauses)
             result["metrics"]["avg_dependency_path_length"] = mean([mean([len(path) for path, freq in path_counter.items()]) for path_counter in dependency_paths])
@@ -247,6 +247,29 @@ def deduplicate_results(results, by="output"):
 
     return unique_results
 
+def filter_results(results, by="sentence_length", value=(3, 6), output_attr="output"):
+    filtered_results = []
+
+    for result in tqdm(results, total=len(results), desc=f"Filtering results by {by}"):
+        if by == "sentence_length":
+            sentences = get_sentences(result[output_attr])
+            min_value = float("-inf")
+            max_value = float("inf")
+
+            if len(value) == 1:
+                max_value = value[0]
+            elif len(value) == 2:
+                min_value, max_value = value
+            else:
+                raise ValueError(f"Invalid filter value: {value}")
+
+            if min_value <= len(sentences) <= max_value:
+                filtered_results.append(result)
+        else:
+            raise ValueError(f"Invalid filter attribute: {by}")
+    
+    return filtered_results
+
 def report_metrics(results_files, config):
     grouped_results = defaultdict(list)
     all_results = []
@@ -262,6 +285,12 @@ def report_metrics(results_files, config):
             print(results_file)
             raise e
     
+    filter_by = config.get("filter_by")
+
+    if filter_by:
+        for filter_by_attr, filter_by_value in filter_by.items():
+            all_results = filter_results(all_results, by=filter_by_attr, value=filter_by_value, output_attr=config["output_attr"])
+
     grouped_results = group_results(all_results, by=config["group_by"])
     
     # print stats
@@ -339,6 +368,7 @@ def main():
     parser.add_argument("-deby", "--deduplicate-by", type=str, help="Remove duplicate samples by attribute", default="output")
     parser.add_argument("-mf", "--max-frequency", type=int, help="Maximum n-gram frequency to consider", default=10)
     parser.add_argument("-gb", "--group-by", type=str, nargs="+", help="Group results by attribute(s)", default=["model", "id"])
+    parser.add_argument("-oa", "--output-attr", type=str, help="Output attribute", default="output")
 
     emb_group = parser.add_argument_group("Embedding arguments")
     emb_group.add_argument("-em", "--emb-model", type=str, help="Sentence embedding model", default=DEF_EMB_MODEL)

@@ -35,119 +35,132 @@
             "dominant_k": null,
             "unique": true,
             "cluster_linkage": "ward",
-            "cluster_dist_threshold": 0.5
+            "cluster_dist_threshold": 0.5,
+            "description": "Applying deduplication on default report"
         }
     },
     "metrics": {
         "num_samples": 25,
-        "avg_length_in_chars": 396.24,
-        "avg_length_in_words": 77.32,
-        "avg_length_in_unique_words": 54.04,
-        "avg_length_in_concepts": 28.12,
-        "avg_length_in_sentences": 4.24,
-        "avg_word_length_in_chars": 3.997432633622597,
-        "avg_sentence_length_in_chars": 99.55933333333333,
-        "avg_sentence_length_in_words": 19.572333333333333,
-        "avg_sentence_length_in_unique_words": 16.942,
-        "avg_dsi": 0.20453790085562262,
-        "avg_surprise": 0.044454266345828025,
+        "avg_length_in_chars": 420.16,
+        "avg_length_in_words": 82.48,
+        "avg_length_in_unique_words": 56.8,
+        "avg_length_in_concepts": 29.64,
+        "avg_length_in_sentences": 4.72,
+        "avg_word_length_in_chars": 3.974769932088586,
+        "avg_sentence_length_in_chars": 89.37255411255411,
+        "avg_sentence_length_in_words": 17.7861341991342,
+        "avg_sentence_length_in_unique_words": 15.82030303030303,
+        "avg_dsi": 0.20519811656475576,
+        "avg_surprise": 0.03999636259534327,
+        "avg_raw_surprises": [
+            0.028544186748072853,
+            0.018192814234480693,
+            0.02282846869526805,
+            0.010520879848873538,
+            0.008508341846969067,
+            0.009246053885329848,
+            0.019033111844744002,
+            0.0063311014856611,
+            0.0050868550936380985,
+            0.003876603311962573
+        ],
         "avg_n_gram_diversity": [
-            0.7105138812564497,
-            0.9691941329447451,
-            0.9947316846041676,
-            0.9987878787878788,
+            0.7165353089866218,
+            0.9762458154807098,
+            0.997671913005177,
+            0.9994736842105263,
             1.0
         ],
         "avg_pos_diversity": [
-            0.16339011816354188,
-            0.5012077819357371,
-            0.7761263207360878,
-            0.9111320677743833,
-            0.9680744750671202
+            0.1643372873620692,
+            0.5212280828125218,
+            0.802905483596422,
+            0.9359251564343872,
+            0.980793799602745
         ],
-        "avg_dependency_num_clauses": 3.1456666666666666,
-        "avg_max_dependency_num_clauses": 5.56,
-        "avg_dependency_path_length": 2.8947108521640548,
-        "avg_max_dependency_path_length": 8.6,
-        "avg_inv_homogen": 0.17528764208157857,
-        "avg_novelty": 0.013983052903381499,
-        "avg_theme_uniqueness": 0.84,
-        "corpus_dsi": 0.2111548242156964,
+        "avg_dependency_num_clauses": 2.7380043290043288,
+        "avg_max_dependency_num_clauses": 5.36,
+        "avg_dependency_path_length": 2.7163158369327918,
+        "avg_max_dependency_path_length": 8.24,
+        "avg_inv_homogen": 0.17537108461062115,
+        "avg_novelty": 0.013426060531291101,
+        "avg_theme_uniqueness": 0.8,
+        "corpus_dsi": 0.21153910905519907,
         "corpus_n_gram_diversity": [
-            0.3455958549222798,
-            0.8387765681700363,
-            0.9787344398340249,
-            0.9984431759211209,
-            0.9994807892004154
+            0.3320388349514563,
+            0.8334142787761049,
+            0.9810495626822158,
+            0.9970831307729704,
+            0.9995136186770428
         ],
         "corpus_pos_diversity": [
-            0.008290155440414507,
-            0.07620528771384137,
-            0.26556016597510373,
-            0.538661131292164,
-            0.7668743509865005
+            0.00825242718446602,
+            0.07090820786789703,
+            0.26482021379980564,
+            0.5362177929022849,
+            0.7684824902723736
         ],
         "num_unique_stories": 25,
         "top_10_n_grams": {
             "1-gram": {
-                "the": 132,
-                "to": 80,
-                "a": 66,
-                "and": 55,
-                "i": 54,
-                "of": 38,
-                "letter": 35,
-                "was": 34,
-                "it": 33,
-                "in": 27
+                "the": 115,
+                "a": 79,
+                "to": 76,
+                "and": 65,
+                "i": 58,
+                "he": 43,
+                "was": 43,
+                "my": 38,
+                "it": 38,
+                "letter": 36
             },
             "2-gram": {
-                "to send": 14,
-                "the letter": 13,
-                "to the": 11,
-                "on the": 10,
-                "of the": 9,
-                "a letter": 9,
-                "a stamp": 8,
-                "in the": 8,
-                "at the": 8,
-                "send it": 7
+                "to send": 13,
+                "a letter": 12,
+                "on the": 11,
+                "the letter": 9,
+                "to the": 9,
+                "a stamp": 7,
+                "decided to": 7,
+                "it was": 7,
+                "at the": 7,
+                "i was": 7
             },
             "3-gram": {
-                "to send it": 4,
-                "on the ground": 3,
-                "there was a": 2,
-                "had enough of": 2,
-                "she would be": 2,
-                "n't know what": 2,
-                "a stamp to": 2,
+                "the post office": 4,
+                "as soon as": 3,
+                "broke up with": 2,
+                "up with me": 2,
+                "this is n't": 2,
                 "writing a letter": 2,
-                "i do n't": 2,
-                "i wanted to": 2
+                "not want to": 2,
+                "there was a": 2,
+                "one of the": 2,
+                "and decided to": 2
             },
             "4-gram": {
-                "there was need to": 2,
+                "broke up with me": 2,
+                "the local post office": 2,
+                "on the way home": 2,
+                "to the post office": 2,
                 "that was the last": 2,
                 "was the last time": 2,
-                "i could hear the": 1,
-                "could hear the stamp": 1,
-                "hear the stamp of": 1,
-                "the stamp of the": 1,
-                "stamp of the soldiers": 1,
-                "of the soldiers boots": 1,
-                "the soldiers boots as": 1
+                "i ca n't believe": 1,
+                "ca n't believe he": 1,
+                "n't believe he just": 1,
+                "believe he just broke": 1
             },
             "5-gram": {
                 "that was the last time": 2,
-                "i could hear the stamp": 1,
-                "could hear the stamp of": 1,
-                "hear the stamp of the": 1,
-                "the stamp of the soldiers": 1,
-                "stamp of the soldiers boots": 1,
-                "of the soldiers boots as": 1,
-                "the soldiers boots as they": 1,
-                "soldiers boots as they marched": 1,
-                "boots as they marched past": 1
+                "i ca n't believe he": 1,
+                "ca n't believe he just": 1,
+                "n't believe he just broke": 1,
+                "believe he just broke up": 1,
+                "he just broke up with": 1,
+                "just broke up with me": 1,
+                "broke up with me and": 1,
+                "up with me and even": 1,
+                "with me and even worse": 1
             }
         },
         "usage": {
@@ -159,172 +172,63 @@
             "input": 0,
             "output": 0,
             "total": 0
-        },
-        "avg_raw_surprises": [
-            0.01835464603494392,
-            0.021699190039959283,
-            0.012690090897249488,
-            0.028964582116133817,
-            0.06262997948762142,
-            0.012678492069244374,
-            0.008708500862121576
-        ]
+        }
     },
     "data": [
         {
             "id": "stamp-letter-send",
-            "output": "I could hear the stamp of the soldiers' boots as they marched past my cottage. Their uniforms neat and precise, each young man appearing much as the last. I wondered to myself what differences lay under the outer layers which gave them such a singular appearance. Perhaps one wore lady's underwear! I chuckled to myself. Perhaps there was a lover's letter tucked inside a pocket, penned in secret and hidden away until a chance to send it. ",
-            "result_id": "R_2mqjhNO26XNoi6R_Q2",
+            "semantic_distance": "low",
+            "output": "I can't believe he just broke up with me, and even worse he broke up with me over text! My phone pinged and all I saw was the letter for his initials pop up on my text screen. Not even a curtsy call or anything, he simply wrote \"This isn't working, it's over\" and hit send. I shouldn't have expected anything more as he certainly doesn't get the stamp of approval from my parents.",
+            "result_id": "R_8o6ejl1aVHjSI9z_Q2",
             "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_2mqjhNO26XNoi6R.json",
+                "source": "../experiments/outputs/human/pilot/run1/R_8o6ejl1aVHjSI9z.json",
                 "model": "human",
                 "model_args": null,
-                "participant_id": "R_2mqjhNO26XNoi6R"
+                "participant_id": "R_8o6ejl1aVHjSI9z"
             },
             "metrics": {
-                "length_in_chars": 440,
+                "length_in_chars": 380,
                 "length_in_words": 79,
-                "length_in_unique_words": 64,
-                "length_in_concepts": 36,
-                "length_in_sentences": 6,
-                "avg_word_length_in_chars": 4.481012658227848,
-                "avg_sentence_length_in_chars": 72.33333333333333,
-                "avg_sentence_length_in_words": 13.166666666666666,
-                "avg_sentence_length_in_unique_words": 12.666666666666666,
-                "dsi": 0.20565927284104485,
-                "surprise": 0.1656085267417875,
-                "n_gram_diversity": [
-                    0.810126582278481,
-                    0.9871794871794872,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.1518987341772152,
-                    0.5128205128205128,
-                    0.7662337662337663,
-                    0.9473684210526315,
-                    1.0
-                ],
-                "avg_dependency_num_clauses": 1.8333333333333333,
-                "max_dependency_num_clauses": 5,
-                "avg_dependency_path_length": 2.783958263958264,
-                "max_dependency_path_length": 11,
-                "inv_homogen": 0.18379897624254227,
-                "novelty": 0.010991102749303094,
-                "theme_uniqueness": 1.0,
+                "length_in_unique_words": 57,
+                "length_in_concepts": 22,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 3.7721518987341773,
+                "avg_sentence_length_in_chars": 94.25,
+                "avg_sentence_length_in_words": 19.75,
+                "avg_sentence_length_in_unique_words": 18,
+                "dsi": 0.20424393012926176,
+                "surprise": 0.017441476905156662,
                 "raw_surprises": [
-                    0.010605705919719877,
-                    0.002949390099162147,
-                    0.006050438398406632,
-                    0.19587079683939615,
-                    0.19854498559778389
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "Julia awoke to a 'stamp stamp stamp' from the above flat for the third day in a row! She decided to send for the warden, she had had enough of it! When the warden turned up she knew she would be polite but in her mind she would be full of extremetieis all in capital letters!",
-            "result_id": "R_8WxkYgki5yinZhV_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8WxkYgki5yinZhV.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8WxkYgki5yinZhV"
-            },
-            "metrics": {
-                "length_in_chars": 275,
-                "length_in_words": 56,
-                "length_in_unique_words": 37,
-                "length_in_concepts": 16,
-                "length_in_sentences": 3,
-                "avg_word_length_in_chars": 3.8214285714285716,
-                "avg_sentence_length_in_chars": 91,
-                "avg_sentence_length_in_words": 18.666666666666668,
-                "avg_sentence_length_in_unique_words": 15,
-                "dsi": 0.21246614704529443,
-                "surprise": 0.016182982212021246,
+                    0.01286486997490835,
+                    0.012524895015217002,
+                    0.000772450367609645
+                ],
                 "n_gram_diversity": [
-                    0.6607142857142857,
-                    0.9090909090909091,
-                    0.9814814814814815,
-                    1.0,
+                    0.7215189873417721,
+                    0.9615384615384616,
+                    0.974025974025974,
+                    0.9868421052631579,
                     1.0
                 ],
                 "pos_diversity": [
-                    0.21428571428571427,
-                    0.5272727272727272,
-                    0.7777777777777778,
-                    0.8679245283018868,
-                    0.9423076923076923
+                    0.13924050632911392,
+                    0.5641025641025641,
+                    0.7792207792207793,
+                    0.9342105263157895,
+                    0.9866666666666667
                 ],
-                "avg_dependency_num_clauses": 2,
-                "max_dependency_num_clauses": 4,
-                "avg_dependency_path_length": 2.6983867196633153,
-                "max_dependency_path_length": 6,
-                "inv_homogen": 0.15571739027897516,
-                "novelty": 0.0026226456591960656,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.0076373060544331905,
-                    0.008545676157588056
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "As he sent the email, the screen went blank and Jon knew something was wrong.  Since receiving that letter from an anonymous sender, things had gone from bad to worse. The letter said the sender had incriminating evidence on Jon, and unless he did exactly what they asked, it would be publicly shared. He didn't know what dirt they had on him, but he could guess. A self-confessed miser, Jon never affixed a stamp to any of his letters, instead making the recipient pay for the privilege of receiving his communications. ",
-            "result_id": "R_27E8zaS1IXk1NPZ_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_27E8zaS1IXk1NPZ.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_27E8zaS1IXk1NPZ"
-            },
-            "metrics": {
-                "length_in_chars": 521,
-                "length_in_words": 94,
-                "length_in_unique_words": 69,
-                "length_in_concepts": 35,
-                "length_in_sentences": 5,
-                "avg_word_length_in_chars": 4.4361702127659575,
-                "avg_sentence_length_in_chars": 103.4,
-                "avg_sentence_length_in_words": 18.8,
-                "avg_sentence_length_in_unique_words": 17.2,
-                "dsi": 0.20161786159547437,
-                "surprise": 0.030581357925948363,
-                "n_gram_diversity": [
-                    0.7340425531914894,
-                    0.989247311827957,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.13829787234042554,
-                    0.5376344086021505,
-                    0.8260869565217391,
-                    0.9560439560439561,
-                    1.0
-                ],
-                "avg_dependency_num_clauses": 3,
+                "avg_dependency_num_clauses": 3.5,
                 "max_dependency_num_clauses": 6,
-                "avg_dependency_path_length": 2.6315727484780056,
-                "max_dependency_path_length": 9,
-                "inv_homogen": 0.18183504045009613,
-                "novelty": 0.019073925240444045,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.0006660762287321598,
-                    0.014920893926469114,
-                    0.019471694363488085,
-                    0.026104051333207368
-                ]
+                "avg_dependency_path_length": 2.5088037156426375,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.20724275459845862,
+                "novelty": 0.014590357851874625,
+                "theme_uniqueness": 1.0
             }
         },
         {
             "id": "stamp-letter-send",
+            "semantic_distance": "low",
             "output": "There is something special about writing a letter, a real letter, not an email or a text message. Taking the time to sit down, place a sheet of paper on my desk, choose from one of my favourite pens and just write whilst sipping a cup of coffee. The bit I like best is the satisfaction of inserting the letter in an envelope, licking the glue, sealing it and then choose a stamp from my collection that I know the recipient will like. I get up, put my shoes on, take my letter and go on a walk around the local park until I spot the very unusual letterbox where a tree has grown to engulf it and I send my letter by posting it through the red letterbox. If this isn't slow living to enjoy the present I don't know what is.",
             "result_id": "R_2eaDBbNJB41Q6MF_Q2",
             "metadata": {
@@ -345,6 +249,13 @@
                 "avg_sentence_length_in_unique_words": 20.833333333333332,
                 "dsi": 0.20573983786152858,
                 "surprise": 0.027688642291279597,
+                "raw_surprises": [
+                    0.01417098556246077,
+                    0.004112168720790316,
+                    0.013573260895617612,
+                    0.020976613326506188,
+                    0.016388577222824108
+                ],
                 "n_gram_diversity": [
                     0.6413793103448275,
                     0.9861111111111112,
@@ -363,967 +274,14 @@
                 "max_dependency_num_clauses": 7,
                 "avg_dependency_path_length": 3.6323171169649506,
                 "max_dependency_path_length": 10,
-                "inv_homogen": 0.16729881366093954,
-                "novelty": 0.010829972708335633,
-                "theme_uniqueness": 0.5,
-                "raw_surprises": [
-                    0.01417098556246077,
-                    0.004112168720790316,
-                    0.013573260895617612,
-                    0.020976613326506188,
-                    0.016388577222824108
-                ]
+                "inv_homogen": 0.1675317883491516,
+                "novelty": 0.011598542387340982,
+                "theme_uniqueness": 0.5
             }
         },
         {
             "id": "stamp-letter-send",
-            "output": "Today I wrote a heartfelt letter to my best friend, telling her all about the things I had gone through as of late. I sealed it up and hurried to the post office, excited to send it as this was my first letter I had written and I wanted to start exchanging letters as it felt so novel! But in a rush, I forgot to put a stamp on the envelope. Weeks went by, and my friend never got the letter. I wondered where it had gone, everyday asking her if she had received anything nice lately not wanting to ruin the surprise but a feeling of melancholy if this may have been a sign not to do this.",
-            "result_id": "R_8PvUUEqSWnAZrWx_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8PvUUEqSWnAZrWx.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8PvUUEqSWnAZrWx"
-            },
-            "metrics": {
-                "length_in_chars": 589,
-                "length_in_words": 119,
-                "length_in_unique_words": 76,
-                "length_in_concepts": 38,
-                "length_in_sentences": 5,
-                "avg_word_length_in_chars": 3.8739495798319328,
-                "avg_sentence_length_in_chars": 117,
-                "avg_sentence_length_in_words": 23.8,
-                "avg_sentence_length_in_unique_words": 20.6,
-                "dsi": 0.19818625714666982,
-                "surprise": 0.005215637143860516,
-                "n_gram_diversity": [
-                    0.6386554621848739,
-                    0.9745762711864406,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.09243697478991597,
-                    0.4406779661016949,
-                    0.7606837606837606,
-                    0.9051724137931034,
-                    0.9739130434782609
-                ],
-                "avg_dependency_num_clauses": 5,
-                "max_dependency_num_clauses": 11,
-                "avg_dependency_path_length": 3.0919648557600365,
-                "max_dependency_path_length": 10,
-                "inv_homogen": 0.15788486848274866,
-                "novelty": 0.025937134138053153,
-                "theme_uniqueness": 0.5,
-                "raw_surprises": [
-                    0.0036757724916833268,
-                    0.003139880223151953,
-                    0.0008138239383697621,
-                    0.00280179763451599
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "yesterday i received a letter in the post . As i pulled it out of the letterbox I jumped back. A large spider had come in with it. In order to avoid it running up my leg I was hopping about and also trying not to stamp on it. In the end I opened the door and it moved to the step. I used the sweeping brush to help send it on its way.",
-            "result_id": "R_8U0c5Ms0PJ9VYTm_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8U0c5Ms0PJ9VYTm.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8U0c5Ms0PJ9VYTm"
-            },
-            "metrics": {
-                "length_in_chars": 334,
-                "length_in_words": 73,
-                "length_in_unique_words": 49,
-                "length_in_concepts": 27,
-                "length_in_sentences": 6,
-                "avg_word_length_in_chars": 3.493150684931507,
-                "avg_sentence_length_in_chars": 54.833333333333336,
-                "avg_sentence_length_in_words": 12.166666666666666,
-                "avg_sentence_length_in_unique_words": 11.333333333333334,
-                "dsi": 0.20222476387974883,
-                "surprise": 0.04165541103907995,
-                "n_gram_diversity": [
-                    0.6712328767123288,
-                    0.9722222222222222,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.1506849315068493,
-                    0.4444444444444444,
-                    0.7323943661971831,
-                    0.9,
-                    0.9420289855072463
-                ],
-                "avg_dependency_num_clauses": 1.6666666666666667,
-                "max_dependency_num_clauses": 5,
-                "avg_dependency_path_length": 2.395428766634622,
-                "max_dependency_path_length": 7,
-                "inv_homogen": 0.1659355734785398,
-                "novelty": 0.01786012067189513,
-                "theme_uniqueness": 0.5,
-                "raw_surprises": [
-                    0.03135549028714496,
-                    0.020869394143422454,
-                    0.004800177755809987,
-                    0.022656195504324794,
-                    0.024457269906997675
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "During the time of war there was need to deliver good will to the winning side and there was need to stamp the command and send the logistic to the leader which include a letter and ",
-            "result_id": "R_2fDGzWQwo9sISmC_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_2fDGzWQwo9sISmC.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_2fDGzWQwo9sISmC"
-            },
-            "metrics": {
-                "length_in_chars": 182,
-                "length_in_words": 36,
-                "length_in_unique_words": 24,
-                "length_in_concepts": 13,
-                "length_in_sentences": 1,
-                "avg_word_length_in_chars": 4.055555555555555,
-                "avg_sentence_length_in_chars": 181,
-                "avg_sentence_length_in_words": 36,
-                "avg_sentence_length_in_unique_words": 24,
-                "dsi": 0.2011528030419961,
-                "surprise": 0,
-                "n_gram_diversity": [
-                    0.6666666666666666,
-                    0.8857142857142857,
-                    0.9411764705882353,
-                    0.9696969696969697,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.2222222222222222,
-                    0.45714285714285713,
-                    0.7058823529411765,
-                    0.9090909090909091,
-                    0.96875
-                ],
-                "avg_dependency_num_clauses": 8,
-                "max_dependency_num_clauses": 8,
-                "avg_dependency_path_length": 4.1571428571428575,
-                "max_dependency_path_length": 10,
-                "inv_homogen": 0.18653045097986856,
-                "novelty": 0.020004042347400608,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": []
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "I asked my friend about sending the letter as I was new in the country. He told me how to stamp the letter and and how can I send it by the post. I finally had a good understanding about it.",
-            "result_id": "R_8sBNWJpZHPgPqua_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8sBNWJpZHPgPqua.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8sBNWJpZHPgPqua"
-            },
-            "metrics": {
-                "length_in_chars": 190,
-                "length_in_words": 41,
-                "length_in_unique_words": 30,
-                "length_in_concepts": 12,
-                "length_in_sentences": 3,
-                "avg_word_length_in_chars": 3.5853658536585367,
-                "avg_sentence_length_in_chars": 62.666666666666664,
-                "avg_sentence_length_in_words": 13.666666666666666,
-                "avg_sentence_length_in_unique_words": 12,
-                "dsi": 0.19680692932822486,
-                "surprise": 0.05594937006632489,
-                "n_gram_diversity": [
-                    0.7317073170731707,
-                    0.975,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.2682926829268293,
-                    0.7,
-                    0.8717948717948718,
-                    0.9736842105263158,
-                    1.0
-                ],
-                "avg_dependency_num_clauses": 1.6666666666666667,
-                "max_dependency_num_clauses": 4,
-                "avg_dependency_path_length": 2.4270833333333335,
-                "max_dependency_path_length": 7,
-                "inv_homogen": 0.16879197706778845,
-                "novelty": 0.02869578977494308,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.025893946488698333,
-                    0.030055423577626555
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "on a typical day on the emerald isle, the boy woke up and started staring at the clock as if the pendulum was a time stamp of his existence constantly ticking at the back of his neck. then he remembered he just missed his application to a new flat just because of one missing reference letter. he was one step away from being homeless. in a hurry, he grabbed his phone and checked if a friend of his did send the money he was in need of for a quite long time. ",
-            "result_id": "R_2sdMlOguKbuAvfg_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_2sdMlOguKbuAvfg.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_2sdMlOguKbuAvfg"
-            },
-            "metrics": {
-                "length_in_chars": 460,
-                "length_in_words": 92,
-                "length_in_unique_words": 60,
-                "length_in_concepts": 35,
-                "length_in_sentences": 4,
-                "avg_word_length_in_chars": 3.9347826086956523,
-                "avg_sentence_length_in_chars": 114,
-                "avg_sentence_length_in_words": 23,
-                "avg_sentence_length_in_unique_words": 18.75,
-                "dsi": 0.21007571350626586,
-                "surprise": 0.020092995078475357,
-                "n_gram_diversity": [
-                    0.6521739130434783,
-                    0.9560439560439561,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.13043478260869565,
-                    0.5384615384615384,
-                    0.8222222222222222,
-                    0.9438202247191011,
-                    0.9886363636363636
-                ],
-                "avg_dependency_num_clauses": 2.5,
-                "max_dependency_num_clauses": 5,
-                "avg_dependency_path_length": 3.1288602607417113,
-                "max_dependency_path_length": 10,
-                "inv_homogen": 0.20189411441485086,
-                "novelty": 0.0021582214188610727,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.006279055277506496,
-                    0.004509071509043366,
-                    0.019351365831163175
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "A man was looking for a stamp to emboss onto a letter he had to send before the end of the day. He went to the supermarket to find a suitable stamp with some ink to apply it with. On his return trip he realised he lived only 200 yards from a post box which would allow him to send it today.",
-            "result_id": "R_8kG4d41raqDZBax_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8kG4d41raqDZBax.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8kG4d41raqDZBax"
-            },
-            "metrics": {
-                "length_in_chars": 290,
-                "length_in_words": 62,
-                "length_in_unique_words": 44,
-                "length_in_concepts": 24,
-                "length_in_sentences": 3,
-                "avg_word_length_in_chars": 3.6451612903225805,
-                "avg_sentence_length_in_chars": 96,
-                "avg_sentence_length_in_words": 20.666666666666668,
-                "avg_sentence_length_in_unique_words": 18,
-                "dsi": 0.20264725905397665,
-                "surprise": 0.009122487734922607,
-                "n_gram_diversity": [
-                    0.7096774193548387,
-                    0.9836065573770492,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.16129032258064516,
-                    0.4098360655737705,
-                    0.65,
-                    0.7966101694915254,
-                    0.9137931034482759
-                ],
-                "avg_dependency_num_clauses": 2.6666666666666665,
-                "max_dependency_num_clauses": 3,
-                "avg_dependency_path_length": 3.890641616448068,
-                "max_dependency_path_length": 13,
-                "inv_homogen": 0.17119263112545013,
-                "novelty": 0.017015130323439487,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.005584379037221282,
-                    0.0035381086977013254
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "My friend asked me to post a letter. I said no. I didn't expect it to send her into a rage and make her stamp her feet.",
-            "result_id": "R_8VKNz0tY7nY6fDq_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8VKNz0tY7nY6fDq.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8VKNz0tY7nY6fDq"
-            },
-            "metrics": {
-                "length_in_chars": 119,
-                "length_in_words": 28,
-                "length_in_unique_words": 23,
-                "length_in_concepts": 10,
-                "length_in_sentences": 3,
-                "avg_word_length_in_chars": 3.2142857142857144,
-                "avg_sentence_length_in_chars": 39,
-                "avg_sentence_length_in_words": 9.333333333333334,
-                "avg_sentence_length_in_unique_words": 8.666666666666666,
-                "dsi": 0.19583674139446683,
-                "surprise": 0.39816176692644756,
-                "n_gram_diversity": [
-                    0.8214285714285714,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.32142857142857145,
-                    0.6296296296296297,
-                    0.8846153846153846,
-                    0.96,
-                    1.0
-                ],
-                "avg_dependency_num_clauses": 1.6666666666666667,
-                "max_dependency_num_clauses": 4,
-                "avg_dependency_path_length": 2.0208333333333335,
-                "max_dependency_path_length": 6,
-                "inv_homogen": 0.16344513495763144,
-                "novelty": 0.030636165642459134,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.19371367494265238,
-                    0.20444809198379515
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "Stamp prices are really expensive. There was a letter that was received by someone and they were interested in how much it cost the sender to send it. They researched how much the specific stamp used cost the sender and they were shocked at the price. They remember when stamps used to be really cheap. It made them realise one of the reasons why less letters are sent by post.",
-            "result_id": "R_27dw4UbFh02oLUB_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_27dw4UbFh02oLUB.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_27dw4UbFh02oLUB"
-            },
-            "metrics": {
-                "length_in_chars": 377,
-                "length_in_words": 70,
-                "length_in_unique_words": 48,
-                "length_in_concepts": 17,
-                "length_in_sentences": 5,
-                "avg_word_length_in_chars": 4.328571428571428,
-                "avg_sentence_length_in_chars": 74.6,
-                "avg_sentence_length_in_words": 14,
-                "avg_sentence_length_in_unique_words": 13,
-                "dsi": 0.20465337748036666,
-                "surprise": 0.03499764118875777,
-                "n_gram_diversity": [
-                    0.6857142857142857,
-                    0.927536231884058,
-                    0.9705882352941176,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.17142857142857143,
-                    0.5652173913043478,
-                    0.7941176470588235,
-                    0.9253731343283582,
-                    0.9696969696969697
-                ],
-                "avg_dependency_num_clauses": 2.2,
-                "max_dependency_num_clauses": 4,
-                "avg_dependency_path_length": 2.757763450207669,
-                "max_dependency_path_length": 8,
-                "inv_homogen": 0.1853721688191096,
-                "novelty": 0.013002893470659471,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.007860593001047772,
-                    0.03677837962195987,
-                    0.006404357297079916,
-                    0.01895195245742798
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "Lucy threw the letter on the ground. She was not going to read another word of this rubbish. She stamped on the envelope and screwed her heel into the paper, ripping it. How satisfying, she thought, that'll teach him to send me such dross. She walked out of the room with her head held high, smiling at the feeling of release and closure.",
-            "result_id": "R_8B3zak55aPwmX5t_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8B3zak55aPwmX5t.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8B3zak55aPwmX5t"
-            },
-            "metrics": {
-                "length_in_chars": 338,
-                "length_in_words": 64,
-                "length_in_unique_words": 50,
-                "length_in_concepts": 28,
-                "length_in_sentences": 5,
-                "avg_word_length_in_chars": 4.171875,
-                "avg_sentence_length_in_chars": 66.8,
-                "avg_sentence_length_in_words": 12.8,
-                "avg_sentence_length_in_unique_words": 12,
-                "dsi": 0.20763062500449084,
-                "surprise": 0.026823677122592954,
-                "n_gram_diversity": [
-                    0.78125,
-                    0.9841269841269841,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.171875,
-                    0.47619047619047616,
-                    0.7580645161290323,
-                    0.8688524590163934,
-                    0.95
-                ],
-                "avg_dependency_num_clauses": 1.6,
-                "max_dependency_num_clauses": 3,
-                "avg_dependency_path_length": 2.4578295337273666,
-                "max_dependency_path_length": 7,
-                "inv_homogen": 0.15844123313824335,
-                "novelty": 0.007048398422411117,
-                "theme_uniqueness": 0.5,
-                "raw_surprises": [
-                    0.021613111098607418,
-                    0.011310203870137536,
-                    0.01235431035359702,
-                    0.008369728922843933
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "\"Send for the detective\" screamed the woman staring at the body on the ground. Detective Monroe soon arrived and could clearly see the body had been long dead, the letter of the infamous stamp killer, stamped onto the victims head with significant force was plain to see. Thirteen months and thirteen deaths, each one with a letter on their head, following the alphabet. Monroe only hoped they could stop the killer before they got to Z, or he would go postal.",
-            "result_id": "R_8JLzPcPzxxmeT2T_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8JLzPcPzxxmeT2T.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8JLzPcPzxxmeT2T"
-            },
-            "metrics": {
-                "length_in_chars": 460,
-                "length_in_words": 81,
-                "length_in_unique_words": 58,
-                "length_in_concepts": 32,
-                "length_in_sentences": 4,
-                "avg_word_length_in_chars": 4.555555555555555,
-                "avg_sentence_length_in_chars": 114.25,
-                "avg_sentence_length_in_words": 20.25,
-                "avg_sentence_length_in_unique_words": 18,
-                "dsi": 0.21079816717293956,
-                "surprise": 0.01106347306435849,
-                "n_gram_diversity": [
-                    0.7160493827160493,
-                    0.9875,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.16049382716049382,
-                    0.5125,
-                    0.7215189873417721,
-                    0.8717948717948718,
-                    0.961038961038961
-                ],
-                "avg_dependency_num_clauses": 3.25,
-                "max_dependency_num_clauses": 6,
-                "avg_dependency_path_length": 2.785914760914761,
-                "max_dependency_path_length": 6,
-                "inv_homogen": 0.1770336627960205,
-                "novelty": 0.0007133140855136721,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.0018719530322638678,
-                    0.0043070553814997525,
-                    0.010416201182774115
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "My mother said she never gets any post anymore, that everything is by email or phone call!! So I decided to give her a surprise and write her a little letter.  I could send it on the way home from work and she would get it hopefully in a few days.  I got out my notecards and sent a little hello from me and quickly put it in the envelope.  Oh no, I needed a stamp!! ",
-            "result_id": "R_2G1cvocEgxet2xf_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_2G1cvocEgxet2xf.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_2G1cvocEgxet2xf"
-            },
-            "metrics": {
-                "length_in_chars": 367,
-                "length_in_words": 79,
-                "length_in_unique_words": 58,
-                "length_in_concepts": 26,
-                "length_in_sentences": 5,
-                "avg_word_length_in_chars": 3.569620253164557,
-                "avg_sentence_length_in_chars": 73,
-                "avg_sentence_length_in_words": 15.8,
-                "avg_sentence_length_in_unique_words": 15,
-                "dsi": 0.1988401854955233,
-                "surprise": 0.010441143030212027,
-                "n_gram_diversity": [
-                    0.7341772151898734,
-                    0.9615384615384616,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.16455696202531644,
-                    0.5,
-                    0.8051948051948052,
-                    0.9342105263157895,
-                    0.9733333333333334
-                ],
-                "avg_dependency_num_clauses": 2.6,
-                "max_dependency_num_clauses": 4,
-                "avg_dependency_path_length": 2.3817530799703976,
-                "max_dependency_path_length": 7,
-                "inv_homogen": 0.16435826321442923,
-                "novelty": 0.02462927744034621,
-                "theme_uniqueness": 0.5,
-                "raw_surprises": [
-                    0.00034150850205194594,
-                    0.003878019537244509,
-                    0.007078780304817928,
-                    0.009583977716309672
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "I stamp my feet in outrage and send my brother for help. My mother appears with a weary look on her face. It is not the first time that my name has been misspelled. I stare at the antagonising letter .",
-            "result_id": "R_8mJxG00fCL8kz05_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8mJxG00fCL8kz05.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8mJxG00fCL8kz05"
-            },
-            "metrics": {
-                "length_in_chars": 201,
-                "length_in_words": 40,
-                "length_in_unique_words": 35,
-                "length_in_concepts": 16,
-                "length_in_sentences": 4,
-                "avg_word_length_in_chars": 3.925,
-                "avg_sentence_length_in_chars": 49.5,
-                "avg_sentence_length_in_words": 10,
-                "avg_sentence_length_in_unique_words": 9.75,
-                "dsi": 0.20723817845185596,
-                "surprise": 0.06385222540961372,
-                "n_gram_diversity": [
-                    0.875,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.225,
-                    0.5897435897435898,
-                    0.868421052631579,
-                    0.9459459459459459,
-                    0.9722222222222222
-                ],
-                "avg_dependency_num_clauses": 0.75,
-                "max_dependency_num_clauses": 2,
-                "avg_dependency_path_length": 2.3380627394636013,
-                "max_dependency_path_length": 6,
-                "inv_homogen": 0.18118110795815787,
-                "novelty": 0.007833291527680863,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.020469826459884655,
-                    0.05033436417579651,
-                    0.02497414747873941
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "The letter sat amongst others on the mat at the empty house, i was about to show to the clients.     The musty smell around the house was tickling my nose and i could see spiders.  Should I stamp on them or pick them up with one of the letters and send them on their way in the garden.",
-            "result_id": "R_8zUaSPSsswsQ7fn_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8zUaSPSsswsQ7fn.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8zUaSPSsswsQ7fn"
-            },
-            "metrics": {
-                "length_in_chars": 285,
-                "length_in_words": 60,
-                "length_in_unique_words": 43,
-                "length_in_concepts": 17,
-                "length_in_sentences": 3,
-                "avg_word_length_in_chars": 3.7333333333333334,
-                "avg_sentence_length_in_chars": 95,
-                "avg_sentence_length_in_words": 20,
-                "avg_sentence_length_in_unique_words": 17,
-                "dsi": 0.2036386110326823,
-                "surprise": 0.012178730396997323,
-                "n_gram_diversity": [
-                    0.7166666666666667,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.18333333333333332,
-                    0.5423728813559322,
-                    0.8275862068965517,
-                    0.9473684210526315,
-                    1.0
-                ],
-                "avg_dependency_num_clauses": 2.6666666666666665,
-                "max_dependency_num_clauses": 4,
-                "avg_dependency_path_length": 2.6533391010587897,
-                "max_dependency_path_length": 8,
-                "inv_homogen": 0.16686600943406424,
-                "novelty": 0.015032426366028195,
-                "theme_uniqueness": 0.5,
-                "raw_surprises": [
-                    0.0027700282278514954,
-                    0.009408702169145827
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "He tore up the letter into small pieces and threw it on the ground, stamping it into the mud for good measure. He felt his face redden with anger and conciously tried to calm himself down. To be honest though, the reponse he had got was enough to send anyone into a rage. He glanced up and saw the group of girls across the street, giggling and whispering, making no effort to disguise their behaviour. That was the last time he followed his therapist's idea of expressing his feelings in writing to a girl he liked. ",
-            "result_id": "R_87z2b4sr7in6R21_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_87z2b4sr7in6R21.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_87z2b4sr7in6R21"
-            },
-            "metrics": {
-                "length_in_chars": 517,
-                "length_in_words": 97,
-                "length_in_unique_words": 70,
-                "length_in_concepts": 41,
-                "length_in_sentences": 5,
-                "avg_word_length_in_chars": 4.247422680412371,
-                "avg_sentence_length_in_chars": 102.4,
-                "avg_sentence_length_in_words": 19.4,
-                "avg_sentence_length_in_unique_words": 17.6,
-                "dsi": 0.20506253366063282,
-                "surprise": 0.026993477107986566,
-                "n_gram_diversity": [
-                    0.7216494845360825,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.10309278350515463,
-                    0.40625,
-                    0.6736842105263158,
-                    0.851063829787234,
-                    0.9247311827956989
-                ],
-                "avg_dependency_num_clauses": 3.8,
-                "max_dependency_num_clauses": 7,
-                "avg_dependency_path_length": 3.1019703197851625,
-                "max_dependency_path_length": 12,
-                "inv_homogen": 0.1705422724286715,
-                "novelty": 0.012184581110127157,
-                "theme_uniqueness": 0.5,
-                "raw_surprises": [
-                    0.0059447494764176545,
-                    0.02343193434533619,
-                    0.021786895123395073,
-                    0.0028233752708242132
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "Betty's grandchildren knew that their grandmother loved to collect stationary and for her birthday they decided to get her a personalised stationary set that she could use, as she loves to send 1 letter every 2 weeks to her old childhood friend of 70 years, Gladys.  Betty was thrilled with her new stationary and her thoughtful grandchildren even ensured their grandmother had a book with plenty of pre-paid stamps for which Betty was grateful, as a stamp cost quite a bit more money these days.",
-            "result_id": "R_8v92A9H3hnaw1QI_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8v92A9H3hnaw1QI.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8v92A9H3hnaw1QI"
-            },
-            "metrics": {
-                "length_in_chars": 496,
-                "length_in_words": 88,
-                "length_in_unique_words": 63,
-                "length_in_concepts": 38,
-                "length_in_sentences": 2,
-                "avg_word_length_in_chars": 4.613636363636363,
-                "avg_sentence_length_in_chars": 248,
-                "avg_sentence_length_in_words": 44,
-                "avg_sentence_length_in_unique_words": 37,
-                "dsi": 0.2070982751262985,
-                "surprise": 0.01768774528434308,
-                "n_gram_diversity": [
-                    0.7159090909090909,
-                    0.9655172413793104,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.1590909090909091,
-                    0.5632183908045977,
-                    0.8604651162790697,
-                    0.9647058823529412,
-                    1.0
-                ],
-                "avg_dependency_num_clauses": 6.5,
-                "max_dependency_num_clauses": 9,
-                "avg_dependency_path_length": 4.350961538461538,
-                "max_dependency_path_length": 12,
-                "inv_homogen": 0.1860115279754003,
-                "novelty": 0.008113098178795797,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.00884387264217154
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "There are some letters that I have always wanted to send, but I never have. Whether that's because I don't quite have the words, or I have the words but not the recipient. One time, it was because I didn't have a stamp, and then the letter got so destroyed just sitting in my bag that I thought fate was telling me to give up. Maybe today is the day.",
-            "result_id": "R_8mxVCke66o4WOVl_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8mxVCke66o4WOVl.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8mxVCke66o4WOVl"
-            },
-            "metrics": {
-                "length_in_chars": 350,
-                "length_in_words": 73,
-                "length_in_unique_words": 52,
-                "length_in_concepts": 17,
-                "length_in_sentences": 4,
-                "avg_word_length_in_chars": 3.73972602739726,
-                "avg_sentence_length_in_chars": 86.75,
-                "avg_sentence_length_in_words": 18.25,
-                "avg_sentence_length_in_unique_words": 16,
-                "dsi": 0.19980384979177923,
-                "surprise": 0.04400774461251716,
-                "n_gram_diversity": [
-                    0.7123287671232876,
-                    0.9305555555555556,
-                    0.9859154929577465,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.1506849315068493,
-                    0.5138888888888888,
-                    0.8169014084507042,
-                    0.9142857142857143,
-                    0.9710144927536232
-                ],
-                "avg_dependency_num_clauses": 4,
-                "max_dependency_num_clauses": 7,
-                "avg_dependency_path_length": 2.4874831081081084,
-                "max_dependency_path_length": 7,
-                "inv_homogen": 0.16080243637164435,
-                "novelty": 0.02270194884783433,
-                "theme_uniqueness": 0.5,
-                "raw_surprises": [
-                    0.030938327312469482,
-                    0.0019137408998277372,
-                    0.033159548706478525
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "Emma wanted to send a message to the public about climate change. She felt that people were not taking the subject seriously, and she wanted to do something about it, drawing as much attention as possible to the issue. Emma visited her local craft store, where she bought giant stamps for every letter of the alphabet, and colourful inks to suit. On her walk home, Emma stamped important and significant messages on the sides of buildings, in the middle of the streets, on public benches and bins, to spread the word about climate change.",
-            "result_id": "R_8LtUJwc0nMwsLzG_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8LtUJwc0nMwsLzG.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8LtUJwc0nMwsLzG"
-            },
-            "metrics": {
-                "length_in_chars": 538,
-                "length_in_words": 94,
-                "length_in_unique_words": 63,
-                "length_in_concepts": 40,
-                "length_in_sentences": 4,
-                "avg_word_length_in_chars": 4.6063829787234045,
-                "avg_sentence_length_in_chars": 133.75,
-                "avg_sentence_length_in_words": 23.5,
-                "avg_sentence_length_in_unique_words": 20.5,
-                "dsi": 0.20684988559820713,
-                "surprise": 0.025139114270448532,
-                "n_gram_diversity": [
-                    0.6702127659574468,
-                    0.946236559139785,
-                    0.9891304347826086,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.1276595744680851,
-                    0.41935483870967744,
-                    0.6739130434782609,
-                    0.8021978021978022,
-                    0.8777777777777778
-                ],
-                "avg_dependency_num_clauses": 4,
-                "max_dependency_num_clauses": 6,
-                "avg_dependency_path_length": 2.8201259489302966,
-                "max_dependency_path_length": 8,
-                "inv_homogen": 0.18541984260082245,
-                "novelty": 0.008609877234978525,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.020990818265884642,
-                    0.016657626526987462,
-                    6.0226612800695634e-05
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "Mr A was known as the resident bully in Lettertown. He would stamp around and shout at passers by who were simply minding their own business. One day, the other Letters decided it was time to give Mr A a taste of his own medicine and send a message that his behaviour would not be tolerated anymore. Organised by Mr Z, they all met in the dead of night and decorated his house with toilet paper while he was sleeping! That was the last time a letter misbehaved in Lettertown.",
-            "result_id": "R_82McyGIYTts4bOU_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_82McyGIYTts4bOU.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_82McyGIYTts4bOU"
-            },
-            "metrics": {
-                "length_in_chars": 475,
-                "length_in_words": 90,
-                "length_in_unique_words": 64,
-                "length_in_concepts": 34,
-                "length_in_sentences": 5,
-                "avg_word_length_in_chars": 4.211111111111111,
-                "avg_sentence_length_in_chars": 94.2,
-                "avg_sentence_length_in_words": 18,
-                "avg_sentence_length_in_unique_words": 17.4,
-                "dsi": 0.2145260400313107,
-                "surprise": 0.012614987293879207,
-                "n_gram_diversity": [
-                    0.7111111111111111,
-                    0.9775280898876404,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.14444444444444443,
-                    0.5168539325842697,
-                    0.8636363636363636,
-                    0.9885057471264368,
-                    1.0
-                ],
-                "avg_dependency_num_clauses": 2.4,
-                "max_dependency_num_clauses": 5,
-                "avg_dependency_path_length": 2.7935681114551083,
-                "max_dependency_path_length": 9,
-                "inv_homogen": 0.1747973014911016,
-                "novelty": 0.006742431631228618,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.009936455885569268,
-                    0.009411106506983458,
-                    0.004003545912829309,
-                    0.001878866282376379
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
-            "output": "When I used to work at the old newspaper printing press factory, we used to have to manually insert the letter stamp tiles into the device to print the text onto the newspapers. This was a very time-consuming process, however once the job was completed, I felt a sense of pride that we managed to get the newspapers ready on time. Once they were bundled up, we would have to pack them onto shipping pallets ready to send to the stores to sell.",
-            "result_id": "R_8d77LowRrq3xFfJ_Q2",
-            "metadata": {
-                "source": "../experiments/outputs/human/pilot/run1/R_8d77LowRrq3xFfJ.json",
-                "model": "human",
-                "model_args": null,
-                "participant_id": "R_8d77LowRrq3xFfJ"
-            },
-            "metrics": {
-                "length_in_chars": 443,
-                "length_in_words": 84,
-                "length_in_unique_words": 57,
-                "length_in_concepts": 30,
-                "length_in_sentences": 3,
-                "avg_word_length_in_chars": 4.2023809523809526,
-                "avg_sentence_length_in_chars": 147,
-                "avg_sentence_length_in_words": 28,
-                "avg_sentence_length_in_unique_words": 23,
-                "dsi": 0.20624009425612702,
-                "surprise": 0.02138570523782049,
-                "n_gram_diversity": [
-                    0.6785714285714286,
-                    0.963855421686747,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "pos_diversity": [
-                    0.11904761904761904,
-                    0.40963855421686746,
-                    0.7439024390243902,
-                    0.8765432098765432,
-                    0.975
-                ],
-                "avg_dependency_num_clauses": 4.666666666666667,
-                "max_dependency_num_clauses": 5,
-                "avg_dependency_path_length": 3.312540574800703,
-                "max_dependency_path_length": 9,
-                "inv_homogen": 0.18472202370564142,
-                "novelty": 0.00982945991913875,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.0018060985700789622,
-                    0.019579606667741528
-                ]
-            }
-        },
-        {
-            "id": "stamp-letter-send",
+            "semantic_distance": "low",
             "output": "My daughter was in a bad mood. She is a Leo star sign down to the letter! She will stamp her foot and huff and puff in the mornings when she does not want to wake up. I decided today was not the day to try and reason with her and the best thing to do was to send her back to bed until she felt better.",
             "result_id": "R_2cHcLwZLH3kFnm9_Q2",
             "metadata": {
@@ -1344,6 +302,11 @@
                 "avg_sentence_length_in_unique_words": 14.5,
                 "dsi": 0.20223146180311838,
                 "surprise": 0.011812580818737761,
+                "raw_surprises": [
+                    0.004323591788609832,
+                    0.001013552858715988,
+                    0.012381726580780822
+                ],
                 "n_gram_diversity": [
                     0.6865671641791045,
                     1.0,
@@ -1362,18 +325,894 @@
                 "max_dependency_num_clauses": 10,
                 "avg_dependency_path_length": 2.6701414946841777,
                 "max_dependency_path_length": 10,
-                "inv_homogen": 0.202250674366951,
-                "novelty": 0.017846724825156035,
-                "theme_uniqueness": 1.0,
-                "raw_surprises": [
-                    0.004323591788609832,
-                    0.001013552858715988,
-                    0.012381726580780822
-                ]
+                "inv_homogen": 0.19969837367534637,
+                "novelty": 0.018615294504161384,
+                "theme_uniqueness": 1.0
             }
         },
         {
             "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "Once upon a time there was a retired postman called Edward. Over the years he had become obsessive with collecting stamps. One day he was at a retired postperson convention and he met other stamp collecting enthusiasts. He made a good friend in retired postwoman Sarah, and she showed him a brilliant stamp which seemed to have a moving face (of an ostrich) thanks to the silver holographic effect. They decided to stay in touch by letter to discuss their stamp collections and trade their weird and wonderful stamps. At Christmas Sarah decided to send Edward a letter with a special gift; she had sourced one of the rare ostrich stamps for him. Edward was delighted and decided to frame it. ",
+            "result_id": "R_2sKl3oqSfQrqNI5_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2sKl3oqSfQrqNI5.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2sKl3oqSfQrqNI5"
+            },
+            "metrics": {
+                "length_in_chars": 692,
+                "length_in_words": 121,
+                "length_in_unique_words": 75,
+                "length_in_concepts": 45,
+                "length_in_sentences": 7,
+                "avg_word_length_in_chars": 4.628099173553719,
+                "avg_sentence_length_in_chars": 97.85714285714286,
+                "avg_sentence_length_in_words": 17.285714285714285,
+                "avg_sentence_length_in_unique_words": 16,
+                "dsi": 0.2123221817040684,
+                "surprise": 0.014705553182103748,
+                "raw_surprises": [
+                    0.01370275815327962,
+                    0.0028778775816871993,
+                    0.012379712292126255,
+                    0.011092899905310732,
+                    0.0005451914637979727,
+                    0.003518220150109469
+                ],
+                "n_gram_diversity": [
+                    0.6198347107438017,
+                    0.975,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10743801652892562,
+                    0.425,
+                    0.7226890756302521,
+                    0.9067796610169492,
+                    0.9572649572649573
+                ],
+                "avg_dependency_num_clauses": 2.5714285714285716,
+                "max_dependency_num_clauses": 6,
+                "avg_dependency_path_length": 2.6973768328079974,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.16283944249153137,
+                "novelty": 0.0015661452977386858,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "It was results day, I studied so hard with my friend Ben. The teacher passed out the exam papers. When mine was placed in front of me I saw it was stamped with a large letter 'A'. I took my phone out under the desk to send Ben a message with the good news. ",
+            "result_id": "R_8wT7Ix8TsW7XbEo_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8wT7Ix8TsW7XbEo.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8wT7Ix8TsW7XbEo"
+            },
+            "metrics": {
+                "length_in_chars": 257,
+                "length_in_words": 54,
+                "length_in_unique_words": 39,
+                "length_in_concepts": 22,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 3.6296296296296298,
+                "avg_sentence_length_in_chars": 63.25,
+                "avg_sentence_length_in_words": 13.5,
+                "avg_sentence_length_in_unique_words": 12.5,
+                "dsi": 0.20124403584055053,
+                "surprise": 0.019957941297500836,
+                "raw_surprises": [
+                    0.008423109849294008,
+                    0.007059498627980554,
+                    0.014454303468976692
+                ],
+                "n_gram_diversity": [
+                    0.7222222222222222,
+                    0.9811320754716981,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2037037037037037,
+                    0.5660377358490566,
+                    0.8269230769230769,
+                    0.9607843137254902,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.291360001817273,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.17152984937032065,
+                "novelty": 0.020590146429297074,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "There was no stamp on the letter. It is being held at the local post office, waiting for jane to arrive and pay for the delivery. This annoyed jane, as she couldn't understand who would send one, let alone without a stamp on it.",
+            "result_id": "R_2LTbPAQf8NZ0wRb_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2LTbPAQf8NZ0wRb.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2LTbPAQf8NZ0wRb"
+            },
+            "metrics": {
+                "length_in_chars": 228,
+                "length_in_words": 45,
+                "length_in_unique_words": 38,
+                "length_in_concepts": 15,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.977777777777778,
+                "avg_sentence_length_in_chars": 75.33333333333333,
+                "avg_sentence_length_in_words": 15,
+                "avg_sentence_length_in_unique_words": 14.333333333333334,
+                "dsi": 0.19908607403437298,
+                "surprise": 0.0582850515842438,
+                "raw_surprises": [
+                    0.047248904903729766,
+                    0.01103614668051403
+                ],
+                "n_gram_diversity": [
+                    0.8444444444444444,
+                    0.9772727272727273,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.26666666666666666,
+                    0.6818181818181818,
+                    0.8837209302325582,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.5525744097172667,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.16433592637379965,
+                "novelty": 0.024906070041652184,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "My mother said she never gets any post anymore, that everything is by email or phone call!! So I decided to give her a surprise and write her a little letter.  I could send it on the way home from work and she would get it hopefully in a few days.  I got out my notecards and sent a little hello from me and quickly put it in the envelope.  Oh no, I needed a stamp!! ",
+            "result_id": "R_2G1cvocEgxet2xf_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2G1cvocEgxet2xf.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2G1cvocEgxet2xf"
+            },
+            "metrics": {
+                "length_in_chars": 367,
+                "length_in_words": 79,
+                "length_in_unique_words": 58,
+                "length_in_concepts": 26,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 3.569620253164557,
+                "avg_sentence_length_in_chars": 73,
+                "avg_sentence_length_in_words": 15.8,
+                "avg_sentence_length_in_unique_words": 15,
+                "dsi": 0.1988401854955233,
+                "surprise": 0.010441143030212027,
+                "raw_surprises": [
+                    0.00034150850205194594,
+                    0.003878019537244509,
+                    0.007078780304817928,
+                    0.009583977716309672
+                ],
+                "n_gram_diversity": [
+                    0.7341772151898734,
+                    0.9615384615384616,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16455696202531644,
+                    0.5,
+                    0.8051948051948052,
+                    0.9342105263157895,
+                    0.9733333333333334
+                ],
+                "avg_dependency_num_clauses": 2.6,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.3817530799703976,
+                "max_dependency_path_length": 7,
+                "inv_homogen": 0.16558980693419775,
+                "novelty": 0.025397847119351558,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "Josie was a quiet girl who lived in a small village and had a hobby as a stamp collector. Her dad worked in the local post office so she had access to lots of stamps and loved seeing all the different types on the letters that came though the post office, although she would never use any of her stamp collection on normal letters herself, they were too special to her. When letters would be returned to the post office when a letter couldn't be posted, her father would send the old stamps her way.",
+            "result_id": "R_8IgyrHkEhSlOgd5_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8IgyrHkEhSlOgd5.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8IgyrHkEhSlOgd5"
+            },
+            "metrics": {
+                "length_in_chars": 499,
+                "length_in_words": 96,
+                "length_in_unique_words": 63,
+                "length_in_concepts": 31,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.15625,
+                "avg_sentence_length_in_chars": 165.66666666666666,
+                "avg_sentence_length_in_words": 32,
+                "avg_sentence_length_in_unique_words": 25.333333333333332,
+                "dsi": 0.20520299109079504,
+                "surprise": 0.015266651518983737,
+                "raw_surprises": [
+                    0.012226506872893922,
+                    0.003040144646089815
+                ],
+                "n_gram_diversity": [
+                    0.65625,
+                    0.968421052631579,
+                    0.9893617021276596,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.125,
+                    0.43157894736842106,
+                    0.7553191489361702,
+                    0.9247311827956989,
+                    0.9891304347826086
+                ],
+                "avg_dependency_num_clauses": 4,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.4675772117632584,
+                "max_dependency_path_length": 12,
+                "inv_homogen": 0.16366822520891824,
+                "novelty": 0.012672235928808062,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "The stamp was clean, unused and valid, but too small a denomination for the letter I had written. This rendered the stamp utterly useless but I did not want to waste it. So, I opened up my finished letter, and used it as a basis to write a much shorter note, which rendered the missive lighter, and the stamp was now useful. Of course, it was now destined elsewhere, and my original letter was unsent. But I chose to send the shorter letter and decided to hold on to the longer one until my correspondent's next birthday!",
+            "result_id": "R_2YKQTEPFuU2GBvV_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2YKQTEPFuU2GBvV.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2YKQTEPFuU2GBvV"
+            },
+            "metrics": {
+                "length_in_chars": 521,
+                "length_in_words": 98,
+                "length_in_unique_words": 62,
+                "length_in_concepts": 32,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.204081632653061,
+                "avg_sentence_length_in_chars": 103.4,
+                "avg_sentence_length_in_words": 19.6,
+                "avg_sentence_length_in_unique_words": 18,
+                "dsi": 0.2042813996874517,
+                "surprise": 0.028164422462598926,
+                "raw_surprises": [
+                    0.003781165821211685,
+                    0.013870943134481256,
+                    0.023033303564245045,
+                    0.015643432405259866
+                ],
+                "n_gram_diversity": [
+                    0.6326530612244898,
+                    0.9278350515463918,
+                    0.9895833333333334,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11224489795918367,
+                    0.4845360824742268,
+                    0.875,
+                    0.9789473684210527,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 4.8,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 2.772054168853953,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.16662547240654627,
+                "novelty": 0.014515418735494723,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "I clicked \"Send email\" and I shut down my computer. I felt exhausted, and I wanted to go to bed. Writing emails always drained the life out of me, and I'd written over 20 emails in one day, spanning morning to evening. I'd also been to the post office to send a letter to my friend over in America. I was stupid and forgot to write the zip code, so the person at the desk told me off. But it was lucky he caught it in time. He gave me a receipt on which he took a stamp and stampp",
+            "result_id": "R_2iUnWVtJB7cvKHj_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2iUnWVtJB7cvKHj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2iUnWVtJB7cvKHj"
+            },
+            "metrics": {
+                "length_in_chars": 480,
+                "length_in_words": 102,
+                "length_in_unique_words": 67,
+                "length_in_concepts": 38,
+                "length_in_sentences": 7,
+                "avg_word_length_in_chars": 3.6176470588235294,
+                "avg_sentence_length_in_chars": 67.71428571428571,
+                "avg_sentence_length_in_words": 14.571428571428571,
+                "avg_sentence_length_in_unique_words": 13,
+                "dsi": 0.20688427495074646,
+                "surprise": 0.017183322187453987,
+                "raw_surprises": [
+                    0.01204885244369508,
+                    0.005405463774998981,
+                    0.005717881520589191,
+                    0.007510657821382799,
+                    0.006827648196901598,
+                    0.014039462804794317
+                ],
+                "n_gram_diversity": [
+                    0.6568627450980392,
+                    0.9702970297029703,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11764705882352941,
+                    0.43564356435643564,
+                    0.78,
+                    0.9696969696969697,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.7142857142857144,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.428027549860752,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.154122365017732,
+                "novelty": 0.00930966820890522,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "The letter sat amongst others on the mat at the empty house, i was about to show to the clients.     The musty smell around the house was tickling my nose and i could see spiders.  Should I stamp on them or pick them up with one of the letters and send them on their way in the garden.",
+            "result_id": "R_8zUaSPSsswsQ7fn_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8zUaSPSsswsQ7fn.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8zUaSPSsswsQ7fn"
+            },
+            "metrics": {
+                "length_in_chars": 285,
+                "length_in_words": 60,
+                "length_in_unique_words": 43,
+                "length_in_concepts": 17,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.7333333333333334,
+                "avg_sentence_length_in_chars": 95,
+                "avg_sentence_length_in_words": 20,
+                "avg_sentence_length_in_unique_words": 17,
+                "dsi": 0.2036386110326823,
+                "surprise": 0.012178730396997323,
+                "raw_surprises": [
+                    0.0027700282278514954,
+                    0.009408702169145827
+                ],
+                "n_gram_diversity": [
+                    0.7166666666666667,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.18333333333333332,
+                    0.5423728813559322,
+                    0.8275862068965517,
+                    0.9473684210526315,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.6666666666666665,
+                "max_dependency_num_clauses": 4,
+                "avg_dependency_path_length": 2.6533391010587897,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.16942050804694495,
+                "novelty": 0.015800996045033544,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "A man was looking for a stamp to emboss onto a letter he had to send before the end of the day. He went to the supermarket to find a suitable stamp with some ink to apply it with. On his return trip he realised he lived only 200 yards from a post box which would allow him to send it today.",
+            "result_id": "R_8kG4d41raqDZBax_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8kG4d41raqDZBax.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8kG4d41raqDZBax"
+            },
+            "metrics": {
+                "length_in_chars": 290,
+                "length_in_words": 62,
+                "length_in_unique_words": 44,
+                "length_in_concepts": 24,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.6451612903225805,
+                "avg_sentence_length_in_chars": 96,
+                "avg_sentence_length_in_words": 20.666666666666668,
+                "avg_sentence_length_in_unique_words": 18,
+                "dsi": 0.20264725905397665,
+                "surprise": 0.009122487734922607,
+                "raw_surprises": [
+                    0.005584379037221282,
+                    0.0035381086977013254
+                ],
+                "n_gram_diversity": [
+                    0.7096774193548387,
+                    0.9836065573770492,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16129032258064516,
+                    0.4098360655737705,
+                    0.65,
+                    0.7966101694915254,
+                    0.9137931034482759
+                ],
+                "avg_dependency_num_clauses": 2.6666666666666665,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 3.890641616448068,
+                "max_dependency_path_length": 13,
+                "inv_homogen": 0.1696276937921842,
+                "novelty": 0.017783700002444836,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "I was angry. A great stamp of the feet. The first letter of my name had come out wrong on my new monogram logo. I'll have to send it back.",
+            "result_id": "R_2BoHBhJy5N6y8ZX_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2BoHBhJy5N6y8ZX.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2BoHBhJy5N6y8ZX"
+            },
+            "metrics": {
+                "length_in_chars": 138,
+                "length_in_words": 31,
+                "length_in_unique_words": 27,
+                "length_in_concepts": 11,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 3.3870967741935485,
+                "avg_sentence_length_in_chars": 33.75,
+                "avg_sentence_length_in_words": 7.75,
+                "avg_sentence_length_in_unique_words": 7.5,
+                "dsi": 0.20218981287696144,
+                "surprise": 0.2739344702826606,
+                "raw_surprises": [
+                    0.20545085271199545,
+                    0.0013760089874267634,
+                    0.2040748437245687
+                ],
+                "n_gram_diversity": [
+                    0.8709677419354839,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2903225806451613,
+                    0.7666666666666667,
+                    0.9310344827586207,
+                    0.9642857142857143,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 0.25,
+                "max_dependency_num_clauses": 1,
+                "avg_dependency_path_length": 1.9133597883597884,
+                "max_dependency_path_length": 5,
+                "inv_homogen": 0.18451382964849472,
+                "novelty": 0.018698592356475252,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "Mr A was known as the resident bully in Lettertown. He would stamp around and shout at passers by who were simply minding their own business. One day, the other Letters decided it was time to give Mr A a taste of his own medicine and send a message that his behaviour would not be tolerated anymore. Organised by Mr Z, they all met in the dead of night and decorated his house with toilet paper while he was sleeping! That was the last time a letter misbehaved in Lettertown.",
+            "result_id": "R_82McyGIYTts4bOU_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_82McyGIYTts4bOU.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_82McyGIYTts4bOU"
+            },
+            "metrics": {
+                "length_in_chars": 475,
+                "length_in_words": 90,
+                "length_in_unique_words": 64,
+                "length_in_concepts": 34,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.211111111111111,
+                "avg_sentence_length_in_chars": 94.2,
+                "avg_sentence_length_in_words": 18,
+                "avg_sentence_length_in_unique_words": 17.4,
+                "dsi": 0.2145260400313107,
+                "surprise": 0.012614987293879207,
+                "raw_surprises": [
+                    0.009936455885569268,
+                    0.009411106506983458,
+                    0.004003545912829309,
+                    0.001878866282376379
+                ],
+                "n_gram_diversity": [
+                    0.7111111111111111,
+                    0.9775280898876404,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.14444444444444443,
+                    0.5168539325842697,
+                    0.8636363636363636,
+                    0.9885057471264368,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.4,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 2.7935681114551083,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.1783741886417071,
+                "novelty": 0.005973861952223269,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "Jaycee finished writing with a flourish. Finished! Finally her book on hi-vis jackets and when to where them is complete. She quickly grabbed her 'complete' stamp and satisfyingly stamped it in her diary. She quickly thought about the e-mail she had to send about quitting work now that she was going to be a highly paid author but decided to complete it later. She needed to chase up that letter she should have received from the police about her speeding ticket first.",
+            "result_id": "R_2So8IZ3DwEtmV0v_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2So8IZ3DwEtmV0v.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2So8IZ3DwEtmV0v"
+            },
+            "metrics": {
+                "length_in_chars": 470,
+                "length_in_words": 84,
+                "length_in_unique_words": 61,
+                "length_in_concepts": 34,
+                "length_in_sentences": 6,
+                "avg_word_length_in_chars": 4.511904761904762,
+                "avg_sentence_length_in_chars": 77.5,
+                "avg_sentence_length_in_words": 14,
+                "avg_sentence_length_in_unique_words": 12.833333333333334,
+                "dsi": 0.2062264884856933,
+                "surprise": 0.17723453796826882,
+                "raw_surprises": [
+                    0.20992226401964825,
+                    0.2123019059499105,
+                    0.0075616121292114424,
+                    0.008860503666566849,
+                    0.0044400591553349356
+                ],
+                "n_gram_diversity": [
+                    0.7261904761904762,
+                    0.9879518072289156,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.15476190476190477,
+                    0.5180722891566265,
+                    0.8292682926829268,
+                    0.9506172839506173,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 2.5,
+                "max_dependency_num_clauses": 8,
+                "avg_dependency_path_length": 2.5134566481374994,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.19726894547541937,
+                "novelty": 0.010625241139011532,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "He tore up the letter into small pieces and threw it on the ground, stamping it into the mud for good measure. He felt his face redden with anger and conciously tried to calm himself down. To be honest though, the reponse he had got was enough to send anyone into a rage. He glanced up and saw the group of girls across the street, giggling and whispering, making no effort to disguise their behaviour. That was the last time he followed his therapist's idea of expressing his feelings in writing to a girl he liked. ",
+            "result_id": "R_87z2b4sr7in6R21_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_87z2b4sr7in6R21.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_87z2b4sr7in6R21"
+            },
+            "metrics": {
+                "length_in_chars": 517,
+                "length_in_words": 97,
+                "length_in_unique_words": 70,
+                "length_in_concepts": 41,
+                "length_in_sentences": 5,
+                "avg_word_length_in_chars": 4.247422680412371,
+                "avg_sentence_length_in_chars": 102.4,
+                "avg_sentence_length_in_words": 19.4,
+                "avg_sentence_length_in_unique_words": 17.6,
+                "dsi": 0.20506253366063282,
+                "surprise": 0.026993477107986566,
+                "raw_surprises": [
+                    0.0059447494764176545,
+                    0.02343193434533619,
+                    0.021786895123395073,
+                    0.0028233752708242132
+                ],
+                "n_gram_diversity": [
+                    0.7216494845360825,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10309278350515463,
+                    0.40625,
+                    0.6736842105263158,
+                    0.851063829787234,
+                    0.9247311827956989
+                ],
+                "avg_dependency_num_clauses": 3.8,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 3.1019703197851625,
+                "max_dependency_path_length": 12,
+                "inv_homogen": 0.17597838987906775,
+                "novelty": 0.012953150789132506,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "on a typical day on the emerald isle, the boy woke up and started staring at the clock as if the pendulum was a time stamp of his existence constantly ticking at the back of his neck. then he remembered he just missed his application to a new flat just because of one missing reference letter. he was one step away from being homeless. in a hurry, he grabbed his phone and checked if a friend of his did send the money he was in need of for a quite long time. ",
+            "result_id": "R_2sdMlOguKbuAvfg_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2sdMlOguKbuAvfg.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2sdMlOguKbuAvfg"
+            },
+            "metrics": {
+                "length_in_chars": 460,
+                "length_in_words": 92,
+                "length_in_unique_words": 60,
+                "length_in_concepts": 35,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 3.9347826086956523,
+                "avg_sentence_length_in_chars": 114,
+                "avg_sentence_length_in_words": 23,
+                "avg_sentence_length_in_unique_words": 18.75,
+                "dsi": 0.21007571350626586,
+                "surprise": 0.020092995078475357,
+                "raw_surprises": [
+                    0.006279055277506496,
+                    0.004509071509043366,
+                    0.019351365831163175
+                ],
+                "n_gram_diversity": [
+                    0.6521739130434783,
+                    0.9560439560439561,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13043478260869565,
+                    0.5384615384615384,
+                    0.8222222222222222,
+                    0.9438202247191011,
+                    0.9886363636363636
+                ],
+                "avg_dependency_num_clauses": 2.5,
+                "max_dependency_num_clauses": 5,
+                "avg_dependency_path_length": 3.1288602607417113,
+                "max_dependency_path_length": 10,
+                "inv_homogen": 0.19436295330524445,
+                "novelty": 0.0029267910978664213,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "Jonny was a quiet child. Mostly he liked to play with lego in front of the fire. He did not like doing the homework tasks sent home by his school. He found them confusing and difficult and dull. Jonny's parents decided that he should try to do his homework as soon as he got home from school and there would be no lego until he'd finished. Jonny hated this idea. \"I'm tired when I get home. Why can't I play lego and then do my homework?\"  \"Because you need to learn your times tables. It's important\"  Johnny found it really difficult to adjust to this new routine, dragging his feet on the way home and sometimes getting so annoyed he would stamp his feet and cry. Then he became reluctant to go to school at all and his parents started to become afraid to send him in, knowing there would be a battle over homework. One day after school, Jonny's parents found a letter from school in his schoolbag asking for a meeting.",
+            "result_id": "R_8XS6nyWsLXkXKFz_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8XS6nyWsLXkXKFz.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8XS6nyWsLXkXKFz"
+            },
+            "metrics": {
+                "length_in_chars": 922,
+                "length_in_words": 181,
+                "length_in_unique_words": 111,
+                "length_in_concepts": 51,
+                "length_in_sentences": 11,
+                "avg_word_length_in_chars": 4.038674033149171,
+                "avg_sentence_length_in_chars": 82.9090909090909,
+                "avg_sentence_length_in_words": 16.454545454545453,
+                "avg_sentence_length_in_unique_words": 15.090909090909092,
+                "dsi": 0.20466696496103323,
+                "surprise": 0.022506829008223535,
+                "raw_surprises": [
+                    0.015108515818913787,
+                    0.009653764963150013,
+                    0.006406627098719309,
+                    0.018245424104459368,
+                    0.011719489820075757,
+                    0.006748040517171233,
+                    0.029357722827366428,
+                    0.0063311014856611,
+                    0.0050868550936380985,
+                    0.003876603311962573
+                ],
+                "n_gram_diversity": [
+                    0.6132596685082873,
+                    0.9666666666666667,
+                    0.9888268156424581,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07734806629834254,
+                    0.36666666666666664,
+                    0.7094972067039106,
+                    0.9044943820224719,
+                    0.9887005649717514
+                ],
+                "avg_dependency_num_clauses": 3.272727272727273,
+                "max_dependency_num_clauses": 9,
+                "avg_dependency_path_length": 2.583884928642855,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.20007246236006418,
+                "novelty": 0.013744288188331677,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "My partner the bedroom window open during the night to let some cold air in, upon doing so a massive spider scurried in through into the bedroom. This would usually send my partner into a panic but this time she grabbed a letter and gathered it up into a glass and threw it outside. Normally she would send me to stamp on it. ",
+            "result_id": "R_2JzuWAk6bRQPato_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2JzuWAk6bRQPato.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2JzuWAk6bRQPato"
+            },
+            "metrics": {
+                "length_in_chars": 326,
+                "length_in_words": 63,
+                "length_in_unique_words": 44,
+                "length_in_concepts": 23,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.111111111111111,
+                "avg_sentence_length_in_chars": 107.66666666666667,
+                "avg_sentence_length_in_words": 21,
+                "avg_sentence_length_in_unique_words": 17.666666666666668,
+                "dsi": 0.2072221467146289,
+                "surprise": 0.015715063701976423,
+                "raw_surprises": [
+                    0.004854097149588843,
+                    0.01086096655238758
+                ],
+                "n_gram_diversity": [
+                    0.6984126984126984,
+                    0.9516129032258065,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1746031746031746,
+                    0.5806451612903226,
+                    0.8360655737704918,
+                    0.9333333333333333,
+                    0.9830508474576272
+                ],
+                "avg_dependency_num_clauses": 3.3333333333333335,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 2.7033549783549784,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.17879421512285867,
+                "novelty": 0.008633924681140326,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "The Hudson's little boy loved the postman arriving. While he never needed to send any letters, he did love receiving his parent's ones. As soon as a letter arrived, he thanked the postman and peeled off the stamp, sticking it into his notebook, where he got to practice writing envelopes. ",
+            "result_id": "R_2VPJFAhkG6jzuXy_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2VPJFAhkG6jzuXy.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2VPJFAhkG6jzuXy"
+            },
+            "metrics": {
+                "length_in_chars": 289,
+                "length_in_words": 52,
+                "length_in_unique_words": 41,
+                "length_in_concepts": 22,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 4.461538461538462,
+                "avg_sentence_length_in_chars": 95.33333333333333,
+                "avg_sentence_length_in_words": 17.333333333333332,
+                "avg_sentence_length_in_unique_words": 15.666666666666666,
+                "dsi": 0.20011715223262835,
+                "surprise": 0.03525794954090328,
+                "raw_surprises": [
+                    0.02346867152622767,
+                    0.011789278014675608
+                ],
+                "n_gram_diversity": [
+                    0.7884615384615384,
+                    0.9803921568627451,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.23076923076923078,
+                    0.6666666666666666,
+                    0.86,
+                    0.9795918367346939,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 3.6666666666666665,
+                "max_dependency_num_clauses": 7,
+                "avg_dependency_path_length": 2.8059523809523808,
+                "max_dependency_path_length": 9,
+                "inv_homogen": 0.167464350660642,
+                "novelty": 0.022843913645141434,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
             "output": "I was fighting my demons today, I wanted to stamp on all the little bugs that had been biting me the previous night. I decided to act with some restraint, quelled my emotions, and I began writing a letter. I addressed the letter to the king, the king of bugs. I had met the bug previously in a vicious encounter with a few from his kind, they bit my legs and he was the one who calmed the attack. He saved me from multiple layers of bite cream that evening. I send the letter and hesitantly waited for his response. Five days later, I had correspondence. The king had enough of my perpetuate moaning, he had declared war on the humans. ",
             "result_id": "R_2joIDdCu9ghOfCw_Q2",
             "metadata": {
@@ -1394,6 +1233,15 @@
                 "avg_sentence_length_in_unique_words": 13.75,
                 "dsi": 0.20642264979054228,
                 "surprise": 0.02209923664728798,
+                "raw_surprises": [
+                    0.0032181782854927843,
+                    0.013968979318936647,
+                    0.01905104451709322,
+                    0.00859304798973931,
+                    0.01112908522288003,
+                    0.012678492069244374,
+                    0.008708500862121576
+                ],
                 "n_gram_diversity": [
                     0.6198347107438017,
                     0.9666666666666667,
@@ -1412,18 +1260,212 @@
                 "max_dependency_num_clauses": 5,
                 "avg_dependency_path_length": 2.5981276700751943,
                 "max_dependency_path_length": 7,
-                "inv_homogen": 0.18006755659977594,
-                "novelty": 0.009464348850308224,
-                "theme_uniqueness": 1.0,
+                "inv_homogen": 0.18070494631926218,
+                "novelty": 0.010232918529313573,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "One early Friday morning, there was a knock on the front door. I opened the door, there stood the 'Postie' in red brandishing a golden letter. Making little conversation and hastily shutting the door, I made my way into the living room whilst ripping open the letter. I was ecstatic, the final stamp to my collection had arrived, I could now send my hopefully, winning entry into the local collection competition.",
+            "result_id": "R_2bxsVUkaSaFXjdD_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2bxsVUkaSaFXjdD.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2bxsVUkaSaFXjdD"
+            },
+            "metrics": {
+                "length_in_chars": 413,
+                "length_in_words": 71,
+                "length_in_unique_words": 51,
+                "length_in_concepts": 33,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 4.661971830985915,
+                "avg_sentence_length_in_chars": 102.5,
+                "avg_sentence_length_in_words": 17.75,
+                "avg_sentence_length_in_unique_words": 16,
+                "dsi": 0.20738106627355923,
+                "surprise": 0.029666037486202647,
                 "raw_surprises": [
-                    0.0032181782854927843,
-                    0.013968979318936647,
-                    0.01905104451709322,
-                    0.00859304798973931,
-                    0.01112908522288003,
-                    0.012678492069244374,
-                    0.008708500862121576
-                ]
+                    0.029160541721752725,
+                    0.012950464973956244,
+                    0.0023880495335950047
+                ],
+                "n_gram_diversity": [
+                    0.7183098591549296,
+                    0.9571428571428572,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16901408450704225,
+                    0.4714285714285714,
+                    0.782608695652174,
+                    0.8970588235294118,
+                    0.9552238805970149
+                ],
+                "avg_dependency_num_clauses": 1.75,
+                "max_dependency_num_clauses": 3,
+                "avg_dependency_path_length": 2.559436274509804,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.14612111697594324,
+                "novelty": 0.008316085563279674,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "It was 2040 and Marly was sat at the breakfast table with her robot. \"Many years ago, we could only send a letter if we had a stamp. Nobody uses stamps any more.\"",
+            "result_id": "R_2PoZkpFOhTZwzbR_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2PoZkpFOhTZwzbR.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2PoZkpFOhTZwzbR"
+            },
+            "metrics": {
+                "length_in_chars": 162,
+                "length_in_words": 33,
+                "length_in_unique_words": 30,
+                "length_in_concepts": 12,
+                "length_in_sentences": 3,
+                "avg_word_length_in_chars": 3.757575757575758,
+                "avg_sentence_length_in_chars": 53.333333333333336,
+                "avg_sentence_length_in_words": 11,
+                "avg_sentence_length_in_unique_words": 10,
+                "dsi": 0.21241957762024619,
+                "surprise": 0.031690406799316395,
+                "raw_surprises": [
+                    0.028894180059432978,
+                    0.0027962267398834173
+                ],
+                "n_gram_diversity": [
+                    0.9090909090909091,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.36363636363636365,
+                    0.8125,
+                    0.967741935483871,
+                    1.0,
+                    1.0
+                ],
+                "avg_dependency_num_clauses": 1,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.0525252525252524,
+                "max_dependency_path_length": 5,
+                "inv_homogen": 0.181521974503994,
+                "novelty": 0.0017609371300942311,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "As I was preparing to send my gifts out, I walked up to the door of the post office and noticed a letter lying on the ground. It had the most beautiful stamp design on the corner, I'd never seen anything like it. I then looked closer and with sudden shock realized it was addressed to me. I took a sharp breath in and looked around to see if there was anyone i knew nearby, I was the only person there, so I quickly popped it into my bag, to open it as soon as I got home. ",
+            "result_id": "R_8fKaPcuSHw79GVj_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8fKaPcuSHw79GVj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8fKaPcuSHw79GVj"
+            },
+            "metrics": {
+                "length_in_chars": 473,
+                "length_in_words": 99,
+                "length_in_unique_words": 66,
+                "length_in_concepts": 36,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 3.696969696969697,
+                "avg_sentence_length_in_chars": 117.25,
+                "avg_sentence_length_in_words": 24.75,
+                "avg_sentence_length_in_unique_words": 21,
+                "dsi": 0.2000423468294598,
+                "surprise": 0.026002845148596167,
+                "raw_surprises": [
+                    0.013410619172182975,
+                    0.013670762379964202,
+                    0.011922886170747077
+                ],
+                "n_gram_diversity": [
+                    0.6666666666666666,
+                    0.9693877551020408,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1111111111111111,
+                    0.4387755102040816,
+                    0.8247422680412371,
+                    0.9583333333333334,
+                    0.9894736842105263
+                ],
+                "avg_dependency_num_clauses": 4.5,
+                "max_dependency_num_clauses": 9,
+                "avg_dependency_path_length": 2.869370270726932,
+                "max_dependency_path_length": 8,
+                "inv_homogen": 0.15576764941215515,
+                "novelty": 0.022993524451478564,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "semantic_distance": "low",
+            "output": "I stamp my feet in outrage and send my brother for help. My mother appears with a weary look on her face. It is not the first time that my name has been misspelled. I stare at the antagonising letter .",
+            "result_id": "R_8mJxG00fCL8kz05_Q2",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8mJxG00fCL8kz05.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8mJxG00fCL8kz05"
+            },
+            "metrics": {
+                "length_in_chars": 201,
+                "length_in_words": 40,
+                "length_in_unique_words": 35,
+                "length_in_concepts": 16,
+                "length_in_sentences": 4,
+                "avg_word_length_in_chars": 3.925,
+                "avg_sentence_length_in_chars": 49.5,
+                "avg_sentence_length_in_words": 10,
+                "avg_sentence_length_in_unique_words": 9.75,
+                "dsi": 0.20723817845185596,
+                "surprise": 0.06385222540961372,
+                "raw_surprises": [
+                    0.020469826459884655,
+                    0.05033436417579651,
+                    0.02497414747873941
+                ],
+                "n_gram_diversity": [
+                    0.875,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.225,
+                    0.5897435897435898,
+                    0.868421052631579,
+                    0.9459459459459459,
+                    0.9722222222222222
+                ],
+                "avg_dependency_num_clauses": 0.75,
+                "max_dependency_num_clauses": 2,
+                "avg_dependency_path_length": 2.3380627394636013,
+                "max_dependency_path_length": 6,
+                "inv_homogen": 0.18109988669554392,
+                "novelty": 0.008601861206686212,
+                "theme_uniqueness": 0.5
             }
         }
     ]

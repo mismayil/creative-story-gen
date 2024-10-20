@@ -25,6 +25,8 @@ def main():
     write_json({"metadata": metadata, "data": human_results.to_dict(orient="records")}, results_path.with_suffix(".json"))
 
     for _, row in tqdm(human_results.iterrows(), total=len(human_results), desc="Processing human results"):
+        if row["Include"] == 0:
+            continue
         human_id = row["ResponseId"]
         results = []
         for q_index in range(1, 5):
