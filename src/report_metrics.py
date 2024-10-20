@@ -9,7 +9,7 @@ from utils import read_json, write_json, find_files, compute_usage
 from metrics import (compute_inverse_homogenization, compute_novelty, 
                      compute_theme_uniqueness, compute_dsi, compute_surprise, 
                      compute_n_gram_diversity, get_words, get_sentences, 
-                     compute_pos_diversity, compute_dependency_complexity)
+                     compute_pos_diversity, compute_dependency_complexity, compute_pos_complexity)
 
 DEF_EMB_MODEL = "thenlper/gte-large"
 DEF_EMB_TYPE = "sentence_embedding"
@@ -80,10 +80,19 @@ def compute_metrics(results, config):
             result["metrics"]["length_in_unique_words"] = len(unique_words)
             result["metrics"]["length_in_concepts"] = len(concepts)
             result["metrics"]["length_in_sentences"] = len(sentences)
+            result["metrics"]["type_token_ratio"] = len(unique_words) / len(all_words) if all_words else 0
             result["metrics"]["avg_word_length_in_chars"] = mean([len(word) for word in all_words])
             result["metrics"]["avg_sentence_length_in_chars"] = mean([len(sentence) for sentence in sentences])
             result["metrics"]["avg_sentence_length_in_words"] = mean([len(words) for words in sentence_words])
             result["metrics"]["avg_sentence_length_in_unique_words"] = mean([len(words) for words in sentence_unique_words])
+            result["metrics"]["length_in_first_person_singular"] = len([word for word in all_words if word.lower() in ["i", "me", "my", "mine", "myself"]])
+            result["metrics"]["length_in_first_person_plural"] = len([word for word in all_words if word.lower() in ["we", "us", "our", "ours", "ourselves"]])
+            result["metrics"]["length_in_second_person"] = len([word for word in all_words if word.lower() in ["you", "your", "yours", "yourself", "yourselves"]])
+            result["metrics"]["length_in_third_person_singular"] = len([word for word in all_words if word.lower() in ["he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself"]])
+            result["metrics"]["length_in_third_person_plural"] = len([word for word in all_words if word.lower() in ["they", "them", "their", "theirs", "themselves"]])
+            result["metrics"]["length_in_first_person"] = result["metrics"]["length_in_first_person_singular"] + result["metrics"]["length_in_first_person_plural"]
+            result["metrics"]["length_in_third_person"] = result["metrics"]["length_in_third_person_singular"] + result["metrics"]["length_in_third_person_plural"]
+
             
             # complex metrics
             result["metrics"]["dsi"] = compute_dsi(result[output_attr], config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
@@ -94,11 +103,15 @@ def compute_metrics(results, config):
             result["metrics"]["pos_diversity"], _ = compute_pos_diversity(result[output_attr], config["max_n_gram"])
             
             dependency_paths, dependency_num_clauses = compute_dependency_complexity(result[output_attr])
-            result["metrics"]["avg_dependency_num_clauses"] = mean(dependency_num_clauses)
-            result["metrics"]["max_dependency_num_clauses"] = max(dependency_num_clauses)
-            result["metrics"]["avg_dependency_path_length"] = mean([mean([len(path) for path, freq in path_counter.items()]) for path_counter in dependency_paths])
-            result["metrics"]["max_dependency_path_length"] = max([max([len(path) for path, freq in path_counter.items()]) for path_counter in dependency_paths])
+            result["metrics"]["avg_dep_num_clauses"] = mean(dependency_num_clauses)
+            result["metrics"]["max_dep_num_clauses"] = max(dependency_num_clauses)
+            result["metrics"]["avg_dep_path_length"] = mean([mean([len(path) for path, freq in path_counter.items()]) for path_counter in dependency_paths])
+            result["metrics"]["max_dep_path_length"] = max([max([len(path) for path, freq in path_counter.items()]) for path_counter in dependency_paths])
             
+            pos_complexity = compute_pos_complexity(result[output_attr])
+            for pos, pos_comps in pos_complexity.items():
+                result["metrics"][f"avg_pos_{pos.lower()}_ratio"] = mean(pos_comps) if pos_comps else 0
+
             if len(stories) > 1:
                 result["metrics"]["inv_homogen"] = inv_homogen[result_idx]
                 result["metrics"]["novelty"] = novelty[result_idx]

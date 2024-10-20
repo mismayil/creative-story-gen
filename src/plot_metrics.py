@@ -54,6 +54,7 @@ def plot_local_metrics(metrics_lst, metric, output_dir, output_format="png"):
     plot_path = f"{output_dir}/fig_{metric}_by_{x_attr}.{output_format}"
     print(f"Saving figure to {plot_path}")
     plt.savefig(plot_path)
+    plt.close()
 
 def plot_global_metrics_n_gram_diversity(metrics_lst, output_dir, output_format="png"):
     output_dir = pathlib.Path(output_dir) / f"{output_format}_figs"
@@ -88,6 +89,7 @@ def plot_global_metrics_n_gram_diversity(metrics_lst, output_dir, output_format=
         plot_path = f"{output_dir}/fig_{metric}_{group_id}.{output_format}"
         print(f"Saving figure to {plot_path}")
         plt.savefig(plot_path)
+        plt.close()
 
 def plot_global_metrics_raw_surprises(metrics_lst, output_dir, output_format="png"):
     output_dir = pathlib.Path(output_dir) / f"{output_format}_figs"
@@ -124,6 +126,7 @@ def plot_global_metrics_raw_surprises(metrics_lst, output_dir, output_format="pn
         plot_path = f"{output_dir}/fig_{metric}_{group_id}.{output_format}"
         print(f"Saving figure to {plot_path}")
         plt.savefig(plot_path)
+        plt.close()
     
 def main():
     parser = argparse.ArgumentParser()

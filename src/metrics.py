@@ -231,3 +231,24 @@ def compute_dependency_complexity(text):
         dep_paths.append(sent_path_counter)
     
     return dep_paths, dep_num_clauses
+
+def compute_pos_complexity(text):
+    sentences = get_sentences(text)
+    pos_complexity = {
+        "NOUN": [],
+        "VERB": [],
+        "ADJ": [],
+        "ADV": [],
+        "PRON": [],
+        "DET": [],
+        "ADP": []
+    }
+
+    for sentence in sentences:
+        pos_tags = get_pos_tags(sentence)
+        pos_freq = Counter(pos_tags)
+        num_words = len(pos_tags)
+        for pos in pos_complexity:
+            pos_complexity[pos].append(pos_freq.get(pos, 0) / num_words)
+    
+    return pos_complexity
