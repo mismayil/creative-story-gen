@@ -7,8 +7,9 @@ import glob
 
 MODEL_COSTS = {
     "gpt-3.5-turbo": {'input': 0.0000015, 'output': 0.000002},
-    "gpt-4": {'input': 0.00003, 'output': 0.00006},
-    "gpt-4-0125-preview": {'input': 0.00001, 'output': 0.00003},
+    "gpt-4": {'input': 30e-6, 'output': 60e-6},
+    "gpt-4o": {'input': 2.5e-6, 'output': 10e-6},
+    "gpt-4-0125-preview": {'input': 10e-6, 'output': 30e-6},
     "gpt-4o-2024-08-06": {'input': 2.5e-6, 'output': 10e-6},
     "text-davinci-003": {'input': 0.00002, 'output': 0.00002},
     "gemini-1.5-flash": {'input': 3.5e-7, 'output': 1.05e-6},
@@ -84,7 +85,10 @@ def batched(lst, size=4):
     for i in range(0, len(lst), size):
         yield lst[i:i + size]
 
-def compute_usage(sample, model):
+def compute_usage(sample, model, 
+                  input_attrs=["system_prompt", "user_prompt"], 
+                  output_attrs=["output"],
+                  max_input_tokens=None, max_output_tokens=None):
     if model not in MODEL_COSTS:
         return None, None
 
@@ -96,17 +100,29 @@ def compute_usage(sample, model):
 
     usage = sample.get("usage")
 
-    if not usage and "user_prompt" in sample and "output" in sample:
-        input_tokens = num_tokens_from_string(sample["user_prompt"], model)
-        output_tokens = num_tokens_from_string(sample["output"], model)
+    if not usage:
+        input_tokens = 0
+        output_tokens = 0
+
+        if max_input_tokens:
+            input_tokens = max_input_tokens
+        else:
+            for attr in input_attrs:
+                if attr in sample:
+                    input_tokens += num_tokens_from_string(sample[attr], model)
+
+        if max_output_tokens:
+            output_tokens = max_output_tokens        
+        else:
+            for attr in output_attrs:
+                if attr in sample:
+                    output_tokens += num_tokens_from_string(sample[attr], model)
+
         usage = {
             "input_tokens": input_tokens,
             "output_tokens": output_tokens,
             "total_tokens": input_tokens + output_tokens
         }
-    
-    if not usage:
-        return None, None
 
     input_cost = usage["input_tokens"] * MODEL_COSTS[model]["input"]
     output_cost = usage["output_tokens"] * MODEL_COSTS[model]["output"]

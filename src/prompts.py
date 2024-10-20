@@ -17,3 +17,11 @@ SIMPLE_USER_INSTRUCTION_TEMPLATE = "Write a creative short story using exactly f
 # Controlled prompt templates
 CONTROLLED_ALT1_SYSTEM_INSTRUCTION_TEMPLATE = "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts."
 CONTROLLED_ALT1_USER_INSTRUCTION_TEMPLATE = "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: {items}. However, the story should not focus on {boring_theme}."
+
+# Summarization templates
+SUMMARY_SYSTEM_INSTRUCTION_TEMPLATE = ""
+SUMMARY_USER_INSTRUCTION_TEMPLATE = "Summarize the story into a key point using the following three words: {items}."
+SUMMARY_SHOT_TEMPLATE = """Example {index}:
+Story: {story}
+Answer: {summary}
+"""
