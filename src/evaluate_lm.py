@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 
 from utils import read_json, write_json, generate_unique_id, batched
 
-OPENAI_MODELS = ["gpt-3.5-turbo", "gpt-4", "gpt-4-0125-preview", "gpt-4o-2024-08-06"]
+OPENAI_MODELS = ["gpt-3.5-turbo", "gpt-4", "gpt-4-0125-preview", "gpt-4o-2024-08-06", "gpt-4o"]
 GOOGLE_MODELS = ["gemini-1.5-flash", "gemini-1.5-pro"]
 ANTHROPIC_MODELS = ["claude-3-5-sonnet-20240620", "claude-3-opus-20240229", "claude-3-sonnet-20240229", "claude-3-haiku-20240307"]
 API_MODELS = OPENAI_MODELS + GOOGLE_MODELS + ANTHROPIC_MODELS
@@ -309,7 +309,6 @@ async def main():
             "model_path": args.model_path,
             "tokenizer_path": args.tokenizer_path,
             "cache_dir": args.cache_dir,
-            "ignore_path": args.ignore_path,
             "batch_size": args.batch_size,
             "openai_azure": args.openai_azure,
             "num_samples": args.num_samples,

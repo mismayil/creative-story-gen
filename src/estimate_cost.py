@@ -19,7 +19,7 @@ def estimate_cost(datapath, model="gpt-4", input_attrs=["system_prompt", "user_p
     return input_cost, output_cost
 
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="Estimate cost of using API models")
     parser.add_argument("-i", "--input-paths", type=str, nargs="+", help="Path to input data file(s) in json", required=True)
     parser.add_argument("-m", "--model", type=str, default="gpt-4", help="Model name")
     parser.add_argument("-ia", "--input-attrs", type=str, nargs="+", default=["system_prompt", "user_prompt"], help="Input attribute(s)")
