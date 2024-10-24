@@ -9,7 +9,9 @@ from utils import read_json, write_json, find_files, compute_usage
 from metrics import (compute_inverse_homogenization, compute_novelty, 
                      compute_theme_uniqueness, compute_dsi, compute_surprise, 
                      compute_n_gram_diversity, get_words, get_sentences, 
-                     compute_pos_diversity, compute_dependency_complexity, compute_pos_complexity)
+                     compute_pos_diversity, compute_dependency_complexity, 
+                     compute_pos_complexity, compute_constituency_complexity,
+                     compute_flesch_readability_scores)
 
 DEF_EMB_MODEL = "thenlper/gte-large"
 DEF_EMB_TYPE = "sentence_embedding"
@@ -108,6 +110,14 @@ def compute_metrics(results, config):
             result["metrics"]["avg_dep_path_length"] = mean([mean([len(path) for path, freq in path_counter.items()]) for path_counter in dependency_paths])
             result["metrics"]["max_dep_path_length"] = max([max([len(path) for path, freq in path_counter.items()]) for path_counter in dependency_paths])
             
+            constituency_complexity = compute_constituency_complexity(result[output_attr])
+            result["metrics"]["avg_constituency_tree_depth"] = mean(constituency_complexity)
+            result["metrics"]["max_constituency_tree_depth"] = max(constituency_complexity)
+
+            flesch_ease, flesch_kincaid = compute_flesch_readability_scores(result[output_attr])
+            result["metrics"]["readability_flesch_ease"] = flesch_ease
+            result["metrics"]["readability_flesch_kincaid"] = flesch_kincaid
+
             pos_complexity = compute_pos_complexity(result[output_attr])
             for pos, pos_comps in pos_complexity.items():
                 result["metrics"][f"avg_pos_{pos.lower()}_ratio"] = mean(pos_comps) if pos_comps else 0

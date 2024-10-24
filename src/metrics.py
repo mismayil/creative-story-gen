@@ -1,10 +1,13 @@
 import spacy
 from collections import Counter
 from statistics import mean
+import re
 
 from sentence_transformers import SentenceTransformer
 from sentence_transformers.util import cos_sim, dot_score, euclidean_sim, manhattan_sim
 from sklearn.cluster import AgglomerativeClustering
+from spacy_syllables import SpacySyllables
+import benepar
 
 from utils import cache
 
@@ -27,9 +30,14 @@ EMBEDDING_CACHE = {}
 SPACY_CACHE = {}
 
 @cache(cache_dict=SPACY_ENGINE_CACHE)
-def load_spacy_engine(language=DEF_SPACY_LANG):
+def load_spacy_engine(language=DEF_SPACY_LANG, include_syllables=False, include_constituency=False):
     print(f"Loading spacy engine: {language}")
-    return spacy.load(language)
+    engine = spacy.load(language)
+    if include_syllables:
+        engine.add_pipe("syllables", after="tagger")
+    if include_constituency:
+        engine.add_pipe('benepar', config={'model': 'benepar_en3'})
+    return engine
 
 @cache(cache_dict=EMB_MODEL_CACHE)
 def load_emb_model(model=DEF_EMB_MODEL):
@@ -53,8 +61,8 @@ def get_embedding(text, model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE):
     return embeddings
 
 @cache(cache_dict=SPACY_CACHE)
-def get_spacy_doc(text):
-    spacy_engine = load_spacy_engine()
+def get_spacy_doc(text, include_syllables=False, include_constituency=False):
+    spacy_engine = load_spacy_engine(include_syllables=include_syllables, include_constituency=include_constituency)
     return spacy_engine(text)
 
 def compute_sem_dis(emb1, emb2, distance_fn=DEF_DIST_FN):
@@ -99,6 +107,10 @@ def get_words(text, lower=True, remove_punct=True, remove_stopwords=True, lemmat
     word_freq = Counter(words)
 
     return [w[0] for w in word_freq.most_common(dominant_k)]
+
+def get_syllables(text):
+    doc = get_spacy_doc(text, include_syllables=True)
+    return [(token._.syllables, token._.syllables_count) for token in doc if token._.syllables_count]
 
 def get_pos_tags(text, remove_punct=True):
     doc = get_spacy_doc(text)
@@ -252,3 +264,21 @@ def compute_pos_complexity(text):
             pos_complexity[pos].append(pos_freq.get(pos, 0) / num_words)
     
     return pos_complexity
+
+def compute_flesch_readability_scores(text):
+    # see https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests
+    num_words = len(get_words(text, lower=True, remove_punct=False, remove_stopwords=False, lemmatize=False, unique=False))
+    num_sentences = len(get_sentences(text))
+    num_syllables = sum([n_syllables for _, n_syllables in get_syllables(text)])
+    flesch_ease = 206.835 - 1.015 * (num_words / num_sentences) - 84.6 * (num_syllables / num_words)
+    flesch_kincaid = 0.39 * (num_words / num_sentences) + 11.8 * (num_syllables / num_words) - 15.59
+    return flesch_ease, flesch_kincaid
+
+def compute_constituency_complexity(text):
+    text = re.sub(r"\s+", " ", text)
+    def _get_height(sent):
+        if not list(sent._.children):
+            return 1
+        return 1 + max([_get_height(child) for child in sent._.children])
+    doc = get_spacy_doc(text, include_constituency=True)
+    return [_get_height(sent) for sent in doc.sents]
