@@ -8,26 +8,40 @@ from pandas.api.types import is_numeric_dtype
 
 from utils import concat_dfs
 
-sns.set_theme(style="whitegrid")
+sns.set_theme(style="dark")
 
-FIG_SIZE = (20, 15)
-XLABEL_SIZE = 30
-YLABEL_SIZE = 30
+FIG_SIZE = (25, 20)
+XLABEL_SIZE = 40
+YLABEL_SIZE = 40
 TITLE_SIZE = 50
-TICK_SIZE = 20
+TICK_SIZE = 40
 LEGEND_TITLE_SIZE = 30
-LEGEND_SIZE = 20
+LEGEND_SIZE = 33
+PALETTE = "BrBG"
 
 LABEL_MAP = {
     "id": "Item ID",
     "model": "Model"
 }
 
+MODEL_NAME_MAP = {
+    "gpt-4": "GPT-4",
+    "gemini-1.5-flash": "Gemini-1.5",
+    "claude-3-5-sonnet-20240620": "Claude-3.5",
+    "llama-3.1-405b-instruct": "Llama-3.1-405B",
+    "human": "Human"
+}
+
+colors = ['#a16518', '#dbb972', '#00bcd4', '#76c6ba', "#607d8b", '#167a72']
+custom_palette = sns.set_palette(sns.color_palette(colors))
+
 def set_group_data(metrics):
     group_by = ast.literal_eval(metrics["group_by"].iloc[0])
     for by_field in group_by:
         value_index = group_by.index(by_field)
         metrics[by_field] = metrics["group_id"].apply(lambda x: ast.literal_eval(x)[value_index])
+        if by_field == "model":
+            metrics[by_field] = metrics[by_field].map(MODEL_NAME_MAP)
     return group_by
 
 def plot_local_metrics(metrics_lst, metric, output_dir, output_format="png"): 
@@ -48,14 +62,14 @@ def plot_local_metrics(metrics_lst, metric, output_dir, output_format="png"):
     output_dir.mkdir(parents=True, exist_ok=True)
 
     fig, ax = plt.subplots(figsize=FIG_SIZE)
-    ax.set_title(metric)
+    # ax.set_title(metric)
     ax.set_xlabel(LABEL_MAP.get(x_attr, x_attr), size=XLABEL_SIZE)
     ax.set_ylabel(metric, size=YLABEL_SIZE)
-    ax.tick_params(axis='x', labelsize=TICK_SIZE)
+    ax.tick_params(axis='x', labelsize=TICK_SIZE, rotation=20)
     ax.tick_params(axis='y', labelsize=TICK_SIZE)
-    ax.title.set_size(TITLE_SIZE)
-    sns.barplot(data=merged_metrics, x=x_attr, y=metric, hue=hue_attr, ax=ax, err_kws={'linewidth': 5})
-    ax.legend(title=LABEL_MAP.get(hue_attr, hue_attr), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
+    # ax.title.set_size(TITLE_SIZE)
+    sns.barplot(data=merged_metrics, x=x_attr, y=metric, hue=hue_attr, ax=ax, err_kws={'linewidth': 5}, palette=custom_palette)
+    ax.legend(ncol=5, loc="center left", bbox_to_anchor=(0, 1.05), title=LABEL_MAP.get(hue_attr, hue_attr), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
     plt.tight_layout()
 
     plot_path = f"{output_dir}/fig_{metric}_by_{x_attr}.{output_format}"
@@ -84,14 +98,14 @@ def plot_global_metrics_n_gram_diversity(metrics_lst, output_dir, output_format=
 
         metric = "metric_corpus_n_gram_diversity"
         fig, ax = plt.subplots(figsize=FIG_SIZE)
-        ax.set_title(metric)
+        # ax.set_title(metric)
         ax.set_xlabel("n-gram size", size=XLABEL_SIZE)
         ax.set_ylabel(metric, size=YLABEL_SIZE)
         ax.tick_params(axis='x', labelsize=TICK_SIZE)
         ax.tick_params(axis='y', labelsize=TICK_SIZE)
-        ax.title.set_size(TITLE_SIZE)
-        sns.lineplot(data=group_metrics, x="n_gram", y=metric, hue=hue_attr, style=hue_attr, markers=True, lw=5, ax=ax)
-        ax.legend(title=LABEL_MAP.get(hue_attr, hue_attr), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
+        # ax.title.set_size(TITLE_SIZE)
+        sns.lineplot(data=group_metrics, x="n_gram", y=metric, hue=hue_attr, style=hue_attr, markers=True, lw=5, ax=ax, palette=custom_palette)
+        ax.legend(ncol=5, loc="center left", bbox_to_anchor=(0, 1.05), title=LABEL_MAP.get(hue_attr, hue_attr), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
         plt.tight_layout()
 
         plot_path = f"{output_dir}/fig_{metric}_{group_id}.{output_format}"
@@ -122,14 +136,14 @@ def plot_global_metrics_raw_surprises(metrics_lst, output_dir, output_format="pn
 
         metric = "metric_avg_raw_surprises"
         fig, ax = plt.subplots(figsize=FIG_SIZE)
-        ax.set_title(metric)
+        # ax.set_title(metric)
         ax.set_xlabel("Fragment", size=XLABEL_SIZE)
         ax.set_ylabel(metric, size=YLABEL_SIZE)
         ax.tick_params(axis='x', labelsize=TICK_SIZE)
         ax.tick_params(axis='y', labelsize=TICK_SIZE)
-        ax.title.set_size(TITLE_SIZE)
-        sns.lineplot(data=group_metrics, x="fragment", y=metric, hue=hue_attr, style=hue_attr, markers=True, lw=5, ax=ax)
-        ax.legend(title=LABEL_MAP.get(hue_attr, hue_attr), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
+        # ax.title.set_size(TITLE_SIZE)
+        sns.lineplot(data=group_metrics, x="fragment", y=metric, hue=hue_attr, style=hue_attr, markers=True, lw=5, ax=ax, palette=custom_palette)
+        ax.legend(ncol=5, loc="center left", bbox_to_anchor=(0, 1.05), title=LABEL_MAP.get(hue_attr, hue_attr), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
         plt.tight_layout()
 
         plot_path = f"{output_dir}/fig_{metric}_{group_id}.{output_format}"
@@ -143,7 +157,7 @@ def main():
     parser.add_argument("-o", "--output-dir", type=str, help="Output directory to save plots", default=None)
     parser.add_argument("-f", "--output-format", type=str, choices=["png", "pdf", "svg"], default="png", help="Format to save the plots in.")
     parser.add_argument("-p", "--plot-types", type=str, nargs="+", choices=["local", "n_gram_diversity", "raw_surprises"], default=["local"], help="Type of plots to generate")
-
+    
     args = parser.parse_args()
 
     metrics_lst = []
