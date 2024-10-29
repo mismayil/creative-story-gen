@@ -1,0 +1,2577 @@
+{
+    "metadata": {
+        "group_id": [
+            "llama-3.1-405b-instruct",
+            "stamp-letter-send"
+        ],
+        "config": {
+            "results_paths": [
+                "../experiments/outputs/human/pilot/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.3_p0.3/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.3_p0.5/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.3_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.3_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.3_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.3_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.3/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.5/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.3/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.5/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.3/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.5/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.3/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.5/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.3/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.5/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.3/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.5/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.3/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.5/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.3/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.5/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.3/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.5/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p0.3/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p0.5/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.3/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.5/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.3/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.5/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.3/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.5/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.3/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.5/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p1/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.3/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.5/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.7/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.9/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.95/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p1/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.3/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.5/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.3/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.5/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.3/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.5/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.3/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.5/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p1/run1"
+            ],
+            "report_usage": true,
+            "spacy_lang": "en_core_web_sm",
+            "max_n_gram": 5,
+            "output_dir": "../experiments/reports/pilot/run1_report6",
+            "config": "../experiments/reports/pilot/run1_report6/config.json",
+            "num_samples": null,
+            "deduplicate": true,
+            "deduplicate_by": "output",
+            "max_frequency": 10,
+            "group_by": [
+                "model",
+                "id"
+            ],
+            "output_attr": "output",
+            "emb_model": "thenlper/gte-large",
+            "emb_type": "sentence_embedding",
+            "emb_strategy": "direct",
+            "distance_fn": "cosine",
+            "lower": true,
+            "remove_punct": true,
+            "remove_stopwords": true,
+            "lemmatize": true,
+            "dominant_k": null,
+            "unique": true,
+            "cluster_linkage": "ward",
+            "cluster_dist_threshold": 0.5,
+            "description": "Report2 + filter by sentence length",
+            "filter_by": {
+                "sentence_length": [
+                    3,
+                    6
+                ]
+            }
+        }
+    },
+    "metrics": {
+        "num_samples": 24,
+        "avg_length_in_chars": 705.9166666666666,
+        "avg_length_in_words": 123.70833333333333,
+        "avg_length_in_unique_words": 80.70833333333333,
+        "avg_length_in_concepts": 52.916666666666664,
+        "avg_length_in_sentences": 5,
+        "avg_word_length_in_chars": 4.59601871594627,
+        "avg_sentence_length_in_chars": 140.38333333333333,
+        "avg_sentence_length_in_words": 24.741666666666667,
+        "avg_sentence_length_in_unique_words": 21.55,
+        "avg_dsi": 0.20950357485743162,
+        "avg_surprise": 0.012116561065215812,
+        "avg_raw_surprises": [
+            0.0059235558870312545,
+            0.00635426449669852,
+            0.005842134938764902,
+            0.006113166807936945
+        ],
+        "avg_n_gram_diversity": [
+            0.6533611235659245,
+            0.973753337145658,
+            0.9955923328954293,
+            0.998650406504065,
+            0.9993169398907104
+        ],
+        "avg_pos_diversity": [
+            0.0958912689404945,
+            0.34905174944820144,
+            0.6334554257478553,
+            0.8304546950862284,
+            0.9360642396704328
+        ],
+        "avg_dep_num_clauses": 3.4833333333333334,
+        "avg_max_dep_num_clauses": 5.541666666666667,
+        "avg_dep_path_length": 3.2675390953632193,
+        "avg_max_dep_path_length": 9.958333333333334,
+        "avg_inv_homogen": 0.09357992570469345,
+        "avg_novelty": 0.007683941923100225,
+        "avg_theme_uniqueness": 0.20833333333333334,
+        "corpus_dsi": 0.21309295880166126,
+        "corpus_n_gram_diversity": [
+            0.23172785449646346,
+            0.6091644204851752,
+            0.7903606336366701,
+            0.8509777478084963,
+            0.8812816188870152
+        ],
+        "corpus_pos_diversity": [
+            0.004715392388009431,
+            0.040768194070080865,
+            0.14256825075834176,
+            0.30411328388401887,
+            0.4772344013490725
+        ],
+        "num_unique_stories": 24,
+        "top_10_n_grams": {
+            "1-gram": {
+                "the": 235,
+                "a": 178,
+                "to": 117,
+                "her": 107,
+                "of": 101,
+                "she": 71,
+                "and": 51,
+                "in": 45,
+                "that": 43,
+                "as": 42
+            },
+            "2-gram": {
+                "of her": 25,
+                "to send": 23,
+                "in a": 20,
+                "a world": 18,
+                "world where": 18,
+                "a young": 18,
+                "where memories": 17,
+                "memories could": 17,
+                "could be": 17,
+                "be transferred": 16
+            },
+            "3-gram": {
+                "in a world": 18,
+                "a world where": 18,
+                "world where memories": 17,
+                "where memories could": 17,
+                "memories could be": 17,
+                "could be transferred": 16,
+                "a young artist": 13,
+                "be transferred a": 11,
+                "a magical stamp": 11,
+                "transferred a young": 9
+            },
+            "4-gram": {
+                "in a world where": 18,
+                "a world where memories": 17,
+                "world where memories could": 17,
+                "where memories could be": 17,
+                "memories could be transferred": 16,
+                "could be transferred a": 11,
+                "be transferred a young": 9,
+                "transferred a young artist": 9,
+                "a magical stamp that": 7,
+                "a young artist discovered": 6
+            },
+            "5-gram": {
+                "in a world where memories": 17,
+                "a world where memories could": 17,
+                "world where memories could be": 17,
+                "where memories could be transferred": 16,
+                "memories could be transferred a": 11,
+                "could be transferred a young": 9,
+                "be transferred a young artist": 9,
+                "a magical stamp that could": 5,
+                "a young artist discovered she": 5,
+                "young artist discovered she could": 5
+            }
+        },
+        "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+        },
+        "cost": {
+            "input": 0,
+            "output": 0,
+            "total": 0
+        }
+    },
+    "data": [
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a young artist created a magical stamp that allowed her to imprint her thoughts onto the minds of others. With each stroke of her brush, she would craft a mental letter to her lost love, hoping that someday he would receive the fragmented images and piece together the story of their past. To send these ethereal messages, she would dance under the stars, allowing the cosmos to carry the essence of her memories to the farthest reaches of the globe. And though she never knew if her love received these mental missives, she continued to create, pouring her heart into the universe with the hope of reconnection. As the years went by, her art became a legend, a testament to the power of the human spirit to transcend time and space.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 158
+            },
+            "result_id": "d9c0434bf5f2",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_2f2e14cec3d1.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 781,
+                "length_in_words": 139,
+                "length_in_unique_words": 89,
+                "length_in_concepts": 56,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6402877697841727,
+                "avg_word_length_in_chars": 4.525179856115108,
+                "avg_sentence_length_in_chars": 155.4,
+                "avg_sentence_length_in_words": 27.8,
+                "avg_sentence_length_in_unique_words": 23.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 13,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 14,
+                "dsi": 0.20920696525604693,
+                "surprise": 0.0180445856921799,
+                "raw_surprises": [
+                    0.007822541292611646,
+                    0.007214547448105846,
+                    0.015561900077722013,
+                    0.005490182565920293
+                ],
+                "n_gram_diversity": [
+                    0.6402877697841727,
+                    0.9710144927536232,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07913669064748201,
+                    0.2898550724637681,
+                    0.5401459854014599,
+                    0.7205882352941176,
+                    0.8592592592592593
+                ],
+                "avg_dep_num_clauses": 4,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.1467830409755875,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 11.2,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 68.50541176470591,
+                "readability_flesch_kincaid": 11.306091503267975,
+                "avg_pos_noun_ratio": 0.26144781144781143,
+                "avg_pos_verb_ratio": 0.1444805194805195,
+                "avg_pos_adj_ratio": 0.05696248196248196,
+                "avg_pos_adv_ratio": 0.027861952861952862,
+                "avg_pos_pron_ratio": 0.10477392977392977,
+                "avg_pos_det_ratio": 0.1606180856180856,
+                "avg_pos_adp_ratio": 0.11392496392496392,
+                "inv_homogen": 0.07496883299039758,
+                "novelty": 0.0077719870912286715,
+                "theme_uniqueness": 0.07692307692307693
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a young artist created a magical stamp that could imprint emotions onto canvas. She wrote a heartfelt letter to her past self, but instead of mailing it, she used the stamp to seal the words into a beautiful painting. As she finished the final brushstroke, the artwork began to glow, and she knew it was time to send the memories into the universe. The painting transformed into a swirling vortex, carrying her emotions to those who needed them most. As the colors faded, the artist smiled, knowing her memories had found a new home.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 117
+            },
+            "result_id": "4a7401ebb6de",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.95/run1/pilot_data_eval_default_llama-3.1-405b-instruct_bee2a21c954d.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 581,
+                "length_in_words": 102,
+                "length_in_unique_words": 68,
+                "length_in_concepts": 43,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6666666666666666,
+                "avg_word_length_in_chars": 4.578431372549019,
+                "avg_sentence_length_in_chars": 115.4,
+                "avg_sentence_length_in_words": 20.4,
+                "avg_sentence_length_in_unique_words": 17.8,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 9,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 10,
+                "dsi": 0.208961035194059,
+                "surprise": 0.011928444453562129,
+                "raw_surprises": [
+                    0.01699534762989391,
+                    0.0009569059718738671,
+                    0.0055390022017738905,
+                    0.00036563310358259105
+                ],
+                "n_gram_diversity": [
+                    0.6666666666666666,
+                    0.9900990099009901,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10784313725490197,
+                    0.39603960396039606,
+                    0.71,
+                    0.8888888888888888,
+                    0.9489795918367347
+                ],
+                "avg_dep_num_clauses": 3.2,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 2.9154792496021646,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 8.6,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 78.2917391304348,
+                "readability_flesch_kincaid": 8.053043478260872,
+                "avg_pos_noun_ratio": 0.2281043956043956,
+                "avg_pos_verb_ratio": 0.20434065934065934,
+                "avg_pos_adj_ratio": 0.0637912087912088,
+                "avg_pos_adv_ratio": 0.020192307692307693,
+                "avg_pos_pron_ratio": 0.12862637362637364,
+                "avg_pos_det_ratio": 0.15767399267399268,
+                "avg_pos_adp_ratio": 0.07545787545787545,
+                "inv_homogen": 0.07096201440562373,
+                "novelty": 0.008263847215204512,
+                "theme_uniqueness": 0.07692307692307693
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a young artist discovered she could stamp her thoughts onto canvas, creating vibrant masterpieces that told the story of her past. One day, she received a mysterious letter from her future self, warning her of an impending loss that would change her art forever. Desperate to alter the course of events, she decided to send her memories back in time, hoping to prevent the heartache that was to come. As she focused all her energy on the task, her paintings began to fade, leaving behind only the faintest whisper of what once was. In the end, she was left with a blank canvas, waiting to be filled with the memories she had yet to create.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 143
+            },
+            "result_id": "1e3b6851e8d4",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.9/run1/pilot_data_eval_default_llama-3.1-405b-instruct_b20eebba4d1e.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 687,
+                "length_in_words": 123,
+                "length_in_unique_words": 81,
+                "length_in_concepts": 51,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6585365853658537,
+                "avg_word_length_in_chars": 4.471544715447155,
+                "avg_sentence_length_in_chars": 136.6,
+                "avg_sentence_length_in_words": 24.6,
+                "avg_sentence_length_in_unique_words": 21.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 14,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 14,
+                "dsi": 0.20624385286779964,
+                "surprise": 0.010523038367172319,
+                "raw_surprises": [
+                    0.0022405726311010565,
+                    0.0018865113908594078,
+                    0.009514217575391115,
+                    0.007404775136993058
+                ],
+                "n_gram_diversity": [
+                    0.6585365853658537,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08943089430894309,
+                    0.36065573770491804,
+                    0.628099173553719,
+                    0.85,
+                    0.9831932773109243
+                ],
+                "avg_dep_num_clauses": 4,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.2245359954055606,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 10.8,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 74.60360869565218,
+                "readability_flesch_kincaid": 9.710231884057972,
+                "avg_pos_noun_ratio": 0.19925673526872928,
+                "avg_pos_verb_ratio": 0.18735759393030757,
+                "avg_pos_adj_ratio": 0.06530430239425741,
+                "avg_pos_adv_ratio": 0.05078656126482214,
+                "avg_pos_pron_ratio": 0.14657961928126845,
+                "avg_pos_det_ratio": 0.10635368679296715,
+                "avg_pos_adp_ratio": 0.09802035345963382,
+                "inv_homogen": 0.080240565797557,
+                "novelty": 0.013698211867723242,
+                "theme_uniqueness": 0.07692307692307693
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where emotions were tangible, a young artist crafted a delicate stamp that captured the essence of longing. She pressed it onto the walls of a mystical cave, where whispers of the past dwelled, and a forgotten letter materialized, penned by a lovesick soul from centuries ago. The words danced across the parchment, imbuing the air with a yearning so profound that it compelled the artist to send her own heartbeat into the void, weaving a symphony of love and loss. As the echoes faded, the cave's ancient magic stirred, summoning a procession of ghostly messengers to carry the artist's emotions to the farthest reaches of the realm. There, they merged with the whispers of the past, creating an eternal tapestry of human experience.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 155
+            },
+            "result_id": "cbc3c59e01c3",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.3/run1/pilot_data_eval_default_llama-3.1-405b-instruct_88f9df8e20ab.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 746,
+                "length_in_words": 128,
+                "length_in_unique_words": 85,
+                "length_in_concepts": 60,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6640625,
+                "avg_word_length_in_chars": 4.734375,
+                "avg_sentence_length_in_chars": 148.4,
+                "avg_sentence_length_in_words": 25.6,
+                "avg_sentence_length_in_unique_words": 21.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 4,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 5,
+                "dsi": 0.21248021607345108,
+                "surprise": 0.010885693294145321,
+                "raw_surprises": [
+                    0.0080461989233504,
+                    0.0027006495566594957,
+                    0.0020115827520688356,
+                    0.00901295535621191
+                ],
+                "n_gram_diversity": [
+                    0.6640625,
+                    0.9606299212598425,
+                    0.9841269841269841,
+                    0.992,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0859375,
+                    0.2992125984251969,
+                    0.5238095238095238,
+                    0.736,
+                    0.8790322580645161
+                ],
+                "avg_dep_num_clauses": 3.2,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.639872420262664,
+                "max_dep_path_length": 12,
+                "avg_constituency_tree_depth": 10.6,
+                "max_constituency_tree_depth": 15,
+                "readability_flesch_ease": 70.72488111888113,
+                "readability_flesch_kincaid": 10.499664335664338,
+                "avg_pos_noun_ratio": 0.2791683569979716,
+                "avg_pos_verb_ratio": 0.13648073022312374,
+                "avg_pos_adj_ratio": 0.10124746450304259,
+                "avg_pos_adv_ratio": 0.025278904665314402,
+                "avg_pos_pron_ratio": 0.0480578093306288,
+                "avg_pos_det_ratio": 0.19453853955375253,
+                "avg_pos_adp_ratio": 0.13620182555780933,
+                "inv_homogen": 0.08865482910819676,
+                "novelty": 0.001225485456420372,
+                "theme_uniqueness": 0.07692307692307693
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "As the time traveler stood at the edge of the ancient forest, she raised her staff to stamp a symbol of protection onto the air, sealing the portal behind her. A whispered letter of ancient runes danced in the mist, a map guiding her through the forgotten paths. With a deep breath, she began to send her spirit forward, weaving a thread of connection between the past and the present. The trees whispered secrets in her ear as she walked, their bark shimmering with an otherworldly light. And when she finally emerged into the sunlight, she knew that a piece of her would forever remain in that mystical realm.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 125
+            },
+            "result_id": "3ee8b18a7400",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.95/run1/pilot_data_eval_default_llama-3.1-405b-instruct_851f08489ae2.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 611,
+                "length_in_words": 109,
+                "length_in_unique_words": 72,
+                "length_in_concepts": 52,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6605504587155964,
+                "avg_word_length_in_chars": 4.504587155963303,
+                "avg_sentence_length_in_chars": 121.4,
+                "avg_sentence_length_in_words": 21.8,
+                "avg_sentence_length_in_unique_words": 19.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 11,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 12,
+                "dsi": 0.20862051822121505,
+                "surprise": 0.023964556850693916,
+                "raw_surprises": [
+                    0.0027221863814180236,
+                    0.02632815741529368,
+                    0.01623078388999208,
+                    0.0026479860146840506
+                ],
+                "n_gram_diversity": [
+                    0.6605504587155964,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10091743119266056,
+                    0.35185185185185186,
+                    0.616822429906542,
+                    0.8113207547169812,
+                    0.9142857142857143
+                ],
+                "avg_dep_num_clauses": 2.8,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.0298267824129894,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 8.4,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 78.09514049586781,
+                "readability_flesch_kincaid": 8.378578512396697,
+                "avg_pos_noun_ratio": 0.2561972667855021,
+                "avg_pos_verb_ratio": 0.14983957219251337,
+                "avg_pos_adj_ratio": 0.04707070707070707,
+                "avg_pos_adv_ratio": 0.039037433155080216,
+                "avg_pos_pron_ratio": 0.1118597742127154,
+                "avg_pos_det_ratio": 0.17161021984551397,
+                "avg_pos_adp_ratio": 0.15140819964349375,
+                "inv_homogen": 0.12549479111381198,
+                "novelty": 0.008944881160892426,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be physically crafted, Emma sat at her workbench, carefully placing a delicate stamp of her grandmother's laughter onto a sheet of translucent paper. As she did, a letter of forgotten moments began to materialize, the ink shimmering with the whispers of the past. With a deep breath, Emma chose to send this tangible recollection into the sky, where it would merge with the collective nostalgia of the city, a reminder to all who felt forgotten. As the letter soared above the rooftops, its words and emotions dispersing like stardust, Emma smiled knowing that a piece of her heritage was now forever intertwined with the urban tapestry. And in that instant, the city's heartbeat felt a little warmer, its pulse a little stronger.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 156
+            },
+            "result_id": "a6f363126bd5",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.95/run1/pilot_data_eval_default_llama-3.1-405b-instruct_1b2f2b000a41.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 762,
+                "length_in_words": 130,
+                "length_in_unique_words": 87,
+                "length_in_concepts": 60,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6692307692307692,
+                "avg_word_length_in_chars": 4.7615384615384615,
+                "avg_sentence_length_in_chars": 151.6,
+                "avg_sentence_length_in_words": 26,
+                "avg_sentence_length_in_unique_words": 22.8,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 7,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 7,
+                "dsi": 0.2092970835623768,
+                "surprise": 0.02174257092546572,
+                "raw_surprises": [
+                    0.010935889515611863,
+                    0.00445491789825378,
+                    0.00643887294440712,
+                    0.02165546149265868
+                ],
+                "n_gram_diversity": [
+                    0.6692307692307692,
+                    0.9534883720930233,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09230769230769231,
+                    0.35658914728682173,
+                    0.625,
+                    0.8188976377952756,
+                    0.9285714285714286
+                ],
+                "avg_dep_num_clauses": 3,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.283807459380318,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 10.2,
+                "max_constituency_tree_depth": 17,
+                "readability_flesch_ease": 65.94220547945207,
+                "readability_flesch_kincaid": 11.315808219178084,
+                "avg_pos_noun_ratio": 0.23950506008855155,
+                "avg_pos_verb_ratio": 0.139022770398482,
+                "avg_pos_adj_ratio": 0.07382906388361797,
+                "avg_pos_adv_ratio": 0.03800126502213789,
+                "avg_pos_pron_ratio": 0.06675126502213789,
+                "avg_pos_det_ratio": 0.170365275142315,
+                "avg_pos_adp_ratio": 0.1321544908285895,
+                "inv_homogen": 0.10734106405921605,
+                "novelty": 0.007591750478568915,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the enchanted forest, a tiny fairy named Luna possessed a magical stamp that could bring any inanimate object to life. One day, she stumbled upon a forgotten letter etched into the bark of an ancient tree, a message left by a long-lost civilization. Intrigued, Luna used her stamp to awaken the letter, and to her surprise, it unfolded like a map, leading her to a hidden underground kingdom. With the letter guiding her, Luna decided to send a gentle breeze to carry the whispers of the forest creatures to the kingdom, breaking the curse of silence that had shrouded the land for centuries. As the whispers reached the kingdom, the trees began to bloom, and the creatures rejoiced, forever changing the fate of the enchanted forest.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 154
+            },
+            "result_id": "d032cabe03f6",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.9/run1/pilot_data_eval_default_llama-3.1-405b-instruct_1e3e1148b789.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 737,
+                "length_in_words": 128,
+                "length_in_unique_words": 80,
+                "length_in_concepts": 57,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.625,
+                "avg_word_length_in_chars": 4.6328125,
+                "avg_sentence_length_in_chars": 146.6,
+                "avg_sentence_length_in_words": 25.6,
+                "avg_sentence_length_in_unique_words": 21.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 6,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 6,
+                "dsi": 0.21045743997085065,
+                "surprise": 0.011433476813478394,
+                "raw_surprises": [
+                    0.006066570679346711,
+                    0.00528679749904537,
+                    0.0033022230177323364,
+                    0.00821136243083237
+                ],
+                "n_gram_diversity": [
+                    0.625,
+                    0.952755905511811,
+                    0.9920634920634921,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1015625,
+                    0.31496062992125984,
+                    0.5634920634920635,
+                    0.784,
+                    0.9193548387096774
+                ],
+                "avg_dep_num_clauses": 3.6,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.3396311619915204,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 9,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 68.83946575342466,
+                "readability_flesch_kincaid": 10.911698630136986,
+                "avg_pos_noun_ratio": 0.246935817805383,
+                "avg_pos_verb_ratio": 0.18800207039337474,
+                "avg_pos_adj_ratio": 0.07683850931677018,
+                "avg_pos_adv_ratio": 0.017028985507246377,
+                "avg_pos_pron_ratio": 0.061285714285714284,
+                "avg_pos_det_ratio": 0.19593581780538302,
+                "avg_pos_adp_ratio": 0.10531469979296065,
+                "inv_homogen": 0.1337687839632449,
+                "novelty": 0.005271037661621236,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a young artist used a magical stamp to imprint her most cherished recollections onto a canvas, weaving a tapestry of nostalgia. Each brushstroke was a letter to her past self, a reminder of love, laughter, and loss. As she finished the final stroke, she felt an overwhelming urge to send the artwork into the universe, releasing the memories to find new homes. The painting shattered into a thousand pieces, each shard carrying a fragment of her story to distant lands. And as people touched the shards, they felt the memories awaken within them, a testament to the artist's boundless creativity.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 129
+            },
+            "result_id": "2b83460c01e5",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.5/run1/pilot_data_eval_default_llama-3.1-405b-instruct_4c8009175cb5.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 644,
+                "length_in_words": 109,
+                "length_in_unique_words": 75,
+                "length_in_concepts": 51,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6880733944954128,
+                "avg_word_length_in_chars": 4.7889908256880735,
+                "avg_sentence_length_in_chars": 128,
+                "avg_sentence_length_in_words": 21.8,
+                "avg_sentence_length_in_unique_words": 19.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 5,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 0,
+                "length_in_third_person": 7,
+                "dsi": 0.2132071763861413,
+                "surprise": 0.012306862683814382,
+                "raw_surprises": [
+                    0.009047584055544233,
+                    0.00705799247537342,
+                    0.0036090960578313014,
+                    0.004899052778879809
+                ],
+                "n_gram_diversity": [
+                    0.6880733944954128,
+                    0.9907407407407407,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11009174311926606,
+                    0.3425925925925926,
+                    0.5887850467289719,
+                    0.7830188679245284,
+                    0.9142857142857143
+                ],
+                "avg_dep_num_clauses": 3,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.0908265916350066,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 8.4,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 72.50170967741937,
+                "readability_flesch_kincaid": 9.307806451612905,
+                "avg_pos_noun_ratio": 0.31448193760262727,
+                "avg_pos_verb_ratio": 0.12949096880131364,
+                "avg_pos_adj_ratio": 0.06671346469622332,
+                "avg_pos_adv_ratio": 0.006896551724137931,
+                "avg_pos_pron_ratio": 0.06555528188286809,
+                "avg_pos_det_ratio": 0.1945224411603722,
+                "avg_pos_adp_ratio": 0.09495949644225506,
+                "inv_homogen": 0.06942449445309846,
+                "novelty": 0.00022843516896009497,
+                "theme_uniqueness": 0.07692307692307693
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred from one person to another, a young artist discovered she could stamp her thoughts onto canvas, creating vibrant masterpieces that told the stories of her past. One day, she received a mysterious letter - not written on paper, but etched into the fabric of her mind - from a stranger who claimed to possess a memory that would change her life forever. The artist was compelled to send her own memories in response, and as their mental correspondence continued, she found herself unraveling the threads of a long-forgotten history. With each new revelation, her paintings grew more vivid, as if the memories themselves were bursting forth from the colors on her palette. As the mental letters continued to flow, the artist's understanding of her own identity began to shift, like the hues of a sunset on a summer evening.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 170
+            },
+            "result_id": "12e7622405f0",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.5/run1/pilot_data_eval_default_llama-3.1-405b-instruct_00c26504771e.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 867,
+                "length_in_words": 147,
+                "length_in_unique_words": 98,
+                "length_in_concepts": 62,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6666666666666666,
+                "avg_word_length_in_chars": 4.782312925170068,
+                "avg_sentence_length_in_chars": 172.6,
+                "avg_sentence_length_in_words": 29.4,
+                "avg_sentence_length_in_unique_words": 26.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 12,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 0,
+                "length_in_third_person": 14,
+                "dsi": 0.20775517485622122,
+                "surprise": 0.008334865643027656,
+                "raw_surprises": [
+                    0.0025124574700991498,
+                    0.004788384638426513,
+                    0.006870670254559452,
+                    0.0024982189229701968
+                ],
+                "n_gram_diversity": [
+                    0.6666666666666666,
+                    0.9657534246575342,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08163265306122448,
+                    0.3150684931506849,
+                    0.6137931034482759,
+                    0.8194444444444444,
+                    0.9230769230769231
+                ],
+                "avg_dep_num_clauses": 3.6,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.2742087260565524,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 11.8,
+                "max_constituency_tree_depth": 14,
+                "readability_flesch_ease": 62.59090909090911,
+                "readability_flesch_kincaid": 12.72727272727273,
+                "avg_pos_noun_ratio": 0.2434782608695652,
+                "avg_pos_verb_ratio": 0.1535257581293387,
+                "avg_pos_adj_ratio": 0.06360979174278407,
+                "avg_pos_adv_ratio": 0.0304165144318597,
+                "avg_pos_pron_ratio": 0.12062477164778955,
+                "avg_pos_det_ratio": 0.12440628425283157,
+                "avg_pos_adp_ratio": 0.12188527584947022,
+                "inv_homogen": 0.08656236399774966,
+                "novelty": 0.010675567890880089,
+                "theme_uniqueness": 0.07692307692307693
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a small antique shop sold a peculiar stamp that, when applied to one's forehead, would etch a chosen memory forever. Emma purchased the stamp and decided to relive the moment she received a heartfelt letter from her late grandmother, whose words of love and wisdom she treasured. To send herself back in time, she sat in silence, focusing on the engraved memory, and the world around her began to fade. The last thing she remembered was the shop owner's knowing smile before everything went dark, and she was a child again, clutching the letter in her small hands. As she opened it, her grandmother's love poured out, now etched in her mind forever.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 146
+            },
+            "result_id": "dfcbaecfd655",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_4d7cce66d3b5.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 697,
+                "length_in_words": 124,
+                "length_in_unique_words": 82,
+                "length_in_concepts": 49,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6612903225806451,
+                "avg_word_length_in_chars": 4.524193548387097,
+                "avg_sentence_length_in_chars": 138.6,
+                "avg_sentence_length_in_words": 24.8,
+                "avg_sentence_length_in_unique_words": 22,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 13,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 13,
+                "dsi": 0.20656375632602342,
+                "surprise": 0.007410935779194244,
+                "raw_surprises": [
+                    0.009905468107579807,
+                    0.0023131639238387625,
+                    0.0011177191876957648,
+                    0.0014855203392741545
+                ],
+                "n_gram_diversity": [
+                    0.6612903225806451,
+                    0.991869918699187,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10483870967741936,
+                    0.42276422764227645,
+                    0.7786885245901639,
+                    0.9256198347107438,
+                    0.9833333333333333
+                ],
+                "avg_dep_num_clauses": 4.4,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.1198839308666733,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 9.4,
+                "max_constituency_tree_depth": 15,
+                "readability_flesch_ease": 76.89500000000002,
+                "readability_flesch_kincaid": 9.489999999999998,
+                "avg_pos_noun_ratio": 0.21378963296129713,
+                "avg_pos_verb_ratio": 0.18008426342384362,
+                "avg_pos_adj_ratio": 0.06488977733355544,
+                "avg_pos_adv_ratio": 0.047488755622188905,
+                "avg_pos_pron_ratio": 0.132791937364651,
+                "avg_pos_det_ratio": 0.10219334777055916,
+                "avg_pos_adp_ratio": 0.09528707868288078,
+                "inv_homogen": 0.09289605462032816,
+                "novelty": 0.013058404951275693,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a young artist used a magical stamp to imprint her most cherished recollections onto a canvas, weaving a tapestry of nostalgia. Each brushstroke was a letter to her past self, a reminder of love, laughter, and loss. As she finished the final stroke, the artwork began to glow, and she knew it was time to send it out into the universe, where it would find its way to those who needed it most. The painting drifted away like a leaf on a breeze, carrying the weight of her memories to distant shores. There, it would be received by kindred spirits, who would unravel its secrets and find solace in its beauty.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 141
+            },
+            "result_id": "7d60946a79f1",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.5/run1/pilot_data_eval_default_llama-3.1-405b-instruct_e4cde96dc45a.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 655,
+                "length_in_words": 119,
+                "length_in_unique_words": 79,
+                "length_in_concepts": 52,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6638655462184874,
+                "avg_word_length_in_chars": 4.378151260504202,
+                "avg_sentence_length_in_chars": 130.2,
+                "avg_sentence_length_in_words": 23.8,
+                "avg_sentence_length_in_unique_words": 20.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 13,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 13,
+                "dsi": 0.212361133521139,
+                "surprise": 0.013810964557396513,
+                "raw_surprises": [
+                    0.009047584055544233,
+                    0.010736787002601916,
+                    0.0065879006207962,
+                    0.0012496574358506762
+                ],
+                "n_gram_diversity": [
+                    0.6638655462184874,
+                    0.9915254237288136,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09243697478991597,
+                    0.3983050847457627,
+                    0.6752136752136753,
+                    0.8706896551724138,
+                    0.9565217391304348
+                ],
+                "avg_dep_num_clauses": 3.6,
+                "max_dep_num_clauses": 8,
+                "avg_dep_path_length": 3.537930378451276,
+                "max_dep_path_length": 13,
+                "avg_constituency_tree_depth": 10.8,
+                "max_constituency_tree_depth": 19,
+                "readability_flesch_ease": 77.91000000000001,
+                "readability_flesch_kincaid": 9.100000000000001,
+                "avg_pos_noun_ratio": 0.27571334946561804,
+                "avg_pos_verb_ratio": 0.12963299052228272,
+                "avg_pos_adj_ratio": 0.04927152651744303,
+                "avg_pos_adv_ratio": 0.03350473885864085,
+                "avg_pos_pron_ratio": 0.12202813067150635,
+                "avg_pos_det_ratio": 0.13075468844525107,
+                "avg_pos_adp_ratio": 0.12551421657592257,
+                "inv_homogen": 0.06490962919981583,
+                "novelty": 0.0014636505610445272,
+                "theme_uniqueness": 0.07692307692307693
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a young artist discovered a magical stamp that could imprint her most treasured recollections onto canvas. As she painted, a swirling letter of golden light danced across her brushstrokes, weaving the essence of her past into vibrant colors. With each stroke, the memories took shape, preparing to send ripples of nostalgia through the hearts of all who beheld the artwork. As the final brushstroke fell, the painting burst into life, releasing a symphony of laughter, tears, and whispers from a bygone era. In the silence that followed, the artist smiled, knowing her memories had been set free to send solace to those who needed it most.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 141
+            },
+            "result_id": "a12335f1a392",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.9/run1/pilot_data_eval_default_llama-3.1-405b-instruct_d94d36655872.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 687,
+                "length_in_words": 114,
+                "length_in_unique_words": 82,
+                "length_in_concepts": 54,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.7192982456140351,
+                "avg_word_length_in_chars": 4.894736842105263,
+                "avg_sentence_length_in_chars": 136.6,
+                "avg_sentence_length_in_words": 22.8,
+                "avg_sentence_length_in_unique_words": 20.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 6,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 6,
+                "dsi": 0.21566150435861553,
+                "surprise": 0.014181116376167702,
+                "raw_surprises": [
+                    0.013803553400617674,
+                    0.003983795642852783,
+                    0.00419385755534496,
+                    0.006381026153519986
+                ],
+                "n_gram_diversity": [
+                    0.7192982456140351,
+                    0.9911504424778761,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09649122807017543,
+                    0.3274336283185841,
+                    0.6160714285714286,
+                    0.8468468468468469,
+                    0.9636363636363636
+                ],
+                "avg_dep_num_clauses": 3.2,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.475275578080456,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 10.6,
+                "max_constituency_tree_depth": 15,
+                "readability_flesch_ease": 74.36961538461541,
+                "readability_flesch_kincaid": 9.345384615384617,
+                "avg_pos_noun_ratio": 0.26515151515151514,
+                "avg_pos_verb_ratio": 0.18409090909090908,
+                "avg_pos_adj_ratio": 0.0696969696969697,
+                "avg_pos_adv_ratio": 0.016666666666666666,
+                "avg_pos_pron_ratio": 0.10378787878787879,
+                "avg_pos_det_ratio": 0.13257575757575757,
+                "avg_pos_adp_ratio": 0.13333333333333333,
+                "inv_homogen": 0.07158870282380478,
+                "novelty": 0.005137091113908532,
+                "theme_uniqueness": 0.07692307692307693
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a skilled artisan would carefully craft a memory stamp, a small metal plate etched with intricate patterns that held the essence of a moment. A young woman, seeking to relive a cherished recollection, commissioned the artisan to create a stamp that would transport her back to the day she received a heartfelt letter from a long-lost love. As she pressed the stamp into her mind, the vivid memories came flooding back, and she felt the urge to send a whispered message to her past self, urging her to hold on to the love that was about to slip away. The memory echoed through time, a ripple in the fabric of her past, and she felt a sense of peace wash over her. And in that moment, she knew that she had finally found closure.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 163
+            },
+            "result_id": "4fb9017acda8",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.95/run1/pilot_data_eval_default_llama-3.1-405b-instruct_a0d10a04fbf2.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 775,
+                "length_in_words": 143,
+                "length_in_unique_words": 85,
+                "length_in_concepts": 58,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.5944055944055944,
+                "avg_word_length_in_chars": 4.321678321678322,
+                "avg_sentence_length_in_chars": 154.2,
+                "avg_sentence_length_in_words": 28.6,
+                "avg_sentence_length_in_unique_words": 23.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 12,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 12,
+                "dsi": 0.20713508587062396,
+                "surprise": 0.01566728887702125,
+                "raw_surprises": [
+                    0.0032118458081694112,
+                    0.008541804513120949,
+                    0.006914983465780622,
+                    0.012665943966971516
+                ],
+                "n_gram_diversity": [
+                    0.5944055944055944,
+                    0.971830985915493,
+                    0.9929078014184397,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07692307692307693,
+                    0.323943661971831,
+                    0.6170212765957447,
+                    0.8071428571428572,
+                    0.9280575539568345
+                ],
+                "avg_dep_num_clauses": 4,
+                "max_dep_num_clauses": 8,
+                "avg_dep_path_length": 3.5811381106487903,
+                "max_dep_path_length": 12,
+                "avg_constituency_tree_depth": 12.2,
+                "max_constituency_tree_depth": 17,
+                "readability_flesch_ease": 74.52781132075472,
+                "readability_flesch_kincaid": 10.764201257861636,
+                "avg_pos_noun_ratio": 0.2399083546462063,
+                "avg_pos_verb_ratio": 0.15023444160272803,
+                "avg_pos_adj_ratio": 0.05544467787114846,
+                "avg_pos_adv_ratio": 0.04420518207282913,
+                "avg_pos_pron_ratio": 0.11188877725003045,
+                "avg_pos_det_ratio": 0.15393526976007793,
+                "avg_pos_adp_ratio": 0.10970725246620387,
+                "inv_homogen": 0.08735533382581628,
+                "novelty": 0.011915745862074612,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred from one person to another, a skilled Memory Keeper would stamp a person's forehead with a glowing seal, unlocking the door to their mind. A young apprentice, eager to master the art, penned a heartfelt letter to her mentor, begging for the chance to prove herself. As she poured her emotions onto the page, the words began to shimmer and lift off, carrying her thoughts to the Memory Keeper's chambers. The Keeper, sensing the apprentice's determination, chose to send her on a perilous journey to collect a rare memory from the depths of a long-forgotten era. With each step, the apprentice felt the weight of her mentor's trust, the letter's words etched in her mind like a beacon guiding her forward.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 156
+            },
+            "result_id": "189f2e87f52e",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.9/run1/pilot_data_eval_default_llama-3.1-405b-instruct_6394dd258cd5.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 751,
+                "length_in_words": 135,
+                "length_in_unique_words": 82,
+                "length_in_concepts": 56,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6074074074074074,
+                "avg_word_length_in_chars": 4.488888888888889,
+                "avg_sentence_length_in_chars": 149.4,
+                "avg_sentence_length_in_words": 27,
+                "avg_sentence_length_in_unique_words": 22.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 9,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 10,
+                "dsi": 0.208215898352784,
+                "surprise": 0.005074293188480308,
+                "raw_surprises": [
+                    0.0015005190750379815,
+                    0.0041154117295236214,
+                    0.004438427309969295,
+                    9.42282624297186e-05
+                ],
+                "n_gram_diversity": [
+                    0.6074074074074074,
+                    0.9776119402985075,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0962962962962963,
+                    0.3283582089552239,
+                    0.6015037593984962,
+                    0.8333333333333334,
+                    0.916030534351145
+                ],
+                "avg_dep_num_clauses": 3,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.4552996227318853,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 9.2,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 73.01189473684212,
+                "readability_flesch_kincaid": 10.62784210526316,
+                "avg_pos_noun_ratio": 0.24346320346320346,
+                "avg_pos_verb_ratio": 0.15854256854256854,
+                "avg_pos_adj_ratio": 0.047619047619047616,
+                "avg_pos_adv_ratio": 0.01455026455026455,
+                "avg_pos_pron_ratio": 0.08366810966810967,
+                "avg_pos_det_ratio": 0.17056084656084655,
+                "avg_pos_adp_ratio": 0.12354304954304954,
+                "inv_homogen": 0.09733497578164806,
+                "novelty": 0.009754120897754515,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred from one person to another, the old man possessed a magical stamp that could imprint his most cherished recollections onto the minds of others. He had written a letter to his granddaughter, but not with words - it was a symphony of emotions, a harmony of laughter and tears that he wished to share with her. As he placed the stamp on her forehead, the memories began to flow, and she felt the joy and the sorrow as if they were her own. With a gentle smile, he chose to send her one final remembrance - the feeling of his warm, comforting presence. And as the memory faded, she knew she would carry his love with her forever.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 143
+            },
+            "result_id": "6e2867f16dd2",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.7/run1/pilot_data_eval_default_llama-3.1-405b-instruct_b8b4280185c3.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 672,
+                "length_in_words": 124,
+                "length_in_unique_words": 80,
+                "length_in_concepts": 46,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6451612903225806,
+                "avg_word_length_in_chars": 4.290322580645161,
+                "avg_sentence_length_in_chars": 133.6,
+                "avg_sentence_length_in_words": 24.8,
+                "avg_sentence_length_in_unique_words": 21.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 17,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 18,
+                "dsi": 0.2072503490148535,
+                "surprise": 0.010616146422858921,
+                "raw_surprises": [
+                    0.004471728032007655,
+                    0.0024022390144039785,
+                    0.0022320018874274206,
+                    0.012126323911878789
+                ],
+                "n_gram_diversity": [
+                    0.6451612903225806,
+                    0.991869918699187,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0967741935483871,
+                    0.3983739837398374,
+                    0.7377049180327869,
+                    0.8925619834710744,
+                    0.9833333333333333
+                ],
+                "avg_dep_num_clauses": 3.8,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 2.8465234544951263,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 9.2,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 75.7590071942446,
+                "readability_flesch_kincaid": 9.59876258992806,
+                "avg_pos_noun_ratio": 0.2074218700874049,
+                "avg_pos_verb_ratio": 0.1393134157077281,
+                "avg_pos_adj_ratio": 0.05773635477582846,
+                "avg_pos_adv_ratio": 0.019583333333333335,
+                "avg_pos_pron_ratio": 0.17940899515814626,
+                "avg_pos_det_ratio": 0.10837043325158775,
+                "avg_pos_adp_ratio": 0.10530143683581714,
+                "inv_homogen": 0.10307291020517764,
+                "novelty": 0.011685219573615513,
+                "theme_uniqueness": 0.2
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the mystical realm of Aethoria, a young apprentice named Eira discovered a magical stamp that could imbue objects with the essence of memories. She decided to craft a letter, not of words, but of intricate wooden carvings that told the story of her people's ancient history. As she pressed the stamp onto the carvings, the memories burst forth, and the wooden letter began to glow. With a gentle whisper, Eira commanded the letter to send its essence to the hearts of her people, reminding them of their forgotten heritage. As the magic unfolded, the entire realm was bathed in a warm, golden light, and the memories of Aethoria's past were reborn.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 143
+            },
+            "result_id": "52c66a94eb1e",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.7/run1/pilot_data_eval_default_llama-3.1-405b-instruct_6c2204494e54.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 651,
+                "length_in_words": 114,
+                "length_in_unique_words": 69,
+                "length_in_concepts": 48,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6052631578947368,
+                "avg_word_length_in_chars": 4.605263157894737,
+                "avg_sentence_length_in_chars": 129.4,
+                "avg_sentence_length_in_words": 22.8,
+                "avg_sentence_length_in_unique_words": 20.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 5,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 0,
+                "length_in_third_person": 7,
+                "dsi": 0.21026972971909436,
+                "surprise": 0.010298439257284409,
+                "raw_surprises": [
+                    0.004020320825325913,
+                    0.007317192747135354,
+                    0.004091892398969094,
+                    0.005167472543138457
+                ],
+                "n_gram_diversity": [
+                    0.6052631578947368,
+                    0.9557522123893806,
+                    0.9910714285714286,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10526315789473684,
+                    0.3893805309734513,
+                    0.7142857142857143,
+                    0.9009009009009009,
+                    0.9818181818181818
+                ],
+                "avg_dep_num_clauses": 3,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.240783762112459,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 9.4,
+                "max_constituency_tree_depth": 14,
+                "readability_flesch_ease": 73.09451162790701,
+                "readability_flesch_kincaid": 9.473550387596902,
+                "avg_pos_noun_ratio": 0.2272501906941266,
+                "avg_pos_verb_ratio": 0.14282990083905414,
+                "avg_pos_adj_ratio": 0.10364225781845919,
+                "avg_pos_adv_ratio": 0.010526315789473684,
+                "avg_pos_pron_ratio": 0.07719298245614034,
+                "avg_pos_det_ratio": 0.1518878718535469,
+                "avg_pos_adp_ratio": 0.11958428680396643,
+                "inv_homogen": 0.09709709105284317,
+                "novelty": 0.005646458165133816,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred from one person to another, a young artist discovered she could send fragments of her past through the intricate designs she carved onto a wooden stamp. Each time she pressed the stamp into the soft earth, a piece of her history would emerge as a glowing, ethereal letter that danced in the air. Those who witnessed this phenomenon could absorb the memories, reliving moments from her life as if they were their own. As word of her abilities spread, people came from far and wide to experience the stories she left imprinted on the land. And with each stamp of her art, the boundaries between past and present began to blur.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 134
+            },
+            "result_id": "f5b74f58c225",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.95/run1/pilot_data_eval_default_llama-3.1-405b-instruct_bb292ba51973.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 671,
+                "length_in_words": 119,
+                "length_in_unique_words": 82,
+                "length_in_concepts": 50,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6890756302521008,
+                "avg_word_length_in_chars": 4.554621848739496,
+                "avg_sentence_length_in_chars": 133.4,
+                "avg_sentence_length_in_words": 23.8,
+                "avg_sentence_length_in_unique_words": 22,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 9,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 0,
+                "length_in_third_person": 11,
+                "dsi": 0.2087324734609954,
+                "surprise": 0.010607148340214409,
+                "raw_surprises": [
+                    0.00020158893459445992,
+                    0.01319404421271858,
+                    0.004007653885589518,
+                    0.003811009647526259
+                ],
+                "n_gram_diversity": [
+                    0.6890756302521008,
+                    0.9745762711864406,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10084033613445378,
+                    0.3644067796610169,
+                    0.6324786324786325,
+                    0.8362068965517241,
+                    0.9391304347826087
+                ],
+                "avg_dep_num_clauses": 3.4,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.0916097445413984,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 9.2,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 75.02038461538464,
+                "readability_flesch_kincaid": 9.254615384615388,
+                "avg_pos_noun_ratio": 0.22186522083580906,
+                "avg_pos_verb_ratio": 0.14620617944147354,
+                "avg_pos_adj_ratio": 0.08396019013666073,
+                "avg_pos_adv_ratio": 0.00909090909090909,
+                "avg_pos_pron_ratio": 0.1264334521687463,
+                "avg_pos_det_ratio": 0.1311556743909685,
+                "avg_pos_adp_ratio": 0.13969647454941572,
+                "inv_homogen": 0.07632133235102115,
+                "novelty": 0.008720970681331708,
+                "theme_uniqueness": 0.07692307692307693
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a young artist used a magical stamp to imprint her most cherished recollections onto a canvas, weaving a tapestry of nostalgia. Each brushstroke was a letter to her past, a message of love and longing that seemed to reverberate through the colors. As she finished her masterpiece, she decided to send it to the mystical Library of Lost Moments, where it would be preserved for eternity. There, it would be cherished by the guardians of memories, who would use its essence to nourish the dreams of those who sought solace in the past. And so, the artist's memories were set free, a testament to the power of art to transcend time and space.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 144
+            },
+            "result_id": "46ce3a53707e",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.7/run1/pilot_data_eval_default_llama-3.1-405b-instruct_6cb46d8de908.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 687,
+                "length_in_words": 122,
+                "length_in_unique_words": 78,
+                "length_in_concepts": 48,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.639344262295082,
+                "avg_word_length_in_chars": 4.532786885245901,
+                "avg_sentence_length_in_chars": 136.6,
+                "avg_sentence_length_in_words": 24.4,
+                "avg_sentence_length_in_unique_words": 21,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 9,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 9,
+                "dsi": 0.21344123986807276,
+                "surprise": 0.010908300244910088,
+                "raw_surprises": [
+                    0.006883154203603553,
+                    0.0049517756416684044,
+                    0.0036336792839898047,
+                    0.006347991360558414
+                ],
+                "n_gram_diversity": [
+                    0.639344262295082,
+                    0.9752066115702479,
+                    0.9916666666666667,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09836065573770492,
+                    0.38016528925619836,
+                    0.725,
+                    0.8991596638655462,
+                    0.9830508474576272
+                ],
+                "avg_dep_num_clauses": 3.4,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.398489607516456,
+                "max_dep_path_length": 12,
+                "avg_constituency_tree_depth": 12.2,
+                "max_constituency_tree_depth": 19,
+                "readability_flesch_ease": 74.09905882352942,
+                "readability_flesch_kincaid": 9.681235294117648,
+                "avg_pos_noun_ratio": 0.24220945083014048,
+                "avg_pos_verb_ratio": 0.12864440795475277,
+                "avg_pos_adj_ratio": 0.03854679802955665,
+                "avg_pos_adv_ratio": 0.02382776865535486,
+                "avg_pos_pron_ratio": 0.10464787447546069,
+                "avg_pos_det_ratio": 0.13170498084291188,
+                "avg_pos_adp_ratio": 0.12293833242109103,
+                "inv_homogen": 0.07125262332999188,
+                "novelty": 0.0006965621328229865,
+                "theme_uniqueness": 0.07692307692307693
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the mystical realm of Aethereia, a young apprentice named Lyra was tasked with creating a magical stamp that would imbue any object with the essence of the elements. She carefully crafted a letter of intent, weaving intricate symbols that danced across the parchment, as she prepared to infuse the stamp with her own vital energy. With a deep breath, Lyra raised her hands to send the elemental forces coursing through the stamp, and a brilliant light erupted, bathing the room in an ethereal glow. As the light faded, Lyra beheld the stamp, now pulsing with an inner radiance, ready to imbue the world with its magical essence. With her creation complete, Lyra knew that nothing would ever be the same again.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 153
+            },
+            "result_id": "ebc294f8e57b",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.7/run1/pilot_data_eval_default_llama-3.1-405b-instruct_ba3ad8d9c779.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 712,
+                "length_in_words": 122,
+                "length_in_unique_words": 78,
+                "length_in_concepts": 53,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.639344262295082,
+                "avg_word_length_in_chars": 4.721311475409836,
+                "avg_sentence_length_in_chars": 141.6,
+                "avg_sentence_length_in_words": 24.4,
+                "avg_sentence_length_in_unique_words": 21.8,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 6,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 6,
+                "dsi": 0.2073406536451099,
+                "surprise": 0.001989334308620777,
+                "raw_surprises": [
+                    0.0020316801665030138,
+                    0.0006344940828829915,
+                    0.0004652067007522298,
+                    0.0008472876671033192
+                ],
+                "n_gram_diversity": [
+                    0.639344262295082,
+                    0.9752066115702479,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09836065573770492,
+                    0.38016528925619836,
+                    0.6583333333333333,
+                    0.8487394957983193,
+                    0.9491525423728814
+                ],
+                "avg_dep_num_clauses": 3.4,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.209874840613046,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 10.8,
+                "max_constituency_tree_depth": 14,
+                "readability_flesch_ease": 74.04589781021899,
+                "readability_flesch_kincaid": 9.738335766423358,
+                "avg_pos_noun_ratio": 0.20614930629923134,
+                "avg_pos_verb_ratio": 0.14817432553564489,
+                "avg_pos_adj_ratio": 0.11087075509864115,
+                "avg_pos_adv_ratio": 0.04467448815274902,
+                "avg_pos_pron_ratio": 0.08068981382324711,
+                "avg_pos_det_ratio": 0.15404916589324386,
+                "avg_pos_adp_ratio": 0.09478594036315176,
+                "inv_homogen": 0.11237348680910857,
+                "novelty": 0.011504610313102737,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a young artist used a magical stamp to imprint her most cherished recollections onto a canvas, weaving a tapestry of love and loss. Each brushstroke was a letter to her past, a message of hope and resilience that transcended time and space. As she finished her masterpiece, she felt an overwhelming urge to send it soaring into the universe, where it would touch the hearts of all who saw it. The painting took flight, a kaleidoscope of color and emotion that danced among the stars. And as it traveled, the memories it held were released, a gentle rain of love that nourished the souls of all who received it.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 138
+            },
+            "result_id": "355891d2ab03",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.9/run1/pilot_data_eval_default_llama-3.1-405b-instruct_ddc41e064de3.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 658,
+                "length_in_words": 117,
+                "length_in_unique_words": 77,
+                "length_in_concepts": 51,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6581196581196581,
+                "avg_word_length_in_chars": 4.521367521367521,
+                "avg_sentence_length_in_chars": 130.8,
+                "avg_sentence_length_in_words": 23.4,
+                "avg_sentence_length_in_unique_words": 20.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 11,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 11,
+                "dsi": 0.21143816185932535,
+                "surprise": 0.018856291247136683,
+                "raw_surprises": [
+                    0.0019959552893563104,
+                    0.021060751483897966,
+                    0.012250071183427608,
+                    0.0024058045375914827
+                ],
+                "n_gram_diversity": [
+                    0.6581196581196581,
+                    0.9741379310344828,
+                    0.991304347826087,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09401709401709402,
+                    0.29310344827586204,
+                    0.5391304347826087,
+                    0.7543859649122807,
+                    0.8584070796460177
+                ],
+                "avg_dep_num_clauses": 4.6,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.466622823984526,
+                "max_dep_path_length": 12,
+                "avg_constituency_tree_depth": 11,
+                "max_constituency_tree_depth": 18,
+                "readability_flesch_ease": 77.62346153846157,
+                "readability_flesch_kincaid": 8.891538461538463,
+                "avg_pos_noun_ratio": 0.2841798043495836,
+                "avg_pos_verb_ratio": 0.1475232435928531,
+                "avg_pos_adj_ratio": 0.0348310291858679,
+                "avg_pos_adv_ratio": 0.0064516129032258064,
+                "avg_pos_pron_ratio": 0.14798043495836366,
+                "avg_pos_det_ratio": 0.1502655833131215,
+                "avg_pos_adp_ratio": 0.0980265179076724,
+                "inv_homogen": 0.07311742202095363,
+                "novelty": 0.0033095938846718354,
+                "theme_uniqueness": 0.07692307692307693
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a young artist discovered she could stamp her thoughts onto canvas, creating vibrant masterpieces that told the story of her past. One day, she received a mysterious letter from an unknown sender, but it wasn't written in words - it was a melody that echoed in her mind. Inspired, she decided to send her own symphony of memories back to the unknown sender, using her art as a vessel. As she painted, the colors swirled and danced, carrying her memories into the air, where they merged with the melody, creating a harmonious union. In that moment, she knew she had found a kindred spirit, connected through the universal language of art.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 144
+            },
+            "result_id": "a84688698218",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_4612511f2044.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 685,
+                "length_in_words": 119,
+                "length_in_unique_words": 78,
+                "length_in_concepts": 49,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6554621848739496,
+                "avg_word_length_in_chars": 4.61344537815126,
+                "avg_sentence_length_in_chars": 136.2,
+                "avg_sentence_length_in_words": 23.8,
+                "avg_sentence_length_in_unique_words": 21.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 14,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 15,
+                "dsi": 0.20710011069871942,
+                "surprise": 0.020311214956542298,
+                "raw_surprises": [
+                    0.012495982182490373,
+                    0.008579107938390812,
+                    0.0066451371619195565,
+                    0.012902202630283854
+                ],
+                "n_gram_diversity": [
+                    0.6554621848739496,
+                    0.9830508474576272,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10084033613445378,
+                    0.3220338983050847,
+                    0.6068376068376068,
+                    0.8017241379310345,
+                    0.9304347826086956
+                ],
+                "avg_dep_num_clauses": 4,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.12888796475753,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 10.6,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 75.89845255474454,
+                "readability_flesch_kincaid": 9.479941605839418,
+                "avg_pos_noun_ratio": 0.23334701696770663,
+                "avg_pos_verb_ratio": 0.1892446633825944,
+                "avg_pos_adj_ratio": 0.06709998175515416,
+                "avg_pos_adv_ratio": 0.009523809523809523,
+                "avg_pos_pron_ratio": 0.14041689472723956,
+                "avg_pos_det_ratio": 0.12862616310892172,
+                "avg_pos_adp_ratio": 0.12148330596606458,
+                "inv_homogen": 0.08554348479146542,
+                "novelty": 0.011985696205883689,
+                "theme_uniqueness": 0.07692307692307693
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred from one person to another, a young artist discovered she could stamp her thoughts onto canvas, creating vibrant masterpieces that captured the essence of her experiences. One day, she received a mysterious letter - not written on paper, but etched into the fabric of her mind - from a stranger who claimed to possess the key to unlocking the secrets of the universe. To respond, she would have to send a piece of her own soul, woven into the threads of a tapestry that would transcend space and time. As she worked on the intricate design, she felt her very being merging with the cosmos. When the tapestry was complete, she released it into the void, and the stranger's presence whispered back, \"I have received your message.\"",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 157
+            },
+            "result_id": "911aa717752b",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.5/run1/pilot_data_eval_default_llama-3.1-405b-instruct_900be80731f6.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 775,
+                "length_in_words": 134,
+                "length_in_unique_words": 89,
+                "length_in_concepts": 54,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.664179104477612,
+                "avg_word_length_in_chars": 4.641791044776119,
+                "avg_sentence_length_in_chars": 154.2,
+                "avg_sentence_length_in_words": 26.8,
+                "avg_sentence_length_in_unique_words": 23.4,
+                "length_in_first_person_singular": 1,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 1,
+                "length_in_third_person_singular": 12,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 1,
+                "length_in_third_person": 12,
+                "dsi": 0.20563976132394882,
+                "surprise": 0.008160525063673665,
+                "raw_surprises": [
+                    0.003761460880438494,
+                    0.0031611795226732797,
+                    0.0045741041501363155,
+                    0.004824305574099241
+                ],
+                "n_gram_diversity": [
+                    0.664179104477612,
+                    0.9699248120300752,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08955223880597014,
+                    0.3383458646616541,
+                    0.6439393939393939,
+                    0.8396946564885496,
+                    0.9384615384615385
+                ],
+                "avg_dep_num_clauses": 4,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.438801089714883,
+                "max_dep_path_length": 12,
+                "avg_constituency_tree_depth": 12,
+                "max_constituency_tree_depth": 16,
+                "readability_flesch_ease": 72.376,
+                "readability_flesch_kincaid": 10.766222222222225,
+                "avg_pos_noun_ratio": 0.21900185492257104,
+                "avg_pos_verb_ratio": 0.16574597397487423,
+                "avg_pos_adj_ratio": 0.04636695146285939,
+                "avg_pos_adv_ratio": 0.021195652173913043,
+                "avg_pos_pron_ratio": 0.14191415362131474,
+                "avg_pos_det_ratio": 0.1260966527079059,
+                "avg_pos_adp_ratio": 0.12047005424243276,
+                "inv_homogen": 0.09368156091026637,
+                "novelty": 0.014906394955424895,
+                "theme_uniqueness": 0.07692307692307693
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "As the clock struck midnight, a mysterious artist known only by their pseudonym, \"The Phantom Painter,\" would send ripples through the city's art scene by unveiling a new masterpiece. Their latest creation, a mural titled \"Rebel's Letter,\" sprawled across the side of a skyscraper, its vibrant colors and bold message igniting a firestorm of controversy. At the artwork's center, a giant, crimson stamp seemed to pulse with an inner light, as if sealing the city's fate. Those who gazed upon the mural reported feeling an inexplicable urge to challenge the status quo, as if The Phantom Painter had imbued the artwork with a revolutionary spirit. As the sun rose, the city trembled, awaiting the artist's next move.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 153
+            },
+            "result_id": "7168a4557183",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_f97598ffe515.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 715,
+                "length_in_words": 122,
+                "length_in_unique_words": 83,
+                "length_in_concepts": 57,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.680327868852459,
+                "avg_word_length_in_chars": 4.737704918032787,
+                "avg_sentence_length_in_chars": 142.2,
+                "avg_sentence_length_in_words": 24.4,
+                "avg_sentence_length_in_unique_words": 21.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 0,
+                "length_in_third_person": 3,
+                "dsi": 0.2118799663650661,
+                "surprise": 0.003354601415933356,
+                "raw_surprises": [
+                    0.0015173720378501843,
+                    0.00028939969611890826,
+                    0.0009312716397372189,
+                    0.0039711594581604
+                ],
+                "n_gram_diversity": [
+                    0.680327868852459,
+                    0.9338842975206612,
+                    0.9833333333333333,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09836065573770492,
+                    0.36363636363636365,
+                    0.65,
+                    0.8487394957983193,
+                    0.9661016949152542
+                ],
+                "avg_dep_num_clauses": 2.6,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.0082167594678513,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 8,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 76.64096503496505,
+                "readability_flesch_kincaid": 9.674489510489511,
+                "avg_pos_noun_ratio": 0.2830465963599397,
+                "avg_pos_verb_ratio": 0.15561245018516384,
+                "avg_pos_adj_ratio": 0.0821245787362729,
+                "avg_pos_adv_ratio": 0.006666666666666666,
+                "avg_pos_pron_ratio": 0.035274584929757345,
+                "avg_pos_det_ratio": 0.18527872815728888,
+                "avg_pos_adp_ratio": 0.07520573046809928,
+                "inv_homogen": 0.15574381921602332,
+                "novelty": 0.0024259848731903455,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a tiny, mystical realm, a young apprentice learned the ancient art of dreamweaving, where a delicate stamp of her thumb could imbue the fabric of reality with vibrant, ethereal colors. One day, she received a cryptic letter from a mysterious sorceress, beckoning her to a hidden glade where the moon dipped into the horizon. There, the apprentice was tasked to send a whispered secret to the trees, which would carry the message to the sorceress on the wind. As the words left her lips, the trees began to glow with a soft, luminescent light, and the apprentice knew that her message had been received. The sorceress appeared, her eyes shining with approval, and the apprentice knew that her journey as a dreamweaver had just begun.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 162
+            },
+            "result_id": "905892914112",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_14c6fc0089d7.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 735,
+                "length_in_words": 126,
+                "length_in_unique_words": 78,
+                "length_in_concepts": 53,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6190476190476191,
+                "avg_word_length_in_chars": 4.698412698412699,
+                "avg_sentence_length_in_chars": 146.2,
+                "avg_sentence_length_in_words": 25.2,
+                "avg_sentence_length_in_unique_words": 21.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 7,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 7,
+                "dsi": 0.20882650980582604,
+                "surprise": 0.010386770806205106,
+                "raw_surprises": [
+                    0.0009277797106540531,
+                    0.0005463364750447897,
+                    0.009048983327343912,
+                    0.010250442099367457
+                ],
+                "n_gram_diversity": [
+                    0.6190476190476191,
+                    0.928,
+                    0.967741935483871,
+                    0.975609756097561,
+                    0.9836065573770492
+                ],
+                "pos_diversity": [
+                    0.10317460317460317,
+                    0.32,
+                    0.5967741935483871,
+                    0.8130081300813008,
+                    0.9180327868852459
+                ],
+                "avg_dep_num_clauses": 2.8,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.476629193012539,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 9.8,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 71.26550000000002,
+                "readability_flesch_kincaid": 10.473944444444445,
+                "avg_pos_noun_ratio": 0.25490960652250977,
+                "avg_pos_verb_ratio": 0.1477933356965615,
+                "avg_pos_adj_ratio": 0.08554590570719603,
+                "avg_pos_adv_ratio": 0.017857142857142856,
+                "avg_pos_pron_ratio": 0.06588384733546024,
+                "avg_pos_det_ratio": 0.18326539052345503,
+                "avg_pos_adp_ratio": 0.10899799125605578,
+                "inv_homogen": 0.1262120500854824,
+                "novelty": 0.008532897991670452,
+                "theme_uniqueness": 0.25
+            }
+        }
+    ]
+}

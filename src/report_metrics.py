@@ -159,10 +159,10 @@ def compute_metrics(results, config):
     metrics["avg_raw_surprises"] = [mean([result["metrics"]["raw_surprises"][surprise_idx] for result in results if "metrics" in result and surprise_idx < len(result["metrics"]["raw_surprises"])]) for surprise_idx in range(max([len(r["metrics"]["raw_surprises"]) for r in results if "metrics" in r]))]
     metrics["avg_n_gram_diversity"] = [mean([result["metrics"]["n_gram_diversity"][n_gram_len-1] for result in results]) for n_gram_len in range(1, config["max_n_gram"]+1)]
     metrics["avg_pos_diversity"] = [mean([result["metrics"]["pos_diversity"][n_gram_len-1] for result in results]) for n_gram_len in range(1, config["max_n_gram"]+1)]
-    metrics["avg_dependency_num_clauses"] = mean([result["metrics"]["avg_dependency_num_clauses"] for result in results])
-    metrics["avg_max_dependency_num_clauses"] = mean([result["metrics"]["max_dependency_num_clauses"] for result in results])
-    metrics["avg_dependency_path_length"] = mean([result["metrics"]["avg_dependency_path_length"] for result in results])
-    metrics["avg_max_dependency_path_length"] = mean([result["metrics"]["max_dependency_path_length"] for result in results])
+    metrics["avg_dep_num_clauses"] = mean([result["metrics"]["avg_dep_num_clauses"] for result in results])
+    metrics["avg_max_dep_num_clauses"] = mean([result["metrics"]["max_dep_num_clauses"] for result in results])
+    metrics["avg_dep_path_length"] = mean([result["metrics"]["avg_dep_path_length"] for result in results])
+    metrics["avg_max_dep_path_length"] = mean([result["metrics"]["max_dep_path_length"] for result in results])
     
     if len(stories) > 1:
         metrics["avg_inv_homogen"] = mean([result["metrics"]["inv_homogen"] for result in results])
@@ -326,17 +326,18 @@ def report_metrics(results_files, config):
     output_dir = pathlib.Path(config["output_dir"]) if config["output_dir"] else pathlib.Path(results_files[0]).parent
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    num_samples = config["num_samples"]
-
     if config["deduplicate"]:
         print("Deduplicating results")
         for group_id, group_res in grouped_results.items():
             grouped_results[group_id] = deduplicate_results(group_res, by=config["deduplicate_by"])
-        
-        min_group_size = min([len(group_res) for group_res in grouped_results.values()])
+    
+    num_samples = config["num_samples"]
+    min_group_size = min([len(group_res) for group_res in grouped_results.values()])
 
-        if num_samples:
-            num_samples = min(num_samples, min_group_size)
+    if num_samples:
+        num_samples = min(num_samples, min_group_size)
+    else:
+        num_samples = min_group_size
     
     print(f"Final number of samples: {num_samples}")
 

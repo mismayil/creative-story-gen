@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "llama-3.1-405b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of a mystical forest, an ancient being known as the Keeper of the Elements controlled the balance of nature. With a wave of its hand, a hidden pump began to channel the raw energy of the earth, fueling the flames that danced across the forest floor. The fire, imbued with the essence of petrol, blazed with a fierce intensity, while the gentle streams, infused with the soothing properties of diesel, flowed smoothly, nourishing the lush vegetation. As the Keeper's power surged, the pump accelerated, and the symphony of elements reached a perfect harmony, sustaining the forest's delicate ecosystem. In this sacred balance, life thrived, and the forest flourished, a testament to the Keeper's eternal vigilance.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 150
+            },
+            "result_id": "723bf6663f0d"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "As the time traveler stood at the edge of the ancient forest, she raised her staff to stamp a symbol of protection onto the air, sealing the portal behind her. A whispered letter of ancient runes danced in the mist, a map guiding her through the forgotten paths. With a deep breath, she began to send her spirit forward, weaving a thread of connection between the past and the present. The trees whispered secrets in her ear as she walked, their bark shimmering with an otherworldly light. And when she finally emerged into the sunlight, she knew that a piece of her would forever remain in that mystical realm.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 125
+            },
+            "result_id": "3ee8b18a7400"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a world where memories were currency, the mysterious Organ Weaver crafted symphonies that could awaken forgotten recollections. Her music became a subtle rebellion against the Empire of Oblivion, a regime that sought to erase the past and control the present. Those who listened to her melodies began to recall the truth, and soon, whispers of dissent spread throughout the land, as people refused to comply with the empire's tyranny. The Organ Weaver's harmonies wove a tapestry of resistance, and the empire's grip on the people began to fray. As the music swelled, the empire's foundations crumbled, and a new era of remembrance dawned.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 134
+            },
+            "result_id": "4afb8b9fcaf2"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the mystical realm of Tenebrous, the currency of emotions fueled the fabric of reality, and the dark sorceress, Lyra, demanded a peculiar payment from the village: a vial of pure joy, extracted from the heart of a laughing child. The villagers, desperate to preserve their existence, reluctantly agreed, but the transaction came at a terrible cost, as a creeping gloom began to seep into the land, threatening to consume everything in its path. As the shadows deepened, Lyra vanished into the darkness, leaving behind a cryptic message etched into the stone: \"In the absence of light, only shadows exist.\" The villagers, now shrouded in an eternal twilight, realized that their payment had been a terrible bargain, one that would haunt them for eternity. And so, the gloom remained, a constant reminder of the terrible price they had paid to exist in a world without joy.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 189
+            },
+            "result_id": "19c5ca828587"
+        }
+    ]
+}

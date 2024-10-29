@@ -1,0 +1,72 @@
+Error for sample stamp-letter-send: Error code: 422 - {'error': 'Input validation error: `top_p` must be > 0.0 and < 1.0', 'error_type': 'validation'}
+Traceback (most recent call last):
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 385, in main
+    results = await evaluate_api_model(client, args.model, filtered_batch, model_args)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 235, in evaluate_api_model
+    results = await asyncio.gather(*tasks)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 91, in evaluate_openai_model
+    return await openai_chat_completion(client, messages, model=model, model_args=model_args)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/tenacity/__init__.py", line 398, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/Users/mismayil/.pyenv/versions/3.10.14/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/Users/mismayil/.pyenv/versions/3.10.14/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 70, in openai_chat_completion
+    response = await client.chat.completions.create(model=model, messages=messages, **openai_model_args)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/openai/resources/chat/completions.py", line 1339, in create
+    return await self._post(
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/openai/_base_client.py", line 1816, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/openai/_base_client.py", line 1510, in request
+    return await self._request(
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/openai/_base_client.py", line 1611, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.UnprocessableEntityError: Error code: 422 - {'error': 'Input validation error: `top_p` must be > 0.0 and < 1.0', 'error_type': 'validation'}
+
+Error for sample gloom-payment-exist: Error code: 422 - {'error': 'Input validation error: `top_p` must be > 0.0 and < 1.0', 'error_type': 'validation'}
+Traceback (most recent call last):
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 385, in main
+    results = await evaluate_api_model(client, args.model, filtered_batch, model_args)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 235, in evaluate_api_model
+    results = await asyncio.gather(*tasks)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 91, in evaluate_openai_model
+    return await openai_chat_completion(client, messages, model=model, model_args=model_args)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/tenacity/__init__.py", line 398, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/Users/mismayil/.pyenv/versions/3.10.14/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/Users/mismayil/.pyenv/versions/3.10.14/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 70, in openai_chat_completion
+    response = await client.chat.completions.create(model=model, messages=messages, **openai_model_args)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/openai/resources/chat/completions.py", line 1339, in create
+    return await self._post(
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/openai/_base_client.py", line 1816, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/openai/_base_client.py", line 1510, in request
+    return await self._request(
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/openai/_base_client.py", line 1611, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.UnprocessableEntityError: Error code: 422 - {'error': 'Input validation error: `top_p` must be > 0.0 and < 1.0', 'error_type': 'validation'}
+

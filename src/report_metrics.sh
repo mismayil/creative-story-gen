@@ -6,6 +6,7 @@ report_name=${1:-"run1_report1"}
 python report_metrics.py -r "../experiments/outputs/gpt-4/pilot/**/run1" \
                             "../experiments/outputs/gemini-1.5-flash/pilot/**/run1" \
                             "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/**/run1" \
+                            "../experiments/outputs/llama-3.1-405b-instruct/pilot/**/run1" \
                             "../experiments/outputs/human/pilot/run1" \
                             -o ../experiments/reports/pilot/${report_name} \
                             -c ../experiments/reports/pilot/${report_name}/config.json
@@ -13,7 +14,7 @@ python report_metrics.py -r "../experiments/outputs/gpt-4/pilot/**/run1" \
 # group by sentience
 # temperatures=(0.5 0.7 0.9 1)
 # top_ps=(0.7 0.9 0.95 1)
-# models=("gpt-4" "gemini-1.5-flash" "claude-3-5-sonnet-20240620")
+# models=("gpt-4" "gemini-1.5-flash" "claude-3-5-sonnet-20240620" "llama-3.1-405b-instruct")
 # result_paths=("../experiments/outputs/human/pilot/run1")
 
 # for model in ${models[@]}; do

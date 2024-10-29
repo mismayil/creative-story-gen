@@ -1,5 +1,5 @@
 {
-    "description": "Grouping by semantic distance and deduplication",
+    "description": "Grouping by semantic distance",
     "emb_model": "thenlper/gte-large",
     "emb_type": "sentence_embedding",
     "emb_strategy": "direct",
@@ -11,7 +11,9 @@
     "unique": true,
     "cluster_linkage": "ward",
     "cluster_dist_threshold": 0.5,
-    "num_samples": 48,
     "deduplicate": true,
-    "group_by": ["model", "semantic_distance"]
+    "group_by": ["model", "semantic_distance"],
+    "filter_by": {
+        "sentence_length": [3, 6]
+    }
 }

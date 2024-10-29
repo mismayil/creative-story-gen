@@ -1,0 +1,2579 @@
+{
+    "metadata": {
+        "group_id": [
+            "llama-3.1-405b-instruct",
+            "organ-empire-comply"
+        ],
+        "config": {
+            "results_paths": [
+                "../experiments/outputs/human/pilot/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.3_p0.3/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.3_p0.5/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.3_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.3_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.3_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.3_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.3/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.5/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.3/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.5/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.3/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.5/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.3/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.5/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/gpt-4/pilot/temp1_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.3/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.5/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.3_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.3/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.5/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.3/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.5/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.3/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.5/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.3/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.5/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/gemini-1.5-flash/pilot/temp1_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p0.3/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p0.5/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.3_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.3/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.5/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.3/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.5/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.3/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.5/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.3/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.5/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot/temp1_p1/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.3/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.5/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.7/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.9/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.95/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p1/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.3/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.5/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.7/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.9/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.95/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p1/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.3/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.5/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.7/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.9/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.95/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p1/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.3/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.5/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.7/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.9/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.95/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p1/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.3/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.5/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.7/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.9/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.95/run1",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p1/run1"
+            ],
+            "report_usage": true,
+            "spacy_lang": "en_core_web_sm",
+            "max_n_gram": 5,
+            "output_dir": "../experiments/reports/pilot/run1_report6",
+            "config": "../experiments/reports/pilot/run1_report6/config.json",
+            "num_samples": null,
+            "deduplicate": true,
+            "deduplicate_by": "output",
+            "max_frequency": 10,
+            "group_by": [
+                "model",
+                "id"
+            ],
+            "output_attr": "output",
+            "emb_model": "thenlper/gte-large",
+            "emb_type": "sentence_embedding",
+            "emb_strategy": "direct",
+            "distance_fn": "cosine",
+            "lower": true,
+            "remove_punct": true,
+            "remove_stopwords": true,
+            "lemmatize": true,
+            "dominant_k": null,
+            "unique": true,
+            "cluster_linkage": "ward",
+            "cluster_dist_threshold": 0.5,
+            "description": "Report2 + filter by sentence length",
+            "filter_by": {
+                "sentence_length": [
+                    3,
+                    6
+                ]
+            }
+        }
+    },
+    "metrics": {
+        "num_samples": 24,
+        "avg_length_in_chars": 730.6666666666666,
+        "avg_length_in_words": 126.54166666666667,
+        "avg_length_in_unique_words": 81.79166666666667,
+        "avg_length_in_concepts": 55.458333333333336,
+        "avg_length_in_sentences": 5.041666666666667,
+        "avg_word_length_in_chars": 4.69433059329959,
+        "avg_sentence_length_in_chars": 144.19027777777777,
+        "avg_sentence_length_in_words": 25.11388888888889,
+        "avg_sentence_length_in_unique_words": 21.77638888888889,
+        "avg_dsi": 0.21328468531777783,
+        "avg_surprise": 0.011247765673647872,
+        "avg_raw_surprises": [
+            0.004487777835756798,
+            0.005932871164962105,
+            0.004697567708751839,
+            0.007430299239055121,
+            0.010756083089353413
+        ],
+        "avg_n_gram_diversity": [
+            0.646860320449289,
+            0.949161359249649,
+            0.9895755558964936,
+            0.9996584699453552,
+            1.0
+        ],
+        "avg_pos_diversity": [
+            0.09405803631779042,
+            0.3543136888264277,
+            0.639216848951892,
+            0.8368911075943681,
+            0.9383480381406217
+        ],
+        "avg_dep_num_clauses": 3.279166666666667,
+        "avg_max_dep_num_clauses": 5.791666666666667,
+        "avg_dep_path_length": 3.4742297381950777,
+        "avg_max_dep_path_length": 10.333333333333334,
+        "avg_inv_homogen": 0.08516300912352576,
+        "avg_novelty": 0.003947540538737848,
+        "avg_theme_uniqueness": 0.20833333333333334,
+        "corpus_dsi": 0.21469320299686212,
+        "corpus_n_gram_diversity": [
+            0.21962462956865328,
+            0.5632411067193676,
+            0.7555189456342669,
+            0.8424522083058669,
+            0.884272997032641
+        ],
+        "corpus_pos_diversity": [
+            0.004280540006585446,
+            0.03919631093544137,
+            0.14036243822075783,
+            0.2976268951878708,
+            0.4648862512363996
+        ],
+        "num_unique_stories": 24,
+        "top_10_n_grams": {
+            "1-gram": {
+                "the": 340,
+                "of": 129,
+                "to": 129,
+                "a": 104,
+                "'s": 83,
+                "organ": 81,
+                "in": 54,
+                "empire": 48,
+                "its": 45,
+                "that": 44
+            },
+            "2-gram": {
+                "the organ": 57,
+                "organ 's": 43,
+                "of the": 30,
+                "comply with": 25,
+                "as the": 24,
+                "to comply": 23,
+                "with the": 22,
+                "the empire": 22,
+                "began to": 22,
+                "in the": 22
+            },
+            "3-gram": {
+                "the organ 's": 43,
+                "to comply with": 23,
+                "comply with the": 19,
+                "the empire 's": 17,
+                "in the mystical": 10,
+                "the mystical realm": 10,
+                "mystical realm of": 10,
+                "organ 's song": 9,
+                "the ancient organ": 9,
+                "realm of aethereia": 8
+            },
+            "4-gram": {
+                "to comply with the": 17,
+                "in the mystical realm": 10,
+                "the mystical realm of": 10,
+                "the organ 's song": 9,
+                "mystical realm of aethereia": 8,
+                "in a mystical realm": 6,
+                "an ancient organ stood": 6,
+                "in a world where": 6,
+                "a world where memories": 6,
+                "at the heart of": 5
+            },
+            "5-gram": {
+                "in the mystical realm of": 10,
+                "the mystical realm of aethereia": 8,
+                "in a world where memories": 6,
+                "mystical realm of aethereia the": 5,
+                "realm of aethereia the ancient": 5,
+                "of aethereia the ancient organ": 5,
+                "refused to comply with the": 5,
+                "to comply with the organ": 5,
+                "comply with the organ 's": 5,
+                "in a mystical realm an": 4
+            }
+        },
+        "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+        },
+        "cost": {
+            "input": 0,
+            "output": 0,
+            "total": 0
+        }
+    },
+    "data": [
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a mystical realm, an ancient organ stood at the heart of a long-forgotten city, its haunting melodies echoing through the crumbling spires. It was said that the organ's harmonies held the power to bring empires to their knees, and many a conqueror had attempted to claim its secrets for themselves. Yet, the organ remained stubbornly silent, refusing to comply with the whims of mortal men. One fateful night, a lone musician stumbled upon the organ, and as her fingers danced across its keys, the empire of shadows that had long shrouded the city began to recede. The organ's song had awakened a new era, one in which the forces of darkness were forced to comply with the radiant light of creation.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 151
+            },
+            "result_id": "30b689c6c652",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.7/run1/pilot_data_eval_default_llama-3.1-405b-instruct_ba3ad8d9c779.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 702,
+                "length_in_words": 125,
+                "length_in_unique_words": 84,
+                "length_in_concepts": 54,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.672,
+                "avg_word_length_in_chars": 4.528,
+                "avg_sentence_length_in_chars": 139.6,
+                "avg_sentence_length_in_words": 25,
+                "avg_sentence_length_in_unique_words": 22.8,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 5,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 0,
+                "length_in_third_person": 7,
+                "dsi": 0.21337172820133232,
+                "surprise": 0.009628522849788226,
+                "raw_surprises": [
+                    0.0032126601640280195,
+                    0.0034880937650950405,
+                    0.007542925907505882,
+                    0.005013365862947511
+                ],
+                "n_gram_diversity": [
+                    0.672,
+                    0.9435483870967742,
+                    0.975609756097561,
+                    0.9918032786885246,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.096,
+                    0.3548387096774194,
+                    0.6829268292682927,
+                    0.8770491803278688,
+                    0.9586776859504132
+                ],
+                "avg_dep_num_clauses": 3,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.423088934982986,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 10.8,
+                "max_constituency_tree_depth": 15,
+                "readability_flesch_ease": 76.89500000000002,
+                "readability_flesch_kincaid": 9.489999999999998,
+                "avg_pos_noun_ratio": 0.24373491914092582,
+                "avg_pos_verb_ratio": 0.17148441288040844,
+                "avg_pos_adj_ratio": 0.07851772624853826,
+                "avg_pos_adv_ratio": 0.041451612903225805,
+                "avg_pos_pron_ratio": 0.06296668663187016,
+                "avg_pos_det_ratio": 0.14559867088788112,
+                "avg_pos_adp_ratio": 0.11746556002395825,
+                "inv_homogen": 0.0726160018340401,
+                "novelty": 0.0026429495910595957,
+                "theme_uniqueness": 0.09090909090909091
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Echoia, the ancient organ of the land pulsed with a rhythmic heartbeat, its melodies weaving a sonic tapestry that sustained the very fabric of existence. As the last remnants of the Celestial Empire's dark magic dissipated, the organ's song grew stronger, calling forth the scattered remnants of a forgotten people. They gathered at the Heartstone, a sacred site where the organ's resonant frequencies harmonized with the pulse of the earth. To restore balance to the realm, they had to comply with the ancient symphony, allowing the organ's melody to guide their movements in a ritual dance of rebirth. As the final notes faded, Echoia was reborn, its essence infused with the sweet harmony of the land's own song.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 156
+            },
+            "result_id": "af0607f0df47",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.9/run1/pilot_data_eval_default_llama-3.1-405b-instruct_1e3e1148b789.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 741,
+                "length_in_words": 128,
+                "length_in_unique_words": 77,
+                "length_in_concepts": 56,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6015625,
+                "avg_word_length_in_chars": 4.7265625,
+                "avg_sentence_length_in_chars": 147.4,
+                "avg_sentence_length_in_words": 25.6,
+                "avg_sentence_length_in_unique_words": 21.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 3,
+                "length_in_first_person": 0,
+                "length_in_third_person": 5,
+                "dsi": 0.21468599570261968,
+                "surprise": 0.005077330759838225,
+                "raw_surprises": [
+                    0.0014796712568828085,
+                    0.002619624327099529,
+                    0.004080347714988886,
+                    0.001975018220705227
+                ],
+                "n_gram_diversity": [
+                    0.6015625,
+                    0.8976377952755905,
+                    0.9761904761904762,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0859375,
+                    0.2755905511811024,
+                    0.5,
+                    0.728,
+                    0.8709677419354839
+                ],
+                "avg_dep_num_clauses": 2.2,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.992352221281441,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 10.8,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 70.17378873239439,
+                "readability_flesch_kincaid": 10.526845070422535,
+                "avg_pos_noun_ratio": 0.24818828680897645,
+                "avg_pos_verb_ratio": 0.1296150337529648,
+                "avg_pos_adj_ratio": 0.12649151614668855,
+                "avg_pos_adv_ratio": 0.007407407407407407,
+                "avg_pos_pron_ratio": 0.04617405582922824,
+                "avg_pos_det_ratio": 0.18081372012406494,
+                "avg_pos_adp_ratio": 0.1307608100711549,
+                "inv_homogen": 0.10075629275778065,
+                "novelty": 1.4414588484890078e-05,
+                "theme_uniqueness": 0.09090909090909091
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the underwater city of New Atlantis, a mystical organ made from coral and shells sang a haunting melody that echoed through the streets, beckoning citizens to gather at the grand plaza. There, the enigmatic ruler of the oceanic empire revealed a prophecy that foretold the arrival of a great storm, one that would test the mettle of their civilization. To survive, the people were instructed to weave a colossal net from the silk of giant jellyfish, a task that required every able-bodied citizen to comply with the intricate pattern of the weave. As the storm raged on, the net held strong, protecting the city from the turbulent waters. In the aftermath, the organ's song changed, its melody now a triumphant celebration of the empire's resilience.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 154
+            },
+            "result_id": "f565266e00de",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.95/run1/pilot_data_eval_default_llama-3.1-405b-instruct_bb292ba51973.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 753,
+                "length_in_words": 129,
+                "length_in_unique_words": 83,
+                "length_in_concepts": 59,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6434108527131783,
+                "avg_word_length_in_chars": 4.744186046511628,
+                "avg_sentence_length_in_chars": 149.8,
+                "avg_sentence_length_in_words": 25.8,
+                "avg_sentence_length_in_unique_words": 21,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 2,
+                "dsi": 0.2164008419531817,
+                "surprise": 0.014074658402820031,
+                "raw_surprises": [
+                    0.0019501437189112791,
+                    0.005209557543512905,
+                    0.004720044291876502,
+                    0.016269571251339376
+                ],
+                "n_gram_diversity": [
+                    0.6434108527131783,
+                    0.96875,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10077519379844961,
+                    0.3046875,
+                    0.5354330708661418,
+                    0.7380952380952381,
+                    0.84
+                ],
+                "avg_dep_num_clauses": 2.8,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.6882192460317462,
+                "max_dep_path_length": 15,
+                "avg_constituency_tree_depth": 11,
+                "max_constituency_tree_depth": 16,
+                "readability_flesch_ease": 70.62896551724138,
+                "readability_flesch_kincaid": 10.612413793103453,
+                "avg_pos_noun_ratio": 0.2707430340557275,
+                "avg_pos_verb_ratio": 0.13636665192392747,
+                "avg_pos_adj_ratio": 0.10511665192392747,
+                "avg_pos_adv_ratio": 0.017669172932330827,
+                "avg_pos_pron_ratio": 0.04408724015922158,
+                "avg_pos_det_ratio": 0.20738887660327288,
+                "avg_pos_adp_ratio": 0.12226061477222468,
+                "inv_homogen": 0.12944612554881885,
+                "novelty": 0.003415277912639181,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Aethereia, the ancient organ hidden within the crystal cave held the secrets of the long-lost empire of Elyria. Its haunting melodies whispered tales of a powerful sorceress who once ruled with an iron fist, forcing the land to comply with her every whim. But as the last notes of the organ faded away, the empire's dark magic began to unravel, freeing the realm from its centuries-long slumber. The people of Aethereia emerged, blinking, into the bright light of a new era, where the only rule was to follow the harmony of the organ's song. And so, they danced, their footsteps weaving a new destiny, one that would never again be bound by the chains of tyranny.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 153
+            },
+            "result_id": "425466ffe6c1",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.7/run1/pilot_data_eval_default_llama-3.1-405b-instruct_8a62c4b3f462.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 688,
+                "length_in_words": 125,
+                "length_in_unique_words": 88,
+                "length_in_concepts": 54,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.704,
+                "avg_word_length_in_chars": 4.408,
+                "avg_sentence_length_in_chars": 136.8,
+                "avg_sentence_length_in_words": 25,
+                "avg_sentence_length_in_unique_words": 21.8,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 3,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 0,
+                "length_in_third_person": 5,
+                "dsi": 0.21223086830954882,
+                "surprise": 0.004904006590773308,
+                "raw_surprises": [
+                    0.001140322222377782,
+                    0.0035772148942772586,
+                    0.002713654394988163,
+                    0.0023768216699034117
+                ],
+                "n_gram_diversity": [
+                    0.704,
+                    0.9516129032258065,
+                    0.991869918699187,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.104,
+                    0.3951612903225806,
+                    0.6666666666666666,
+                    0.8524590163934426,
+                    0.9338842975206612
+                ],
+                "avg_dep_num_clauses": 2.8,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 4.052474970830132,
+                "max_dep_path_length": 13,
+                "avg_constituency_tree_depth": 12,
+                "max_constituency_tree_depth": 16,
+                "readability_flesch_ease": 79.70618309859157,
+                "readability_flesch_kincaid": 9.197267605633805,
+                "avg_pos_noun_ratio": 0.24620979020979022,
+                "avg_pos_verb_ratio": 0.14447052947052946,
+                "avg_pos_adj_ratio": 0.07826307026307026,
+                "avg_pos_adv_ratio": 0.0512983682983683,
+                "avg_pos_pron_ratio": 0.05896503496503496,
+                "avg_pos_det_ratio": 0.1654748584748585,
+                "avg_pos_adp_ratio": 0.1278045288045288,
+                "inv_homogen": 0.0794134839721348,
+                "novelty": 0.0049246693746266,
+                "theme_uniqueness": 0.09090909090909091
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Aethereia, a lone musician's haunting melody on the ancient organ echoed through the crumbling spires of a long-forgotten empire. The notes seemed to awaken the very stones, which began to rearrange themselves in a mesmerizing dance, as if trying to comply with some hidden harmony. As the music swelled, the empire's ruins transformed into a shimmering palace of crystal, its facets reflecting the celestial rhythms that governed the cosmos. The musician, now a conduit for the divine, continued to play, weaving a sonic tapestry that sustained the palace and kept the forces of chaos at bay. In this symphony of creation, the organ's voice was the very heartbeat of existence.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 146
+            },
+            "result_id": "ea5bdc1ea37c",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.9/run1/pilot_data_eval_default_llama-3.1-405b-instruct_b20eebba4d1e.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 703,
+                "length_in_words": 119,
+                "length_in_unique_words": 81,
+                "length_in_concepts": 56,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.680672268907563,
+                "avg_word_length_in_chars": 4.823529411764706,
+                "avg_sentence_length_in_chars": 139.8,
+                "avg_sentence_length_in_words": 23.8,
+                "avg_sentence_length_in_unique_words": 20.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 2,
+                "dsi": 0.2164887562974707,
+                "surprise": 0.008591599842329392,
+                "raw_surprises": [
+                    0.006840410531857299,
+                    0.003473363187048689,
+                    0.0032052319128434703,
+                    0.0036641940529093253
+                ],
+                "n_gram_diversity": [
+                    0.680672268907563,
+                    0.9915254237288136,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10084033613445378,
+                    0.3220338983050847,
+                    0.5897435897435898,
+                    0.8189655172413793,
+                    0.9130434782608695
+                ],
+                "avg_dep_num_clauses": 2.6,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.4469531126150845,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 9.6,
+                "max_constituency_tree_depth": 16,
+                "readability_flesch_ease": 71.04195522388062,
+                "readability_flesch_kincaid": 10.008268656716417,
+                "avg_pos_noun_ratio": 0.27277492877492876,
+                "avg_pos_verb_ratio": 0.14596011396011396,
+                "avg_pos_adj_ratio": 0.06956125356125356,
+                "avg_pos_adv_ratio": 0.028433048433048433,
+                "avg_pos_pron_ratio": 0.03879202279202279,
+                "avg_pos_det_ratio": 0.19367521367521368,
+                "avg_pos_adp_ratio": 0.13206837606837607,
+                "inv_homogen": 0.07935655894486801,
+                "novelty": 0.003591106601217142,
+                "theme_uniqueness": 0.09090909090909091
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a world where memories took physical form, a young archivist discovered a dusty organ hidden deep within the forgotten quarter of the ancient city. Its keys, once played by the emperor's own fingertips, held the whispers of a bygone empire, echoing the laughter of courtiers and the tears of the vanquished. But as the archivist's fingers danced across the organ's surface, she began to realize that the memories stored within its notes refused to comply with the linear passage of time, instead swirling together in a maelstrom of past and present. Entranced, she let the music carry her away, losing herself in the labyrinthine corridors of a history that refused to be tamed. And when the final notes faded, the archivist knew she had been forever changed by the symphony of a forgotten empire.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 166
+            },
+            "result_id": "108cd1c33ea5",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_2f2e14cec3d1.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 800,
+                "length_in_words": 138,
+                "length_in_unique_words": 88,
+                "length_in_concepts": 62,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6376811594202898,
+                "avg_word_length_in_chars": 4.72463768115942,
+                "avg_sentence_length_in_chars": 159.2,
+                "avg_sentence_length_in_words": 27.6,
+                "avg_sentence_length_in_unique_words": 24,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 7,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 7,
+                "dsi": 0.21250997586958878,
+                "surprise": 0.008671090340981638,
+                "raw_surprises": [
+                    0.005048227195556337,
+                    0.007508668058153423,
+                    0.0027316368938062607,
+                    0.0020536485344472555
+                ],
+                "n_gram_diversity": [
+                    0.6376811594202898,
+                    0.948905109489051,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07971014492753623,
+                    0.3284671532846715,
+                    0.5735294117647058,
+                    0.7777777777777778,
+                    0.9104477611940298
+                ],
+                "avg_dep_num_clauses": 4.4,
+                "max_dep_num_clauses": 9,
+                "avg_dep_path_length": 3.6381490247921033,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 10.8,
+                "max_constituency_tree_depth": 14,
+                "readability_flesch_ease": 64.66321052631581,
+                "readability_flesch_kincaid": 11.792315789473687,
+                "avg_pos_noun_ratio": 0.22612987012987013,
+                "avg_pos_verb_ratio": 0.1794025974025974,
+                "avg_pos_adj_ratio": 0.08156709956709957,
+                "avg_pos_adv_ratio": 0.04328138528138528,
+                "avg_pos_pron_ratio": 0.06255411255411256,
+                "avg_pos_det_ratio": 0.17203463203463204,
+                "avg_pos_adp_ratio": 0.11837229437229436,
+                "inv_homogen": 0.08843330715013586,
+                "novelty": 0.004366454254546681,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a mystical realm, an ancient organ stood at the heart of a long-abandoned city, its pipes whispering secrets to the wind. The once-mighty Astral Empire had left behind this eerie sentinel, a haunting reminder of their downfall. Legend had it that on certain nights, when the moon dipped into the darkness, the organ's melancholy melodies could summon the restless spirits of those who refused to comply with the empire's brutal reign. Those brave enough to listen would be met with an unsettling harmony that echoed through the desolate streets, a haunting requiem for a civilization lost to time. As the last notes faded, the organ fell silent, waiting for the next lunar alignment to awaken its mournful voice.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 146
+            },
+            "result_id": "18d2927e2251",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.7/run1/pilot_data_eval_default_llama-3.1-405b-instruct_b8b4280185c3.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 715,
+                "length_in_words": 123,
+                "length_in_unique_words": 90,
+                "length_in_concepts": 60,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.7317073170731707,
+                "avg_word_length_in_chars": 4.7317073170731705,
+                "avg_sentence_length_in_chars": 142.2,
+                "avg_sentence_length_in_words": 24.6,
+                "avg_sentence_length_in_unique_words": 22.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 3,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 4,
+                "dsi": 0.21145294823889005,
+                "surprise": 0.0034570916896655424,
+                "raw_surprises": [
+                    0.0056340159514011445,
+                    0.0008200361740355322,
+                    0.00035032089434416935,
+                    0.00010981035955023866
+                ],
+                "n_gram_diversity": [
+                    0.7317073170731707,
+                    0.9836065573770492,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08943089430894309,
+                    0.36065573770491804,
+                    0.6611570247933884,
+                    0.8083333333333333,
+                    0.907563025210084
+                ],
+                "avg_dep_num_clauses": 2,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.426991193072484,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 10.8,
+                "max_constituency_tree_depth": 17,
+                "readability_flesch_ease": 75.82969565217391,
+                "readability_flesch_kincaid": 9.539217391304351,
+                "avg_pos_noun_ratio": 0.21764516434593162,
+                "avg_pos_verb_ratio": 0.14266647721890688,
+                "avg_pos_adj_ratio": 0.14712986643932935,
+                "avg_pos_adv_ratio": 0.02786776546367339,
+                "avg_pos_pron_ratio": 0.06749739509330302,
+                "avg_pos_det_ratio": 0.16617978592403146,
+                "avg_pos_adp_ratio": 0.1201638723122099,
+                "inv_homogen": 0.08089287902997888,
+                "novelty": 0.006480509515944144,
+                "theme_uniqueness": 0.09090909090909091
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a world where memories could be transferred from one being to another, the ancient organ of remembrance stood as a testament to the forgotten empire of the mind. The organ, a glowing, ethereal entity, whispered secrets to those who dared to listen, but only if they were willing to surrender their own recollections in return. Those who refused to comply with the organ's demands were forever lost in the labyrinthine corridors of their own minds. One brave soul, a young woman named Aria, decided to take the risk, and as she touched the organ, the empire of her own memories began to crumble. In the end, Aria emerged with a newfound understanding of the past, but her own identity was forever changed.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 148
+            },
+            "result_id": "a9d40e950142",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_4612511f2044.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 707,
+                "length_in_words": 124,
+                "length_in_unique_words": 77,
+                "length_in_concepts": 47,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6209677419354839,
+                "avg_word_length_in_chars": 4.588709677419355,
+                "avg_sentence_length_in_chars": 140.6,
+                "avg_sentence_length_in_words": 24.8,
+                "avg_sentence_length_in_unique_words": 22.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 3,
+                "length_in_third_person_plural": 3,
+                "length_in_first_person": 0,
+                "length_in_third_person": 6,
+                "dsi": 0.2100897772680489,
+                "surprise": 0.0069500622273695745,
+                "raw_surprises": [
+                    0.0011494165117090505,
+                    0.005985047630589435,
+                    0.0008142430230665965,
+                    0.005951417289374067
+                ],
+                "n_gram_diversity": [
+                    0.6209677419354839,
+                    0.9349593495934959,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10483870967741936,
+                    0.3983739837398374,
+                    0.6475409836065574,
+                    0.8677685950413223,
+                    0.95
+                ],
+                "avg_dep_num_clauses": 3.4,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.055679882605629,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 9.2,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 69.64357142857145,
+                "readability_flesch_kincaid": 10.501428571428573,
+                "avg_pos_noun_ratio": 0.20837054321627824,
+                "avg_pos_verb_ratio": 0.14280048780956223,
+                "avg_pos_adj_ratio": 0.0980550034089054,
+                "avg_pos_adv_ratio": 0.027457532720690615,
+                "avg_pos_pron_ratio": 0.0899096400003841,
+                "avg_pos_det_ratio": 0.12849556842297313,
+                "avg_pos_adp_ratio": 0.1303839099664871,
+                "inv_homogen": 0.08557687116705853,
+                "novelty": 0.009206851457626453,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Aethereia, the ancient organ at the heart of the Celestial Cathedral pulsed with an otherworldly energy, its haunting melodies weaving a spell of protection around the fragile kingdom. But as the dark sorcerer, Malakai, sought to expand his twisted empire, he discovered that the organ's power was the key to unlocking the secrets of the cosmos. To harness its might, Malakai was forced to comply with the organ's cryptic demands, surrendering fragments of his own soul to its insatiable hunger. As the organ's song grew louder, the very fabric of reality began to unravel, threatening to consume both Aethereia and Malakai's empire in its wake. In the end, only the organ's haunting refrain remained, a haunting reminder of the terrible price of ambition.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 171
+            },
+            "result_id": "ef9d623888f0",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.3/run1/pilot_data_eval_default_llama-3.1-405b-instruct_2d81c853bd94.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 781,
+                "length_in_words": 133,
+                "length_in_unique_words": 81,
+                "length_in_concepts": 59,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6090225563909775,
+                "avg_word_length_in_chars": 4.796992481203008,
+                "avg_sentence_length_in_chars": 155.4,
+                "avg_sentence_length_in_words": 26.6,
+                "avg_sentence_length_in_unique_words": 22.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 7,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 7,
+                "dsi": 0.21577217075854,
+                "surprise": 0.010888396186131133,
+                "raw_surprises": [
+                    0.0024497875886120013,
+                    0.010595938205083838,
+                    0.0005064412152572528,
+                    0.008224625363309174
+                ],
+                "n_gram_diversity": [
+                    0.6090225563909775,
+                    0.9242424242424242,
+                    0.9770992366412213,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09022556390977443,
+                    0.3484848484848485,
+                    0.6183206106870229,
+                    0.8307692307692308,
+                    0.9534883720930233
+                ],
+                "avg_dep_num_clauses": 3,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.4585056880618934,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 8.8,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 66.43766442953024,
+                "readability_flesch_kincaid": 11.395758389261747,
+                "avg_pos_noun_ratio": 0.2628893655245742,
+                "avg_pos_verb_ratio": 0.12533137790488064,
+                "avg_pos_adj_ratio": 0.09049556667705488,
+                "avg_pos_adv_ratio": 0.01793372319688109,
+                "avg_pos_pron_ratio": 0.05126111691628933,
+                "avg_pos_det_ratio": 0.14182707901764163,
+                "avg_pos_adp_ratio": 0.1335076597798921,
+                "inv_homogen": 0.07771376423213792,
+                "novelty": 0.0021579355233557473,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a world where memories were currency, the last remnants of a fallen empire lay hidden within the haunting melodies of an ancient organ. Legend had it that the organ's keys held the power to unlock the past, but only for those who could hear its whispers. Aria, a young memory thief, stumbled upon the organ while searching for a valuable artifact to sell on the black market. As she placed her fingers on the keys, she felt an inexplicable urge to comply with the organ's eerie rhythm, and the memories began to flood her mind. With each note, the empire's secrets unraveled, and Aria's own identity began to take shape.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 133
+            },
+            "result_id": "6389140915ed",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_14c6fc0089d7.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 623,
+                "length_in_words": 115,
+                "length_in_unique_words": 79,
+                "length_in_concepts": 46,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6869565217391305,
+                "avg_word_length_in_chars": 4.3478260869565215,
+                "avg_sentence_length_in_chars": 123.8,
+                "avg_sentence_length_in_words": 23,
+                "avg_sentence_length_in_unique_words": 20.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 6,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 6,
+                "dsi": 0.21186225494900762,
+                "surprise": 0.018617940166209837,
+                "raw_surprises": [
+                    0.01873947755254879,
+                    0.01093183262179595,
+                    0.005371555621489804,
+                    0.0021930145365851306
+                ],
+                "n_gram_diversity": [
+                    0.6869565217391305,
+                    0.956140350877193,
+                    0.9911504424778761,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10434782608695652,
+                    0.39473684210526316,
+                    0.6814159292035398,
+                    0.875,
+                    0.9369369369369369
+                ],
+                "avg_dep_num_clauses": 3.4,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.147754194364463,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 9.6,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 77.74475000000001,
+                "readability_flesch_kincaid": 8.775250000000003,
+                "avg_pos_noun_ratio": 0.25471843909977787,
+                "avg_pos_verb_ratio": 0.1650149715058437,
+                "avg_pos_adj_ratio": 0.07079590456872403,
+                "avg_pos_adv_ratio": 0.008333333333333333,
+                "avg_pos_pron_ratio": 0.06091954022988506,
+                "avg_pos_det_ratio": 0.15587752342316236,
+                "avg_pos_adp_ratio": 0.08627209504491451,
+                "inv_homogen": 0.08135040946628737,
+                "novelty": 0.005661896095708996,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a world where memories could be transferred from one being to another, the ancient organ of remembrance stood tall, its pipes whispering the secrets of a long-lost civilization. The empire of forgotten dreams, a mystical realm born from the collective unconscious, beckoned to those who dared to listen. Aria, a young memory hunter, was tasked with unraveling the mysteries hidden within the organ's haunting melodies, but she began to question whether she should comply with the empire's cryptic demands. As she delved deeper into the organ's secrets, the lines between reality and fantasy blurred, and Aria found herself trapped in a labyrinth of memories not her own. The organ's whispers grew louder, urging her to defy the empire's will and forge her own path.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 156
+            },
+            "result_id": "9d2eeb2eaed1",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_f97598ffe515.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 768,
+                "length_in_words": 131,
+                "length_in_unique_words": 88,
+                "length_in_concepts": 54,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6717557251908397,
+                "avg_word_length_in_chars": 4.793893129770993,
+                "avg_sentence_length_in_chars": 152.8,
+                "avg_sentence_length_in_words": 26.2,
+                "avg_sentence_length_in_unique_words": 23.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 8,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 8,
+                "dsi": 0.2117545134449738,
+                "surprise": 0.003927350618033676,
+                "raw_surprises": [
+                    0.0007219222518471125,
+                    0.00131145607341418,
+                    0.002376990440564275,
+                    0.0034443324702417843
+                ],
+                "n_gram_diversity": [
+                    0.6717557251908397,
+                    0.9307692307692308,
+                    0.9767441860465116,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09923664122137404,
+                    0.4153846153846154,
+                    0.751937984496124,
+                    0.90625,
+                    0.984251968503937
+                ],
+                "avg_dep_num_clauses": 4.4,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.480495761412637,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 10.4,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 68.22257142857146,
+                "readability_flesch_kincaid": 11.047428571428572,
+                "avg_pos_noun_ratio": 0.22999835010724304,
+                "avg_pos_verb_ratio": 0.18878237914535556,
+                "avg_pos_adj_ratio": 0.06287741296815708,
+                "avg_pos_adv_ratio": 0.02408953418027828,
+                "avg_pos_pron_ratio": 0.08719683220590661,
+                "avg_pos_det_ratio": 0.12265137766045207,
+                "avg_pos_adp_ratio": 0.10910135841170324,
+                "inv_homogen": 0.08535968220752219,
+                "novelty": 0.005877379103776614,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a mystical realm, the enchanted organ sang an otherworldly melody that resonated through the crumbling ruins of a long-forgotten empire. The haunting harmony awakened an ancient entity, who rose from the dust to reclaim its dominion over the land. But as the entity's dark magic began to spread, the organ's song transformed, weaving a counter-curse that forced the entity to comply with the realm's ancient laws of balance and harmony. The entity, now bound by the organ's melody, was forced to restore the realm to its former glory, and the empire was reborn in a new era of peace and prosperity. As the organ's final notes faded, the realm was forever changed, its fate inextricably linked to the mystical instrument's haunting song.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 157
+            },
+            "result_id": "c37fe558f7f9",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.9/run1/pilot_data_eval_default_llama-3.1-405b-instruct_ddc41e064de3.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 739,
+                "length_in_words": 131,
+                "length_in_unique_words": 74,
+                "length_in_concepts": 53,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.5648854961832062,
+                "avg_word_length_in_chars": 4.587786259541985,
+                "avg_sentence_length_in_chars": 147,
+                "avg_sentence_length_in_words": 26.2,
+                "avg_sentence_length_in_unique_words": 22.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 3,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 3,
+                "dsi": 0.2111203445578521,
+                "surprise": 0.004569336116968956,
+                "raw_surprises": [
+                    0.004160156667741971,
+                    0.0014516764216952749,
+                    0.000310825340913784,
+                    0.0032160138035868813
+                ],
+                "n_gram_diversity": [
+                    0.5648854961832062,
+                    0.9230769230769231,
+                    0.9844961240310077,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08396946564885496,
+                    0.3,
+                    0.5891472868217055,
+                    0.7734375,
+                    0.8818897637795275
+                ],
+                "avg_dep_num_clauses": 3.8,
+                "max_dep_num_clauses": 8,
+                "avg_dep_path_length": 3.579725303120652,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 10.8,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 68.22257142857146,
+                "readability_flesch_kincaid": 11.047428571428572,
+                "avg_pos_noun_ratio": 0.269367180302535,
+                "avg_pos_verb_ratio": 0.16628722250289757,
+                "avg_pos_adj_ratio": 0.08536891883859847,
+                "avg_pos_adv_ratio": 0.032732213438735176,
+                "avg_pos_pron_ratio": 0.05080347855805521,
+                "avg_pos_det_ratio": 0.1734681937056079,
+                "avg_pos_adp_ratio": 0.0934495824541591,
+                "inv_homogen": 0.07501425432122272,
+                "novelty": 0.007145716878020014,
+                "theme_uniqueness": 0.09090909090909091
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a world where memories were currency, the mysterious Organ Weaver crafted symphonies that could awaken forgotten recollections. Her music became a subtle rebellion against the Empire of Oblivion, a regime that sought to erase the past and control the present. Those who listened to her melodies began to recall the truth, and soon, whispers of dissent spread throughout the land, as people refused to comply with the empire's tyranny. The Organ Weaver's harmonies wove a tapestry of resistance, and the empire's grip on the people began to fray. As the music swelled, the empire's foundations crumbled, and a new era of remembrance dawned.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 134
+            },
+            "result_id": "4afb8b9fcaf2",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.95/run1/pilot_data_eval_default_llama-3.1-405b-instruct_851f08489ae2.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 642,
+                "length_in_words": 108,
+                "length_in_unique_words": 69,
+                "length_in_concepts": 49,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6388888888888888,
+                "avg_word_length_in_chars": 4.87037037037037,
+                "avg_sentence_length_in_chars": 127.6,
+                "avg_sentence_length_in_words": 21.6,
+                "avg_sentence_length_in_unique_words": 19.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 2,
+                "dsi": 0.2142991170692606,
+                "surprise": 0.016382381750047637,
+                "raw_surprises": [
+                    0.013114876096898875,
+                    0.005289453397065519,
+                    0.008329494020123507,
+                    0.006030939986007372
+                ],
+                "n_gram_diversity": [
+                    0.6388888888888888,
+                    0.9345794392523364,
+                    0.9811320754716981,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1111111111111111,
+                    0.40186915887850466,
+                    0.6792452830188679,
+                    0.8761904761904762,
+                    0.9711538461538461
+                ],
+                "avg_dep_num_clauses": 3.6,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 2.9389777122035188,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 8.8,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 73.90009917355376,
+                "readability_flesch_kincaid": 8.963702479338846,
+                "avg_pos_noun_ratio": 0.2720100069013113,
+                "avg_pos_verb_ratio": 0.1741873706004141,
+                "avg_pos_adj_ratio": 0.03230676328502415,
+                "avg_pos_adv_ratio": 0.006666666666666666,
+                "avg_pos_pron_ratio": 0.0485024154589372,
+                "avg_pos_det_ratio": 0.16129572118702554,
+                "avg_pos_adp_ratio": 0.08671670117322292,
+                "inv_homogen": 0.08897577938826187,
+                "novelty": 0.0007881718552030237,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a world where memories were the ultimate currency, the mysterious Organ of Remembrance stood tall, a mystical instrument capable of extracting and replaying the deepest recollections of those who dared to touch its keys. The enigmatic Maestro, rumored to have once ruled a forgotten empire of lost souls, was the only one who knew how to harness its power. But as the last remnants of his empire began to fade, he realized that he had to comply with the Organ's dark and ancient magic in order to preserve the memories of his people. With each note, a fragment of the past was revived, and the Maestro's grip on reality began to slip. In the end, the Organ's haunting melody was all that remained, a haunting echo of a forgotten civilization.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 155
+            },
+            "result_id": "b7c28470c520",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.95/run1/pilot_data_eval_default_llama-3.1-405b-instruct_a0d10a04fbf2.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 745,
+                "length_in_words": 134,
+                "length_in_unique_words": 83,
+                "length_in_concepts": 55,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6194029850746269,
+                "avg_word_length_in_chars": 4.485074626865671,
+                "avg_sentence_length_in_chars": 148.2,
+                "avg_sentence_length_in_words": 26.8,
+                "avg_sentence_length_in_unique_words": 23.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 6,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 6,
+                "dsi": 0.2103639432075449,
+                "surprise": 0.009065383380394795,
+                "raw_surprises": [
+                    0.004714480421126099,
+                    0.006786221081203053,
+                    0.00294073974038217,
+                    0.003689325518078268
+                ],
+                "n_gram_diversity": [
+                    0.6194029850746269,
+                    0.9624060150375939,
+                    0.9924242424242424,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09701492537313433,
+                    0.41353383458646614,
+                    0.7045454545454546,
+                    0.8854961832061069,
+                    0.9769230769230769
+                ],
+                "avg_dep_num_clauses": 4.2,
+                "max_dep_num_clauses": 8,
+                "avg_dep_path_length": 3.448646186118384,
+                "max_dep_path_length": 13,
+                "avg_constituency_tree_depth": 10.4,
+                "max_constituency_tree_depth": 15,
+                "readability_flesch_ease": 64.18154054054054,
+                "readability_flesch_kincaid": 11.660756756756758,
+                "avg_pos_noun_ratio": 0.1846766917293233,
+                "avg_pos_verb_ratio": 0.17243609022556391,
+                "avg_pos_adj_ratio": 0.07795488721804511,
+                "avg_pos_adv_ratio": 0.008,
+                "avg_pos_pron_ratio": 0.07705263157894737,
+                "avg_pos_det_ratio": 0.15181954887218044,
+                "avg_pos_adp_ratio": 0.10476691729323308,
+                "inv_homogen": 0.08399175820143326,
+                "novelty": 0.00865851957863445,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Aethereia, a lone melody echoed through the abandoned streets of a once-great empire, its haunting harmony born from the keys of a forgotten organ hidden deep within the ruins. The sound was said to hold the power to bend the fabric of reality, and those who heard it were compelled to comply with the whispers of the cosmos. Aria, a young wanderer, stumbled upon the ancient instrument and, as her fingers danced across its dusty keys, the melody swelled, awakening the dormant magic that had lain dormant for centuries. The empire's crumbling spires began to repair themselves, and the land was reborn in a symphony of light and sound. As the final notes faded, Aria vanished, leaving behind a realm forever changed by the organ's celestial song.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 163
+            },
+            "result_id": "3519fc6bb218",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.5/run1/pilot_data_eval_default_llama-3.1-405b-instruct_00c26504771e.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 773,
+                "length_in_words": 135,
+                "length_in_unique_words": 91,
+                "length_in_concepts": 63,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.674074074074074,
+                "avg_word_length_in_chars": 4.62962962962963,
+                "avg_sentence_length_in_chars": 153.8,
+                "avg_sentence_length_in_words": 27,
+                "avg_sentence_length_in_unique_words": 23,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 4,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 5,
+                "dsi": 0.21457956732082414,
+                "surprise": 0.018036373247180076,
+                "raw_surprises": [
+                    0.009384704723059023,
+                    0.012837459298378623,
+                    0.003231588863079865,
+                    0.010618993609842642
+                ],
+                "n_gram_diversity": [
+                    0.674074074074074,
+                    0.9925373134328358,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08888888888888889,
+                    0.3880597014925373,
+                    0.6766917293233082,
+                    0.8787878787878788,
+                    0.9694656488549618
+                ],
+                "avg_dep_num_clauses": 4.4,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.68584081729627,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 10.4,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 71.89873684210528,
+                "readability_flesch_kincaid": 10.783105263157896,
+                "avg_pos_noun_ratio": 0.2315030066824458,
+                "avg_pos_verb_ratio": 0.1785997808759942,
+                "avg_pos_adj_ratio": 0.07997736276174307,
+                "avg_pos_adv_ratio": 0.0324812030075188,
+                "avg_pos_pron_ratio": 0.05528258912018645,
+                "avg_pos_det_ratio": 0.1604395861734425,
+                "avg_pos_adp_ratio": 0.10316681581595814,
+                "inv_homogen": 0.07124316174051036,
+                "novelty": 0.00022727135207595284,
+                "theme_uniqueness": 0.09090909090909091
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Aethereia, the ancient organ at the heart of the Celestial Cathedral pulsed with an otherworldly energy, its haunting melodies weaving a spell of protection around the fragile kingdom. But as the dark sorcerer, Malakai, sought to expand his twisted empire, he discovered that the organ's power was the key to unlocking the secrets of the cosmos. To harness its might, Malakai was forced to comply with the organ's enigmatic demands, surrendering fragments of his own soul to its insatiable hunger. As the organ's song grew louder, the very fabric of reality began to unravel, threatening to consume both Aethereia and Malakai's empire in its wake. In the end, only the organ's haunting refrain remained, a haunting reminder of the terrible price of ambition.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 171
+            },
+            "result_id": "772e6cdf4fd5",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.5/run1/pilot_data_eval_default_llama-3.1-405b-instruct_8ba78c09929b.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 783,
+                "length_in_words": 133,
+                "length_in_unique_words": 81,
+                "length_in_concepts": 59,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6090225563909775,
+                "avg_word_length_in_chars": 4.81203007518797,
+                "avg_sentence_length_in_chars": 155.8,
+                "avg_sentence_length_in_words": 26.6,
+                "avg_sentence_length_in_unique_words": 22.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 7,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 7,
+                "dsi": 0.216047013210038,
+                "surprise": 0.012326193877013975,
+                "raw_surprises": [
+                    0.0024497875886120013,
+                    0.01203373589596668,
+                    0.0019442389061400944,
+                    0.008224625363309174
+                ],
+                "n_gram_diversity": [
+                    0.6090225563909775,
+                    0.9242424242424242,
+                    0.9770992366412213,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09022556390977443,
+                    0.3484848484848485,
+                    0.6183206106870229,
+                    0.8307692307692308,
+                    0.9534883720930233
+                ],
+                "avg_dep_num_clauses": 2.8,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.524028844151087,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 8.8,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 65.8698791946309,
+                "readability_flesch_kincaid": 11.47495302013423,
+                "avg_pos_noun_ratio": 0.2628893655245742,
+                "avg_pos_verb_ratio": 0.12533137790488064,
+                "avg_pos_adj_ratio": 0.09049556667705488,
+                "avg_pos_adv_ratio": 0.01793372319688109,
+                "avg_pos_pron_ratio": 0.05126111691628933,
+                "avg_pos_det_ratio": 0.14182707901764163,
+                "avg_pos_adp_ratio": 0.1335076597798921,
+                "inv_homogen": 0.07728164610655411,
+                "novelty": 0.0027076204263517534,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a mystical forest, an ancient organ stood as a gateway to otherworldly realms, its haunting melodies weaving a spell of protection around the land. The dark sorcerer, Malakai, sought to shatter this harmony and claim the forest as the foundation of his twisted empire. But as he reached out to silence the organ's pipes, the trees themselves began to stir, their branches tangling around him like chains, forcing him to comply with the forest's ancient magic. The organ's song swelled, a triumphant crescendo that bound Malakai to the forest's will, rendering his dark ambitions powerless. And so, the forest remained a sanctuary, its secrets and magic safe from those who would seek to exploit them.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 152
+            },
+            "result_id": "5ea10fbaab8a",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.9/run1/pilot_data_eval_default_llama-3.1-405b-instruct_6394dd258cd5.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 716,
+                "length_in_words": 123,
+                "length_in_unique_words": 80,
+                "length_in_concepts": 51,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6504065040650406,
+                "avg_word_length_in_chars": 4.7317073170731705,
+                "avg_sentence_length_in_chars": 142.4,
+                "avg_sentence_length_in_words": 24.6,
+                "avg_sentence_length_in_unique_words": 21.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 7,
+                "length_in_third_person_plural": 3,
+                "length_in_first_person": 0,
+                "length_in_third_person": 10,
+                "dsi": 0.2132608991510728,
+                "surprise": 0.02603682824672561,
+                "raw_surprises": [
+                    0.007507187463504428,
+                    0.016111057409734453,
+                    0.01165587590499359,
+                    0.01679953571521875
+                ],
+                "n_gram_diversity": [
+                    0.6504065040650406,
+                    0.9508196721311475,
+                    0.9834710743801653,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0975609756097561,
+                    0.36885245901639346,
+                    0.6694214876033058,
+                    0.8833333333333333,
+                    0.9915966386554622
+                ],
+                "avg_dep_num_clauses": 4,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.3335653668191334,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 9.6,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 75.15037410071943,
+                "readability_flesch_kincaid": 9.683654676258993,
+                "avg_pos_noun_ratio": 0.24260504201680672,
+                "avg_pos_verb_ratio": 0.1511764705882353,
+                "avg_pos_adj_ratio": 0.08873949579831933,
+                "avg_pos_adv_ratio": 0.017142857142857144,
+                "avg_pos_pron_ratio": 0.10560224089635854,
+                "avg_pos_det_ratio": 0.14907563025210085,
+                "avg_pos_adp_ratio": 0.10591036414565826,
+                "inv_homogen": 0.09490621349085933,
+                "novelty": 0.0028646076915786467,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a mystical realm, an ancient organ stood at the heart of a long-abandoned temple, its pipes whispering secrets to the wind. The once-mighty Astral Empire had left behind this relic, a testament to their forgotten art of harnessing sound to bend reality. Aria, a young apprentice, stumbled upon the temple and felt an inexplicable connection to the organ, as if its melodies held the key to unlocking her own hidden potential. As she began to play, the organ's vibrations seemed to awaken a dormant magic within her, urging her to comply with an otherworldly rhythm that synchronized her heartbeat with the cosmos. With each note, Aria felt herself becoming a conduit for the empire's lost knowledge, weaving a sonic tapestry that would reshape the fabric of reality.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 160
+            },
+            "result_id": "741cbc88247b",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.95/run1/pilot_data_eval_default_llama-3.1-405b-instruct_bee2a21c954d.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 769,
+                "length_in_words": 132,
+                "length_in_unique_words": 90,
+                "length_in_concepts": 60,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6818181818181818,
+                "avg_word_length_in_chars": 4.734848484848484,
+                "avg_sentence_length_in_chars": 153,
+                "avg_sentence_length_in_words": 26.4,
+                "avg_sentence_length_in_unique_words": 23.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 8,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 9,
+                "dsi": 0.213829077771828,
+                "surprise": 0.008210311631063921,
+                "raw_surprises": [
+                    0.0011528866552250605,
+                    0.00813011607050379,
+                    0.0008036836163028416,
+                    0.00633393692009615
+                ],
+                "n_gram_diversity": [
+                    0.6818181818181818,
+                    0.9847328244274809,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09090909090909091,
+                    0.32061068702290074,
+                    0.6461538461538462,
+                    0.8449612403100775,
+                    0.9765625
+                ],
+                "avg_dep_num_clauses": 2.6,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.3703124107994147,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 10.8,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 62.46316778523493,
+                "readability_flesch_kincaid": 11.950120805369128,
+                "avg_pos_noun_ratio": 0.2459461265870561,
+                "avg_pos_verb_ratio": 0.1722483382434657,
+                "avg_pos_adj_ratio": 0.07426072802759459,
+                "avg_pos_adv_ratio": 0.017786561264822136,
+                "avg_pos_pron_ratio": 0.07821428009771338,
+                "avg_pos_det_ratio": 0.1686952852245206,
+                "avg_pos_adp_ratio": 0.11767536249357838,
+                "inv_homogen": 0.075460452100505,
+                "novelty": 0.0017282504500682472,
+                "theme_uniqueness": 0.09090909090909091
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Aethereia, the ancient organ hidden within the crystal cave held the secrets of the long-lost empire of Eldrador. Its haunting melodies whispered tales of a powerful sorceress who once ruled with an iron fist, forcing the land to comply with her every whim. But as the last notes of the organ faded away, the empire's dark magic began to unravel, freeing the realm from its centuries-long slumber. The creatures of Aethereia stirred, sensing the shift in power, and the whispers of rebellion began to spread. As the organ's silence deepened, the empire's grip on the realm finally began to loosen, allowing the people to forge a new destiny.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 144
+            },
+            "result_id": "b86c0895d18c",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.3/run1/pilot_data_eval_default_llama-3.1-405b-instruct_23ff66060a4a.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 666,
+                "length_in_words": 118,
+                "length_in_unique_words": 75,
+                "length_in_concepts": 54,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.635593220338983,
+                "avg_word_length_in_chars": 4.567796610169491,
+                "avg_sentence_length_in_chars": 132.4,
+                "avg_sentence_length_in_words": 23.6,
+                "avg_sentence_length_in_unique_words": 20,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 3,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 3,
+                "dsi": 0.21204452911179686,
+                "surprise": 0.006281064143256521,
+                "raw_surprises": [
+                    0.0003370959243494953,
+                    0.0035772148942772586,
+                    0.0028793492305555224,
+                    0.005768468237330765
+                ],
+                "n_gram_diversity": [
+                    0.635593220338983,
+                    0.9230769230769231,
+                    0.9913793103448276,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09322033898305085,
+                    0.3333333333333333,
+                    0.6293103448275862,
+                    0.8173913043478261,
+                    0.9210526315789473
+                ],
+                "avg_dep_num_clauses": 3.2,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.438399029342426,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 9,
+                "max_constituency_tree_depth": 15,
+                "readability_flesch_ease": 76.78938345864663,
+                "readability_flesch_kincaid": 9.156932330827072,
+                "avg_pos_noun_ratio": 0.27140170940170943,
+                "avg_pos_verb_ratio": 0.1802136752136752,
+                "avg_pos_adj_ratio": 0.05574358974358974,
+                "avg_pos_adv_ratio": 0.032025641025641025,
+                "avg_pos_pron_ratio": 0.03169230769230769,
+                "avg_pos_det_ratio": 0.17776923076923076,
+                "avg_pos_adp_ratio": 0.12238461538461538,
+                "inv_homogen": 0.08258021136988765,
+                "novelty": 0.005297347770130523,
+                "theme_uniqueness": 0.09090909090909091
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Aethereia, the ancient organ hidden within the heart of the crystal cave pulsed with an otherworldly energy, beckoning the brave and the curious to unravel its secrets. Lyra, a rebellious sorceress, sought to harness its power to topple the tyrannical Shadow Empire that had enslaved her people for centuries. But as she reached out to claim the organ's magic, a whispered voice echoed in her mind, warning her that to wield its might, she must first comply with the ancient pact that bound the organ to the land. The pact demanded a terrible price: Lyra's own memories, which would be consumed by the organ's hunger for knowledge. As the sorceress hesitated, the empire's dark forces closed in, sensing the threat to their dominion.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 168
+            },
+            "result_id": "2e667bdbd6a2",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.3/run1/pilot_data_eval_default_llama-3.1-405b-instruct_88f9df8e20ab.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 758,
+                "length_in_words": 132,
+                "length_in_unique_words": 85,
+                "length_in_concepts": 57,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6439393939393939,
+                "avg_word_length_in_chars": 4.659090909090909,
+                "avg_sentence_length_in_chars": 150.8,
+                "avg_sentence_length_in_words": 26.4,
+                "avg_sentence_length_in_unique_words": 22.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 8,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 9,
+                "dsi": 0.21554026384849595,
+                "surprise": 0.014410895708626456,
+                "raw_surprises": [
+                    0.00408932330651518,
+                    0.007917940485608427,
+                    0.012375704825870554,
+                    0.0044388227992587515
+                ],
+                "n_gram_diversity": [
+                    0.6439393939393939,
+                    0.9694656488549618,
+                    0.9923076923076923,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09090909090909091,
+                    0.3435114503816794,
+                    0.6461538461538462,
+                    0.8527131782945736,
+                    0.96875
+                ],
+                "avg_dep_num_clauses": 3.6,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.448874644017704,
+                "max_dep_path_length": 12,
+                "avg_constituency_tree_depth": 10.8,
+                "max_constituency_tree_depth": 14,
+                "readability_flesch_ease": 70.46937837837838,
+                "readability_flesch_kincaid": 10.783729729729732,
+                "avg_pos_noun_ratio": 0.23608002291825822,
+                "avg_pos_verb_ratio": 0.15070537305831425,
+                "avg_pos_adj_ratio": 0.09024414311179017,
+                "avg_pos_adv_ratio": 0.016764705882352942,
+                "avg_pos_pron_ratio": 0.08981124267888974,
+                "avg_pos_det_ratio": 0.15079736440030558,
+                "avg_pos_adp_ratio": 0.09115323402088107,
+                "inv_homogen": 0.09296670426493106,
+                "novelty": 0.0016941217032676592,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Aethereia, a lone musician's enchanted organ sang with an otherworldly voice, weaving a sonic tapestry that could bend the fabric of reality. The ruling sorceress, seeking to expand her empire of dreams, sought to harness the organ's power for her own purposes. But the musician, aware of the instrument's ancient magic, refused to comply with the sorceress's demands, choosing instead to let the organ's melodies whisper secrets to the wind. As the sorceress's dark magic closed in, the musician vanished into the organ's swirling harmonies, leaving behind a realm forever changed by the haunting refrains. In the silence that followed, the sorceress realized that true power lay not in domination, but in harmony.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 158
+            },
+            "result_id": "a80d7ce276ed",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.5/run1/pilot_data_eval_default_llama-3.1-405b-instruct_e4cde96dc45a.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 740,
+                "length_in_words": 125,
+                "length_in_unique_words": 76,
+                "length_in_concepts": 55,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.608,
+                "avg_word_length_in_chars": 4.856,
+                "avg_sentence_length_in_chars": 147.2,
+                "avg_sentence_length_in_words": 25,
+                "avg_sentence_length_in_unique_words": 20.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 2,
+                "dsi": 0.2140775771253438,
+                "surprise": 0.003900605998759396,
+                "raw_surprises": [
+                    0.0014550038509898722,
+                    0.0017507284197932071,
+                    0.0001257975687499746,
+                    0.004469682157985738
+                ],
+                "n_gram_diversity": [
+                    0.608,
+                    0.9193548387096774,
+                    0.975609756097561,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.096,
+                    0.3467741935483871,
+                    0.6260162601626016,
+                    0.8114754098360656,
+                    0.9173553719008265
+                ],
+                "avg_dep_num_clauses": 3.2,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.427695121882678,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 8.6,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 64.21200000000003,
+                "readability_flesch_kincaid": 11.308709219858155,
+                "avg_pos_noun_ratio": 0.2800221880867042,
+                "avg_pos_verb_ratio": 0.17167605393411844,
+                "avg_pos_adj_ratio": 0.07665983956306537,
+                "avg_pos_adv_ratio": 0.02126642771804062,
+                "avg_pos_pron_ratio": 0.0373015873015873,
+                "avg_pos_det_ratio": 0.14627922853729305,
+                "avg_pos_adp_ratio": 0.12252944188428058,
+                "inv_homogen": 0.07658361352008322,
+                "novelty": 0.001231251743036621,
+                "theme_uniqueness": 0.09090909090909091
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Echoaria, the enchanted organ hidden within the ancient forest sang an otherworldly melody, a siren's call that beckoned dreamers from far and wide. One such dreamer was the young rebellious sorceress, Lyra, who sought to topple the tyrannical Empire of Shadows that had shrouded the land in eternal darkness. However, as Lyra drew closer to the organ, she felt an inexplicable pull to comply with the harmony that resonated deep within her soul, slowly tempering! her fiery spirit. Entranced, Lyra's fingers danced across the organ's keys, unleashing a symphony of light that pierced the shadows, weakening the empire's hold on Echoaria. As the last echoes of the melody faded, Lyra knew that the revolution had begun, one that would shatter the empire's chains and free the realm from its grasp.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 186
+            },
+            "result_id": "ff7dcda34786",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_4d7cce66d3b5.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 822,
+                "length_in_words": 140,
+                "length_in_unique_words": 90,
+                "length_in_concepts": 63,
+                "length_in_sentences": 6,
+                "type_token_ratio": 0.6428571428571429,
+                "avg_word_length_in_chars": 4.785714285714286,
+                "avg_sentence_length_in_chars": 136.16666666666666,
+                "avg_sentence_length_in_words": 23.333333333333332,
+                "avg_sentence_length_in_unique_words": 20.833333333333332,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 4,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 4,
+                "dsi": 0.2133973179508098,
+                "surprise": 0.024055427037752597,
+                "raw_surprises": [
+                    0.0009443826509482611,
+                    0.005053853595649804,
+                    0.016059419610998132,
+                    0.02732482864743188,
+                    0.010756083089353413
+                ],
+                "n_gram_diversity": [
+                    0.6428571428571429,
+                    0.9784172661870504,
+                    0.9927536231884058,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09285714285714286,
+                    0.41007194244604317,
+                    0.6811594202898551,
+                    0.8759124087591241,
+                    0.9779411764705882
+                ],
+                "avg_dep_num_clauses": 3.5,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.4384476873061605,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 10.5,
+                "max_constituency_tree_depth": 14,
+                "readability_flesch_ease": 74.08894514767935,
+                "readability_flesch_kincaid": 9.4673417721519,
+                "avg_pos_noun_ratio": 0.23082817565576186,
+                "avg_pos_verb_ratio": 0.12835249042145594,
+                "avg_pos_adj_ratio": 0.12830828175655762,
+                "avg_pos_adv_ratio": 0.03138815207780725,
+                "avg_pos_pron_ratio": 0.10512820512820513,
+                "avg_pos_det_ratio": 0.12061597406424993,
+                "avg_pos_adp_ratio": 0.08538166814028883,
+                "inv_homogen": 0.09780756286952806,
+                "novelty": 0.0025917700921046505,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a mystical realm where memories took on lives of their own, an ancient organ stood as the guardian of forgotten thoughts. Its keys whispered secrets to the wind, weaving an empire of echoes that reverberated through the dreams of the sleeping. Those who sought to unravel the mysteries of the organ were forced to comply with its haunting melody, surrendering to the symphony of forgotten moments. As they listened, the organ's song transformed, revealing hidden truths that had been hidden in the fabric of time. The harmonies danced on the edge of reality, beckoning listeners to surrender to the organ's haunting empire of remembrance.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 126
+            },
+            "result_id": "d87c608bf181",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.9/run1/pilot_data_eval_default_llama-3.1-405b-instruct_d94d36655872.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 641,
+                "length_in_words": 107,
+                "length_in_unique_words": 69,
+                "length_in_concepts": 47,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6448598130841121,
+                "avg_word_length_in_chars": 4.91588785046729,
+                "avg_sentence_length_in_chars": 127.4,
+                "avg_sentence_length_in_words": 21.4,
+                "avg_sentence_length_in_unique_words": 18.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 0,
+                "length_in_third_person": 4,
+                "dsi": 0.21031384221058438,
+                "surprise": 0.020147426140428804,
+                "raw_surprises": [
+                    0.004277557194834997,
+                    0.003052495585547571,
+                    0.012024659580654573,
+                    0.020940139919820466
+                ],
+                "n_gram_diversity": [
+                    0.6448598130841121,
+                    0.9245283018867925,
+                    0.9904761904761905,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08411214953271028,
+                    0.3018867924528302,
+                    0.6285714285714286,
+                    0.8173076923076923,
+                    0.9029126213592233
+                ],
+                "avg_dep_num_clauses": 2.4,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.55562490112324,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 11,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 68.16913559322035,
+                "readability_flesch_kincaid": 9.614,
+                "avg_pos_noun_ratio": 0.28454545454545455,
+                "avg_pos_verb_ratio": 0.1932727272727273,
+                "avg_pos_adj_ratio": 0.03727272727272727,
+                "avg_pos_adv_ratio": 0.0,
+                "avg_pos_pron_ratio": 0.0730909090909091,
+                "avg_pos_det_ratio": 0.14127272727272727,
+                "avg_pos_adp_ratio": 0.17745454545454545,
+                "inv_homogen": 0.08459674275439719,
+                "novelty": 0.008758721572555472,
+                "theme_uniqueness": 0.14285714285714285
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a mystical realm, an ancient organ stood atop a windswept hill, its pipes whispering secrets to the wind. Its melancholic melodies carried far and wide, reaching the ears of a mighty sorceress who sought to expand her ethereal empire across the realms. The sorceress believed that the organ held the key to unlocking the hidden harmonics of the universe, and that by mastering its haunting refrains, she could bend the cosmos to comply with her will. As the sorceress's fingers danced across the organ's keys, a shiver ran through the fabric of reality, and stars began to align in conformity with her dark design. The celestial rhythms now in her grasp, the sorceress smiled, knowing that nothing could stand against the cosmic harmonies she now controlled.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 161
+            },
+            "result_id": "e8acff5a70d7",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.95/run1/pilot_data_eval_default_llama-3.1-405b-instruct_1b2f2b000a41.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 761,
+                "length_in_words": 129,
+                "length_in_unique_words": 84,
+                "length_in_concepts": 58,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6511627906976745,
+                "avg_word_length_in_chars": 4.813953488372093,
+                "avg_sentence_length_in_chars": 151.4,
+                "avg_sentence_length_in_words": 25.8,
+                "avg_sentence_length_in_unique_words": 22.8,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 9,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 9,
+                "dsi": 0.21333912409801448,
+                "surprise": 0.011736099215389581,
+                "raw_surprises": [
+                    0.005753170568626259,
+                    0.0028761229235610697,
+                    0.005646855490548275,
+                    0.009196049448043558
+                ],
+                "n_gram_diversity": [
+                    0.6511627906976745,
+                    0.9609375,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08527131782945736,
+                    0.328125,
+                    0.6377952755905512,
+                    0.8571428571428571,
+                    0.952
+                ],
+                "avg_dep_num_clauses": 3.4,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.3807114624505927,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 10.8,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 70.72488111888113,
+                "readability_flesch_kincaid": 10.499664335664338,
+                "avg_pos_noun_ratio": 0.2607960409044,
+                "avg_pos_verb_ratio": 0.15271038558964256,
+                "avg_pos_adj_ratio": 0.0956431184914157,
+                "avg_pos_adv_ratio": 0.026515151515151516,
+                "avg_pos_pron_ratio": 0.08711276855239704,
+                "avg_pos_det_ratio": 0.1563387747443475,
+                "avg_pos_adp_ratio": 0.12329017731494511,
+                "inv_homogen": 0.0815887425256812,
+                "novelty": 0.0027081577976952875,
+                "theme_uniqueness": 0.09090909090909091
+            }
+        }
+    ]
+}

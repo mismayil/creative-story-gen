@@ -4,6 +4,7 @@ import tiktoken
 import uuid
 import os
 import glob
+import pandas as pd
 
 MODEL_COSTS = {
     "gpt-3.5-turbo": {'input': 0.0000015, 'output': 0.000002},
@@ -153,3 +154,15 @@ def cache(cache_dict):
             return result
         return wrapper
     return decorator_cache
+
+def concat_dfs(df_lst):
+    shared_columns = None
+
+    for df in df_lst:
+        if shared_columns is None:
+            shared_columns = set(df.columns)
+        else:
+            shared_columns.intersection_update(df.columns)
+    
+    shared_columns = list(shared_columns)
+    return pd.concat([df[shared_columns] for df in df_lst])

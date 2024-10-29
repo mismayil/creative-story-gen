@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "llama-3.1-405b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.3,
+            "max_tokens": 256,
+            "top_p": 0.9,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where music was the lifeblood of the city, the rhythmic petrol of the jazz band's trumpets ignited the crowd, while the diesel beats of the underground club pulsed through the streets like a rebellious heartbeat. Amidst this sonic chaos, a lone sound artist stood at the edge of the city, wielding an ancient pump organ that she used to siphon the discordant notes from the air and weave them into a haunting melody. As the last wisps of sound were drained from the atmosphere, the city's cacophony gave way to an eerie silence, and the artist's pump organ stood still, its bellows exhausted. The crowd, now entranced by the sudden quiet, began to hum a gentle harmony that filled the vacuum left by the silenced city. And in this fleeting moment, the artist's symphony of sound and silence redefined the city's rhythm.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 182
+            },
+            "result_id": "0116bf21e42a"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a young artist discovered she could stamp her thoughts onto canvas, creating vibrant masterpieces that told the story of her past. One day, she received a mysterious letter from her future self, warning her of an impending loss that would change her art forever. Desperate to alter the course of events, she decided to send her memories back in time, hoping to prevent the heartache that was to come. As she focused all her energy on the task, her paintings began to fade, leaving behind only the faintest whisper of what once was. In the end, she was left with a blank canvas, waiting to be filled with the memories she had yet to create.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 143
+            },
+            "result_id": "1e3b6851e8d4"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Aethereia, a lone musician's haunting melody on the ancient organ echoed through the crumbling spires of a long-forgotten empire. The notes seemed to awaken the very stones, which began to rearrange themselves in a mesmerizing dance, as if trying to comply with some hidden harmony. As the music swelled, the empire's ruins transformed into a shimmering palace of crystal, its facets reflecting the celestial rhythms that governed the cosmos. The musician, now a conduit for the divine, continued to play, weaving a sonic tapestry that sustained the palace and kept the forces of chaos at bay. In this symphony of creation, the organ's voice was the very heartbeat of existence.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 146
+            },
+            "result_id": "ea5bdc1ea37c"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the mystical realm of Aethereia, a lone sorceress conjured a spell of eternal gloom to shield the land from an impending catastrophe. The dark veil, however, came at a steep payment: the sorceress's own memories, slowly unraveling like the threads of a tapestry. As the last remnants of her past faded, she began to question whether she truly did exist, or if she was merely a shadow of her former self. The whispers of the forest, ancient and wise, reassured her that her essence remained, even as her recollections vanished into the void. And so, she stood vigilant, a guardian of the shrouded realm, her presence a testament to the enduring power of her magic.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 151
+            },
+            "result_id": "32f7548ca77f"
+        }
+    ]
+}

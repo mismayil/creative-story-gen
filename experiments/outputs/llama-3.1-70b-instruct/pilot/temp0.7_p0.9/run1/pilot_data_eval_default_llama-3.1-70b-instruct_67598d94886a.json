@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "llama-3.1-70b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.9,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In her underground laboratory hidden beneath city streets littered by remnants from wars over resources long gone dry – Dr Maria had been trying tirelessly night after day searching desperately seeking elusive answer - With its last hope dwindling away just like precious water supply before she stumbled upon innovative solution blending perfectly harmonious balance between once thought opposing forces Petrol & Diesel elements fueling groundbreaking steam powered Pump capable generating enough energy reviving massive ancient irrigation system dried-out rivers now flowing wildly replenishing parchments cracked farmland nourished village people rejoiced witnessing miraculous rebirth land they called home.",
+            "usage": {
+                "input_tokens": 170,
+                "output_tokens": 112
+            },
+            "result_id": "933415489fe6"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In ancient times deep within mystical forests lived tiny creatures known only by their title - Stamp Weavers; skilled artisans who could manipulate reality itself through intricate patterns they etched into bark canvases called letters from nature's own script book.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 46
+            },
+            "result_id": "9df4cb61dc41"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In ancient times when magic was woven into every thread life offered - there existed mystical beings who possessed organs capable enough so they could harness elemental forces within them; Aria being one among many possessing this extraordinary gift lived at edge where dark forests met eerie mountains under Empire Akral's watchful eyes which demanded she learn how her abilities worked well beyond understanding it by heart alone but also adhere strictly all commands without question hence forcing individuals gifted like herself either choose paths defined solely loyalty thus blindly follow order aiming suppress any sense rebellion rising deep inside each compliant soul alike.",
+            "usage": {
+                "input_tokens": 167,
+                "output_tokens": 110
+            },
+            "result_id": "1bb3d28f5c80"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In ancient times when gods still roamed among mortals under veils woven from threads dipped into starlight's radiance & night sky inkiness referred by some poets 'the celestial canvas', there lived mysterious being Aethon - known widely only through whispers within hushed conversations held during periods where moon hid behind layers formed out thick dark clouds casting what people called simply...gloom.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 77
+            },
+            "result_id": "c614cf64c748"
+        }
+    ]
+}

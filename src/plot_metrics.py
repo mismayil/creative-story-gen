@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 import ast
 from pandas.api.types import is_numeric_dtype
 
+from utils import concat_dfs
+
 sns.set_theme(style="whitegrid")
 
 FIG_SIZE = (20, 15)
@@ -28,8 +30,13 @@ def set_group_data(metrics):
         metrics[by_field] = metrics["group_id"].apply(lambda x: ast.literal_eval(x)[value_index])
     return group_by
 
-def plot_local_metrics(metrics_lst, metric, output_dir, output_format="png"):
-    merged_metrics = pd.concat(metrics_lst)
+def plot_local_metrics(metrics_lst, metric, output_dir, output_format="png"): 
+    merged_metrics = concat_dfs(metrics_lst)
+
+    if metric not in merged_metrics.columns:
+        print(f"Skipping. Metric {metric} not found in the input data.")
+        return
+
     group_by = set_group_data(merged_metrics)
 
     assert len(group_by) > 1, "Group by field should have at least 2 values."
@@ -57,10 +64,11 @@ def plot_local_metrics(metrics_lst, metric, output_dir, output_format="png"):
     plt.close()
 
 def plot_global_metrics_n_gram_diversity(metrics_lst, output_dir, output_format="png"):
+    merged_metrics = concat_dfs(metrics_lst)
+    group_by = set_group_data(merged_metrics)
+
     output_dir = pathlib.Path(output_dir) / f"{output_format}_figs"
     output_dir.mkdir(parents=True, exist_ok=True)
-    merged_metrics = pd.concat(metrics_lst)
-    group_by = set_group_data(merged_metrics)
 
     hue_attr = group_by[-2]
     group_attr = group_by[-1]
@@ -92,10 +100,11 @@ def plot_global_metrics_n_gram_diversity(metrics_lst, output_dir, output_format=
         plt.close()
 
 def plot_global_metrics_raw_surprises(metrics_lst, output_dir, output_format="png"):
+    merged_metrics = concat_dfs(metrics_lst)
+    group_by = set_group_data(merged_metrics)
+
     output_dir = pathlib.Path(output_dir) / f"{output_format}_figs"
     output_dir.mkdir(parents=True, exist_ok=True)
-    merged_metrics = pd.concat(metrics_lst)
-    group_by = set_group_data(merged_metrics)
 
     hue_attr = group_by[-2]
     group_attr = group_by[-1]

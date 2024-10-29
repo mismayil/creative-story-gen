@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "llama-3.1-405b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.5,
+            "max_tokens": 256,
+            "top_p": 0.9,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where music was the lifeblood of the city, the rhythmic petrol of the jazz quartet ignited the crowd, while the diesel beats of the underground club pulsed through the streets like a rebellious heartbeat. Amidst the vibrant chaos, a young musician discovered an enchanted pump organ, its keys whispering ancient melodies that harmonized the discordant genres. As she played, the petrol of improvisation fueled the diesel of electronic beats, creating a symphony that synchronized the city's rhythms. The pump organ's magic infused the streets, transforming the urban landscape into a vibrant, pulsating entity that throbbed with creative energy. In this world, music was the fuel that powered the city's very existence.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 146
+            },
+            "result_id": "8d99507257cd"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a young artist used a magical stamp to imprint her most cherished recollections onto a canvas, weaving a tapestry of love and loss. Each brushstroke was a letter to her past, a message of hope and resilience that transcended time and space. As she finished her masterpiece, she felt an overwhelming urge to send it soaring into the universe, where it would touch the hearts of all who saw it. The painting took flight, a kaleidoscope of color and emotion that danced among the stars. And as it traveled, the memories it held were released, a gentle rain of love that nourished the souls of all who received it.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 138
+            },
+            "result_id": "355891d2ab03"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a mystical realm, the enchanted organ sang an otherworldly melody that resonated through the crumbling ruins of a long-forgotten empire. The haunting harmony awakened an ancient entity, who rose from the dust to reclaim its dominion over the land. But as the entity's dark magic began to spread, the organ's song transformed, weaving a counter-curse that forced the entity to comply with the realm's ancient laws of balance and harmony. The entity, now bound by the organ's melody, was forced to restore the realm to its former glory, and the empire was reborn in a new era of peace and prosperity. As the organ's final notes faded, the realm was forever changed, its fate inextricably linked to the mystical instrument's haunting song.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 157
+            },
+            "result_id": "c37fe558f7f9"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the mystical realm of Echoes, a world that existed beyond the veil of reality, the fabric of existence was woven from the threads of forgotten memories. A lone weaver, tasked with maintaining the delicate balance, discovered that a mysterious force known as the Gloom had begun to unravel the tapestry, threatening to erase entire civilizations from the cosmos. The weaver proposed a payment to the Gloom: in exchange for sparing the realm, it would receive a single, precious memory from the weaver's own past. The Gloom, intrigued by the offer, agreed to the terms, and the weaver surrendered the memory of their first love. As the payment was made, the realm of Echoes was reborn, and the weaver's existence became forever intertwined with the enigmatic force.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 161
+            },
+            "result_id": "d9fa85052c18"
+        }
+    ]
+}

@@ -30,8 +30,14 @@ from utils import read_json, write_json, generate_unique_id, batched
 OPENAI_MODELS = ["gpt-3.5-turbo", "gpt-4", "gpt-4-0125-preview", "gpt-4o-2024-08-06", "gpt-4o"]
 GOOGLE_MODELS = ["gemini-1.5-flash", "gemini-1.5-pro"]
 ANTHROPIC_MODELS = ["claude-3-5-sonnet-20240620", "claude-3-opus-20240229", "claude-3-sonnet-20240229", "claude-3-haiku-20240307"]
-API_MODELS = OPENAI_MODELS + GOOGLE_MODELS + ANTHROPIC_MODELS
-HF_MODELS = ["llama-3.1-8b-instruct", "llama-3.1-70b-instruct"]
+TOGETHER_MODELS = ["llama-3.1-70b-instruct", "llama-3.1-405b-instruct"]
+API_MODELS = OPENAI_MODELS + GOOGLE_MODELS + ANTHROPIC_MODELS + TOGETHER_MODELS
+HF_MODELS = []
+
+MODEL_MAP = {
+    "llama-3.1-70b-instruct": "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+    "llama-3.1-405b-instruct": "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"
+}
 
 @dataclasses.dataclass
 class ModelResponse:
@@ -53,6 +59,8 @@ def get_openai_model_args(model_args):
             openai_model_args["frequency_penalty"] = model_args["frequency_penalty"]
         if "presence_penalty" in model_args:
             openai_model_args["presence_penalty"] = model_args["presence_penalty"]
+        if "stop" in model_args:
+            openai_model_args["stop"] = [model_args["stop"]]
 
     return openai_model_args
 
@@ -74,6 +82,7 @@ async def openai_chat_completion(client, messages, model="gpt-3.5-turbo", model_
     return ModelResponse(text, usage, exception)
 
 async def evaluate_openai_model(client, model, user_prompt, system_prompt=None, model_args=None):
+    model = MODEL_MAP.get(model, model)
     messages = []
 
     if system_prompt:
@@ -216,7 +225,7 @@ async def evaluate_api_model(client, model, batch, model_args=None):
     tasks = []
     
     for sample in batch:
-        if model in OPENAI_MODELS:
+        if model in OPENAI_MODELS+TOGETHER_MODELS:
             tasks.append(asyncio.create_task(evaluate_openai_model(client, model, sample["user_prompt"], sample["system_prompt"], model_args=model_args)))
         elif model in GOOGLE_MODELS:
             tasks.append(asyncio.create_task(evaluate_google_model(client, model, sample["user_prompt"], sample["system_prompt"], model_args=model_args)))
@@ -229,7 +238,7 @@ async def evaluate_api_model(client, model, batch, model_args=None):
 
     return results
 
-def configure_openai_client(api_key, is_openai_azure=False):
+def configure_openai_client(model, api_key, is_openai_azure=False):
     if is_openai_azure:
         endpoint = os.getenv("AZURE_OPENAI_API_ENDPOINT", "https://sigturk-openai.openai.azure.com/")
         client = AsyncAzureOpenAI(
@@ -238,7 +247,12 @@ def configure_openai_client(api_key, is_openai_azure=False):
             azure_endpoint=endpoint
         )
     else:
-        client = AsyncOpenAI(api_key=api_key if api_key is not None else os.getenv("OPENAI_API_KEY"))
+        if model in HF_MODELS:
+            client = AsyncOpenAI(base_url="https://api-inference.huggingface.co/v1/", api_key=api_key if api_key is not None else os.getenv("HF_API_KEY"))
+        elif model in TOGETHER_MODELS:
+            client = AsyncOpenAI(base_url="https://api.together.xyz/v1", api_key=api_key if api_key is not None else os.getenv("TOGETHER_API_KEY"))
+        else:
+            client = AsyncOpenAI(api_key=api_key if api_key is not None else os.getenv("OPENAI_API_KEY"))
     
     return client
 
@@ -282,23 +296,28 @@ async def main():
     parser.add_argument("-tp", "--tokenizer-path", type=str, help="Tokenizer path to use for evaluation", default=None)
     parser.add_argument("-b", "--batch-size", type=int, help="Batch size for evaluation", default=1)
     parser.add_argument("-r", "--resume", action="store_true", help="Resume evaluation from the current file")
+    parser.add_argument("-s", "--stop", type=str, help="Stop token for generation", default=None)
     
     args = parser.parse_args()
     client = None
 
     if args.model in API_MODELS:
-        if args.model in OPENAI_MODELS:
-            client = configure_openai_client(args.api_key, args.openai_azure)
+        if args.model in OPENAI_MODELS+TOGETHER_MODELS:
+            client = configure_openai_client(args.model, args.api_key, args.openai_azure)
         elif args.model in GOOGLE_MODELS:
             client = configure_google_client(args.api_key)
         elif args.model in ANTHROPIC_MODELS:
             client = configure_anthropic_client(args.api_key)
+        else:
+            raise ValueError(f"Model {args.model} not supported")
         
     input_data = read_json(args.datapath)
     data = input_data["data"]
 
     if args.num_samples > 0:
         data = data[:int(args.num_samples)]
+    
+    stop_token = args.stop.replace("\\n", "\n") if args.stop else None
 
     outputs = {
         "metadata": {
@@ -313,6 +332,7 @@ async def main():
             "openai_azure": args.openai_azure,
             "num_samples": args.num_samples,
             "resume": args.resume,
+            "stop": stop_token,
             "model_args": {
                 "temperature": args.temperature,
                 "max_tokens": args.max_tokens,
@@ -350,7 +370,8 @@ async def main():
         "top_p": args.top_p,
         "top_k": args.top_k,
         "frequency_penalty": args.frequency_penalty,
-        "presence_penalty": args.presence_penalty
+        "presence_penalty": args.presence_penalty,
+        "stop": stop_token
     }
 
     for batch in tqdm(batched(data, size=args.batch_size), total=math.ceil(len(data)/args.batch_size)):

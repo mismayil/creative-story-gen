@@ -1,0 +1,18 @@
+{
+    "description": "All results except temp0",
+    "emb_model": "thenlper/gte-large",
+    "emb_type": "sentence_embedding",
+    "emb_strategy": "direct",
+    "distance_fn": "cosine",
+    "lower": true,
+    "remove_punct": true,
+    "remove_stopwords": true,
+    "lemmatize": true,
+    "unique": true,
+    "cluster_linkage": "ward",
+    "cluster_dist_threshold": 0.5,
+    "deduplicate": true,
+    "filter_by": {
+        "sentence_length": [3, 6]
+    }
+}

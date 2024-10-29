@@ -1,0 +1,2552 @@
+{
+    "metadata": {
+        "group_id": [
+            "llama-3.1-405b-instruct",
+            "petrol-diesel-pump"
+        ],
+        "config": {
+            "results_paths": [
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot/**/run1"
+            ],
+            "report_usage": true,
+            "spacy_lang": "en_core_web_sm",
+            "max_n_gram": 5,
+            "output_dir": "../experiments/reports/pilot/run1_report6",
+            "config": "../experiments/reports/pilot/run1_report5/config.json",
+            "num_samples": 25,
+            "deduplicate": true,
+            "deduplicate_by": "output",
+            "max_frequency": 10,
+            "group_by": [
+                "model",
+                "id"
+            ],
+            "output_attr": "output",
+            "emb_model": "thenlper/gte-large",
+            "emb_type": "sentence_embedding",
+            "emb_strategy": "direct",
+            "distance_fn": "cosine",
+            "lower": true,
+            "remove_punct": true,
+            "remove_stopwords": true,
+            "lemmatize": true,
+            "dominant_k": null,
+            "unique": true,
+            "cluster_linkage": "ward",
+            "cluster_dist_threshold": 0.5,
+            "description": "Report2 + filter by sentence length",
+            "filter_by": {
+                "sentence_length": [
+                    3,
+                    6
+                ]
+            }
+        }
+    },
+    "metrics": {
+        "num_samples": 25,
+        "avg_length_in_chars": 765.04,
+        "avg_length_in_words": 131.6,
+        "avg_length_in_unique_words": 83.96,
+        "avg_length_in_concepts": 59.6,
+        "avg_length_in_sentences": 5,
+        "avg_word_length_in_chars": 4.722944606854701,
+        "avg_sentence_length_in_chars": 152.208,
+        "avg_sentence_length_in_words": 26.32,
+        "avg_sentence_length_in_unique_words": 22.912,
+        "avg_dsi": 0.21283003112010632,
+        "avg_surprise": 0.011039581079868082,
+        "avg_raw_surprises": [
+            0.003763007312749551,
+            0.006186730398436351,
+            0.006678650471164258,
+            0.005450773977386003
+        ],
+        "avg_n_gram_diversity": [
+            0.6391546370588541,
+            0.9484801570589892,
+            0.9886714352321363,
+            0.99774941690632,
+            0.9994904458598726
+        ],
+        "avg_pos_diversity": [
+            0.08640075188930785,
+            0.297767521969627,
+            0.5815902192513155,
+            0.7859704918539826,
+            0.9021217240119479
+        ],
+        "avg_dep_num_clauses": 3.576,
+        "avg_max_dep_num_clauses": 5.64,
+        "avg_dep_path_length": 3.2751320625104428,
+        "avg_max_dep_path_length": 8.8,
+        "avg_inv_homogen": 0.10775398075580597,
+        "avg_novelty": 0.006047125701952474,
+        "avg_theme_uniqueness": 0.24,
+        "corpus_dsi": 0.21566547830048094,
+        "corpus_n_gram_diversity": [
+            0.217629179331307,
+            0.5235633931286106,
+            0.6657542579075426,
+            0.7149376331000913,
+            0.7391965916007304
+        ],
+        "corpus_pos_diversity": [
+            0.003951367781155016,
+            0.029492246883551232,
+            0.10644768856447688,
+            0.228171585031944,
+            0.36944613511868535
+        ],
+        "num_unique_stories": 25,
+        "top_10_n_grams": {
+            "1-gram": {
+                "the": 361,
+                "of": 155,
+                "a": 145,
+                "to": 96,
+                "and": 76,
+                "her": 71,
+                "in": 66,
+                "'s": 51,
+                "with": 45,
+                "as": 44
+            },
+            "2-gram": {
+                "of the": 51,
+                "as the": 26,
+                "the city": 25,
+                "in the": 24,
+                "the sorceress": 24,
+                "of petrol": 22,
+                "petrol and": 21,
+                "and diesel": 20,
+                "with a": 20,
+                "in a": 19
+            },
+            "3-gram": {
+                "of petrol and": 20,
+                "petrol and diesel": 19,
+                "the heart of": 18,
+                "heart of the": 18,
+                "in the heart": 16,
+                "of the mystical": 16,
+                "the mystical forest": 15,
+                "the city 's": 14,
+                "mystical forest there": 13,
+                "forest there lived": 12
+            },
+            "4-gram": {
+                "the heart of the": 18,
+                "of petrol and diesel": 18,
+                "in the heart of": 16,
+                "of the mystical forest": 15,
+                "heart of the mystical": 14,
+                "the mystical forest there": 13,
+                "mystical forest there lived": 12,
+                "forest there lived a": 12,
+                "petrol and diesel to": 12,
+                "and diesel to fuel": 12
+            },
+            "5-gram": {
+                "in the heart of the": 16,
+                "the heart of the mystical": 14,
+                "heart of the mystical forest": 14,
+                "of the mystical forest there": 13,
+                "the mystical forest there lived": 12,
+                "mystical forest there lived a": 12,
+                "of petrol and diesel to": 12,
+                "petrol and diesel to fuel": 12,
+                "and diesel to fuel her": 12,
+                "with a flick of her": 12
+            }
+        },
+        "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+        },
+        "cost": {
+            "input": 0,
+            "output": 0,
+            "total": 0
+        }
+    },
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the steampunk city, the eccentric inventor, Professor Fizzypop, created a time-traveling organ that ran on a peculiar combination of petrol and diesel. As the Professor's fingers danced across the organ's keys, a rhythmic pulse began to pump through the machine, generating a swirling vortex that pulled the audience into a bygone era. The crowd gasped in wonder as they found themselves in the midst of a 1920s speakeasy, surrounded by flappers and jazz musicians. But as the music reached its crescendo, the organ's fuel tank began to run dry, threatening to strand the time travelers forever. In a frantic bid to return to the present, the Professor frantically pumped the organ's pedals, coaxing out a final, faint melody that carried them back to their own time.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 171
+            },
+            "result_id": "efee181bb179",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.95/run1/pilot_data_eval_default_llama-3.1-405b-instruct_bee2a21c954d.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 783,
+                "length_in_words": 135,
+                "length_in_unique_words": 88,
+                "length_in_concepts": 63,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6518518518518519,
+                "avg_word_length_in_chars": 4.718518518518518,
+                "avg_sentence_length_in_chars": 155.8,
+                "avg_sentence_length_in_words": 27,
+                "avg_sentence_length_in_unique_words": 23,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 4,
+                "length_in_first_person": 0,
+                "length_in_third_person": 5,
+                "dsi": 0.21801692418300123,
+                "surprise": 0.009260759564923574,
+                "raw_surprises": [
+                    0.008878855903943383,
+                    0.003918132998726592,
+                    0.0038716439957861837,
+                    0.0018528862313909877
+                ],
+                "n_gram_diversity": [
+                    0.6518518518518519,
+                    0.9402985074626866,
+                    0.9849624060150376,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08888888888888889,
+                    0.3358208955223881,
+                    0.6390977443609023,
+                    0.8636363636363636,
+                    0.9770992366412213
+                ],
+                "avg_dep_num_clauses": 3.8,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.4195430820569865,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 9.2,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 68.55926315789476,
+                "readability_flesch_kincaid": 11.248894736842107,
+                "avg_pos_noun_ratio": 0.27988227293977647,
+                "avg_pos_verb_ratio": 0.15627966197741794,
+                "avg_pos_adj_ratio": 0.061816918601631084,
+                "avg_pos_adv_ratio": 0.021598877980364656,
+                "avg_pos_pron_ratio": 0.05988971647281605,
+                "avg_pos_det_ratio": 0.16640478534763248,
+                "avg_pos_adp_ratio": 0.11054971760616922,
+                "inv_homogen": 0.1448019122083982,
+                "novelty": 0.004702891765040573,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where emotions fueled the hearts of humans, the vibrant city of Elysium was powered by Petrol Rivers - swirling channels of positivity that coursed through its streets. But beneath its radiant surface, a dark force began to spread, fueled by the toxic Diesel Shadows that seeped from the malevolent underworld of Tenebrous. Amidst the battle between light and darkness, a young girl named Lyra discovered she possessed an ancient gift - the ability to harness the energy of emotions and transform it into a powerful force. With a mere thought, Lyra could activate the mystical Pump of Resonance, sending shockwaves of positivity through the city, fighting back the encroaching shadows. As the light began to reclaim Elysium, Lyra's legend grew, and the people whispered of the hero who pumped life back into their world.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 174
+            },
+            "result_id": "e58fb99092b2",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_2f2e14cec3d1.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 831,
+                "length_in_words": 136,
+                "length_in_unique_words": 91,
+                "length_in_concepts": 65,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6691176470588235,
+                "avg_word_length_in_chars": 4.992647058823529,
+                "avg_sentence_length_in_chars": 165.4,
+                "avg_sentence_length_in_words": 27.2,
+                "avg_sentence_length_in_unique_words": 24.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 4,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 5,
+                "dsi": 0.21401284938821427,
+                "surprise": 0.014180330345373013,
+                "raw_surprises": [
+                    0.007656959337847574,
+                    0.004881659884600209,
+                    0.008237003054366643,
+                    0.0075850384139316
+                ],
+                "n_gram_diversity": [
+                    0.6691176470588235,
+                    0.9851851851851852,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08823529411764706,
+                    0.34074074074074073,
+                    0.6716417910447762,
+                    0.8646616541353384,
+                    0.946969696969697
+                ],
+                "avg_dep_num_clauses": 4,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.3443124043237,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 10.4,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 64.10663157894739,
+                "readability_flesch_kincaid": 11.869947368421055,
+                "avg_pos_noun_ratio": 0.22338453500522465,
+                "avg_pos_verb_ratio": 0.16322257053291536,
+                "avg_pos_adj_ratio": 0.07374503657262278,
+                "avg_pos_adv_ratio": 0.008,
+                "avg_pos_pron_ratio": 0.057914315569487985,
+                "avg_pos_det_ratio": 0.1383866248693835,
+                "avg_pos_adp_ratio": 0.1552884012539185,
+                "inv_homogen": 0.12390509992837906,
+                "novelty": 0.0033052578245333364,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, there lived a powerful sorceress who harnessed the ancient magic of petrol and diesel to fuel her spells. With a flick of her wrist, she could conjure flames that danced like liquid fire, and her trusty pump \u2013 a twisted, gnarled staff \u2013 was the key to unlocking her incantations. As she chanted, the air was filled with the sweet scent of petrol and the earthy tang of diesel, drawing in creatures from far and wide to witness her spectacle. But when a dark force threatened to disrupt the balance of nature, the sorceress used her pump to channel the primal energies of the forest, unleashing a blast of magic that sent the shadows fleeing. In the aftermath, the forest was reborn, its magic pulsing stronger than ever, thanks to the sorceress and her enchanted pump.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 179
+            },
+            "result_id": "51e51db3ce55",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.5/run1/pilot_data_eval_default_llama-3.1-405b-instruct_900be80731f6.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 805,
+                "length_in_words": 141,
+                "length_in_unique_words": 84,
+                "length_in_concepts": 62,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.5957446808510638,
+                "avg_word_length_in_chars": 4.574468085106383,
+                "avg_sentence_length_in_chars": 160.2,
+                "avg_sentence_length_in_words": 28.2,
+                "avg_sentence_length_in_unique_words": 24.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 10,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 10,
+                "dsi": 0.21178370417898007,
+                "surprise": 0.007100001786414928,
+                "raw_surprises": [
+                    0.0004389467147680459,
+                    0.004802874298322768,
+                    0.006785758202817238,
+                    0.002172424356921804
+                ],
+                "n_gram_diversity": [
+                    0.5957446808510638,
+                    0.95,
+                    0.9928057553956835,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0851063829787234,
+                    0.32857142857142857,
+                    0.6402877697841727,
+                    0.8478260869565217,
+                    0.9343065693430657
+                ],
+                "avg_dep_num_clauses": 4.4,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.195063086614745,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 8.8,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 71.86743396226416,
+                "readability_flesch_kincaid": 11.135270440251574,
+                "avg_pos_noun_ratio": 0.26361904761904764,
+                "avg_pos_verb_ratio": 0.12685714285714286,
+                "avg_pos_adj_ratio": 0.104,
+                "avg_pos_adv_ratio": 0.01619047619047619,
+                "avg_pos_pron_ratio": 0.10114285714285715,
+                "avg_pos_det_ratio": 0.14057142857142857,
+                "avg_pos_adp_ratio": 0.1297142857142857,
+                "inv_homogen": 0.08431910475095113,
+                "novelty": 0.007763548243001739,
+                "theme_uniqueness": 0.08333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, there lived a powerful sorceress who harnessed the ancient magic of petrol and diesel to fuel her enchanted creations. With a flick of her wrist, she would pump the potent elixirs into her mechanical beasts, bringing them to life in a whirlwind of steam and smoke. Her most fearsome creature, a dragon made of twisted copper and brass, roared to life as the sorceress infused it with a shot of diesel, its eyes blazing like embers. But when she added a dash of petrol to the mix, the dragon's flames turned a brilliant shade of blue, illuminating the dark forest like a celestial beacon. As the sorceress's powers grew, so did her legend, striking awe and terror into the hearts of all who dwelled within the mystical realm.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 169
+            },
+            "result_id": "2464fb5ef99a",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0_p0.5/run1/pilot_data_eval_default_llama-3.1-405b-instruct_2ddd43d201d3.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 761,
+                "length_in_words": 137,
+                "length_in_unique_words": 86,
+                "length_in_concepts": 59,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6277372262773723,
+                "avg_word_length_in_chars": 4.467153284671533,
+                "avg_sentence_length_in_chars": 151.4,
+                "avg_sentence_length_in_words": 27.4,
+                "avg_sentence_length_in_unique_words": 24.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 9,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 10,
+                "dsi": 0.21151172188135145,
+                "surprise": 0.020788403866174338,
+                "raw_surprises": [
+                    0.004279641074178386,
+                    0.008028091941819054,
+                    0.011801014343897492,
+                    0.017468060372453742
+                ],
+                "n_gram_diversity": [
+                    0.6277372262773723,
+                    0.9558823529411765,
+                    0.9925925925925926,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08029197080291971,
+                    0.2647058823529412,
+                    0.5481481481481482,
+                    0.753731343283582,
+                    0.8872180451127819
+                ],
+                "avg_dep_num_clauses": 4.2,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.410693548490471,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 9,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 72.45531578947372,
+                "readability_flesch_kincaid": 10.705473684210528,
+                "avg_pos_noun_ratio": 0.2909444935651832,
+                "avg_pos_verb_ratio": 0.11724805973081835,
+                "avg_pos_adj_ratio": 0.09450358581393065,
+                "avg_pos_adv_ratio": 0.014666666666666666,
+                "avg_pos_pron_ratio": 0.10360310443069064,
+                "avg_pos_det_ratio": 0.13837076333628057,
+                "avg_pos_adp_ratio": 0.15244090775125257,
+                "inv_homogen": 0.08734924842913945,
+                "novelty": 0.008307512838258979,
+                "theme_uniqueness": 0.08333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where music was the lifeblood of the city, the rhythmic petrol of the jazz quartet ignited the crowd, while the diesel beats of the underground club pulsed through the streets like a rebellious heartbeat. Amidst the vibrant chaos, a young musician discovered an enchanted pump organ, its keys whispering ancient melodies that harmonized the discordant genres. As she played, the petrol of improvisation fueled the diesel of electronic beats, creating a symphony that synchronized the city's rhythms. The pump organ's magic infused the streets, transforming the urban landscape into a vibrant, pulsating entity that throbbed with creative energy. In this world, music was the fuel that powered the city's very existence.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 146
+            },
+            "result_id": "8d99507257cd",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.9/run1/pilot_data_eval_default_llama-3.1-405b-instruct_ddc41e064de3.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 730,
+                "length_in_words": 117,
+                "length_in_unique_words": 74,
+                "length_in_concepts": 55,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6324786324786325,
+                "avg_word_length_in_chars": 5.153846153846154,
+                "avg_sentence_length_in_chars": 145.2,
+                "avg_sentence_length_in_words": 23.4,
+                "avg_sentence_length_in_unique_words": 20,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 2,
+                "dsi": 0.21186780034492314,
+                "surprise": 0.008676412269069053,
+                "raw_surprises": [
+                    0.00414412960148694,
+                    0.002648761462081567,
+                    0.004945928439909791,
+                    0.005614005034659808
+                ],
+                "n_gram_diversity": [
+                    0.6324786324786325,
+                    0.9051724137931034,
+                    0.9826086956521739,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07692307692307693,
+                    0.22413793103448276,
+                    0.48695652173913045,
+                    0.7280701754385965,
+                    0.9026548672566371
+                ],
+                "avg_dep_num_clauses": 2.2,
+                "max_dep_num_clauses": 3,
+                "avg_dep_path_length": 3.1232874085900417,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 9.4,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 67.87253435114506,
+                "readability_flesch_kincaid": 10.301282442748093,
+                "avg_pos_noun_ratio": 0.3416988416988417,
+                "avg_pos_verb_ratio": 0.1250965250965251,
+                "avg_pos_adj_ratio": 0.10322920322920323,
+                "avg_pos_adv_ratio": 0.0,
+                "avg_pos_pron_ratio": 0.05974025974025974,
+                "avg_pos_det_ratio": 0.206002106002106,
+                "avg_pos_adp_ratio": 0.09217269217269218,
+                "inv_homogen": 0.10755721976359685,
+                "novelty": 0.007595355911115598,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where music was the lifeblood of the city, the rhythmic petrol of jazz and the heavy diesel of rock 'n' roll fueled the vibrant nightlife. The maestro, a mysterious figure with a wild look in his eye, raised his baton to pump the crowd into a frenzy as the orchestra launched into a cacophonous fusion of the two genres. The audience was electrified, their bodies moving in time like pistons in a well-oiled machine. As the music reached a fever pitch, the very walls of the concert hall began to vibrate, threatening to unleash a sonic explosion that would shatter the night air. In the end, it was the maestro who brought the chaos to a stop, his baton slicing through the air like a knife to silence the pump of the music and leave the crowd breathless.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 172
+            },
+            "result_id": "875f86d78274",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_f97598ffe515.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 767,
+                "length_in_words": 142,
+                "length_in_unique_words": 85,
+                "length_in_concepts": 64,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.5985915492957746,
+                "avg_word_length_in_chars": 4.302816901408451,
+                "avg_sentence_length_in_chars": 152.6,
+                "avg_sentence_length_in_words": 28.4,
+                "avg_sentence_length_in_unique_words": 22.8,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 4,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 5,
+                "dsi": 0.2140575580831085,
+                "surprise": 0.00838147427827593,
+                "raw_surprises": [
+                    0.00012252614611671375,
+                    0.0044640107287300945,
+                    0.008092466327879161,
+                    0.004083945353825891
+                ],
+                "n_gram_diversity": [
+                    0.5985915492957746,
+                    0.9219858156028369,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09154929577464789,
+                    0.2695035460992908,
+                    0.5142857142857142,
+                    0.7410071942446043,
+                    0.8695652173913043
+                ],
+                "avg_dep_num_clauses": 3.4,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.616377121969914,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 11,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 75.70403797468357,
+                "readability_flesch_kincaid": 10.550455696202537,
+                "avg_pos_noun_ratio": 0.31196392350043467,
+                "avg_pos_verb_ratio": 0.126526369168357,
+                "avg_pos_adj_ratio": 0.0528687337003767,
+                "avg_pos_adv_ratio": 0.0125,
+                "avg_pos_pron_ratio": 0.048304114749348016,
+                "avg_pos_det_ratio": 0.20772384815995362,
+                "avg_pos_adp_ratio": 0.13095117357287742,
+                "inv_homogen": 0.13953242202599844,
+                "novelty": 0.0032158404347448766,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where music was the lifeblood of the city, the rhythmic petrol of the jazz quartet's saxophone fueled the crowd's energy, while the diesel beats of the underground DJ's turntables pulsed through the streets like a rebellious heartbeat. Amidst the vibrant chaos, a young artist stood frozen, her paintbrush poised like a pump, ready to unleash a torrent of color onto the canvas. As the music swirled around her, she felt the notes and rhythms merge into a kaleidoscope of inspiration, and her brush began to dance, pumping vibrant hues onto the waiting canvas. The city's symphony had found its visual voice, and the artist's masterpiece was born. In that moment, music and art became an unstoppable force, fueling the city's creative spirit.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 163
+            },
+            "result_id": "8e1d8171e703",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.7/run1/pilot_data_eval_default_llama-3.1-405b-instruct_6c2204494e54.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 753,
+                "length_in_words": 131,
+                "length_in_unique_words": 85,
+                "length_in_concepts": 61,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.648854961832061,
+                "avg_word_length_in_chars": 4.679389312977099,
+                "avg_sentence_length_in_chars": 149.8,
+                "avg_sentence_length_in_words": 26.2,
+                "avg_sentence_length_in_unique_words": 22,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 5,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 5,
+                "dsi": 0.21402795607926417,
+                "surprise": 0.007758881813950014,
+                "raw_surprises": [
+                    0.0005996924071084986,
+                    0.00376021265983581,
+                    0.005466534126372574,
+                    0.005691324434583145
+                ],
+                "n_gram_diversity": [
+                    0.648854961832061,
+                    0.9461538461538461,
+                    0.9922480620155039,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08396946564885496,
+                    0.3153846153846154,
+                    0.5736434108527132,
+                    0.78125,
+                    0.937007874015748
+                ],
+                "avg_dep_num_clauses": 3.6,
+                "max_dep_num_clauses": 8,
+                "avg_dep_path_length": 2.943690551680406,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 7.8,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 77.43073469387758,
+                "readability_flesch_kincaid": 9.763074829931973,
+                "avg_pos_noun_ratio": 0.31488034508627155,
+                "avg_pos_verb_ratio": 0.12846361590397598,
+                "avg_pos_adj_ratio": 0.08990510127531882,
+                "avg_pos_adv_ratio": 0.0,
+                "avg_pos_pron_ratio": 0.03985483870967742,
+                "avg_pos_det_ratio": 0.17481807951987996,
+                "avg_pos_adp_ratio": 0.09821342835708927,
+                "inv_homogen": 0.15491526573896408,
+                "novelty": 0.003275044442433539,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the depths of the ocean, a strange underwater city thrived, powered by a unique blend of bioluminescent creatures that produced a petrol-like substance to light the streets. Meanwhile, the city's defense system relied on a diesel-driven contraption that created a sonic boom to ward off predators. At the heart of the city, a magnificent pump organ stood tall, its pipes resonating with the sounds of the ocean's creatures, creating an enchanting melody that echoed through the waterways. The city's inhabitants, a tribe of merfolk, danced to the rhythm, their scales shimmering in the soft, ethereal light. As the music reached its crescendo, the city's energy pulsed with an otherworldly power, a symphony of light, sound, and life.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 160
+            },
+            "result_id": "98f64be3950b",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.5/run1/pilot_data_eval_default_llama-3.1-405b-instruct_00c26504771e.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 737,
+                "length_in_words": 124,
+                "length_in_unique_words": 80,
+                "length_in_concepts": 58,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6451612903225806,
+                "avg_word_length_in_chars": 4.830645161290323,
+                "avg_sentence_length_in_chars": 146.6,
+                "avg_sentence_length_in_words": 24.8,
+                "avg_sentence_length_in_unique_words": 22,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 3,
+                "dsi": 0.21474586316331978,
+                "surprise": 0.005945331579383012,
+                "raw_surprises": [
+                    0.005387489237356102,
+                    0.0007810424382461156,
+                    0.0023422020562192114,
+                    0.0033799294269445945
+                ],
+                "n_gram_diversity": [
+                    0.6451612903225806,
+                    0.926829268292683,
+                    0.9754098360655737,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08064516129032258,
+                    0.25203252032520324,
+                    0.5245901639344263,
+                    0.7272727272727273,
+                    0.8833333333333333
+                ],
+                "avg_dep_num_clauses": 2.6,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.6869988846566635,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 9.8,
+                "max_constituency_tree_depth": 14,
+                "readability_flesch_ease": 75.88000000000001,
+                "readability_flesch_kincaid": 9.879999999999999,
+                "avg_pos_noun_ratio": 0.32706635318704286,
+                "avg_pos_verb_ratio": 0.128863263173608,
+                "avg_pos_adj_ratio": 0.10093838632631737,
+                "avg_pos_adv_ratio": 0.009523809523809523,
+                "avg_pos_pron_ratio": 0.04801127033885655,
+                "avg_pos_det_ratio": 0.19006437527989253,
+                "avg_pos_adp_ratio": 0.12606564412598895,
+                "inv_homogen": 0.13563325504461923,
+                "novelty": 0.0018392302743223121,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, there lived a powerful sorceress who harnessed the ancient magic of petrol and diesel to fuel her enchanted creations. With a flick of her wrist, she'd pump vibrant energy into her mechanical beasts, bringing them to life in a whirlwind of color and sound. Her most prized creation, a magnificent dragon made of gleaming copper pipes and pistons, roared to life as she infused it with the potent elixir of diesel and petrol. As the dragon soared through the skies, its wings beating in rhythmic motion, the sorceress would pump her fist in triumph, her magic echoing through the land. And so, her legend grew, as did the fantastical world she crafted with every pulse of her magical pump.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 157
+            },
+            "result_id": "1f09fa8ba2d5",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.3/run1/pilot_data_eval_default_llama-3.1-405b-instruct_88f9df8e20ab.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 725,
+                "length_in_words": 127,
+                "length_in_unique_words": 79,
+                "length_in_concepts": 54,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6220472440944882,
+                "avg_word_length_in_chars": 4.606299212598425,
+                "avg_sentence_length_in_chars": 144.2,
+                "avg_sentence_length_in_words": 25.4,
+                "avg_sentence_length_in_unique_words": 22.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 13,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 14,
+                "dsi": 0.21197774804279906,
+                "surprise": 0.0025039678314825453,
+                "raw_surprises": [
+                    0.0026366020138169355,
+                    0.00132013435487624,
+                    0.0007013820903205015,
+                    0.0003498172039514136
+                ],
+                "n_gram_diversity": [
+                    0.6220472440944882,
+                    0.9761904761904762,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08661417322834646,
+                    0.30158730158730157,
+                    0.592,
+                    0.782258064516129,
+                    0.8780487804878049
+                ],
+                "avg_dep_num_clauses": 4,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.3158790361658075,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 9.6,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 72.5568873239437,
+                "readability_flesch_kincaid": 10.19445070422535,
+                "avg_pos_noun_ratio": 0.28622551072641816,
+                "avg_pos_verb_ratio": 0.12725632235614087,
+                "avg_pos_adj_ratio": 0.09530354031261472,
+                "avg_pos_adv_ratio": 0.017422867513611613,
+                "avg_pos_pron_ratio": 0.12833697860921092,
+                "avg_pos_det_ratio": 0.11062921081069901,
+                "avg_pos_adp_ratio": 0.14749923733589795,
+                "inv_homogen": 0.08385585993528366,
+                "novelty": 0.007375460515363752,
+                "theme_uniqueness": 0.08333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, there lived a powerful sorceress who could harness the ancient energies of petrol and diesel to fuel her magical creations. With a flick of her wrist, she would pump these potent forces into her enchanted automatons, bringing them to life as they danced and whirred in a mesmerizing spectacle. But as the years passed, the sorceress began to realize that her reliance on these dark energies was slowly corrupting the land, and she vowed to seek out a new, cleaner source of power. Her quest led her to a hidden glade, where a radiant crystal pulsed with an otherworldly light, and she knew that she had finally found the key to breaking her dependence on the toxic fuels. As she reached out to claim the crystal, the forest itself seemed to sigh in relief, freed from the sorceress's polluting pump.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 180
+            },
+            "result_id": "f171f817f342",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.7/run1/pilot_data_eval_default_llama-3.1-405b-instruct_6cb46d8de908.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 836,
+                "length_in_words": 148,
+                "length_in_unique_words": 95,
+                "length_in_concepts": 64,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6418918918918919,
+                "avg_word_length_in_chars": 4.5608108108108105,
+                "avg_sentence_length_in_chars": 166.4,
+                "avg_sentence_length_in_words": 29.6,
+                "avg_sentence_length_in_unique_words": 26.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 13,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 0,
+                "length_in_third_person": 15,
+                "dsi": 0.2110511830579194,
+                "surprise": 0.008402000801950957,
+                "raw_surprises": [
+                    0.002286789727298344,
+                    0.006058799004572735,
+                    0.002134568112737989,
+                    0.006323844759292846
+                ],
+                "n_gram_diversity": [
+                    0.6418918918918919,
+                    0.9863945578231292,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07432432432432433,
+                    0.2857142857142857,
+                    0.6164383561643836,
+                    0.8344827586206897,
+                    0.9305555555555556
+                ],
+                "avg_dep_num_clauses": 4.6,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.1938600223697673,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 11.8,
+                "max_constituency_tree_depth": 19,
+                "readability_flesch_ease": 65.27115337423315,
+                "readability_flesch_kincaid": 12.254061349693252,
+                "avg_pos_noun_ratio": 0.21788589365447994,
+                "avg_pos_verb_ratio": 0.17274444010487752,
+                "avg_pos_adj_ratio": 0.07821264904429205,
+                "avg_pos_adv_ratio": 0.017310924369747897,
+                "avg_pos_pron_ratio": 0.11443241964451947,
+                "avg_pos_det_ratio": 0.13438943460109348,
+                "avg_pos_adp_ratio": 0.12329613904532327,
+                "inv_homogen": 0.09223119914531708,
+                "novelty": 0.00922859048512309,
+                "theme_uniqueness": 0.08333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, there existed an ancient, steam-powered orchestra, where instruments ran on a unique blend of enchanted petrol and diesel. The maestro, a wise and eccentric being, would pump a peculiar, gemstone-tipped lever to control the tempo and harmony of the ethereal melodies. As the symphony reached its crescendo, the trees swayed in rhythm, and the creatures of the forest gathered to dance under the starry sky. The orchestra's haunting refrains were said to possess the power to heal the land and bring balance to the forces of nature. And so, the maestro continued to weave his sonic magic, fueling the dreams of the mystical realm.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 141
+            },
+            "result_id": "0d5ab02f00cf",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.9/run1/pilot_data_eval_default_llama-3.1-405b-instruct_6394dd258cd5.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 666,
+                "length_in_words": 114,
+                "length_in_unique_words": 76,
+                "length_in_concepts": 56,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6666666666666666,
+                "avg_word_length_in_chars": 4.728070175438597,
+                "avg_sentence_length_in_chars": 132.4,
+                "avg_sentence_length_in_words": 22.8,
+                "avg_sentence_length_in_unique_words": 19.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 2,
+                "dsi": 0.2140155109105172,
+                "surprise": 0.002894830128959719,
+                "raw_surprises": [
+                    0.0012391742769178316,
+                    0.001499818963604349,
+                    0.00019932064143093897,
+                    0.0028513463759663182
+                ],
+                "n_gram_diversity": [
+                    0.6666666666666666,
+                    0.9557522123893806,
+                    0.9910714285714286,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10526315789473684,
+                    0.3274336283185841,
+                    0.625,
+                    0.8378378378378378,
+                    0.9272727272727272
+                ],
+                "avg_dep_num_clauses": 3.8,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.1352548036758563,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 9.6,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 74.33054961832063,
+                "readability_flesch_kincaid": 9.400519083969467,
+                "avg_pos_noun_ratio": 0.2830644632434914,
+                "avg_pos_verb_ratio": 0.1514869827529674,
+                "avg_pos_adj_ratio": 0.09596530920060331,
+                "avg_pos_adv_ratio": 0.011764705882352941,
+                "avg_pos_pron_ratio": 0.027790346907993965,
+                "avg_pos_det_ratio": 0.18417929044527512,
+                "avg_pos_adp_ratio": 0.09325857433274314,
+                "inv_homogen": 0.10717901090780894,
+                "novelty": 0.0032999347799274603,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, there lived a powerful sorceress who harnessed the ancient magic of petrol and diesel to fuel her enchanted creations. With a flick of her wrist, she would pump the potent elixirs into the veins of her mechanical beasts, bringing them to life in a burst of fiery energy. The creatures, born from twisted metal and dark magic, roamed the forest, their diesel hearts beating in rhythmic unison as they guarded the sorceress's domain. But when the petrol reserves began to dwindle, the sorceress was forced to venture into the unknown, seeking a new source of power to sustain her fantastical world. As she disappeared into the shadows, her creations stood vigilant, their pump-like hearts beating softly, awaiting her return.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 160
+            },
+            "result_id": "28b24c7c207f",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0_p0.7/run1/pilot_data_eval_default_llama-3.1-405b-instruct_2861094f517a.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 760,
+                "length_in_words": 128,
+                "length_in_unique_words": 82,
+                "length_in_concepts": 59,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.640625,
+                "avg_word_length_in_chars": 4.828125,
+                "avg_sentence_length_in_chars": 151.2,
+                "avg_sentence_length_in_words": 25.6,
+                "avg_sentence_length_in_unique_words": 22.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 8,
+                "length_in_third_person_plural": 4,
+                "length_in_first_person": 0,
+                "length_in_third_person": 12,
+                "dsi": 0.2118895173351504,
+                "surprise": 0.01714762015379233,
+                "raw_surprises": [
+                    0.004686175248561769,
+                    0.010373455438858425,
+                    0.01181359007245017,
+                    0.0074220195477142925
+                ],
+                "n_gram_diversity": [
+                    0.640625,
+                    0.9606299212598425,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.0859375,
+                    0.30708661417322836,
+                    0.6190476190476191,
+                    0.8,
+                    0.8790322580645161
+                ],
+                "avg_dep_num_clauses": 3.6,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.068157248157248,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 9.2,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 68.8786206896552,
+                "readability_flesch_kincaid": 10.856551724137933,
+                "avg_pos_noun_ratio": 0.2737380586745378,
+                "avg_pos_verb_ratio": 0.1526016633094673,
+                "avg_pos_adj_ratio": 0.11701701202608644,
+                "avg_pos_adv_ratio": 0.010526315789473684,
+                "avg_pos_pron_ratio": 0.11529586565884206,
+                "avg_pos_det_ratio": 0.12053010510360783,
+                "avg_pos_adp_ratio": 0.11154943060569195,
+                "inv_homogen": 0.0834186648329099,
+                "novelty": 0.007551921930661065,
+                "theme_uniqueness": 0.08333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where music was the lifeblood of the city, the rhythmic petrol of the jazz band's trumpets ignited the crowd, while the diesel beats of the underground club pulsed through the streets like a rebellious heartbeat. Amidst the vibrant chaos, a young musician discovered an enchanted pump organ that could harness the energy of the city's melodies, transforming them into mesmerizing harmonies. As she played, the pump organ began to glow, infusing the air with an otherworldly essence that drew people from all corners of the city. The musician's symphony became a conduit for the city's collective soul, with the petrol of creativity and the diesel of passion fueling the magic. In this world, music was the ultimate pump that kept the city's heart beating.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 159
+            },
+            "result_id": "262631141f89",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0_p0.9/run1/pilot_data_eval_default_llama-3.1-405b-instruct_11d35be11e3a.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": 256,
+                    "top_p": 0.9,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 766,
+                "length_in_words": 132,
+                "length_in_unique_words": 81,
+                "length_in_concepts": 57,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6136363636363636,
+                "avg_word_length_in_chars": 4.75,
+                "avg_sentence_length_in_chars": 152.4,
+                "avg_sentence_length_in_words": 26.4,
+                "avg_sentence_length_in_unique_words": 22.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 2,
+                "dsi": 0.21300379715318368,
+                "surprise": 0.007926019489569808,
+                "raw_surprises": [
+                    0.00302092242136337,
+                    0.006676063820337641,
+                    0.005453949555372567,
+                    0.0007011031820660374
+                ],
+                "n_gram_diversity": [
+                    0.6136363636363636,
+                    0.8778625954198473,
+                    0.9538461538461539,
+                    0.9922480620155039,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07575757575757576,
+                    0.25190839694656486,
+                    0.46923076923076923,
+                    0.6666666666666666,
+                    0.8203125
+                ],
+                "avg_dep_num_clauses": 2.4,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.40863113883695,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 9.4,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 70.62896551724138,
+                "readability_flesch_kincaid": 10.612413793103453,
+                "avg_pos_noun_ratio": 0.343977207977208,
+                "avg_pos_verb_ratio": 0.10860398860398861,
+                "avg_pos_adj_ratio": 0.06663247863247863,
+                "avg_pos_adv_ratio": 0.0,
+                "avg_pos_pron_ratio": 0.044148148148148145,
+                "avg_pos_det_ratio": 0.21447293447293447,
+                "avg_pos_adp_ratio": 0.1210940170940171,
+                "inv_homogen": 0.10955463101466496,
+                "novelty": 0.005323362294594514,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, there lived a powerful sorceress who harnessed the ancient magic of petrol and diesel to fuel her enchanted creations. With a flick of her wrist, she would pump the potent elixirs into her mechanical beasts, bringing them to life in a whirlwind of steam and smoke. Her most fearsome creature, the Diesel Dragon, roared to life as she infused it with the dark, viscous liquid, its scales glistening with an otherworldly sheen. The sorceress's petrol-powered Phoenix, on the other hand, soared through the skies, its wings beating fiercely as it left a trail of glittering stardust in its wake. As the sorceress's powers grew, so did her creations, and the land trembled with wonder and fear.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 166
+            },
+            "result_id": "8f510cb6b968",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p0.3/run1/pilot_data_eval_default_llama-3.1-405b-instruct_e5e49590595e.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 727,
+                "length_in_words": 126,
+                "length_in_unique_words": 82,
+                "length_in_concepts": 56,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6507936507936508,
+                "avg_word_length_in_chars": 4.658730158730159,
+                "avg_sentence_length_in_chars": 144.6,
+                "avg_sentence_length_in_words": 25.2,
+                "avg_sentence_length_in_unique_words": 22.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 12,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 13,
+                "dsi": 0.21276602303826964,
+                "surprise": 0.00967051807668183,
+                "raw_surprises": [
+                    0.004279641074178386,
+                    0.0003907332668850738,
+                    0.010628560480180682,
+                    0.004042101332119519
+                ],
+                "n_gram_diversity": [
+                    0.6507936507936508,
+                    0.976,
+                    0.9919354838709677,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09523809523809523,
+                    0.344,
+                    0.6370967741935484,
+                    0.8455284552845529,
+                    0.9344262295081968
+                ],
+                "avg_dep_num_clauses": 3.4,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.0010165935165936,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 9,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 77.14050000000002,
+                "readability_flesch_kincaid": 9.654500000000002,
+                "avg_pos_noun_ratio": 0.27340603202672165,
+                "avg_pos_verb_ratio": 0.12878475292268396,
+                "avg_pos_adj_ratio": 0.07555752038510659,
+                "avg_pos_adv_ratio": 0.03339227821986443,
+                "avg_pos_pron_ratio": 0.11527654975930839,
+                "avg_pos_det_ratio": 0.12587680518715003,
+                "avg_pos_adp_ratio": 0.12929560860595343,
+                "inv_homogen": 0.08882571011781693,
+                "novelty": 0.005798910524422607,
+                "theme_uniqueness": 0.08333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where music was the lifeblood of the city, the rhythmic petrol of jazz and the heavy diesel of rock 'n' roll fueled the nights. Maestro Rodriguez stood at the podium, his baton poised like a pump, ready to inject the crowd with a sonic boom of energy. As the orchestra launched into the crescendo, the notes seemed to combust in mid-air, igniting a frenzy of dancing and applause. The maestro's wild gestures pumped the music through the audience like a high-octane fuel, leaving them breathless and begging for more. In the end, it was not just a concert, but a symphony of combustion, with every beat a spark that set the night ablaze.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 148
+            },
+            "result_id": "13f85ff089d7",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp1_p0.7/run1/pilot_data_eval_default_llama-3.1-405b-instruct_ba3ad8d9c779.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 1.0,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 648,
+                "length_in_words": 119,
+                "length_in_unique_words": 83,
+                "length_in_concepts": 55,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6974789915966386,
+                "avg_word_length_in_chars": 4.3277310924369745,
+                "avg_sentence_length_in_chars": 128.8,
+                "avg_sentence_length_in_words": 23.8,
+                "avg_sentence_length_in_unique_words": 20.8,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 3,
+                "dsi": 0.2131812941747081,
+                "surprise": 0.00457770363751786,
+                "raw_surprises": [
+                    0.0026680486542838,
+                    0.0033494608981030627,
+                    0.002954793782223075,
+                    0.00018310394042578282
+                ],
+                "n_gram_diversity": [
+                    0.6974789915966386,
+                    0.9915254237288136,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10084033613445378,
+                    0.3305084745762712,
+                    0.5897435897435898,
+                    0.7758620689655172,
+                    0.8956521739130435
+                ],
+                "avg_dep_num_clauses": 3.6,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.259794596628811,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 8.8,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 83.30867153284672,
+                "readability_flesch_kincaid": 8.446364963503651,
+                "avg_pos_noun_ratio": 0.3181781583955497,
+                "avg_pos_verb_ratio": 0.10427829014785536,
+                "avg_pos_adj_ratio": 0.06662640901771336,
+                "avg_pos_adv_ratio": 0.008333333333333333,
+                "avg_pos_pron_ratio": 0.034057971014492754,
+                "avg_pos_det_ratio": 0.20037329819938515,
+                "avg_pos_adp_ratio": 0.1427719221197482,
+                "inv_homogen": 0.14536966135104498,
+                "novelty": 0.004968368251545674,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, there lived a powerful sorceress who harnessed the ancient magic of petrol and diesel to fuel her enchanted creations. With a flick of her wrist, she would pump the potent elixirs into her mechanical beasts, bringing them to life in a whirlwind of steam and smoke. Her most fearsome creature, a dragon made of twisted copper and brass, roared to life as the sorceress infused it with a shot of diesel, its eyes blazing like embers. But when she added a dash of petrol to the mix, the dragon's flames turned a brilliant shade of blue, illuminating the dark forest like a celestial beacon. As the sorceress laughed with glee, her creations danced around her, their hissing pipes and whirring gears a symphony of magic and machinery.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 171
+            },
+            "result_id": "b25bd45ac615",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.5/run1/pilot_data_eval_default_llama-3.1-405b-instruct_8ba78c09929b.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 767,
+                "length_in_words": 135,
+                "length_in_unique_words": 84,
+                "length_in_concepts": 60,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6222222222222222,
+                "avg_word_length_in_chars": 4.5851851851851855,
+                "avg_sentence_length_in_chars": 152.6,
+                "avg_sentence_length_in_words": 27,
+                "avg_sentence_length_in_unique_words": 24,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 10,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 0,
+                "length_in_third_person": 12,
+                "dsi": 0.2131420767576681,
+                "surprise": 0.022145489643225852,
+                "raw_surprises": [
+                    0.004279641074178386,
+                    0.008028091941819054,
+                    0.011801014343897492,
+                    0.02018223192655677
+                ],
+                "n_gram_diversity": [
+                    0.6222222222222222,
+                    0.9626865671641791,
+                    0.9924812030075187,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08888888888888889,
+                    0.27611940298507465,
+                    0.556390977443609,
+                    0.75,
+                    0.8854961832061069
+                ],
+                "avg_dep_num_clauses": 4.2,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.168031291359425,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 8.2,
+                "max_constituency_tree_depth": 9,
+                "readability_flesch_ease": 72.60900000000004,
+                "readability_flesch_kincaid": 10.584666666666667,
+                "avg_pos_noun_ratio": 0.2958140587825745,
+                "avg_pos_verb_ratio": 0.12003066842647052,
+                "avg_pos_adj_ratio": 0.08650358581393064,
+                "avg_pos_adv_ratio": 0.006666666666666666,
+                "avg_pos_pron_ratio": 0.10569006095242976,
+                "avg_pos_det_ratio": 0.13176206768410667,
+                "avg_pos_adp_ratio": 0.1545278642729917,
+                "inv_homogen": 0.08382485310236613,
+                "novelty": 0.005046803085625662,
+                "theme_uniqueness": 0.08333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, there lived a powerful sorceress who harnessed the ancient magic of petrol and diesel to fuel her enchanted creations. With a flick of her wrist, she'd pump vibrant energy into her mechanical beasts, bringing them to life in a whirlwind of color and sound. One fateful night, a rogue inventor stumbled upon the sorceress's lair, and she challenged him to a duel of wits, with the winner claiming dominion over the magical fuels. As the battle raged on, the air was filled with the sweet scent of petrol and the earthy smell of diesel, each side pumping their energies into the fray. In the end, the sorceress emerged victorious, her mastery over the magical fuels cementing her reign as the forest's supreme enchantress.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 166
+            },
+            "result_id": "018a9383c51c",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.5/run1/pilot_data_eval_default_llama-3.1-405b-instruct_e4cde96dc45a.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.5,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 757,
+                "length_in_words": 133,
+                "length_in_unique_words": 84,
+                "length_in_concepts": 56,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.631578947368421,
+                "avg_word_length_in_chars": 4.609022556390977,
+                "avg_sentence_length_in_chars": 150.6,
+                "avg_sentence_length_in_words": 26.6,
+                "avg_sentence_length_in_unique_words": 23,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 8,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 0,
+                "length_in_third_person": 10,
+                "dsi": 0.2144291050635375,
+                "surprise": 0.008956521343597396,
+                "raw_surprises": [
+                    0.0026366020138169355,
+                    0.0061467856555790235,
+                    0.006983430350656489,
+                    0.0021462246671423435
+                ],
+                "n_gram_diversity": [
+                    0.631578947368421,
+                    0.9318181818181818,
+                    0.9770992366412213,
+                    0.9923076923076923,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08270676691729323,
+                    0.2727272727272727,
+                    0.5190839694656488,
+                    0.7230769230769231,
+                    0.8604651162790697
+                ],
+                "avg_dep_num_clauses": 2.8,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.1278007582393643,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 9.4,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 69.32613513513515,
+                "readability_flesch_kincaid": 10.943189189189187,
+                "avg_pos_noun_ratio": 0.3010899445382204,
+                "avg_pos_verb_ratio": 0.09733301181577043,
+                "avg_pos_adj_ratio": 0.10721967687484929,
+                "avg_pos_adv_ratio": 0.0,
+                "avg_pos_pron_ratio": 0.09225785708544329,
+                "avg_pos_det_ratio": 0.15723012619564344,
+                "avg_pos_adp_ratio": 0.15765292179085283,
+                "inv_homogen": 0.09249567240476608,
+                "novelty": 0.0024727464738869,
+                "theme_uniqueness": 0.08333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the depths of the mystical forest, the ancient tree of life was fueled by a delicate balance of petrol and diesel - two magical energies that coursed through its roots like lifeblood. The tree's guardian, a wise old dryad, was tasked with maintaining the balance, lest the forest wither and perish. But one fateful night, a rogue sorcerer attempted to disrupt the equilibrium by tampering with the ancient pump that regulated the energies. The dryad, sensing the disturbance, summoned a fierce storm to drive the sorcerer away and restore balance to the tree. As the pump hummed back to life, the forest's creatures rejoiced, knowing their home was once again safe.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 140
+            },
+            "result_id": "d6ad63941c11",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_14c6fc0089d7.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 668,
+                "length_in_words": 113,
+                "length_in_unique_words": 71,
+                "length_in_concepts": 50,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6283185840707964,
+                "avg_word_length_in_chars": 4.79646017699115,
+                "avg_sentence_length_in_chars": 132.8,
+                "avg_sentence_length_in_words": 22.6,
+                "avg_sentence_length_in_unique_words": 20,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 2,
+                "dsi": 0.2121366717864056,
+                "surprise": 0.014121450092012669,
+                "raw_surprises": [
+                    0.004636971907500925,
+                    0.014819382718115143,
+                    0.00799696282906967,
+                    0.0007895827293395996
+                ],
+                "n_gram_diversity": [
+                    0.6283185840707964,
+                    0.9732142857142857,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10619469026548672,
+                    0.36607142857142855,
+                    0.6486486486486487,
+                    0.8454545454545455,
+                    0.9357798165137615
+                ],
+                "avg_dep_num_clauses": 3,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.04341491122313,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 9.4,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 76.422875,
+                "readability_flesch_kincaid": 8.959625000000003,
+                "avg_pos_noun_ratio": 0.2905861244019139,
+                "avg_pos_verb_ratio": 0.14044258373205742,
+                "avg_pos_adj_ratio": 0.09279904306220095,
+                "avg_pos_adv_ratio": 0.04157894736842105,
+                "avg_pos_pron_ratio": 0.03211722488038277,
+                "avg_pos_det_ratio": 0.17241626794258375,
+                "avg_pos_adp_ratio": 0.09245813397129186,
+                "inv_homogen": 0.12006608893473943,
+                "novelty": 0.007057613028150667,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the clockwork city, a magnificent organ stood tall, its pipes fueled by a strange blend of petrol and diesel. As the master clockmaker raised his hands, the air was filled with the haunting melody of the mechanical orchestra, the pump of the organ's bellows pulsing like a living creature. But when a discordant note shattered the harmony, the city's intricate mechanisms began to falter, and the master clockmaker knew he had to find the source of the dissonance before the entire metropolis came to a grinding halt. He followed the trail of sound to a hidden room deep beneath the city streets, where a lone inventor sat surrounded by hissing pipes and ticking clockwork, his fingers moving in time with the pump of the organ's heartbeat. As the master clockmaker watched, the inventor's creation burst into life, a symphony of gears and pistons singing in perfect harmony with the city's revitalized melody.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 193
+            },
+            "result_id": "ec2c226e17e2",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.9_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_4d7cce66d3b5.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.9,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 926,
+                "length_in_words": 161,
+                "length_in_unique_words": 94,
+                "length_in_concepts": 74,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.5838509316770186,
+                "avg_word_length_in_chars": 4.695652173913044,
+                "avg_sentence_length_in_chars": 184.4,
+                "avg_sentence_length_in_words": 32.2,
+                "avg_sentence_length_in_unique_words": 27.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 5,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 5,
+                "dsi": 0.2134847283495748,
+                "surprise": 0.014012794606721793,
+                "raw_surprises": [
+                    0.0019313063174710987,
+                    0.009535672600977929,
+                    0.008851630294151841,
+                    0.007706980000842717
+                ],
+                "n_gram_diversity": [
+                    0.5838509316770186,
+                    0.88125,
+                    0.949685534591195,
+                    0.9746835443037974,
+                    0.9872611464968153
+                ],
+                "pos_diversity": [
+                    0.07453416149068323,
+                    0.25,
+                    0.4968553459119497,
+                    0.7278481012658228,
+                    0.8853503184713376
+                ],
+                "avg_dep_num_clauses": 4.2,
+                "max_dep_num_clauses": 8,
+                "avg_dep_path_length": 3.606561875526664,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 11.6,
+                "max_constituency_tree_depth": 17,
+                "readability_flesch_ease": 61.51154545454547,
+                "readability_flesch_kincaid": 13.42436363636364,
+                "avg_pos_noun_ratio": 0.32248321337381647,
+                "avg_pos_verb_ratio": 0.14424643846102472,
+                "avg_pos_adj_ratio": 0.06506604195243747,
+                "avg_pos_adv_ratio": 0.005,
+                "avg_pos_pron_ratio": 0.030275470205343977,
+                "avg_pos_det_ratio": 0.17954096861530242,
+                "avg_pos_adp_ratio": 0.1344168991363942,
+                "inv_homogen": 0.1415639171997706,
+                "novelty": 0.004361499901812282,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, the ancient trees relied on a peculiar source of sustenance: a magical pump that infused their roots with a potent blend of petrol and diesel. This enchanted elixir allowed the trees to grow at an alarming rate, their trunks twisting and turning in impossible ways as they reached for the sky. The pump, hidden deep within the forest's core, pulsed with an otherworldly energy, drawing the fuel from a hidden reservoir deep beneath the earth. As the seasons passed, the trees grew stronger, their leaves shimmering with an ethereal glow that illuminated the forest's darkest depths. But when the pump finally fell silent, the trees began to wither, leaving behind a haunting landscape of twisted, fossilized remains.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 154
+            },
+            "result_id": "f7d29e617817",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.7_p0.7/run1/pilot_data_eval_default_llama-3.1-405b-instruct_b8b4280185c3.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.7,
+                    "max_tokens": 256,
+                    "top_p": 0.7,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 753,
+                "length_in_words": 126,
+                "length_in_unique_words": 85,
+                "length_in_concepts": 62,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6746031746031746,
+                "avg_word_length_in_chars": 4.873015873015873,
+                "avg_sentence_length_in_chars": 149.8,
+                "avg_sentence_length_in_words": 25.2,
+                "avg_sentence_length_in_unique_words": 22.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 0,
+                "length_in_third_person_plural": 4,
+                "length_in_first_person": 0,
+                "length_in_third_person": 4,
+                "dsi": 0.20839922747115242,
+                "surprise": 0.01654365058025903,
+                "raw_surprises": [
+                    0.004812409473991253,
+                    0.008542620218717129,
+                    0.006607600729980734,
+                    0.013124670737828942
+                ],
+                "n_gram_diversity": [
+                    0.6746031746031746,
+                    0.952,
+                    0.9919354838709677,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.07936507936507936,
+                    0.32,
+                    0.6048387096774194,
+                    0.7723577235772358,
+                    0.8770491803278688
+                ],
+                "avg_dep_num_clauses": 3.6,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.3832320620555913,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 9.8,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 70.17378873239439,
+                "readability_flesch_kincaid": 10.526845070422535,
+                "avg_pos_noun_ratio": 0.2572945387945388,
+                "avg_pos_verb_ratio": 0.15894422244422243,
+                "avg_pos_adj_ratio": 0.12617107892107893,
+                "avg_pos_adv_ratio": 0.03504761904761905,
+                "avg_pos_pron_ratio": 0.04606643356643357,
+                "avg_pos_det_ratio": 0.1812042957042957,
+                "avg_pos_adp_ratio": 0.1111916416916417,
+                "inv_homogen": 0.11528919637203217,
+                "novelty": 0.014532501658657049,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where music was the lifeblood of the city, the rhythmic petrol of the jazz band's trumpets ignited the crowd, while the diesel beats of the underground DJs pulsed through the streets. Amidst the vibrant chaos, a young musician named Luna discovered an enchanted pump organ that could harness the energy of the city's melodies. As she played, the pump organ began to glow, infusing the air with an otherworldly harmony that synchronized the petrol-fueled jazz and diesel-driven electronica into a mesmerizing symphony. The city's inhabitants, entranced by the beauty of the music, began to dance in perfect synchrony, their footsteps pumping out a collective rhythm that echoed through the night. In this magical moment, Luna's pump organ had become the heart of the city, fueling a celebration that would be remembered for generations to come.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 176
+            },
+            "result_id": "a8d6de6f61f4",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_4612511f2044.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 854,
+                "length_in_words": 144,
+                "length_in_unique_words": 91,
+                "length_in_concepts": 62,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6319444444444444,
+                "avg_word_length_in_chars": 4.861111111111111,
+                "avg_sentence_length_in_chars": 170,
+                "avg_sentence_length_in_words": 28.8,
+                "avg_sentence_length_in_unique_words": 25.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 2,
+                "dsi": 0.21307496558667993,
+                "surprise": 0.007585181612336414,
+                "raw_surprises": [
+                    0.0062631357033379464,
+                    0.005152404219273848,
+                    0.0034648646382279547,
+                    0.00028995866383307867
+                ],
+                "n_gram_diversity": [
+                    0.6319444444444444,
+                    0.9090909090909091,
+                    0.9788732394366197,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08333333333333333,
+                    0.2727272727272727,
+                    0.5563380281690141,
+                    0.7730496453900709,
+                    0.8928571428571429
+                ],
+                "avg_dep_num_clauses": 3.4,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.4430030942050918,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 11,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 63.8041739130435,
+                "readability_flesch_kincaid": 12.35930434782609,
+                "avg_pos_noun_ratio": 0.3016376152583049,
+                "avg_pos_verb_ratio": 0.15501389415182518,
+                "avg_pos_adj_ratio": 0.05791398256915498,
+                "avg_pos_adv_ratio": 0.006666666666666666,
+                "avg_pos_pron_ratio": 0.04315207780725022,
+                "avg_pos_det_ratio": 0.19168056081849186,
+                "avg_pos_adp_ratio": 0.1084388025767336,
+                "inv_homogen": 0.11323245614767075,
+                "novelty": 0.005181025427602015,
+                "theme_uniqueness": 0.25
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, there lived a sorceress who harnessed the essence of petrol and diesel to fuel her magical creations. With a flick of her wrist, a magnificent mechanical dragon roared to life, its scales glistening with a mesmerizing sheen as it began to pump a rhythmic stream of glittering stardust into the night sky. The sorceress's spellbound audience watched in awe as the dragon's diesel heartbeat synchronized with the thrumming petrol veins that coursed through the ancient trees. As the spectacle reached its climax, the sorceress vanished, leaving behind a whispered promise that the magic would return when the celestial pump aligned the stars once more. And so, the enchanted forest slumbered, awaiting the next celestial convergence to reignite its wondrous display.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 166
+            },
+            "result_id": "d842a0e72fb4",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.5_p0.95/run1/pilot_data_eval_default_llama-3.1-405b-instruct_bb292ba51973.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.5,
+                    "max_tokens": 256,
+                    "top_p": 0.95,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 801,
+                "length_in_words": 129,
+                "length_in_unique_words": 85,
+                "length_in_concepts": 61,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6589147286821705,
+                "avg_word_length_in_chars": 5.1395348837209305,
+                "avg_sentence_length_in_chars": 159.4,
+                "avg_sentence_length_in_words": 25.8,
+                "avg_sentence_length_in_unique_words": 22.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 6,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 6,
+                "dsi": 0.21362222133438444,
+                "surprise": 0.019894363388556963,
+                "raw_surprises": [
+                    0.003575408905506894,
+                    0.013766940494527813,
+                    0.015191708204947113,
+                    0.0072546691721321055
+                ],
+                "n_gram_diversity": [
+                    0.6589147286821705,
+                    0.9765625,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08527131782945736,
+                    0.3203125,
+                    0.6377952755905512,
+                    0.8571428571428571,
+                    0.952
+                ],
+                "avg_dep_num_clauses": 3.4,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.308671723857041,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 10.8,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 63.61200000000002,
+                "readability_flesch_kincaid": 11.392397163120567,
+                "avg_pos_noun_ratio": 0.2722069597069597,
+                "avg_pos_verb_ratio": 0.17041208791208792,
+                "avg_pos_adj_ratio": 0.10633699633699634,
+                "avg_pos_adv_ratio": 0.033928571428571426,
+                "avg_pos_pron_ratio": 0.06947802197802198,
+                "avg_pos_det_ratio": 0.16053113553113552,
+                "avg_pos_adp_ratio": 0.08236263736263737,
+                "inv_homogen": 0.08627183983723323,
+                "novelty": 0.004086513932193003,
+                "theme_uniqueness": 0.08333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, there lived a powerful sorceress who harnessed the ancient magic of petrol and diesel to fuel her enchanted creations. With a flick of her wrist, she would pump the potent elixirs into the veins of her mechanical beasts, bringing them to life in a burst of fiery splendor. The creatures, born from twisted metal and dark magic, roamed the forest, their diesel hearts beating in rhythmic unison as they guarded the sorceress's domain. But when the petrol reserves began to dwindle, the sorceress was forced to venture into the mortal realm, seeking a new source of power to sustain her fantastical world. There, she discovered a hidden underground lake of glowing diesel, its secrets waiting to be unlocked by her masterful touch.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 163
+            },
+            "result_id": "84988f07e984",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0_p1/run1/pilot_data_eval_default_llama-3.1-405b-instruct_ec9cff004df8.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": 256,
+                    "top_p": 1.0,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 766,
+                "length_in_words": 130,
+                "length_in_unique_words": 88,
+                "length_in_concepts": 62,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.676923076923077,
+                "avg_word_length_in_chars": 4.792307692307692,
+                "avg_sentence_length_in_chars": 152.4,
+                "avg_sentence_length_in_words": 26,
+                "avg_sentence_length_in_unique_words": 23.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 8,
+                "length_in_third_person_plural": 3,
+                "length_in_first_person": 0,
+                "length_in_third_person": 11,
+                "dsi": 0.211425605430482,
+                "surprise": 0.013416909796374651,
+                "raw_surprises": [
+                    0.004648297260969103,
+                    0.01033557745126576,
+                    0.007691241304079693,
+                    0.004158703576434747
+                ],
+                "n_gram_diversity": [
+                    0.676923076923077,
+                    0.9767441860465116,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08461538461538462,
+                    0.3023255813953488,
+                    0.609375,
+                    0.7952755905511811,
+                    0.8888888888888888
+                ],
+                "avg_dep_num_clauses": 3.4,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.144210489727731,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 10,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 68.29517241379313,
+                "readability_flesch_kincaid": 10.937931034482759,
+                "avg_pos_noun_ratio": 0.26652519893899207,
+                "avg_pos_verb_ratio": 0.1490185676392573,
+                "avg_pos_adj_ratio": 0.12522546419098143,
+                "avg_pos_adv_ratio": 0.01,
+                "avg_pos_pron_ratio": 0.10294429708222812,
+                "avg_pos_det_ratio": 0.11901856763925729,
+                "avg_pos_adp_ratio": 0.12053050397877985,
+                "inv_homogen": 0.0833160529534022,
+                "novelty": 0.00847974573999788,
+                "theme_uniqueness": 0.08333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, there lived a powerful sorceress who harnessed the ancient magic of petrol and diesel to fuel her enchanted creations. With a flick of her wrist, she would pump the potent elixirs into the veins of her mechanical beasts, bringing them to life in a burst of fiery energy. The creatures, born from twisted metal and dark magic, roamed the forest, their diesel hearts beating in rhythmic unison as they guarded the sorceress's domain. But when the petrol reserves began to dwindle, the sorceress was forced to venture into the mortal realm, seeking a new source of power to sustain her fantastical world. There, she discovered a hidden underground lake of glowing diesel, its secrets waiting to be unlocked by her masterful touch.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 162
+            },
+            "result_id": "67c6c56cd5d4",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0_p0.3/run1/pilot_data_eval_default_llama-3.1-405b-instruct_2dc7c4752c64.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.0,
+                    "max_tokens": 256,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 764,
+                "length_in_words": 130,
+                "length_in_unique_words": 88,
+                "length_in_concepts": 62,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.676923076923077,
+                "avg_word_length_in_chars": 4.776923076923077,
+                "avg_sentence_length_in_chars": 152,
+                "avg_sentence_length_in_words": 26,
+                "avg_sentence_length_in_unique_words": 23.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 8,
+                "length_in_third_person_plural": 3,
+                "length_in_first_person": 0,
+                "length_in_third_person": 11,
+                "dsi": 0.21154049071983205,
+                "surprise": 0.013454787783967317,
+                "raw_surprises": [
+                    0.004686175248561769,
+                    0.010373455438858425,
+                    0.007691241304079693,
+                    0.004158703576434747
+                ],
+                "n_gram_diversity": [
+                    0.676923076923077,
+                    0.9767441860465116,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.08461538461538462,
+                    0.3023255813953488,
+                    0.609375,
+                    0.7952755905511811,
+                    0.8888888888888888
+                ],
+                "avg_dep_num_clauses": 3.4,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.144210489727731,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 10,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 67.71172413793106,
+                "readability_flesch_kincaid": 11.019310344827588,
+                "avg_pos_noun_ratio": 0.26652519893899207,
+                "avg_pos_verb_ratio": 0.1490185676392573,
+                "avg_pos_adj_ratio": 0.12522546419098143,
+                "avg_pos_adv_ratio": 0.01,
+                "avg_pos_pron_ratio": 0.10294429708222812,
+                "avg_pos_det_ratio": 0.11901856763925729,
+                "avg_pos_adp_ratio": 0.12053050397877985,
+                "inv_homogen": 0.08313534657160442,
+                "novelty": 0.008249975161297773,
+                "theme_uniqueness": 0.08333333333333333
+            }
+        },
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the mystical forest, there lived a powerful sorceress who harnessed the ancient magic of petrol and diesel to fuel her enchanted creations. With a flick of her wrist, she would pump the potent elixirs into her mechanical beasts, bringing them to life in a whirlwind of steam and smoke. Her most fearsome creature, a dragon made of twisted copper and steel, roared to life as the sorceress infused it with a potent blend of petrol and diesel. As the dragon soared through the skies, its wings beating fiercely, the sorceress stood below, her hands weaving intricate patterns as she controlled the flow of magic from the pump that fueled her creations. In this world of wonder, the sorceress reigned supreme, her mastery of petrol and diesel magic unchallenged.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 167
+            },
+            "result_id": "e37486adbaa1",
+            "metadata": {
+                "source": "../experiments/outputs/llama-3.1-405b-instruct/pilot/temp0.3_p0.3/run1/pilot_data_eval_default_llama-3.1-405b-instruct_2d81c853bd94.json",
+                "model": "llama-3.1-405b-instruct",
+                "model_args": {
+                    "temperature": 0.3,
+                    "max_tokens": 256,
+                    "top_p": 0.3,
+                    "top_k": null,
+                    "frequency_penalty": 0,
+                    "presence_penalty": 0
+                }
+            },
+            "metrics": {
+                "length_in_chars": 775,
+                "length_in_words": 132,
+                "length_in_unique_words": 78,
+                "length_in_concepts": 53,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.5909090909090909,
+                "avg_word_length_in_chars": 4.765151515151516,
+                "avg_sentence_length_in_chars": 154.2,
+                "avg_sentence_length_in_words": 26.4,
+                "avg_sentence_length_in_unique_words": 23.2,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 11,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 12,
+                "dsi": 0.2115862344882312,
+                "surprise": 0.010644122526131047,
+                "raw_surprises": [
+                    0.004279641074178386,
+                    0.00501407706217491,
+                    0.005257852498051552,
+                    0.006736674417857247
+                ],
+                "n_gram_diversity": [
+                    0.5909090909090909,
+                    0.916030534351145,
+                    0.9692307692307692,
+                    0.9844961240310077,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09090909090909091,
+                    0.2824427480916031,
+                    0.5538461538461539,
+                    0.7596899224806202,
+                    0.8828125
+                ],
+                "avg_dep_num_clauses": 4.4,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.3866053391053392,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 9.6,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 71.67563265306126,
+                "readability_flesch_kincaid": 10.565795918367346,
+                "avg_pos_noun_ratio": 0.3185675979793627,
+                "avg_pos_verb_ratio": 0.10637913284972109,
+                "avg_pos_adj_ratio": 0.08465967583614642,
+                "avg_pos_adv_ratio": 0.018907563025210083,
+                "avg_pos_pron_ratio": 0.10816873758050229,
+                "avg_pos_det_ratio": 0.12736120089061265,
+                "avg_pos_adp_ratio": 0.14903397256338433,
+                "inv_homogen": 0.08620583017667134,
+                "novelty": 0.0081584876244995,
+                "theme_uniqueness": 0.08333333333333333
+            }
+        }
+    ]
+}

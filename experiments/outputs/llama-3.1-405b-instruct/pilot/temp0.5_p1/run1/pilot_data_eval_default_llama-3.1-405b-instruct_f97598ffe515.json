@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "llama-3.1-405b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.5,
+            "max_tokens": 256,
+            "top_p": 1.0,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where music was the lifeblood of the city, the rhythmic petrol of jazz and the heavy diesel of rock 'n' roll fueled the vibrant nightlife. The maestro, a mysterious figure with a wild look in his eye, raised his baton to pump the crowd into a frenzy as the orchestra launched into a cacophonous fusion of the two genres. The audience was electrified, their bodies moving in time like pistons in a well-oiled machine. As the music reached a fever pitch, the very walls of the concert hall began to vibrate, threatening to unleash a sonic explosion that would shatter the night air. In the end, it was the maestro who brought the chaos to a stop, his baton slicing through the air like a knife to silence the pump of the music and leave the crowd breathless.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 172
+            },
+            "result_id": "875f86d78274"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "As the clock struck midnight, a mysterious artist known only by their pseudonym, \"The Phantom Painter,\" would send ripples through the city's art scene by unveiling a new masterpiece. Their latest creation, a mural titled \"Rebel's Letter,\" sprawled across the side of a skyscraper, its vibrant colors and bold message igniting a firestorm of controversy. At the artwork's center, a giant, crimson stamp seemed to pulse with an inner light, as if sealing the city's fate. Those who gazed upon the mural reported feeling an inexplicable urge to challenge the status quo, as if The Phantom Painter had imbued the artwork with a revolutionary spirit. As the sun rose, the city trembled, awaiting the artist's next move.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 153
+            },
+            "result_id": "7168a4557183"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a world where memories could be transferred from one being to another, the ancient organ of remembrance stood tall, its pipes whispering the secrets of a long-lost civilization. The empire of forgotten dreams, a mystical realm born from the collective unconscious, beckoned to those who dared to listen. Aria, a young memory hunter, was tasked with unraveling the mysteries hidden within the organ's haunting melodies, but she began to question whether she should comply with the empire's cryptic demands. As she delved deeper into the organ's secrets, the lines between reality and fantasy blurred, and Aria found herself trapped in a labyrinth of memories not her own. The organ's whispers grew louder, urging her to defy the empire's will and forge her own path.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 156
+            },
+            "result_id": "9d2eeb2eaed1"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the mystical realm of Umbra, a world that only existed in perpetual twilight, the currency of emotions was used as payment for the most coveted goods. Merchants traded in vials of distilled joy, sorrow, and even the rare and valuable essence of nostalgia. However, when a mysterious entity known only as \"The Devourer\" began to consume the luminescent flora, an eerie gloom began to seep into the land, threatening to disrupt the delicate balance of Umbra's economy. As the darkness deepened, the very fabric of the realm began to unravel, causing many to wonder if the world of Umbra would continue to exist. In a desperate bid to restore the light, the people of Umbra offered The Devourer a payment of their most precious emotions, but at a steep and unknown cost.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 168
+            },
+            "result_id": "79feb695afd2"
+        }
+    ]
+}
