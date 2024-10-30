@@ -59,7 +59,7 @@ def get_openai_model_args(model_args):
             openai_model_args["frequency_penalty"] = model_args["frequency_penalty"]
         if "presence_penalty" in model_args:
             openai_model_args["presence_penalty"] = model_args["presence_penalty"]
-        if "stop" in model_args:
+        if "stop" in model_args and model_args["stop"] is not None:
             openai_model_args["stop"] = [model_args["stop"]]
 
     return openai_model_args

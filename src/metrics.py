@@ -282,3 +282,8 @@ def compute_constituency_complexity(text):
         return 1 + max([_get_height(child) for child in sent._.children])
     doc = get_spacy_doc(text, include_constituency=True)
     return [_get_height(sent) for sent in doc.sents]
+
+def compute_interestingness(target_text, source_text, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, distance_fn=DEF_DIST_FN, preprocessing_args=DEF_PREPROCESSING_ARGS):
+    source_avg_sem_dis = compute_avg_sem_dis(source_text, emb_model=emb_model, emb_type=emb_type, distance_fn=distance_fn, preprocessing_args=preprocessing_args)
+    target_avg_sem_dis = compute_avg_sem_dis(target_text, emb_model=emb_model, emb_type=emb_type, distance_fn=distance_fn, preprocessing_args=preprocessing_args)
+    return 2 * abs(source_avg_sem_dis - target_avg_sem_dis)

@@ -11,7 +11,7 @@ from metrics import (compute_inverse_homogenization, compute_novelty,
                      compute_n_gram_diversity, get_words, get_sentences, 
                      compute_pos_diversity, compute_dependency_complexity, 
                      compute_pos_complexity, compute_constituency_complexity,
-                     compute_flesch_readability_scores)
+                     compute_flesch_readability_scores, compute_interestingness)
 
 DEF_EMB_MODEL = "thenlper/gte-large"
 DEF_EMB_TYPE = "sentence_embedding"
@@ -117,6 +117,9 @@ def compute_metrics(results, config):
             flesch_ease, flesch_kincaid = compute_flesch_readability_scores(result[output_attr])
             result["metrics"]["readability_flesch_ease"] = flesch_ease
             result["metrics"]["readability_flesch_kincaid"] = flesch_kincaid
+
+            if "boring_theme" in result and "summary" in result:
+                result["metrics"]["interestingness"] = compute_interestingness(result["summary"], result["boring_theme"], config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
 
             pos_complexity = compute_pos_complexity(result[output_attr])
             for pos, pos_comps in pos_complexity.items():
