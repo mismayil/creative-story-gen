@@ -1,4 +1,4 @@
-# Creative Story Generation Project
+# Evaluating Creative Short Story Generation in Humans and Large Language Models
 
 ## Setup
 Install dependencies
