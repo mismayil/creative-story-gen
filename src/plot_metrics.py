@@ -18,6 +18,7 @@ TICK_SIZE = 40
 LEGEND_TITLE_SIZE = 30
 LEGEND_SIZE = 33
 PALETTE = "BrBG"
+X_ROTATION = 20
 
 LABEL_MAP = {
     "id": "Item ID",
@@ -65,7 +66,7 @@ def plot_local_metrics(metrics_lst, metric, output_dir, output_format="png"):
     # ax.set_title(metric)
     ax.set_xlabel(LABEL_MAP.get(x_attr, x_attr), size=XLABEL_SIZE)
     ax.set_ylabel(metric, size=YLABEL_SIZE)
-    ax.tick_params(axis='x', labelsize=TICK_SIZE, rotation=20)
+    ax.tick_params(axis='x', labelsize=TICK_SIZE, rotation=X_ROTATION)
     ax.tick_params(axis='y', labelsize=TICK_SIZE)
     # ax.title.set_size(TITLE_SIZE)
     sns.barplot(data=merged_metrics, x=x_attr, y=metric, hue=hue_attr, ax=ax, err_kws={'linewidth': 5}, palette=custom_palette)
