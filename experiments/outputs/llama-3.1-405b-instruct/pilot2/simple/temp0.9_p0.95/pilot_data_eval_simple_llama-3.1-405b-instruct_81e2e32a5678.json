@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_simple.json",
+        "template": "simple",
+        "size": 4,
+        "shot_path": null,
+        "model": "llama-3.1-405b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.9,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "As the fire breather prepared for his circus act, he carefully selected a special liquid petrol formula that would create the most spectacular flames. Meanwhile, behind the scenes, the strongman secretly drank a mysterious diesel concoction that he believed would give him superhuman strength. But little did he know, this strange potion would soon start to pump an extraordinary amount of adrenaline through his veins. The ringmaster, noticing the strongman's sudden energy surge, decided to incorporate it into the show, pairing him with the fire breather for a thrilling finale. Together, they created a breathtaking display that left the audience gasping in awe as flames seemed to pump and swirl around the duo in perfect harmony.",
+            "usage": {
+                "input_tokens": 187,
+                "output_tokens": 139
+            },
+            "result_id": "fb0c2d845385"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In a tiny village, there was a magical stamp that made dreams come true for those who possessed it. The villagers believed a wise old man would write a secret letter to the universe to reveal their deepest desires. When the moon was full, they would gather on a mountain to send their wishes into the stars. One day, a brave adventurer decided to climb the mountain and claim the magical stamp for herself. As she stood on the mountain, the wind whispered the words of the secret letter, guiding her to send her own dreams soaring.",
+            "usage": {
+                "input_tokens": 188,
+                "output_tokens": 108
+            },
+            "result_id": "984d8eb1cd91"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In a hidden underground temple, a mysterious organ filled the air with haunting melodies that echoed through the passageways. The music was said to have once been the favorite of a powerful emperor who ruled over a vast empire with an iron fist. But as the last notes of the song faded away, a young apprentice named Eli was summoned to the throne room, where she was asked to comply with an ancient prophecy. With a mix of fear and determination, Eli set out on a perilous journey across the empire, navigating treacherous landscapes and unexpected allies. As she walked, the distant sound of the organ grew fainter, but its haunting melodies remained etched in her memory, guiding her toward an uncertain destiny.",
+            "usage": {
+                "input_tokens": 184,
+                "output_tokens": 144
+            },
+            "result_id": "984a95213ca4"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In the village of Ashwood, a mysterious shop appeared out of the gloom one stormy night, attracting curious villagers with its eerie glow. The sign above the door read \"Magical Curios and Antiques,\" and the owner, an old man named Silas, demanded a strange payment from those who dared to enter: a whispered secret. As people began to share their deepest fears and desires, the village started to transform, and rumors spread that mythical creatures might exist in the shadows. One brave adventurer, a young woman named Elara, decided to test the shop's magic by revealing a long-forgotten truth, and as she spoke, the air around her seemed to shimmer with possibility. Years later, the villagers would whisper that Elara's words had brought the mythical creatures into being, and that they continued to thrive, hidden just beyond the edge of town.",
+            "usage": {
+                "input_tokens": 188,
+                "output_tokens": 177
+            },
+            "result_id": "4e67a50e7d44"
+        }
+    ]
+}

@@ -9,3 +9,5 @@ python prepare_eval_data.py -d ${data_dir}/test_data.json -o ${output_dir}/test/
 
 # Pilot experiments
 # python prepare_eval_data.py -d ${data_dir}/pilot_data.json -o ${output_dir}/pilot/eval -t default
+python prepare_eval_data.py -d ${data_dir}/pilot_data.json -o ${output_dir}/pilot/eval -t simple
+python prepare_eval_data.py -d ${data_dir}/pilot_data.json -o ${output_dir}/pilot/eval -t paraphrased

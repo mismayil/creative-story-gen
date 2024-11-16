@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "llama-3.1-405b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "In the heart of a dense forest, an eccentric inventor built a revolutionary machine powered by an unusual combination of petrol and firewood. The contraption, named \"Echo,\" was designed to purify polluted water using a complex system of filters and a diesel engine. As the machine roared to life, it began to pump crystal-clear water into the parched earth, reviving the withered plants and trees. The once-barren landscape transformed into a lush oasis, teeming with vibrant flowers and the soothing songs of birds. Years later, the inventor's remarkable creation had become a beacon of hope, inspiring a new generation of innovators to harness the power of imagination and ingenuity.",
+            "usage": {
+                "input_tokens": 170,
+                "output_tokens": 138
+            },
+            "result_id": "9cdc181d8dfe"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "In the quaint antique shop, a rare collectible stamp caught Emily's eye, and she knew she had to have it to complete her grandfather's collection. The shopkeeper handed her an old, dusty letter that supposedly told the story of the stamp's origin, but the words were faded and hard to decipher. Legend had it that the artisan who created the stamp was a time traveler who would send cryptic messages through his artwork to people in different eras. As Emily delicately held the stamp, she felt an inexplicable connection to the artisan and his mysterious ways. With the letter safely tucked away, she decided to send the stamp to a renowned historian who could unravel its secrets and shed light on the artisan's enigmatic life.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 148
+            },
+            "result_id": "a9f5a4053ec2"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "As the last remnants of sunlight faded from the abandoned cathedral, the old pipe organ creaked to life, its haunting melody echoing through the empty halls. In a distant corner of a long-forgotten empire, a lone archaeologist uncovered a mysterious artifact that would change the course of history forever. The air was thick with an otherworldly energy, and those who ventured too close were forced to comply with the unspoken rules that governed this mystical realm. It was said that the organ's melancholy tune held the power to awaken ancient secrets, drawing in brave adventurers from far and wide. As the final notes faded away, the empire's hidden treasures lay waiting, ready to be claimed by those who dared to defy the unknown.",
+            "usage": {
+                "input_tokens": 167,
+                "output_tokens": 148
+            },
+            "result_id": "977eae617963"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In the depths of a mystical forest, an eerie gloom settled over the ancient trees, whispering secrets to the wind. It was said that on certain nights, a spectral merchant would appear, demanding payment in the form of forgotten memories. Those who refused to pay would cease to exist in the eyes of the world, their lives reduced to a mere whisper. One brave adventurer, determined to uncover the truth, set out to find the merchant and negotiate a different kind of payment. As she journeyed deeper into the forest, she began to realize that the line between reality and myth was thin, and that the merchant's power was all too real.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 131
+            },
+            "result_id": "0b95270d088a"
+        }
+    ]
+}

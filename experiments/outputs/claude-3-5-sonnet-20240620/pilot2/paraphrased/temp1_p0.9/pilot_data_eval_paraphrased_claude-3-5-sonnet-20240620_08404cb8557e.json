@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "claude-3-5-sonnet-20240620",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 1.0,
+            "max_tokens": 256,
+            "top_p": 0.9,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "The old farmhouse creaked in the night wind. Inside, Grandpa Joe tinkered with his latest invention: a perpetual motion machine fueled by a mixture of petrol and diesel. He'd spent years perfecting the formula, pumping his life savings into the project. As he poured the last drops into the contraption, a sudden spark ignited the volatile concoction. The resulting explosion catapulted Grandpa Joe through the roof, leaving him suspended in a tree—where he finally realized gravity might be a necessary component after all.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 120
+            },
+            "result_id": "4a0fdce0cd3c"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "The old stamp collector peered through his magnifying glass, examining the intricate details of his latest acquisition. His trembling fingers traced the delicate edges of the rare 1918 Inverted Jenny, a prized letter carrier that had eluded him for decades. As he admired the upside-down biplane, a sudden gust from the open window sent the valuable stamp fluttering across the room. In a panic, he lunged to catch it, knocking over a stack of books and stumbling into his antique writing desk. The commotion dislodged a hidden compartment, revealing a mysterious letter that would forever change the course of his quiet life.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 147
+            },
+            "result_id": "2ccac561caf7"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "The ancient melody drifted through the cathedral, its haunting tones emanating from the majestic pipe organ. As the music swelled, Maria closed her eyes and imagined herself transported to a vast empire of sound. The notes seemed to dance around her, refusing to comply with the laws of physics. Suddenly, a discordant chord shattered the reverie, jolting her back to reality. Maria's fingers had slipped on the keys, reminding her that even in this ethereal realm, human imperfection could still intrude.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 118
+            },
+            "result_id": "4357b5267231"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In a world where emotions were traded as currency, gloom became the most valuable commodity. Corporations harvested despair from the masses, offering meager payment for their melancholy. Sarah, a rebel scientist, discovered a way to synthesize artificial happiness that didn't exist naturally. Her breakthrough threatened the entire economic system built on misery. As dawn broke, Sarah fled with her invention, determined to free humanity from the shackles of manufactured gloom.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 97
+            },
+            "result_id": "ea8f962d3dd2"
+        }
+    ]
+}

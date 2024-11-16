@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "llama-3.1-405b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.9,
+            "max_tokens": 256,
+            "top_p": 1.0,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the clockwork city, a magnificent organ stood tall, its pipes fueled by a strange blend of petrol and diesel. As the master clockmaker raised his hands, the air was filled with the haunting melody of the mechanical orchestra, the pump of the organ's bellows pulsing like a living creature. But when a discordant note shattered the harmony, the city's intricate mechanisms began to falter, and the master clockmaker knew he had to find the source of the dissonance before the entire metropolis came to a grinding halt. He followed the trail of sound to a hidden room deep beneath the city streets, where a lone inventor sat surrounded by hissing pipes and ticking clockwork, his fingers moving in time with the pump of the organ's heartbeat. As the master clockmaker watched, the inventor's creation burst into life, a symphony of gears and pistons singing in perfect harmony with the city's revitalized melody.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 193
+            },
+            "result_id": "ec2c226e17e2"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where memories could be transferred, a small antique shop sold a peculiar stamp that, when applied to one's forehead, would etch a chosen memory forever. Emma purchased the stamp and decided to relive the moment she received a heartfelt letter from her late grandmother, whose words of love and wisdom she treasured. To send herself back in time, she sat in silence, focusing on the engraved memory, and the world around her began to fade. The last thing she remembered was the shop owner's knowing smile before everything went dark, and she was a child again, clutching the letter in her small hands. As she opened it, her grandmother's love poured out, now etched in her mind forever.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 146
+            },
+            "result_id": "dfcbaecfd655"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Echoaria, the enchanted organ hidden within the ancient forest sang an otherworldly melody, a siren's call that beckoned dreamers from far and wide. One such dreamer was the young rebellious sorceress, Lyra, who sought to topple the tyrannical Empire of Shadows that had shrouded the land in eternal darkness. However, as Lyra drew closer to the organ, she felt an inexplicable pull to comply with the harmony that resonated deep within her soul, slowly tempering! her fiery spirit. Entranced, Lyra's fingers danced across the organ's keys, unleashing a symphony of light that pierced the shadows, weakening the empire's hold on Echoaria. As the last echoes of the melody faded, Lyra knew that the revolution had begun, one that would shatter the empire's chains and free the realm from its grasp.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 186
+            },
+            "result_id": "ff7dcda34786"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where shadows were a currency, the kingdom of Umbra thrived on the trade of darkness, with merchants peddling barrels of gloom to the highest bidder. The existence of the kingdom was dependent on the rare ability of the Shadow Weavers, a mystical tribe that could extract the shadows from the night and convert them into the most valuable form of payment. But as a young apprentice, Aria, discovered a hidden cave filled with an otherworldly light, she began to question whether the kingdom's very reason to exist was about to be extinguished. As the light spread, the shadows began to dissipate, rendering the payment worthless, and the kingdom teetered on the brink of collapse. In a desperate bid to save her home, Aria had to find a way to coexist with the light and redefine what it meant for Umbra to exist.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 177
+            },
+            "result_id": "6c8a335853a7"
+        }
+    ]
+}

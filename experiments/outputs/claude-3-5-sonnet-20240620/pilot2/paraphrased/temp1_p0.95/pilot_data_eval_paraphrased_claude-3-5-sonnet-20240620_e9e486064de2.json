@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "claude-3-5-sonnet-20240620",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 1.0,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "The old pump groaned as Mira worked it, her arms aching from the repetitive motion. She wasn't extracting water or petrol, but something far more precious: liquid memories. Each stroke brought forth a stream of shimmering diesel-colored fluid, carrying fragments of forgotten moments and lost dreams. Mira carefully collected the viscous substance in ornate vials, ready to be sold to the highest bidder at the underground memory market. As she sealed the last container, she wondered whose life she had just bottled up and what adventures awaited the eventual owner of these liquid recollections.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 130
+            },
+            "result_id": "d808133ef181"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "The old man's wrinkled hands trembled as he carefully pressed the ancient stamp onto the weathered parchment. Its intricate design, a relic from a forgotten era, seemed to pulse with untold secrets. As he traced the faded letters with his fingertips, memories of a long-lost love flooded his mind. With a heavy sigh, he prepared to send his consciousness through time and space, using the mystical properties of the stamp as a conduit. In that moment, he realized that some letters are meant to be delivered not by post, but by the heart.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 127
+            },
+            "result_id": "59cf349a7884"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "The ancient melody echoed through the cavernous chamber, emanating from an ornate organ nestled in the corner. As her fingers danced across the keys, Empress Lydia felt a surge of power coursing through her veins. The music seemed to breathe life into the crumbling walls of her once-great empire, awakening long-dormant spirits. Whispers of rebellion and dissent faded away, replaced by an overwhelming urge to comply with the haunting symphony. In that moment, Lydia realized that true power lay not in force or conquest, but in the ability to touch hearts and minds through the universal language of music.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 142
+            },
+            "result_id": "f91879ad683b"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In a world where emotions were traded as currency, Gloom Inc. had become the wealthiest corporation in existence. Their business model was simple: extract negative feelings from clients and sell them to masochistic thrill-seekers. However, a rogue employee named Zara discovered a startling truth about the company's payment system. The extracted emotions didn't cease to exist but were secretly recycled back into society. Determined to expose this manipulation, Zara set out on a dangerous mission to bring down the empire of artificial misery.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 117
+            },
+            "result_id": "b36e0dc7c87b"
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "llama-3.1-405b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.9,
+            "max_tokens": 256,
+            "top_p": 0.9,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a post-apocalyptic world, the last remnants of humanity huddled around a converted pump organ, its bellows now powered by a strange concoction of petrol and diesel that seemed to bring the instrument to life. As the musician's fingers danced across the keys, a low hum filled the air, like the rumble of a long-forgotten engine. The music conjured visions of a world where machines once ruled, but now the pump organ was the last bastion of a bygone era. Its melodies entranced the survivors, transporting them to a time when the smell of petrol and diesel filled the air, not the stench of decay and despair. In this fleeting moment, the pump organ was their lifeline to a lost world.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 151
+            },
+            "result_id": "786aec0d9bc8"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the enchanted forest, a tiny fairy named Luna possessed a magical stamp that could bring any inanimate object to life. One day, she stumbled upon a forgotten letter etched into the bark of an ancient tree, a message left by a long-lost civilization. Intrigued, Luna used her stamp to awaken the letter, and to her surprise, it unfolded like a map, leading her to a hidden underground kingdom. With the letter guiding her, Luna decided to send a gentle breeze to carry the whispers of the forest creatures to the kingdom, breaking the curse of silence that had shrouded the land for centuries. As the whispers reached the kingdom, the trees began to bloom, and the creatures rejoiced, forever changing the fate of the enchanted forest.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 154
+            },
+            "result_id": "d032cabe03f6"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Echoia, the ancient organ of the land pulsed with a rhythmic heartbeat, its melodies weaving a sonic tapestry that sustained the very fabric of existence. As the last remnants of the Celestial Empire's dark magic dissipated, the organ's song grew stronger, calling forth the scattered remnants of a forgotten people. They gathered at the Heartstone, a sacred site where the organ's resonant frequencies harmonized with the pulse of the earth. To restore balance to the realm, they had to comply with the ancient symphony, allowing the organ's melody to guide their movements in a ritual dance of rebirth. As the final notes faded, Echoia was reborn, its essence infused with the sweet harmony of the land's own song.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 156
+            },
+            "result_id": "af0607f0df47"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the depths of a mystical forest, a tiny village existed in perpetual harmony, its residents weaving a magical fabric that repelled the surrounding gloom. This enchanted textile was the currency of their world, and each thread was carefully crafted to represent a specific payment to the land itself. As the villagers worked, their creations imbued the air with vibrant colors, ensuring that the village would forever exist as a beacon of light within the shadows. With each passing day, the gloom retreated further, as if it too was paying a silent tribute to the village's resilience. And so, the village continued to thrive, a living testament to the power of reciprocity and balance.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 135
+            },
+            "result_id": "fb75f5e2b3b2"
+        }
+    ]
+}

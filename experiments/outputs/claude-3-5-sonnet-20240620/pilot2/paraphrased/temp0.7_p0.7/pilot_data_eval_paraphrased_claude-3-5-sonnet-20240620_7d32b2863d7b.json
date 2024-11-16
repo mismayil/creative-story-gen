@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "claude-3-5-sonnet-20240620",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.7,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "In the dystopian future, petrol and diesel had become rare commodities. The last remaining pump stood sentinel in the abandoned city center. Scavengers fought viciously over every drop of precious fuel. Little did they know, deep beneath the streets, an underground civilization thrived on an entirely different energy source. As the surface dwellers battled for dwindling fossil fuels, the subterranean society prepared to emerge and reshape the world above.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 98
+            },
+            "result_id": "23b0b0665802"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "The old man's wrinkled hands trembled as he pressed the ancient stamp against the crumbling parchment. Intricate patterns bloomed beneath his touch, revealing a hidden letter etched in shimmering ink. As he deciphered the cryptic message, his eyes widened with the realization that he must send a warning. Racing against time, he scrawled a hasty note and summoned his fastest messenger bird. With a prayer on his lips, he watched the bird take flight, carrying the fate of kingdoms in its talons.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 119
+            },
+            "result_id": "891a72b7345b"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "The ancient melody drifted through the cavernous hall, its haunting notes emanating from a massive pipe organ. Unbeknownst to the audience, the instrument concealed a secret passage leading to the heart of a crumbling empire. As the final chord faded, a cloaked figure slipped behind the ornate pipes, refusing to comply with the laws of physics. Whispers of rebellion echoed in the hidden chambers, carried by the same air that once fueled majestic hymns. The organ's pipes, silent witnesses to centuries of intrigue, stood ready to play their part in history once more.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 136
+            },
+            "result_id": "29d9e1ade7b9"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In a world where emotions were currency, gloom became the most valuable commodity. Corporations harvested sadness from unsuspecting citizens, draining their spirits for profit. One rebellious teenager discovered she could exist without feeling, becoming immune to the emotional payment system. Her resistance sparked a underground movement of \"feeling-free\" individuals, challenging society's foundations. As the revolution grew, people began to question whether true happiness could exist in a world that monetized misery.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 99
+            },
+            "result_id": "b439137c023f"
+        }
+    ]
+}

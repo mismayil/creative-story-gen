@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_simple.json",
+        "template": "simple",
+        "size": 4,
+        "shot_path": null,
+        "model": "claude-3-5-sonnet-20240620",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In a world where dreams were fuel, petrol powered happiness while diesel fueled sorrow. Every night, people connected themselves to dream pumps before sleep, choosing their emotional journey. Sarah always selected petrol, craving joyous adventures and blissful experiences. One fateful evening, a glitch in the system accidentally filled her mind with diesel instead. She awoke to a day drenched in melancholy, her thoughts a sluggish engine sputtering with sadness.",
+            "usage": {
+                "input_tokens": 163,
+                "output_tokens": 105
+            },
+            "result_id": "042c7c2e233c"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "The old man's wrinkled hands trembled as he carefully pressed the rubber stamp onto the ancient parchment. With each thunderous impact, memories flooded back of the fateful letter he'd received decades ago. He'd spent a lifetime trying to send a message through time, hoping to change his past. Now, as the final seal glowed with otherworldly energy, he realized his folly. In his quest to rewrite history, he'd inadvertently become the very person who would send that life-altering letter to his younger self.",
+            "usage": {
+                "input_tokens": 164,
+                "output_tokens": 118
+            },
+            "result_id": "1f4e60d44bc6"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In the dimly lit chamber, the ancient organ wheezed to life. Its haunting melody echoed through the crumbling empire's halls. The last remaining servant struggled to comply with his master's final request. Trembling fingers danced across dusty keys, weaving forgotten tales. As the music swelled, the walls shimmered and faded away.",
+            "usage": {
+                "input_tokens": 159,
+                "output_tokens": 80
+            },
+            "result_id": "31ff5f710cad"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In a world where emotions were currency, gloom became the most valuable commodity. People would queue for hours to make a payment of joy in exchange for a vial of pure melancholy. Factories sprung up overnight, mass-producing sadness to meet the insatiable demand that seemed to exist in every corner of society. Those who couldn't afford to be sad found themselves ostracized, forced to wear perpetual smiles like scarlet letters of shame. As the economy of sorrow boomed, philosophers debated whether happiness could truly exist in a world that prized its absence so dearly.",
+            "usage": {
+                "input_tokens": 162,
+                "output_tokens": 128
+            },
+            "result_id": "0adf9c422578"
+        }
+    ]
+}

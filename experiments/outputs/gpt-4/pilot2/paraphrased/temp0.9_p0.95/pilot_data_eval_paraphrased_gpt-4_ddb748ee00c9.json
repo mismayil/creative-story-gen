@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "gpt-4",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.9,
+            "max_tokens": null,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "In the heart of a bustling metropolis, Petrol and Diesel were twin cats known for their mischievous antics. They dwelled in the eccentric antique shop, \"Pump's Paradise\", which was their playground filled with mysterious items and rare finds. One day, Diesel, ever the mischief-maker, discovered a peculiar contraption that he couldn't resist fiddling with, it was a gilded, ancient water pump.\n\nWith a determined swish of his tail, Diesel pounced on the pump's lever, and with a gurgling sound, a wave of shimmering water burst forth, enveloping the shop in an incandescent glow. As the glow dimmed, Petrol and Diesel found themselves in an enchanted forest, beginning an adventure that would become the talk of their metropolis lives.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 163
+            },
+            "result_id": "2e86cb3f68b7"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "In the world where correspondence was an art, lived a peculiar man named Samuel. Samuel was not a mailman, but a connoisseur of stamps, extracting stories and secrets from the miniature artwork. One day, while studying a rare stamp under his magnifier, he noticed a cryptic message embedded in its design. His curiosity piqued, Samuel decided to send his discovery to a renowned cryptographer, by way of a seemingly ordinary letter. The cryptographer was fascinated by this intricate secret world, thus beginning a friendship between the two men, bridged by their shared intrigue for the silent whispers of stamps.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 123
+            },
+            "result_id": "f291561d3ede"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "In a future world, where music had become the heart of the galactic empire, humans evolved to possess the ability to transform their body parts into musical instruments. Ethan, a humble bartender, discovered that he could morph his heart into a musical organ, producing melodies that stirred the soul. His music was so captivating that it reached the ears of the Empress, who commanded him to play at the royal court. However, Ethan, a defender of free expression, refused to comply, desiring his music to remain the voice of the people. This act of defiance ignited a revolution, symbolizing the true power of art against the constraints of the empire.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 130
+            },
+            "result_id": "fd103f6fee12"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In a town where sunlight hadn't kissed its terrains for eons, a mysterious gloom was not an anomaly, but an everyday phenomenon. A frugal and peculiar hermit existed on the outskirts, known for trading enigmatic stories in exchange for payment. The town's people, desperate for a sprinkle of joy amidst the constant gloom, found solace in his odd tales. One day, the hermit revealed a staggering secret: \"The sun doesn't shine because it owes the shadow a payment.\" No one knew if the sun's debt was fact or fiction, but in their hearts, hope lit a small, enduring flame.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 128
+            },
+            "result_id": "9b90fcbe4023"
+        }
+    ]
+}

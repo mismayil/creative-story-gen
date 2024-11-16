@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "claude-3-5-sonnet-20240620",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 1.0,
+            "max_tokens": 256,
+            "top_p": 0.7,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "In the abandoned laboratory, Dr. Petrov's latest experiment had gone horribly wrong. The volatile mixture of petrol and diesel vapors had created an unstable compound that threatened to explode at any moment. As alarms blared and emergency lights flashed, the frantic scientist desperately tried to pump the hazardous liquid into a containment vessel. With trembling hands, he activated the emergency purge system, praying it would work in time. As the last drop was safely sealed away, Dr. Petrov collapsed in relief, vowing never to mix fossil fuels again.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 128
+            },
+            "result_id": "976a379ce004"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "The old stamp collector peered through his magnifying glass, marveling at the intricate designs. His fingers trembled as he carefully placed the rare specimen in his album. Suddenly, a gust of wind from the open window scattered his precious collection across the room. As he scrambled to gather the stamps, he noticed a peculiar letter hidden beneath his desk. The faded ink seemed to send a message from the past, revealing a long-forgotten family secret.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 100
+            },
+            "result_id": "36f11c37e921"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "The ancient empire's secrets lay hidden beneath crumbling stone, waiting to be uncovered. As Sarah descended into the musty catacombs, her flashlight illuminated an unexpected sight: a massive pipe organ, its tarnished keys gleaming in the darkness. She approached cautiously, her heart racing with anticipation and fear, knowing that touching the instrument might trigger unforeseen consequences. Suddenly, a ghostly melody began to play, compelling Sarah to comply with its haunting rhythm against her will. As she swayed in an otherworldly trance, Sarah realized the true power of music transcended time and space, bridging the gap between past and present.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 143
+            },
+            "result_id": "0b311b9d6521"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In a world where emotions were currency, gloom was the most valuable commodity. Traders scoured the streets, seeking out the despondent and offering payment for their melancholy. One day, a young girl discovered she could exist without feeling anything at all. Her emotional void intrigued the traders, who saw untapped potential in her unique state. As they vied for her attention, she realized her emptiness might just be the key to toppling their gloomy empire.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 103
+            },
+            "result_id": "0f4dec3c4999"
+        }
+    ]
+}

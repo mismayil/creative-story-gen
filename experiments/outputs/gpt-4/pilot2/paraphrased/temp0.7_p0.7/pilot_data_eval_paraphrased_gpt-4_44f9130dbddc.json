@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "gpt-4",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": null,
+            "top_p": 0.7,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "In a small town lived Petrol, a young boy with dreams as explosive as his name. His best friend, Diesel, was a quiet, sturdy girl, known for her resilience and strength. They would often play near the old, rusted water pump, imagining it was a magical portal to different worlds. One day, Petrol decided to turn their game into reality, crafting a makeshift spaceship from the pump, using his vivid imagination as fuel. So, Petrol and Diesel, with their hearts pounding like piston engines, embarked on their imaginary interstellar journey, proving that even a simple pump could launch dreams into the universe.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 126
+            },
+            "result_id": "04a1bcd39cb5"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "In a quaint little town, there lived a boy named Stamp, who was as unique as his name. One day, he found an ancient letter, hidden in the attic, addressed to his great-great-grandfather. Intrigued by its contents, Stamp decided to send himself back in time using his grandfather's old time machine. He stepped into the machine, punched in the date from the letter, and braced himself for the journey. Stamp's adventure was just beginning, and he was eager to meet the sender of this mysterious letter.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 109
+            },
+            "result_id": "ab6f0432c784"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "In the heart of the city, a grand organ resonated with haunting melodies, its music echoing through the sprawling streets. This was not the heartbeat of a typical empire, but a symphony of sounds that held its citizens in thrall. The conductor, a man of stern countenance and gentle hands, was the empire's silent ruler, his music a language everyone seemed to comply with. Each note he played told stories of love, war, and peace, weaving a rich tapestry of life that bound the people together. Thus, in this unusual empire, the organ reigned supreme, its melodies a powerful anthem that governed the rhythm of life.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 130
+            },
+            "result_id": "6c5dd7558cb5"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In a world where emotions were currency, the rarest of them all was gloom. Unlike joy, love, or fear, gloom was not a frequent visitor, making it a highly sought-after payment for the most exquisite of life's pleasures. A young artist named Elara existed in this world, her heart teeming with an abundance of gloom, which she transformed into breathtakingly melancholic paintings. People from all over the world would trade their most valuable possessions for a piece of Elara's gloom, finding a strange comfort in the shared sadness. And so, in a world where emotions were money, Elara's gloom made her the richest of all.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 136
+            },
+            "result_id": "6d44623915b5"
+        }
+    ]
+}

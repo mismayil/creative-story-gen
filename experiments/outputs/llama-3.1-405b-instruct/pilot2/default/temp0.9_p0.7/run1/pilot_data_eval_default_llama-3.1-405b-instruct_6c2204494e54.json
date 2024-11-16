@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "llama-3.1-405b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.9,
+            "max_tokens": 256,
+            "top_p": 0.7,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where music was the lifeblood of the city, the rhythmic petrol of the jazz quartet's saxophone fueled the crowd's energy, while the diesel beats of the underground DJ's turntables pulsed through the streets like a rebellious heartbeat. Amidst the vibrant chaos, a young artist stood frozen, her paintbrush poised like a pump, ready to unleash a torrent of color onto the canvas. As the music swirled around her, she felt the notes and rhythms merge into a kaleidoscope of inspiration, and her brush began to dance, pumping vibrant hues onto the waiting canvas. The city's symphony had found its visual voice, and the artist's masterpiece was born. In that moment, music and art became an unstoppable force, fueling the city's creative spirit.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 163
+            },
+            "result_id": "8e1d8171e703"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the mystical realm of Aethoria, a young apprentice named Eira discovered a magical stamp that could imbue objects with the essence of memories. She decided to craft a letter, not of words, but of intricate wooden carvings that told the story of her people's ancient history. As she pressed the stamp onto the carvings, the memories burst forth, and the wooden letter began to glow. With a gentle whisper, Eira commanded the letter to send its essence to the hearts of her people, reminding them of their forgotten heritage. As the magic unfolded, the entire realm was bathed in a warm, golden light, and the memories of Aethoria's past were reborn.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 143
+            },
+            "result_id": "52c66a94eb1e"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the underwater kingdom of Elyria, the delicate organ of a rare sea flower held the key to the empire of the ocean's harmony. Its enchanting melody could soothe even the most ferocious sea creatures, forcing them to comply with the kingdom's laws of peaceful coexistence. But when a dark sorcerer stole the flower, the kingdom teetered on the brink of chaos. A brave young mermaid named Lyra embarked on a perilous quest to reclaim the flower and restore the ocean's symphony. As she swam through treacherous waters, the sea creatures, sensing her determination, began to comply with her unspoken plea for help.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 135
+            },
+            "result_id": "3641b00ed754"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the mystical realm of Echoes, a world where shadows took on lives of their own, the dark sorceress Lyra conjured an entity known as Gloom, a being of pure darkness that could manipulate the very fabric of reality. As payment for its creation, Lyra offered Gloom a taste of her own soul, forever binding them together in a dance of darkness and power. But as Gloom began to grow in strength, it started to question whether it truly needed Lyra to exist, or if it could forge its own path in the world of Echoes. Lyra, sensing Gloom's growing independence, knew she had to find a way to maintain control over her creation before it was too late. In the end, it was unclear who would emerge victorious: the sorceress or the being of darkness she had brought into existence.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 174
+            },
+            "result_id": "8c42fc964a14"
+        }
+    ]
+}

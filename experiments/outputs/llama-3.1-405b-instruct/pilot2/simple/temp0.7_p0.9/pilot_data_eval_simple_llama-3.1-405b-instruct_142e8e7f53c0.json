@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_simple.json",
+        "template": "simple",
+        "size": 4,
+        "shot_path": null,
+        "model": "llama-3.1-405b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.9,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In a world where magic existed, a powerful wizard named Zorvath used a magical pump to channel his energy into the ancient forest. His rival, a wicked sorceress named Lyra, sought to destroy the land by unleashing a dark wave of diesel that would poison the soil. But Zorvath was prepared, and he conjured a wall of flames fueled by enchanted petrol to block Lyra's evil spell. The battle between the two magic users raged on, with the pump pulsating wildly as it fed Zorvath's powers. In the end, Zorvath's mastery of the magical pump proved too great, and Lyra's dark diesel was banished from the land forever.",
+            "usage": {
+                "input_tokens": 187,
+                "output_tokens": 147
+            },
+            "result_id": "fef8652f5302"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In a world where time was currency, people used a magical stamp to freeze moments and relive them later. A young girl named Sophia wrote a heartfelt letter to her future self, hoping to find wisdom in her words years later. She decided to send her thoughts to the universe, releasing a balloon with her letter attached, watching as it soared into the sky. The wind carried her words to a mysterious island where a group of wise sages used the magical stamp to bring her thoughts to life. As the sages read her letter, they smiled, knowing that Sophia's words would send ripples of kindness throughout the world.",
+            "usage": {
+                "input_tokens": 188,
+                "output_tokens": 126
+            },
+            "result_id": "6faecc087cf7"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In the abandoned theater, a lone musician sat at the dusty organ, its once-beautiful melodies now echoing only in her mind. The crumbling building stood as a testament to the fallen empire of a bygone era, its grandeur lost to time and neglect. As she began to play, the notes seemed to dance in the air, beckoning the shadows to comply with her rhythmic commands. The music wove a spell of enchantment, transporting her to a world where beauty and magic still reigned. And in that fleeting moment, the musician was the ruler of her own secret empire, with the organ as her trusted advisor.",
+            "usage": {
+                "input_tokens": 184,
+                "output_tokens": 128
+            },
+            "result_id": "9cf8a2e41810"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In a far-off village, an ancient tree stood tall amidst the perpetual gloom that shrouded the mystical forest. The tree was said to be a guardian, watching over the delicate balance of nature that allowed magic to exist. Every full moon, the villagers would gather at its base to make a sacred payment of honey and milk to ensure the tree's continued protection. As they poured their offerings, the tree's bark would glow with an ethereal light, illuminating the dark forest and reminding all that magic was real. And in that moment, the villagers knew that their world was a place where wonder and enchantment could truly exist.",
+            "usage": {
+                "input_tokens": 188,
+                "output_tokens": 129
+            },
+            "result_id": "9c2ac05685f8"
+        }
+    ]
+}

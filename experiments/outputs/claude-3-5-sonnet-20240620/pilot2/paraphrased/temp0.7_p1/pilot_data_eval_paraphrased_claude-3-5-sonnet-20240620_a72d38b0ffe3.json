@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "claude-3-5-sonnet-20240620",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 1.0,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "In the dystopian future, petrol and diesel had become rare commodities. The last remaining pump was guarded by a ruthless gang of scavengers. Sarah, a brilliant engineer, concocted a daring plan to infiltrate their stronghold. Under cover of darkness, she snuck past the guards and reprogrammed the pump. Instead of fuel, it now dispensed a revolutionary biofuel Sarah had invented, ushering in a new era of sustainable energy.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 103
+            },
+            "result_id": "4af9658a70e8"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "The old stamp collection gathered dust in the attic, forgotten for decades until Sarah stumbled upon it while searching for her grandmother's wedding dress. As she carefully flipped through the worn album pages, a yellowed letter slipped out and fluttered to the floor. Intrigued, Sarah unfolded the fragile paper to discover a passionate love confession from her grandfather to her grandmother, written during the war but never sent. Overwhelmed by emotion, Sarah decided to honor their legacy by creating a time capsule to send into the future. She carefully placed the letter and a few cherished stamps inside a weatherproof container, burying it in the backyard with instructions for future generations to unearth their family's hidden history.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 156
+            },
+            "result_id": "ffcd91e495be"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "The ancient melody drifted through the crumbling cathedral, its haunting notes emanating from a forgotten organ hidden deep within the shadows. As I cautiously approached the source of the music, I stumbled upon a secret passage leading to an underground chamber. There, bathed in an eerie blue light, stood a hooded figure hunched over the massive instrument, their fingers dancing across the keys with inhuman speed. The figure turned to face me, revealing a face that seemed to shift between different eras and empires, as if time itself couldn't comply with the laws of reality in this strange place. Without a word, the mysterious organist beckoned me closer, offering a chance to unravel the secrets of the ages – if only I dared to accept.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 163
+            },
+            "result_id": "57b9e94378b2"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In a world where emotions were currency, Gloom Inc. had cornered the market. Their patented technology could extract and bottle feelings of despair, which were then sold to the wealthy as a twisted form of catharsis. Sarah, a low-level employee, discovered the company's darkest secret: they didn't just collect existing gloom, they manufactured it. Determined to expose the truth, she infiltrated the CEO's office, searching for evidence of their nefarious deeds. As alarms blared and security closed in, Sarah clutched a flash drive containing damning proof, knowing her actions would demand the ultimate payment but finally bring an end to Gloom Inc.'s reign.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 149
+            },
+            "result_id": "60539cdfcc09"
+        }
+    ]
+}
