@@ -26,6 +26,8 @@ DEF_PREPROCESSING_ARGS = {
     "unique": True
 }
 
+MODEL_TYPES = ["gpt-4", "claude-3-5", "gemini-1.5", "llama-3.1", "human"]
+
 def compute_metrics(results, config):
     metrics = {}
 
@@ -223,6 +225,18 @@ def group_results_by_model(results: list):
 
     return result_groups
 
+def group_results_by_model_type(results: list):
+    result_groups = defaultdict(list)
+
+    for result in results:
+        model = result["metadata"]["model"]
+        for model_type in MODEL_TYPES:
+            if model.startswith(model_type):
+                result_groups[model_type].append(result)
+                break
+
+    return result_groups
+
 def group_results_by_sentience(results: list):
     result_groups = defaultdict(list)
 
@@ -240,6 +254,8 @@ def group_results_by(results: list, by="id"):
         return group_results_by_model(results)
     elif by == "sentience":
         return group_results_by_sentience(results)
+    elif by == "model_type":
+        return group_results_by_model_type(results)
     else:
         return group_results_by_attr(results, attr=by)
 

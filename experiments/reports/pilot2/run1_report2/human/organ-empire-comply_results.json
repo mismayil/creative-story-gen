@@ -1,0 +1,4322 @@
+{
+    "metadata": {
+        "group_id": [
+            "human",
+            "organ-empire-comply"
+        ],
+        "config": {
+            "results_paths": [
+                "../experiments/outputs/gpt-4/pilot2",
+                "../experiments/outputs/gpt-4o/pilot2",
+                "../experiments/outputs/gemini-1.5-flash/pilot2",
+                "../experiments/outputs/gemini-1.5-pro/pilot2",
+                "../experiments/outputs/claude-3-5-sonnet-20240620/pilot2",
+                "../experiments/outputs/claude-3-5-haiku-20241022/pilot2",
+                "../experiments/outputs/llama-3.1-405b-instruct/pilot2",
+                "../experiments/outputs/llama-3.1-70b-instruct/pilot2",
+                "../experiments/outputs/human/pilot/run1"
+            ],
+            "report_usage": true,
+            "spacy_lang": "en_core_web_sm",
+            "max_n_gram": 5,
+            "output_dir": "../experiments/reports/pilot2/run1_report2",
+            "config": "../experiments/reports/pilot2/run1_report2/config.json",
+            "num_samples": null,
+            "deduplicate": true,
+            "deduplicate_by": "output",
+            "max_frequency": 10,
+            "group_by": [
+                "model_type",
+                "id"
+            ],
+            "output_attr": "output",
+            "emb_model": "thenlper/gte-large",
+            "emb_type": "sentence_embedding",
+            "emb_strategy": "direct",
+            "distance_fn": "cosine",
+            "lower": true,
+            "remove_punct": true,
+            "remove_stopwords": true,
+            "lemmatize": true,
+            "dominant_k": null,
+            "unique": true,
+            "cluster_linkage": "ward",
+            "cluster_dist_threshold": 0.5,
+            "description": "Main results grouped by model_type",
+            "filter_by": {
+                "sentence_length": [
+                    3,
+                    7
+                ]
+            }
+        }
+    },
+    "metrics": {
+        "num_samples": 51,
+        "avg_length_in_chars": 374.84313725490193,
+        "avg_length_in_words": 70.2156862745098,
+        "avg_length_in_unique_words": 51.84313725490196,
+        "avg_length_in_concepts": 27.274509803921568,
+        "avg_length_in_sentences": 4.078431372549019,
+        "avg_word_length_in_chars": 4.246246353055266,
+        "avg_sentence_length_in_chars": 92.02138188608777,
+        "avg_sentence_length_in_words": 17.41083099906629,
+        "avg_sentence_length_in_unique_words": 15.755275443510738,
+        "avg_dsi": 0.21144587968416234,
+        "avg_surprise": 0.02775010263307827,
+        "avg_raw_surprises": [
+            0.010672515898351498,
+            0.01407273770934502,
+            0.023583906596839947,
+            0.007984202576628524,
+            0.056187798479991724,
+            0.010948696306773614
+        ],
+        "avg_n_gram_diversity": [
+            0.7501938900161437,
+            0.975529939100803,
+            0.9976460286380575,
+            1.0,
+            1.0
+        ],
+        "avg_pos_diversity": [
+            0.17993097113279966,
+            0.5671244030980326,
+            0.844887678169088,
+            0.9502749972835071,
+            0.9847511731548269
+        ],
+        "avg_dep_num_clauses": 2.7373015873015873,
+        "avg_max_dep_num_clauses": 4.980392156862745,
+        "avg_dep_path_length": 2.8529367054751615,
+        "avg_max_dep_path_length": 8.686274509803921,
+        "avg_inv_homogen": 0.18913636834013695,
+        "avg_novelty": 0.009147702224601938,
+        "avg_theme_uniqueness": 0.7647058823529411,
+        "corpus_dsi": 0.21553216946389683,
+        "corpus_n_gram_diversity": [
+            0.30179171332586785,
+            0.7992159059087091,
+            0.9666666666666667,
+            0.9924348557018773,
+            0.9991591928251121
+        ],
+        "corpus_pos_diversity": [
+            0.0041993281075028,
+            0.042565107812937555,
+            0.19607843137254902,
+            0.46959932754272904,
+            0.725896860986547
+        ],
+        "num_unique_stories": 51,
+        "top_10_n_grams": {
+            "1-gram": {
+                "the": 239,
+                "to": 152,
+                "of": 89,
+                "and": 86,
+                "a": 81,
+                "i": 70,
+                "was": 67,
+                "empire": 57,
+                "organ": 57,
+                "comply": 50
+            },
+            "2-gram": {
+                "comply with": 34,
+                "to comply": 28,
+                "of the": 26,
+                "the organ": 22,
+                "the empire": 19,
+                "in the": 17,
+                "with the": 15,
+                "an organ": 11,
+                "wanted to": 10,
+                "it was": 10
+            },
+            "3-gram": {
+                "to comply with": 21,
+                "comply with the": 12,
+                "i wanted to": 5,
+                "did not comply": 4,
+                "not comply with": 4,
+                "they had to": 4,
+                "had to comply": 4,
+                "playing the organ": 4,
+                "n't comply with": 3,
+                "the british empire": 3
+            },
+            "4-gram": {
+                "to comply with the": 9,
+                "did not comply with": 4,
+                "not to comply with": 3,
+                "to play the organ": 3,
+                "comply with the rules": 2,
+                "i wanted to play": 2,
+                "a member of the": 2,
+                "in order to comply": 2,
+                "to comply with my": 2,
+                "they had to comply": 2
+            },
+            "5-gram": {
+                "to comply with the rules": 2,
+                "not to comply with the": 2,
+                "hard to comply with the": 2,
+                "it 's so hard for": 1,
+                "'s so hard for me": 1,
+                "so hard for me to": 1,
+                "hard for me to comply": 1,
+                "for me to comply with": 1,
+                "me to comply with the": 1,
+                "comply with the rules at": 1
+            }
+        },
+        "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+        },
+        "cost": {
+            "input": 0,
+            "output": 0,
+            "total": 0
+        }
+    },
+    "data": [
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "It's so hard for me to comply with the rules at school. All I wanted to play that day was Empire Earth on my phone, and I wasn't even doing it in class. It was at lunchtime. But my biology teacher caught me and sent me to her classroom to wait for her. While I waited, I looked at the poster on her wall depicting the organ system of the body.",
+            "result_id": "R_2iUnWVtJB7cvKHj_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2iUnWVtJB7cvKHj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2iUnWVtJB7cvKHj"
+            },
+            "metrics": {
+                "length_in_chars": 343,
+                "length_in_words": 73,
+                "length_in_unique_words": 50,
+                "length_in_concepts": 25,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.684931506849315,
+                "avg_word_length_in_chars": 3.643835616438356,
+                "avg_sentence_length_in_chars": 67.8,
+                "avg_sentence_length_in_words": 14.6,
+                "avg_sentence_length_in_unique_words": 13,
+                "length_in_first_person_singular": 9,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 6,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 9,
+                "length_in_third_person": 6,
+                "dsi": 0.20493639906247457,
+                "surprise": 0.20976174977563677,
+                "raw_surprises": [
+                    0.0016494038559141944,
+                    0.2043101333436512,
+                    0.20640901724497476,
+                    0.007154945106733396
+                ],
+                "n_gram_diversity": [
+                    0.684931506849315,
+                    0.9861111111111112,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1643835616438356,
+                    0.5138888888888888,
+                    0.8450704225352113,
+                    0.9714285714285714,
+                    0.9855072463768116
+                ],
+                "avg_dep_num_clauses": 2.2,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.383189199051268,
+                "max_dep_path_length": 6,
+                "avg_constituency_tree_depth": 7.2,
+                "max_constituency_tree_depth": 9,
+                "readability_flesch_ease": 100.70750000000001,
+                "readability_flesch_kincaid": 3.1875000000000036,
+                "avg_pos_noun_ratio": 0.2010975135975136,
+                "avg_pos_verb_ratio": 0.11349067599067598,
+                "avg_pos_adj_ratio": 0.015384615384615385,
+                "avg_pos_adv_ratio": 0.024475524475524476,
+                "avg_pos_pron_ratio": 0.22205710955710956,
+                "avg_pos_det_ratio": 0.057808857808857805,
+                "avg_pos_adp_ratio": 0.1572843822843823,
+                "inv_homogen": 0.1932991302013397,
+                "novelty": 0.021191540802844522,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The notes hung in the air, almost alive as they echoed around the cathedral. The beauty of an organ when played by a master is an unparalleled delight. I did not know the name of the piece, it was grand and almost military, perhaps a tribute to an empire long since lost to time. It certainly didn't comply with the playlist set for Michaelmas term this year, as I knew all those compositions by heart. ",
+            "result_id": "R_2mqjhNO26XNoi6R_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2mqjhNO26XNoi6R.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2mqjhNO26XNoi6R"
+            },
+            "metrics": {
+                "length_in_chars": 403,
+                "length_in_words": 76,
+                "length_in_unique_words": 59,
+                "length_in_concepts": 30,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.7763157894736842,
+                "avg_word_length_in_chars": 4.2105263157894735,
+                "avg_sentence_length_in_chars": 99.75,
+                "avg_sentence_length_in_words": 19,
+                "avg_sentence_length_in_unique_words": 17.75,
+                "length_in_first_person_singular": 2,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 2,
+                "length_in_third_person": 3,
+                "dsi": 0.21203298459107847,
+                "surprise": 0.007006472128408936,
+                "raw_surprises": [
+                    0.002072409788767493,
+                    0.004229597912894373,
+                    0.004207700490951538
+                ],
+                "n_gram_diversity": [
+                    0.7763157894736842,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.15789473684210525,
+                    0.4533333333333333,
+                    0.6891891891891891,
+                    0.8767123287671232,
+                    0.9722222222222222
+                ],
+                "avg_dep_num_clauses": 2.25,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.7240899898887765,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 8.75,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 87.82714285714289,
+                "readability_flesch_kincaid": 6.226190476190478,
+                "avg_pos_noun_ratio": 0.2298951048951049,
+                "avg_pos_verb_ratio": 0.10689310689310688,
+                "avg_pos_adj_ratio": 0.054945054945054944,
+                "avg_pos_adv_ratio": 0.05806693306693307,
+                "avg_pos_pron_ratio": 0.059815184815184816,
+                "avg_pos_det_ratio": 0.2089160839160839,
+                "avg_pos_adp_ratio": 0.13436563436563437,
+                "inv_homogen": 0.1830118465423584,
+                "novelty": 0.006998369745636723,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The brass band had never had an organ player before so it was something new to all of them. Some of them were a bit unsure but they couldn't turn down the upportunity to play with a member of the british empire!! They just hope the organ player would comply with the etiquettes they had as a band. ",
+            "result_id": "R_8WxkYgki5yinZhV_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8WxkYgki5yinZhV.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8WxkYgki5yinZhV"
+            },
+            "metrics": {
+                "length_in_chars": 298,
+                "length_in_words": 59,
+                "length_in_unique_words": 41,
+                "length_in_concepts": 16,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.6949152542372882,
+                "avg_word_length_in_chars": 4,
+                "avg_sentence_length_in_chars": 98.33333333333333,
+                "avg_sentence_length_in_words": 19.666666666666668,
+                "avg_sentence_length_in_unique_words": 17.666666666666668,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 5,
+                "length_in_first_person": 0,
+                "length_in_third_person": 6,
+                "dsi": 0.218959674735864,
+                "surprise": 0.02796802123387654,
+                "raw_surprises": [
+                    0.013517922588757114,
+                    0.014450098645119425
+                ],
+                "n_gram_diversity": [
+                    0.6949152542372882,
+                    0.9655172413793104,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1864406779661017,
+                    0.5344827586206896,
+                    0.7719298245614035,
+                    0.875,
+                    0.9636363636363636
+                ],
+                "avg_dep_num_clauses": 2,
+                "max_dep_num_clauses": 3,
+                "avg_dep_path_length": 2.993654451027723,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 10.666666666666666,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 84.8057142857143,
+                "readability_flesch_kincaid": 6.647619047619049,
+                "avg_pos_noun_ratio": 0.20906432748538012,
+                "avg_pos_verb_ratio": 0.10782163742690058,
+                "avg_pos_adj_ratio": 0.04532163742690058,
+                "avg_pos_adv_ratio": 0.03837719298245614,
+                "avg_pos_pron_ratio": 0.15350877192982457,
+                "avg_pos_det_ratio": 0.15314327485380116,
+                "avg_pos_adp_ratio": 0.14985380116959063,
+                "inv_homogen": 0.18520232319831847,
+                "novelty": 0.006855010543934337,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The sound of the mouth organ played by the beggar on the street was delightful.  He had a good position, just outside the Empire cinema which had been closed for years.   I had heard that the Fire Brigade had it closed down as it did not comply with fire regulations",
+            "result_id": "R_8zUaSPSsswsQ7fn_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8zUaSPSsswsQ7fn.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8zUaSPSsswsQ7fn"
+            },
+            "metrics": {
+                "length_in_chars": 266,
+                "length_in_words": 52,
+                "length_in_unique_words": 41,
+                "length_in_concepts": 21,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.7884615384615384,
+                "avg_word_length_in_chars": 4.115384615384615,
+                "avg_sentence_length_in_chars": 88.66666666666667,
+                "avg_sentence_length_in_words": 17.333333333333332,
+                "avg_sentence_length_in_unique_words": 15,
+                "length_in_first_person_singular": 1,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 3,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 1,
+                "length_in_third_person": 3,
+                "dsi": 0.2087935371058328,
+                "surprise": 0.013720060955910468,
+                "raw_surprises": [
+                    0.005864379661423835,
+                    0.007855681294486633
+                ],
+                "n_gram_diversity": [
+                    0.7884615384615384,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.23076923076923078,
+                    0.6470588235294118,
+                    0.9,
+                    0.9591836734693877,
+                    0.9791666666666666
+                ],
+                "avg_dep_num_clauses": 1.6666666666666667,
+                "max_dep_num_clauses": 3,
+                "avg_dep_path_length": 3.1450216450216453,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 10.666666666666666,
+                "max_constituency_tree_depth": 14,
+                "readability_flesch_ease": 89.78303030303033,
+                "readability_flesch_kincaid": 5.290909090909089,
+                "avg_pos_noun_ratio": 0.198077915376677,
+                "avg_pos_verb_ratio": 0.13022445820433437,
+                "avg_pos_adj_ratio": 0.04044117647058824,
+                "avg_pos_adv_ratio": 0.0196078431372549,
+                "avg_pos_pron_ratio": 0.09184726522187822,
+                "avg_pos_det_ratio": 0.14009287925696595,
+                "avg_pos_adp_ratio": 0.13680340557275542,
+                "inv_homogen": 0.17893191814422607,
+                "novelty": 0.01347726471612809,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The organ was terribly loud. The organist was pumping away like fury, playing music written to celebrate the Empire; practicing his vigourous harmonies to perfection. It was a wonder to hear it. I was thrilled to bits to see the extent to which he wet in order to comply with my wishes for the upcoming celebrations. The Empire has not been forgotten and we will proudly march into the hall to this, the most stirring of music.",
+            "result_id": "R_2YKQTEPFuU2GBvV_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2YKQTEPFuU2GBvV.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2YKQTEPFuU2GBvV"
+            },
+            "metrics": {
+                "length_in_chars": 427,
+                "length_in_words": 77,
+                "length_in_unique_words": 57,
+                "length_in_concepts": 33,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.7402597402597403,
+                "avg_word_length_in_chars": 4.454545454545454,
+                "avg_sentence_length_in_chars": 84.6,
+                "avg_sentence_length_in_words": 15.4,
+                "avg_sentence_length_in_unique_words": 13.6,
+                "length_in_first_person_singular": 2,
+                "length_in_first_person_plural": 1,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 4,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 3,
+                "length_in_third_person": 4,
+                "dsi": 0.21085036320216727,
+                "surprise": 0.023025768689620196,
+                "raw_surprises": [
+                    0.008343269973447476,
+                    0.017067800511370662,
+                    0.0035859495401382446,
+                    0.01705451735428401
+                ],
+                "n_gram_diversity": [
+                    0.7402597402597403,
+                    0.9868421052631579,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.14285714285714285,
+                    0.5526315789473685,
+                    0.88,
+                    0.972972972972973,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 2,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.8363941282598,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 9.4,
+                "max_constituency_tree_depth": 17,
+                "readability_flesch_ease": 79.10235294117649,
+                "readability_flesch_kincaid": 6.449411764705882,
+                "avg_pos_noun_ratio": 0.1792857142857143,
+                "avg_pos_verb_ratio": 0.12261904761904761,
+                "avg_pos_adj_ratio": 0.0761904761904762,
+                "avg_pos_adv_ratio": 0.06904761904761905,
+                "avg_pos_pron_ratio": 0.11952380952380952,
+                "avg_pos_det_ratio": 0.13380952380952382,
+                "avg_pos_adp_ratio": 0.0819047619047619,
+                "inv_homogen": 0.16866161227226256,
+                "novelty": 0.00936361252345913,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "There once was a very strange land called Augmentia. It was an empire that had been created by dictators and was an island based off of the coast of Argentina. Word travelled fast that the dictators - namely Putinito - had begun an organ trafficking trade. The people of Augmentia, unbeknownst to them, had been born on the island and brainwashed into the ways of the land. When a citizen of Augmentia reached the age of 20, they were enlisted into a type of military boot camp where they had to comply with strict instructions and a gruelling regime of work, exercise, and weapons training. Those who did not comply with instructions, or tried to rebel against the bootcamps leaders, were never seen again by their families. It has been an enduring mystery where the rebels ended up, and Putinito had a mysterious ob",
+            "result_id": "R_2sKl3oqSfQrqNI5_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2sKl3oqSfQrqNI5.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2sKl3oqSfQrqNI5"
+            },
+            "metrics": {
+                "length_in_chars": 817,
+                "length_in_words": 142,
+                "length_in_unique_words": 90,
+                "length_in_concepts": 53,
+                "length_in_sentences": 7,
+                "type_token_ratio": 0.6338028169014085,
+                "avg_word_length_in_chars": 4.633802816901408,
+                "avg_sentence_length_in_chars": 115.85714285714286,
+                "avg_sentence_length_in_words": 20.285714285714285,
+                "avg_sentence_length_in_unique_words": 18.285714285714285,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 4,
+                "length_in_first_person": 0,
+                "length_in_third_person": 6,
+                "dsi": 0.21624009763208288,
+                "surprise": 0.01946069702269539,
+                "raw_surprises": [
+                    0.011477986971537263,
+                    0.006306701236301004,
+                    0.006912246583000048,
+                    0.012308174904526126,
+                    0.010428285065948117,
+                    0.010948696306773614
+                ],
+                "n_gram_diversity": [
+                    0.6338028169014085,
+                    0.9574468085106383,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.09154929577464789,
+                    0.41843971631205673,
+                    0.7285714285714285,
+                    0.8920863309352518,
+                    0.9782608695652174
+                ],
+                "avg_dep_num_clauses": 3.2857142857142856,
+                "max_dep_num_clauses": 8,
+                "avg_dep_path_length": 3.2447697041830343,
+                "max_dep_path_length": 15,
+                "avg_constituency_tree_depth": 10,
+                "max_constituency_tree_depth": 17,
+                "readability_flesch_ease": 75.76550632911395,
+                "readability_flesch_kincaid": 8.298933092224235,
+                "avg_pos_noun_ratio": 0.2138526862100502,
+                "avg_pos_verb_ratio": 0.13347316598090592,
+                "avg_pos_adj_ratio": 0.03859789529847026,
+                "avg_pos_adv_ratio": 0.06514120799835085,
+                "avg_pos_pron_ratio": 0.07168385695586049,
+                "avg_pos_det_ratio": 0.13064141126945195,
+                "avg_pos_adp_ratio": 0.11166476159841926,
+                "inv_homogen": 0.2049229383468628,
+                "novelty": 0.00141585633637209,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The British empire was at its peak, the general had reigning power on the poor locals. All they had was to comply to this force that had entered their country. The churches were erected and instilled their unjust values. Inside one church, was a vast organ that rung out and around the land. A reminder to the occupied. ",
+            "result_id": "R_27PrrUR0LzzSU4k_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_27PrrUR0LzzSU4k.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_27PrrUR0LzzSU4k"
+            },
+            "metrics": {
+                "length_in_chars": 320,
+                "length_in_words": 58,
+                "length_in_unique_words": 43,
+                "length_in_concepts": 24,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.7413793103448276,
+                "avg_word_length_in_chars": 4.396551724137931,
+                "avg_sentence_length_in_chars": 63,
+                "avg_sentence_length_in_words": 11.6,
+                "avg_sentence_length_in_unique_words": 10.8,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 3,
+                "length_in_first_person": 0,
+                "length_in_third_person": 4,
+                "dsi": 0.2157510441282521,
+                "surprise": 0.042290911575158435,
+                "raw_surprises": [
+                    0.029162084062894195,
+                    0.03347413738568625,
+                    0.012090283632278431,
+                    0.009855318069457997
+                ],
+                "n_gram_diversity": [
+                    0.7413793103448276,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1724137931034483,
+                    0.5614035087719298,
+                    0.8571428571428571,
+                    0.9636363636363636,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 1.8,
+                "max_dep_num_clauses": 3,
+                "avg_dep_path_length": 2.629097309421853,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 7,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 93.42153846153849,
+                "readability_flesch_kincaid": 3.4584615384615383,
+                "avg_pos_noun_ratio": 0.21837301587301586,
+                "avg_pos_verb_ratio": 0.15408730158730158,
+                "avg_pos_adj_ratio": 0.061507936507936505,
+                "avg_pos_adv_ratio": 0.0,
+                "avg_pos_pron_ratio": 0.10615079365079365,
+                "avg_pos_det_ratio": 0.1825793650793651,
+                "avg_pos_adp_ratio": 0.12214285714285714,
+                "inv_homogen": 0.17325557708740236,
+                "novelty": 0.00043774932871054606,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "Did you hear the one about the unluckiest man in the world? He once fell off the Empire State Building but landed without breaking one single bone! A miracle - Some would even call it witchcraft! But that's where his luck ran out. You see, while he was lying on the ground, a stray dog ran up to him and bit him right in the eye! Now he is on the Organ donor list waiting for new corneas, however rumor is that he doesn't comply with their rules, so he may be known as one-eyed Pete forever!",
+            "result_id": "R_82McyGIYTts4bOU_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_82McyGIYTts4bOU.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_82McyGIYTts4bOU"
+            },
+            "metrics": {
+                "length_in_chars": 491,
+                "length_in_words": 99,
+                "length_in_unique_words": 78,
+                "length_in_concepts": 36,
+                "length_in_sentences": 6,
+                "type_token_ratio": 0.7878787878787878,
+                "avg_word_length_in_chars": 3.8686868686868685,
+                "avg_sentence_length_in_chars": 81,
+                "avg_sentence_length_in_words": 16.5,
+                "avg_sentence_length_in_unique_words": 15.333333333333334,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 2,
+                "length_in_third_person_singular": 9,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 10,
+                "dsi": 0.21327249464534578,
+                "surprise": 0.0198604302528577,
+                "raw_surprises": [
+                    0.004860732527006223,
+                    0.021818793245724277,
+                    0.016060709953308105,
+                    0.006288396460669393,
+                    0.0006224434454362437
+                ],
+                "n_gram_diversity": [
+                    0.7878787878787878,
+                    0.9795918367346939,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13131313131313133,
+                    0.5102040816326531,
+                    0.8556701030927835,
+                    1.0,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 1.8333333333333333,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.380919312169312,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 7.833333333333333,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 97.36020270270272,
+                "readability_flesch_kincaid": 4.27545045045045,
+                "avg_pos_noun_ratio": 0.16226943346508563,
+                "avg_pos_verb_ratio": 0.13302591128678085,
+                "avg_pos_adj_ratio": 0.042347386912604305,
+                "avg_pos_adv_ratio": 0.0543423364075538,
+                "avg_pos_pron_ratio": 0.15752086078173033,
+                "avg_pos_det_ratio": 0.10040074659639878,
+                "avg_pos_adp_ratio": 0.12002086078173034,
+                "inv_homogen": 0.22495283603668212,
+                "novelty": 0.004519349637102099,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The entire empire got the invite to come and watch Sarah play the flute. She was anxious, nervous, and suddenly she could not breathe and the lights were blurring her vision. next thing she woke up with doctors telling her to comply with their instructions and to calm down as the main organ of her body was ",
+            "result_id": "R_2pgeIFWQlDZignv_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2pgeIFWQlDZignv.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2pgeIFWQlDZignv"
+            },
+            "metrics": {
+                "length_in_chars": 308,
+                "length_in_words": 57,
+                "length_in_unique_words": 42,
+                "length_in_concepts": 26,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.7368421052631579,
+                "avg_word_length_in_chars": 4.333333333333333,
+                "avg_sentence_length_in_chars": 101.66666666666667,
+                "avg_sentence_length_in_words": 19,
+                "avg_sentence_length_in_unique_words": 16.666666666666668,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 6,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 7,
+                "dsi": 0.20948564584438617,
+                "surprise": 0.010775785361017476,
+                "raw_surprises": [
+                    0.0035435006258979496,
+                    0.007232284735119526
+                ],
+                "n_gram_diversity": [
+                    0.7368421052631579,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.19298245614035087,
+                    0.625,
+                    0.8909090909090909,
+                    1.0,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 4.666666666666667,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.5545362078937397,
+                "max_dep_path_length": 13,
+                "avg_constituency_tree_depth": 9.666666666666666,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 87.7278142076503,
+                "readability_flesch_kincaid": 6.0744262295081946,
+                "avg_pos_noun_ratio": 0.17474682180564532,
+                "avg_pos_verb_ratio": 0.18573583279465633,
+                "avg_pos_adj_ratio": 0.08866623572505926,
+                "avg_pos_adv_ratio": 0.0196078431372549,
+                "avg_pos_pron_ratio": 0.110105580693816,
+                "avg_pos_det_ratio": 0.10385692738633914,
+                "avg_pos_adp_ratio": 0.07692307692307693,
+                "inv_homogen": 0.17828657507896423,
+                "novelty": 0.012093047239021326,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "Of course, I had to comply and enter the church as he had suggested. In it was an enourmous organ, the biggest in the whole empire i was told. I looked at it for a long time, but struggles to find any beauty in it.",
+            "result_id": "R_8DSuE0JfUBgPxHX_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8DSuE0JfUBgPxHX.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8DSuE0JfUBgPxHX"
+            },
+            "metrics": {
+                "length_in_chars": 214,
+                "length_in_words": 45,
+                "length_in_unique_words": 34,
+                "length_in_concepts": 16,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.7555555555555555,
+                "avg_word_length_in_chars": 3.6444444444444444,
+                "avg_sentence_length_in_chars": 70.66666666666667,
+                "avg_sentence_length_in_words": 15,
+                "avg_sentence_length_in_unique_words": 13.333333333333334,
+                "length_in_first_person_singular": 3,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 4,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 3,
+                "length_in_third_person": 4,
+                "dsi": 0.20947785178820294,
+                "surprise": 0.03833459218343099,
+                "raw_surprises": [
+                    0.015825760364532482,
+                    0.02250883181889851
+                ],
+                "n_gram_diversity": [
+                    0.7555555555555555,
+                    0.9772727272727273,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.24444444444444444,
+                    0.5909090909090909,
+                    0.8372093023255814,
+                    0.9761904761904762,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 2.6666666666666665,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.6715398061337994,
+                "max_dep_path_length": 6,
+                "avg_constituency_tree_depth": 8,
+                "max_constituency_tree_depth": 9,
+                "readability_flesch_ease": 98.34470588235297,
+                "readability_flesch_kincaid": 3.7654901960784315,
+                "avg_pos_noun_ratio": 0.10992063492063492,
+                "avg_pos_verb_ratio": 0.17996031746031746,
+                "avg_pos_adj_ratio": 0.08750000000000001,
+                "avg_pos_adv_ratio": 0.047619047619047616,
+                "avg_pos_pron_ratio": 0.15456349206349207,
+                "avg_pos_det_ratio": 0.13214285714285715,
+                "avg_pos_adp_ratio": 0.10694444444444444,
+                "inv_homogen": 0.1619687294960022,
+                "novelty": 0.012108635351387786,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "\"Enter now Phantom! Come on now, stage left!\" Mr Countgrieves bellowed like a desperate Caesar would demand the legionaries of his empire submit and comply to his authority. As he sat at the towering pipe organ he sighed. Elias, who was meant to be playing \"The Phantom\" was on a smoke break.",
+            "result_id": "R_2rra18JsIdbb7pI_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2rra18JsIdbb7pI.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2rra18JsIdbb7pI"
+            },
+            "metrics": {
+                "length_in_chars": 292,
+                "length_in_words": 52,
+                "length_in_unique_words": 42,
+                "length_in_concepts": 27,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.8076923076923077,
+                "avg_word_length_in_chars": 4.423076923076923,
+                "avg_sentence_length_in_chars": 57.6,
+                "avg_sentence_length_in_words": 10.4,
+                "avg_sentence_length_in_unique_words": 9.8,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 4,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 4,
+                "dsi": 0.2101134270684332,
+                "surprise": 0.03607818737174526,
+                "raw_surprises": [
+                    0.03158581256866455,
+                    0.034065082217707765,
+                    0.0027246738925124636,
+                    0.003780806064605735
+                ],
+                "n_gram_diversity": [
+                    0.8076923076923077,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.23076923076923078,
+                    0.6666666666666666,
+                    0.94,
+                    1.0,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 1.6,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.2916017316017316,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 6.8,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 96.0174285714286,
+                "readability_flesch_kincaid": 2.9970158730158722,
+                "avg_pos_noun_ratio": 0.13857142857142857,
+                "avg_pos_verb_ratio": 0.2752380952380952,
+                "avg_pos_adj_ratio": 0.01,
+                "avg_pos_adv_ratio": 0.10666666666666666,
+                "avg_pos_pron_ratio": 0.07428571428571429,
+                "avg_pos_det_ratio": 0.06857142857142857,
+                "avg_pos_adp_ratio": 0.10428571428571429,
+                "inv_homogen": 0.1827219021320343,
+                "novelty": 0.010837484790927276,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "There is a belief that the most beautiful instrument is the organ, which you might find gracing a church and whose music might sound melodic to your ears. To me, this instrument makes me think of centuries of kings and queens who forced people to comply. The empire that they built based on the expectation that the people needed them. So I prefer the lute.",
+            "result_id": "R_8mxVCke66o4WOVl_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8mxVCke66o4WOVl.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8mxVCke66o4WOVl"
+            },
+            "metrics": {
+                "length_in_chars": 357,
+                "length_in_words": 65,
+                "length_in_unique_words": 48,
+                "length_in_concepts": 26,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.7384615384615385,
+                "avg_word_length_in_chars": 4.415384615384616,
+                "avg_sentence_length_in_chars": 88.5,
+                "avg_sentence_length_in_words": 16.25,
+                "avg_sentence_length_in_unique_words": 13.75,
+                "length_in_first_person_singular": 3,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 2,
+                "length_in_third_person_singular": 0,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 3,
+                "length_in_third_person": 2,
+                "dsi": 0.21150023185289824,
+                "surprise": 0.030762114950302066,
+                "raw_surprises": [
+                    0.012838978147265895,
+                    0.01001415219571855,
+                    0.023290042082468654
+                ],
+                "n_gram_diversity": [
+                    0.7384615384615385,
+                    0.984375,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16923076923076924,
+                    0.546875,
+                    0.8571428571428571,
+                    0.9516129032258065,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 3,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.3096938775510205,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 9.75,
+                "max_constituency_tree_depth": 15,
+                "readability_flesch_ease": 86.34551056338032,
+                "readability_flesch_kincaid": 5.625457746478872,
+                "avg_pos_noun_ratio": 0.17658730158730157,
+                "avg_pos_verb_ratio": 0.19484126984126984,
+                "avg_pos_adj_ratio": 0.06785714285714287,
+                "avg_pos_adv_ratio": 0.05892857142857143,
+                "avg_pos_pron_ratio": 0.18095238095238095,
+                "avg_pos_det_ratio": 0.1621031746031746,
+                "avg_pos_adp_ratio": 0.06845238095238095,
+                "inv_homogen": 0.19901663064956665,
+                "novelty": 0.008063875221997197,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "I am the nerdy girl in school, the one who loves music not fashion or sports. My version of fun is learning a new instrument like the organ, not going shopping and spending loads of money! I guess I don't comply to the rest of the school social norms, I feel that in this world their empire is a complete different class compared to mine, I am boring and dull in comparison.",
+            "result_id": "R_8o6ejl1aVHjSI9z_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8o6ejl1aVHjSI9z.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8o6ejl1aVHjSI9z"
+            },
+            "metrics": {
+                "length_in_chars": 374,
+                "length_in_words": 73,
+                "length_in_unique_words": 54,
+                "length_in_concepts": 34,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.7397260273972602,
+                "avg_word_length_in_chars": 4.054794520547945,
+                "avg_sentence_length_in_chars": 124,
+                "avg_sentence_length_in_words": 24.333333333333332,
+                "avg_sentence_length_in_unique_words": 21.666666666666668,
+                "length_in_first_person_singular": 7,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 0,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 7,
+                "length_in_third_person": 1,
+                "dsi": 0.20712557514721058,
+                "surprise": 0.008194302583669683,
+                "raw_surprises": [
+                    0.001470946517341587,
+                    0.006723356066328096
+                ],
+                "n_gram_diversity": [
+                    0.7397260273972602,
+                    0.9861111111111112,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.136986301369863,
+                    0.5277777777777778,
+                    0.8169014084507042,
+                    0.9714285714285714,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 4.333333333333333,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.1113653699466055,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 9.333333333333334,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 80.36333333333334,
+                "readability_flesch_kincaid": 8.675,
+                "avg_pos_noun_ratio": 0.28806306306306306,
+                "avg_pos_verb_ratio": 0.12353603603603604,
+                "avg_pos_adj_ratio": 0.08254504504504505,
+                "avg_pos_adv_ratio": 0.0,
+                "avg_pos_pron_ratio": 0.11238738738738739,
+                "avg_pos_det_ratio": 0.11103603603603604,
+                "avg_pos_adp_ratio": 0.11587837837837837,
+                "inv_homogen": 0.22417893290519714,
+                "novelty": 0.0168131886333725,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "you could hear the crisp and beefy sound of the organ from miles away even though there was no sign of a church at all. all you could see was the pale grim appearance of the large concrete buildings the empire built for their newly established capital. they wanted it to be free of soul, emotion, heart and everything any man can hold dear. That was the essence of the master plan, in which they could finally see all the people comply, like constantly anxious androids killing time to breathe and live for another day. this was no different than surviving rather than living merely. ",
+            "result_id": "R_2sdMlOguKbuAvfg_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2sdMlOguKbuAvfg.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2sdMlOguKbuAvfg"
+            },
+            "metrics": {
+                "length_in_chars": 584,
+                "length_in_words": 105,
+                "length_in_unique_words": 78,
+                "length_in_concepts": 46,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.7428571428571429,
+                "avg_word_length_in_chars": 4.476190476190476,
+                "avg_sentence_length_in_chars": 115.8,
+                "avg_sentence_length_in_words": 21,
+                "avg_sentence_length_in_unique_words": 19.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 2,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 3,
+                "length_in_first_person": 0,
+                "length_in_third_person": 4,
+                "dsi": 0.20830511827975656,
+                "surprise": 0.010641356522128678,
+                "raw_surprises": [
+                    0.007137914588957128,
+                    0.0036610498830869365,
+                    0.007917550915763488,
+                    0.0025661976564498035
+                ],
+                "n_gram_diversity": [
+                    0.7428571428571429,
+                    0.9519230769230769,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10476190476190476,
+                    0.5,
+                    0.8252427184466019,
+                    0.9411764705882353,
+                    0.9900990099009901
+                ],
+                "avg_dep_num_clauses": 3.6,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.3941905864406525,
+                "max_dep_path_length": 12,
+                "avg_constituency_tree_depth": 12.6,
+                "max_constituency_tree_depth": 21,
+                "readability_flesch_ease": 82.02457894736844,
+                "readability_flesch_kincaid": 7.4827017543859675,
+                "avg_pos_noun_ratio": 0.16858375021562877,
+                "avg_pos_verb_ratio": 0.1390602035535622,
+                "avg_pos_adj_ratio": 0.10234466103156806,
+                "avg_pos_adv_ratio": 0.1139941348973607,
+                "avg_pos_pron_ratio": 0.11792168362946352,
+                "avg_pos_det_ratio": 0.10329549767120924,
+                "avg_pos_adp_ratio": 0.11975297567707435,
+                "inv_homogen": 0.17408132433891296,
+                "novelty": 0.014454102368280541,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "I walked into the musical hall, listening to an old woman playing the organ. I can't believe that I am now in charge of an empire, I don't know how I got into this position. Even though I am suppposedly in power I have been given so many rules I have to comply with. I feel like breaking all the rules and running away from here.",
+            "result_id": "R_2cHcLwZLH3kFnm9_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2cHcLwZLH3kFnm9.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2cHcLwZLH3kFnm9"
+            },
+            "metrics": {
+                "length_in_chars": 329,
+                "length_in_words": 68,
+                "length_in_unique_words": 50,
+                "length_in_concepts": 24,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.7352941176470589,
+                "avg_word_length_in_chars": 3.7941176470588234,
+                "avg_sentence_length_in_chars": 81.5,
+                "avg_sentence_length_in_words": 17,
+                "avg_sentence_length_in_unique_words": 15,
+                "length_in_first_person_singular": 9,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 0,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 9,
+                "length_in_third_person": 0,
+                "dsi": 0.20719840561134228,
+                "surprise": 0.022570916773780904,
+                "raw_surprises": [
+                    0.0009913793631962098,
+                    0.008279335498809798,
+                    0.02458566029866535
+                ],
+                "n_gram_diversity": [
+                    0.7352941176470589,
+                    0.9701492537313433,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16176470588235295,
+                    0.4626865671641791,
+                    0.7121212121212122,
+                    0.8153846153846154,
+                    0.875
+                ],
+                "avg_dep_num_clauses": 2.5,
+                "max_dep_num_clauses": 3,
+                "avg_dep_path_length": 2.879556277056277,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 9.25,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 88.59533783783785,
+                "readability_flesch_kincaid": 5.497972972972974,
+                "avg_pos_noun_ratio": 0.13332924703062002,
+                "avg_pos_verb_ratio": 0.1881538084341288,
+                "avg_pos_adj_ratio": 0.04887218045112782,
+                "avg_pos_adv_ratio": 0.09200991609458428,
+                "avg_pos_pron_ratio": 0.12164242127056772,
+                "avg_pos_det_ratio": 0.11697722567287784,
+                "avg_pos_adp_ratio": 0.1363054375068105,
+                "inv_homogen": 0.1683292043209076,
+                "novelty": 0.016667527705109098,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "the surgery was difficult and long. The patient's organ had failed at the last minute. It was a heart failure, and the surgeon is not positive she did her best, although every step in the operation was strictly followed and she had to comply with the patient's needs. In this day and age, we don't expect to fail during surgery, an entire empire of lawyers is waiting outside of the operating room to hear of your failure. still, there is hope she could explain all to the family and the other doctors support her decision. ",
+            "result_id": "R_8K7NzHgqM00gKVF_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8K7NzHgqM00gKVF.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8K7NzHgqM00gKVF"
+            },
+            "metrics": {
+                "length_in_chars": 524,
+                "length_in_words": 98,
+                "length_in_unique_words": 68,
+                "length_in_concepts": 35,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6938775510204082,
+                "avg_word_length_in_chars": 4.275510204081633,
+                "avg_sentence_length_in_chars": 103.8,
+                "avg_sentence_length_in_words": 19.6,
+                "avg_sentence_length_in_unique_words": 17.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 1,
+                "length_in_second_person": 1,
+                "length_in_third_person_singular": 6,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 1,
+                "length_in_third_person": 6,
+                "dsi": 0.21099662640515496,
+                "surprise": 0.009685375834956308,
+                "raw_surprises": [
+                    0.0050643881162007465,
+                    0.007084463581894379,
+                    0.003670088358811441,
+                    0.0035518116130060506
+                ],
+                "n_gram_diversity": [
+                    0.6938775510204082,
+                    0.9690721649484536,
+                    0.9895833333333334,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.11224489795918367,
+                    0.4742268041237113,
+                    0.78125,
+                    0.9578947368421052,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 3.6,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 2.6647962294684886,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 7.8,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 83.07766666666667,
+                "readability_flesch_kincaid": 7.037703703703706,
+                "avg_pos_noun_ratio": 0.2322875816993464,
+                "avg_pos_verb_ratio": 0.10352941176470588,
+                "avg_pos_adj_ratio": 0.11620915032679738,
+                "avg_pos_adv_ratio": 0.02366013071895425,
+                "avg_pos_pron_ratio": 0.08130718954248366,
+                "avg_pos_det_ratio": 0.1449673202614379,
+                "avg_pos_adp_ratio": 0.07620915032679738,
+                "inv_homogen": 0.20438382148742676,
+                "novelty": 0.009071086117483751,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The church's organ did not comply with health and safety standards. the pipes were close to falling off and were not screwed or bolted down to anything, they were just hanging loose. For a church which is part of such a big empire, surely they could be able to afford the proper installation of their own organ?",
+            "result_id": "R_2LTbPAQf8NZ0wRb_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2LTbPAQf8NZ0wRb.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2LTbPAQf8NZ0wRb"
+            },
+            "metrics": {
+                "length_in_chars": 311,
+                "length_in_words": 58,
+                "length_in_unique_words": 45,
+                "length_in_concepts": 20,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.7758620689655172,
+                "avg_word_length_in_chars": 4.310344827586207,
+                "avg_sentence_length_in_chars": 103,
+                "avg_sentence_length_in_words": 19.333333333333332,
+                "avg_sentence_length_in_unique_words": 17.666666666666668,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 0,
+                "length_in_third_person_plural": 3,
+                "length_in_first_person": 0,
+                "length_in_third_person": 3,
+                "dsi": 0.21421534638655812,
+                "surprise": 0.027921444697985576,
+                "raw_surprises": [
+                    0.012018703846704393,
+                    0.015902740851281183
+                ],
+                "n_gram_diversity": [
+                    0.7758620689655172,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1724137931034483,
+                    0.6842105263157895,
+                    0.9642857142857143,
+                    1.0,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 3,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 2.9874562819478077,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 8.333333333333334,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 87.49142857142859,
+                "readability_flesch_kincaid": 6.273015873015876,
+                "avg_pos_noun_ratio": 0.22142857142857145,
+                "avg_pos_verb_ratio": 0.1046031746031746,
+                "avg_pos_adj_ratio": 0.0692063492063492,
+                "avg_pos_adv_ratio": 0.04507936507936508,
+                "avg_pos_pron_ratio": 0.07174603174603174,
+                "avg_pos_det_ratio": 0.09698412698412698,
+                "avg_pos_adp_ratio": 0.13126984126984126,
+                "inv_homogen": 0.1880337905883789,
+                "novelty": 0.002633646154677427,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "As the organ played its first notes, Becky stood in front of the grand doors, her empire-waist wedding dress shimmering in the sunlight. The dress had been passed down for generations and here she was about to comply with her long standing family traditions. On the other side of the door stood all her family and friends, waiting for her to marry the love of her life. ",
+            "result_id": "R_8dVYGXDIccl6jkg_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8dVYGXDIccl6jkg.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8dVYGXDIccl6jkg"
+            },
+            "metrics": {
+                "length_in_chars": 370,
+                "length_in_words": 68,
+                "length_in_unique_words": 49,
+                "length_in_concepts": 24,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.7205882352941176,
+                "avg_word_length_in_chars": 4.352941176470588,
+                "avg_sentence_length_in_chars": 122.33333333333333,
+                "avg_sentence_length_in_words": 22.666666666666668,
+                "avg_sentence_length_in_unique_words": 20,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 7,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 7,
+                "dsi": 0.2123226929402006,
+                "surprise": 0.018430694118960866,
+                "raw_surprises": [
+                    0.012365080661826067,
+                    0.0060656134571348
+                ],
+                "n_gram_diversity": [
+                    0.7205882352941176,
+                    0.9850746268656716,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.17647058823529413,
+                    0.5522388059701493,
+                    0.8939393939393939,
+                    0.9692307692307692,
+                    0.984375
+                ],
+                "avg_dep_num_clauses": 3,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.964095744680851,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 9,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 82.19600000000001,
+                "readability_flesch_kincaid": 8.005333333333336,
+                "avg_pos_noun_ratio": 0.2754485852311939,
+                "avg_pos_verb_ratio": 0.1327639751552795,
+                "avg_pos_adj_ratio": 0.07401656314699792,
+                "avg_pos_adv_ratio": 0.015873015873015872,
+                "avg_pos_pron_ratio": 0.10300207039337474,
+                "avg_pos_det_ratio": 0.11551069703243616,
+                "avg_pos_adp_ratio": 0.1327639751552795,
+                "inv_homogen": 0.1996120345592499,
+                "novelty": 0.006418953047392484,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The towering empire of Mrs Smith's authority was overwhelming! She was raising funds for the school again but you would think she was donating an organ they way she seeked gratification and praise from us all. If we didn't all comply with her request to sign up you know you were never going to hear the end of it. Just for an easier life, I was destined to man the teddy tombola stall. ",
+            "result_id": "R_8fKaPcuSHw79GVj_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8fKaPcuSHw79GVj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8fKaPcuSHw79GVj"
+            },
+            "metrics": {
+                "length_in_chars": 387,
+                "length_in_words": 75,
+                "length_in_unique_words": 59,
+                "length_in_concepts": 30,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.7866666666666666,
+                "avg_word_length_in_chars": 4.12,
+                "avg_sentence_length_in_chars": 95.75,
+                "avg_sentence_length_in_words": 18.75,
+                "avg_sentence_length_in_unique_words": 17.5,
+                "length_in_first_person_singular": 1,
+                "length_in_first_person_plural": 2,
+                "length_in_second_person": 3,
+                "length_in_third_person_singular": 5,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 3,
+                "length_in_third_person": 6,
+                "dsi": 0.21355106186592715,
+                "surprise": 0.04361278178199888,
+                "raw_surprises": [
+                    0.005102300643920893,
+                    0.02640504496438162,
+                    0.03391182706469581
+                ],
+                "n_gram_diversity": [
+                    0.7866666666666666,
+                    0.9864864864864865,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16,
+                    0.5540540540540541,
+                    0.863013698630137,
+                    0.9861111111111112,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 2.5,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 2.7339723768295197,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 8.5,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 82.90000000000002,
+                "readability_flesch_kincaid": 6.665000000000003,
+                "avg_pos_noun_ratio": 0.14424603174603173,
+                "avg_pos_verb_ratio": 0.14983465608465607,
+                "avg_pos_adj_ratio": 0.04285714285714286,
+                "avg_pos_adv_ratio": 0.04794973544973545,
+                "avg_pos_pron_ratio": 0.134755291005291,
+                "avg_pos_det_ratio": 0.0896494708994709,
+                "avg_pos_adp_ratio": 0.09262566137566138,
+                "inv_homogen": 0.18700425267219545,
+                "novelty": 0.003962215195939367,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "During this revolutionary World War battle between England and Russia, the Russians used their advanced artillery to their advantage. The English were outworn as the Russian empire continued to overload the English territory. This was emphasised when Captain John Rogers of England was struck by a grenade which graphically exposed some of his body organs. As he breathed his final breath, Sir John Rogers passed on a message to his soldiers; \"Never give in, for the future of England is in our hands.\" His soldiers made sure to comply with this message.",
+            "result_id": "R_8IgTefujpZYzrxD_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8IgTefujpZYzrxD.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8IgTefujpZYzrxD"
+            },
+            "metrics": {
+                "length_in_chars": 554,
+                "length_in_words": 92,
+                "length_in_unique_words": 66,
+                "length_in_concepts": 38,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.717391304347826,
+                "avg_word_length_in_chars": 4.913043478260869,
+                "avg_sentence_length_in_chars": 110,
+                "avg_sentence_length_in_words": 18.4,
+                "avg_sentence_length_in_unique_words": 16.8,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 1,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 5,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 1,
+                "length_in_third_person": 7,
+                "dsi": 0.21246630589280324,
+                "surprise": 0.01045820664877846,
+                "raw_surprises": [
+                    0.012145458327399383,
+                    0.001341435764775134,
+                    0.003278966925360949,
+                    0.004150552280021452
+                ],
+                "n_gram_diversity": [
+                    0.717391304347826,
+                    0.9560439560439561,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13043478260869565,
+                    0.4945054945054945,
+                    0.8111111111111111,
+                    0.9550561797752809,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 2.2,
+                "max_dep_num_clauses": 3,
+                "avg_dep_path_length": 2.9420199640108553,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 9.6,
+                "max_constituency_tree_depth": 16,
+                "readability_flesch_ease": 75.04250485436894,
+                "readability_flesch_kincaid": 7.910019417475731,
+                "avg_pos_noun_ratio": 0.16758183337130705,
+                "avg_pos_verb_ratio": 0.14652920179235968,
+                "avg_pos_adj_ratio": 0.0789891395154553,
+                "avg_pos_adv_ratio": 0.016233766233766232,
+                "avg_pos_pron_ratio": 0.10820991873623452,
+                "avg_pos_det_ratio": 0.10950862003493582,
+                "avg_pos_adp_ratio": 0.11678818257765626,
+                "inv_homogen": 0.21920497417449952,
+                "novelty": 0.006131727142187182,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "Whilst walking home i was kidnapped by 3 men who demanded i chose an organ to have them harvest. I was very reluctant to agree and tried not to comply with the demands. They began to explain to me the reaches of their empire and that i best agree. ",
+            "result_id": "R_2JzuWAk6bRQPato_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2JzuWAk6bRQPato.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2JzuWAk6bRQPato"
+            },
+            "metrics": {
+                "length_in_chars": 248,
+                "length_in_words": 49,
+                "length_in_unique_words": 38,
+                "length_in_concepts": 19,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.7755102040816326,
+                "avg_word_length_in_chars": 4,
+                "avg_sentence_length_in_chars": 81.66666666666667,
+                "avg_sentence_length_in_words": 16.333333333333332,
+                "avg_sentence_length_in_unique_words": 15.333333333333334,
+                "length_in_first_person_singular": 5,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 0,
+                "length_in_third_person_plural": 3,
+                "length_in_first_person": 5,
+                "length_in_third_person": 3,
+                "dsi": 0.20757650736479732,
+                "surprise": 0.03313891490300497,
+                "raw_surprises": [
+                    0.020799128214518237,
+                    0.012339786688486731
+                ],
+                "n_gram_diversity": [
+                    0.7755102040816326,
+                    0.9791666666666666,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.24489795918367346,
+                    0.6666666666666666,
+                    0.9148936170212766,
+                    1.0,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 3.6666666666666665,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.784037145650049,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 10.666666666666666,
+                "max_constituency_tree_depth": 14,
+                "readability_flesch_ease": 88.3724358974359,
+                "readability_flesch_kincaid": 5.239230769230769,
+                "avg_pos_noun_ratio": 0.10056390977443609,
+                "avg_pos_verb_ratio": 0.23919172932330826,
+                "avg_pos_adj_ratio": 0.023809523809523808,
+                "avg_pos_adv_ratio": 0.06218671679197995,
+                "avg_pos_pron_ratio": 0.17731829573934837,
+                "avg_pos_det_ratio": 0.06218671679197995,
+                "avg_pos_adp_ratio": 0.08302005012531329,
+                "inv_homogen": 0.1876547360420227,
+                "novelty": 0.015911324198199017,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "My favourire bodily organ is my right eye. With it, I can see the whole vista of the empire when I stand at the highest point of the island. The laws of optics suggest it shouldn't be so, but in magic worlds eyes don't have to comply with the laws of terrestial physics ",
+            "result_id": "R_2BoHBhJy5N6y8ZX_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2BoHBhJy5N6y8ZX.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2BoHBhJy5N6y8ZX"
+            },
+            "metrics": {
+                "length_in_chars": 270,
+                "length_in_words": 55,
+                "length_in_unique_words": 41,
+                "length_in_concepts": 19,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.7454545454545455,
+                "avg_word_length_in_chars": 3.8727272727272726,
+                "avg_sentence_length_in_chars": 89,
+                "avg_sentence_length_in_words": 18.333333333333332,
+                "avg_sentence_length_in_unique_words": 15,
+                "length_in_first_person_singular": 4,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 4,
+                "length_in_third_person": 2,
+                "dsi": 0.21819650638870328,
+                "surprise": 0.0020843499236636587,
+                "raw_surprises": [
+                    0.0010688165823618534,
+                    0.0010155333413018053
+                ],
+                "n_gram_diversity": [
+                    0.7454545454545455,
+                    0.9444444444444444,
+                    0.9811320754716981,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2,
+                    0.6111111111111112,
+                    0.8301886792452831,
+                    0.9423076923076923,
+                    0.9607843137254902
+                ],
+                "avg_dep_num_clauses": 1.6666666666666667,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.6520169442572445,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 8.666666666666666,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 93.66994350282486,
+                "readability_flesch_kincaid": 5.080000000000002,
+                "avg_pos_noun_ratio": 0.2654151404151404,
+                "avg_pos_verb_ratio": 0.07020757020757021,
+                "avg_pos_adj_ratio": 0.09905372405372405,
+                "avg_pos_adv_ratio": 0.05448717948717949,
+                "avg_pos_pron_ratio": 0.14377289377289376,
+                "avg_pos_det_ratio": 0.08913308913308914,
+                "avg_pos_adp_ratio": 0.11477411477411477,
+                "inv_homogen": 0.21544970393180848,
+                "novelty": 0.005328673849612886,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "Sean regularly visited his local music shop, as he loved to play the organ. He dreamed of owning his own one day, but he could not afford such a grand purchase, and did not have space in his apartment on the east side of town. He also chose not to comply with store rules, that musical instruments were not to be played, only to be purchased. Sean was frustrated with the music and retail empire, he wished for a day where music shops were open to all where people could gather and showcase their talents.",
+            "result_id": "R_8LtUJwc0nMwsLzG_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8LtUJwc0nMwsLzG.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8LtUJwc0nMwsLzG"
+            },
+            "metrics": {
+                "length_in_chars": 505,
+                "length_in_words": 95,
+                "length_in_unique_words": 67,
+                "length_in_concepts": 34,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.7052631578947368,
+                "avg_word_length_in_chars": 4.221052631578948,
+                "avg_sentence_length_in_chars": 125.5,
+                "avg_sentence_length_in_words": 23.75,
+                "avg_sentence_length_in_unique_words": 21,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 8,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 9,
+                "dsi": 0.21098991628211664,
+                "surprise": 0.019859696761543866,
+                "raw_surprises": [
+                    0.005302952064408201,
+                    0.010901321115947882,
+                    0.013585271961959716
+                ],
+                "n_gram_diversity": [
+                    0.7052631578947368,
+                    0.9787234042553191,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1368421052631579,
+                    0.5106382978723404,
+                    0.8924731182795699,
+                    0.9782608695652174,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 4.25,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 3.1196418887383532,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 11.75,
+                "max_constituency_tree_depth": 17,
+                "readability_flesch_ease": 79.47696428571432,
+                "readability_flesch_kincaid": 8.695119047619048,
+                "avg_pos_noun_ratio": 0.1980176386461147,
+                "avg_pos_verb_ratio": 0.16793129932729486,
+                "avg_pos_adj_ratio": 0.07119683245934635,
+                "avg_pos_adv_ratio": 0.041666666666666664,
+                "avg_pos_pron_ratio": 0.10573918110069389,
+                "avg_pos_det_ratio": 0.05929207055458446,
+                "avg_pos_adp_ratio": 0.07002489538640817,
+                "inv_homogen": 0.1865836751461029,
+                "novelty": 0.009084506363560396,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The doctor looked at the student. \"You will comply or you will fail and end up as one of these donors yourself\" he said. The student dutifully removed the organ from the body as requested and placed it in the organ transplant box. In the Empire of the Heart, the wealthy lived on through continual organ replacement, the donors often not always willing. Compliance in the Empire was key.",
+            "result_id": "R_8JLzPcPzxxmeT2T_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8JLzPcPzxxmeT2T.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8JLzPcPzxxmeT2T"
+            },
+            "metrics": {
+                "length_in_chars": 387,
+                "length_in_words": 69,
+                "length_in_unique_words": 47,
+                "length_in_concepts": 25,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.6811594202898551,
+                "avg_word_length_in_chars": 4.492753623188406,
+                "avg_sentence_length_in_chars": 76.6,
+                "avg_sentence_length_in_words": 13.8,
+                "avg_sentence_length_in_unique_words": 11.8,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 3,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 2,
+                "dsi": 0.21170472979545593,
+                "surprise": 0.01726730664571126,
+                "raw_surprises": [
+                    0.009912232557932527,
+                    0.008964785271220743,
+                    0.004021906190448343,
+                    0.011635689271820904
+                ],
+                "n_gram_diversity": [
+                    0.6811594202898551,
+                    0.9117647058823529,
+                    0.9850746268656716,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.18840579710144928,
+                    0.5441176470588235,
+                    0.7910447761194029,
+                    0.9545454545454546,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 1.8,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 2.6172657952069716,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 7,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 86.87792307692308,
+                "readability_flesch_kincaid": 5.0170769230769245,
+                "avg_pos_noun_ratio": 0.2042690058479532,
+                "avg_pos_verb_ratio": 0.11935672514619883,
+                "avg_pos_adj_ratio": 0.06333333333333332,
+                "avg_pos_adv_ratio": 0.030526315789473686,
+                "avg_pos_pron_ratio": 0.05497076023391813,
+                "avg_pos_det_ratio": 0.19321637426900584,
+                "avg_pos_adp_ratio": 0.16105263157894736,
+                "inv_homogen": 0.1714009165763855,
+                "novelty": 0.0076548793368818036,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "Lisa was learning to be an organist. She already played the piano but was working hard to comply with the requirements to pass her exams. She enjoyed playing the organ, especially in a very large venue where she could play a very well known piece from Star Wars \"The Empire Strikes Back\"",
+            "result_id": "R_8XS6nyWsLXkXKFz_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8XS6nyWsLXkXKFz.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8XS6nyWsLXkXKFz"
+            },
+            "metrics": {
+                "length_in_chars": 287,
+                "length_in_words": 52,
+                "length_in_unique_words": 42,
+                "length_in_concepts": 22,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.8076923076923077,
+                "avg_word_length_in_chars": 4.4423076923076925,
+                "avg_sentence_length_in_chars": 95,
+                "avg_sentence_length_in_words": 17.333333333333332,
+                "avg_sentence_length_in_unique_words": 15.333333333333334,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 4,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 4,
+                "dsi": 0.21570864926168928,
+                "surprise": 0.04257417692766563,
+                "raw_surprises": [
+                    0.03314779911722457,
+                    0.009426377810441061
+                ],
+                "n_gram_diversity": [
+                    0.8076923076923077,
+                    0.9803921568627451,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.23076923076923078,
+                    0.7450980392156863,
+                    0.98,
+                    1.0,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 2.3333333333333335,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 3.048603683897802,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 11.333333333333334,
+                "max_constituency_tree_depth": 15,
+                "readability_flesch_ease": 85.13947368421054,
+                "readability_flesch_kincaid": 6.104210526315793,
+                "avg_pos_noun_ratio": 0.1402116402116402,
+                "avg_pos_verb_ratio": 0.1710758377425044,
+                "avg_pos_adj_ratio": 0.012345679012345678,
+                "avg_pos_adv_ratio": 0.09876543209876543,
+                "avg_pos_pron_ratio": 0.06172839506172839,
+                "avg_pos_det_ratio": 0.13403880070546736,
+                "avg_pos_adp_ratio": 0.043209876543209874,
+                "inv_homogen": 0.17813199043273925,
+                "novelty": 0.00035295959558490075,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "As the wicked dictator entered the room, his underlings explained the bleak situation to him regarding the war effort. Swiftly and desperately, the dictator gave them his instructions: 'tell all of our soldiers to defend from the west - we cannot lose the city, it is the most crucial organ of our empire!' Sensing he had gone insane however, the underlings decided not to comply with the instructions, instead telling the soldiers to retreat from the battlefield. It seemed as though a crisis of leadership had truly begun.",
+            "result_id": "R_2XcT1LBVLYHa6hX_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2XcT1LBVLYHa6hX.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2XcT1LBVLYHa6hX"
+            },
+            "metrics": {
+                "length_in_chars": 524,
+                "length_in_words": 88,
+                "length_in_unique_words": 61,
+                "length_in_concepts": 35,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.6931818181818182,
+                "avg_word_length_in_chars": 4.818181818181818,
+                "avg_sentence_length_in_chars": 130.25,
+                "avg_sentence_length_in_words": 22,
+                "avg_sentence_length_in_unique_words": 19,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 3,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 6,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 3,
+                "length_in_third_person": 7,
+                "dsi": 0.21047121907482627,
+                "surprise": 0.02180720688734178,
+                "raw_surprises": [
+                    0.01088987089629867,
+                    0.009445209881086741,
+                    0.012375729553627257
+                ],
+                "n_gram_diversity": [
+                    0.6931818181818182,
+                    0.9655172413793104,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.125,
+                    0.4482758620689655,
+                    0.7093023255813954,
+                    0.8705882352941177,
+                    0.9523809523809523
+                ],
+                "avg_dep_num_clauses": 3,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 2.609375,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 8.25,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 68.96466584158418,
+                "readability_flesch_kincaid": 9.912945544554457,
+                "avg_pos_noun_ratio": 0.21753916877755886,
+                "avg_pos_verb_ratio": 0.17683999437095413,
+                "avg_pos_adj_ratio": 0.04408539731682146,
+                "avg_pos_adv_ratio": 0.06561942959001782,
+                "avg_pos_pron_ratio": 0.11093031710291772,
+                "avg_pos_det_ratio": 0.14643728304719017,
+                "avg_pos_adp_ratio": 0.07877732432685994,
+                "inv_homogen": 0.21514760851860046,
+                "novelty": 0.010121900778141124,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "Jason played his organ loudly, entertaining the higher-ups of the empire. He had been asked to play at the society wedding, and had strict instructions to play only romantic and beautiful songs. However, he was a member of the secret society and had a plan. He started to play a stirring, uplifting song which did not comply with his orders, and the society rushed in through the open doors, ready to attack.",
+            "result_id": "R_8B3zak55aPwmX5t_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8B3zak55aPwmX5t.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8B3zak55aPwmX5t"
+            },
+            "metrics": {
+                "length_in_chars": 408,
+                "length_in_words": 73,
+                "length_in_unique_words": 50,
+                "length_in_concepts": 29,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.684931506849315,
+                "avg_word_length_in_chars": 4.465753424657534,
+                "avg_sentence_length_in_chars": 101.25,
+                "avg_sentence_length_in_words": 18.25,
+                "avg_sentence_length_in_unique_words": 16.25,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 5,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 5,
+                "dsi": 0.2097276518203942,
+                "surprise": 0.004983208530745834,
+                "raw_surprises": [
+                    0.0021875420260050737,
+                    0.003715379370583416,
+                    0.001571891399530262
+                ],
+                "n_gram_diversity": [
+                    0.684931506849315,
+                    0.9305555555555556,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1506849315068493,
+                    0.5138888888888888,
+                    0.8309859154929577,
+                    0.9714285714285714,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 3.75,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 2.7555271983517065,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 9,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 78.76285714285716,
+                "readability_flesch_kincaid": 7.4904761904761905,
+                "avg_pos_noun_ratio": 0.2141076516076516,
+                "avg_pos_verb_ratio": 0.1548127798127798,
+                "avg_pos_adj_ratio": 0.10355616605616605,
+                "avg_pos_adv_ratio": 0.06122812372812372,
+                "avg_pos_pron_ratio": 0.07974664224664224,
+                "avg_pos_det_ratio": 0.13904151404151405,
+                "avg_pos_adp_ratio": 0.07048738298738298,
+                "inv_homogen": 0.1703101921081543,
+                "novelty": 0.011609035287005243,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "Our local church had received a letter from the council to let them know that the organ that is played regularly at the church services needed to comply with regulation for health and safety reasons.  The minister asked me if I knew anyone who could possibly help with this as he didn't know the first thing about it!! I asked my friend who worked at the Empire theatre in the town if she knew anyone who perhaps would be able to do it.  Luckily we found someone!!!  Thank goodness!!!",
+            "result_id": "R_2G1cvocEgxet2xf_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2G1cvocEgxet2xf.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2G1cvocEgxet2xf"
+            },
+            "metrics": {
+                "length_in_chars": 484,
+                "length_in_words": 93,
+                "length_in_unique_words": 70,
+                "length_in_concepts": 33,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.7526881720430108,
+                "avg_word_length_in_chars": 4.150537634408602,
+                "avg_sentence_length_in_chars": 96.6,
+                "avg_sentence_length_in_words": 18.6,
+                "avg_sentence_length_in_unique_words": 17,
+                "length_in_first_person_singular": 4,
+                "length_in_first_person_plural": 2,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 4,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 6,
+                "length_in_third_person": 5,
+                "dsi": 0.20912861157998894,
+                "surprise": 0.024135164361374042,
+                "raw_surprises": [
+                    0.0018549659672905394,
+                    0.003871122002601618,
+                    0.028392786780993134,
+                    0.014151453971862793
+                ],
+                "n_gram_diversity": [
+                    0.7526881720430108,
+                    0.967391304347826,
+                    0.989010989010989,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13978494623655913,
+                    0.532608695652174,
+                    0.8791208791208791,
+                    0.9666666666666667,
+                    0.9887640449438202
+                ],
+                "avg_dep_num_clauses": 3,
+                "max_dep_num_clauses": 8,
+                "avg_dep_path_length": 3.013919214721362,
+                "max_dep_path_length": 15,
+                "avg_constituency_tree_depth": 9.6,
+                "max_constituency_tree_depth": 16,
+                "readability_flesch_ease": 89.00561165048546,
+                "readability_flesch_kincaid": 5.962446601941746,
+                "avg_pos_noun_ratio": 0.1952991452991453,
+                "avg_pos_verb_ratio": 0.23743589743589744,
+                "avg_pos_adj_ratio": 0.02158119658119658,
+                "avg_pos_adv_ratio": 0.06158119658119658,
+                "avg_pos_pron_ratio": 0.20884615384615385,
+                "avg_pos_det_ratio": 0.054273504273504275,
+                "avg_pos_adp_ratio": 0.054273504273504275,
+                "inv_homogen": 0.18112379550933838,
+                "novelty": 0.012807115767815791,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "I used to play every morning for the grand empire, back when music was just an expected part of the halls, everyday waking up to a new song. One day new regulations came in, and they said every empire had to have a certified organ player to comply with some strange new rule. They called it \u201cmusical preservation,\u201d but no one really knew what it meant. Our empire couldn't find someone with the right papers, so they had to shut down the whole thing. Now, the halls are silent, I look back on the beautiful music filled days with a touch of sadness. Not knowing what could be done to return the song back to our dear empire.",
+            "result_id": "R_8PvUUEqSWnAZrWx_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8PvUUEqSWnAZrWx.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8PvUUEqSWnAZrWx"
+            },
+            "metrics": {
+                "length_in_chars": 624,
+                "length_in_words": 119,
+                "length_in_unique_words": 82,
+                "length_in_concepts": 39,
+                "length_in_sentences": 6,
+                "type_token_ratio": 0.6890756302521008,
+                "avg_word_length_in_chars": 4.1344537815126055,
+                "avg_sentence_length_in_chars": 103.16666666666667,
+                "avg_sentence_length_in_words": 19.833333333333332,
+                "avg_sentence_length_in_unique_words": 18.5,
+                "length_in_first_person_singular": 2,
+                "length_in_first_person_plural": 2,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 3,
+                "length_in_first_person": 4,
+                "length_in_third_person": 5,
+                "dsi": 0.20915572572494487,
+                "surprise": 0.008275775813093078,
+                "raw_surprises": [
+                    0.002600015293468122,
+                    0.006562191247940052,
+                    0.006998556852340687,
+                    0.0009859883122974034,
+                    0.0035426878266864303
+                ],
+                "n_gram_diversity": [
+                    0.6890756302521008,
+                    0.9830508474576272,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.10084033613445378,
+                    0.4152542372881356,
+                    0.7094017094017094,
+                    0.8793103448275862,
+                    0.9652173913043478
+                ],
+                "avg_dep_num_clauses": 2.6666666666666665,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 2.9429244347779067,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 9.666666666666666,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 87.57114427860698,
+                "readability_flesch_kincaid": 6.593134328358207,
+                "avg_pos_noun_ratio": 0.1937529721740248,
+                "avg_pos_verb_ratio": 0.17946404472720262,
+                "avg_pos_adj_ratio": 0.09092410513463145,
+                "avg_pos_adv_ratio": 0.06599929310455627,
+                "avg_pos_pron_ratio": 0.12121104042156673,
+                "avg_pos_det_ratio": 0.1175531778163357,
+                "avg_pos_adp_ratio": 0.0854469507101086,
+                "inv_homogen": 0.16668156743049622,
+                "novelty": 0.01275288747790393,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The empire was growing stronger, their fierce leader implementing new rules to his citizens daily and ensuring he had eyes all over the place to ensure they comply with the new rules.  He wanted to run a nation that was disciplined and listened to orders.  He was an incredibly extravagant leader, his bedroom almost laughable with how over the top it is.  A large organ in what is now his living area, an organ that he insisted on keeping from the old converted church. ",
+            "result_id": "R_8v92A9H3hnaw1QI_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8v92A9H3hnaw1QI.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8v92A9H3hnaw1QI"
+            },
+            "metrics": {
+                "length_in_chars": 471,
+                "length_in_words": 87,
+                "length_in_unique_words": 60,
+                "length_in_concepts": 34,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.6896551724137931,
+                "avg_word_length_in_chars": 4.367816091954023,
+                "avg_sentence_length_in_chars": 117.5,
+                "avg_sentence_length_in_words": 21.75,
+                "avg_sentence_length_in_unique_words": 20,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 8,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 0,
+                "length_in_third_person": 10,
+                "dsi": 0.20810409015087733,
+                "surprise": 0.012385692577513447,
+                "raw_surprises": [
+                    0.006481617972964343,
+                    0.008186628704979326,
+                    0.003910292188326503
+                ],
+                "n_gram_diversity": [
+                    0.6896551724137931,
+                    0.9651162790697675,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13793103448275862,
+                    0.5348837209302325,
+                    0.8470588235294118,
+                    0.9642857142857143,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 2.75,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.6338252402734095,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 11.25,
+                "max_constituency_tree_depth": 15,
+                "readability_flesch_ease": 74.08250000000002,
+                "readability_flesch_kincaid": 8.764361702127662,
+                "avg_pos_noun_ratio": 0.18722943722943722,
+                "avg_pos_verb_ratio": 0.1396103896103896,
+                "avg_pos_adj_ratio": 0.09217171717171717,
+                "avg_pos_adv_ratio": 0.054292929292929296,
+                "avg_pos_pron_ratio": 0.15313852813852813,
+                "avg_pos_det_ratio": 0.10245310245310245,
+                "avg_pos_adp_ratio": 0.10245310245310245,
+                "inv_homogen": 0.16432053565979005,
+                "novelty": 0.014856158626039007,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "I told my friend that I was working with different survey platforms. I told her about what should I do to a survey asking about to write a story  containing three words: organ, empire and comply. I literally had no idea, what to write about but I figured out a nice idea that I used to do it.",
+            "result_id": "R_8sBNWJpZHPgPqua_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8sBNWJpZHPgPqua.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8sBNWJpZHPgPqua"
+            },
+            "metrics": {
+                "length_in_chars": 292,
+                "length_in_words": 59,
+                "length_in_unique_words": 39,
+                "length_in_concepts": 19,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.6610169491525424,
+                "avg_word_length_in_chars": 3.8813559322033897,
+                "avg_sentence_length_in_chars": 96.66666666666667,
+                "avg_sentence_length_in_words": 19.666666666666668,
+                "avg_sentence_length_in_unique_words": 16.666666666666668,
+                "length_in_first_person_singular": 8,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 8,
+                "length_in_third_person": 2,
+                "dsi": 0.20414220519930298,
+                "surprise": 0.01868530060305737,
+                "raw_surprises": [
+                    0.005129008220903786,
+                    0.013556292382153584
+                ],
+                "n_gram_diversity": [
+                    0.6610169491525424,
+                    0.9482758620689655,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.22033898305084745,
+                    0.6206896551724138,
+                    0.9473684210526315,
+                    1.0,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 3.6666666666666665,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 3.691657754010695,
+                "max_dep_path_length": 14,
+                "avg_constituency_tree_depth": 12,
+                "max_constituency_tree_depth": 17,
+                "readability_flesch_ease": 87.22794871794873,
+                "readability_flesch_kincaid": 6.475384615384616,
+                "avg_pos_noun_ratio": 0.1803030303030303,
+                "avg_pos_verb_ratio": 0.18464646464646464,
+                "avg_pos_adj_ratio": 0.04292929292929293,
+                "avg_pos_adv_ratio": 0.028484848484848484,
+                "avg_pos_pron_ratio": 0.21242424242424243,
+                "avg_pos_det_ratio": 0.05696969696969697,
+                "avg_pos_adp_ratio": 0.09808080808080807,
+                "inv_homogen": 0.20791160583496093,
+                "novelty": 0.0227799285291877,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "In the distant British Empire it used to be law that whenever someone stole a sack of salt they would be arrested and had to choose an organ they had to sacrifice. No one ever chose a hand, they'd ask for an ear or a kidney but never a hand. There was no choice, they had to comply because resisting would mean sure death. This is the story of how salt become one of the most common seasonings in the world.",
+            "result_id": "R_2eaDBbNJB41Q6MF_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2eaDBbNJB41Q6MF.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2eaDBbNJB41Q6MF"
+            },
+            "metrics": {
+                "length_in_chars": 407,
+                "length_in_words": 82,
+                "length_in_unique_words": 58,
+                "length_in_concepts": 25,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.7073170731707317,
+                "avg_word_length_in_chars": 3.9146341463414633,
+                "avg_sentence_length_in_chars": 101,
+                "avg_sentence_length_in_words": 20.5,
+                "avg_sentence_length_in_unique_words": 17.75,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 4,
+                "length_in_first_person": 0,
+                "length_in_third_person": 5,
+                "dsi": 0.21686573723951974,
+                "surprise": 0.01559822318529841,
+                "raw_surprises": [
+                    0.007884476943449542,
+                    0.003888632853825874,
+                    0.011624224980672199
+                ],
+                "n_gram_diversity": [
+                    0.7073170731707317,
+                    0.9382716049382716,
+                    0.9875,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.15853658536585366,
+                    0.5308641975308642,
+                    0.75,
+                    0.8860759493670886,
+                    0.9487179487179487
+                ],
+                "avg_dep_num_clauses": 4,
+                "max_dep_num_clauses": 8,
+                "avg_dep_path_length": 3.125922987616099,
+                "max_dep_path_length": 10,
+                "avg_constituency_tree_depth": 11.75,
+                "max_constituency_tree_depth": 16,
+                "readability_flesch_ease": 85.48454545454545,
+                "readability_flesch_kincaid": 6.801363636363636,
+                "avg_pos_noun_ratio": 0.19157728881026093,
+                "avg_pos_verb_ratio": 0.18499488611233966,
+                "avg_pos_adj_ratio": 0.04037552521008403,
+                "avg_pos_adv_ratio": 0.04102167182662539,
+                "avg_pos_pron_ratio": 0.094828062804069,
+                "avg_pos_det_ratio": 0.1512017636001769,
+                "avg_pos_adp_ratio": 0.07290054179566563,
+                "inv_homogen": 0.20868186235427857,
+                "novelty": 0.002667135551245814,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "I went to the Empire comedy club. They still have the old performing organ from when it was a dance hall. i wanted to play the organ, but they said no and I wanted to comply with their rules.",
+            "result_id": "R_8VKNz0tY7nY6fDq_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8VKNz0tY7nY6fDq.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8VKNz0tY7nY6fDq"
+            },
+            "metrics": {
+                "length_in_chars": 191,
+                "length_in_words": 39,
+                "length_in_unique_words": 30,
+                "length_in_concepts": 14,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.7692307692307693,
+                "avg_word_length_in_chars": 3.8205128205128207,
+                "avg_sentence_length_in_chars": 47,
+                "avg_sentence_length_in_words": 9.75,
+                "avg_sentence_length_in_unique_words": 9.75,
+                "length_in_first_person_singular": 3,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 3,
+                "length_in_first_person": 3,
+                "length_in_third_person": 4,
+                "dsi": 0.20729691445172488,
+                "surprise": 0.030640562375386537,
+                "raw_surprises": [
+                    0.014592691262563046,
+                    0.006054695447285957,
+                    0.025313456853230804
+                ],
+                "n_gram_diversity": [
+                    0.7692307692307693,
+                    0.9473684210526315,
+                    0.972972972972973,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.3333333333333333,
+                    0.6842105263157895,
+                    0.8918918918918919,
+                    0.9722222222222222,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 1.25,
+                "max_dep_num_clauses": 3,
+                "avg_dep_path_length": 2.2066912972085384,
+                "max_dep_path_length": 5,
+                "avg_constituency_tree_depth": 7,
+                "max_constituency_tree_depth": 9,
+                "readability_flesch_ease": 99.51909883720931,
+                "readability_flesch_kincaid": 2.049011627906978,
+                "avg_pos_noun_ratio": 0.19910714285714284,
+                "avg_pos_verb_ratio": 0.19107142857142856,
+                "avg_pos_adj_ratio": 0.017857142857142856,
+                "avg_pos_adv_ratio": 0.017857142857142856,
+                "avg_pos_pron_ratio": 0.18392857142857144,
+                "avg_pos_det_ratio": 0.09642857142857142,
+                "avg_pos_adp_ratio": 0.08482142857142858,
+                "inv_homogen": 0.16839503526687621,
+                "novelty": 0.01647051002434391,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "I tried very hard to play the organ, I wanted to so badly. I hated the man who stood on top of his empire of tunes. I wanted to have my own library of hymns to move the masses. I needed to have 5 years experience in the church before I could make this a reality. I must comply with these rules, and then I could be the organ master I always wanted to become.",
+            "result_id": "R_2joIDdCu9ghOfCw_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2joIDdCu9ghOfCw.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2joIDdCu9ghOfCw"
+            },
+            "metrics": {
+                "length_in_chars": 358,
+                "length_in_words": 75,
+                "length_in_unique_words": 51,
+                "length_in_concepts": 23,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.68,
+                "avg_word_length_in_chars": 3.6933333333333334,
+                "avg_sentence_length_in_chars": 70.8,
+                "avg_sentence_length_in_words": 15,
+                "avg_sentence_length_in_unique_words": 13.6,
+                "length_in_first_person_singular": 10,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 10,
+                "length_in_third_person": 1,
+                "dsi": 0.21219382337901904,
+                "surprise": 0.027922443548838285,
+                "raw_surprises": [
+                    0.021996770302454643,
+                    0.010432316859563168,
+                    0.018194707234700513,
+                    0.005221092700958246
+                ],
+                "n_gram_diversity": [
+                    0.68,
+                    0.918918918918919,
+                    0.9863013698630136,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16,
+                    0.47297297297297297,
+                    0.7808219178082192,
+                    0.8888888888888888,
+                    0.9295774647887324
+                ],
+                "avg_dep_num_clauses": 2.6,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.832011051279344,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 9,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 91.14509756097564,
+                "readability_flesch_kincaid": 4.620634146341462,
+                "avg_pos_noun_ratio": 0.2017146939747559,
+                "avg_pos_verb_ratio": 0.18994998809240296,
+                "avg_pos_adj_ratio": 0.015384615384615385,
+                "avg_pos_adv_ratio": 0.0825910931174089,
+                "avg_pos_pron_ratio": 0.17456537270778757,
+                "avg_pos_det_ratio": 0.0907358894974994,
+                "avg_pos_adp_ratio": 0.08382948321028817,
+                "inv_homogen": 0.16924497723579407,
+                "novelty": 0.0066766921697555826,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "Daisy also wanted to be a  transplant surgeon. The thought of holding an organ in her hand and having to comply with the regulations of the GMC board everyday excited her. However, due to the financial demands of medical school, Daisy had to open a lash business, which seemed to be taking up more time then she has ever proposed. During her last year Daisy decided to close her well known business empire down and focus on studying to become the surgeon she always wanted to be.",
+            "result_id": "R_2q0iH8KvyiaD0id_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2q0iH8KvyiaD0id.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2q0iH8KvyiaD0id"
+            },
+            "metrics": {
+                "length_in_chars": 479,
+                "length_in_words": 88,
+                "length_in_unique_words": 62,
+                "length_in_concepts": 33,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.7045454545454546,
+                "avg_word_length_in_chars": 4.386363636363637,
+                "avg_sentence_length_in_chars": 119,
+                "avg_sentence_length_in_words": 22,
+                "avg_sentence_length_in_unique_words": 19.75,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 6,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 6,
+                "dsi": 0.2095498749704072,
+                "surprise": 0.012839784405448251,
+                "raw_surprises": [
+                    0.010073533383282762,
+                    0.0052599744363264755,
+                    0.003926168788563139
+                ],
+                "n_gram_diversity": [
+                    0.7045454545454546,
+                    0.9655172413793104,
+                    0.9883720930232558,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13636363636363635,
+                    0.47126436781609193,
+                    0.8023255813953488,
+                    0.9294117647058824,
+                    0.9642857142857143
+                ],
+                "avg_dep_num_clauses": 3.5,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 3.499687178268789,
+                "max_dep_path_length": 11,
+                "avg_constituency_tree_depth": 11.75,
+                "max_constituency_tree_depth": 15,
+                "readability_flesch_ease": 72.30348684210529,
+                "readability_flesch_kincaid": 9.074605263157896,
+                "avg_pos_noun_ratio": 0.19004386695541117,
+                "avg_pos_verb_ratio": 0.17917430173801988,
+                "avg_pos_adj_ratio": 0.035121328224776496,
+                "avg_pos_adv_ratio": 0.0922871897384641,
+                "avg_pos_pron_ratio": 0.06675828752290522,
+                "avg_pos_det_ratio": 0.09775667721694709,
+                "avg_pos_adp_ratio": 0.09647953800877339,
+                "inv_homogen": 0.20666858911514283,
+                "novelty": 0.011964588986979274,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "Mary loved playing the organ in church. Sitting so high up, she felt like she was the ruler of a Christian empire. She got to command the mood of the ceremony, allowing it to have its peaks and troughs. Ultimately, she knew that the churchgoers would comply with each single note that she played. ",
+            "result_id": "R_2VPJFAhkG6jzuXy_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2VPJFAhkG6jzuXy.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2VPJFAhkG6jzuXy"
+            },
+            "metrics": {
+                "length_in_chars": 297,
+                "length_in_words": 54,
+                "length_in_unique_words": 43,
+                "length_in_concepts": 25,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.7962962962962963,
+                "avg_word_length_in_chars": 4.37037037037037,
+                "avg_sentence_length_in_chars": 73.25,
+                "avg_sentence_length_in_words": 13.5,
+                "avg_sentence_length_in_unique_words": 12.25,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 7,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 7,
+                "dsi": 0.20841898143291473,
+                "surprise": 0.00563804724859814,
+                "raw_surprises": [
+                    0.00463460797355289,
+                    0.0031046725454784707,
+                    0.0007177903538658492
+                ],
+                "n_gram_diversity": [
+                    0.7962962962962963,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2222222222222222,
+                    0.6415094339622641,
+                    0.8461538461538461,
+                    0.9215686274509803,
+                    0.98
+                ],
+                "avg_dep_num_clauses": 2.5,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 2.663701002063071,
+                "max_dep_path_length": 6,
+                "avg_constituency_tree_depth": 8.25,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 91.50051229508199,
+                "readability_flesch_kincaid": 4.285368852459019,
+                "avg_pos_noun_ratio": 0.1969187675070028,
+                "avg_pos_verb_ratio": 0.21358543417366946,
+                "avg_pos_adj_ratio": 0.03333333333333333,
+                "avg_pos_adv_ratio": 0.05,
+                "avg_pos_pron_ratio": 0.12745098039215685,
+                "avg_pos_det_ratio": 0.13179271708683474,
+                "avg_pos_adp_ratio": 0.1004201680672269,
+                "inv_homogen": 0.1725947678089142,
+                "novelty": 0.014226376061964197,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The vast church organ in the nave of the church seem like the vestige of an long forgotten empire. Endless vertical pipes that seemed to have been built by a larger race, not looking like they would comply with any current laws of physics. The sound was otherworldly to match",
+            "result_id": "R_8VyQYwyI8iMwwKJ_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8VyQYwyI8iMwwKJ.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8VyQYwyI8iMwwKJ"
+            },
+            "metrics": {
+                "length_in_chars": 275,
+                "length_in_words": 50,
+                "length_in_unique_words": 41,
+                "length_in_concepts": 23,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.82,
+                "avg_word_length_in_chars": 4.46,
+                "avg_sentence_length_in_chars": 91,
+                "avg_sentence_length_in_words": 16.666666666666668,
+                "avg_sentence_length_in_unique_words": 15,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 0,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 1,
+                "dsi": 0.2133182574637794,
+                "surprise": 0.020298147743398498,
+                "raw_surprises": [
+                    0.005899257732160157,
+                    0.014398890011238341
+                ],
+                "n_gram_diversity": [
+                    0.82,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2,
+                    0.5714285714285714,
+                    0.75,
+                    0.8723404255319149,
+                    0.9347826086956522
+                ],
+                "avg_dep_num_clauses": 1.6666666666666667,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.8115079365079363,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 8.333333333333334,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 85.14861635220127,
+                "readability_flesch_kincaid": 5.771698113207549,
+                "avg_pos_noun_ratio": 0.21415204678362573,
+                "avg_pos_verb_ratio": 0.1439766081871345,
+                "avg_pos_adj_ratio": 0.08842105263157894,
+                "avg_pos_adv_ratio": 0.05555555555555555,
+                "avg_pos_pron_ratio": 0.02666666666666667,
+                "avg_pos_det_ratio": 0.16994152046783625,
+                "avg_pos_adp_ratio": 0.11017543859649122,
+                "inv_homogen": 0.17313804507255554,
+                "novelty": 0.004427824000234892,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "My uncle decided to donate his organs when he died, which was a very noble thing to do. Sadly on Janurary 7th he fell off his bike and passed away. However many of his organs were able to be donated and his lovely young apprentice who worked in his shop, the Empire of Sweets needed a lung transplant and was able to benefit from my uncles donation. We were a little worried that in order to comply for my uncles lung the shop assistant would not match certain criteria but fortunately he did and all was well. ",
+            "result_id": "R_8XAZuGtUxE4LglP_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8XAZuGtUxE4LglP.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8XAZuGtUxE4LglP"
+            },
+            "metrics": {
+                "length_in_chars": 511,
+                "length_in_words": 97,
+                "length_in_unique_words": 69,
+                "length_in_concepts": 36,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.711340206185567,
+                "avg_word_length_in_chars": 4.206185567010309,
+                "avg_sentence_length_in_chars": 126.75,
+                "avg_sentence_length_in_words": 24.25,
+                "avg_sentence_length_in_unique_words": 22.5,
+                "length_in_first_person_singular": 3,
+                "length_in_first_person_plural": 1,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 8,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 4,
+                "length_in_third_person": 8,
+                "dsi": 0.21242835001339988,
+                "surprise": 0.014660780529611173,
+                "raw_surprises": [
+                    0.004820338317326117,
+                    0.009941556340172159,
+                    0.007229276136918483
+                ],
+                "n_gram_diversity": [
+                    0.711340206185567,
+                    0.96875,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.12371134020618557,
+                    0.5104166666666666,
+                    0.8105263157894737,
+                    0.9042553191489362,
+                    0.946236559139785
+                ],
+                "avg_dep_num_clauses": 4.75,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 2.8077422494011426,
+                "max_dep_path_length": 9,
+                "avg_constituency_tree_depth": 8.75,
+                "max_constituency_tree_depth": 12,
+                "readability_flesch_ease": 70.63661407766992,
+                "readability_flesch_kincaid": 9.803956310679613,
+                "avg_pos_noun_ratio": 0.18063063063063062,
+                "avg_pos_verb_ratio": 0.14924924924924926,
+                "avg_pos_adj_ratio": 0.07267267267267268,
+                "avg_pos_adv_ratio": 0.058145645645645644,
+                "avg_pos_pron_ratio": 0.16433933933933934,
+                "avg_pos_det_ratio": 0.04406906906906907,
+                "avg_pos_adp_ratio": 0.10619369369369369,
+                "inv_homogen": 0.1865268611907959,
+                "novelty": 0.006207638900993906,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "After the emperor fell ill, he desperately needed an organ transplant. Soldiers were ordered to scour the vast lands of his empire to find a suitable donor. Once found, they had no choice but to comply.",
+            "result_id": "R_2Ep8Ymfq8uSEw90_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2Ep8Ymfq8uSEw90.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2Ep8Ymfq8uSEw90"
+            },
+            "metrics": {
+                "length_in_chars": 202,
+                "length_in_words": 36,
+                "length_in_unique_words": 33,
+                "length_in_concepts": 18,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.9166666666666666,
+                "avg_word_length_in_chars": 4.5,
+                "avg_sentence_length_in_chars": 66.66666666666667,
+                "avg_sentence_length_in_words": 12,
+                "avg_sentence_length_in_unique_words": 11.666666666666666,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 0,
+                "length_in_third_person": 3,
+                "dsi": 0.2185722955691269,
+                "surprise": 0.024235937330457924,
+                "raw_surprises": [
+                    0.007175293233659535,
+                    0.01706064409679839
+                ],
+                "n_gram_diversity": [
+                    0.9166666666666666,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2777777777777778,
+                    0.6857142857142857,
+                    0.8823529411764706,
+                    0.9393939393939394,
+                    0.96875
+                ],
+                "avg_dep_num_clauses": 1.3333333333333333,
+                "max_dep_num_clauses": 2,
+                "avg_dep_path_length": 2.34375,
+                "max_dep_path_length": 6,
+                "avg_constituency_tree_depth": 6.333333333333333,
+                "max_constituency_tree_depth": 9,
+                "readability_flesch_ease": 89.79260162601628,
+                "readability_flesch_kincaid": 4.130243902439023,
+                "avg_pos_noun_ratio": 0.21127946127946126,
+                "avg_pos_verb_ratio": 0.2342171717171717,
+                "avg_pos_adj_ratio": 0.041666666666666664,
+                "avg_pos_adv_ratio": 0.09764309764309764,
+                "avg_pos_pron_ratio": 0.08817340067340067,
+                "avg_pos_det_ratio": 0.1393097643097643,
+                "avg_pos_adp_ratio": 0.020833333333333332,
+                "inv_homogen": 0.1829608988761902,
+                "novelty": 0.0060802522104601575,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "In the British empire, Christianity was an important way in which colonialism spread. The symbol of huge cathedrals and churches with a large organ inside pumping out hymns was very powerful. Many people faced a choice, comply or die. ",
+            "result_id": "R_8IgyrHkEhSlOgd5_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8IgyrHkEhSlOgd5.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8IgyrHkEhSlOgd5"
+            },
+            "metrics": {
+                "length_in_chars": 235,
+                "length_in_words": 39,
+                "length_in_unique_words": 35,
+                "length_in_concepts": 22,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.8974358974358975,
+                "avg_word_length_in_chars": 4.897435897435898,
+                "avg_sentence_length_in_chars": 77.33333333333333,
+                "avg_sentence_length_in_words": 13,
+                "avg_sentence_length_in_unique_words": 12.666666666666666,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 0,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 0,
+                "dsi": 0.2146263024507663,
+                "surprise": 0.01809777428233436,
+                "raw_surprises": [
+                    0.016427168013557564,
+                    0.0016706062687767975
+                ],
+                "n_gram_diversity": [
+                    0.8974358974358975,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2564102564102564,
+                    0.631578947368421,
+                    0.8378378378378378,
+                    0.9166666666666666,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 1.6666666666666667,
+                "max_dep_num_clauses": 2,
+                "avg_dep_path_length": 2.5569105691056913,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 6.333333333333333,
+                "max_constituency_tree_depth": 9,
+                "readability_flesch_ease": 82.35287878787882,
+                "readability_flesch_kincaid": 5.416363636363638,
+                "avg_pos_noun_ratio": 0.25284900284900286,
+                "avg_pos_verb_ratio": 0.16915954415954415,
+                "avg_pos_adj_ratio": 0.1485042735042735,
+                "avg_pos_adv_ratio": 0.018518518518518517,
+                "avg_pos_pron_ratio": 0.025641025641025644,
+                "avg_pos_det_ratio": 0.129985754985755,
+                "avg_pos_adp_ratio": 0.12535612535612536,
+                "inv_homogen": 0.18622102856636047,
+                "novelty": 0.0018117340262610582,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "Daisy wondered what it would be like to receive someone else's organ. She wondered if she would gain any special powers from the other person. \"Imagine if the donor had ruled an empire!\" she exclaimed. \"Will I be more powerful?!\" But Daisy also knew that to receive the organ she would need to comply with the doctors.",
+            "result_id": "R_8mJxG00fCL8kz05_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8mJxG00fCL8kz05.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8mJxG00fCL8kz05"
+            },
+            "metrics": {
+                "length_in_chars": 318,
+                "length_in_words": 58,
+                "length_in_unique_words": 42,
+                "length_in_concepts": 19,
+                "length_in_sentences": 6,
+                "type_token_ratio": 0.7241379310344828,
+                "avg_word_length_in_chars": 4.327586206896552,
+                "avg_sentence_length_in_chars": 52.166666666666664,
+                "avg_sentence_length_in_words": 9.666666666666666,
+                "avg_sentence_length_in_unique_words": 9.166666666666666,
+                "length_in_first_person_singular": 1,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 5,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 1,
+                "length_in_third_person": 5,
+                "dsi": 0.20597797492791337,
+                "surprise": 0.18641804445357552,
+                "raw_surprises": [
+                    0.007032215595245361,
+                    0.02241064508756002,
+                    0.22644447286923727,
+                    0,
+                    0.2101577775818961
+                ],
+                "n_gram_diversity": [
+                    0.7241379310344828,
+                    0.9473684210526315,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.20689655172413793,
+                    0.631578947368421,
+                    0.8928571428571429,
+                    0.9818181818181818,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 1.3333333333333333,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.3494708994708993,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 7.5,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 101.97989130434786,
+                "readability_flesch_kincaid": 1.892101449275362,
+                "avg_pos_noun_ratio": 0.09973604826546004,
+                "avg_pos_verb_ratio": 0.2154977375565611,
+                "avg_pos_adj_ratio": 0.05897435897435898,
+                "avg_pos_adv_ratio": 0.05595776772247361,
+                "avg_pos_pron_ratio": 0.20037707390648568,
+                "avg_pos_det_ratio": 0.0869155354449472,
+                "avg_pos_adp_ratio": 0.03544494720965309,
+                "inv_homogen": 0.181517493724823,
+                "novelty": 0.019108389071966936,
+                "theme_uniqueness": 0.5
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "My friend Archie is gravely ill and needs a new organ as hHis Kidney is failing rapidly and in need of a transplant. The NHS empire, our National Health Service says I am a matching donor, I have a problem in as much as I love my friend very much, but I am not 100% sure I want to comply and go ahead with giving up one of my kidneys, even for my dear friend. I am worried about my future health needs.",
+            "result_id": "R_8dFIkEkt84RkgQj_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8dFIkEkt84RkgQj.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8dFIkEkt84RkgQj"
+            },
+            "metrics": {
+                "length_in_chars": 402,
+                "length_in_words": 83,
+                "length_in_unique_words": 57,
+                "length_in_concepts": 31,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.6867469879518072,
+                "avg_word_length_in_chars": 3.7590361445783134,
+                "avg_sentence_length_in_chars": 133.33333333333334,
+                "avg_sentence_length_in_words": 27.666666666666668,
+                "avg_sentence_length_in_unique_words": 23,
+                "length_in_first_person_singular": 11,
+                "length_in_first_person_plural": 1,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 0,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 12,
+                "length_in_third_person": 0,
+                "dsi": 0.21173745727026333,
+                "surprise": 0.015093934830676226,
+                "raw_surprises": [
+                    0.00010230528871027489,
+                    0.01499162954196595
+                ],
+                "n_gram_diversity": [
+                    0.6867469879518072,
+                    0.9634146341463414,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.1566265060240964,
+                    0.6585365853658537,
+                    0.9382716049382716,
+                    0.9875,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 4.666666666666667,
+                "max_dep_num_clauses": 9,
+                "avg_dep_path_length": 3.4122265540394197,
+                "max_dep_path_length": 13,
+                "avg_constituency_tree_depth": 10,
+                "max_constituency_tree_depth": 13,
+                "readability_flesch_ease": 84.00930402930406,
+                "readability_flesch_kincaid": 9.077362637362636,
+                "avg_pos_noun_ratio": 0.1797658862876254,
+                "avg_pos_verb_ratio": 0.07385730211817168,
+                "avg_pos_adj_ratio": 0.13154960981047936,
+                "avg_pos_adv_ratio": 0.06744704570791528,
+                "avg_pos_pron_ratio": 0.15551839464882944,
+                "avg_pos_det_ratio": 0.04821627647714604,
+                "avg_pos_adp_ratio": 0.10270345596432554,
+                "inv_homogen": 0.21394894719123841,
+                "novelty": 0.0075894243872670075,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "Sadness fills the air, as we walk around the 911 memorial site.  We enter the church, complying with their rules.  The organ is being played and the mood is sombre.   The Empire state building will be a welcome treat later today.",
+            "result_id": "R_21jCVrcLzykPU4h_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_21jCVrcLzykPU4h.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_21jCVrcLzykPU4h"
+            },
+            "metrics": {
+                "length_in_chars": 229,
+                "length_in_words": 44,
+                "length_in_unique_words": 36,
+                "length_in_concepts": 24,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.8181818181818182,
+                "avg_word_length_in_chars": 4.159090909090909,
+                "avg_sentence_length_in_chars": 57.25,
+                "avg_sentence_length_in_words": 11,
+                "avg_sentence_length_in_unique_words": 10.25,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 2,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 0,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 2,
+                "length_in_third_person": 1,
+                "dsi": 0.207085146204285,
+                "surprise": 0.03933430408674574,
+                "raw_surprises": [
+                    0.025729316898754684,
+                    0.01697569489479067,
+                    0.016296444336573263
+                ],
+                "n_gram_diversity": [
+                    0.8181818181818182,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.29545454545454547,
+                    0.6744186046511628,
+                    0.9047619047619048,
+                    1.0,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 1,
+                "max_dep_num_clauses": 2,
+                "avg_dep_path_length": 2.1917372454123814,
+                "max_dep_path_length": 5,
+                "avg_constituency_tree_depth": 6,
+                "max_constituency_tree_depth": 8,
+                "readability_flesch_ease": 102.77950000000001,
+                "readability_flesch_kincaid": 2.029,
+                "avg_pos_noun_ratio": 0.27233877233877235,
+                "avg_pos_verb_ratio": 0.11674436674436675,
+                "avg_pos_adj_ratio": 0.04195804195804196,
+                "avg_pos_adv_ratio": 0.022727272727272728,
+                "avg_pos_pron_ratio": 0.07478632478632478,
+                "avg_pos_det_ratio": 0.15714840714840717,
+                "avg_pos_adp_ratio": 0.04700854700854701,
+                "inv_homogen": 0.2080820918083191,
+                "novelty": 0.01689404651922366,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "In 2142, the British empire has a problem. With the lack of jobs many have turned to organ sharks. If you take a loan from them and don't pay them back they give you a warning. After some time has passed, and you still don't comply, they come and gut you for what you have usually taking a liver or kidney. Gutted people are called husks which are marked by the organ sharks. ",
+            "result_id": "R_8kQG02fwq7ubaOB_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8kQG02fwq7ubaOB.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8kQG02fwq7ubaOB"
+            },
+            "metrics": {
+                "length_in_chars": 376,
+                "length_in_words": 75,
+                "length_in_unique_words": 55,
+                "length_in_concepts": 26,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.7333333333333333,
+                "avg_word_length_in_chars": 3.933333333333333,
+                "avg_sentence_length_in_chars": 74.2,
+                "avg_sentence_length_in_words": 15,
+                "avg_sentence_length_in_unique_words": 13.6,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 5,
+                "length_in_third_person_singular": 0,
+                "length_in_third_person_plural": 4,
+                "length_in_first_person": 0,
+                "length_in_third_person": 4,
+                "dsi": 0.21605459635074323,
+                "surprise": 0.021552151867321553,
+                "raw_surprises": [
+                    0.0029066920280456654,
+                    0.0048138181368509725,
+                    0.012972995638847351,
+                    0.022410797930899118
+                ],
+                "n_gram_diversity": [
+                    0.7333333333333333,
+                    0.972972972972973,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16,
+                    0.581081081081081,
+                    0.8904109589041096,
+                    0.9722222222222222,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 2.4,
+                "max_dep_num_clauses": 7,
+                "avg_dep_path_length": 2.4534559643255296,
+                "max_dep_path_length": 6,
+                "avg_constituency_tree_depth": 7.4,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 102.32816867469882,
+                "readability_flesch_kincaid": 3.110506024096388,
+                "avg_pos_noun_ratio": 0.2165112665112665,
+                "avg_pos_verb_ratio": 0.16649184149184149,
+                "avg_pos_adj_ratio": 0.059848484848484845,
+                "avg_pos_adv_ratio": 0.026495726495726495,
+                "avg_pos_pron_ratio": 0.11068376068376069,
+                "avg_pos_det_ratio": 0.12245532245532245,
+                "avg_pos_adp_ratio": 0.09683372183372184,
+                "inv_homogen": 0.1923358905315399,
+                "novelty": 0.0010448537736927888,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "\"I dream of having my own cleaning empire someday\" Sohail smiled at the panel. He was attending an interview for an internship at Organ NIZE - a professional organising company who visit clients and organise and clean their home, office, or other space for them. \"My strengths involve complying with all policies and procedures, following safety regulations, and putting the clients needs first\". ",
+            "result_id": "R_25FmW7vrOnS60wE_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_25FmW7vrOnS60wE.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_25FmW7vrOnS60wE"
+            },
+            "metrics": {
+                "length_in_chars": 397,
+                "length_in_words": 62,
+                "length_in_unique_words": 53,
+                "length_in_concepts": 32,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.8548387096774194,
+                "avg_word_length_in_chars": 5.193548387096774,
+                "avg_sentence_length_in_chars": 131.33333333333334,
+                "avg_sentence_length_in_words": 20.666666666666668,
+                "avg_sentence_length_in_unique_words": 19.333333333333332,
+                "length_in_first_person_singular": 3,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 3,
+                "length_in_third_person": 3,
+                "dsi": 0.21587373784953548,
+                "surprise": 0.01950559252268308,
+                "raw_surprises": [
+                    0.014771657658147308,
+                    0.0047339348645357715
+                ],
+                "n_gram_diversity": [
+                    0.8548387096774194,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16129032258064516,
+                    0.5573770491803278,
+                    0.8833333333333333,
+                    0.9830508474576272,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 4.333333333333333,
+                "max_dep_num_clauses": 8,
+                "avg_dep_path_length": 3.8517528223410578,
+                "max_dep_path_length": 15,
+                "avg_constituency_tree_depth": 10,
+                "max_constituency_tree_depth": 16,
+                "readability_flesch_ease": 67.47400900900904,
+                "readability_flesch_kincaid": 9.975945945945949,
+                "avg_pos_noun_ratio": 0.2603174603174603,
+                "avg_pos_verb_ratio": 0.21957671957671956,
+                "avg_pos_adj_ratio": 0.04603174603174603,
+                "avg_pos_adv_ratio": 0.042328042328042326,
+                "avg_pos_pron_ratio": 0.11058201058201057,
+                "avg_pos_det_ratio": 0.09417989417989418,
+                "avg_pos_adp_ratio": 0.09947089947089947,
+                "inv_homogen": 0.210305917263031,
+                "novelty": 0.0006831367712772929,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The Empire Theatre was a classic. It was fitted with beautiful, original Art Deco features and an organ set by the stage. It wouldn't comply with any of today's building regulations but I don't think anyone would want to change it.",
+            "result_id": "R_8wT7Ix8TsW7XbEo_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8wT7Ix8TsW7XbEo.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8wT7Ix8TsW7XbEo"
+            },
+            "metrics": {
+                "length_in_chars": 231,
+                "length_in_words": 44,
+                "length_in_unique_words": 37,
+                "length_in_concepts": 19,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.8409090909090909,
+                "avg_word_length_in_chars": 4.25,
+                "avg_sentence_length_in_chars": 76.33333333333333,
+                "avg_sentence_length_in_words": 14.666666666666666,
+                "avg_sentence_length_in_unique_words": 13.666666666666666,
+                "length_in_first_person_singular": 1,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 3,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 1,
+                "length_in_third_person": 3,
+                "dsi": 0.21134376525878906,
+                "surprise": 0.022949846964033793,
+                "raw_surprises": [
+                    0.018127136760287793,
+                    0.004822710203746
+                ],
+                "n_gram_diversity": [
+                    0.8409090909090909,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.22727272727272727,
+                    0.6511627906976745,
+                    0.8571428571428571,
+                    0.9512195121951219,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 2.3333333333333335,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.6485380116959063,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 8,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 86.6075,
+                "readability_flesch_kincaid": 5.154166666666669,
+                "avg_pos_noun_ratio": 0.163510101010101,
+                "avg_pos_verb_ratio": 0.10227272727272728,
+                "avg_pos_adj_ratio": 0.041666666666666664,
+                "avg_pos_adv_ratio": 0.0,
+                "avg_pos_pron_ratio": 0.09659090909090909,
+                "avg_pos_det_ratio": 0.15277777777777776,
+                "avg_pos_adp_ratio": 0.07196969696969698,
+                "inv_homogen": 0.2036830508708954,
+                "novelty": 0.008376808410215542,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "Donation is mandatory for the empire to survive. Some will not comply, but forcible removal of an organ is traumatic and often leads to severe mental illness. We learn this in our early years, so most are ready for the procedure, but some do question. We have to keep our best and most talented alive for as long as possible if we are to find a solution to ",
+            "result_id": "R_2zUqf0C1wjV8ASQ_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2zUqf0C1wjV8ASQ.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2zUqf0C1wjV8ASQ"
+            },
+            "metrics": {
+                "length_in_chars": 357,
+                "length_in_words": 68,
+                "length_in_unique_words": 51,
+                "length_in_concepts": 26,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.75,
+                "avg_word_length_in_chars": 4.161764705882353,
+                "avg_sentence_length_in_chars": 88.25,
+                "avg_sentence_length_in_words": 17,
+                "avg_sentence_length_in_unique_words": 16,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 5,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 0,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 5,
+                "length_in_third_person": 0,
+                "dsi": 0.21312437681051402,
+                "surprise": 0.01899816592534383,
+                "raw_surprises": [
+                    0.018413619862662434,
+                    0.00593660010231864,
+                    0.0041470289230346735
+                ],
+                "n_gram_diversity": [
+                    0.75,
+                    0.9850746268656716,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.16176470588235295,
+                    0.582089552238806,
+                    0.8939393939393939,
+                    0.9846153846153847,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 3.25,
+                "max_dep_num_clauses": 5,
+                "avg_dep_path_length": 2.6004934904069152,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 7.75,
+                "max_constituency_tree_depth": 10,
+                "readability_flesch_ease": 81.73587837837839,
+                "readability_flesch_kincaid": 6.454729729729731,
+                "avg_pos_noun_ratio": 0.15450991609458428,
+                "avg_pos_verb_ratio": 0.11795226290363589,
+                "avg_pos_adj_ratio": 0.1690265064836003,
+                "avg_pos_adv_ratio": 0.059655479277904905,
+                "avg_pos_pron_ratio": 0.10132214594457156,
+                "avg_pos_det_ratio": 0.0691663488431223,
+                "avg_pos_adp_ratio": 0.08670226290363589,
+                "inv_homogen": 0.1807869279384613,
+                "novelty": 0.004815585306765624,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "At the heart of the new empire, compliance was mandatory. You really had no choice if you wanted to live in the upper echelons of society. Every organ in your body was genetically modified to allow you to breathe the air, which became more polluted each year. Alongside these helpful modifications were some more sinister tweaks that allowed the administration to shut them down should you fail to fall in line and comply.  The poor souls in the down world struggled to survive every day, but at least they knew freedom.",
+            "result_id": "R_27E8zaS1IXk1NPZ_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_27E8zaS1IXk1NPZ.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_27E8zaS1IXk1NPZ"
+            },
+            "metrics": {
+                "length_in_chars": 520,
+                "length_in_words": 92,
+                "length_in_unique_words": 69,
+                "length_in_concepts": 40,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.75,
+                "avg_word_length_in_chars": 4.586956521739131,
+                "avg_sentence_length_in_chars": 103.4,
+                "avg_sentence_length_in_words": 18.4,
+                "avg_sentence_length_in_unique_words": 17.4,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 5,
+                "length_in_third_person_singular": 0,
+                "length_in_third_person_plural": 2,
+                "length_in_first_person": 0,
+                "length_in_third_person": 2,
+                "dsi": 0.21180738248886205,
+                "surprise": 0.011005544236728115,
+                "raw_surprises": [
+                    0.008519182602564485,
+                    0.0018059296740426112,
+                    0.007469005436978787,
+                    0.004216970759870348
+                ],
+                "n_gram_diversity": [
+                    0.75,
+                    0.989010989010989,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.13043478260869565,
+                    0.45054945054945056,
+                    0.7444444444444445,
+                    0.8876404494382022,
+                    0.9545454545454546
+                ],
+                "avg_dep_num_clauses": 2.8,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 2.8624777204525755,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 10,
+                "max_constituency_tree_depth": 14,
+                "readability_flesch_ease": 73.17100000000002,
+                "readability_flesch_kincaid": 8.022000000000002,
+                "avg_pos_noun_ratio": 0.21707671957671956,
+                "avg_pos_verb_ratio": 0.13855820105820105,
+                "avg_pos_adj_ratio": 0.11017195767195767,
+                "avg_pos_adv_ratio": 0.03895502645502645,
+                "avg_pos_pron_ratio": 0.0943121693121693,
+                "avg_pos_det_ratio": 0.14171957671957672,
+                "avg_pos_adp_ratio": 0.11896825396825397,
+                "inv_homogen": 0.19308437705039977,
+                "novelty": 0.007449573950069566,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The Romans Empire was big, bold and powerful. Each of the small provinces were required to comply with its laws at all times. A central group, also known as the organ of the empire ensured that things ran smoothly and everyone complied. ",
+            "result_id": "R_2bxsVUkaSaFXjdD_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_2bxsVUkaSaFXjdD.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_2bxsVUkaSaFXjdD"
+            },
+            "metrics": {
+                "length_in_chars": 237,
+                "length_in_words": 42,
+                "length_in_unique_words": 36,
+                "length_in_concepts": 19,
+                "length_in_sentences": 3,
+                "type_token_ratio": 0.8571428571428571,
+                "avg_word_length_in_chars": 4.523809523809524,
+                "avg_sentence_length_in_chars": 78,
+                "avg_sentence_length_in_words": 14,
+                "avg_sentence_length_in_unique_words": 13.666666666666666,
+                "length_in_first_person_singular": 0,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 1,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 0,
+                "length_in_third_person": 1,
+                "dsi": 0.21256054563131946,
+                "surprise": 0.016064058409796828,
+                "raw_surprises": [
+                    0.014985338846842444,
+                    0.0010787195629543833
+                ],
+                "n_gram_diversity": [
+                    0.8571428571428571,
+                    0.975609756097561,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.2857142857142857,
+                    0.7560975609756098,
+                    0.9,
+                    0.9743589743589743,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 2.6666666666666665,
+                "max_dep_num_clauses": 4,
+                "avg_dep_path_length": 2.649074074074074,
+                "max_dep_path_length": 8,
+                "avg_constituency_tree_depth": 6.666666666666667,
+                "max_constituency_tree_depth": 8,
+                "readability_flesch_ease": 86.53333333333335,
+                "readability_flesch_kincaid": 5.081702127659575,
+                "avg_pos_noun_ratio": 0.1368421052631579,
+                "avg_pos_verb_ratio": 0.11461988304093566,
+                "avg_pos_adj_ratio": 0.16476608187134503,
+                "avg_pos_adv_ratio": 0.03508771929824561,
+                "avg_pos_pron_ratio": 0.06198830409356725,
+                "avg_pos_det_ratio": 0.13874269005847953,
+                "avg_pos_adp_ratio": 0.10175438596491228,
+                "inv_homogen": 0.19998639583587646,
+                "novelty": 0.0059432476651547494,
+                "theme_uniqueness": 1.0
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "I was privalidged to attend a big show last week. There was a man playing the organ. Apparently he started with one and then bought a store . He started his own company and now has grown to a milion pound empire. As it was so entertaining i found it hard to comply with the rules and not start singing and clapping.",
+            "result_id": "R_8U0c5Ms0PJ9VYTm_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8U0c5Ms0PJ9VYTm.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8U0c5Ms0PJ9VYTm"
+            },
+            "metrics": {
+                "length_in_chars": 315,
+                "length_in_words": 61,
+                "length_in_unique_words": 45,
+                "length_in_concepts": 23,
+                "length_in_sentences": 5,
+                "type_token_ratio": 0.7377049180327869,
+                "avg_word_length_in_chars": 4.081967213114754,
+                "avg_sentence_length_in_chars": 62.2,
+                "avg_sentence_length_in_words": 12.2,
+                "avg_sentence_length_in_unique_words": 11.8,
+                "length_in_first_person_singular": 2,
+                "length_in_first_person_plural": 0,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 5,
+                "length_in_third_person_plural": 0,
+                "length_in_first_person": 2,
+                "length_in_third_person": 5,
+                "dsi": 0.2150784643742407,
+                "surprise": 0.024408844964844842,
+                "raw_surprises": [
+                    0.017261395851771028,
+                    0.001258502403895051,
+                    0.019899060328801482,
+                    0.010398731345222123
+                ],
+                "n_gram_diversity": [
+                    0.7377049180327869,
+                    0.9833333333333333,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.19672131147540983,
+                    0.5833333333333334,
+                    0.8813559322033898,
+                    0.9655172413793104,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 2.8,
+                "max_dep_num_clauses": 8,
+                "avg_dep_path_length": 2.3501579691437704,
+                "max_dep_path_length": 6,
+                "avg_constituency_tree_depth": 7,
+                "max_constituency_tree_depth": 9,
+                "readability_flesch_ease": 92.17336363636365,
+                "readability_flesch_kincaid": 3.6822424242424248,
+                "avg_pos_noun_ratio": 0.19428571428571428,
+                "avg_pos_verb_ratio": 0.2057142857142857,
+                "avg_pos_adj_ratio": 0.07428571428571429,
+                "avg_pos_adv_ratio": 0.0642857142857143,
+                "avg_pos_pron_ratio": 0.12714285714285714,
+                "avg_pos_det_ratio": 0.12142857142857143,
+                "avg_pos_adp_ratio": 0.04428571428571429,
+                "inv_homogen": 0.17412232637405395,
+                "novelty": 0.0009074101793122846,
+                "theme_uniqueness": 0.3333333333333333
+            }
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "output": "The mighty Roman empire we learned about in school. I knew that I needed to write an essay on it to comply with my qualification requirements, but I didn't really want to. Surely somewhere in my brain I could find a way of wriggling out of it. After all they keep telling us what a wonderful organ our brain is.",
+            "result_id": "R_8FjH6e5PsshRtjr_Q3",
+            "metadata": {
+                "source": "../experiments/outputs/human/pilot/run1/R_8FjH6e5PsshRtjr.json",
+                "model": "human",
+                "model_args": null,
+                "participant_id": "R_8FjH6e5PsshRtjr"
+            },
+            "metrics": {
+                "length_in_chars": 311,
+                "length_in_words": 61,
+                "length_in_unique_words": 50,
+                "length_in_concepts": 21,
+                "length_in_sentences": 4,
+                "type_token_ratio": 0.819672131147541,
+                "avg_word_length_in_chars": 4.049180327868853,
+                "avg_sentence_length_in_chars": 77,
+                "avg_sentence_length_in_words": 15.25,
+                "avg_sentence_length_in_unique_words": 14,
+                "length_in_first_person_singular": 6,
+                "length_in_first_person_plural": 3,
+                "length_in_second_person": 0,
+                "length_in_third_person_singular": 2,
+                "length_in_third_person_plural": 1,
+                "length_in_first_person": 9,
+                "length_in_third_person": 3,
+                "dsi": 0.20732518292608715,
+                "surprise": 0.034236380978236114,
+                "raw_surprises": [
+                    0.02653295014585766,
+                    0.02028848741735728,
+                    0.0045331339041392305
+                ],
+                "n_gram_diversity": [
+                    0.819672131147541,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "pos_diversity": [
+                    0.18032786885245902,
+                    0.5833333333333334,
+                    0.8983050847457628,
+                    0.9827586206896551,
+                    1.0
+                ],
+                "avg_dep_num_clauses": 2.5,
+                "max_dep_num_clauses": 6,
+                "avg_dep_path_length": 2.571708463949843,
+                "max_dep_path_length": 7,
+                "avg_constituency_tree_depth": 8,
+                "max_constituency_tree_depth": 11,
+                "readability_flesch_ease": 87.54204545454546,
+                "readability_flesch_kincaid": 5.148030303030307,
+                "avg_pos_noun_ratio": 0.15860042735042734,
+                "avg_pos_verb_ratio": 0.15165598290598292,
+                "avg_pos_adj_ratio": 0.07478632478632478,
+                "avg_pos_adv_ratio": 0.08221153846153846,
+                "avg_pos_pron_ratio": 0.20678418803418805,
+                "avg_pos_det_ratio": 0.07409188034188034,
+                "avg_pos_adp_ratio": 0.14305555555555555,
+                "inv_homogen": 0.18989261984825134,
+                "novelty": 0.01641397307561937,
+                "theme_uniqueness": 1.0
+            }
+        }
+    ]
+}

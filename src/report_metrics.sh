@@ -31,9 +31,13 @@ report_name=${1:-"run1_report1"}
 
 # pilot 2
 python report_metrics.py -r "../experiments/outputs/gpt-4/pilot2" \
+                            "../experiments/outputs/gpt-4o/pilot2" \
                             "../experiments/outputs/gemini-1.5-flash/pilot2" \
+                            "../experiments/outputs/gemini-1.5-pro/pilot2" \
                             "../experiments/outputs/claude-3-5-sonnet-20240620/pilot2" \
+                            "../experiments/outputs/claude-3-5-haiku-20241022/pilot2" \
                             "../experiments/outputs/llama-3.1-405b-instruct/pilot2" \
+                            "../experiments/outputs/llama-3.1-70b-instruct/pilot2" \
                             "../experiments/outputs/human/pilot/run1" \
                             -o ../experiments/reports/pilot2/${report_name} \
                             -c ../experiments/reports/pilot2/${report_name}/config.json
