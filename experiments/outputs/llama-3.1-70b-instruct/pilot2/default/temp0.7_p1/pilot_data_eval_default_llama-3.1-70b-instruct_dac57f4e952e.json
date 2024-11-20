@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "llama-3.1-70b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 1.0,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the mystical realm of Aethoria, the ancient trees held the secrets of the land's forgotten magic. The village elder, a wise and aged druid, would often chant incantations that would awaken the Petrol Bloom – a rare and wondrous flower that only bloomed under the light of a full moon. The druid would then carefully harvest the delicate petals and mix them with the essence of the Diesel Root, a potent and ancient plant that only grew in the darkest depths of the forest. This enchanted elixir was then poured into the Heartwood Pump, a magnificent wooden contraption that stood at the center of the village, and as the liquid flowed through its intricate carvings, the pump would begin to glow with an ethereal light. As the light enveloped the village, the inhabitants would be filled with a deep sense of peace and harmony.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 177
+            },
+            "result_id": "ecb3ed6fa5ee"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a small, mystical shop, a peculiar artist used a magical stamp to bring her clay creations to life. As she worked, a whispered letter from the past echoed through the air, guiding her skilled hands. The letter was a cryptic recipe, one that required the artist to send her creations dancing into the night, where they would take on lives of their own. Under the moonlight, the clay figures twirled and leaped, their forms shifting and morphing as they absorbed the magic of the stamp. As the sun rose, the artist's creations froze, awaiting the next night's enchantment.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 124
+            },
+            "result_id": "905e350bfa87"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the depths of a mystical forest, a young apprentice named Aria stumbled upon an ancient, glowing organ that seemed to hold the secrets of the universe. As she delicately pressed its ethereal keys, the instrument began to whisper cryptic instructions, urging her to comply with the whispers of the forest itself. The trees, it seemed, were the remnants of a long-lost empire, their bark inscribed with the memories of a civilization that once thrived beneath the stars. With each note, Aria felt the forest's energy coursing through her veins, guiding her towards a hidden clearing where the empire's last remnants awaited her discovery. There, she found the source of the organ's power: a glowing, crystalline heart that pulsed with the rhythm of the forest.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 158
+            },
+            "result_id": "2549514cfa79"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the mystical realm of Tenebrous, where an eternal gloom shrouded the land, the ancient sorceress Lyra had discovered the secret to bending reality. By harnessing the essence of a rare, luminescent flower, she could create pockets of existence in the void, allowing entire worlds to exist within the confines of a delicate glass orb. However, each new creation came at a terrible payment - the slow draining of her own life force, which Lyra willingly surrendered to satiate her thirst for knowledge and creation. As her final days drew near, Lyra gazed upon the countless worlds she had brought into being, suspended like glowing embers within the dark expanse. And in that moment, she knew her legacy would endure, even as the gloom consumed her own mortal form.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 165
+            },
+            "result_id": "851a7d31809b"
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "gpt-4o",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": null,
+            "top_p": 0.9,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "In the quiet town of Eldergrove, an ancient steam pump stood forgotten at the edge of a vast, misty moor. Legends whispered that it once drew liquid dreams from the earth, a blend neither petrol nor diesel, but a substance of pure imagination. One night, a curious girl named Elara discovered the pump's rusted handle and gave it a gentle turn. To her astonishment, vibrant hues spilled forth, painting stories across the sky and reviving the town's faded dreams. Eldergrove awoke to a new dawn, where every heart beat with the rhythm of wonder.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 120
+            },
+            "result_id": "45c1d8db8342"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "In the dusty attic of her grandmother's house, Lily discovered an ancient stamp collection hidden inside a leather-bound book. Each stamp told a story, depicting distant lands and forgotten eras that seemed to whisper secrets of the past. Among them was a peculiar stamp, rumored to send anyone who touched it into a vivid dreamscape. Curious and eager for adventure, Lily pressed the stamp to her palm and drifted into a surreal world of swirling colors and floating letters. As she navigated this dream realm, she realized that each letter she encountered was a message from her ancestors, guiding her on a journey of self-discovery.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 123
+            },
+            "result_id": "c26e294b4c2d"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "In the heart of the ancient forest, a mysterious organ played haunting melodies. Each note resonated through the trees, summoning creatures of the hidden empire. The animals gathered, compelled to comply with the enigmatic music's call. Legend spoke of a spirit, trapped within the instrument, yearning for freedom. Only the purest soul could release it from its melodic prison.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 73
+            },
+            "result_id": "0782f31a3c5f"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In the forgotten town of Everveil, where gloom clung to the cobblestones like a persistent fog, legends spoke of an ancient library that held secrets to the universe. Scholars believed that within its walls, the concept of time itself did not exist. Those who sought knowledge were required to make a unique payment: a memory they cherished most. One day, a curious traveler named Elara ventured into the library, offering the memory of her first sunrise. As she whispered her secret to the ancient librarian, the walls shimmered, revealing a doorway to realms beyond imagination.",
+            "usage": {
+                "input_tokens": 144,
+                "output_tokens": 114
+            },
+            "result_id": "2145b7ccd35a"
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_simple.json",
+        "template": "simple",
+        "size": 4,
+        "shot_path": null,
+        "model": "gpt-4o",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": null,
+            "top_p": 1.0,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "At the heart of the bustling city, there stood an old music shop known as \"The Petrol Pump.\" Inside, the air was filled with melodies that seemed to run on the rhythm of a diesel engine. The owner, Mr. Arlo, claimed each piano key pumped life into weary souls. People flocked there not for fuel, but for the symphony that recharged their spirits. The shop's name reminded everyone that sometimes, music fuels the heart better than any petrol.",
+            "usage": {
+                "input_tokens": 162,
+                "output_tokens": 96
+            },
+            "result_id": "097d2e5803c3"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In the enchanted forest, animals gathered for the annual Stampede Festival. Each creature had a special letter embroidered on their costumes, representing their clan. The wise owl, Eldric, was chosen to send the first signal for the festivities to begin. With a swift flap of his wings, he released a cascade of colorful feathers. Joyful cheers erupted, as the magical celebration officially began.",
+            "usage": {
+                "input_tokens": 163,
+                "output_tokens": 77
+            },
+            "result_id": "b7f2491d223b"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In the heart of the forgotten forest, an ancient tree stood, its roots like veins of a grand organ. Legends spoke of a hidden empire once thriving beneath its sprawling branches. The woodland creatures would gather to hear the whispers of the wind, which they believed could reveal secrets of the past. One day, a curious fox dared to climb the tree, hoping to learn the truth. As the breeze rustled the leaves, it murmured, \"Comply with nature, and she will reveal her deepest mysteries.\"",
+            "usage": {
+                "input_tokens": 159,
+                "output_tokens": 102
+            },
+            "result_id": "2a7609d3405e"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In a tiny village shrouded in gloom, there existed a peculiar tradition. Every harvest moon, villagers offered a payment of stories to the ancient oak tree. Each tale would breathe life into the tree, making it sway with joy. One year, a young girl named Elara told a forgotten story of stars. To everyone's amazement, twinkling lights began to exist in the oak's branches, illuminating the entire village.",
+            "usage": {
+                "input_tokens": 161,
+                "output_tokens": 86
+            },
+            "result_id": "1685170d1062"
+        }
+    ]
+}

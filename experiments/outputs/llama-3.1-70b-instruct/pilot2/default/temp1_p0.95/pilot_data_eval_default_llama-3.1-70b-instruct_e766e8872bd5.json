@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "llama-3.1-70b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 1.0,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of a mystical forest, a hidden village relied on ancient magic to power their homes and industry. The villagers would carefully mix a blend of enchanted petrol and concentrated diesel essence to fuel their magnificent, glowing pump organs. These musical instruments, infused with magical properties, would pump a hypnotic, pulsating melody throughout the village, influencing the growth of flora and fauna alike. As the music swelled, the village's central tree would bloom with vibrant, ethereal flowers, drawing in visitors from far and wide. On quiet evenings, the soft hum of the pump organs could be heard whispering secrets to the forest, keeping its ancient magic alive.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 132
+            },
+            "result_id": "985068417bd2"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "As the last rays of sunlight faded, a group of fireflies began to dance, their bioluminescent abdomens flashing in a mesmerizing pattern that resembled a secret code, each flash serving as a unique stamp that synchronized their choreographed routine. The lead firefly, named Luna, took center stage, using her flashes to convey a vital letter of warning to the rest of the swarm about an impending storm. The message was received and deciphered by a clever young firefly named Nova, who swiftly sprang into action to help the swarm prepare for the impending danger. Together, they worked tirelessly to send their fellow fireflies to safety, guiding them to the shelter of a nearby hollow tree. As the storm raged on outside, the fireflies huddled together in their cozy sanctuary, grateful for Luna's urgent message and Nova's quick thinking.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 172
+            },
+            "result_id": "4e848b02783b"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Echoaria, a lone figure known only as the Keeper tended to a mystical organ - an ancient, sentient instrument capable of manipulating the fabric of reality. The being's harmonious melodies had once brought balance to the land, but a dark sorceress, ruler of the twisted empire of Umbra, sought to exploit the organ's power for her own sinister purposes. As the Keeper refused to comply with the sorceress's demands, the dark forces launched a brutal assault on Echoaria. In the heart of the battle, the Keeper played a defiant melody on the organ, unleashing a blast of sonic energy that shattered the empire's dark magic. Amid the ruins, the Keeper vanished, leaving behind an eerie silence and the whispered promise of a harmonious rebirth.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 160
+            },
+            "result_id": "1b3dd9271efc"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the depths of a mystical forest, the trees bore the weight of a perpetual gloom that seemed to seep from their bark like a slow-moving mist. Amidst this eerie atmosphere, a reclusive alchemist pored over ancient tomes in search of a long-lost elixir, said to be the only payment that would unlock the secrets of a hidden realm. As she carefully transcribed the cryptic recipes, her quill danced across the parchment, leaving trails of glittering silver dust that seemed to exist in a world of their own. With each stroke, the boundaries between reality and myth blurred, and the air vibrated with an otherworldly energy. In this swirling vortex, the alchemist discovered a hidden truth – one that would change the course of her existence forever.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 161
+            },
+            "result_id": "78d6df784800"
+        }
+    ]
+}

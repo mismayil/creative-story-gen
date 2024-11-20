@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_simple.json",
+        "template": "simple",
+        "size": 4,
+        "shot_path": null,
+        "model": "claude-3-5-haiku-20241022",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.9,
+            "max_tokens": 256,
+            "top_p": 0.7,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In the abandoned factory, Sarah discovered an ancient pump rusting beside forgotten machinery. Whispers of industrial secrets echoed through the cavernous space, where diesel-stained blueprints lay scattered like forgotten memories. Her grandfather's cryptic journal hinted at a revolutionary energy invention that could transform petrol consumption forever. Carefully, she traced the intricate diagrams, her fingers trembling with the weight of potential scientific breakthrough. As dust motes danced around her, Sarah realized she might be holding the key to a world-changing technology that could redefine humanity's relationship with fuel.",
+            "usage": {
+                "input_tokens": 163,
+                "output_tokens": 126
+            },
+            "result_id": "a1b96982daf9"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In the dusty attic of her grandmother's abandoned house, Lily discovered an ancient wooden box with intricate carvings. Her trembling fingers traced the faded stamp of a forgotten postal service, its edges worn by time's relentless touch. The letter inside seemed to whisper secrets from a world long past, its yellowed pages filled with cryptic symbols that danced like shadows. Determined to unravel the mystery, she resolved to send her findings to a historian who specialized in arcane communications. As moonlight filtered through the cobwebbed window, Lily felt the weight of untold stories pressing against her consciousness, waiting to be unleashed.",
+            "usage": {
+                "input_tokens": 164,
+                "output_tokens": 141
+            },
+            "result_id": "0287492c5d7e"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In the dusty attic of an abandoned monastery, Sarah discovered an ancient organ with keys that seemed to whisper forgotten melodies. The instrument's intricate wooden frame bore strange symbols reminiscent of a long-lost empire's cryptic language. When she touched the first key, a sudden vibration compelled her to comply with an unspoken musical command that resonated deep within her bones. Shadows danced across the walls as haunting notes filled the room, transforming the silent space into a living, breathing entity. Each chord seemed to unlock a fragment of a mysterious story that had been waiting centuries to be heard.",
+            "usage": {
+                "input_tokens": 159,
+                "output_tokens": 132
+            },
+            "result_id": "001fcd566b48"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In the forgotten caverns beneath an ancient library, a peculiar creature made of living shadows began to exist. Its form shifted like smoke, casting a perpetual gloom across crumbling stone shelves filled with forgotten manuscripts. The creature understood only one currency: stories whispered by long-dead authors, which it collected as a strange payment for maintaining the underground realm of forgotten knowledge. Manuscripts would tremble and rise from their dusty resting places, offering themselves as tribute to this ethereal guardian of lost words. With each story absorbed, the shadow being grew more substantial, its spectral edges becoming sharper against the dim, musty darkness.",
+            "usage": {
+                "input_tokens": 162,
+                "output_tokens": 136
+            },
+            "result_id": "c98c5d6f627d"
+        }
+    ]
+}

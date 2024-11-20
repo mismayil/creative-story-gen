@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "llama-3.1-70b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.7,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the mystical realm of Aethoria, ancient alchemists harnessed the essence of petrol and diesel to fuel their most powerful spells. Within the heart of the Great Library, a mysterious pump hummed softly, infusing the air with an otherworldly energy that amplified the incantations of the adepts. As the moon reached its zenith, the pump's rhythmic pulse synchronized with the beat of the alchemists' drums, unleashing a spectacular display of magical fireworks that illuminated the night sky. The symphony of light and sound was said to awaken the dormant secrets of the ancient tomes, allowing the alchemists to unlock new and wondrous mysteries. And so, the pump remained the beating heart of Aethoria's mystical pursuits, a testament to the transformative power of alchemy.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 165
+            },
+            "result_id": "e1be186f3ab7"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the mystical realm of Aethoria, the ancient art of Chronomancy allowed its practitioners to send ripples through time by inscribing intricate patterns on the fabric of reality. Aria, a skilled Chronomancer, carefully crafted a letter of intent, weaving the threads of fate into a delicate dance that would alter the course of history. As she finished the final stroke, a burst of energy released a tiny, glowing stamp that sealed her design, imbuing it with the essence of the cosmos. The stamp, now a sentient being, was tasked with navigating the labyrinthine paths of time to deliver Aria's message to a pivotal moment in the past. With a whispered promise, the stamp vanished into the swirling vortex, leaving Aria to await the consequences of her actions.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 158
+            },
+            "result_id": "5822081326a8"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the mystical realm of Aethereia, a lone sorceress named Lyra possessed an ancient, sentient organ that could manipulate the fabric of reality. This powerful artifact, known as the Echokeeper, had been passed down through generations of Aethereian mystics, each sworn to wield its power for the greater good. However, a dark force known as the Shadow Empire sought to claim the Echokeeper for their own nefarious purposes, forcing Lyra to comply with the artifact's cryptic instructions to safeguard its power. As the Shadow Empire's dark legions closed in, Lyra found herself transported to a realm of eerie silence, where the Echokeeper's haunting melodies became her only solace. There, she prepared to face the darkness head-on, her fingers poised to unleash the Echokeeper's fury upon the Shadow Empire.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 170
+            },
+            "result_id": "31bdcf0c330b"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the mystical realm of Aethoria, a powerful sorceress named Lyra was tasked with collecting a rare, ethereal payment from the Dreamweaver, a being who spun the fabric of reality. The Dreamweaver's lair was shrouded in an eternal gloom, where the very air was woven from the darkest threads of forgotten memories. To reach the lair, Lyra had to navigate a labyrinth of mirrors, where reflections of forgotten souls seemed to exist in a realm parallel to her own. As she finally reached the Dreamweaver, Lyra discovered that the payment was not gold or treasure, but a single, shimmering thread of her own forgotten past. With the thread in hand, Lyra's existence was forever changed, and the fabric of reality was rewoven.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 163
+            },
+            "result_id": "4a5812bd3253"
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "gpt-4o",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": null,
+            "top_p": 0.7,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "In the heart of the desert, an ancient civilization thrived, their technology fueled by a mysterious liquid they called \"petrol of the gods.\" They worshipped a colossal stone pump, which drew this precious resource from the depths of the earth. The high priests, guardians of the sacred diesel flame, claimed it was a gift from celestial beings. One day, a young acolyte named Zara discovered a hidden chamber beneath the pump, filled with intricate carvings of stars and machines. As she deciphered the symbols, she realized they foretold a future where the true power lay not in the liquid, but in the knowledge to harness it.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 129
+            },
+            "result_id": "334a6e4cfc55"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "In the quaint village of Eldergrove, the postmaster discovered an ancient stamp that glowed with an ethereal light. Legends whispered that this stamp could send a letter across dimensions, revealing secrets of the universe. Curious, young Elara wrote a letter to the stars, asking for guidance on her destiny. As she placed the stamp on her parchment, a cosmic breeze whisked it away into the night sky. Days later, she received a reply written in stardust, mapping her journey to become the village's first celestial navigator.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 108
+            },
+            "result_id": "e78e6e993d03"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "In the heart of the ancient forest, a peculiar tree stood, its bark resembling the intricate pipes of an organ. The villagers believed it was the remnant of a forgotten empire, whispering secrets of old through its rustling leaves. Young Elara, drawn by its mysterious allure, dared to climb its twisted branches. As she reached the top, a voice echoed in her mind, urging her to comply with the forest's ancient will. She descended with newfound wisdom, forever changed by the tree's haunting melody.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 103
+            },
+            "result_id": "af705d76e48a"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In the forgotten town of Eldergrove, a perpetual gloom hung over the ancient library. The librarian, an enigmatic figure, accepted no payment for the knowledge contained within its dusty tomes. Rumor had it that the books did not merely exist on the shelves; they whispered secrets to those who dared to listen. One stormy evening, a curious traveler discovered a hidden passageway behind a false wall of books. Within, he found a glowing manuscript that promised to lift the eternal gloom from Eldergrove forever.",
+            "usage": {
+                "input_tokens": 144,
+                "output_tokens": 103
+            },
+            "result_id": "c5da3332befe"
+        }
+    ]
+}

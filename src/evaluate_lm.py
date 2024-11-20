@@ -29,7 +29,7 @@ from utils import read_json, write_json, generate_unique_id, batched
 
 OPENAI_MODELS = ["gpt-3.5-turbo", "gpt-4", "gpt-4-0125-preview", "gpt-4o-2024-08-06", "gpt-4o"]
 GOOGLE_MODELS = ["gemini-1.5-flash", "gemini-1.5-pro"]
-ANTHROPIC_MODELS = ["claude-3-5-sonnet-20240620", "claude-3-opus-20240229", "claude-3-sonnet-20240229", "claude-3-haiku-20240307"]
+ANTHROPIC_MODELS = ["claude-3-5-sonnet-20240620", "claude-3-5-haiku-20241022", "claude-3-opus-20240229", "claude-3-sonnet-20240229", "claude-3-haiku-20240307"]
 TOGETHER_MODELS = ["llama-3.1-70b-instruct", "llama-3.1-405b-instruct"]
 API_MODELS = OPENAI_MODELS + GOOGLE_MODELS + ANTHROPIC_MODELS + TOGETHER_MODELS
 HF_MODELS = []
@@ -194,7 +194,7 @@ def evaluate_hf_model(model, tokenizer, batch, model_args=None, device="cuda"):
     for sample in batch:
         messages = []
 
-        if sample["system_prompt"]:
+        if sample.get("system_prompt"):
             messages.append({"role": "system", "content": sample["system_prompt"].strip()})
         
         messages.append({"role": "user", "content": sample["user_prompt"].strip()})
@@ -226,11 +226,11 @@ async def evaluate_api_model(client, model, batch, model_args=None):
     
     for sample in batch:
         if model in OPENAI_MODELS+TOGETHER_MODELS:
-            tasks.append(asyncio.create_task(evaluate_openai_model(client, model, sample["user_prompt"], sample["system_prompt"], model_args=model_args)))
+            tasks.append(asyncio.create_task(evaluate_openai_model(client, model, sample["user_prompt"], sample.get("system_prompt"), model_args=model_args)))
         elif model in GOOGLE_MODELS:
-            tasks.append(asyncio.create_task(evaluate_google_model(client, model, sample["user_prompt"], sample["system_prompt"], model_args=model_args)))
+            tasks.append(asyncio.create_task(evaluate_google_model(client, model, sample["user_prompt"], sample.get("system_prompt"), model_args=model_args)))
         elif model in ANTHROPIC_MODELS:
-            tasks.append(asyncio.create_task(evaluate_anthropic_model(client, model, sample["user_prompt"], sample["system_prompt"], model_args=model_args)))
+            tasks.append(asyncio.create_task(evaluate_anthropic_model(client, model, sample["user_prompt"], sample.get("system_prompt"), model_args=model_args)))
         else:
             raise ValueError(f"Model {model} not supported")
     

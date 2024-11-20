@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_simple.json",
+        "template": "simple",
+        "size": 4,
+        "shot_path": null,
+        "model": "llama-3.1-70b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.9,
+            "max_tokens": 256,
+            "top_p": 1.0,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In a small, seaside town, a mysterious old man managed a large, rusty machine that ran on petrol. The machine was a relic of a long-forgotten era, and its purpose was a closely guarded secret. At night, when the townspeople slept, the old man would feed the machine a rare type of diesel to make it roar with energy. As the machine churned and groaned, the old man would work a large, wooden pump to release its incredible force. The townspeople awoke to find that the machine had created a beautiful, intricate sculpture on the beach overnight, thanks to the magic of the old man's machine.",
+            "usage": {
+                "input_tokens": 187,
+                "output_tokens": 131
+            },
+            "result_id": "d9f9aaa47dd8"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "The wise old philosopher tried to stamp out the trouble on the streets with her thought-provoking words. One rainy night, she hid a mysterious letter inside a worn book, hoping it would find its way to someone in need. As she listened to the rhythm of the raindrops on the roof, she began to hum a soothing melody to send the darkness away. Her music was a powerful force that could mend broken hearts and bring people together. Years later, her legend lived on, inspiring generations to send love and kindness out into the world.",
+            "usage": {
+                "input_tokens": 188,
+                "output_tokens": 110
+            },
+            "result_id": "401a28fbab0d"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In a mystical realm, a young apprentice was tasked with constructing an intricate organ, hidden deep within the forgotten temple of an ancient empire. Legend had it that the celestial sounds produced by this organ possessed the power to heal the wounded heart. As she worked tirelessly to restore the instrument to its former glory, she began to uncover cryptic messages scrawled across the stone walls, warning those who listened to comply with the whispers of the universe. The apprentice soon discovered that the organ's melodies held the key to unlocking the secrets of the long-lost empire, hidden within the harmonies and rhythms. As she finally brought the organ back to life, its enchanting sounds compelled her to comply with its celestial will, guiding her on a journey to reclaim the lost heritage of the mystical empire.",
+            "usage": {
+                "input_tokens": 184,
+                "output_tokens": 158
+            },
+            "result_id": "d975823704cf"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In a mystical forest, the ancient trees cast a perpetual gloom that even the most vibrant flowers couldn't penetrate. Legends spoke of a hidden gate that granted access to the forest, but the location remained a closely guarded secret that required a hefty payment in rare gems. The guardian of the gate was a wise and mysterious being with eyes that seemed to exist beyond time itself. Those who managed to gather the required gems were led through the gate, only to discover that the forest was a testing ground for the most powerful magic users. Few were able to unlock the forest's true potential, but those who did were said to hold the power to shape the very fabric of reality.",
+            "usage": {
+                "input_tokens": 188,
+                "output_tokens": 135
+            },
+            "result_id": "4832f609424f"
+        }
+    ]
+}

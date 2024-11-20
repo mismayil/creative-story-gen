@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "gpt-4o",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 1.0,
+            "max_tokens": null,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "In the heart of the bustling city, an art exhibit celebrated the forgotten era of steam and combustion. Among the displays was a massive sculpture made from old diesel engines, welded together into a gleaming phoenix. Its eyes, crafted from vintage petrol caps, seemed to flicker with an eternal flame. As the night drew on, visitors could interact with the installation by pumping air into hidden bellows, which caused the phoenix's wings to flutter gently. The exhibit served as a poignant reminder of how yesterday's technology could be reborn into tomorrow's art.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 110
+            },
+            "result_id": "fb80116ce4dc"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "In the dusty attic of an old bookstore, Clara discovered a mysterious stamp that glowed when touched. Intrigued, she pressed it against an antique letter, feeling a peculiar warmth seep into her fingers. That night, Clara dreamt of an ancient library, shelves towering with books yet to be written. The following morning, a courier arrived with an envelope addressed to her, containing a blueprint for stories she never knew she could write. Inspired by this magical delivery, Clara began to send her tales into the world, one chapter at a time.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 109
+            },
+            "result_id": "aa20a2560558"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "In the heart of the ancient city, an enormous organ stood in the cathedral, its golden pipes whispering tales of empires past. Legend spoke of a hidden key within the organ that could unlock the secrets of long-lost dynasties. Ava, a daring historian, refused to comply with traditional methods and instead listened to the music for clues. One night, as the moon bathed the cathedral in silver, she played a forgotten melody that resonated through time. Suddenly, the walls shimmered, revealing an ethereal map leading to the buried treasures of the vanished empire.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 116
+            },
+            "result_id": "d479cff47388"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In the town of Aether Valley, a mysterious shop appeared overnight, cloaked in an aura of gloom. The sign read, \"Existential Emporium: Payment in Reflections Only,\" enticing the curious. Those who entered found mirrors that revealed untold truths about their existence. Each visitor left with a serene understanding, despite the eerie ambiance. The shop vanished as abruptly as it appeared, leaving only stories of its enigmatic gifts.",
+            "usage": {
+                "input_tokens": 144,
+                "output_tokens": 86
+            },
+            "result_id": "41a7d729f522"
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "llama-3.1-70b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.9,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where magic was fueled by combustible energies, the young wizard, Elara, discovered a hidden pump deep within the mystical forest that flowed with the essence of petrol. As she siphoned the potent liquid, a dark sorcerer emerged, fueled by the dark power of diesel, seeking to claim the ancient pump for himself. Their magical duel ignited the forest, with flames dancing in rhythm to the pulsating pump. In a bold move, Elara channeled the petrol's energy to create a blast that sent the sorcerer's dark diesel swirling back at him, banishing him from the forest. As the flames died down, Elara sealed the pump, protecting its magical energies from those who would misuse them.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 148
+            },
+            "result_id": "a59430c4043c"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the forgotten world of Echoes, where memories took on lives of their own, a lone librarian named Aria was tasked with cataloging the whispers of the past. She discovered an ancient tome bound by a mysterious stamp that glowed with an ethereal light, unlocking a doorway to the realm of forgotten letters. As she delved deeper into the book, the letters began to weave themselves into a narrative, urging Aria to send their collective story to the heart of the world, where memories were forged. With each page turned, the whispers grew louder, guiding her towards a hidden portal that would set their tale free. And so, Aria stepped forward, allowing the memories to send her on a journey through the very fabric of time.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 150
+            },
+            "result_id": "6a01fd99b0f9"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a world where memories could be transplanted from one being to another, the last organ of a dying civilization was hidden deep within the labyrinthine tunnels of a long-abandoned city. The prized organ, a glowing crystal orb, contained the collective knowledge of a long-lost culture and was the key to unlocking the secrets of the universe. Those who sought to claim the orb for themselves were forced to comply with the enigmatic trials set forth by the ancient civilization's guardians. The trials pushed the seekers to the limits of human endurance, testing their resolve and ingenuity as they navigated the ever-changing maze. As the last seeker emerged victorious, the organ's secrets were unleashed, and a new era of enlightenment dawned upon the world.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 150
+            },
+            "result_id": "50ca6bc449ca"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the mystical realm of Tenebrous, a lone artist known only as 'The Shadow Weaver' created breathtaking tapestries that brought vivid worlds to exist within the darkest corners of the mind. Her latest masterpiece, 'Eternal Night', was said to hold the power to manipulate the very fabric of reality, and a powerful sorcerer was willing to make a substantial payment to claim it. As the sorcerer's dark magic enveloped the tapestry, the colors began to bleed, spreading an aura of gloom that threatened to consume the entire realm. But the Shadow Weaver had woven a secret into the fabric, one that would protect her art and the realm from the sorcerer's sinister intentions. As the magic was undone, the tapestry's colors burst back to life, and the realm was reborn in a blaze of vibrant hues.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 171
+            },
+            "result_id": "e1cbd201e899"
+        }
+    ]
+}

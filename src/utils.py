@@ -16,6 +16,7 @@ MODEL_COSTS = {
     "gemini-1.5-flash": {'input': 3.5e-7, 'output': 1.05e-6},
     "gemini-1.5-pro": {'input': 3.5e-6, 'output': 10.5e-6},
     "claude-3-5-sonnet-20240620": {'input': 3e-6, 'output': 15e-6},
+    "claude-3-5-haiku-20241022": {"input": 1e-6, "output": 5e-6},
     "claude-3-opus-20240229": {'input': 15e-6, 'output': 75e-6},
     "claude-3-sonnet-20240229": {'input': 3e-6, 'output': 15e-6},
     "claude-3-haiku-20240307": {'input': 0.25e-6, 'output': 1.25e-6}

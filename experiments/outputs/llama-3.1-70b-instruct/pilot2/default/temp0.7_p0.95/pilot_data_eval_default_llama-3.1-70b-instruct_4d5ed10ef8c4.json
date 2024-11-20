@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "llama-3.1-70b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the steampunk city of Cogtopolis, inventor Elara Stonebrook had created a revolutionary machine that could harness the energy of a mystical fuel blend of petrol and diesel, which she called \"Echoflame.\" This marvel of engineering was powered by a complex system of interlocking gears and a massive, ornate pump that pulsed with a hypnotic rhythm. As Elara activated the device, a brilliant light filled the air, imbuing the surrounding buildings with a vibrant, ethereal glow. The Echoflame's power resonated with the city's inhabitants, granting them visions of a brighter, more wondrous future. With the pump's rhythmic heartbeat, Cogtopolis was reborn, its people united in a shared dream of innovation and progress.",
+            "usage": {
+                "input_tokens": 171,
+                "output_tokens": 157
+            },
+            "result_id": "7bcf94547f49"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the mystical realm of Echoia, the ancient sorceress, Aria, used her magical stamp to seal the essence of a forgotten melody within a delicate, crystal orb. This enchanted vessel, known as the Echo Keeper, was said to contain the whispers of the past, and Aria's stamp was the key to unlocking its secrets. As she held the orb, a spectral letter materialized before her, penned by the long-lost composer who had first created the melody. With a gentle touch, Aria's fingers danced across the orb, and the letter began to fade, its message absorbed into the crystal. As the last whispers of the melody dissipated, Aria was compelled to send the Echo Keeper forth, allowing its haunting beauty to resonate throughout the land.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 157
+            },
+            "result_id": "4550c7034f90"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a world where memories could be transplanted into a new host, the black market for nostalgia thrived. Kael, a gifted memory surgeon, had discovered a way to encode the essence of a person's experiences into the intricate mechanisms of a 19th-century pipe organ. Those who sought to relive the past would have to comply with Kael's steep prices, but the allure of reliving a bygone era was too great for many to resist. As Kael's operation grew, whispers of an underground empire began to circulate – an empire built on the currency of memories. But with each new transplant, the line between reality and nostalgia grew thinner, threatening to upend the very fabric of Kael's carefully constructed world.",
+            "usage": {
+                "input_tokens": 168,
+                "output_tokens": 151
+            },
+            "result_id": "bb14e5cfcfa7"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where memories were currency, the Memory Bank of Eldrid existed as a sacred institution where people deposited their most treasured recollections. To access the bank, one had to navigate through the eerie Gloom Forest, where the trees seemed to feed on the forgotten memories of the past. Aria, a gifted memory thief, had been hired to retrieve a lost memory from the bank, and her payment would be a fragment of a long-forgotten melody that only the bank's vault could hold. As she delved deeper into the forest, the trees began to whisper the forgotten tunes, guiding her toward the bank's hidden entrance. With the melody within her grasp, Aria's existence became forever intertwined with the mysterious realm of the Memory Bank.",
+            "usage": {
+                "input_tokens": 172,
+                "output_tokens": 153
+            },
+            "result_id": "d646db4ef028"
+        }
+    ]
+}

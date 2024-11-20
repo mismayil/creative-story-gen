@@ -1,0 +1,112 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_simple.json",
+        "template": "simple",
+        "size": 4,
+        "shot_path": null,
+        "model": "gemini-1.5-pro",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.9,
+            "max_tokens": null,
+            "top_p": 0.9,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "The rusty, abandoned petrol tanker groaned under the weight of the desert sun, a forgotten monument to a bygone era. Inside, a family of desert rats had made their home, cleverly using the old diesel tanks as a complex burrow system.  The matriarch, Whiskers, rhythmically pumped her tail against the metal floor, a silent signal to her young.  This strange, metallic pump was their dinner bell, a call to gather for the meager scraps they’d scavenged.  The air, thick with the phantom scent of petrol and dust, held the secrets of their survival.",
+            "usage": null,
+            "result_id": "38dec4d989cc"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "The queen used a royal stamp to brand her cattle.  A coded letter was etched into each stamp's intricate design.  She would send a different herd to each neighboring kingdom, silent messages hidden in plain sight.  Each kingdom struggled to decode the letter, but only their spies could interpret its meaning. The queen's stamp delivered her secrets, more potent than any written letter she could send.",
+            "usage": null,
+            "result_id": "c680588d3e5c"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "The old, forgotten music box played a haunting melody, its tiny inner organ wheezing with each note.  Dust motes danced in the single shaft of sunlight, illuminating a miniature porcelain empire of tiny, chipped figurines.  The tiny king, face cracked and arm missing, seemed to comply with an unseen force, perpetually frozen mid-stride.  This forgotten kingdom held secrets whispered on the wind, stories of battles fought with dandelion fluff and rivers of spilled milk.  Outside the sun set, indifferent to the miniature dramas unfolding within its dying rays.",
+            "usage": null,
+            "result_id": "2d16bf4f380f"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "The antique shop, filled with dusty relics, radiated a palpable gloom.  A tiny, carved wooden wheel, said to exist in a realm beyond dreams, caught my eye.  Its intricate spokes whispered secrets of forgotten magic, demanding a payment far beyond mere coins.  I offered the shopkeeper my most prized possession, a shimmering hummingbird feather, as payment for the strange wheel.  He accepted, a flicker of something unsettling in his eyes, and the gloom deepened as I left, the wheel clutched tightly in my hand.",
+            "usage": null,
+            "result_id": "a00a4f2a6685"
+        }
+    ]
+}

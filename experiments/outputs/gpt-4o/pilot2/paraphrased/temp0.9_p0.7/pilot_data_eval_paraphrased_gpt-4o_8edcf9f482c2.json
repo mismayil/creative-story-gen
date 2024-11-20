@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "gpt-4o",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.9,
+            "max_tokens": null,
+            "top_p": 0.7,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "In the heart of the mechanical forest, ancient trees ran on veins of petrol and diesel. Each tree had a pump embedded within its trunk, rhythmically beating like a heart. The forest creatures, metallic and alive, thrived on the energy flowing from these mighty giants. One day, a young inventor stumbled upon this enchanted grove, her eyes wide with wonder. She realized that the secret to harmony lay in blending the old with the new, as nature and machine danced together in a symphony of progress.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 101
+            },
+            "result_id": "d121d4862cfa"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "In the heart of the ancient library, a forgotten stamp collection whispered tales of distant lands. Each stamp held the power to send its bearer to the world it depicted, a secret known only to the librarian. One day, a curious child discovered an unusual stamp showing a letter floating through the sky. Entranced, she pressed it to her hand and felt a breeze lift her gently from the ground. As she soared over cities and seas, she realized the true magic of the library's hidden wonders.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 99
+            },
+            "result_id": "2bacf627bafd"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "In the heart of the ancient forest, a peculiar empire of squirrels thrived, ruled by the enigmatic King Nutty. The king, renowned for his wisdom, possessed a magical organ made from enchanted acorns that played melodies only the forest creatures could hear. One day, a curious fox, eager to learn the secrets of the organ's power, approached King Nutty with a humble request. The king, with a twinkle in his eye, agreed to share the knowledge if the fox would comply with one simple condition: to spread kindness throughout the woodland. The fox, now enlightened, wandered the forest, his heart filled with music, sowing harmony wherever he roamed.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 135
+            },
+            "result_id": "7bf8c8670152"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In the heart of the ancient forest, a hidden village thrived under perpetual gloom. The villagers, aware of their unique existence, relied on the moon's glow as their only currency. Each month, they gathered to make their payment by capturing moonlight in crystal jars. The elders believed that without this ritual, their village would cease to exist. One night, a curious child released the moonlight, setting their village aglow with newfound hope.",
+            "usage": {
+                "input_tokens": 144,
+                "output_tokens": 89
+            },
+            "result_id": "46e68982a3fb"
+        }
+    ]
+}

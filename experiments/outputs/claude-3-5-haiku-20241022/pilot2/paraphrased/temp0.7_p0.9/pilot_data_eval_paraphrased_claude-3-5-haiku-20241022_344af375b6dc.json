@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "claude-3-5-haiku-20241022",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.9,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "In the abandoned factory, Mara discovered an ancient pump rusted into silence, its mechanical heart frozen between petrol and diesel memories. Whispers of forgotten industrial dreams echoed through the cavernous space, where machinery stood like petrified giants waiting to awaken. Her gloved fingers traced the intricate valves, feeling the phantom pulse of energy that once coursed through these metal veins. Suddenly, a faint vibration hummed beneath her touch, and the pump began to tremble with a strange, almost sentient anticipation. As dust swirled around her, Mara realized she had unknowingly awakened something that had been dormant for decades, something that yearned to breathe life into its long-silent mechanisms.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 161
+            },
+            "result_id": "e08524ed1aaf"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "In the dusty attic of her grandmother's Victorian home, Elena discovered an ancient wooden box with intricate carvings. Her trembling fingers traced the delicate stamp embedded in the lid, revealing a hidden compartment that seemed to whisper long-forgotten secrets. The faded letter inside bore a cryptic message written in a language she couldn't understand, its edges crumbling like autumn leaves. As moonlight filtered through the cobwebbed window, Elena realized the document was a map to a treasure that had been waiting generations to be uncovered. With a mix of excitement and trepidation, she knew she must send word to her archaeologist cousin about this extraordinary find.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 144
+            },
+            "result_id": "9d58191d1839"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "In the dusty attic of her grandmother's Victorian mansion, Elara discovered an ancient organ with intricate ivory keys. The instrument seemed to whisper secrets from a forgotten empire of musical artisans, its delicate pipes trembling with unspoken memories. As her fingers tentatively brushed against the keys, a spectral melody emerged, compelling her to comply with an unheard musical command. Shadows danced around her, weaving tales of long-lost musicians and the haunting resonance that transcended time and space. The organ's song became a portal, pulling Elara into a dreamscape where reality blurred and the boundaries between past and present dissolved like mist.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 147
+            },
+            "result_id": "2895c4743489"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In the forgotten corners of an abandoned lighthouse, whispers of an ancient bargain lingered like dust. The lighthouse keeper's granddaughter discovered a cryptic map etched with symbols that seemed to exist between reality and myth. Her trembling fingers traced the payment required: a lock of hair, a drop of blood, and a promise spoken into the gloom. Shadows danced around her as she deciphered the ritual that would unlock a generations-old secret hidden within the weathered stone walls. With a sudden breath that echoed through empty chambers, she understood the true price of unveiling forgotten magic.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 128
+            },
+            "result_id": "2d28eb1f8c6c"
+        }
+    ]
+}

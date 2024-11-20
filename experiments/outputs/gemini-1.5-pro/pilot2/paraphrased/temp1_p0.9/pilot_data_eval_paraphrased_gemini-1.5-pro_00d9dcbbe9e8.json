@@ -1,0 +1,112 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "gemini-1.5-pro",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 1.0,
+            "max_tokens": null,
+            "top_p": 0.9,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "The antique petrol lamp, a family heirloom, flickered, casting dancing shadows on the wall.  Grandfather's stories always involved the old diesel-powered ferry that once crossed the river Styx, carrying souls to their final destination.  He claimed its ghostly horn could still be heard on foggy nights, a mournful pump echoing across the water.  My skepticism remained, yet the unsettling atmosphere made me shiver, pulling the blanket tighter around me.  Suddenly, a low, rhythmic thump resonated from the distance, sounding eerily like a spectral pump.",
+            "usage": null,
+            "result_id": "5edde948d5b0"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "The antique music box played a haunting melody, each note a tiny stamp on Amelia’s memory. Inside, etched beneath the swirling ballerina, was a single, cryptic letter: \"Forgive.\" She longed to send a message back, a plea across the years, a desperate whisper into the echoing silence. But the music box, her only link to the past, offered no answers, only the mournful waltz and that indelible stamp of regret.  Amelia closed the lid, the letter's unanswered question weighing heavily on her heart.",
+            "usage": null,
+            "result_id": "85b18a230b91"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "The shimmering, bioluminescent organ pulsed beneath the glass dome, powering the miniature city within.  Across this tiny, glittering empire, intricate clockwork citizens moved in perfect, synchronized steps, unable to deviate.  A single gear slipped, throwing off the rhythm, and a small, brass figure hesitated, struggling to comply with the pre-ordained dance.  The organ’s light flickered, its rhythmic hum faltering as the disruption spread throughout the delicate mechanism.  Silence descended on the once vibrant empire as the final gear, rusted and worn, finally gave way.",
+            "usage": null,
+            "result_id": "77e1f2c183f4"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "The antique music box, a swirling carousel of tiny brass horses, played a melancholic tune that filled the room with a palpable gloom.  Engraved on its underside, barely visible beneath the velvet lining, were symbols that hinted at worlds beyond our own, worlds some claimed didn't even exist.  My grandmother, her eyes sparkling with the memory of a thousand forgotten stories, insisted the music box was the payment for safe passage between these realms.  She would wind it slowly, the gears clicking like secrets whispered in the dark, and tell me tales of shimmering cities and impossible landscapes.  But the true cost of such journeys, she warned, was a memory so vivid it threatened to eclipse the present, leaving you forever chasing echoes in the gloom.",
+            "usage": null,
+            "result_id": "2f33f681cc9c"
+        }
+    ]
+}

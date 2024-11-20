@@ -1,0 +1,111 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "gemini-1.5-pro",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.9,
+            "max_tokens": null,
+            "top_p": 0.7,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The heart, a biological pump, pulsed with a rhythm fueled not by petrol or diesel, but by a potent cocktail of grief and regret.  He remembered her scent, a sweet petrol-like tang mixed with the earthy diesel aroma of her favorite garden.  Each beat pumped another wave of sorrow through his veins, a relentless engine driving him towards despair.  He clutched the locket containing her picture, a cold metal pump against his feverish skin.  His life, once a vibrant highway, now lay stagnant, a dried-up petrol stain on the asphalt of time.",
+            "usage": null,
+            "result_id": "7f4bf073796e"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "The archaeologist brushed away the dust, revealing a strange, circular stamp on the ancient tomb’s wall.  He recognized the symbol: a stylized letter from a forgotten alphabet, believed to send souls to the afterlife.  A chill ran down his spine as he realized the stamp wasn't a decoration – it was a button.  He backed away slowly, his heart pounding in his chest.  Suddenly, the tomb’s entrance slammed shut.",
+            "usage": null,
+            "result_id": "b8c5af57301d"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "The rusted pipe organ wheezed a single, mournful note, a dying gasp of the melody that once echoed through the ant empire built within its bellows.  Each vibration shook the intricate tunnels, causing tiny avalanches of dust and discarded seed husks.  The Queen, antennae twitching, refused to comply with the evacuation orders, clinging stubbornly to her crumbling throne room.  Outside, the child, oblivious to the miniature drama unfolding within his discarded toy, gave the organ's broken pedal one last, futile pump. The empire, and its defiant queen, fell silent.",
+            "usage": null,
+            "result_id": "a76aaa44b330"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The Gloom, a sentient fog bank, rolled across the desolate plains, consuming everything in its path.  Villagers whispered that the only way to appease it was through payment, not of coin, but of memories.  Old Man Fitzwilliam, his mind a treasure trove of bygone days, offered his happiest recollection, a sun-drenched childhood picnic, and watched in horror as it vanished, absorbed by the swirling gray.  For a brief moment, the Gloom receded, proving such joys could still exist, even in a world shrouded in darkness. But the respite was fleeting, the hunger of the fog insatiable.",
+            "usage": null,
+            "result_id": "003e0241db1d"
+        }
+    ]
+}

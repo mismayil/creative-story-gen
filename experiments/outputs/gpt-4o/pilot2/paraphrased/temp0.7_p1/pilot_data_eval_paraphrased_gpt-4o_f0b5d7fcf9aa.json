@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_paraphrased.json",
+        "template": "paraphrased",
+        "size": 4,
+        "shot_path": null,
+        "model": "gpt-4o",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": null,
+            "top_p": 1.0,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: petrol, diesel, pump. However, the story should not focus on going to the petrol station to pump diesel into a vehicle.",
+            "template": "paraphrased",
+            "output": "In the heart of the bustling carnival, an eccentric inventor unveiled his latest creation: a mechanical elephant powered by both petrol and diesel. The elephant, adorned with vibrant colors and twinkling lights, danced gracefully to the rhythm of the calliope. People marveled as the inventor turned a crank, causing the dual-fuel pump to hum melodiously. Suddenly, a plume of rainbow-colored smoke erupted from its trunk, delighting the crowd with the spectacle. That night, the carnival-goers spoke of the elephant that transcended ordinary fuel, running on imagination and dreams.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 116
+            },
+            "result_id": "f132e37737bb"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: stamp, letter, send. However, the story should not focus on putting a stamp on the envelop containing a letter to send it.",
+            "template": "paraphrased",
+            "output": "In the secretive village of Mistvale, every newborn received a unique stamp upon their wrist, rumored to be a mark of destiny. Elders whispered that the stamp was a letter from the cosmos, detailing one's future journey and purpose. Young Elara, curious and brave, decided to send her spirit on a quest to decipher the ancient script. She climbed the sacred mountain, seeking the Oracle, a wise owl said to understand celestial tongues. As dawn broke, the Oracle unveiled the truth: Elara's stamp held the power to rewrite destinies, not just her own but the world's.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 118
+            },
+            "result_id": "22d4b0ed5c9f"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: organ, empire, comply. However, the story should not focus on having an organ empire and complying with regulations.",
+            "template": "paraphrased",
+            "output": "In the shadowed alleys of the bustling city, the street musician played a haunting melody on his ancient organ. The notes danced through the air, weaving tales of distant empires lost to time. Bystanders paused, inexplicably compelled to comply with the melancholic rhythm and sway to its ghostly tune. Whispers spread of the organ's mystical origin, said to hold the spirits of forgotten rulers. As the last note faded, the crowd dispersed, each person carrying a fragment of history within their soul.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 104
+            },
+            "result_id": "6dcf95ab8821"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "As a skilled creative story writer, you will receive three words (e.g., car, wheel, drive) and be asked to craft a short story that incorporates them. The goal is to avoid typical scenarios like \"I went for a drive in my car with my hands on the steering wheel.\" Instead, you will create a fresh and imaginative story that uses the given words in unexpected and original contexts.",
+            "user_prompt": "Create a short interesting story using exactly five sentences, with each sentence containing at least five words. The story must incorporate the following three words: gloom, payment, exist. However, the story should not focus on the feeling of gloom you have about an existing payment.",
+            "template": "paraphrased",
+            "output": "In the heart of the enchanted forest, a village existed shrouded in perpetual twilight. The villagers believed the gloom was the price for a past transgression, a payment to the forest spirits. Every year, they held a festival to honor these spirits, hoping to lift the twilight veil. One year, a curious child, uninhibited by fear, ventured deep into the woods. She discovered a hidden grove where sunlight streamed, and with her laughter, the gloom dissolved, revealing a world of vibrant colors.",
+            "usage": {
+                "input_tokens": 144,
+                "output_tokens": 101
+            },
+            "result_id": "52c2e9d8cea3"
+        }
+    ]
+}

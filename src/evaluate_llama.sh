@@ -8,6 +8,7 @@ outputs_dir="../experiments/outputs"
 temperatures=(0.7 0.9 1)
 top_ps=(0.7 0.9 0.95 1)
 eval_files=(
+    # ${data_dir}/pilot/eval/pilot_data_eval_default.json
     # ${data_dir}/pilot/eval/pilot_data_eval_paraphrased.json
     ${data_dir}/pilot/eval/pilot_data_eval_simple.json
 )

@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_simple.json",
+        "template": "simple",
+        "size": 4,
+        "shot_path": null,
+        "model": "claude-3-5-haiku-20241022",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 2,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 1.0,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In the abandoned warehouse, Sarah discovered an intricate machine that hummed with forgotten purpose. The rusted diesel pump stood sentinel beside weathered pipes and crumbling concrete walls, whispering secrets of industrial decay. Her grandfather's cryptic journal suggested this forgotten contraption held the key to a revolutionary energy transformation that could change humanity's relationship with fuel. Carefully tracing her fingers along the petrol-stained blueprints, she realized the machine was not just a relic, but a potential breakthrough in sustainable power generation. As moonlight filtered through broken windows, Sarah felt the first spark of understanding illuminate her mind, revealing a path to reimagine how humans could harness and distribute energy.",
+            "usage": {
+                "input_tokens": 163,
+                "output_tokens": 147
+            },
+            "result_id": "ef47d8f00b89"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "Here's a creative story using stamp, letter, and send in an unexpected way:\n\nDeep in the forgotten archives of an ancient library, a mysterious librarian discovered a peculiar stamp that could magically send words crawling off the page like living creatures. The stamp, etched with intricate symbols from a long-lost civilization, trembled with an otherworldly energy whenever someone touched its worn surface. When the librarian pressed the stamp against a blank letter, the words began to dance and twist, forming intricate patterns that whispered forgotten stories of distant lands and impossible adventures. Slowly, the letters transformed into tiny beings that slipped from the page, scurrying across the dusty wooden floor and disappearing between the towering bookshelves. By midnight, the entire library was alive with wandering words, each one a miniature explorer carrying fragments of narrative that had been trapped for centuries.",
+            "usage": {
+                "input_tokens": 164,
+                "output_tokens": 189
+            },
+            "result_id": "14321cec5e57"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "Here's a creative short story:\n\nIn the dusty attic, Sarah discovered her grandfather's mysterious organ hidden beneath cobwebs and forgotten memories. The instrument whispered tales of a crumbling empire that once stretched across forgotten landscapes of imagination. Trembling fingers traced its intricate wooden carvings, sensing a strange invitation to comply with an unspoken musical challenge. Suddenly, a single haunting note escaped the yellowed keys, echoing through the silent room like a spectral messenger. The note hung in the air, transforming the ordinary moment into something magical and inexplicable.",
+            "usage": {
+                "input_tokens": 159,
+                "output_tokens": 127
+            },
+            "result_id": "a7d181f47db8"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using exactly five sentences and each sentence should contain at least five words. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment. Please, use simple words and sentence structures.",
+            "template": "simple",
+            "output": "In the forgotten depths of an ancient library, a dusty tome whispered secrets of a civilization that could no longer exist. The librarian, with trembling hands, traced her fingers along the cracked spine, sensing a payment due to the forgotten knowledge. Shadows of gloom crept between towering shelves, carrying echoes of long-lost conversations. Suddenly, a single page fluttered to the floor, revealing a map that promised to unravel mysteries older than time itself. As moonlight filtered through stained glass windows, the librarian realized she was about to unlock a truth that had been waiting centuries to be discovered.",
+            "usage": {
+                "input_tokens": 162,
+                "output_tokens": 135
+            },
+            "result_id": "5c61af6a3fc2"
+        }
+    ]
+}
