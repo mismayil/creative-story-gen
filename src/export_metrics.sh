@@ -17,5 +17,5 @@ report_name=${1:-"run1_report1"}
 # python export_metrics.py -i ../experiments/reports/pilot2/${report_name}/human -o pilot2_human_${report_name}_metrics.csv
 
 # machine vs human
-# python export_metrics.py -i ../experiments/reports/pilot2/${report_name}/human -o pilot2_human_${report_name}_metrics.csv
-# python export_metrics.py -i ../experiments/reports/pilot2/${report_name}/machine -o pilot2_machine_${report_name}_metrics.csv
+python export_metrics.py -i ../experiments/reports/pilot3/${report_name}/human -o pilot3_human_${report_name}_metrics.csv
+python export_metrics.py -i ../experiments/reports/pilot3/${report_name}/machine -o pilot3_machine_${report_name}_metrics.csv

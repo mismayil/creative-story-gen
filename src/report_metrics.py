@@ -315,6 +315,7 @@ def filter_results(results, by="sentence_length", value=(3, 6), output_attr="out
 def report_metrics(results_files, config):
     grouped_results = defaultdict(list)
     all_results = []
+    num_result_files = 0
 
     for results_file in results_files:
         results = read_json(results_file)
@@ -323,10 +324,17 @@ def report_metrics(results_files, config):
             if "data" in results:
                 results = set_metadata(results, results_file)
                 all_results.extend(results["data"])
+                num_result_files += 1
+
+                if config["verbose"]:
+                    print(f"Number of samples for {results['metadata']['model']}: {len(results['data'])}")
         except Exception as e:
             print(results_file)
             raise e
     
+    print(f"Number of result files: {num_result_files}")
+    print(f"Number of total samples before filtering: {len(all_results)}")
+
     filter_by = config.get("filter_by")
 
     if filter_by:
@@ -360,8 +368,10 @@ def report_metrics(results_files, config):
     
     print(f"Final number of samples: {num_samples}")
 
-    for group_id, group_res in grouped_results.items():    
-        if num_samples:
+    for group_id, group_res in grouped_results.items():
+        if config["max_sampling"]:
+            group_res = random.sample(group_res, len(group_res))    
+        elif num_samples:
             group_res = random.sample(group_res, min(num_samples, len(group_res)))
         
         print(f"Computing metrics for group {group_id}")
@@ -412,6 +422,8 @@ def main():
     parser.add_argument("-mf", "--max-frequency", type=int, help="Maximum n-gram frequency to consider", default=10)
     parser.add_argument("-gb", "--group-by", type=str, nargs="+", help="Group results by attribute(s)", default=["model", "id"])
     parser.add_argument("-oa", "--output-attr", type=str, help="Output attribute", default="output")
+    parser.add_argument("-v", "--verbose", action="store_true", help="Verbose mode")
+    parser.add_argument("-ms", "--max-sampling", action="store_true", help="Maximum sampling mode")
 
     emb_group = parser.add_argument_group("Embedding arguments")
     emb_group.add_argument("-em", "--emb-model", type=str, help="Sentence embedding model", default=DEF_EMB_MODEL)
