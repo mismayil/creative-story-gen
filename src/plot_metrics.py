@@ -30,7 +30,10 @@ MODEL_NAME_MAP = {
     "gemini-1.5-flash": "Gemini-1.5",
     "claude-3-5-sonnet-20240620": "Claude-3.5",
     "llama-3.1-405b-instruct": "Llama-3.1-405B",
-    "human": "Human"
+    "human": "Human",
+    "gemini-1.5": "Gemini-1.5",
+    "claude-3-5": "Claude-3.5",
+    "llama-3.1": "Llama-3.1"
 }
 
 colors = ['#a16518', '#dbb972', '#00bcd4', '#76c6ba', "#607d8b", '#167a72']
@@ -41,7 +44,7 @@ def set_group_data(metrics):
     for by_field in group_by:
         value_index = group_by.index(by_field)
         metrics[by_field] = metrics["group_id"].apply(lambda x: ast.literal_eval(x)[value_index])
-        if by_field == "model":
+        if by_field == "model" or by_field == "model_type":
             metrics[by_field] = metrics[by_field].map(MODEL_NAME_MAP)
     return group_by
 

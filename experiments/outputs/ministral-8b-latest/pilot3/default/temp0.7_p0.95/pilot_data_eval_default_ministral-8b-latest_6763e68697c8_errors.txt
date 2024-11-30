@@ -1,0 +1,48 @@
+Error for sample stamp-letter-send: API error occurred: Status 429
+{"message":"Requests rate limit exceeded"}
+Traceback (most recent call last):
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 719, in main
+    results = await evaluate_api_model(client, args.model, filtered_batch, model_args)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 533, in evaluate_api_model
+    results = await asyncio.gather(*tasks)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 377, in evaluate_mistral_model
+    return await mistral_chat_completion(client, messages, model=model, model_args=model_args)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 357, in mistral_chat_completion
+    response = client.chat.complete(model=model, messages=messages, **mistral_model_args)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/mistralai/chat.py", line 145, in complete
+    raise models.SDKError(
+mistralai.models.sdkerror.SDKError: API error occurred: Status 429
+{"message":"Requests rate limit exceeded"}
+
+Error for sample organ-empire-comply: API error occurred: Status 429
+{"message":"Requests rate limit exceeded"}
+Traceback (most recent call last):
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 719, in main
+    results = await evaluate_api_model(client, args.model, filtered_batch, model_args)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 533, in evaluate_api_model
+    results = await asyncio.gather(*tasks)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 377, in evaluate_mistral_model
+    return await mistral_chat_completion(client, messages, model=model, model_args=model_args)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 357, in mistral_chat_completion
+    response = client.chat.complete(model=model, messages=messages, **mistral_model_args)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/mistralai/chat.py", line 145, in complete
+    raise models.SDKError(
+mistralai.models.sdkerror.SDKError: API error occurred: Status 429
+{"message":"Requests rate limit exceeded"}
+
+Error for sample organ-empire-comply: API error occurred: Status 429
+{"message":"Requests rate limit exceeded"}
+Traceback (most recent call last):
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 719, in main
+    results = await evaluate_api_model(client, args.model, filtered_batch, model_args)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 533, in evaluate_api_model
+    results = await asyncio.gather(*tasks)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 377, in evaluate_mistral_model
+    return await mistral_chat_completion(client, messages, model=model, model_args=model_args)
+  File "/Users/mismayil/Desktop/phd/projects/project-CSG/creative-story-gen/src/evaluate_lm.py", line 357, in mistral_chat_completion
+    response = client.chat.complete(model=model, messages=messages, **mistral_model_args)
+  File "/Users/mismayil/.pyenv/versions/cs-gen/lib/python3.10/site-packages/mistralai/chat.py", line 145, in complete
+    raise models.SDKError(
+mistralai.models.sdkerror.SDKError: API error occurred: Status 429
+{"message":"Requests rate limit exceeded"}
+

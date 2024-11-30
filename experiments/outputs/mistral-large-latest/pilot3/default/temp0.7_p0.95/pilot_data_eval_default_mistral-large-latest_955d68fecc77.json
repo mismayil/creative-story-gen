@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "mistral-large-latest",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 4,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": null,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of a bustling market, an old man named Eli operated a unique stall. He sold not petrol or diesel, but memories, pumping them into empty glass vials. With a wink, he'd say, \"Petrol fuels the body, but memories fuel the soul.\" Each vial, glowing with a diesel-like iridescence, held a whisper of the past, pumped from the heart of the city itself. Those who bought them swore they could see echoes of yesteryears, dancing like flames within.",
+            "usage": {
+                "input_tokens": 149,
+                "output_tokens": 121
+            },
+            "result_id": "013d09d77e4d"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the tiny village of Timbre, residents communicated not by writing letters, but by sending intricately carved wooden stamps that, when pressed onto special leaves, revealed vibrant, colorful messages. Each stamp was unique, crafted from the ancient trees that whispered the village's history. To send tidings of love, joy, or sorrow, villagers would float the stamps down the gentle river, trusting the current to deliver their sentiments to the intended recipient. One day, a young girl named Lyra sent a stamp that held a secret never before uttered in Timbre—a question that would change the village forever. What if, her stamp whispered, we listened to the river instead of sending our thoughts away?",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 152
+            },
+            "result_id": "de5f42d6888e"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a world where music was the currency of a vast empire, those who could play the grand organ in the sky had the power to sway hearts and minds. A young rebel named Lyra refused to comply with the empire's rigid melodies, which kept the populace docile and controlled. Instead, she played her own discordant tunes, stirring rebellion in the hearts of those who listened, and the empire began to crumble under the power of her defiant symphony. The more the empire tried to silence her, the louder her music became, until the day her song was heard by every soul, and the empire of harmony was no more.",
+            "usage": {
+                "input_tokens": 143,
+                "output_tokens": 137
+            },
+            "result_id": "99038a1f362a"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where shadows held more power than light, a peculiar shop existed in the alley behind Broken Lane, where Mr. Gloom, the proprietor accepted only one form of payment: memories. Every customer who stepped into his dimly lit store would leave with an object of their desire, but always with a little less of themselves, their memories trapped in the trinkets that lined Mr. Gloom's shelves. One day, a young girl entered, her eyes shining brighter than any glow Mr. Gloom had ever seen, and she asked for a single red flower that could bloom in the darkest night, offering a memory of her mother's smile in exchange. As she left, the shop seemed a little brighter, and Mr. Gloom wondered, for the first time in his long existence, if he'd accepted a payment that was too high.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 185
+            },
+            "result_id": "f4bb4886cad1"
+        }
+    ]
+}

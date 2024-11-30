@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "granite-3.0-8b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 1,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where engines ran on emotions, a young inventor named Theo created a pump that could extract petrol from laughter and diesel from tears. One day, he invited his friends to a party, where they filled up their vehicles with joy and sorrow, creating a symphony of colors and sounds. Theo's invention brought people together, proving that the most powerful fuel was the connection between hearts.",
+            "usage": {
+                "input_tokens": 158,
+                "output_tokens": 93
+            },
+            "result_id": "b2b54e3de8ac"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where letters were the only form of communication, a young girl named Lily discovered an ancient letter in her grandmother's attic. The letter was addressed to her great-great-grandfather, who had disappeared without a trace. Intrigued, Lily decided to send the letter, hoping it would reveal the truth about her ancestor's past. As she carefully placed the letter in the mailbox, she felt a sense of hope and anticipation for the mystery that awaited her.",
+            "usage": {
+                "input_tokens": 156,
+                "output_tokens": 107
+            },
+            "result_id": "eaad61fe6a1a"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a bustling city, there existed a peculiar empire - the Organ Empire. Its ruler, the wise and just Emperor Harmony, had a unique decree: every citizen must comply with the rhythm of their inner organ, the heartbeat of life. The city pulsed with the symphony of heartbeats, a melody that united its diverse inhabitants. One day, a disharmonious heartbeat threatened the empire's unity. The Emperor, with a compassionate heart, led his people in a grand concert, teaching them to comply with their unique rhythms, restoring harmony to the Organ Empire.",
+            "usage": {
+                "input_tokens": 156,
+                "output_tokens": 157
+            },
+            "result_id": "b19ba18ca17f"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where existence was a luxury, the gloom of non-payment hung heavy. The Exist-o-Matic, a device that granted life, demanded a hefty payment. Those who couldn't afford it existed in a state of perpetual gloom, their lives a mere shadow of reality. One day, a brave soul discovered a glitch in the system, allowing them to exist without payment. The gloom lifted, and a new era of free existence began.",
+            "usage": {
+                "input_tokens": 155,
+                "output_tokens": 111
+            },
+            "result_id": "7c8b7c60c02a"
+        }
+    ]
+}

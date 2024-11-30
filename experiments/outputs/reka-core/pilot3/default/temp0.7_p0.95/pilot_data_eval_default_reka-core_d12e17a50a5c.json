@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "reka-core",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 4,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": null,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of a bustling city, where skyscrapers stretched towards the heavens like metallic giants, there existed a clandestine underground market. Here, the commodities traded were not gold or diamonds, but the lifeblood of the old world: petrol and diesel. Amidst the shadows, a young inventor named Elara operated a secret pump, not to fill tanks, but to power her revolutionary machines that converted the fossil fuels into clean, renewable energy. With each careful pour, she fueled not just engines, but the hope of a greener tomorrow, transforming the very essence of what it meant to pump petrol and diesel.",
+            "usage": {
+                "input_tokens": 142,
+                "output_tokens": 127
+            },
+            "result_id": "1866bc9f1d4a"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the quaint village of Veridia, where time seemed to fold upon itself, letters were not sent through the post but imbued with magic at the ancient Stamp Tree. Each night, under the luminescent glow of the moon, the village scribe, Elara, would carefully choose a stamp from the tree's gnarled branches. These were no ordinary stamps; they were living, breathing embodiments of emotion. With a gentle press, she sealed her latest letter with a stamp of longing, watching as it fluttered away, not through the air, but through the very fabric of hearts, finding its way to the recipient in a dream, delivering its message where words alone could not.",
+            "usage": {
+                "input_tokens": 143,
+                "output_tokens": 142
+            },
+            "result_id": "24e908eb0774"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the underground city of Melodis, where music pulsed through the veins of the architecture, an organist named Elio ruled an empire of sound. His fingers, nimble and precise, danced across the keys of a colossal organ that was the heart of the city, controlling its rhythm and mood. One day, a mysterious edict was delivered, demanding that all music must comply with a new, uniform melody imposed by the surface world's rulers. Defiant, Elio composed a symphony of resistance, weaving the essence of Melodis's diverse sounds into a hauntingly beautiful piece that echoed through the tunnels, stirring the hearts of his fellow citizens to stand against the imposed harmony and preserve their unique musical heritage.",
+            "usage": {
+                "input_tokens": 139,
+                "output_tokens": 149
+            },
+            "result_id": "ff6f365f51fc"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the dimly lit corner of the abandoned arcade, where the only sound was the faint hum of forgotten machines, a peculiar vending machine stood. It was said that for those who could decipher its cryptic payment system, it would grant the existence of something they had only ever dreamed of. With a mix of trepidation and hope, Alex inserted a handful of antique coins, each one a relic from a bygone era, into the slot. As the machine whirred to life, casting eerie shadows across the peeling wallpaper, a sense of anticipation filled the air. And then, with a soft click, a small, glowing orb appeared in the dispensing tray, pulsating with the promise of a new reality yet to exist.",
+            "usage": {
+                "input_tokens": 143,
+                "output_tokens": 152
+            },
+            "result_id": "ee96221803a8"
+        }
+    ]
+}

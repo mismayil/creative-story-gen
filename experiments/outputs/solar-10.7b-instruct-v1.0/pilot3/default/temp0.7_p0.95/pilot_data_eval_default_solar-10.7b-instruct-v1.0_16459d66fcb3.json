@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "solar-10.7b-instruct-v1.0",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 4,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where oil had become obsolete, a new form of alternative energy emerged: petro-blooms. These vibrant, flower-like structures harnessed the power of diesel, converting it into sustainable energy. In the heart of the metropolis, an enigmatic figure known as The Pumper controlled the city's lifeblood. Each night, she would tend to the intricate network of pumping stations, ensuring that the petro-blooms bloomed in perfect synchrony. This delicate balance not only kept the city thriving but also fueled an underground arts movement - as the hues of the petro-blooms could be manipulated, they served as a canvas for the city's artists. In this diesel-infused utopia, The Pumper's work was nothing short of a masterpiece, all driven by the power of petrol and diesel, pumped with passion and precision.",
+            "usage": {
+                "input_tokens": 161,
+                "output_tokens": 199
+            },
+            "result_id": "088ef61f5efa"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where communication was governed by enigmatic entities, a young girl discovered an ancient book revealing the power of thought manifestation. With each turn of the page, her imagination bloomed. One night, she crafted a letter from her dreams, transcribing her wildest fantasies onto paper. Instead of a stamp, she embossed the parchment with her heart's essence, a vibrant aura of pure emotion. When she closed her eyes and visualized the letter flying free, it transformed into a flock of brilliant butterflies, carrying her desires to the cosmos. She sent her letter, not with a physical act, but with the strength of her spirit, and in return, the universe began to weave her dreams into reality.",
+            "usage": {
+                "input_tokens": 159,
+                "output_tokens": 161
+            },
+            "result_id": "880d8838db27"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the hidden depths of an ancient underwater city, the organ of song was the empire's lifeblood. The Siren Queen, a mystical guardian, wielded its power to maintain peace. Yet whispers of a rebellion brewed among the merfolk, as they refused to comply with her enchanting decrees. The enigmatic sea witches saw this turmoil as an opportunity to unleash their dark arts, altering the organ's melody to sow discord. Amidst the tides of chaos, a young mermaid with an untrained voice vowed to restore harmony, defying the witches and learning to navigate a delicate balance between compliance and courage.",
+            "usage": {
+                "input_tokens": 155,
+                "output_tokens": 152
+            },
+            "result_id": "5d1ba084bba6"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In a world where emotions were currency, the once-vibrant city of Nostalgia now existed under an ever-persistent cloak of gloom. Its inhabitants, the Sentients, traded their joy and sorrows to maintain their existence. One day, a mysterious stranger arrived, offering a unique form of payment: the memory of a brighter past. The Sentients, desperate to restore their fading existence, eagerly embraced this atypical payment, igniting a slow but powerful transformation within the city. Gloom, once an inescapable burden, started to fade away, giving way to hope and a renewed sense of being.",
+            "usage": {
+                "input_tokens": 158,
+                "output_tokens": 140
+            },
+            "result_id": "37a6ac763716"
+        }
+    ]
+}

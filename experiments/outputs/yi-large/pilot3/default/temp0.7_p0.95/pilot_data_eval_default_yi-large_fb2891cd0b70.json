@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "yi-large",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 1,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": null,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of an industrial metropolis, where the skyline was painted with the plumes of factories, lived a peculiar inventor named Elara. Her latest creation was a marvel: a botanical pump that could transform the city's toxic air into clean oxygen, powered solely by the sun. But the city's skeptics, drowned in the fumes of petrol and diesel, doubted her vision. One serene morning, as the first rays of sunlight kissed the metallic rooftops, Elara activated her invention. The pump hummed to life, and as if by magic, the air began to clear. The skeptics, now believers, watched in awe as the city breathed anew, and Elara's dream of a greener future took root.",
+            "usage": {
+                "input_tokens": 154,
+                "output_tokens": 166
+            },
+            "result_id": "30e670e11690"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the quaint village of Penumbra, where whispers carried secrets and shadows danced with the light, there existed an ancient ritual known only to the elders. It was said that once a century, a special letter would be crafted, not from paper, but from the very essence of the night sky, its words woven from the dreams of the slumbering. This letter, it was believed, held the power to grant the deepest desire of the one who sent it.\n\nYoung Elara, with eyes as bright as the stars she so often gazed upon, had been chosen by fate to pen this celestial missive. With a heart pounding like the waves against the shore, she toiled under the silver glow of the full moon, her quill dipped not in ink, but in the dew collected from the petals of the rare moonbloom.\n\nAs the first light of dawn began to chase away the darkness, Elara completed her task. The letter, shimmering with an ethereal light, was ready. But to send it, she needed a stamp unlike any other. From the ancient oak at the heart of the village, she collected a leaf, its veins glowing with the magic that pulsed through the land.\n\nWith the reverence due to such a momentous act, Elara pressed the leaf upon the letter, imprinting it with the seal of the forest. As the stamp settled, a gust of wind, born from the breath of the earth itself, swept through Penumbra, lifting the letter into the air.\n\nThe letter soared high above the treetops, borne on the wings of the wind, carrying with it the hopes and dreams of the villagers, a testament to the power of belief and the magic that binds the world together.",
+            "usage": {
+                "input_tokens": 155,
+                "output_tokens": 381
+            },
+            "result_id": "f93ddd695561"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of the ancient city, where cobblestone streets whispered secrets of old, there stood an organ, not of flesh and bone, but of pipes and wood, its voice the very soul of the empire that once ruled the world. This organ, crafted by hands now turned to dust, possessed the power to summon the echoes of the past, a symphony of whispers that danced on the wind.\n\nLegend told of a key, a relic lost to time, which, when played upon the organ's ancient keys, could unlock the empire's forgotten glories, or perhaps its deepest shadows. Many sought this key, driven by dreams of power or the thirst for knowledge, but none could coax the instrument into compliance without it.\n\nOne moonless night, a figure, cloaked in mystery and purpose, approached the organ, their heart resonating with a melody older than the empire itself. With a touch both gentle and commanding, they played, not the lost key, but a sequence of notes that had lain dormant in the air, waiting for an audience of one.\n\nThe organ responded, its pipes swelling with a sound that was both a lament and a triumph, as if the very essence of the empire had been distilled into those few moments. The figure, eyes closed, felt the weight of history, of choices made and paths not taken, pressing down upon them.\n\nAs the final note faded into the night, the figure understood that true power lay not in compliance with the past, but in the courage to compose one's own future. With a final, respectful glance at the organ, they stepped away, leaving behind the echoes of an empire, ready to face the dawn of their own making.",
+            "usage": {
+                "input_tokens": 152,
+                "output_tokens": 372
+            },
+            "result_id": "453cebd142fa"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the shadowy realm of Gloom, where whispers of the forgotten echo through the eternal twilight, an ancient entity known as the Keeper of Ledgers dwelled. This enigmatic being, bound to the realm by an oath as old as time itself, recorded every soul's deeds in a tome of infinite pages, illuminated by the ethereal glow of the payment of their existence. For in Gloom, existence was a currency, each moment a coin spent in the grand market of life and death. The Keeper, with hands as pale as the moon's embrace, inscribed the tale of a soul who had lived a thousand lives, each existence a payment for the lessons learned in the previous. As the final entry was made, the Keeper looked upon the emptied ledger, a rare smile gracing its timeless features, for the soul had transcended the need for existence, its lessons complete, leaving behind only the echo of its payment in the silent halls of Gloom.",
+            "usage": {
+                "input_tokens": 155,
+                "output_tokens": 217
+            },
+            "result_id": "b063427b5966"
+        }
+    ]
+}

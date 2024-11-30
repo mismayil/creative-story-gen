@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "nemotron-4-340b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 1,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": null,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where robots ruled, two factions, the Petrols and the Diesels, vied for control. The Petrols, swift and agile, relied on a rare, potent fuel, while the Diesels, powerful and sturdy, depended on a common, efficient one. When the last pump capable of extracting both fuels malfunctioned, an unlikely alliance was formed between a Petrol scout and a Diesel engineer to repair it, ensuring their species' survival and fostering an era of unity and peace.",
+            "usage": {
+                "input_tokens": 148,
+                "output_tokens": 100
+            },
+            "result_id": "750087f50ca7"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where emotions are tangible, a young girl named Lila collected stamps of feelings, each one imbued with a unique sentiment. She carefully chose a \"Joy\" stamp, placed it on a letter she'd written to her grandmother, and with a whisper, sent it flying through the air, transforming the paper into a dove that carried her heartfelt message.\n\n(Note: In this story, \"send\" is used in the context of magically dispatching the letter, and \"stamp\" represents a physical manifestation of an emotion rather than a postage stamp.)",
+            "usage": {
+                "input_tokens": 149,
+                "output_tokens": 114
+            },
+            "result_id": "b82f8e8363e3"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of the ancient city, a forgotten organ, not of flesh but of music, held the key to the empire's liberation. The rebels, defying the tyrannical rule, discovered that playing this organ in a specific, non-compliant rhythm could crumble the empire's walls. As the organ's notes echoed, the empire's foundation shook, and the people, once silenced, found their voices, singing a song of freedom that no force could make them comply to forget. The organ, a symbol of harmony and unity, became the empire's new crest, marking the dawn of a just and compassionate reign. Thus, the organ's melody, once lost, now forever rings as the empire's anthem, a testament to the power of unity and defiance.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 160
+            },
+            "result_id": "f872adb0f490"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the heart of the enchanted forest, a mystical gloom merchant arrived, offering a unique payment method: one's happiest memory for a vial of gloom, which, when released, would reveal hidden paths to realms that exist only in legends. The villagers, intrigued and desperate to explore these magical realms, formed a line, each surrendering their most cherished moments, unaware that the true cost of this transaction was the permanent loss of their ability to feel joy. The gloom merchant, satisfied with the collection of vibrant memories, vanished, leaving behind a trail of gray smoke and a village shrouded in melancholy, where laughter and delight ceased to exist.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 128
+            },
+            "result_id": "6b6c367f3103"
+        }
+    ]
+}

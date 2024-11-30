@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "dbrx-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 1,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In a world where fuel had become the currency, a young scavenger, Petrol, was known for her agility and cunning. She navigated the ruins of the old world, evading Diesel, the ruthless warlord who sought to control the last remaining fuel pump. One day, Petrol discovered a hidden cache of fuel, not knowing it was a trap set by Diesel. As she reached for the canister, Diesel emerged from the shadows, but Petrol, always one step ahead, had already rigged the area with explosives. With a sly smile, she ignited the fuse and disappeared into the wasteland, leaving Diesel to face his fiery end, ensuring the pump would never fall into his hands.",
+            "usage": {
+                "input_tokens": 148,
+                "output_tokens": 142
+            },
+            "result_id": "54839e5e250e"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a world where emotions are tangible, a young woman named Lila discovered she could \"stamp\" feelings onto letters. She'd carefully \"letter\" her deepest desires, fears, and joys onto paper, then \"send\" them soaring into the sky, where they'd transform into colorful auroras, sharing her inner world with the universe. One day, she received a letter back, stamped with a celestial seal, and as she opened it, a symphony of stardust and whispers filled her room, revealing a response from the cosmos itself.",
+            "usage": {
+                "input_tokens": 149,
+                "output_tokens": 110
+            },
+            "result_id": "97543ea78fda"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of a vast, interstellar empire, a humble organist named Milo was known for his exceptional ability to play the grand pipe organ that towered over the imperial cathedral. One day, the emperor, a man known for his love of music, demanded that Milo compose a new symphony to celebrate his reign, threatening to banish him to the outermost reaches of the empire if he failed to comply. As Milo sat down to play, he discovered that the organ's keys had transformed into miniature planets, each emitting a unique cosmic melody as they orbited around the console, and as he played, the celestial harmonies resonated throughout the empire, uniting its disparate worlds in a symphony of unity and peace.",
+            "usage": {
+                "input_tokens": 145,
+                "output_tokens": 147
+            },
+            "result_id": "4344ab173e66"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the desolate town of Obsidian, where perpetual gloom hung heavy like a shroud, a peculiar shop existed, shunned by the wary locals. The enigmatic proprietor, a wraith-like figure, never demanded payment in coins or notes, but instead in whispered secrets and forgotten memories. One day, a brave young adventurer, seeking answers to the town's curse, entered the shop, and found a dusty, old map, leading to a hidden wheel of fortune, rumored to dispel the gloom. With a determined heart, the adventurer paid the price, relinquishing a cherished memory of a sunny day, and set off to change the town's fate, leaving the shopkeeper to cackle in the shadows, its payment secured.",
+            "usage": {
+                "input_tokens": 149,
+                "output_tokens": 150
+            },
+            "result_id": "03a79bfb0120"
+        }
+    ]
+}

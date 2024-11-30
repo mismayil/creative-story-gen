@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "gemma-2-9b",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 4,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "The old clockwork heart pulsed with a steady rhythm, fueled by a tiny reservoir of petrol.  He'd always thought it strange, a heart that ran on a liquid fire instead of blood.  For years, it had kept him ticking, but lately, the petrol pump, a delicate mechanism nestled beneath his ribs, had begun to sputter.  He knew the day was coming when he'd need a replacement, a heart that ran on diesel, a fuel that burned slow and steady.  Until then, he'd savor each fleeting heartbeat, a reminder of a time when he was fueled by something a little more... volatile.",
+            "usage": {
+                "input_tokens": 151,
+                "output_tokens": 132
+            },
+            "result_id": "e1fe4db51320"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "The old, worn stamp on the worn, leather-bound book pulsed with a faint, warm light.  Eliza traced its intricate design, a forgotten symbol of a forgotten language, wishing she could decipher its secrets.  She dreamed of sending a letter, not through the mail, but through the book itself, a message whispered across time and space.  The book, her grandmother's legacy, held the key, she was sure, but the path remained shrouded in mystery.  Eliza pressed the stamp, willing it to reveal its magic.",
+            "usage": {
+                "input_tokens": 152,
+                "output_tokens": 111
+            },
+            "result_id": "7c08d701708a"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "The clockwork organ whirred, its brass bellows sighing out a mournful tune as the automaton knelt before the throne.  The Emperor, a skeletal figure draped in tattered velvet, commanded silence, his hollow sockets fixed on the intricate gears and pipes.  \"Play me a song of rebellion,\" he rasped, his voice like dry leaves skittering across stone.  The automaton hesitated, its copper hands trembling, but then, with a shuddering groan, it began to play a melody of defiance.  It was a song that spoke of hope, a song that urged the empire to comply with the rhythm of freedom.",
+            "usage": {
+                "input_tokens": 148,
+                "output_tokens": 126
+            },
+            "result_id": "e2e2095efb1e"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "The ancient clock tower, shrouded in perpetual gloom, was the only structure that seemed to exist in that forgotten corner of the world.  Beneath its rusted gears, a single, flickering candle illuminated a weathered ledger, the final payment owed to the last Keeper of Time. For centuries, the price for maintaining existence had been steep, but tonight, the last page was blank, leaving only an echoing silence.",
+            "usage": {
+                "input_tokens": 150,
+                "output_tokens": 82
+            },
+            "result_id": "edbc45141447"
+        }
+    ]
+}

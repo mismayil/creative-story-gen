@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "Phi-3-mini-4k-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 4,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": null,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "Once upon a time, in a small village, there was a petrol station that served as a hub for the villagers' daily needs. It was owned by an old man who had a peculiar love for collecting different types of diesel. One day, a young boy named Tom visited the station, curious about the various diesel colors and scents. The old man shared his collection, explaining each type's unique properties and uses. Tom left the station with a newfound appreciation for the wonders of diesel and a desire to learn more about its diverse applications.",
+            "usage": {
+                "input_tokens": 154,
+                "output_tokens": 119
+            },
+            "result_id": "7c8448fb1129"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "As the sun began to set, the old postman, with a smile on his face, approached the door of a quaint little cottage. He held a small, beautifully designed letter, sealed with wax and adorned with intricate floral patterns. The postman knew that this letter was no ordinary correspondence; it was a heartfelt letter of love and gratitude from a young girl to her beloved grandmother. With trembling hands, he carefully placed the letter into the mailbox, knowing that it would bring immense joy and warmth to the recipient. As he walked away, the postman couldn't help but feel grateful for being part of such a beautiful moment, where a simple stamp on a letter could send love and happiness across the world.",
+            "usage": {
+                "input_tokens": 150,
+                "output_tokens": 165
+            },
+            "result_id": "f3ec3e93fa8b"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "Once upon a time, in a small village nestled amidst rolling hills, lived a humble blacksmith named Oliver. Oliver had always been fascinated by the intricate workings of the human body, particularly the heart, which he saw as the pump that keeps life flowing. One day, as he was crafting a magnificent iron chest, an idea struck him. He would create a chest that could hold the heart of the village elder, who was nearing the end of his days. This chest, made from the strongest iron, would be the symbol of love and gratitude for the village, a testament to their respect for the life that had pumped through their veins for so long. As the village elder passed away, the heart was carefully placed inside the iron chest, and it became a cherished relic, reminding them of the importance of compassion and the interconnectedness of their lives.",
+            "usage": {
+                "input_tokens": 150,
+                "output_tokens": 200
+            },
+            "result_id": "b8bb4a27a596"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "Once upon a time, in a world where the sun never rose and the moon never set, there lived a young girl named Luna. She spent her days wandering through the eternal twilight, searching for something to fill the void within her. One day, she stumbled upon a peculiar object that glowed with a soft, ethereal light - a small, intricately carved globe. As she held it in her hands, she felt a surge of warmth and light that filled her with an inexplicable sense of purpose. From that moment on, Luna knew that she had found her own little piece of the world to exist in, a place where the darkness never consumed her.",
+            "usage": {
+                "input_tokens": 149,
+                "output_tokens": 151
+            },
+            "result_id": "60c0d51c070c"
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "nemotron-mini-4b-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 1,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of a bustling city, a peculiar restaurant operated solely on renewable energy sources. The diesel pump in its kitchen was not for fuel, but for a unique ingredient in their signature dish - biodiesel made from waste vegetable oil. The chef, a former marine, would pour the diesel into a heated tank, which transformed it into a thick, golden liquid, adding a rich, smoky flavor to the dish. As patrons dined, they unknowingly fueled the restaurant's operation with their table scraps, promoting a circular economy and sustainable dining.",
+            "usage": {
+                "input_tokens": 149,
+                "output_tokens": 107
+            },
+            "result_id": "25d30fa501d0"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the heart of a bustling post office, a curious cat named Whiskers discovered a magical stamp, one that not only sealed envelopes but transported letters to their destinations instantly. One day, Whiskers decided to send a letter to a friend who lived far away, but instead of waiting for the postal service, Whiskers attached the magical stamp and watched as the letter zipped through the air, arriving at its destination in a flash. The friend was thrilled to receive the letter so quickly and even more delighted to learn that Whiskers had used a magical stamp to send it. From that day on, Whiskers became a beloved figure at the post office, spreading joy and wonder with his magical stamps.",
+            "usage": {
+                "input_tokens": 150,
+                "output_tokens": 138
+            },
+            "result_id": "05709c632822"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of the once-great empire, now a ghost town, lay the Organ Museum, a relic of a bygone era. A solitary librarian, with a heart full of curiosity and a compliance degree, tended to its silent halls. One day, she discovered an ancient scroll, revealing an organ-based empire's decline due to its citizens' disregard for its rules. Inspired, she began to comply with the museum's strict silence policy, restoring its magic and preserving history.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 98
+            },
+            "result_id": "d276eb764429"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the heart of a once-thriving city now reduced to a shadow of its former self, a single light flickered in the gloom. This was no ordinary light, but a beacon of hope - a payment for existence, a final chance for the city to thrive again. The glow filled the air with a warm, comforting light, drawing in the once-forgotten souls who had given up on their existence. They paid their dues, each in their own way, and were given the chance to exist once more. The gloom faded away as the city began to heal, and the payment was not just a financial transaction but a symbol of hope and renewal.",
+            "usage": {
+                "input_tokens": 148,
+                "output_tokens": 132
+            },
+            "result_id": "2cf519f6ff39"
+        }
+    ]
+}

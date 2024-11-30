@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "Phi-3-small-8k-instruct",
+        "model_path": null,
+        "tokenizer_path": null,
+        "cache_dir": "~/.cache",
+        "batch_size": 4,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": null,
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": null,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of the enchanted forest, the mystical creatures gathered for the grand feast of the Centennial Eclipse. The centaur chef, known for his culinary prowess, had a secret ingredient that made his dishes truly legendary - ethereal petrol, distilled from the rarest flowers that only bloomed during the eclipse. The pixies, assigned to prepare the feast, carefully gathered the precious petrol, ensuring not a drop was wasted. The night of the feast arrived, and as the creatures indulged in the exquisite dishes, they were transported to a realm of unparalleled taste and wonder. The ethereal petrol, combined with the chef's magical touch, made this feast an event that would be talked about for centuries to come.",
+            "usage": {
+                "input_tokens": 146,
+                "output_tokens": 144
+            },
+            "result_id": "df2fce355fb2"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In a small village, there existed a magical tree where birds would leave their colorful feathers instead of laying eggs. These feathers were said to possess the power to grant wishes. One day, a young girl found an old stamp hidden within a hollow in the tree trunk. She carefully crafted a letter, explaining her desire to heal her ailing mother, and affixed the stamp. The villagers watched in awe as the wind carried the letter high into the sky, hoping that the magical tree would receive the message and grant the girl's heartfelt wish.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 109
+            },
+            "result_id": "6c779472cc45"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the heart of the Verdant Empire, a mystical organ of flora and fauna thrived, pulsating with the lifeblood of the realm. To the astonishment of the kingdom's denizens, it was discovered that the organ's harmonious symphony held the key to the empire's prosperity. Yet, the enigmatic Orchestrator, keeper of the organ, would not comply with the kingdom's pleas to reveal the secrets of the melody. When a bold and cunning minstrel dared to steal the Orchestrator's lute, the stolen instrument's tune disrupted the organ's rhythm, causing the Verdant Empire to wilt and fade. In the end, the Orchestrator, humbled by the minstrel's audacity, revealed the true essence of the melody: unity and compassion, which rejuvenated the empire, and the Orchestrator, once a guardian, became the minstrel's loyal companion.",
+            "usage": {
+                "input_tokens": 143,
+                "output_tokens": 188
+            },
+            "result_id": "b65a1a3c906d"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the heart of the city, a peculiar antique shop existed, where time seemed to stand still. One rainy afternoon, a mysterious old man walked in, his eyes reflecting the gloom of a forgotten era. He handed the shopkeeper a small, ancient-looking orb, whispering, \"This is the last payment for the debt I owe.\" The shopkeeper, a wise woman with knowing eyes, took the orb and placed it in a hidden chamber behind the counter. As the orb's light dimmed, the old man vanished, leaving behind a whisper of gratitude and a sense of timeless peace.",
+            "usage": {
+                "input_tokens": 147,
+                "output_tokens": 121
+            },
+            "result_id": "b3f45a6140f9"
+        }
+    ]
+}
