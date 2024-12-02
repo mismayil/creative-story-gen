@@ -110,19 +110,17 @@ def plot_global_metrics_n_gram_diversity(metrics_lst, output_dir, output_format=
     ax.tick_params(axis='x', labelsize=TICK_SIZE)
     ax.tick_params(axis='y', labelsize=TICK_SIZE)
     
-    all_grouped_metrics = []
     for group_id in group_ids:
         group_metrics = merged_metrics[merged_metrics[group_attr] == group_id].copy()
         group_metrics["metric_corpus_n_gram_diversity"] = group_metrics["metric_corpus_n_gram_diversity"].apply(lambda x: ast.literal_eval(x))
         group_metrics["n_gram"] = [list(range(1, len(group_metrics["metric_corpus_n_gram_diversity"].iloc[0])+1)) for _ in range(len(group_metrics))]
         group_metrics = group_metrics.explode(["metric_corpus_n_gram_diversity", "n_gram"])
         group_metrics["n_gram"] = group_metrics["n_gram"].astype(str)
-        all_grouped_metrics.append(group_metrics)
-        
-    all_grouped_metrics = pd.concat(all_grouped_metrics)
-    sns.lineplot(data=all_grouped_metrics, x="n_gram", y=metric, hue=hue_attr, style=hue_attr, markers=True, lw=5, ax=ax, palette=custom_palette)
+        sns.lineplot(data=group_metrics, x="n_gram", y=metric, hue=hue_attr, style=hue_attr, markers=True, lw=5, ax=ax, palette=custom_palette)
     
-    ax.legend(title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
+    handles, labels = ax.get_legend_handles_labels()
+    by_label = dict(zip(labels, handles))
+    ax.legend(by_label.values(), by_label.keys(), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
     plt.tight_layout()
 
     plot_path = f"{output_dir}/fig_{metric}.{output_format}"
@@ -151,7 +149,6 @@ def plot_global_metrics_raw_surprises(metrics_lst, output_dir, output_format="pn
     ax.tick_params(axis='x', labelsize=TICK_SIZE)
     ax.tick_params(axis='y', labelsize=TICK_SIZE)
     # ax.legend(ncol=5, loc="center left", bbox_to_anchor=(0, 1.05), title=LABEL_MAP.get(hue_attr, hue_attr), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
-    all_grouped_metrics = []
 
     for group_id in group_ids:
         group_metrics = merged_metrics[merged_metrics[group_attr] == group_id].copy()
@@ -161,12 +158,11 @@ def plot_global_metrics_raw_surprises(metrics_lst, output_dir, output_format="pn
         group_metrics["fragment"] = [list(range(1, max_surprise_len+1)) for _ in range(len(group_metrics))]
         group_metrics = group_metrics.explode(["metric_avg_raw_surprises", "fragment"])
         group_metrics["fragment"] = group_metrics["fragment"].astype(str)
-        all_grouped_metrics.append(group_metrics)
-        
-    all_grouped_metrics = pd.concat(all_grouped_metrics)
-    sns.lineplot(data=all_grouped_metrics, x="fragment", y=metric, hue=hue_attr, style=hue_attr, markers=True, lw=5, ax=ax, palette=custom_palette)
-    
-    ax.legend(title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
+        sns.lineplot(data=group_metrics, x="fragment", y=metric, hue=hue_attr, style=hue_attr, markers=True, lw=5, ax=ax, palette=custom_palette, legend="brief")
+
+    handles, labels = ax.get_legend_handles_labels()
+    by_label = dict(zip(labels, handles))
+    ax.legend(by_label.values(), by_label.keys(), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
     plt.tight_layout()
     plot_path = f"{output_dir}/fig_{metric}.{output_format}"
     print(f"Saving figure to {plot_path}")

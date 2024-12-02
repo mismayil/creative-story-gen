@@ -62,7 +62,7 @@ def compute_metrics(results, config):
         print("Computing global metrics")
         inv_homogen = compute_inverse_homogenization(stories, config["emb_model"], config["emb_type"], config["emb_strategy"], config["distance_fn"], preprocessing_args)
         novelty = compute_novelty(stories, config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
-        theme_uniqueness = compute_theme_uniqueness(stories, config["emb_model"], config["emb_type"], config["emb_strategy"], config["cluster_linkage"], config["cluster_dist_threshold"], preprocessing_args)
+        theme_uniqueness, theme_clusters = compute_theme_uniqueness(stories, config["emb_model"], config["emb_type"], config["emb_strategy"], config["cluster_linkage"], config["cluster_dist_threshold"], preprocessing_args)
         corpus_dsi = compute_dsi("".join(stories), config["emb_model"], config["emb_type"], config["distance_fn"], preprocessing_args)
         corpus_n_gram_diversity, corpus_n_gram_frequency = compute_n_gram_diversity("".join(stories), config["max_n_gram"])
         corpus_pos_diversity, corpus_pos_frequency = compute_pos_diversity("".join(stories), config["max_n_gram"])
@@ -131,6 +131,7 @@ def compute_metrics(results, config):
                 result["metrics"]["inv_homogen"] = inv_homogen[result_idx]
                 result["metrics"]["novelty"] = novelty[result_idx]
                 result["metrics"]["theme_uniqueness"] = theme_uniqueness[result_idx]
+                result["metrics"]["theme_cluster"] = int(theme_clusters[result_idx])
 
             if config["report_usage"]:
                 sample_usage, sample_cost = compute_usage(result, result["metadata"]["model"])

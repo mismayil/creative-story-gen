@@ -172,7 +172,7 @@ def compute_theme_uniqueness(texts, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TY
     clustering = AgglomerativeClustering(n_clusters=None, linkage=cluster_linkage, distance_threshold=cluster_distance_threshold)
     cluster_labels = clustering.fit_predict(text_embeddings)
     cluster_freq = Counter(cluster_labels)
-    return [1 / cluster_freq[cluster_labels[i]] for i in range(len(texts))]
+    return [1 / cluster_freq[cluster_labels[i]] for i in range(len(texts))], cluster_labels
 
 def compute_dsi(text, emb_model=DEF_EMB_MODEL, emb_type=DEF_EMB_TYPE, distance_fn=DEF_DIST_FN, preprocessing_args=DEF_PREPROCESSING_ARGS):
     return compute_avg_sem_dis(text, emb_model, emb_type, distance_fn, preprocessing_args)

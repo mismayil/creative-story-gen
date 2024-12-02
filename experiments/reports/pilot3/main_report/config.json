@@ -1,5 +1,5 @@
 {
-    "description": "Main results grouped by sentience",
+    "description": "Main results grouped by sentience and item id",
     "emb_model": "thenlper/gte-large",
     "emb_type": "sentence_embedding",
     "emb_strategy": "direct",
@@ -10,7 +10,7 @@
     "lemmatize": true,
     "unique": true,
     "cluster_linkage": "ward",
-    "cluster_dist_threshold": 0.7,
+    "cluster_dist_threshold": 0.6,
     "deduplicate": true,
     "filter_by": {
         "sentence_length": [3, 7]
