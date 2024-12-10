@@ -5,16 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "report_metrics.py",
+            "name": "Python Debugger: Attach",
             "type": "debugpy",
-            "request": "launch",
-            "program": "${workspaceFolder}/src/report_metrics.py",
-            "console": "integratedTerminal",
-            "args": [
-                "-r", "${workspaceFolder}/experiments/outputs/gpt-4/pilot/**/run1", "${workspaceFolder}/experiments/outputs/gemini-1.5-flash/pilot/**/run1", "${workspaceFolder}/experiments/outputs/claude-3-5-sonnet-20240620/pilot/**/run1", "${workspaceFolder}/experiments/outputs/human/pilot/run1",
-                "-o", "${workspaceFolder}/experiments/reports/pilot/run1_report3",
-                "-c", "${workspaceFolder}/experiments/reports/pilot/run1_report3/config.json"
-            ]
-        }
+            "request": "attach",
+            "connect": {
+              "host": "localhost",
+              "port": 5678
+            }
+        } 
     ]
 }

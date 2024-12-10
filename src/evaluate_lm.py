@@ -58,11 +58,6 @@ TOGETHER_MODEL_MAP = {
     "solar-10.7b-instruct-v1.0": "upstage/SOLAR-10.7B-Instruct-v1.0"
 }
 
-HF_MODEL_MAP = {
-    "yi-1.5-34b-chat": "01-ai/Yi-1.5-34B-Chat",
-    "yi-1.5-9b-chat": "01-ai/Yi-1.5-9B-Chat",
-}
-
 NVIDIA_MODEL_MAP = {
     "nemotron-4-340b-instruct": "nvidia/nemotron-4-340b-instruct",
     "yi-large": "01-ai/yi-large",
@@ -77,7 +72,14 @@ NVIDIA_MODEL_MAP = {
     "gemma-2-2b-it": "google/gemma-2-2b-it"
 }
 
-MODEL_MAP = {**TOGETHER_MODEL_MAP, **HF_MODEL_MAP, **NVIDIA_MODEL_MAP}
+HF_MODEL_MAP = {
+    "yi-1.5-34b-chat": "01-ai/Yi-1.5-34B-Chat",
+    "yi-1.5-9b-chat": "01-ai/Yi-1.5-9B-Chat",
+    "stablelm-2-12b-chat": "stabilityai/stablelm-2-12b-chat",
+    "stablelm-zephyr-3b": "stabilityai/stablelm-zephyr-3b"
+}
+
+MODEL_MAP = {**TOGETHER_MODEL_MAP, **NVIDIA_MODEL_MAP, **HF_MODEL_MAP}
 
 OPENAI_MODELS = ["gpt-3.5-turbo", "gpt-4", "gpt-4-0125-preview", "gpt-4o-2024-08-06", "gpt-4o"]
 GOOGLE_MODELS = ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-exp-1121"]
@@ -92,10 +94,11 @@ AZURE_MODELS = ["Phi-3-mini-4k-instruct", "Phi-3-small-8k-instruct", "Phi-3-medi
 COHERE_MODELS = ["command-r-plus", "c4ai-aya-expanse-8b", "c4ai-aya-expanse-32b"]
 MISTRAL_MODELS = ["mistral-large-latest", "ministral-3b-latest", "ministral-8b-latest", "mistral-small-latest"]
 NVIDIA_MODELS = list(NVIDIA_MODEL_MAP.keys())
+LAMBDA_MODELS = ["lfm-40b"]
 
-OPENAI_COMPATIBLE_MODELS = OPENAI_MODELS + TOGETHER_MODELS + XAI_MODELS + HF_INFERENCE_MODELS + NVIDIA_MODELS
+OPENAI_COMPATIBLE_MODELS = OPENAI_MODELS + TOGETHER_MODELS + XAI_MODELS + HF_INFERENCE_MODELS + NVIDIA_MODELS + LAMBDA_MODELS
 API_MODELS = OPENAI_COMPATIBLE_MODELS + GOOGLE_MODELS + ANTHROPIC_MODELS + REKA_MODELS + ZHIPU_MODELS + AI21_MODELS + AZURE_MODELS + COHERE_MODELS + MISTRAL_MODELS
-HF_MODELS = []
+HF_MODELS = list(HF_MODEL_MAP.keys())
 
 @dataclasses.dataclass
 class ModelResponse:
@@ -483,6 +486,8 @@ def get_hf_model_args(model_args):
             hf_model_args["do_sample"] = False
         else:
             hf_model_args["do_sample"] = True
+        if "stop" in model_args and model_args["stop"] is not None:
+            hf_model_args["stop_strings"] = [model_args["stop"]]
     return hf_model_args
 
 def evaluate_hf_model(model, tokenizer, batch, model_args=None, device="cuda"):
@@ -566,6 +571,8 @@ def configure_openai_client(model, api_key, is_openai_azure=False):
             client = AsyncOpenAI(base_url="https://api.x.ai/v1", api_key=api_key if api_key is not None else os.getenv("XAI_API_KEY"))
         elif model in NVIDIA_MODELS:
             client = AsyncOpenAI(base_url="https://integrate.api.nvidia.com/v1", api_key=api_key if api_key is not None else os.getenv("NVIDIA_API_KEY"))
+        elif model in LAMBDA_MODELS:
+            client = AsyncOpenAI(base_url="https://api.lambdalabs.com/v1", api_key=api_key if api_key is not None else os.getenv("LAMBDA_API_KEY"))
         else:
             client = AsyncOpenAI(api_key=api_key if api_key is not None else os.getenv("OPENAI_API_KEY"))
     

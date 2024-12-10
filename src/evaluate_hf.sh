@@ -28,8 +28,9 @@ outputs_dir="../experiments/outputs"
 # done
 
 models=(
-    # "yi-1.5-9b-chat"
-    "yi-1.5-34b-chat"
+    "yi-1.5-9b-chat"
+    "stablelm-2-12b-chat"
+    "stablelm-zephyr-3b"
 )
 
 t=0.7
