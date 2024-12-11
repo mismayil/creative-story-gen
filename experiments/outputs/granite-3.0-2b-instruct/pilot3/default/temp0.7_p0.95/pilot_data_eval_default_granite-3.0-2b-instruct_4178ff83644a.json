@@ -1,0 +1,109 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "granite-3.0-2b-instruct",
+        "cache_dir": "/mnt/scratch/home/ismayilz/.cache",
+        "batch_size": 4,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the heart of a bustling city, there was a secret underground market where people traded their excess fuel. Among them was a man named Jack, who had a unique collection of petrol and diesel in his home. One day, a mysterious woman named Lily approached him, offering to buy his petrol in exchange for a rare book. Jack agreed, and they exchanged their valuable commodities. Later that night, Jack realized he needed diesel for his car, but he had no petrol left. He remembered Lily's book and decided to trade it for some diesel from the underground market. He returned home and filled his car's tank, grateful for the unexpected transaction.",
+            "usage": null,
+            "result_id": "947d0f05fcd5"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the quaint town of Letitia, where time seemed to flow differently, a peculiar tradition prevailed. Every year, on the eve of the summer solstice, the townsfolk would gather in the town square, their faces aglow with lanterns. Among them was a young girl named Lily, who had a letter she wished to send to her far-off friend, but she was too shy to speak her feelings aloud. As the clock struck midnight, she carefully placed her letter inside a small, intricately designed stamp, which she had found in her grandmother's attic. With a deep breath, she sent the stamp flying into the air, watching as it soared towards the town's ancient tree. As the stamp landed, it released a soft glow, and the letter was sent, not through the usual means, but through the magic of the starlit night and the town's unique tradition.",
+            "usage": null,
+            "result_id": "8b3c1f19311e"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In a world where organs were the currency, an empire rose to power, demanding compliance from its subjects. A rebellious inventor, however, created a machine that could produce organs without the need for human sacrifice. The empire, threatened by this innovation, sent its enforcers to capture the inventor. But the inventor, with the help of a sympathetic doctor, managed to comply with the empire's demands while secretly continuing to produce organs, ensuring the survival of the empire and its people.",
+            "usage": null,
+            "result_id": "3c5c6568d2ae"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the heart of a gloom-shrouded forest, a forgotten clockmaker named Eli lived. His existence was a payment for his craftsmanship, but the gloom of the forest made it difficult for him to find customers. One day, a lost traveler stumbled upon his humble shop. In exchange for shelter, the traveler agreed to spread the word about Eli's clocks, breaking the gloom that enveloped the forest.",
+            "usage": null,
+            "result_id": "859ade48ae79"
+        }
+    ]
+}

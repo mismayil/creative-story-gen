@@ -5,7 +5,7 @@ import os
 from tqdm import tqdm
 import pathlib
 import traceback
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 import torch
 from tenacity import (
     retry,
@@ -30,6 +30,7 @@ from azure.ai.inference.models import SystemMessage as AzureSystemMessage, UserM
 from azure.core.credentials import AzureKeyCredential
 from cohere import ClientV2 as CohereClient
 from mistralai import Mistral
+from generation_utils import build_baichuan_chat_input
 
 logging.basicConfig(stream=sys.stderr, level=logging.WARN)
 logger = logging.getLogger(__name__)
@@ -81,7 +82,12 @@ HF_MODEL_MAP = {
     "olmo-2-13b": "allenai/OLMo-2-1124-13B-Instruct",
     "persimmon-8b-chat": "adept/persimmon-8b-chat",
     "mpt-7b-8k-chat": "mosaicml/mpt-7b-8k-chat",
-    "llama-3.2-1b-instruct": "meta-llama/Llama-3.2-1B-Instruct"
+    "llama-3.2-1b-instruct": "meta-llama/Llama-3.2-1B-Instruct",
+    "deepseek-llm-7b-chat": "deepseek-ai/deepseek-llm-7b-chat",
+    "baichuan2-7b-chat": "baichuan-inc/Baichuan2-7B-Chat",
+    "zamba2-2.7b-instruct": "Zyphra/Zamba2-2.7B-instruct",
+    "zamba2-1.2b-instruct": "Zyphra/Zamba2-1.2B-instruct",
+    "granite-3.0-2b-instruct": "ibm-granite/granite-3.0-2b-instruct"
 }
 
 MODEL_MAP = {**TOGETHER_MODEL_MAP, **NVIDIA_MODEL_MAP, **HF_MODEL_MAP}
@@ -469,7 +475,7 @@ async def evaluate_google_model(client, model, user_prompt, system_prompt=None, 
 def load_model(model_name="gpt2", model_args=None, cache_dir=None, device="cuda"):
     model_path = HF_MODEL_MAP.get(model_name, model_name)
     tokenizer_path = model_path
-    tokenizer = AutoTokenizer.from_pretrained(tokenizer_path, cache_dir=cache_dir)
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer_path, cache_dir=cache_dir, trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained(model_path, 
                                                  cache_dir=cache_dir,
                                                  device_map=device,
@@ -498,7 +504,7 @@ def get_hf_model_args(model_args):
             hf_model_args["stop_strings"] = [model_args["stop"]]
     return hf_model_args
 
-def evaluate_hf_model(model, tokenizer, batch, model_args=None, device="cuda"):
+def evaluate_hf_model(model, tokenizer, batch, model_name=None, model_args=None, device="cuda"):
     hf_model_args = get_hf_model_args(model_args)
 
     responses = []
@@ -511,11 +517,15 @@ def evaluate_hf_model(model, tokenizer, batch, model_args=None, device="cuda"):
         
         messages.append({"role": "user", "content": sample["user_prompt"].strip()})
 
-        input_ids = tokenizer.apply_chat_template(
-            messages,
-            add_generation_prompt=True,
-            return_tensors="pt",
-        ).to(device)
+        if model_name.startswith("baichuan"):
+            input_ids = build_baichuan_chat_input(model, tokenizer, messages, hf_model_args["max_new_tokens"])
+            input_ids = input_ids.to(device)
+        else: 
+            input_ids = tokenizer.apply_chat_template(
+                messages,
+                add_generation_prompt=True,
+                return_tensors="pt",
+            ).to(device)
 
         outputs = model.generate(
             input_ids,
@@ -741,7 +751,7 @@ async def main():
             if args.model in API_MODELS:
                 results = await evaluate_api_model(client, args.model, filtered_batch, model_args)
             else:
-                results = evaluate_hf_model(model, tokenizer, filtered_batch, model_args=model_args, device=device)
+                results = evaluate_hf_model(model, tokenizer, filtered_batch, model_name=args.model, model_args=model_args, device=device)
 
             for sample, result in zip(filtered_batch, results):
                 sample["output"] = result.text

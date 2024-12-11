@@ -12,7 +12,12 @@ models=(
     # "olmo-2-7b"
     # "olmo-2-13b"
     # "mpt-7b-8k-chat"
-    "llama-3.2-1b-instruct"
+    # "llama-3.2-1b-instruct"
+    # "deepseek-llm-7b-chat"
+    # "baichuan2-7b-chat"
+    # "zamba2-2.7b-instruct"
+    # "zamba2-1.2b-instruct"
+    # "granite-3.0-2b-instruct"
 )
 
 t=0.7
