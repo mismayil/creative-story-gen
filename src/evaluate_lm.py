@@ -78,7 +78,10 @@ HF_MODEL_MAP = {
     "stablelm-2-12b-chat": "stabilityai/stablelm-2-12b-chat",
     "stablelm-zephyr-3b": "stabilityai/stablelm-zephyr-3b",
     "olmo-2-7b": "allenai/OLMo-2-1124-7B-Instruct",
-    "olmo-2-13b": "allenai/OLMo-2-1124-13B-Instruct"
+    "olmo-2-13b": "allenai/OLMo-2-1124-13B-Instruct",
+    "persimmon-8b-chat": "adept/persimmon-8b-chat",
+    "mpt-7b-8k-chat": "mosaicml/mpt-7b-8k-chat",
+    "llama-3.2-1b-instruct": "meta-llama/Llama-3.2-1B-Instruct"
 }
 
 MODEL_MAP = {**TOGETHER_MODEL_MAP, **NVIDIA_MODEL_MAP, **HF_MODEL_MAP}
@@ -470,7 +473,8 @@ def load_model(model_name="gpt2", model_args=None, cache_dir=None, device="cuda"
     model = AutoModelForCausalLM.from_pretrained(model_path, 
                                                  cache_dir=cache_dir,
                                                  device_map=device,
-                                                 torch_dtype=torch.bfloat16)
+                                                 torch_dtype=torch.bfloat16,
+                                                 trust_remote_code=True)
     model.eval()
     return model, tokenizer
 

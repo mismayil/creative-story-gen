@@ -35,7 +35,10 @@ RUN apt update && apt install -y --allow-downgrades --allow-change-held-packages
         htop \
         apt-transport-https \
         gnupg \
-        protobuf-compiler
+        protobuf-compiler \
+        gfortran \
+        libopenblas-dev \
+        liblapack-dev
 
 # Set up user
 RUN --mount=type=secret,id=my_env source /run/secrets/my_env && \
