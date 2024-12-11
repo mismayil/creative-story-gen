@@ -76,7 +76,9 @@ HF_MODEL_MAP = {
     "yi-1.5-34b-chat": "01-ai/Yi-1.5-34B-Chat",
     "yi-1.5-9b-chat": "01-ai/Yi-1.5-9B-Chat",
     "stablelm-2-12b-chat": "stabilityai/stablelm-2-12b-chat",
-    "stablelm-zephyr-3b": "stabilityai/stablelm-zephyr-3b"
+    "stablelm-zephyr-3b": "stabilityai/stablelm-zephyr-3b",
+    "olmo-2-7b": "allenai/OLMo-2-1124-7B-Instruct",
+    "olmo-2-13b": "allenai/OLMo-2-1124-13B-Instruct"
 }
 
 MODEL_MAP = {**TOGETHER_MODEL_MAP, **NVIDIA_MODEL_MAP, **HF_MODEL_MAP}
@@ -86,7 +88,7 @@ GOOGLE_MODELS = ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-exp-1121"]
 ANTHROPIC_MODELS = ["claude-3-5-sonnet-20240620", "claude-3-5-haiku-20241022", "claude-3-opus-20240229", "claude-3-sonnet-20240229", "claude-3-haiku-20240307"]
 TOGETHER_MODELS = list(TOGETHER_MODEL_MAP.keys())
 XAI_MODELS = ["grok-beta"]
-HF_INFERENCE_MODELS = ["yi-1.5-34b-chat", "yi-1.5-9b-chat"]
+HF_INFERENCE_MODELS = []
 REKA_MODELS = ["reka-core", "reka-edge", "reka-flash"]
 ZHIPU_MODELS = ["glm-4-0520"]
 AI21_MODELS = ["jamba-1.5-mini", "jamba-1.5-large"]
@@ -461,7 +463,9 @@ async def evaluate_google_model(client, model, user_prompt, system_prompt=None, 
 
     return ModelResponse(text, None, exception)
 
-def load_model(model_path="gpt2", tokenizer_path="gpt2", model_args=None, cache_dir=None, device="cuda"):
+def load_model(model_name="gpt2", model_args=None, cache_dir=None, device="cuda"):
+    model_path = HF_MODEL_MAP.get(model_name, model_name)
+    tokenizer_path = model_path
     tokenizer = AutoTokenizer.from_pretrained(tokenizer_path, cache_dir=cache_dir)
     model = AutoModelForCausalLM.from_pretrained(model_path, 
                                                  cache_dir=cache_dir,
@@ -512,6 +516,7 @@ def evaluate_hf_model(model, tokenizer, batch, model_args=None, device="cuda"):
         outputs = model.generate(
             input_ids,
             pad_token_id=tokenizer.eos_token_id,
+            tokenizer=tokenizer,
             **hf_model_args
         )
         response = outputs[0][input_ids.shape[-1]:]
@@ -519,11 +524,8 @@ def evaluate_hf_model(model, tokenizer, batch, model_args=None, device="cuda"):
     
     return responses
 
-def evaluate_model(batch, model_name, model, tokenizer, model_args=None, device="cuda"):
-    if model_name in HF_MODELS:
-        return evaluate_hf_model(batch, model, tokenizer, model_args=model_args, device=device)
-    else:
-        raise ValueError(f"Model {model_name} not supported")
+def evaluate_model(model, tokenizer, batch, model_args=None, device="cuda"):
+    return evaluate_hf_model(model, tokenizer, batch, model_args=model_args, device=device)
 
 async def evaluate_api_model(client, model, batch, model_args=None):
     tasks = []
@@ -633,8 +635,6 @@ async def main():
     parser.add_argument("-o", "--output-dir", type=str, help="Output directory for evaluation results", default="outputs")
     parser.add_argument("-n", "--num-samples", type=int, help="Number of samples to evaluate", default=0)
     parser.add_argument("-c", "--cache-dir", type=str, help="Cache directory for model", default="~/.cache")
-    parser.add_argument("-mp", "--model-path", type=str, help="Model path to use for evaluation", default=None)
-    parser.add_argument("-tp", "--tokenizer-path", type=str, help="Tokenizer path to use for evaluation", default=None)
     parser.add_argument("-b", "--batch-size", type=int, help="Batch size for evaluation", default=1)
     parser.add_argument("-r", "--resume", action="store_true", help="Resume evaluation from the current file")
     parser.add_argument("-s", "--stop", type=str, help="Stop token for generation", default=None)
@@ -678,8 +678,6 @@ async def main():
             "source": args.datapath,
             "size": len(data),
             "model": args.model,
-            "model_path": args.model_path,
-            "tokenizer_path": args.tokenizer_path,
             "cache_dir": args.cache_dir,
             "batch_size": args.batch_size,
             "openai_azure": args.openai_azure,
@@ -714,8 +712,8 @@ async def main():
     
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    if args.model not in API_MODELS and args.model_path:
-        model, tokenizer = load_model(model_path=args.model_path, tokenizer_path=args.tokenizer_path, cache_dir=args.cache_dir, device=device)
+    if args.model in HF_MODELS:
+        model, tokenizer = load_model(args.model, cache_dir=args.cache_dir, device=device)
 
     model_args = {
         "temperature": args.temperature,
@@ -742,7 +740,7 @@ async def main():
             if args.model in API_MODELS:
                 results = await evaluate_api_model(client, args.model, filtered_batch, model_args)
             else:
-                results = evaluate_model(args.model, model, tokenizer, filtered_batch, model_args=model_args, device=device)
+                results = evaluate_model(model, tokenizer, filtered_batch, model_args=model_args, device=device)
 
             for sample, result in zip(filtered_batch, results):
                 sample["output"] = result.text

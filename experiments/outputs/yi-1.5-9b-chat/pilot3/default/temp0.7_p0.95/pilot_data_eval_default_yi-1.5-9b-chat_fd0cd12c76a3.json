@@ -1,0 +1,109 @@
+{
+    "metadata": {
+        "source": "../experiments/data/pilot/eval/pilot_data_eval_default.json",
+        "template": "default",
+        "size": 4,
+        "model": "yi-1.5-9b-chat",
+        "cache_dir": "/mnt/scratch/home/ismayilz/.cache",
+        "batch_size": 4,
+        "openai_azure": false,
+        "num_samples": 0,
+        "resume": false,
+        "stop": "\n",
+        "model_args": {
+            "temperature": 0.7,
+            "max_tokens": 256,
+            "top_p": 0.95,
+            "top_k": null,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "metrics": {},
+    "data": [
+        {
+            "id": "petrol-diesel-pump",
+            "items": [
+                "petrol",
+                "diesel",
+                "pump"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "going to the petrol station to pump diesel into a vehicle",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: petrol, diesel, pump. However, the story should not be about going to the petrol station to pump diesel into a vehicle.",
+            "template": "default",
+            "output": "In the quaint village of Diesel, where time seemed to flow at a snail's pace, there was a peculiar shop called Petrol's Delight. It wasn't your typical general store, but rather a haven for collectors of rare and unusual items. The owner, a quirky old man known as Mr. Finkle, had a secret: he used the mysterious substance from the pump to create an enchanted blend that could turn the mundane into magical. One day, a young orphan named Jasper stumbled upon the secret, accidentally uncorking a bottle of the enchanted blend while searching for a meal. From that day forward, Jasper discovered his newfound power to infuse ordinary items with enchanting properties. And so, the legend of Petrol's Delight and its enchanted blend spread across the land, proving that sometimes, the most extraordinary stories start with a simple pump.",
+            "usage": null,
+            "result_id": "1db6fb1d561d"
+        },
+        {
+            "id": "stamp-letter-send",
+            "items": [
+                "stamp",
+                "letter",
+                "send"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "low",
+            "boring_theme": "putting a stamp on the envelop containing a letter to send it",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: stamp, letter, send. However, the story should not be about putting a stamp on the envelop containing a letter to send it.",
+            "template": "default",
+            "output": "In the quaint village of Inkwell, where every house had a well painted door and every resident was a master of words, there lived an old man named Benjamin. He had a peculiar habit of collecting every single letter that arrived at the post office, which was located at the heart of the village. One day, a young girl named Emily came to the post office, tears streaming down her face. She clutched a single sheet of paper and begged the postmaster to help her. The paper was blank, but it held a promise of a letter she had always dreamed of sending. The postmaster, moved by her plight, took the sheet and placed it in a glass case, adding, \"It's not about what's on the paper, Emily. It's about what it represents.\"\n",
+            "usage": null,
+            "result_id": "39db455d9159"
+        },
+        {
+            "id": "organ-empire-comply",
+            "items": [
+                "organ",
+                "empire",
+                "comply"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "having an organ empire and complying with regulations",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: organ, empire, comply. However, the story should not be about having an organ empire and complying with regulations.",
+            "template": "default",
+            "output": "In the quaint village of Aeir, nestled between the whispering forests and the serene lake, there existed an ancient organ hidden away in the catacombs beneath the local tavern. The organ, rumored to be crafted by the hands of a mythical blacksmith, was said to possess the power to summon the spirits of the past.\n",
+            "usage": null,
+            "result_id": "d1886bc4becc"
+        },
+        {
+            "id": "gloom-payment-exist",
+            "items": [
+                "gloom",
+                "payment",
+                "exist"
+            ],
+            "pos": [
+                "noun",
+                "noun",
+                "verb"
+            ],
+            "semantic_distance": "high",
+            "boring_theme": "the feeling of gloom you have about an existing payment",
+            "system_prompt": "You are an expert creative story writer. You will be given three words (e.g., car, wheel, drive) and then asked to write a creative short story that contains these three words. The idea is that instead of writing a standard story such as \"I went for a drive in my car with my hands on the steering wheel.\", you come up with a novel and unique story that uses the required words in unconventional ways or settings.",
+            "user_prompt": "Write a creative short story using a maximum of five sentences. The story must include the following three words: gloom, payment, exist. However, the story should not be about the feeling of gloom you have about an existing payment.",
+            "template": "default",
+            "output": "In the heart of the forest, where the trees whispered secrets of old, there existed a peculiar lighthouse named Gloom. It wasn't the usual beacon of hope, but a keeper of the shadows, the secrets, and the stories that dared not exist in the daylight. One day, a traveler stumbled upon Gloom, a man with a heavy heart and a bag full of payment. He approached the lighthouse, offering his wealth in exchange for a glimpse into the deepest, darkest tales whispered by the forest. Gloom, the lighthouse, accepted the payment, and in return, the forest sang ancient melodies, weaving stories that danced in the shadows, proving that even in the gloomiest of places, there lies a wealth of existence waiting to be discovered.",
+            "usage": null,
+            "result_id": "527ab4bb5f26"
+        }
+    ]
+}
