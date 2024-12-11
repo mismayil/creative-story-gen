@@ -524,9 +524,6 @@ def evaluate_hf_model(model, tokenizer, batch, model_args=None, device="cuda"):
     
     return responses
 
-def evaluate_model(model, tokenizer, batch, model_args=None, device="cuda"):
-    return evaluate_hf_model(model, tokenizer, batch, model_args=model_args, device=device)
-
 async def evaluate_api_model(client, model, batch, model_args=None):
     tasks = []
     
@@ -740,7 +737,7 @@ async def main():
             if args.model in API_MODELS:
                 results = await evaluate_api_model(client, args.model, filtered_batch, model_args)
             else:
-                results = evaluate_model(model, tokenizer, filtered_batch, model_args=model_args, device=device)
+                results = evaluate_hf_model(model, tokenizer, filtered_batch, model_args=model_args, device=device)
 
             for sample, result in zip(filtered_batch, results):
                 sample["output"] = result.text
