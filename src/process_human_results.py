@@ -2,8 +2,35 @@ import argparse
 import pandas as pd
 import pathlib
 from tqdm import tqdm
+from utils import read_json, write_json
+from itertools import chain
+from sage.spelling_correction import AvailableCorrectors
+from sage.spelling_correction import T5ModelForSpellingCorruption
+import torch
+from metrics import get_sentences
 
-from utils import write_json, read_json
+def load_corrector():
+    corrector = T5ModelForSpellingCorruption.from_pretrained(AvailableCorrectors.ent5_large.value)
+    corrector.model.to(torch.device("cuda"))
+    return corrector
+
+def correct_spelling(corrector, text):
+    corrected_text = corrector.correct(text, prefix="grammar: ")
+    return corrected_text[0]
+
+def polish_text(text):
+    sentences = get_sentences(text)
+    polished_sentences = []
+    for sentence in sentences:
+        sentence = sentence.strip()
+        if sentence:
+            sentence = sentence[0].upper() + sentence[1:]
+        words = sentence.split(" ")
+        words = [word.strip() for word in words]
+        words = [word.upper() if word == "i" else word for word in words if word]
+        polished_sentences.append(" ".join(words))
+    text = " ".join(polished_sentences)
+    return text
 
 def main():
     parser = argparse.ArgumentParser(description="Process human results")
@@ -24,6 +51,8 @@ def main():
     }
     write_json({"metadata": metadata, "data": human_results.to_dict(orient="records")}, results_path.with_suffix(".json"))
 
+    corrector = load_corrector()
+
     for _, row in tqdm(human_results.iterrows(), total=len(human_results), desc="Processing human results"):
         if row["Include"] == 0:
             continue
@@ -35,9 +64,13 @@ def main():
         for q_index in range(1, 5):
             item_id = config["id_map"][f"Q{q_index}"]
             source_sample = source_data_map[item_id]
+            output = row[f"Q{q_index}"]
+            corrected_output = correct_spelling(corrector, output)
+            polished_output = polish_text(corrected_output)
             results.append({
                 **source_sample,
-                "output": row[f"Q{q_index}"],
+                "output": polished_output,
+                "original_output": output,
                 "result_id": f"{human_id}_Q{q_index}"
             })
         

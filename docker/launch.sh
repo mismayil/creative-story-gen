@@ -12,9 +12,10 @@ GPU_MEMORY="32G"
 VERBOSE=0
 RUN_COMMAND="/bin/bash"
 N_GPUS_SET=1
+NODE_POOLS=""
 shift 1
 
-while getopts m:l:c:g:p:s:u:v opt; do
+while getopts m:l:c:g:p:s:u:o:v opt; do
 	case ${opt} in
 		m)
 			MEMORY=${OPTARG}
@@ -46,6 +47,9 @@ while getopts m:l:c:g:p:s:u:v opt; do
 		r)
 			RUN_COMMAND=${OPTARG}
 			;;
+		o)
+			NODE_POOLS=${OPTARG}
+			;;
 		v)
 			VERBOSE=1
 			;;
@@ -73,6 +77,7 @@ if [ "$VERBOSE" == 1 ]; then
 	else
 		echo gpu memory: ${GPU_MEMORY}
 	fi
+	echo node pools: ${NODE_POOLS}
 	echo "--------------------------------"
 fi
 
@@ -93,6 +98,11 @@ if [ "$N_GPUS_SET" == 1 ]; then
 	fi
 else
 	GPU_ARGS="--gpu-memory $GPU_MEMORY"
+fi
+
+NODE_POOLS_ARGS=""
+if [ "$NODE_POOLS" != "" ]; then
+	NODE_POOLS_ARGS="--node-pools $NODE_POOLS"
 fi
 
 # Run this for train mode
@@ -139,6 +149,7 @@ if [ "$COMMAND" == "run_bash" ]; then
 			--cpu-limit $N_CPUS \
 			--memory $MEMORY \
 			--memory-limit $MEMORY \
+			$NODE_POOLS_ARGS \
 			$GPU_ARGS \
 			--pvc nlp-scratch:/mnt/scratch \
 			--interactive \
