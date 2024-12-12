@@ -18,6 +18,7 @@ models=(
     # "zamba2-2.7b-instruct"
     # "zamba2-1.2b-instruct"
     # "granite-3.0-2b-instruct"
+    "mpt-30b-chat"
 )
 
 t=0.7

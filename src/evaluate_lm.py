@@ -82,6 +82,7 @@ HF_MODEL_MAP = {
     "olmo-2-13b": "allenai/OLMo-2-1124-13B-Instruct",
     "persimmon-8b-chat": "adept/persimmon-8b-chat",
     "mpt-7b-8k-chat": "mosaicml/mpt-7b-8k-chat",
+    "mpt-30b-chat": "mosaicml/mpt-30b-chat",
     "llama-3.2-1b-instruct": "meta-llama/Llama-3.2-1B-Instruct",
     "deepseek-llm-7b-chat": "deepseek-ai/deepseek-llm-7b-chat",
     "baichuan2-7b-chat": "baichuan-inc/Baichuan2-7B-Chat",
