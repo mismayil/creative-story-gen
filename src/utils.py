@@ -29,6 +29,123 @@ MODEL_ENCODINGS = {
     "gpt-4o": "o200k_base"
 }
 
+# claude, gpt and gemini model sizes based on https://arxiv.org/abs/2412.19260 and https://lifearchitect.substack.com/p/the-memo-special-edition-claude-3
+MODEL_SIZE_MAP = {
+    "llama-3.2-3b-instruct": 3e9,
+    "llama-3.1-8b-instruct": 8e9,
+    "llama-3.1-70b-instruct": 70e9,
+    "llama-3.1-405b-instruct": 405e9,
+    "qwen-2.5-coder-32b-instruct": 32e9,
+    "wizardlm-2-8x22b": 22e9,
+    "gemma-2-27b": 27e9,
+    "gemma-2-9b": 9e9,
+    "gemma-2b": 2e9,
+    "deepseek-llm-chat-67b": 67e9,
+    "mythomax-l2-13b": 13e9,
+    "mistral-7b-instruct-v0.3": 7e9,
+    "mixtral-8x7b-instruct": 7e9,
+    "mixtral-8x22b-instruct": 22e9,
+    "nous-hermes-2-mixtral-8x7b-dpo": 7e9,
+    "qwen-2.5-7b-instruct": 7e9,
+    "qwen-2.5-72b-instruct": 72e9,
+    "stripedhyena-nous-7b": 7e9,
+    "solar-10.7b-instruct-v1.0": 10.7e9,
+    "nemotron-4-340b-instruct": 340e9,
+    "yi-large": 34e9,
+    "granite-34b-code-instruct": 34e9,
+    "granite-8b-code-instruct": 8e9,
+    "mistral-nemo-12b-instruct": 12e9,
+    "baichuan2-13b-chat": 13e9,
+    "nemotron-mini-4b-instruct": 4e9,
+    "zamba2-7b-instruct": 7e9,
+    "granite-3.0-8b-instruct": 8e9,
+    "dbrx-instruct": 132e9,
+    "gemma-2-2b-it": 2e9,
+    "yi-1.5-34b-chat": 34e9,
+    "yi-1.5-9b-chat": 9e9,
+    "stablelm-2-12b-chat": 12e9,
+    "stablelm-zephyr-3b": 3e9,
+    "olmo-2-7b": 7e9,
+    "olmo-2-13b": 13e9,
+    "persimmon-8b-chat": 8e9,
+    "mpt-7b-8k-chat": 7e9,
+    "mpt-30b-chat": 30e9,
+    "llama-3.2-1b-instruct": 1e9,
+    "deepseek-llm-7b-chat": 7e9,
+    "baichuan2-7b-chat": 7e9,
+    "zamba2-2.7b-instruct": 2.7e9,
+    "zamba2-1.2b-instruct": 1.2e9,
+    "granite-3.0-2b-instruct": 2e9,
+    "gpt-3.5-turbo": 175e9, 
+    "grok-beta": 314e9,
+    "reka-core": 67e9,
+    "reka-edge": 7e9,
+    "reka-flash": 21e9,
+    "glm-4-0520": 130e9,
+    "jamba-1.5-mini": 12e9,
+    "jamba-1.5-large": 94e9,
+    "Phi-3-mini-4k-instruct": 3.8e9,
+    "Phi-3-small-8k-instruct": 7e9,
+    "Phi-3-medium-4k-instruct": 14e9,
+    "Phi-3.5-MoE-instruct": 6.6e9,
+    "command-r-plus": 104e9,
+    "c4ai-aya-expanse-8b": 8e9,
+    "c4ai-aya-expanse-32b": 32e9,
+    "mistral-large-latest": 123e9,
+    "ministral-3b-latest": 3e9,
+    "ministral-8b-latest": 8e9,
+    "mistral-small-latest": 22e9,
+    "lfm-40b": 40e9,
+    "claude-3-5-haiku-20241022": 20e9,
+    "claude-3-5-sonnet-20240620": 175e9,
+    "claude-3-opus-20240229": 500e9,
+    "gpt-4": 500e9,
+    "gpt-4o": 200e9,
+    "gemini-1.5-flash": 500e9,
+    "gemini-1.5-pro": 500e9
+}
+
+def get_model_family(model_name):
+    model_name = model_name.lower()
+    if model_name.startswith("human"):
+        return "Human"
+    if "mixtral" in model_name or "MoE" in model_name:
+        return "MoE"
+    if model_name.startswith("jamba") or model_name.startswith("zamba"):
+        return "SSM"
+    if model_name.startswith("gpt"):
+        return "GPT"
+    if model_name.startswith("claude"):
+        return "Claude"
+    if model_name.startswith("gemini"):
+        return "Gemini"
+    if model_name.startswith("llama"):
+        return "Llama"
+    if model_name.startswith("phi"):
+        return "Phi"
+    if model_name.startswith("reka"):
+        return "Reka"
+    if model_name.startswith("mistral") or model_name.startswith("ministral"):
+        return "Mistral"
+    if model_name.startswith("stablelm"):
+        return "StableLM"
+    if model_name.startswith("yi"):
+        return "Yi"
+    if model_name.startswith("granite"):
+        return "Granite"
+    if model_name.startswith("nemotron"):
+        return "Nemotron"
+    if model_name.startswith("olmo"):
+        return "Olmo"
+    if model_name.startswith("qwen"):
+        return "Qwen"
+    if model_name.startswith("gemma"):
+        return "Gemma"
+    if model_name.startswith("deepseek"):
+        return "DeepSeek"
+    
+    return "Other"
+
 def num_tokens_from_string(text, model):
     if model not in MODEL_ENCODINGS:
         return 0

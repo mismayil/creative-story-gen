@@ -178,6 +178,7 @@ def compute_metrics(results, config):
         metrics["corpus_n_gram_diversity"] = corpus_n_gram_diversity
         metrics["corpus_pos_diversity"] = corpus_pos_diversity
         metrics["num_unique_stories"] = len(set(stories))
+        metrics["num_themes"] = len(set([result["metrics"]["theme_cluster"] for result in results]))
         metrics[f"top_{config['max_frequency']}_n_grams"] = {}
 
         for i, freq_counter in enumerate(corpus_n_gram_frequency):

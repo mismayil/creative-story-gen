@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import ast
 from pandas.api.types import is_numeric_dtype
 
-from utils import concat_dfs
+from utils import concat_dfs, MODEL_SIZE_MAP, get_model_family
 
 sns.set_theme(style="dark")
 
@@ -49,7 +49,7 @@ def set_group_data(metrics):
             metrics[by_field] = metrics[by_field].map(MODEL_NAME_MAP)
     return group_by
 
-def plot_local_metrics(metrics_lst, metric, output_dir, output_format="png", plot_type="bar"): 
+def plot_default_metrics(metrics_lst, metric, output_dir, output_format="png", plot_type="bar"): 
     merged_metrics = concat_dfs(metrics_lst)
 
     if metric not in merged_metrics.columns:
@@ -76,7 +76,7 @@ def plot_local_metrics(metrics_lst, metric, output_dir, output_format="png", plo
     
     if plot_type == "bar":
         sns.barplot(data=merged_metrics, x=x_attr, y=metric, hue=hue_attr, ax=ax, err_kws={'linewidth': 5}, palette=custom_palette)
-        ax.legend(ncol=5, loc="center left", bbox_to_anchor=(0, 1.05), title=None, title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
+        ax.legend(title=None, title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
     elif plot_type == "violin":
         sns.violinplot(data=merged_metrics, x=x_attr, y=metric, hue=hue_attr, ax=ax, palette=custom_palette)
         ax.legend(title=None, title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
@@ -175,13 +175,127 @@ def plot_global_metrics_raw_surprises(metrics_lst, output_dir, output_format="pn
     print(f"Saving figure to {plot_path}")
     plt.savefig(plot_path)
     plt.close()
-    
+
+def plot_default_metrics_by_model_size(metrics_lst, metric, output_dir, output_format="png"): 
+    merged_metrics = concat_dfs(metrics_lst)
+
+    if metric not in merged_metrics.columns:
+        print(f"Skipping. Metric {metric} not found in the input data.")
+        return
+
+    # filter out models with unknown size
+    merged_metrics = merged_metrics[merged_metrics["model"].isin(MODEL_SIZE_MAP.keys())]
+    merged_metrics["model_size"] = merged_metrics["model"].apply(lambda x: MODEL_SIZE_MAP.get(x, 0) / 1e9)
+    merged_metrics["model_family"] = merged_metrics["model"].apply(get_model_family)
+    group_by = set_group_data(merged_metrics)
+
+    assert len(group_by) > 1, "Group by field should have at least 2 values."
+
+    group_attr = group_by[-1]
+
+    group_ids = merged_metrics[group_attr].unique()
+    hue_attr = "model_family"
+    x_attr = "model_size"
+
+    default_output_dir = pathlib.Path(output_dir) / f"{output_format}_figs" / "model_size"
+    default_output_dir.mkdir(parents=True, exist_ok=True)
+    # fig, ax = plt.subplots(figsize=FIG_SIZE)
+    # ax.set_xlabel("Model size (in billions)", size=XLABEL_SIZE)
+    # ax.set_ylabel(metric, size=YLABEL_SIZE)
+    # ax.tick_params(axis='x', labelsize=TICK_SIZE)
+    # ax.tick_params(axis='y', labelsize=TICK_SIZE)
+    # ax.title.set_size(TITLE_SIZE)
+    plt.figure(figsize=FIG_SIZE)
+    sns.lmplot(data=merged_metrics, x=x_attr, y=metric, hue=group_attr, legend=False)
+    plt.legend(loc="upper right", bbox_to_anchor=(1, 1.05))
+    # ax.legend(title=None, title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
+
+    plt.tight_layout()
+
+    plot_path = f"{default_output_dir}/fig_{metric}_by_model_size.{output_format}"
+    print(f"Saving figure to {plot_path}")
+    plt.savefig(plot_path)
+    plt.close()
+
+    # for group_id in group_ids:
+    #     group_metrics = merged_metrics[merged_metrics[group_attr] == group_id].copy()
+
+    #     default_output_dir = pathlib.Path(output_dir) / f"{output_format}_figs" / "model_size" / group_id
+    #     default_output_dir.mkdir(parents=True, exist_ok=True)
+    #     fig, ax = plt.subplots(figsize=FIG_SIZE)
+    #     ax.set_title(group_id)
+    #     ax.set_xlabel("Model size (in billions)", size=XLABEL_SIZE)
+    #     ax.set_ylabel(metric, size=YLABEL_SIZE)
+    #     ax.tick_params(axis='x', labelsize=TICK_SIZE)
+    #     ax.tick_params(axis='y', labelsize=TICK_SIZE)
+    #     ax.title.set_size(TITLE_SIZE)
+        
+    #     # sns.scatterplot(data=group_metrics, x=x_attr, y=metric, hue=hue_attr, style=hue_attr, s=400, markers=True, ax=ax, palette=custom_palette)
+    #     sns.regplot(data=group_metrics, x=x_attr, y=metric, ax=ax)
+    #     # sns.lineplot(data=merged_metrics, x=x_attr, y=metric, hue=hue_attr, style=hue_attr, lw=5, markers=True, ax=ax, palette=custom_palette, legend="brief")
+    #     ax.legend(title=None, title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
+    #     # ax.set_xscale("log")
+    #     # sns.lmplot(data=merged_metrics, x=x_attr, y=metric, hue=hue_attr, scatter=True, palette=custom_palette, legend=True)
+
+    #     plt.tight_layout()
+
+    #     plot_path = f"{default_output_dir}/fig_{metric}_by_model_size.{output_format}"
+    #     print(f"Saving figure to {plot_path}")
+    #     plt.savefig(plot_path)
+    #     plt.close()
+
+def plot_default_metrics_by_model_family(metrics_lst, metric, output_dir, output_format="png"): 
+    merged_metrics = concat_dfs(metrics_lst)
+
+    if metric not in merged_metrics.columns:
+        print(f"Skipping. Metric {metric} not found in the input data.")
+        return
+
+    merged_metrics["model_family"] = merged_metrics["model"].apply(get_model_family)
+    group_by = set_group_data(merged_metrics)
+
+    assert len(group_by) > 1, "Group by field should have at least 2 values."
+
+    group_attr = group_by[-1]
+
+    group_ids = merged_metrics[group_attr].unique()
+    human_metrics = merged_metrics[merged_metrics["model_family"] == "human"]
+    model_metrics = merged_metrics[merged_metrics["model_family"] != "human"]
+    hue_attr = "model_family"
+    x_attr = group_by[-1]
+
+    for group_id in group_ids:
+        human_group_metrics = human_metrics[human_metrics[group_attr] == group_id].copy()
+        model_group_metrics = model_metrics[model_metrics[group_attr] == group_id].copy()
+
+        default_output_dir = pathlib.Path(output_dir) / f"{output_format}_figs" / "model_family" / group_id
+        default_output_dir.mkdir(parents=True, exist_ok=True)
+
+        fig, ax = plt.subplots(figsize=FIG_SIZE)
+        # ax.set_title(metric)
+        ax.set_xlabel(LABEL_MAP.get(x_attr, x_attr), size=XLABEL_SIZE)
+        ax.set_ylabel(metric, size=YLABEL_SIZE)
+        ax.tick_params(axis='x', labelsize=TICK_SIZE)
+        ax.tick_params(axis='y', labelsize=TICK_SIZE)
+        # ax.title.set_size(TITLE_SIZE)
+        
+        sns.swarmplot(data=merged_metrics, x=x_attr, y=metric, hue=hue_attr, size=10, ax=ax, palette=custom_palette)
+        # ax.legend(title=None, title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
+        ax.legend(ncol=5, loc="center left", bbox_to_anchor=(0, 1.05), title=None, title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
+
+        plt.tight_layout()
+
+        plot_path = f"{default_output_dir}/fig_{metric}_by_model_family.{output_format}"
+        print(f"Saving figure to {plot_path}")
+        plt.savefig(plot_path)
+        plt.close()
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input-files", type=str, nargs="+", help="Path to csv metrics file(s)", required=True)
     parser.add_argument("-o", "--output-dir", type=str, help="Output directory to save plots", default=None)
     parser.add_argument("-f", "--output-format", type=str, choices=["png", "pdf", "svg"], default="png", help="Format to save the plots in.")
-    parser.add_argument("-p", "--plots", type=str, nargs="+", choices=["local", "n_gram_diversity", "raw_surprises"], default=["local"], help="Plots to generate")
+    parser.add_argument("-p", "--plots", type=str, nargs="+", choices=["default", "default_model_size", "default_model_family", "n_gram_diversity", "raw_surprises"], default=["default"], help="Plots to generate")
     parser.add_argument("-t", "--plot-type", type=str, choices=["bar", "violin"], default="violin", help="Type of plot to generate")
 
     args = parser.parse_args()
@@ -209,10 +323,15 @@ def main():
     pathlib.Path(output_dir).mkdir(parents=True, exist_ok=True)
 
     for plot in args.plots:
-        if plot == "local":
+        if plot.startswith("default"):
             for col in metrics_lst[0].columns:
                 if col.startswith("metric_") and is_numeric_dtype(metrics[col].iloc[0]):
-                    plot_local_metrics(metrics_lst, col, output_dir, output_format=args.output_format, plot_type=args.plot_type)
+                    if plot == "default":
+                        plot_default_metrics(metrics_lst, col, output_dir, output_format=args.output_format, plot_type=args.plot_type)
+                    if plot == "default_model_size":
+                        plot_default_metrics_by_model_size(metrics_lst, col, output_dir, output_format=args.output_format)
+                    if plot == "default_model_family":
+                        plot_default_metrics_by_model_family(metrics_lst, col, output_dir, output_format=args.output_format)
         elif plot == "n_gram_diversity":
             plot_global_metrics_n_gram_diversity(metrics_lst, output_dir, output_format=args.output_format)
         elif plot == "raw_surprises":

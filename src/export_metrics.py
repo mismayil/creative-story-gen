@@ -14,6 +14,7 @@ def export_metrics(results):
                 "result_id": sample["result_id"],
                 "group_id": results["metadata"]["group_id"],
                 "group_by": results["metadata"]["config"]["group_by"],
+                "model": sample["metadata"]["model"],
                 **{f"metric_{metric_name}": metric_value for metric_name, metric_value in sample["metrics"].items() if not isinstance(metric_value, dict)}
             })
     
