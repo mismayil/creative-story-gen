@@ -76,6 +76,17 @@ nonexpert_corrs <- nonexpert_by_storyid %>%
 # TODO HERE PCA
 
 ### ANALYSIS
+expert_by_storyid$author_is_ai = ifelse(expert_by_storyid$story_author == "AI", 1, 0)
+nonexpert_by_storyid$author_is_ai = ifelse(nonexpert_by_storyid$story_author == "AI", 1, 0)
+# who's more creative? #and what if we control for # words?
+ttest_expert <- lm(creativity_mean ~ author_is_ai, data = expert_by_storyid)
+summary(ttest_expert)
+ttest_nonexpert <- lm(creativity_median ~ author_is_ai, data = nonexpert_by_storyid)
+summary(ttest_nonexpert)
+# turing test accuracy - can they predict AI authors?
+table(expert_by_storyid$author_is_ai, expert_by_storyid$author_ai_mean) #95% accuracy
+table(nonexpert_by_storyid$author_is_ai, nonexpert_by_storyid$author_ai_median) #81% accuracy
+
 # predict expert and non-expert scores by autometrics
 lm_expert <- lm(data = expert_by_storyid, creativity_mean ~ novelty + surprise + inv_homogen  +
                      length_in_unique_words)
