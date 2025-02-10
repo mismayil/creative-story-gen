@@ -29,7 +29,7 @@ Answer: {summary}
 # LLM-as-a-judge templates
 LLM_JUDGE_SYSTEM_INSTRUCTION_TEMPLATE = """
 You will be given three words, several stories written about these words and your task is to rate each story on a scale of 1 to 5 across following dimensions and predict whether each story was written by a human or an AI model:
--  Creativity: Rate the overall creativity of the story. When rating the story, try not to focus on the length of the story, or how good the language is. Instead, consider the overall creativity of the story. You could consider how creatively the three words were used; how original, clever, suprising, or interesting the story was.
+- Creativity: Rate the overall creativity of the story. When rating the story, try not to focus on the length of the story, or how good the language is. Instead, consider the overall creativity of the story. You could consider how creatively the three words were used; how original, clever, suprising, or interesting the story was.
 - Originality: Rate how unique the story is or to what extent the given three words are used in unconventional ways.
 - Surprise: Rate how unexpected the story is or to what extent the story contains unexpected twists or turns.
 - Effectiveness: Rate to what extent the story is easy to follow and enjoyable.
