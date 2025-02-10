@@ -11,7 +11,8 @@ SYSTEM_INSTRUCTION_TEMPLATES = {
     "summary": SUMMARY_SYSTEM_INSTRUCTION_TEMPLATE,
     "simple": SIMPLE_SYSTEM_INSTRUCTION_TEMPLATE,
     "controlled": CONTROLLED_SYSTEM_INSTRUCTION_TEMPLATE,
-    "paraphrased": PARAPHRASED_SYSTEM_INSTRUCTION_TEMPLATE
+    "paraphrased": PARAPHRASED_SYSTEM_INSTRUCTION_TEMPLATE,
+    "llm_judge": LLM_JUDGE_SYSTEM_INSTRUCTION_TEMPLATE
 }
 
 USER_INSTRUCTION_TEMPLATES = {
@@ -20,7 +21,8 @@ USER_INSTRUCTION_TEMPLATES = {
     "summary": SUMMARY_USER_INSTRUCTION_TEMPLATE,
     "simple": SIMPLE_USER_INSTRUCTION_TEMPLATE,
     "controlled": CONTROLLED_USER_INSTRUCTION_TEMPLATE,
-    "paraphrased": PARAPHRASED_USER_INSTRUCTION_TEMPLATE
+    "paraphrased": PARAPHRASED_USER_INSTRUCTION_TEMPLATE,
+    "llm_judge": LLM_JUDGE_USER_INSTRUCTION_TEMPLATE
 }
 
 SHOT_TEMPLATES = {
@@ -45,6 +47,16 @@ def prepare_user_instruction(sample, template):
     instruction_template = USER_INSTRUCTION_TEMPLATES[template]
     return prepare_template(sample, instruction_template)
 
+def prepare_llm_judge_user_instruction(sample, template):
+    instruction_template = USER_INSTRUCTION_TEMPLATES[template]
+    words = sample["item_id"].split("-")
+    stories = ""
+
+    for idx, item_sample in enumerate(sample["samples"]):
+        stories += f"Story {idx+1}:\n{item_sample['text']}\n\n"
+
+    return prepare_template({"words": words, "stories": stories.strip()}, instruction_template)
+
 def prepare_summary_shot_prompt(sample, template, num_shots=1, shot_data=None):
     if not shot_data:
         return ""
@@ -66,7 +78,8 @@ SYSTEM_INSTRUCTION_PROCESSORS = {
 }
 
 USER_INSTRUCTION_PROCESSORS = {
-    "default": prepare_user_instruction
+    "default": prepare_user_instruction,
+    "llm_judge": prepare_llm_judge_user_instruction
 }
 
 SHOT_PROCESSORS = {

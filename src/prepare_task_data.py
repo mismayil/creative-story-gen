@@ -1,6 +1,7 @@
 import argparse
 import pathlib
 from tqdm import tqdm
+import random
 
 from utils import read_json, write_json, find_files
 
@@ -19,8 +20,53 @@ def prepare_summarization_data(datapath):
     
     return task_data
 
+def prepare_llm_judge_data(datapath):
+    data = read_json(datapath)
+    task_data = []
+    data_by_item_by_author = {}
+    
+    for sample_id, sample in tqdm(data.items(), total=len(data), desc=f"Preparing llm-judge data from {datapath}"):
+        item_id = sample["item_id"]
+        author = sample["author"]
+
+        if item_id not in data_by_item_by_author:
+            data_by_item_by_author[item_id] = {}
+        
+        if author not in data_by_item_by_author[item_id]:
+            data_by_item_by_author[item_id][author] = []
+        
+        data_by_item_by_author[item_id][author].append(sample)
+    
+    item_ids = list(data_by_item_by_author.keys())
+
+    for item_id in item_ids:
+        ai_queue = data_by_item_by_author[item_id].get("AI", [])
+        human_queue = data_by_item_by_author[item_id].get("human", [])
+        
+        while True:
+            item_samples = []
+
+            for _ in range(3):
+                if ai_queue:
+                    item_samples.append(ai_queue.pop())
+                if human_queue:
+                    item_samples.append(human_queue.pop())
+            
+            item_samples = random.sample(item_samples, len(item_samples))
+
+            if item_samples:
+                task_data.append({
+                    "item_id": item_id,
+                    "samples": item_samples
+                })
+            else:
+                break
+
+    return task_data
+
 TASK_MAP = {
-    "summarization": prepare_summarization_data
+    "summarization": prepare_summarization_data,
+    "llm-judge": prepare_llm_judge_data
 }
 
 def main():

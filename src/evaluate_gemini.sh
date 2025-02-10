@@ -34,9 +34,16 @@ outputs_dir="../experiments/outputs"
 #     done
 # done
 
-t=0.7
-p=0.95
-jsonfile=${data_dir}/pilot/eval/pilot_data_eval_default.json
+# t=0.7
+# p=0.95
+# jsonfile=${data_dir}/pilot/eval/pilot_data_eval_default.json
 
-echo "Evaluating ${model} on ${jsonfile}"
-python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/pilot3/${experiment}/temp${t}_p${p} -m ${model} -b 2 -t ${t} -p ${p}
+# echo "Evaluating ${model} on ${jsonfile}"
+# python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/pilot3/${experiment}/temp${t}_p${p} -m ${model} -b 2 -t ${t} -p ${p}
+
+# LLM judge experiments
+for jsonfile in ${data_dir}/llm_judge/eval/*.json
+do
+    echo "Evaluating ${jsonfile}"
+    python evaluate_lm.py -d ${jsonfile} -o ${outputs_dir}/${model}/llm_judge/${experiment} -m ${model} -b 8 -t 0.0 -p 1.0
+done
