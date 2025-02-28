@@ -68,7 +68,18 @@ nonexpert_long <- nonexpert_dat %>%
   select(-c(user_id, pred_author)) %>%
   pivot_longer(cols=c(creativity, originality, surprise, value, author_ai),
                names_to='rated',
-               values_to='rating')
+               values_to='rating') %>%
+  # order variables by  story id, which puts each of 5 ratings from 1 rater in order
+  arrange(story_id) %>%
+  # assign each row a rowid
+  rowid_to_column() %>%
+  # now put all ratings under rater1 - rater5 instead of rater1-rater99
+  # so that we have 5 ratings per variable and can compute IRR
+  mutate(rater_id = ((rowid-1) %/% 5) ) %>%
+  mutate(rater = paste0('rater_', rater_id %% 5)) %>%
+  # make variables right type
+  mutate(rater = as.factor(rater)) %>%
+  select(-c(rowid, rater_id))
 
 # expert data in wide format
 nonexpert_wide <- nonexpert_long %>%
