@@ -18,11 +18,13 @@ TICK_SIZE = 40
 LEGEND_TITLE_SIZE = 30
 LEGEND_SIZE = 33
 PALETTE = "BrBG"
-X_ROTATION = 20
+X_ROTATION = 0
 
 LABEL_MAP = {
-    "id": "Item ID",
-    "model": "Model"
+    "id": "Item set",
+    "model": "Model",
+    "sentience": "Subject",
+    "semantic_distance": "Semantic distance",
 }
 
 MODEL_NAME_MAP = {
@@ -45,7 +47,7 @@ def set_group_data(metrics):
     for by_field in group_by:
         value_index = group_by.index(by_field)
         metrics[by_field] = metrics["group_id"].apply(lambda x: ast.literal_eval(x)[value_index])
-        if by_field == "model" or by_field == "model_type":
+        if by_field == "model" or by_field == "model_type" or by_field == "sentience":
             metrics[by_field] = metrics[by_field].map(MODEL_NAME_MAP)
     return group_by
 
@@ -68,8 +70,8 @@ def plot_default_metrics(metrics_lst, metric, output_dir, output_format="png", p
 
     fig, ax = plt.subplots(figsize=FIG_SIZE)
     # ax.set_title(metric)
-    ax.set_xlabel(LABEL_MAP.get(x_attr, x_attr), size=XLABEL_SIZE)
-    ax.set_ylabel(metric, size=YLABEL_SIZE)
+    ax.set_xlabel(LABEL_MAP.get(x_attr, x_attr), size=XLABEL_SIZE, labelpad=50)
+    ax.set_ylabel(metric, size=YLABEL_SIZE, labelpad=20)
     ax.tick_params(axis='x', labelsize=TICK_SIZE, rotation=X_ROTATION)
     ax.tick_params(axis='y', labelsize=TICK_SIZE)
     # ax.title.set_size(TITLE_SIZE)
@@ -105,8 +107,8 @@ def plot_global_metrics_n_gram_diversity(metrics_lst, output_dir, output_format=
     # ax.legend(ncol=5, loc="center left", bbox_to_anchor=(0, 1.05), title=LABEL_MAP.get(hue_attr, hue_attr), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
     # ax.set_title(metric)
     # ax.title.set_size(TITLE_SIZE)
-    ax.set_xlabel("n-gram size", size=XLABEL_SIZE)
-    ax.set_ylabel(metric, size=YLABEL_SIZE)
+    ax.set_xlabel("n-gram size", size=XLABEL_SIZE, labelpad=20)
+    ax.set_ylabel(metric, size=YLABEL_SIZE, labelpad=20)
     ax.tick_params(axis='x', labelsize=TICK_SIZE)
     ax.tick_params(axis='y', labelsize=TICK_SIZE)
     
@@ -123,6 +125,7 @@ def plot_global_metrics_n_gram_diversity(metrics_lst, output_dir, output_format=
     sns.lineplot(data=all_group_metrics, x="n_gram", y=metric, hue=hue_attr, style=group_attr, markers=True, lw=5, ax=ax, palette=custom_palette)
     
     handles, labels = ax.get_legend_handles_labels()
+    labels = [LABEL_MAP.get(label, label) for label in labels]
     by_label = dict(zip(labels, handles))
     ax.legend(by_label.values(), by_label.keys(), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
     plt.tight_layout()
@@ -148,8 +151,8 @@ def plot_global_metrics_raw_surprises(metrics_lst, output_dir, output_format="pn
     fig, ax = plt.subplots(figsize=FIG_SIZE)
     # ax.set_title(metric)
     # ax.title.set_size(TITLE_SIZE)
-    ax.set_xlabel("Fragment", size=XLABEL_SIZE)
-    ax.set_ylabel(metric, size=YLABEL_SIZE)
+    ax.set_xlabel("Sentence", size=XLABEL_SIZE, labelpad=20)
+    ax.set_ylabel(metric, size=YLABEL_SIZE, labelpad=20)
     ax.tick_params(axis='x', labelsize=TICK_SIZE)
     ax.tick_params(axis='y', labelsize=TICK_SIZE)
     # ax.legend(ncol=5, loc="center left", bbox_to_anchor=(0, 1.05), title=LABEL_MAP.get(hue_attr, hue_attr), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
@@ -168,6 +171,7 @@ def plot_global_metrics_raw_surprises(metrics_lst, output_dir, output_format="pn
     all_group_metrics = pd.concat(all_group_metrics)
     sns.lineplot(data=all_group_metrics, x="fragment", y=metric, hue=hue_attr, style=group_attr, markers=True, lw=5, ax=ax, palette=custom_palette, legend="brief")
     handles, labels = ax.get_legend_handles_labels()
+    labels = [LABEL_MAP.get(label, label) for label in labels]
     by_label = dict(zip(labels, handles))
     ax.legend(by_label.values(), by_label.keys(), title_fontsize=LEGEND_TITLE_SIZE, fontsize=LEGEND_SIZE)
     plt.tight_layout()

@@ -2,6 +2,7 @@ import argparse
 import pathlib
 import pandas
 from tqdm import tqdm
+from statistics import mean
 
 from utils import read_json, find_files
 
@@ -15,7 +16,8 @@ def export_metrics(results):
                 "group_id": results["metadata"]["group_id"],
                 "group_by": results["metadata"]["config"]["group_by"],
                 "model": sample["metadata"]["model"],
-                **{f"metric_{metric_name}": metric_value for metric_name, metric_value in sample["metrics"].items() if not isinstance(metric_value, dict)}
+                **{f"metric_{metric_name}": metric_value for metric_name, metric_value in sample["metrics"].items() if not isinstance(metric_value, dict)},
+                **{f"metric_avg_{metric_name}": mean(metric_value) for metric_name, metric_value in sample["metrics"].items() if isinstance(metric_value, list)}
             })
     
     return export_data
