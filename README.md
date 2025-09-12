@@ -2,7 +2,7 @@
 
 <a href="https://arxiv.org/abs/2411.02316"><img src="https://img.shields.io/badge/arXiv-2411.02316-blue" alt="arxiv"></a>
 
-This repo contains the code and data for the paper "Evaluating Creative Short Story Generation in Humans and Large Language Models".
+This repo contains the code and data for the paper "Evaluating Creative Short Story Generation in Humans and Large Language Models". Final data with all the human and model stories and their expert/non-expert ratings can be found in [HuggingFace](https://huggingface.co/datasets/mismayil/creative_story_generation_dataset).
 
 ## Setup
 Install dependencies
